@@ -1,0 +1,20 @@
+<<test:set0>>=
+s: Set Integer := set [];
+assertTrue(empty? s);
+assertEquals(#s, 0)
+@
+
+<<test:set1>>=
+s: Set Integer := set [1];
+assertEquals(# s, 1)
+assertEquals(# set [1, 1], 1);
+assertEquals(s, set [1, 1]);
+@
+
+<<test:set2>>=
+s: Set Integer := set [1,2];
+assertEquals(# s, 2)
+assertEquals(s, set [2, 1]);
+assertEquals(s, set [1, 2, 1]);
+assertNotEquals(s, set [1, 1]);
+@

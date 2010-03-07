@@ -1,0 +1,132 @@
+\documentclass{article}
+\usepackage{axiom}
+\begin{document}
+\title{Unit testing with SPAD}
+\author{Ralf Hemmecke}
+\maketitle
+\begin{abstract}
+  We provide a simplified framework to do unit testing in SPAD.
+  Since that actual framework is implemented using automake's testing
+  framework, the only thing that we provide here is a package with a
+  number of assert function.
+\end{abstract}
+
+<<pkg: SpadUnit0>>=
+)abbrev package SPADZERO SpadUnit0
+SpadUnit0(): with
+    <<exports: SpadUnit0>>
+  == add
+    import PrintPackage
+    <<implementation: SpadUnit:throw>>
+    <<implementation: SpadUnit0>>
+@
+
+<<implementation: SpadUnit:throw>>=
+throwException(): Void ==
+    EXIT_-WITH_-STATUS(1$Integer)$Lisp
+@
+
+<<exports: SpadUnit0>>=
+assertTrue: Boolean -> Void
+@
+
+<<implementation: SpadUnit0>>=
+assertTrue(b: Boolean): Void ==
+    b => void()
+    print("Expected true, but got false.")
+    throwException()
+@
+
+<<exports: SpadUnit0>>=
+assertFalse: Boolean -> Void
+@
+
+<<implementation: SpadUnit0>>=
+assertFalse(b: Boolean): Void ==
+    not b => void()
+    print("Expected false, but got true.")
+    throwException()
+@
+
+
+
+The following package comes with a type parameter, because adding the
+type explicitly as a first parameter in the \texttt{assertEquals}
+function requires dependent types which is currently (05-Mar-2010) not
+supported by the SPAD compiler.
+
+<<pkg: SpadUnit>>=
+)abbrev package SPADUNIT SpadUnit
+SpadUnit(T: SetCategory): with
+    <<exports: SpadUnit>>
+  == add
+    import PrintPackage
+    <<implementation: SpadUnit:throw>>
+    <<implementation: SpadUnit>>
+@
+
+
+
+<<exports: SpadUnit>>=
+assertEquals: (T, T) -> Void
+@
+
+<<implementation: SpadUnit>>=
+assertEquals(x: T, y: T): Void ==
+    x = y => void()
+    print("Expected equal values, but got the following.")
+    print("Value1 1:")
+    print(x::OutputForm)
+    print("Value1 2:")
+    print(y::OutputForm)
+    throwException()
+@
+
+<<exports: SpadUnit>>=
+assertNotEquals: (T, T) -> Void
+@
+
+<<implementation: SpadUnit>>=
+assertNotEquals(x: T, y: T): Void ==
+    not(x = y) => void()
+    print("Expected unequal values, but the value is ...")
+    print(x::OutputForm)
+    throwException()
+@
+
+
+
+
+
+
+
+
+
+\section{License}
+<<license>>=
+-------------------------------------------------------------------
+--
+-- SPADUNIT
+-- Copyright (C) 2010,  Ralf Hemmecke <ralf@hemmecke.de>
+--
+-------------------------------------------------------------------
+-- This program is free software: you can redistribute it and/or modify
+-- it under the terms of the GNU General Public License as published by
+-- the Free Software Foundation, either version 3 of the License, or
+-- (at your option) any later version.
+--
+-- This program is distributed in the hope that it will be useful,
+-- but WITHOUT ANY WARRANTY; without even the implied warranty of
+-- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+-- GNU General Public License for more details.
+--
+-- You should have received a copy of the GNU General Public License
+-- along with this program.  If not, see <http://www.gnu.org/licenses/>.
+@
+
+<<*>>=
+<<license>>
+<<pkg: SpadUnit0>>
+<<pkg: SpadUnit>>
+@
+\end{document}

@@ -1,0 +1,9 @@
+<<test:string>>=
+s1 := "ab"; s2 := concat("a", "b");
+assertEquals(s1, s2)
+@
+
+<<test:fail-string>>=
+s1 := "ab"; s2 := concat("a", "x");
+assertEquals(s1, s2)
+@

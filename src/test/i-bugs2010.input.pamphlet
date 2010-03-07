@@ -1,0 +1,18 @@
+\documentclass{article}
+\author{The Axiom Team}
+
+The following test should fail because $S$ is not something that can
+become an element in this respective \texttt{OrderedVariableList}.
+<<test:fail-coercion-to-OrderedVariableList>>=
+Ov := OrderedVariableList([SX, SY, SZ])
+S::Ov
+@
+
+
+<<test:OrderedVariableList-coercion>>=
+Ov := OrderedVariableList([SX, SY, SZ])
+Smp := SparseMultivariatePolynomial(Integer, Ov)
+Dmp := DistributedMultivariatePolynomial([H, J, K, M, G], Smp)
+M := monomial(1, M, 1)$Dmp
+assertEquals(SX::Ov - M, SX::Ov::Smp::Dmp - M)
+@

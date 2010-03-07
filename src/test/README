@@ -1,0 +1,125 @@
+###################################################################
+#
+# SPADUNIT
+# Copyright (C) 2010,  Ralf Hemmecke <ralf@hemmecke.de>
+#
+###################################################################
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+###################################################################
+
+This testing framework is basically the standard automake test
+framework with parallel builds enabled.
+
+It takes its tests from *.EXT.pamphlet files where
+EXT is one of the extensions mentioned in TEST_EXTENSIONS.
+Depending on this extension different testing routines are possible.
+
+Look at the definition of the do-${EXT} commands in Makefile.am that
+produce the corresponding *.EXT file(s). Such a file is used during
+the test as
+   ${EXT}_LOG_COMPILER FILE.${EXT}
+It's possible to give additional parameters.
+http://www.gnu.org/software/hello/manual/automake/Simple-Tests-using-parallel_002dtests.html
+
+Since automake requires its variables, in particular the TESTS
+variable, to be static, this Makefile.am additionally contains a
+target 'mk' that generates two files tests.mk and deps.mk.
+
+Basically, tests.mk and deps.mk could be maintained by hand, but I
+find this too troublesome and thus provide the 'mk' target as a
+convenience to developers who add tests and therefore need to
+regenerate tests.mk, deps.mk, Makefile.in.
+
+Manifest
+========
+A bare minimum of the testing framework contains the following files.
+
+Makefile.am
+    The automake Makefile.
+    It contains a target 'mk' which should be called to generate
+    the files tests.mk and deps.mk from *.pamphlet files.
+build-setup.sh
+    Execution of that file will produce Makefile.in from Makefile.am and
+    also produce a number of other files that are used during configure
+    time.
+clean-setup.sh
+    That's the inverse of build-setup.sh.
+configure.ac
+    The autoconf file.
+*.input.pamphlet
+    The testfiles that contain tests run in the interpreter.
+*.spad.pamphlet
+    The testfiles that contain tests that will first be compiled
+    with the SPAD compiler and then executed.
+
+The following files are needed, before 'build-setup.sh' can be run.
+
+tests.mk
+    Contains a definition of the TESTS variable. It will be included
+    into Makefile.am. Can be generated via
+        make -f Makefile.am tests.mk
+deps.mk
+    Contains dependencies of the testfiles from their respective pamphlet
+    sources. Can be generated via
+        make -f Makefile.am deps.mk
+
+Getting started
+===============
+As a developer you should have automake and autoconf installed.
+Call like
+    make -f Makefile.am mk
+(see bottom of Makefile.am) or generate respective files manually.
+Call
+    ./build-setup.sh
+in order to prepare the configure script.
+
+   
+
+
+The testfiles format
+====================
+The code chunks of testfiles must follow the following convention.
+1) Each test is written in a chunk of the following pattern.
+   <<test:NAME_OF_THE_TEST>>=
+   ... code of the test ...
+   @
+2) Since NAME_OF_THE_TEST is used as part of a filename, it should not
+   contain any strange characters. Restriction to names matching the
+   regurlar expression [a-zA-Z0-9._-]+ is appreciated. There is no
+   code that checks this, however, but be prepared that the testing
+   framework might not function properly if strange names appear.
+3) No duplicates of "<<test:NAME>>=" with identical NAME part are allowed.
+4) Optionally each pamphlet file can contain two special chunks, namely
+   <<setUp>>=
+   ... setup code ...
+   @
+   and
+   <<tearDown>>=
+   ... tear down code ...
+   @
+   If existing these are prepended and appended to each test and should
+   contain preparation code and clean-up code. For example, some test might
+   write files. The tearDown code should make sure that everything is
+   cleaned up again.
+   Since FriCAS does not yet provide an Exception system, the execution of
+   the tearDown code cannot be ensured at the moment.
+
+Known Issues
+============
+- Spelling errors are not caught. For example, a test like
+    assertTrueE(false)
+  will not fail, because the spelling of assertTrue is wrong.
+  The interpreter will complain, but we cannot currently catch that
+  error.
+- In fact, tearDown is currently never called if a test fails. :-(

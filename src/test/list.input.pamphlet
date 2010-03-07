@@ -1,0 +1,22 @@
+<<test:set0>>=
+s: List Integer := [];
+assertTrue(empty? s);
+assertEquals(#s, 0)
+
+@
+
+<<test:set1>>=
+s: List Integer := [1];
+assertEquals(# s, 1)
+assertEquals(s, [1]);
+assertNotEquals(s, [1, 1]);
+@
+
+<<test:set2>>=
+s: List Integer := [1,2];
+assertEquals(# s, 2)
+assertNotEquals(s, [2, 1]);
+assertNotEquals(s, [1, 2, 1]);
+assertNotEquals(s, [1, 1]);
+assertEquals(s, [1, 2]);
+@
