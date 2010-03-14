@@ -184,4 +184,5 @@ throwMessage(:msg) ==
   msg' := mkMessage concatList msg
   sayMSG msg'
   if $printMsgsToFile then sayMSG2File msg'
+  handleBreakQuit "throwMessage"
   spadThrow()
