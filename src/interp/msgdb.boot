@@ -326,6 +326,13 @@ operationLink name ==
          escapeSpecialChars STRINGIMAGE name)
 
 ----------------------------------------
+handleBreakQuit(msg) ==
+  $BreakMode = 'quit =>
+      sayMSG msg
+      EXIT_-WITH_-STATUS(1)
+  nil
+----------------------------------------
+
 sayPatternMsg(msg,args) ==
   ioHook("startPatternMsg", msg, args)
   msg := segmentKeyedMsg msg
@@ -337,6 +344,7 @@ throwPatternMsg(key,args) ==
   sayMSG '" "
   if $testingSystem then sayMSG $testingErrorPrefix
   sayPatternMsg(key,args)
+  handleBreakQuit "throwPatternMsg"
   spadThrow()
 
 sayKeyedMsgAsTeX(key, args) ==
@@ -361,6 +369,7 @@ throwKeyedErrorMsg(kind,key,args) ==
   sayMSG '" "
   if $testingSystem then sayMSG $testingErrorPrefix
   sayKeyedMsg(key,args)
+  handleBreakQuit "throwKeyedErrorMsg"
   spadThrow()
 
 throwKeyedMsgSP(key,args,atree) ==
@@ -392,6 +401,7 @@ throwKeyedMsg1(key,args) ==
   sayMSG '" "
   if $testingSystem then sayMSG $testingErrorPrefix
   sayKeyedMsg(key,args)
+  handleBreakQuit "throwKeyedMsg1"
   spadThrow()
 
 throwListOfKeyedMsgs(descKey,descArgs,l) ==
@@ -406,6 +416,7 @@ throwListOfKeyedMsgs(descKey,descArgs,l) ==
   for [key,args] in l for i in 1.. repeat
     n := STRCONC(object2String i,'".")
     sayKeyedMsg(key,[n,:args])
+  handleBreakQuit "throwListOfKeyedMsgs"
   spadThrow()
 
 --  breakKeyedMsg is like throwKeyedMsg except that the user is given
