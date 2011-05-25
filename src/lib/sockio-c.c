@@ -45,6 +45,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <string.h>
 #include <signal.h>
 
+#include "axiom-c-macros.h"
 #include "com.h"
 #include "bsdsignal.h"
 
@@ -52,19 +53,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #define MaxServerNumbers 100
 #define accept_if_needed(purpose) \
   ( purpose_table[purpose] == NULL ? sock_accept_connection(purpose) : 1 )
-
-/* Note that the name AF_LOCAL is more portable than AF_UNIX, but MingW
-   implementation and Windows documentation don't always agree.  */
-
-#if HAVE_AF_LOCAL
-#  define AXIOM_AF_LOCAL AF_LOCAL
-#elif HAVE_AF_UNIX
-#  define AXIOM_AF_LOCAL AF_UNIX
-#else
-#  error needs one of AF_LOCAL or AF_UNIX
-#endif
-
-
 
 Sock clients[MaxClients];       /* socket description of spad clients */
 Sock server[2];                 /* AF_LOCAL and AF_INET sockets for server */

@@ -503,6 +503,9 @@ case $host in
     *) ;;
 esac
 
+# Note that the name AF_LOCAL is more portable than AF_UNIX, but MingW
+# implementation and Windows documentation don't always agree.  */
+
 AC_EGREP_CPP([has_af_local],
                 [
 #if HAVE_SYS_SOCKET_H
@@ -514,9 +517,12 @@ AC_EGREP_CPP([has_af_local],
    has_af_local
 #endif
                  ],
-                 [AC_DEFINE([HAVE_AF_LOCAL], [1], [Host has AF_LOCAL])])
+    [AC_DEFINE([AXIOM_AF_LOCAL], [AF_LOCAL], [Host has AF_LOCAL or AF_UNIX])],
+    # Test for AF_UNIX if AF_LOCAL is not available.
+    [have_af_local=no]
+)
 
-
+if test x$have_af_local = xno; then
 AC_EGREP_CPP([has_af_unix],
                 [
 #if HAVE_SYS_SOCKET_H
@@ -528,8 +534,10 @@ AC_EGREP_CPP([has_af_unix],
    has_af_unix
 #endif
                  ],
-                 [AC_DEFINE([HAVE_AF_UNIX], [1], [Host has AF_UNIX])])
-
+    [AC_DEFINE([AXIOM_AF_LOCAL], [AF_UNIX], [Host has AF_LOCAL or AF_UNIX])],
+    [AC_MSG_ERROR([FriCAS needs one of AF_LOCAL or AF_UNIX.])]
+)
+fi
 
 AC_CHECK_HEADERS([util.h],
                    [],
