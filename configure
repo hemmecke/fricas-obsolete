@@ -6024,7 +6024,11 @@ if test `eval echo '${'$as_ac_Header'}'` = yes; then
   cat >>confdefs.h <<_ACEOF
 #define `echo "HAVE_$ac_header" | $as_tr_cpp` 1
 _ACEOF
- fricas_host_has_socket=yes
+
+else
+  { { echo "$as_me:$LINENO: error: FriCAS needs suport for sockets." >&5
+echo "$as_me: error: FriCAS needs suport for sockets." >&2;}
+   { (exit 1); exit 1; }; }
 fi
 
 done
@@ -6172,18 +6176,17 @@ if test `eval echo '${'$as_ac_Header'}'` = yes; then
   cat >>confdefs.h <<_ACEOF
 #define `echo "HAVE_$ac_header" | $as_tr_cpp` 1
 _ACEOF
- fricas_host_has_socket=yes
+
+else
+  { { echo "$as_me:$LINENO: error: FriCAS needs suport for sockets." >&5
+echo "$as_me: error: FriCAS needs suport for sockets." >&2;}
+   { (exit 1); exit 1; }; }
 fi
 
 done
 
         ;;
 esac
-if test x$fricas_host_has_socket != xyes; then \
-    { { echo "$as_me:$LINENO: error: FriCAS needs suport for sockets." >&5
-echo "$as_me: error: FriCAS needs suport for sockets." >&2;}
-   { (exit 1); exit 1; }; }
-fi
 
 ## solaris-based systems tend to hide the socket library.
 case $host in
@@ -6279,6 +6282,9 @@ fi
     *) ;;
 esac
 
+# Note that the name AF_LOCAL is more portable than AF_UNIX, but MingW
+# implementation and Windows documentation don't always agree.  */
+
 cat >conftest.$ac_ext <<_ACEOF
 /* confdefs.h.  */
 _ACEOF
@@ -6300,14 +6306,18 @@ if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
   $EGREP "has_af_local" >/dev/null 2>&1; then
 
 cat >>confdefs.h <<\_ACEOF
-#define HAVE_AF_LOCAL 1
+#define AXIOM_AF_LOCAL AF_LOCAL
 _ACEOF
+
+else
+  # Test for AF_UNIX if AF_LOCAL is not available.
+    have_af_local=no
 
 fi
 rm -f conftest*
 
 
-
+if test x$have_af_local = xno; then
 cat >conftest.$ac_ext <<_ACEOF
 /* confdefs.h.  */
 _ACEOF
@@ -6329,13 +6339,18 @@ if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
   $EGREP "has_af_unix" >/dev/null 2>&1; then
 
 cat >>confdefs.h <<\_ACEOF
-#define HAVE_AF_UNIX 1
+#define AXIOM_AF_LOCAL AF_UNIX
 _ACEOF
+
+else
+  { { echo "$as_me:$LINENO: error: FriCAS needs one of AF_LOCAL or AF_UNIX." >&5
+echo "$as_me: error: FriCAS needs one of AF_LOCAL or AF_UNIX." >&2;}
+   { (exit 1); exit 1; }; }
 
 fi
 rm -f conftest*
 
-
+fi
 
 
 for ac_header in util.h
