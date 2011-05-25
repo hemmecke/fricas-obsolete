@@ -483,20 +483,15 @@ AC_CHECK_DECLS([kill], [], [],
                [#include <signal.h>])
 case $host in
     *mingw*)
-        AC_CHECK_HEADERS([winsock2.h],
-                        [fricas_host_has_socket=yes],
-                        [])
+        AC_CHECK_HEADERS([winsock2.h],[],
+	    [AC_MSG_ERROR([FriCAS needs suport for sockets.])])
         fricas_c_runtime_extra="-lwsock32"
         ;;
     *)
-        AC_CHECK_HEADERS([sys/socket.h],
-                         [fricas_host_has_socket=yes],
-                         [])
+        AC_CHECK_HEADERS([sys/socket.h],[],
+            [AC_MSG_ERROR([FriCAS needs suport for sockets.])])
         ;;
 esac
-if test x$fricas_host_has_socket != xyes; then \
-    AC_MSG_ERROR([FriCAS needs suport for sockets.])
-fi
 
 ## solaris-based systems tend to hide the socket library.
 case $host in
