@@ -2,13 +2,27 @@
 \usepackage{axiom}
 \begin{document}
 \title{\$SPAD/src/algebra boolean.spad}
-\author{Stephen M. Watt, Michael Monagan}
+\author{Stephen M. Watt, Michael Monagan, Gabriel Dos~Reis}
 \maketitle
 \begin{abstract}
+This pamphlet contains logic related code, most of these domains
+implement Logic category (~, /\ and \/) although there is not
+a specific lattice domain.
+
+It also contains Reference domain for some reason?
 \end{abstract}
 \eject
 \tableofcontents
 \eject
+\section{Reference}
+I can't see why this domain is in a pamphlet called boolean.spad?
+
+Reference is intended to contain another domain of any type. This
+allows us to change the inside domain without changing the interface.
+
+A typical use for this would be 'call by reference' as opposed to
+'call by value'. This means that when we call a function we can pass
+a parameter in a reference.
 \section{domain REF Reference}
 <<domain REF Reference>>=
 )abbrev domain REF Reference
@@ -52,7 +66,139 @@ Reference(S:Type): Type with
             prefix(message("ref"@String), [p.value::OutputForm])
 
 @
+\section{Logic Code}
+The propositional logic code was written Gabriel Dos~Reis in OpenAxiom
+and translated to FriCAS by Waldek Hebisch. I (Martin Baker) have added
+these comments although it would be better if the comments we written
+(or at least checked) by the original author.
 
+I assume that, if we aviod using 'not', then this will be applicable
+to intuitionistic logic although, in this case, some functions may not
+be valid.
+
+At some stage in the future I would like to extend to include predicate
+logic (quantifiers) and to link to lambda calculus and cartesian closed
+categories.
+\section{notes on translation from OpenAxiom to FriCAS by Waldek}
+\begin{itemize}
+\item AFAICS OpenAxiom original in coercion to OutputForm is
+missing cases for false and true, which leads to infinite recursion.
+I added them to translation.
+\item I have no idea if/how the construct:
+\begin{itemize}
+\item false == per constantKernel FALSE
+\item true == per constantKernel TRUE
+\end{itemize}
+works in OpenAxiom. Instead I represent true and false as 0 argument
+operators.
+\item FriCAS instead of Pair has Product domain, I did relevant
+renamings.
+\item Because FriCAS parser performs transformations of 'not',
+'and' and 'or' they are not usable as functions names.  I replaced
+them by 'lnot', 'land' and 'lor'.
+\end{itemize}
+\section{notes from Gabriel Dos~Reis}
+\begin{itemize}
+\item See OpenAxiom's definition of BasicType.  
+     Any domain is free to override =\verb$BasicType, but most domains would
+     have regular enough representation that the default definition is
+     right and avoid endless boilerplate.
+     Another reason why someone would like to override the default is to 
+     avoid the default search, but then the comparison must be doing
+     something so trivial that it is worth the trouble and enable domain
+     inlining -- see domain Byte for example.
+\item In OpenAxiom, BooleanLogic is the category of domains implementing 
+     "Boolean logic" (therefore are lattices, hence satisfy Logic.)
+     However, not all domains that are lattices are BooleanLogic instances.
+     Hence, in OpenAxiom BooleanLogic and Logic are not redundant.
+\item Furthermore, BooleanLogic allows for shortcircuiting -- the
+     OpenAxiom compiler only implement half of it at the moment, but the
+     completion is planned (there are only 24 hours in a day.)  This
+     allows parameterization over the boolean logic domain without
+     having to rewrite a program -- example of another boolean logic
+     domain is the trivalent logic implemented by KleeneTrivalentLogic.
+\item (Due to a design bug afflicting all AXIOM flavours, care needs to
+     be exercised when using KleeneTrivalentLogic, but that should be
+     fixed when we have a unified parser.)
+\end{itemize}
+\section{Propositional Logic Example}
+PropositionalFormula can be defined over a set. Here we take, what
+seems to me, the simplest case and show how to use it when defined
+over Symbol.
+
+It would be good if the author could show a more complex example which
+shows the value of constructing PropositionalFormula over some other
+set.
+
+So, in this simple example, we first define our
+PropositionalFormula type:
+\begin{verbatim}
+(1) -> PROP := PropositionalFormula Symbol
+
+   (1)  PropositionalFormula(Symbol)
+\end{verbatim}
+Now we can create a set of propositions to work with:
+\begin{verbatim}
+                                                         Type: Type
+(2) -> p: PROP := 'p
+
+   (2)  p
+                                 Type: PropositionalFormula(Symbol)
+(3) -> q: PROP := 'q
+
+   (3)  q
+                                 Type: PropositionalFormula(Symbol)
+(4) -> r: PROP := 'r
+
+   (4)  r
+                                 Type: PropositionalFormula(Symbol)
+\end{verbatim}
+We can then create compound terms like and, or & implies.
+\begin{verbatim}
+(5) -> pq := p /\ q
+
+   (5)  p and q
+                                 Type: PropositionalFormula(Symbol)
+\end{verbatim}
+We can also define logical constants: true and false.
+\begin{verbatim}
+(6) -> true()$PROP \/ pq
+
+   (6)  %true and p and q
+                                 Type: PropositionalFormula(Symbol)
+\end{verbatim}
+'atoms' shows the primitive propositions that make up this term, perhaps
+this can be thought of as the axioms.
+\begin{verbatim}
+(7) -> atoms(pq)
+
+   (7)  {p,q}
+                                                  Type: Set(Symbol)
+\end{verbatim}
+The functions 'dual' and 'simplify' currently have a bug:
+\begin{verbatim}
+(8) -> dual(pq)
+Function:  ?=? : (%,%) -> Boolean is missing from domain:
+     PropositionalFormula(Symbol)
+   Internal Error
+   The function = with signature (Boolean)$$ is missing from domain
+      PropositionalFormula(Symbol)
+
+(8) -> simplify(true()$PROP /\ pq)
+Function:  ?=? : (%,%) -> Boolean is missing from domain:
+     PropositionalFormula(Symbol)
+   Internal Error
+   The function = with signature (Boolean)$$ is missing from domain
+      PropositionalFormula(Symbol)
+\end{verbatim}
+
+There is a bug here. The function:
+\begin{verbatim}
+?=? : (%,%) -> Boolean
+\end{verbatim}
+is declared in BasicType but it doesn't seem to be defined in
+PropositionalFormula. I can't see why these functions work in
+OpenAxiom but not FriCAS?
 \section{category LOGIC Logic}
 <<category LOGIC Logic>>=
 )abbrev category LOGIC Logic
@@ -66,7 +212,6 @@ Reference(S:Type): Type with
 ++ `Logic' provides the basic operations for lattices,
 ++ e.g., boolean algebra.
 
-
 Logic: Category == BasicType with
        _~:        % -> %
         ++ ~(x) returns the logical complement of x.
@@ -78,6 +223,437 @@ Logic: Category == BasicType with
     _\_/(x: %,y: %) == _~( _/_\(_~(x), _~(y)))
 
 @
+
+BooleanLogic category duplicates Logic category with alternative
+operator names. Uses lnot, land & lor instead of ~, /\ & \/
+operators.
+
+I don't think they add any extra value here. In OpenAxiom the
+names not, and & or are used which may be more meaningful.
+
+It may be better to replace all occurences of lnot, land & lor
+by: ~, /\ & \/ and remove this category.
+
+\section{category BOOLE BooleanLogic}
+<<category BOOLE BooleanLogic>>=
+)abbrev category BOOLE BooleanLogic
+++ Author: Gabriel Dos Reis
+++ Date Created: April 04, 2010
+++ Date Last Modified: April 04, 2010
+++ Description:
+++   This is the category of Boolean logic structures.
+BooleanLogic(): Category == Logic with
+    lnot: % -> %
+      ++ \spad{lnot x} returns the complement or negation of \spad{x}.
+    land: (%,%) -> %
+      ++ \spad{x land y} returns the conjunction of \spad{x} and \spad{y}.
+    lor: (%,%) -> %
+      ++ \spad{x lor y} returns the disjunction of \spad{x} and \spad{y}.
+@
+
+\section{category PROPLOG PropositionalLogic}
+<<category PROPLOG PropositionalLogic>>=
+)abbrev category PROPLOG PropositionalLogic
+++ Author: Gabriel Dos Reis
+++ Date Created: Januray 14, 2008
+++ Date Last Modified: May 27, 2009
+++ Description: This category declares the connectives of
+++ Propositional Logic.
+PropositionalLogic(): Category == Join(BooleanLogic,SetCategory) with
+  true: () -> %
+    ++ true is a logical constant.
+  false: () -> %
+    ++ false is a logical constant.
+  implies: (%,%) -> %
+    ++ implies(p,q) returns the logical implication of `q' by `p'.
+  equiv: (%,%) -> %
+    ++ equiv(p,q) returns the logical equivalence of `p', `q'.
+@
+
+\section{category PROPFRML PropositionalFormula}
+<<category PROPFRML PropositionalFormula>>=
+)abbrev domain PROPFRML PropositionalFormula
+++ Author: Gabriel Dos Reis
+++ Date Created: Januray 14, 2008
+++ Date Last Modified: February, 2011
+++ Description: This domain implements propositional formula build
+++ over a term domain, that itself belongs to PropositionalLogic
+PropositionalFormula(T: SetCategory): Public == Private where
+  Public == Join(PropositionalLogic) with
+    isAtom : % -> Union(T, "failed")
+      ++ \spad{isAtom f} returns a value \spad{v} such that
+      ++ \spad{v case T} holds if the formula \spad{f} is a term.
+
+    isNot : % -> Union(%, "failed")
+      ++ \spad{isNot f} returns a value \spad{v} such that
+      ++ \spad{v case %} holds if the formula \spad{f} is a negation.
+
+    isAnd : % -> Union(Product(%,%), "failed")
+      ++ \spad{isAnd f} returns a value \spad{v} such that 
+      ++ \spad{v case Product(%,%)} holds if the formula \spad{f}
+      ++ is a conjunction formula.
+
+    isOr : % -> Union(Product(%,%), "failed")
+      ++ \spad{isOr f} returns a value \spad{v} such that 
+      ++ \spad{v case Product(%,%)} holds if the formula \spad{f}
+      ++ is a disjunction formula.
+
+    isImplies : % -> Union(Product(%,%), "failed")
+      ++ \spad{isImplies f} returns a value \spad{v} such that 
+      ++ \spad{v case Product(%,%)} holds if the formula \spad{f}
+      ++ is an implication formula.
+
+    isEquiv : % -> Union(Product(%,%), "failed")
+      ++ \spad{isEquiv f} returns a value \spad{v} such that 
+      ++ \spad{v case Product(%,%)} holds if the formula \spad{f}
+      ++ is an equivalence formula.
+
+    conjunction: (%,%) -> %
+      ++ \spad{conjunction(p,q)} returns a formula denoting the
+      ++ conjunction of \spad{p} and \spad{q}.
+
+    disjunction: (%,%) -> %
+      ++ \spad{disjunction(p,q)} returns a formula denoting the
+      ++ disjunction of \spad{p} and \spad{q}.
+    coerce: T -> %
+
+  Private == add
+    -- PropositionalFormula is represented by Kernel which apparently
+    -- is the canonical datastructure for symbolic expressions in AXIOM.
+    -- The Kernel domain itself has minimal documentation so its hard
+    -- to say what the pros and cons of using it are. It appears to
+    -- provide caching so that might be one issue.
+    Rep == Union(T, Kernel %)
+
+    import Kernel %
+    import BasicOperator
+    import KernelFunctions2(Identifier,%)
+    import List %
+
+    -- rep & per implement type-safe casts from a domain to it's
+    -- underlying representation and back. In FriCAS these casts
+    -- are (mostly) implicit. In Aldor these where made explicit.
+    -- In OpenAxiom they are built-in.
+    rep(x:%):Rep == x pretend Rep
+    per(x:Rep):% == x pretend %
+
+    -- Local names for proposition logical operators
+    macro FALSE == '%false
+    macro TRUE == '%true
+    macro NOT == '%not
+    macro AND == '%and
+    macro OR == '%or
+    macro IMP == '%implies
+    macro EQV == '%equiv
+
+    -- Return the nesting level of a formula
+    level(f: %): NonNegativeInteger ==
+      f' := rep f
+      f' case T => 0
+      height f'
+
+    -- A term is a formula
+    coerce(t: T): % == 
+      per t
+
+    opnot := operator(NOT, 1)
+    opand := operator(AND, 2)
+    opor := operator(OR, 2)
+    opimp := operator(IMP, 2)
+    opeqv := operator(EQV, 2)
+    opfalse := operator(FALSE, 0)
+    optrue := operator(TRUE, 0)
+
+    false() == per kernel(opfalse, [], 1)
+    true() == per kernel(optrue, [], 1)
+
+    -- constructs a conjunction term
+    conjunction(p,q) ==
+      per kernel(opand, [p, q], 1 + max(level p, level q))
+
+    disjunction(p,q) ==
+      per kernel(opand, [p, q], 1 + max(level p, level q))
+
+    -- lnot, land & lor implement BooleanLogic category
+    -- they duplicate ~, /\ & \/ operators. I don't
+    -- think they add any extra value here. It may be better
+    -- to replace all occurences of:
+    -- lnot, land & lor
+    -- by:
+    -- ~, /\ & \/
+    lnot p ==
+      per kernel(opnot, [p], 1 + level p)
+
+    land(p, q) == conjunction(p,q)
+
+    lor(p, q) == disjunction(p,q)
+
+    -- ~, /\ & \/ implement Logic category
+    -- logic/lattice operators
+    ~ p ==
+      per kernel(opnot, [p], 1 + level p)
+
+    _/_\(p, q) == conjunction(p,q)
+
+    _\_/(p, q) == disjunction(p,q)
+
+    implies(p,q) ==
+      per kernel(opimp, [p, q], 1 + max(level p, level q))
+
+    equiv(p,q) ==
+      per kernel(opeqv, [p, q], 1 + max(level p, level q))
+
+    isAtom f ==
+      f' := rep f
+      f' case T => f'::T
+      "failed"
+
+    isNot f ==
+      f' := rep f
+      f' case Kernel(%) and is?(f', NOT) => first argument f'
+      "failed"
+
+    isBinaryOperator(f: Kernel %, op: Symbol): Union(Product(%, %), "failed") ==
+      not is?(f, op) => "failed"
+      args := argument f
+      makeprod(first args, second args)
+
+    isAnd f ==
+      f' := rep f
+      f' case Kernel % => isBinaryOperator(f', AND)
+      "failed"
+
+    isOr f ==
+      f' := rep f
+      f' case Kernel % => isBinaryOperator(f', OR)
+      "failed"
+
+    isImplies f ==
+      f' := rep f
+      f' case Kernel % => isBinaryOperator(f', IMP)
+      "failed"
+
+    isEquiv f ==
+      f' := rep f
+      f' case Kernel % => isBinaryOperator(f', EQV)
+      "failed"
+
+    -- Unparsing grammar.
+    --
+    -- Ideally, the following syntax would the external form
+    -- Formula:
+    --   EquivFormula
+    --
+    -- EquivFormula:
+    --   ImpliesFormula
+    --   ImpliesFormula <=> EquivFormula
+    --
+    -- ImpliesFormula:
+    --   OrFormula
+    --   OrFormula => ImpliesFormula
+    --
+    -- OrFormula:
+    --   AndFormula
+    --   AndFormula or OrFormula 
+    -- 
+    -- AndFormula
+    --   NotFormula
+    --   NotFormula and AndFormula
+    --
+    -- NotFormula:
+    --   PrimaryFormula
+    --   not NotFormula
+    --
+    -- PrimaryFormula:
+    --   Term
+    --   ( Formula )
+    --
+    -- Note: Since the token '=>' already means a construct different
+    --       from what we would like to have as a notation for
+    --       propositional logic, we will output the formula `p => q'
+    --       as implies(p,q), which looks like a function call.
+    --       Similarly, we do not have the token `<=>' for logical
+    --       equivalence; so we unparser `p <=> q' as equiv(p,q).
+    --
+    --       So, we modify the nonterminal PrimaryFormula to read
+    --       PrimaryFormula:
+    --         Term
+    --         implies(Formula, Formula)
+    --         equiv(Formula, Formula)
+    formula: % -> OutputForm
+    coerce(p: %): OutputForm ==
+      formula p
+
+    primaryFormula(p: %): OutputForm ==
+      p' := rep p
+      p' case T => p'::T::OutputForm
+      is?(p', TRUE) or is?(p', FALSE) => operator(p')::OutputForm
+      is?(p', IMP) or is?(p', EQV) =>
+        args := argument p'
+        elt(operator(p')::OutputForm, 
+            [formula first args, formula second args])$OutputForm
+      paren(formula p)$OutputForm
+
+    notFormula(p: %): OutputForm ==
+      (p1 := isNot p) case % =>
+        elt(outputForm '_not, [notFormula (p1::%)])$OutputForm
+      primaryFormula p
+
+    andFormula(f: %): OutputForm ==
+      (f1 := isAnd f) case Product(%,%) =>
+          p := f1::Product(%,%)
+          -- ??? idealy, we should be using `and$OutputForm' but
+          -- ??? a bug in the compiler currently prevents that.
+          infix(outputForm '_and, notFormula selectfirst p,
+             andFormula selectsecond p)$OutputForm
+      notFormula f
+
+    orFormula(f: %): OutputForm ==
+      (f1 := isOr f) case Product(%,%) =>
+          p := f1::Product(%,%)
+          -- ??? idealy, we should be using `or$OutputForm' but
+          -- ??? a bug in the compiler currently prevents that.
+          infix(outputForm '_or, andFormula selectfirst p, 
+             orFormula selectsecond p)$OutputForm
+      andFormula f
+
+    -- display this term to output
+    -- used by coerce(p: %): OutputForm
+    formula f ==
+      -- Note: this should be equivFormula, but see the explanation above.
+      orFormula f
+@
+
+\section{category PROPFUN1 PropositionalFormulaFunctions1}
+<<category PROPFUN1 PropositionalFormulaFunctions1>>=
+)abbrev package PROPFUN1 PropositionalFormulaFunctions1
+++ Author: Gabriel Dos Reis
+++ Date Created: April 03, 2010
+++ Date Last Modified: April 03, 2010
+++ Description:
+++   This package collects unary functions operating on propositional
+++   formulae.
+PropositionalFormulaFunctions1(T): Public == Private where
+  T: SetCategory
+  Public == Type with
+    dual: PropositionalFormula T -> PropositionalFormula T
+      ++ \spad{dual f} returns the dual of the proposition \spad{f}.
+    atoms: PropositionalFormula T -> Set T
+      ++ \spad{atoms f} ++ returns the set of atoms appearing in
+      ++ the formula \spad{f}.
+    simplify: PropositionalFormula T -> PropositionalFormula T
+      ++ \spad{simplify f} returns a formula logically equivalent
+      ++ to \spad{f} where obvious tautologies have been removed.
+  Private == add
+    PF ==> PropositionalFormula T
+    import Product(PF, PF)
+
+    dual f ==
+      f = true()$PF => false()$PF
+      f = false()$PF => true()$PF
+      isAtom f case T => f
+      (f1 := isNot f) case PF => lnot(dual f1)
+      (f2 := isAnd f) case Product(PF, PF) =>
+         disjunction(dual selectfirst f2, dual selectsecond f2)
+      (f2 := isOr f) case Product(PF, PF) =>
+         conjunction(dual selectfirst f2, dual selectsecond f2)
+      error "formula contains `equiv' or `implies'"
+
+    atoms f ==
+      (t := isAtom f) case T => set([t])
+      (f1 := isNot f) case PF => atoms f1
+      (f2 := isAnd f) case Product(PF, PF) =>
+         union(atoms selectfirst f2, atoms selectsecond f2)
+      (f2 := isOr f) case Product(PF, PF) =>
+         union(atoms selectfirst f2, atoms selectsecond f2)
+      empty()$Set(T)
+
+    -- one-step simplification helper function
+    simplifyOneStep(f: PF): PF ==
+      (f1 := isNot f) case PF =>
+        f1 = true$PF => false$PF
+        f1 = false$PF => true$PF
+        (f1' := isNot f1) case PF => f1'         -- assume classical logic
+        f
+      (f2 := isAnd f) case Product(PF,PF) =>
+        selectfirst f2 = false$PF or selectsecond f2 = false$PF => false$PF
+        selectfirst f2 = true$PF => selectsecond f2
+        selectsecond f2 = true$PF => selectfirst f2
+        f
+      (f2 := isOr f) case Product(PF,PF) =>
+        selectfirst f2 = false$PF => selectsecond f2
+        selectsecond f2 = false$PF => selectfirst f2
+        selectfirst f2 = true$PF or selectsecond f2 = true$PF => true$PF
+        f
+      (f2 := isImplies f) case Product(PF,PF) =>
+        selectfirst f2 = false$PF or selectsecond f2 = true$PF => true$PF
+        selectfirst f2 = true$PF => selectsecond f2
+        selectsecond f2 = false$PF => lnot selectfirst f2
+        f
+      (f2 := isEquiv f) case Product(PF,PF) =>
+        selectfirst f2 = true$PF => selectsecond f2
+        selectsecond f2 = true$PF => selectfirst f2
+        selectfirst f2 = false$PF => lnot selectsecond f2
+        selectsecond f2 = false$PF => lnot selectfirst f2
+        f
+      f
+
+    simplify f ==
+      (f1 := isNot f) case PF => simplifyOneStep(lnot simplify f1)
+      (f2 := isAnd f) case Product(PF,PF) =>
+        simplifyOneStep(conjunction(simplify selectfirst f2,
+                                    simplify selectsecond f2))
+      (f2 := isOr f) case Product(PF,PF) =>
+        simplifyOneStep(disjunction(simplify selectfirst f2,
+                                    simplify selectsecond f2))
+      (f2 := isImplies f) case Product(PF,PF) =>
+        simplifyOneStep(implies(simplify selectfirst f2,
+                                simplify selectsecond f2))
+      (f2 := isEquiv f) case Product(PF,PF) =>
+        simplifyOneStep(equiv(simplify selectfirst f2,
+                              simplify selectsecond f2))
+      f
+@
+
+\section{category PROPFUN2 PropositionalFormulaFunctions2}
+<<category PROPFUN2 PropositionalFormulaFunctions2>>=
+)abbrev package PROPFUN2 PropositionalFormulaFunctions2
+++ Author: Gabriel Dos Reis
+++ Date Created: April 03, 2010
+++ Date Last Modified: April 03, 2010
+++ Description:
+++   This package collects binary functions operating on propositional
+++   formulae.
+PropositionalFormulaFunctions2(S,T): Public == Private where
+  S: SetCategory
+  T: SetCategory
+  Public == Type with
+    map: (S -> T, PropositionalFormula S) -> PropositionalFormula T
+      ++ \spad{map(f,x)} returns a propositional formula where
+      ++ all atoms in \spad{x} have been replaced by the result
+      ++ of applying the function \spad{f} to them.
+  Private == add
+    macro FS == PropositionalFormula S
+    macro FT == PropositionalFormula T
+    map(f,x) ==
+      x = true$FS => true$FT
+      x = false$FS => false$FT
+      (t := isAtom x) case S => f(t)::FT
+      (f1 := isNot x) case FS => lnot map(f,f1)
+      (f2 := isAnd x) case Product(FS,FS) =>
+         conjunction(map(f, selectfirst f2), map(f, selectsecond f2))
+      (f2 := isOr x) case Product(FS,FS) =>
+         disjunction(map(f, selectfirst f2), map(f, selectsecond f2))
+      (f2 := isImplies x) case Product(FS,FS) =>
+         implies(map(f, selectfirst f2), map(f, selectsecond f2))
+      (f2 := isEquiv x) case Product(FS,FS) =>
+         equiv(map(f, selectfirst f2), map(f, selectsecond f2))
+      error "invalid propositional formula"
+@
+
+Most logic domains here use ~, /\ & \/ operator names for not, and
+& or although compiler (for example in 'if' condition) uses not,
+and & or.
 \section{domain BOOLEAN Boolean}
 <<domain BOOLEAN Boolean>>=
 )abbrev domain BOOLEAN Boolean
@@ -123,12 +699,12 @@ Boolean(): Join(OrderedSet, Finite, Logic, ConvertibleTo InputForm) with
     true          == EQ(2,2)$Lisp   --well, 1 is rather special
     false         == NIL$Lisp
     sample()      == true
-    not b         == NOT(b)$Lisp
-    _~ b          == NOT(b)$Lisp
-    _and(a, b)    == AND(a, b)$Lisp
-    _/_\(a, b)    == AND(a, b)$Lisp
-    _or(a, b)     == OR(a, b)$Lisp
-    _\_/(a, b)    == OR(a, b)$Lisp
+    not b         == (test b => false; true)
+    _~ b          == (test b => false; true)
+    _and(a, b)    == (test a => b; false)
+    _/_\(a, b)    == (test a => b; false)
+    _or(a, b)     == (test a => true; b)
+    _\_/(a, b)     == (test a => true; b)
     xor(a, b)     == (test a => nt b; b)
     nor(a, b)     == (test a => false; nt b)
     nand(a, b)    == (test a => nt b; true)
@@ -200,23 +776,23 @@ IndexedBits(mn:Integer): BitAggregate() with
               s.i := if v.j then t else f
             s::OutputForm
 
-        new(n, b)    == make_BVEC(n, bool_to_bit(b)$Lisp)$Lisp
-        empty()      == make_BVEC(0, 0)$Lisp
-        copy v       == copy_BVEC(v)$Lisp
-        #v           == size_BVEC(v)$Lisp
-        v = u        == equal_BVEC(v, u)$Lisp
-        v < u        == greater_BVEC(u, v)$Lisp
-        _and(u, v)   == (#v = #u => and_BVEC(v, u)$Lisp; map("and", v, u))
-        _or(u, v)    == (#v = #u => or_BVEC(v, u)$Lisp; map("or", v, u))
-        xor(v, u)    == (#v = #u => xor_BVEC(v, u)$Lisp; map("xor", v, u))
+        new(n, b)       == BVEC_-MAKE_-FULL(n,TRUTH_-TO_-BIT(b)$Lisp)$Lisp
+        empty()         == BVEC_-MAKE_-FULL(0,0)$Lisp
+        copy v          == BVEC_-COPY(v)$Lisp
+        #v              == BVEC_-SIZE(v)$Lisp
+        v = u           == BVEC_-EQUAL(v, u)$Lisp
+        v < u           == BVEC_-GREATER(u, v)$Lisp
+        _and(u, v)      == (#v=#u => BVEC_-AND(v,u)$Lisp; map("and",v,u))
+        _or(u, v)       == (#v=#u => BVEC_-OR(v, u)$Lisp; map("or", v,u))
+        xor(v,u)        == (#v=#u => BVEC_-XOR(v,u)$Lisp; map("xor",v,u))
         setelt(v:%, i:Integer, f:Boolean) ==
-            SETELT_BVEC(v, range(v, i - mn), bool_to_bit(f)$Lisp)$Lisp
+          BVEC_-SETELT(v, range(v, i-mn), TRUTH_-TO_-BIT(f)$Lisp)$Lisp
         elt(v:%, i:Integer) ==
-            bit_to_bool(ELT_BVEC(v, range(v, i - mn))$Lisp)$Lisp
+          BIT_-TO_-TRUTH(BVEC_-ELT(v, range(v, i-mn))$Lisp)$Lisp
 
-        Not v        == not_BVEC(v)$Lisp
-        And(u, v)    == (#v = #u => and_BVEC(v, u)$Lisp; map("and", v, u))
-        Or(u, v)     == (#v = #u => or_BVEC(v, u)$Lisp; map("or", v, u))
+        Not v           == BVEC_-NOT(v)$Lisp
+        And(u, v)       == (#v=#u => BVEC_-AND(v,u)$Lisp; map("and",v,u))
+        Or(u, v)        == (#v=#u => BVEC_-OR(v, u)$Lisp; map("or", v,u))
 
 @
 \section{domain BITS Bits}

@@ -3403,6 +3403,9 @@ MultifunctionGraph(S): Exports == Implementation where
   multifunctionGraph:(ob:List OBJT,ar:List ARROW) -> %
     ++ constructor for graph with given objects and arrows
     ++ more objects and arrows can be added later if required.
+  multifunctionGraph:(objs:List S,am:List List NNI) -> %
+    ++ constructor for graph with given objects and adjacency
+    ++ matrix.
   multifunctionGraph:(perms:List Permutation S) -> %
     ++ construct graph from a list of permutations.
   "*":(%,%) -> GRPHPROD
@@ -3442,6 +3445,19 @@ MultifunctionGraph(S): Exports == Implementation where
   coerce:(pg:PermutationGroup S) -> %
     ++ coerce PermutationGroup to graph which
     ++ represents the generators of the group
+  toCayleyGraph:(permList:List Permutation S,_
+                permutationNames: Boolean) -> _
+                MultifunctionGraph(String)
+    ++ convert permutation generators to a Cayley graph
+    ++ permList should contain generator permutations and should
+    ++ not contain identity permutation.
+    ++ if permutationNames then names generated represent permutation 
+  toCayleyGraph:(pg:PermutationGroup S) -> _
+                MultifunctionGraph(String)
+    ++ convert PermutationGroup to a Cayley graph
+  toPermutation:(s:%) -> PermutationGroup(NNI)
+    ++ generates a permutation group from this graph
+    ++ assumes this graph represents a valid group
 
  Implementation ==> add
 
@@ -3484,9 +3500,23 @@ MultifunctionGraph(S): Exports == Implementation where
       too:NNI := a.toOb
       arrs.fromo := too
     fobs:List MFOBJT := []
-    for fn in 1..#ob repeat
-      f := ob.fn
+    for f in ob for fn in 1..#ob repeat
       fo: MFOBJT := [f.value,f.posX,f.posY,[arrs.fn]] 
+      fobs := concat(fobs,fo)    
+    [fobs]
+
+  -- constructor for graph with given objects and adjacency
+  -- matrix.
+  multifunctionGraph(objs:List S,am:List List NNI):% ==
+    obs:List OBJT := []
+    for obn in 1..#(objs) repeat
+      -- build objects
+      ob := objs.obn
+      o: OBJT := [ob,createX(#objs,obn),createY(#objs,obn)]
+      obs := concat(obs,o)
+    fobs:List MFOBJT := []
+    for f in obs for fn in 1..#obs repeat
+      fo: MFOBJT := [f.value,f.posX,f.posY,[am.fn]] 
       fobs := concat(fobs,fo)    
     [fobs]
 
@@ -3954,6 +3984,144 @@ MultifunctionGraph(S): Exports == Implementation where
   coerce(pg:PermutationGroup S):% ==
     multifunctionGraph(pg::(List Permutation S))
 
+  -- local function used by toCayleyGraph
+  -- find position of entry in list
+  -- if not found returns 0
+  permIndex(entry: Permutation S,lps2:List Permutation S): NNI ==
+    dimen:NNI := # lps2
+    resu:NNI := 0
+    for i in 1..dimen repeat
+      e2:Permutation S := lps2.i
+      if entry = e2 then resu := i::NNI
+    resu
+
+  -- local function used by toCayleyGraph
+  -- apply * of permutations to the permutation generators to get a
+  -- list of any new permutations found, this does not include the original
+  -- generators.
+  -- generateNewPerms returns a record containing:
+  --   prm:List Permutation S -- a permutation for each entry
+  --   nam:List String        -- a name for each entry
+  generateNewPerms(gens2:List Permutation S,stngs:List String,_
+                         permutationNames: Boolean):_
+                         Record(prm:List Permutation S,nam:List String) ==
+    dimen:NNI := # gens2
+    resu:List Permutation S := [] -- list of new permutations found
+    resstr:List String := []      -- names of new permutations found
+    for i in 1..dimen repeat
+      for j in 1..dimen repeat
+        p:Permutation S := (gens2.i)*(gens2.j)
+        foundNew:Boolean := (not member?(p,gens2)) and (not member?(p,resu))
+        --sayMsg concat(["generateNewPerms p=",(math_to_string p)@String])$String
+        if foundNew then
+          --sayMsg concat(["generateNewPerms foundNew:",_
+          -- (math_to_string concat(stngs.i,stngs.j))@String," perm=",_
+          -- (math_to_string p)@String])$String
+          resu := concat(resu,p)
+          if permutationNames
+           then
+            resstr := concat(resstr,(math_to_string p)@String)
+           else
+            resstr := concat(resstr,concat(stngs.i,stngs.j))
+    [resu,resstr]
+
+  -- local function used by toCayleyGraph
+  -- generate string name for identity or nth generator in sequence:
+  -- a,b,c,d,e,f...
+  generateName(n: NNI): String ==
+    ascii:NNI := 96
+    -- miss out "i" since that is reserved for identity
+    if n>8 then ascii := 97
+    (char(ascii+n)$Character)::String
+
+  -- local function used by toCayleyGraph
+  -- generate string names for identity and generators
+  generateNames(n: NNI): List String ==
+    n = 0 => ["0"]
+    [generateName(ptr2) for ptr2 in 1..n]
+
+  -- local function used by toCayleyGraph
+  -- generate cycle names for identity and generators
+  generateNamesCycle(g: List Permutation S): List String ==
+    -- set s1 to name of identity
+    s1:String := (math_to_string 1$(Permutation S))@String
+    -- set s2 to names of remaining generators
+    s2:List String := [(math_to_string ptr2)@String for ptr2 in g]
+    concat(s1,s2)
+
+  -- convert permutation generators to a Cayley graph
+  -- permList should contain generator permutations and should
+  -- not contain identity permutation.
+  -- if permutationNames then names generated represent permutation 
+  toCayleyGraph(permList:List Permutation S,permutationNames: Boolean):_
+                MultifunctionGraph(String) ==
+    -- first generate complete list of permutations from generators
+    -- assume generators don't contain identity so add it to start
+    elements:List Permutation S := permList
+    numGenerators:NNI := #permList
+    -- now multiply all permutations to get closed group
+    strngs:List String := generateNames(# elements)
+    if permutationNames then strngs := generateNamesCycle(permList)
+    --print(hconcat("toCayley strngs="::OutputForm,strngs::OutputForm))
+    -- we now generate a full list of permutations from the generators
+    -- we do this by repeatedly applying generateNewPerms until it
+    -- can't find any more.
+    contin:Boolean := true
+    while contin repeat
+      resu := generateNewPerms(elements,strngs,permutationNames)
+      contin := not empty?(resu.prm)
+      if contin then
+        elements := append(elements,resu.prm)
+        strngs := append(strngs,resu.nam)
+    -- now we need to move the identity permutation to first in list
+    idPos:Integer := position(one?,elements)
+    --print(hconcat("toCayley idPos="::OutputForm,idPos::OutputForm))
+    if idPos > 1 then
+      idPerm:=elements.idPos
+      elements := concat(idPerm,delete(elements,idPos))
+      strngs := concat("i",delete(strngs,idPos))
+    --print(hconcat("toCayley strngs="::OutputForm,strngs::OutputForm))
+    -- now calculate Cayley table
+    dimen:NNI := # elements
+    ct:List List NNI := [[_
+      permIndex((elements.i)*(elements.j),elements)
+        for j in 1..dimen] for i in 1..dimen]
+    --print(hconcat("toCayley ct="::OutputForm,ct::OutputForm))
+    -- now take out all but generator columns in table
+    gens:List List NNI := [_
+      first(rest(ct.i),numGenerators) for i in 1..dimen]
+    --print(hconcat("toCayley gens="::OutputForm,gens::OutputForm))
+    multifunctionGraph(strngs,gens)
+
+  -- convert PermutationGroup to Cayley graph
+  -- 
+  toCayleyGraph(pg:PermutationGroup S):MultifunctionGraph(String) ==
+    perms:(List Permutation S) := generators(pg)
+    toCayleyGraph(perms,false)
+
+  -- generates a permutation group from this graph
+  -- assumes this graph represents a valid group
+  toPermutation(s:%) : PermutationGroup(NNI) ==
+    lp:List Permutation NNI := []
+    preTable: List List NNI
+    objs:List MFOBJT := s.objects
+    for obj in objs for oi in 1..#objs repeat
+      newNext:List NNI := obj.next
+      preTable := concat(preTable,newNext)
+    -- transpose preTable to give cayleyTable
+    numRows := #preTable
+    numCols := #(first preTable)
+    cayleyTable: List List NNI := [[preTable.j.i for j in 1..numRows] for i in 1..numCols]
+    --print(hconcat("toPermutation cayleyTable="::OutputForm,cayleyTable::OutputForm))
+    preImgs := [p for p in 1..numRows]
+    for i in 1..(# cayleyTable) repeat
+      imgs := cayleyTable.i
+      --print(hconcat("toPermutation preImgs="::OutputForm,preImgs::OutputForm))
+      --print(hconcat("toPermutation imgs="::OutputForm,imgs::OutputForm))
+      p:(Permutation NNI) := coercePreimagesImages([preImgs,imgs])
+      lp := concat(lp,p)
+    permutationGroup(lp)
+
 @
 
 \section{domain WGRPH WeightedGraph}
@@ -3968,6 +4136,7 @@ MultifunctionGraph(S): Exports == Implementation where
 ++ Description: allows us to model weighted graphs
 ++ This graph assigns a weight to each arrow. This is used when
 ++ calculating say, lowest 'cost' routes.
+++ The values of the weights are OrderedAbelianMonoid.
 ++ An arrow with a higher weight is more 'costly'
 ++ in some way and therefore we try to choose the minimum weight.
 ++ For arrows in series the overall weight is the sum of the individual
@@ -4676,7 +4845,10 @@ WeightedGraph(S,W): Exports == Implementation where
     -- " res=",string(res)])$String
     res
 
-  -- Distance weights between nodes.
+  -- The elements of the returned array will represent the
+  -- distance weights between vertices.
+  -- if there is no connection between the vertices then the
+  -- element will be set to "disjoint"
   weightedDistanceMatrix(s:%):TwoDimensionalArray WEIGHT ==
     n := # getVertices s
     m: TwoDimensionalArray := new(n, n, 0)

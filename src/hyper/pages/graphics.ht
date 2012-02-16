@@ -17,7 +17,7 @@ what type of output you want:
 \beginmenu
 \menulink{Old Framework}{GraphicsOld} \newline
 This framework creates a graphics X window (on platforms that support
-this). It can export images to Postscript and XPM bitmap file
+this). There is some capability to export this to obsolete bitmap file
 formats.
 \menulink{New Framework}{GraphicsNew} \newline
 Scenegraph based graphics framework, this has a much more regular
@@ -473,31 +473,30 @@ This contains two points representing the maximum and minimum extent of the
 drawing area or volume. That is mins contains the minimum values of x,y...
 and maxs contains the maximum values of x,y...
 \newline
-\spadpaste{BOUNDS ==> Record(mins:SCartesian(2),maxs:SCartesian(2)) \bound{BOUNDS}}
-\spadpaste{view:BOUNDS := [sipnt(0,-500)$SCartesian(2),sipnt(1200,500)$SCartesian(2)] \bound{view} \free{BOUNDS}}
-\spadpaste{sc := createSceneRoot(view)$Scene(SCartesian(2)) \bound{sc} \free{view}}
-\spadpaste{gd := addSceneGrid(sc,view)$Scene(SCartesian(2)) \bound{gd} \free{sc view}}
+\spadpaste{BOUNDS ==> Record(mins:SCartesian(2),maxs:SCartesian(2))}
+\spadpaste{view:BOUNDS := [sipnt(0,-500)$SCartesian(2),sipnt(1200,500)$SCartesian(2)]}
+\spadpaste{sc := createSceneRoot(view)$Scene(SCartesian(2))}
+\spadpaste{gd := addSceneGrid(sc,view)$Scene(SCartesian(2))}
 \newline
 we can now export this to a SVG file so that we can confirm that
 the scene contains a grid
 \newline
-\spadpaste{writeSvg(sc,"test1.svg") \free{sc gd}}
+\spadpaste{writeSvg(sc,"test1.svg")}
 \newline
 Now lets add a plot to this. First we add a 'material' node to the root to
 define the colour and thickness of the plot.
 \newline
-\spadpaste{mt1 := addSceneMaterial(sc,3::DF,"blue","green")$Scene(SCartesian(2)) \bound{mt1} \free{sc gd}}
+\spadpaste{mt1 := addSceneMaterial(sc,3::DF,"blue","green")$Scene(SCartesian(2))}
 \newline
 Then we add the plot to the material node using the sine function that we
 defined earlier.
 \newline
-\spadpaste{ln1 := addPlot1Din2D(mt1,fnsin,0..1000::DF,49)$Scene(SCartesian(2))
- \bound{ln1} \free{mt1}}
+\spadpaste{ln1 := addPlot1Din2D(mt1,fnsin,0..1000::DF,49)$Scene(SCartesian(2))}
 \newline
 we can now export this to a SVG file again to see that
 the plot has been added to the grid
 \newline
- \spadpaste{writeSvg(sc,"test2.svg") \free{sc ln1}}
+\spadpaste{writeSvg(sc,"test2.svg")}
 \newline
 Lets now add second plot to the scene so that we can see how to modify
 it using material, transform and clip.

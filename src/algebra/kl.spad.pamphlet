@@ -213,6 +213,66 @@ MakeCachableSet(S:SetCategory): Exports == Implementation where
       position(x) = position(y)
 
 @
+\section{Kernel}
+I assume the word 'kernel' is not being used in its mathematical sense
+such as: 'set of elements that map to the zero element' which is a bit
+confusing since this is a mathematical program. I guess its being used
+in used in its more general sense like: 'the inner part of a seed,
+grain or nut'. In other words it being used, as when
+discussing operating systems, to indicate the central part. Presumably
+the namers of this domain are trying to tell us that it it central to
+the whole operation of Axiom. If so, then I think its important that
+it is well documented.
+
+Kernel represents the most general type of expression in Axiom, more
+specific types of expression are implemented using it (see Expression
+domain).
+
+Kernel is an inductively defined co-data-structure. The functions and
+operations are not built into Kernel but are instead specified by the
+user of this domain when an instance is created. An arbitrary number
+of operations of any 'arity' can created by the user so it allows us
+to construct expressions in a universal algebra. An
+instance/representation of this domain is a 'term' in the expression
+which can then be evaluated recursively.
+
+Kernel can cache terms that is, if a term exists several times in an
+expression, it will only be stored once. Does Kernel have to be defined
+over CachableSet for this to happen? What are the performance implications
+of this?
+\section{Kernel Example}
+As an example we can create Kernel over symbols.
+\begin{verbatim}
+(1) -> K := Kernel Symbol
+
+   (1)  Kernel(Symbol)
+                                                         Type: Type
+\end{verbatim}
+We can create a literal term in this Kernel.
+\begin{verbatim}
+(2) -> aliteral := kernel('a)$K
+
+   (2)  a
+                                               Type: Kernel(Symbol)
+\end{verbatim}
+Now we want to define an operator so we use BasicOperator domain, our
+operator 'mult' has a symbol '*' and an arity of 2.
+\begin{verbatim}
+(3) -> mult := operator('*,2)
+
+   (3)  *
+                                                Type: BasicOperator
+\end{verbatim}
+We can then use this operator to create a term in Kernel at level
+(height) of 1.
+\begin{verbatim}
+(4) -> term1 := kernel(mult,['a,'b],1)$K
+
+   (4)  *(a,b)
+                                               Type: Kernel(Symbol)
+\end{verbatim}
+This term can then be used in other terms, and so on, to create
+an expression.
 \section{domain KERNEL Kernel}
 <<domain KERNEL Kernel>>=
 )abbrev domain KERNEL Kernel
