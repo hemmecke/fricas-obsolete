@@ -1,0 +1,27 @@
+# Assumption: Pamphlet file is in /path/to/fricas-checkout/src/algebra.
+# Call like
+## cd /path/to/fricas-checkout/src/test
+## make -f Makefile.compile FILES=xgraph
+
+FILES=
+srcdir=../algebra
+default: $(FILES:%=%.compiled) ;
+
+$(FILES:%=%.compiled): %.compiled: $(srcdir)/%.spad.pamphlet clean
+	$(MAKE) -f Makefile.compile spad.mk f="$<"
+	echo ")set breakmode quit" > compile.input
+	sh spad.mk
+	cat compile.input | fricas -nosman
+
+spad.mk:
+	perl -e '$$f=shift;' \
+	  -e 'open($$fh, $$f);' \
+	  -e 'while(<$$fh>){' \
+	  -e '  if (/^<<((category|domain|package)\s+(\w+)\s+.*)>>=/){' \
+	  -e '    print "document --tangle=\"$$1\" --output=$$3.spad $$f\n";' \
+	  -e '    print "echo \")co $$3.spad\" >> compile.input\n";' \
+	  -e '  }}' $f > $@
+
+.PHONY: clean
+clean:
+	-rm -r spad.mk compile.input libdb.text *.erlib *.NRLIB *.spad
