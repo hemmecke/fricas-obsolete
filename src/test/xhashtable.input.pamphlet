@@ -1,0 +1,117 @@
+<<setUp>>=
+K := String --Key
+E := String --Entry
+T := XHashTable(K, E)
+KE := Record(key: K,entry: E)
+t: T := table()
+ks: List K := ["eins", "zwei", "drei"]
+es: List K := ["uno", "dos", "tres"]
+t."eins" := "uno"
+t."zwei" := "dos"
+t."drei" := "tres"
+@
+
+<<test:sxhashcollision>>=
+N := NonNegativeInteger
+V := Vector N
+H := XHashTable(V, V)
+h: H := table()
+v0:V := vector([0, 0, 0])$V
+v1:V := vector([1, 2, 0])$V
+-- The if the following line fails, we can remove the test.
+assertEquals(integer SXHASH(v0)$Lisp, integer SXHASH(v1)$Lisp)
+vv0:V := vector([0, 0])$V
+vv1:V := vector([1, 1])$V
+h.v0 := vv0
+h.v1 := vv1
+assertEquals(sort keys h, sort [v0, v1])
+assertEquals(sort entries h, sort [vv0, vv1])
+@
+
+<<test:keys>>=
+assertEquals(sort keys t, sort ks)
+@
+
+<<test:entries>>=
+assertEquals(sort entries t, sort es)
+@
+
+<<test:setelt1>>=
+setelt(t, "eins", "one")
+assertEquals(t."eins", "one")
+assertEquals(#t, 3)
+@
+
+<<test:setelt2>>=
+setelt(t, "vier", "quattro")
+assertEquals(t."vier", "quattro")
+assertEquals(#t, 4)
+@
+
+<<test:grow>>=
+setelt(t, "vier", "quattro")
+assertEquals(t."vier", "quattro")
+assertEquals(#t, 4)
+setelt(t, "cinq", "five")
+assertEquals(t."cinq", "five")
+assertEquals(#t, 5)
+-- Initially we have 7 buckets.
+-- The next setelt should grow the number of buckets.
+setelt(t, "seis", "sei")
+assertEquals(t."seis", "sei")
+assertEquals(#t, 6)
+setelt(t, "sette", "sept")
+assertEquals(t."sette", "sept")
+assertEquals(#t, 7)
+assertEquals(sort keys t, sort concat(ks,["vier", "cinq", "seis", "sette"]))
+assertEquals(sort entries t, sort concat(es,["quattro", "five", "sei", "sept"]))
+ue: Union(E, "failed") := remove!("six", t)
+assertEquals(ue case "failed", true)
+assertEquals(#t, 7)
+ue := remove!("seis", t)
+assertEquals(ue case "failed", false)
+assertEquals(ue::E, "sei")
+assertEquals(#t, 6)
+@
+
+<<test:copy>>=
+c := copy t
+assertEquals(c, t)
+t."zwei" := "two"
+assertNotEquals(c, t)
+remove!("zwei", c)
+assertNotEquals(c, t)
+remove!("zwei", t)
+assertEquals(c, t)
+@
+
+<<test:remove>>=
+f(x: KE): Boolean == entry?(char "o", x.entry)
+ke: KE := ["drei", "tres"]$KE
+s: T := table()
+insert!(ke, s)
+assertEquals(remove!(f, t), s)
+assertEquals(inspect t, ke)
+assertEquals(extract! t, ke)
+@
+
+<<test:fail-inspect>>=
+t := table()
+-- cannot inspect empty table
+inspect t
+@
+
+<<test:fail-extract>>=
+t := table()
+-- cannot extract from empty table
+extract! t
+@
+
+<<test:construct>>=
+l1: List KE := [["k1","v1"],["k2","v2"],["k3","v3"],["k5","v5"]]$List(KE)
+l2: List KE := [["l1","w1"],["l2","w2"],["l3","w3"],["l5","w5"]]$List(KE)
+assertEquals(table(l1)$T, table(reverse l1)$T)
+assertEquals(table(l2)$T, table(reverse l2)$T)
+l := concat(l1, l2)$List(KE)
+assertEquals(table(l)$T, table(reverse l)$T)
+@

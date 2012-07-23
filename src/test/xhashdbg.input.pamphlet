@@ -1,0 +1,113 @@
+<<common>>=
+Z := Integer
+I := SingleInteger
+N := NonNegativeInteger
+K := Z --Key
+E := Z --Entry
+T := TestXHashTable(K, E)
+t: T := table()
+
+Buckets ==> PrimitiveArray None
+Key ==> K
+R ==> Record(_
+    numOfEntries: Z,_
+    maxNumOfEntries: Z,_
+    numOfDeletedEntries: Z,_
+    maxNumOfVirtualEntries: Z,_
+    idx: Z,_
+    arr: Buckets,_
+    hashCode: Key -> I)
+r ==> t pretend R
+a ==> r.arr
+
+VACANT: Symbol := a.0 pretend Symbol
+vacant?(x: None): Boolean == not null? EQ(x, VACANT)$Lisp
+len x ==> shift(#x, -1)
+maxidx x ==> len x -1
+t.1:=1
+remove!(1,t)
+DELETED: Symbol := (i:=0; while vacant?(a.i) repeat i:=i+1; a.i pretend Symbol)
+deleted?(x: None): Boolean == not null? EQ(x, DELETED)$Lisp
+
+t := table()$T
+
+-- Assume s=bucketSize(t). We look for 3 keys such that "hash(k) rem s = p1"
+-- "1 + hash k rem (s-2) = p2".
+findKeys(t: T, n: Z, p1: Z, p2: Z): List K == (s:Z:=bucketSize t;l:List(Z):=[];k:Z:=0;for z in 0.. while k<n repeat (h1:Z:=hash(z)::Z;if positiveRemainder(h1, s)=p1 then if 1+positiveRemainder(h1, s-2)=p2 then (l:=cons(z,l);k:=inc k));l)
+@
+
+<<test:xhashdebug1>>=
+)lib TXHASH
+<<common>>
+l: List K := findKeys(t, 3, 1, 1)
+for k in l repeat t.k := -k
+assertEquals(position(t, l.1), 1)
+assertEquals(position(t, l.2), 1)
+assertEquals(position(t, l.3), 1)
+assertEquals(probingLength(t, l.1), 0)
+assertEquals(probingLength(t, l.2), 1)
+assertEquals(probingLength(t, l.3), 2)
+remove!(l.1, t)
+assertEquals(probingLength(t, l.2), 1)
+assertEquals(probingLength(t, l.3), 2)
+remove!(l.2, t)
+assertEquals(probingLength(t, l.3), 2)
+t(l.2) := 100
+t(l.1) := 200
+assertEquals(probingLength(t, l.1), 1)
+assertEquals(probingLength(t, l.2), 0)
+assertEquals(probingLength(t, l.3), 2)
+@
+
+-- The following tests show that that the probing length depends on the
+-- order in which the the elements are inserted.
+<<test:xhashdebug2>>=
+)lib TXHASH
+<<common>>
+k12: K := first findKeys(t, 2, 1, 2)
+k13: K := first findKeys(t, 2, 1, 3)
+k41: K := first findKeys(t, 2, 4, 1)
+t.k12 := 1
+t.k13 := 2
+t.k41 := 3
+assertEquals(position(t, k12), 1)
+assertEquals(position(t, k13), 1)
+assertEquals(position(t, k41), 4)
+assertEquals(probingLength(t, k12), 0)
+assertEquals(probingLength(t, k13), 1)
+assertEquals(probingLength(t, k41), 1)
+@
+
+<<test:xhashdebug3>>=
+)lib TXHASH
+<<common>>
+k12: K := first findKeys(t, 2, 1, 2)
+k13: K := first findKeys(t, 2, 1, 3)
+k41: K := first findKeys(t, 2, 4, 1)
+t.k41 := 3
+t.k12 := 1
+t.k13 := 2
+assertEquals(position(t, k12), 1)
+assertEquals(position(t, k13), 1)
+assertEquals(position(t, k41), 4)
+assertEquals(probingLength(t, k12), 0)
+assertEquals(probingLength(t, k13), 2)
+assertEquals(probingLength(t, k41), 0)
+@
+
+<<test:xhashdebug4>>=
+)lib TXHASH
+<<common>>
+k12: K := first findKeys(t, 2, 1, 2)
+k13: K := first findKeys(t, 2, 1, 3)
+k41: K := first findKeys(t, 2, 4, 1)
+t.k41 := 3
+t.k13 := 2
+t.k12 := 1
+assertEquals(position(t, k12), 1)
+assertEquals(position(t, k13), 1)
+assertEquals(position(t, k41), 4)
+assertEquals(probingLength(t, k12), 1)
+assertEquals(probingLength(t, k13), 0)
+assertEquals(probingLength(t, k41), 0)
+@

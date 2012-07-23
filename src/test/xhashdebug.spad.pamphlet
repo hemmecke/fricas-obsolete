@@ -1,0 +1,61 @@
+<<setUp>>=
+-- These two macros are necessary to distinguish between Rep and %.
+rep x ==> (x@%) pretend Rep
+per x ==> (x@Rep) pretend %
+-------------------------------------------------------------------
+N ==> NonNegativeInteger
+Z ==> Integer
+I ==> SingleInteger
+@
+
+<<test:xhashtable>>=
+)abbrev domain TXHASH TestXHashTable
+TestXHashTable(Key: SetCategory, Entry: SetCategory):
+  Join(TableAggregate(Key, Entry), finiteAggregate, shallowlyMutable) with
+    probingLength: (%, Key) -> Z
+    position: (%, Key) -> Z
+    bucketSize: % -> Z
+ == XHashTable(Key, Entry) add
+    KE ==> Record(key: Key, entry: Entry)
+    UE ==> Union(Entry, "failed")
+    Buckets ==> PrimitiveArray None
+    VACANT ==> NIL$Lisp
+    key?(x) ==> not NULL(x)$Lisp
+    len(a) ==> shift(#a, -1) -- this will be a prime by construction
+    getKey(a, i)    ==> a.i pretend Key
+    setKey!(a, i, k) ==> (a.i := k pretend None) pretend Key
+    getEntry(a, n, i)     ==> a(n+i) pretend Entry
+    setEntry!(a, n, i, e)  ==> (a(n+i) := e pretend None) pretend Entry
+    setKeyEntry!(a, n, i, k, e) ==> (setKey!(a, i, k); setEntry!(a, n, i, e))
+    deleteKeyEntry!(a, n, i) ==> setKeyEntry!(a, n, i, VACANT, VACANT)
+
+    Rep == Record(_
+        numOfEntries: Z,_
+        maxNumOfEntries: Z,_
+        numOfDeletedEntries: Z,_
+        maxNumOfVirtualEntries: Z,_
+        idx: Z,_
+        arr: Buckets,_
+        hashCode: Key -> I)
+    probingLength(x: %, k: Key): Z ==
+        a: Buckets := rep(x).arr
+        h: Key -> I := rep(x).hashCode
+        n: Z := len a
+        h1: Z := (h k)::Z
+        l: Z := 0
+        p: Z := positiveRemainder(h1, n) -- position in array
+        -- We make sure the second hash is coprime with n.
+        h2: Z := 1 + positiveRemainder(h1, n-2)
+        kk: Key := getKey(a, p)
+        -- We know that there are free slots in the array.
+        -- The while loop must terminate since n and h2 are coprime..
+        while key? kk and k ~= kk repeat
+            l := inc l
+            p := p + h2
+            if p>=n then p := p-n
+            kk: Key := getKey(a, p)
+        l
+    position(x: %, k: Key): Z ==
+        positiveRemainder((rep(x).hashCode) k, len(rep(x).arr))
+    bucketSize(x: %): Z == len(rep(x).arr) :: Z
+@
