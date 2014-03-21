@@ -26,129 +26,7 @@
 --  SMW July 87
 SExpressionCategory(Str, Sym, Int, Flt) : Category == Decl where
     Str, Sym, Int, Flt : SetCategory
-
-    Decl ==> SetCategory with
-        eq :        (%, %) -> Boolean
-          ++ eq(s, t) is true if EQ(s, t) is true in Lisp.
-        null? :     % -> Boolean
-          ++ null?(s) is true if s is the S-expression ().
-        atom? :     % -> Boolean
-          ++ atom?(s) is true if s is a Lisp atom.
-        pair? :     % -> Boolean
-          ++ pair?(s) is true if s has is a non-null Lisp list.
-        list? :     % -> Boolean
-          ++ list?(s) is true if s is a Lisp list, possibly ().
-        string? :   % -> Boolean
-          ++ string?(s) is true if s is an atom and belong to Str.
-        symbol? :   % -> Boolean
-          ++ symbol?(s) is true if s is an atom and belong to Sym.
-        integer? :  % -> Boolean
-          ++ integer?(s) is true if s is an atom and belong to Int.
-        float? :    % -> Boolean
-          ++ float?(s) is true if s is an atom and belong to Flt.
-        destruct :  % -> List %
-          ++ destruct((a1, ..., an)) returns the list [a1, ..., an].
-        string :    % -> Str
-          ++ string(s) returns s as an element of Str.
-          ++ Error: if s is not an atom that also belongs to Str.
-        symbol :    % -> Sym
-          ++ symbol(s) returns s as an element of Sym.
-          ++ Error: if s is not an atom that also belongs to Sym.
-        integer :   % -> Int
-          ++ integer(s) returns s as an element of Int.
-          ++ Error: if s is not an atom that also belongs to Int.
-        float :     % -> Flt
-          ++ float(s) returns s as an element of Flt;
-          ++ Error: if s is not an atom that also belongs to Flt.
-        convert :   List % -> %
-          ++ convert([a1, ..., an]) returns the S-expression \spad{(a1, ..., an)}.
-        convert :   Str    -> %
-          ++ convert(x) returns the Lisp atom x;
-        convert :   Sym    -> %
-          ++ convert(x) returns the Lisp atom x.
-        convert :   Int    -> %
-          ++ convert(x) returns the Lisp atom x.
-        convert :   Flt    -> %
-          ++ convert(x) returns the Lisp atom x.
-        car :       % -> %
-          ++ car((a1, ..., an)) returns a1.
-        cdr :       % -> %
-          ++ cdr((a1, ..., an)) returns \spad{(a2, ..., an)}.
-        "#":       % -> Integer
-          ++ #((a1, ..., an)) returns n.
-        elt :       (%, Integer)      -> %
-          ++ elt((a1, ..., an), i) returns \spad{ai}.
-        elt :       (%, List Integer) -> %
-          ++ elt((a1, ..., an), [i1, ..., im]) returns \spad{(a_i1, ..., a_im)}.
-
-@
-\section{domain SEXOF SExpressionOf}
-<<domain SEXOF SExpressionOf>>=
-)abbrev domain SEXOF SExpressionOf
-++ Domain for Lisp values over arbitrary atomic types
-++ Author: S.M.Watt
-++ Date Created: July 1987
-++ Date Last Modified: 23 May 1991
-++ Description:
-++  This domain allows the manipulation of Lisp values over
-++  arbitrary atomic types.
--- Allows the names of the atomic types to be chosen.
--- ^* Warning ^* Although the parameters are declared only to be Sets,
--- ^* Warning ^* they must have the appropriate representations.
-SExpressionOf(Str, Sym, Int, Flt) : Decl == Body where
-    Str, Sym, Int, Flt : SetCategory
-
-    Decl ==> SExpressionCategory(Str, Sym, Int, Flt)
-
-    Body ==> add
-
-        dotex:OutputForm := INTERN(".")$Lisp
-
-        coerce(b : %) : OutputForm ==
-            null? b => paren empty()
-            atom? b => b pretend OutputForm
-            r := b
-            while not atom? r repeat r := cdr r
-            l1 := [b1::OutputForm for b1 in (l := destruct b)]
-            not null? r =>
-              paren blankSeparate concat!(l1, [dotex, r::OutputForm])
-            #l = 2 and (first(l1) = ('QUOTE)::OutputForm)@Boolean =>
-                quote first rest l1
-            paren blankSeparate l1
-
-        b1 = b2        == EQUAL(b1, b2)$Lisp
-        eq(b1, b2)     == EQ(b1, b2)$Lisp
-
-        null? b      == NULL(b)$Lisp
-        atom? b      == ATOM(b)$Lisp
-        pair? b      == PAIRP(b)$Lisp
-
-        list?    b   == PAIRP(b)$Lisp or NULL(b)$Lisp
-        string?  b   == STRINGP(b)$Lisp
-        symbol?  b   == IDENTP(b)$Lisp
-        integer? b   == INTEGERP(b)$Lisp
-        float?   b   == FLOATP(b)$Lisp
-
-        destruct b == (list? b    => b pretend List %; error "Non-list")
-        string b == (STRINGP(b)$Lisp=> b pretend Str;error "Non-string")
-        symbol b == (IDENTP(b)$Lisp => b pretend Sym;error "Non-symbol")
-        float   b == (FLOATP(b)$Lisp  => b pretend Flt;error "Non-float")
-        integer b == (INTEGERP(b)$Lisp => b pretend Int;error "Non-integer")
-
-        convert(l :  List %) == l  pretend %
-        convert(st : Str)    == st pretend %
-        convert(sy : Sym)    == sy pretend %
-        convert(n :  Int)    == n  pretend %
-        convert(f :  Flt)    == f  pretend %
-
-        car b        == CAR(b)$Lisp
-        cdr b        == CDR(b)$Lisp
-        #   b        == LENGTH(b)$Lisp
-        elt(b : %, i : Integer)       == destruct(b).i
-        elt(b : %, li : List Integer) ==
-          for i in li repeat b := destruct(b).i
-          b
-
+    Decl ==> Join(SetCategory, LispExpressionCategory(Str, Sym, Int,  Flt))
 @
 \section{domain SEX SExpression}
 <<domain SEX SExpression>>=
@@ -159,9 +37,23 @@ SExpressionOf(Str, Sym, Int, Flt) : Decl == Body where
 ++ Date Last Modified: 23 May 1991
 ++ Description:
 ++  This domain allows the manipulation of the usual Lisp values;
-SExpression()
-       == SExpressionOf(String, Symbol, Integer, DoubleFloat)
+SExpression(): SExpressionCategory(String, Symbol, Integer, DoubleFloat)
+    == LispExpressionOf(String, Symbol, Integer, DoubleFloat) add
+        dotex:OutputForm := INTERN(".")$Lisp
 
+        coerce(b : %) : OutputForm ==
+            null? b => paren empty()
+            atom? b => b pretend OutputForm
+            r: % := b
+            while not atom? r repeat r := cdr r
+            l: List % := destruct b
+            l1: List OutputForm := [b1::OutputForm for b1 in l]
+            not null? r =>
+              paren blankSeparate concat!(l1, [dotex, r::OutputForm])
+            s: Integer := # l
+            s = 2 and (first(l1) = ('QUOTE)::OutputForm)@Boolean =>
+                quote first rest l1
+            paren blankSeparate l1
 @
 \section{License}
 <<license>>=
@@ -200,7 +92,6 @@ SExpression()
 <<license>>
 
 <<category SEXCAT SExpressionCategory>>
-<<domain SEXOF SExpressionOf>>
 <<domain SEX SExpression>>
 @
 \eject
