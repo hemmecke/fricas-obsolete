@@ -195,7 +195,7 @@ Integer : Join(IntegerNumberSystem, ConvertibleTo String, OpenMath, _
       shift(x, y) == ASH(x, y)$Lisp
       x exquo y ==
          zero? y => "failed"
-         z := INTEXQUO(x, y)$Lisp
+         z: % := (INTEXQUO(x, y)$Lisp) pretend %
          NULL(z)$Lisp => "failed"
          z
 --      recip(x) == if one? x or x=-1 then x else "failed"
