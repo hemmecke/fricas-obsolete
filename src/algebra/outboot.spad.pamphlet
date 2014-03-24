@@ -1,0 +1,474 @@
+\documentclass{article}
+\usepackage{axiom}
+\begin{document}
+\title{\$SPAD/src/algebra outboot.spad}
+\author{Ralf Hemmecke}
+\maketitle
+\begin{abstract}
+Translation of src/interp/i-output.boot to spad.
+\end{abstract}
+\eject
+\tableofcontents
+\eject
+\section{About this module}
+
+<<package OUTTRAN OutTransformation>>=
+)abbrev package OUTTRAN OutputTransformation
+OutputTransformation: with
+    outputTran: OutputForm -> OutputForm
+  == add
+    DBGPRINT(x: None): Void == (PRINC(x)$Lisp; TERPRI()$Lisp)
+    dbgPrint x ==> NIL -- DBGPRINT(x pretend None)
+
+    OF ==> OutputForm
+    SEX ==> SExpression
+    asSEX z ==> z pretend SEX
+    asOF z ==> z pretend OF
+    toOF z ==> z::OF
+    sx z ==> convert(z::Symbol)
+
+    -- obj2String o ==
+    --   atom o =>
+    --     STRINGP o => o
+    --     o = " " => '" "
+    --     o = ")" => '")"
+    --     o = "(" => '"("
+    --     STRINGIMAGE o
+    --   concatenateStringList([obj2String o' for o' in o])
+    obj2String(o: SEX): String ==
+        atom? o =>
+          string? o => string o
+          o = sx " " => " "
+          o = sx "(" => "("
+          o = sx ")" => ")"
+          (STRINGIMAGE$Lisp o) pretend String
+        concat [obj2String z for z in destruct o]
+
+    -- The next two functions are designed to replace successive instances of
+    -- binary functions with the n-ary equivalent, cutting down on recursion
+    -- in outputTran and in particular allowing big polynomials to be printed
+    -- without stack overflow.  MCD.
+    -- flattenOps l ==
+    --   [op, :args ] := l
+    --   op in ['"+",'"*","+","*"] =>
+    --     [op,:checkArgs(op,args)]
+    --   l
+    -- checkArgs(op,tail) ==
+    --   head := []
+    --   while tail repeat
+    --     term := first tail
+    --     atom term =>
+    --       head := [term,:head]
+    --       tail := rest tail
+    --     not LISTP term => -- never happens?
+    --       head := [term,:head]
+    --       tail := rest tail
+    --     op=first term =>
+    --       tail := [:rest term,:rest tail]
+    --     head := [term,:head]
+    --     tail := rest tail
+    --   REVERSE head
+    checkArgs(op: SEX, tail: List SEX): List SEX ==
+      dbgPrint("rhxcheckArgs")
+      dbgPrint(op)
+      dbgPrint(tail)
+      head: List SEX := empty()
+      while not empty? tail repeat
+        term: SEX := first tail
+        tail := rest tail
+        list? term and op = term.1 => tail := concat(rest destruct term, tail)
+        head := cons(term, head)
+      dbgPrint(head)
+      reverse! head
+
+    flattenOps(l: List SEX): List SEX ==
+      dbgPrint("rhxflattenOps")
+      dbgPrint(l)
+      ops: List SEX := [sx "+", sx "*", asSEX "+", asSEX "*"]
+      member?(first l, ops) =>
+        dbgPrint("rhxflattenOps member")
+        cons(first l, checkArgs(first l, rest l))
+      l
+
+    outputTran(x: OutputForm): OutputForm ==
+      dbgPrint("rhxoutputTran")
+      dbgPrint(x)
+
+      string? asSEX x => x
+
+      --rhx: Maybe VECP(x)=true is not a case in OutputForm
+      VECP(x)$Lisp => BREAK()$Lisp
+
+      --rhx: There are only integers in OutputForm.
+      -- NUMBERP x =>
+      --   MINUSP x => ["-",MINUS x]
+      --   x
+      integer? asSEX x =>
+        dbgPrint("rhxoutputTran int")
+        integer asSEX x < 0 =>
+          dbgPrint("rhxoutputTran -int")
+          - toOF(- integer asSEX x)
+        x
+
+      float? asSEX x => BREAK()$Lisp -- floats are strings in OutputForm
+
+      atom? asSEX x =>
+        dbgPrint("rhxoutputTran atom")
+        asSEX x = _$EmptyMode$Lisp => asOF specialChar$Lisp 'quad
+        x
+
+      -- assert(list? sex)
+      l: List SEX := destruct asSEX x
+      op: SEX := first l
+      l:= rest l
+      n: NonNegativeInteger := #l
+      --x is [c,var,mode] and c in '(_pretend _: _:_: _@) =>
+      --  var := outputTran var
+      --  if PAIRP var then var := ['PAREN,var]
+      --  ['CONCATB,var,c,obj2String prefix2String mode]
+      n=2 and member?(op, [sx "pretend", sx ":", sx "::", sx "@"]) =>
+        dbgPrint("rhxoutputTran ::")
+        var: OF := outputTran asOF first l
+        mode: OF := asOF obj2String asSEX prefix2String$Lisp second l
+        if pair? asSEX var then var := paren toOF var
+        blankSeparate [var, asOF op, mode]
+
+      -- x is ['ADEF,vars,.,.,body] =>
+      --   vars :=
+      --       vars is [x] => x
+      --       ['Tuple,:vars]
+      --   outputTran ["+->", vars, body]
+      op = sx "ADEF" and n=4 =>
+        dbgPrint("rhxoutputTran ADEF")
+        vars: SEX := first l
+        body: SEX := third rest l
+        vl: List SEX := destruct vars
+        vars := if #vl=1 then first vl else convert cons(sx "Tuple", vl)
+        outputTran asOF convert [sx "+->", vars, body]
+
+      -- x is ['MATRIX,:m] => outputTranMatrix m
+      op = sx "MATRIX" => outputTranMatrix$Lisp l
+
+      -- x is ['matrix,['construct,c]] and
+      --   c is ['COLLECT,:m,d] and d is ['construct,e] and e is ['COLLECT,:.] =>
+      --     outputTran ['COLLECT,:m,e]
+      if op = sx "matrix" and n=1 and list? first l then
+        dbgPrint("rhxoutputTran matrix")
+        l1: List SEX := destruct first l
+        if #l1 = 2 and l1.1 = sx "construct" and list? second l1 then
+          c: List SEX := destruct second l1
+          if #c>1 and first c = sx "COLLECT" then
+            dm: List SEX := reverse rest c
+            dm1: SEX := first dm
+            if list? dm1 and #dm1 = 2 then
+              d: List SEX := destruct dm1
+              m: List SEX := rest dm
+              if #d=2 and first d = sx "construct" and list? second d then
+                e: List SEX := destruct second d
+                if first e = sx "COLLECT" then
+                  m := cons(sx "COLLECT", reverse cons(second d, m))
+                  return outputTran asOF convert m
+
+      -- x is ['LIST,:l] => outputTran ['BRACKET,['AGGLST,:l]]
+      -- x is ['construct,:l] =>
+      --   ['BRACKET,['AGGLST,:[outputTran y for y in l]]]
+      op = sx "LIST" or op = sx "construct" =>
+        dbgPrint("rhxoutputTran LIST/construct")
+        bracket commaSeparate [outputTran asOF z for z in l]
+
+      -- x is ['SPADMAP, :l] => outputMapTran l
+      op = sx "SPADMAP" =>
+        dbgPrint("rhxoutputTran SPADMAP")
+        (outputMapTran$Lisp)(l) pretend OF
+
+      -- x is ['brace, :l]    =>
+      --   ['BRACE,  ['AGGLST,:[outputTran y for y in l]]]
+      op = sx "brace" =>
+        dbgPrint("rhxoutputTran brace")
+        brace commaSeparate [outputTran asOF z for z in l]
+
+      -- x is ["return", l] => ["return", outputTran l]
+      op = asSEX "return" and n=1 =>
+        dbgPrint("rhxoutputTran return=1")
+        asOF cons(asOF convert "return", [outputTran asOF first l])
+
+      -- x is ["return", ., :l] => ["return", :outputTran l]
+      op = asSEX "return" and n>1 =>
+        dbgPrint("rhxoutputTran return>1")
+        asOF convert [convert "return", asSEX outputTran asOF convert rest l]
+
+      -- x is [["$elt",domain,"float"], x, y, z] and (domain = $DoubleFloat or
+      --   domain is ['Float]) and INTEGERP x and INTEGERP y and INTEGERP z and
+      --       z > 0  and (float := getFunctionFromDomain("float",domain,[$Integer,$Integer,$PositiveInteger])) =>
+      --           f := SPADCALL(x,y,z,float)
+      --           o := coerceInteractive(mkObjWrap(f, domain), '(OutputForm))
+      --           objValUnwrap o
+      --rhx: I hope that's a proper translation into SPAD.
+      if n=3 and list? op and _
+          #op=3 and op.1= sx "$elt" and op.3 = sx "float" then
+        dbgPrint("rhxoutputTran $elt")
+        domain: SEX := op.2
+        xx: SEX := l.1
+        yy: SEX := l.2
+        zz: SEX := l.3
+        pi x ==> (integer x)::PositiveInteger
+        if integer? xx and integer? yy and integer? zz and (integer zz > 0) then
+          if domain = asSEX (_$DoubleFloat$Lisp) then
+            return toOF(float(integer xx, integer yy, pi zz)$DoubleFloat)
+           else if domain = convert [sx "Float"] then
+            return toOF(float(integer xx, integer yy, pi zz)$Float)
+
+      -- [op,:l]:= flattenOps x
+      dbgPrint("rhxoutputTran1")
+      l := flattenOps cons(op, l)
+      dbgPrint("rhyoutputTran2")
+      op := first l
+      l := rest l
+      dbgPrint(op)
+      dbgPrint(l)
+      n := #l
+
+      -- Note that x is still unflattened. We shouldn't use it anymore
+      -- from here on.
+
+      -- --needed since "op" is string in some spad code
+      -- if STRINGP op then (op := INTERN op; x:= [op,:l])
+      if string? op then op := sx string op
+
+      -- op = 'LAMBDA_-CLOSURE => 'Closure
+      op = sx "LAMBDA-CLOSURE" =>
+        dbgPrint("rhxoutputTran closure")
+        asOF sx "Closure"
+
+      -- x is ['break,:.] => 'break
+      op = sx "break" =>
+        dbgPrint("rhxoutputTran break")
+        asOF sx "break"
+
+      -- x is ['SEGMENT,a] =>
+      --   a' := outputTran a
+      --   if LISTP a' then a' := ['PAREN,a']
+      --   ['SEGMENT,a']
+      -- x is ['SEGMENT,a,b] =>
+      --   a' := outputTran a
+      --   b' := outputTran b
+      --   if LISTP a' then a' := ['PAREN,a']
+      --   if LISTP b' then b' := ['PAREN,b']
+      --   ['SEGMENT,a',b']
+      op = sx "SEGMENT" and (n=1 or n=2) =>
+        dbgPrint("rhxoutputTran SEGMENT")
+        a: OF := outputTran asOF first l
+        if list? asSEX a then a := paren a
+        n = 1 => SEGMENT(a)
+        b: OF := outputTran asOF second l
+        if list? asSEX b then b := paren b
+        SEGMENT(a, b)
+
+      -- op is ["$elt",targ,fun] or not $InteractiveMode and op is ["elt",targ,fun] =>
+      --   -- l has the args
+      --   targ' := obj2String prefix2String targ
+      --   if 2 = #targ then targ' := ['PAREN,targ']
+      --   ['CONCAT,outputTran [fun,:l],'"$",targ']
+      if list? op and # op = 3 then
+        op2: SEX := first destruct op
+        targ: SEX := second destruct op
+        fun: SEX := third destruct op
+        dbgPrint("rhxoutputTran if elt")
+        (op2 = sx "$elt" or _
+         (op2 = sx "elt" and not(_$InteractiveMode$Lisp pretend Boolean))) =>
+          dbgPrint("rhxoutputTran elt")
+          targ2: OF := asOF obj2String asSEX prefix2String$Lisp targ
+          if # targ = 2 then targ2 := paren targ2
+          asOF [asOF sx "CONCAT", outputTran asOF cons(fun, l), toOF "$", targ2]
+
+      -- x is ["$elt",targ,c] or not $InteractiveMode and x is ["elt",targ,c] =>
+      --   targ' := obj2String prefix2String targ
+      --   if 2 = #targ then targ' := ['PAREN,targ']
+      --   ['CONCAT,outputTran c,'"$",targ']
+      n=2 and (op = sx "$elt" or
+       (op = sx "elt" and not(_$InteractiveMode$Lisp pretend Boolean))) =>
+        dbgPrint("rhxoutputTran elt2")
+        targ2: OF := asOF obj2String asSEX prefix2String$Lisp first l
+        if # first l = 2 then targ2 := paren targ2
+        asOF [asOF sx "CONCAT", outputTran asOF second l, toOF "$", targ2]
+
+      -- x is ["-",a,b] =>
+      --   a := outputTran a
+      --   b := outputTran b
+      --   INTEGERP b =>
+      --     b < 0 => ["+",a,-b]
+      --     ["+",a,["-",b]]
+      --   b is ["-",c] => ["+",a,c]
+      --   ["+",a,["-",b]]
+      op = sx "-" and n=2 =>
+        dbgPrint("rhxoutputTran -")
+        a := outputTran asOF first l
+        b := outputTran asOF second l
+        sb: SEX := asSEX b
+        integer? sb =>
+          integer sb < 0 => a + (- toOF integer sb)
+          a + (- b)
+        list? sb and # sb = 2 and sb.1 = sx "-" =>
+          a + asOF(sb.2)
+        a + (- b)
+
+      --rhx: Just call the boot function for non-algebraic stuff.
+      -- op = 'IF       => outputTranIf x
+      -- op = 'COLLECT  => outputTranCollect x
+      -- op = 'REDUCE   => outputTranReduce x
+      -- op = 'REPEAT   => outputTranRepeat x
+      -- op = 'SEQ      => outputTranSEQ x
+      -- op in '(cons nconc) => outputConstructTran x
+      op = sx "IF"      => outputTranIf$Lisp x
+      op = sx "COLLECT" => outputTranCollect$Lisp x
+      op = sx "REDUCE"  => outputTranReduce$Lisp x
+      op = sx "REPEAT"  => outputTranRepeat$Lisp x
+      op = sx "SEQ"     => outputTranSEQ$Lisp x
+      op = sx "cons" or op = sx "nconc" => outputConstructTran$Lisp x
+
+      -- l:= [outputTran y for y in l]
+      dbgPrint("rhxoutputTran3")
+      l := [asSEX outputTran asOF y for y in l]
+      dbgPrint("rhxoutputTran4")
+      dbgPrint(l)
+
+      -- op = "*" =>
+      --    l is [a] => outputTran a
+      --    l is [["-",a],:b] =>
+      --      -- now this is tricky because we've already outputTran the list
+      --      -- expect trouble when outputTran hits b again
+      --      -- some things object to being outputTran twice ,e.g.matrices
+      --      -- same thing a bit lower down for "/"
+      --      a=1 => outputTran ["-",[op,:b]]
+      --      outputTran ["-",[op,a,:b]]
+      --    [op,:"append"/[(ss is ["*",:ll] => ll; [ss]) for ss in l]]
+      op = sx "*" =>
+        dbgPrint("rhxoutputTran *")
+        s1: SEX := first l
+        n = 1 =>
+          dbgPrint("rhxoutputTran *=1")
+          outputTran asOF s1
+        n > 1 and list? s1 and #s1 = 2 and s1.1 = sx "-" =>
+          dbgPrint("rhxoutputTran *>1")
+          integer?(s1.2) and integer(s1.2) = 1 =>
+            dbgPrint("rhxoutputTran *>1 a=1")
+            outputTran(- asOF cons(op, rest l))
+          dbgPrint("rhxoutputTran *>1 - before *")
+          outputTran(- asOF cons(op, cons(s1.2, rest l)))
+        --rhx: That is basically flattenOps. But it has been done before.
+        dbgPrint("rhxoutputTran * checkArgs")
+        asOF cons(op, checkArgs(op, l))
+
+      dbgPrint("rhxoutputTran5")
+
+      -- op = "+" =>
+      --    l is [a] => outputTran a
+      --    [op,:"append"/[(ss is ["+",:ll] => ll; [ss]) for ss in l]]
+      op = sx "+" =>
+        dbgPrint("rhxoutputTran +")
+        s1 := first l
+        n = 1 => outputTran asOF s1
+        --rhx: That is basically flattenOps. But it has been done before.
+        asOF cons(op, checkArgs(op, l))
+
+      -- op = "/" =>
+      --   $fractionDisplayType = 'horizontal =>
+      --       op := 'SLASH
+      --       l is [a, b] =>
+      --           a :=
+      --                ATOM(a) => a
+      --                ['PAREN, a]
+      --           b :=
+      --                ATOM(b) => b
+      --                ['PAREN, b]
+      --           [outputTran op, a, b]
+      --       BREAK()
+      --   op := 'OVER
+      --   l is [["-",a],:b] => outputTran ["-",[op,a,:b]]
+      --   [outputTran op,:l]
+      op = sx "/" =>
+        dbgPrint("rhxoutputTran /")
+        asSEX(_$fractionDisplayType$Lisp) = sx "horizontal" =>
+          op := sx "SLASH"
+          n = 2 =>
+            a := if atom?(l.1) then asOF(l.1) else paren asOF(l.1)
+            b := if atom?(l.2) then asOF(l.2) else paren asOF(l.2)
+            --rhx: Why again outputTran on op='SLASH?
+            asOF [asOF op, a, b]
+          BREAK()$Lisp
+        op := sx "OVER"
+        n > 1 and list?(l.1) and l.1.1 = sx "-" =>
+          outputTran(- asOF cons(op, cons(asSEX(l.1.2), rest l)))
+        --rhx: why outputTran on op='/?
+        asOF cons(op, l)
+
+      -- op="|" and l is [["Tuple",:u],pred] =>
+      --   ['PAREN,["|",['AGGLST,:l],pred]]
+      --rhx: Why AGGLST l? That includes pred. Strange.
+      op = sx "|" and n=2 and list?(l.1) and l.1.1 = sx "Tuple" =>
+        dbgPrint("rhxoutputTran |")
+        paren asOF [asOF op, commaSeparate [asOF s1 for s1 in l], asOF(l.2)]
+
+      -- op='Tuple  => ['PAREN,['AGGLST,:l]]
+      op = sx "Tuple" =>
+        dbgPrint("rhxoutputTran Tuple")
+        paren [asOF s1 for s1 in l]
+
+      -- op='LISTOF => ['AGGLST,:l]
+      op = sx "LISTOF" =>
+        dbgPrint("rhxoutputTran LISTOF")
+        commaSeparate [asOF s1 for s1 in l]
+
+      -- IDENTP op and not (op in '(_* _*_*) ) and char("*") = (PNAME op).0 =>
+      --   mkSuperSub(op,l)
+      --rhx: I'm not sure with the index after PNAME.
+      symbol? op and not member?(op, [sx "*", sx "**"]) _
+                 and char "*" = ((PNAME$Lisp)(op) pretend String).1 =>
+        dbgPrint("rhxoutputTran symbol op")
+        asOF mkSuperSub(op, l)$Lisp
+
+      dbgPrint("rhxoutputTran before end")
+      -- [outputTran op,:l]
+      asOF cons(asSEX outputTran asOF op, l)
+@
+
+\section{License}
+<<license>>=
+--Copyright (c) 1991-2002, The Numerical ALgorithms Group Ltd.
+--All rights reserved.
+--
+--Redistribution and use in source and binary forms, with or without
+--modification, are permitted provided that the following conditions are
+--met:
+--
+--    - Redistributions of source code must retain the above copyright
+--      notice, this list of conditions and the following disclaimer.
+--
+--    - Redistributions in binary form must reproduce the above copyright
+--      notice, this list of conditions and the following disclaimer in
+--      the documentation and/or other materials provided with the
+--      distribution.
+--
+--    - Neither the name of The Numerical ALgorithms Group Ltd. nor the
+--      names of its contributors may be used to endorse or promote products
+--      derived from this software without specific prior written permission.
+--
+--THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS
+--IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+--TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+--PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER
+--OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+--EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+--PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+--PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+--LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+--NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+--SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+@
+
+<<*>>=
+<<license>>
+<<package OUTTRAN OutputTransformation>>
+@
+\eject
+\end{document}

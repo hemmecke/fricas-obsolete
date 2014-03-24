@@ -251,8 +251,7 @@ ScriptFormulaFormat() : public == private where
     parenthesize str ==
       concat ["left lparen ",str," right rparen"]
 
-    precondition expr ==
-      outputTran(expr)$Lisp
+    precondition(expr: E): E == outputTran(expr)$OutputTransformation
 
     formatSpecial(op : S, args : L E, prec : I) : S ==
       op = "AGGLST" =>

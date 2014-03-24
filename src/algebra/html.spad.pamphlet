@@ -428,8 +428,7 @@ HTMLFormat() : public == private where
 
     stringify expr == (mathObject2String$Lisp expr)@S
 
-    precondition expr ==
-      outputTran$Lisp expr
+    precondition(expr: E): E == outputTran(expr)$OutputTransformation
 
     -- I dont know what SC is so put it in a table for now
     formatSC(args : L E, prec : I)  : Tree S ==

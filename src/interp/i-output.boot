@@ -141,15 +141,6 @@ stringWidth u ==
   u is [.,u] or THROW('outputFailure,'outputFailure)
   2+#u
 
-obj2String o ==
-  atom o =>
-    STRINGP o => o
-    o = " " => '" "
-    o = ")" => '")"
-    o = "(" => '"("
-    STRINGIMAGE o
-  concatenateStringList([obj2String o' for o' in o])
-
 APP(u,x,y,d) ==
   atom u => appChar(atom2String u,x,y,d)
   u is [[op,:.],a] and (s:= GETL(op,'PREFIXOP)) =>
@@ -219,148 +210,17 @@ sayMath u ==
   sayALGEBRA acc
 
 --% Output transformations
+-- Call "outputTran" through the SPAD package.
+outputTran e == outputTranFromSPAD e
+outputTranFromSPAD e ==
+  dom := '(OutputTransformation)
+  outputTranFn := getFunctionFromDomain("outputTran",dom,[$OutputForm])
+  SPADCALL(e,outputTranFn)
 
-outputTran x ==
-  STRINGP x => x
-  VECP x =>
-    outputTran ['BRACKET,['AGGLST,:[x.i for i in 0..MAXINDEX x]]]
-  NUMBERP x =>
-    MINUSP x => ["-",MINUS x]
-    x
-  atom x =>
-    x=$EmptyMode => specialChar 'quad
-    x
-  x is [c,var,mode] and c in '(_pretend _: _:_: _@) =>
-    var := outputTran var
-    if PAIRP var then var := ['PAREN,var]
-    ['CONCATB,var,c,obj2String prefix2String mode]
-  x is ['ADEF,vars,.,.,body] =>
-    vars :=
-        vars is [x] => x
-        ['Tuple,:vars]
-    outputTran ["+->", vars, body]
-  x is ['MATRIX,:m] => outputTranMatrix m
-  x is ['matrix,['construct,c]] and
-    c is ['COLLECT,:m,d] and d is ['construct,e] and e is ['COLLECT,:.] =>
-      outputTran ['COLLECT,:m,e]
-  x is ['LIST,:l] => outputTran ['BRACKET,['AGGLST,:l]]
-  x is ['SPADMAP, :l] => outputMapTran l
-  x is ['brace, :l]    =>
-    ['BRACE,  ['AGGLST,:[outputTran y for y in l]]]
-  x is ["return", l] => ["return", outputTran l]
-  x is ["return", ., :l] => ["return", :outputTran l]
-  x is ['construct,:l] =>
-    ['BRACKET,['AGGLST,:[outputTran y for y in l]]]
+--rhx: Helper function
+-- VECP x is assumed to be true
+vector2List x == [x.i for i in 0..MAXINDEX x]
 
-  x is [["$elt",domain,"float"], x, y, z] and (domain = $DoubleFloat or
-    domain is ['Float]) and INTEGERP x and INTEGERP y and INTEGERP z and
-        z > 0  and (float := getFunctionFromDomain("float",domain,[$Integer,$Integer,$PositiveInteger])) =>
-            f := SPADCALL(x,y,z,float)
-            o := coerceInteractive(mkObjWrap(f, domain), '(OutputForm))
-            objValUnwrap o
-
-  [op,:l]:= flattenOps x
-  --needed since "op" is string in some spad code
-  if STRINGP op then (op := INTERN op; x:= [op,:l])
-  op = 'LAMBDA_-CLOSURE => 'Closure
-  x is ['break,:.] => 'break
-  x is ['SEGMENT,a] =>
-    a' := outputTran a
-    if LISTP a' then a' := ['PAREN,a']
-    ['SEGMENT,a']
-  x is ['SEGMENT,a,b] =>
-    a' := outputTran a
-    b' := outputTran b
-    if LISTP a' then a' := ['PAREN,a']
-    if LISTP b' then b' := ['PAREN,b']
-    ['SEGMENT,a',b']
-
-  op is ["$elt",targ,fun] or not $InteractiveMode and op is ["elt",targ,fun] =>
-    -- l has the args
-    targ' := obj2String prefix2String targ
-    if 2 = #targ then targ' := ['PAREN,targ']
-    ['CONCAT,outputTran [fun,:l],'"$",targ']
-  x is ["$elt",targ,c] or not $InteractiveMode and x is ["elt",targ,c] =>
-    targ' := obj2String prefix2String targ
-    if 2 = #targ then targ' := ['PAREN,targ']
-    ['CONCAT,outputTran c,'"$",targ']
-  x is ["-",a,b] =>
-    a := outputTran a
-    b := outputTran b
-    INTEGERP b =>
-      b < 0 => ["+",a,-b]
-      ["+",a,["-",b]]
-    b is ["-",c] => ["+",a,c]
-    ["+",a,["-",b]]
-
-  op = 'IF       => outputTranIf x
-  op = 'COLLECT  => outputTranCollect x
-  op = 'REDUCE   => outputTranReduce x
-  op = 'REPEAT   => outputTranRepeat x
-  op = 'SEQ      => outputTranSEQ x
-  op in '(cons nconc) => outputConstructTran x
-  l:= [outputTran y for y in l]
-  op = "*" =>
-     l is [a] => outputTran a
-     l is [["-",a],:b] =>
-       -- now this is tricky because we've already outputTran the list
-       -- expect trouble when outputTran hits b again
-       -- some things object to being outputTran twice ,e.g.matrices
-       -- same thing a bit lower down for "/"
-       a=1 => outputTran ["-",[op,:b]]
-       outputTran ["-",[op,a,:b]]
-     [op,:"append"/[(ss is ["*",:ll] => ll; [ss]) for ss in l]]
-  op = "+" =>
-     l is [a] => outputTran a
-     [op,:"append"/[(ss is ["+",:ll] => ll; [ss]) for ss in l]]
-  op = "/" =>
-    $fractionDisplayType = 'horizontal =>
-        op := 'SLASH
-        l is [a, b] =>
-            a :=
-                 ATOM(a) => a
-                 ['PAREN, a]
-            b :=
-                 ATOM(b) => b
-                 ['PAREN, b]
-            [outputTran op, a, b]
-        BREAK()
-    op := 'OVER
-    l is [["-",a],:b] => outputTran ["-",[op,a,:b]]
-    [outputTran op,:l]
-  op="|" and l is [["Tuple",:u],pred] =>
-    ['PAREN,["|",['AGGLST,:l],pred]]
-  op='Tuple  => ['PAREN,['AGGLST,:l]]
-  op='LISTOF => ['AGGLST,:l]
-  IDENTP op and not (op in '(_* _*_*) ) and char("*") = (PNAME op).0 =>
-    mkSuperSub(op,l)
-  [outputTran op,:l]
-
--- The next two functions are designed to replace successive instances of
--- binary functions with the n-ary equivalent, cutting down on recursion
--- in outputTran and in particular allowing big polynomials to be printed
--- without stack overflow.  MCD.
-flattenOps l ==
-  [op, :args ] := l
-  op in ['"+",'"*","+","*"] =>
-    [op,:checkArgs(op,args)]
-  l
-
-checkArgs(op,tail) ==
-  head := []
-  while tail repeat
-    term := first tail
-    atom term =>
-      head := [term,:head]
-      tail := rest tail
-    not LISTP term => -- never happens?
-      head := [term,:head]
-      tail := rest tail
-    op=first term =>
-      tail := [:rest term,:rest tail]
-    head := [term,:head]
-    tail := rest tail
-  REVERSE head
 
 outputTranSEQ ['SEQ,:l,exitform] ==
   if exitform is ['exit,.,a] then exitform := a

@@ -283,8 +283,7 @@ TexmacsFormat() : public == private where
     parenthesize str ==
       concat [" _"(_" ",str," _")_" "]
 
-    precondition expr ==
-      outputTran$Lisp expr
+    precondition(expr: E): E == outputTran(expr)$OutputTransformation
 
     formatSpecial(op : Sy, args : L E, prec : I) : S ==
         arg : E
