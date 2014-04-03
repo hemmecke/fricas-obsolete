@@ -32,12 +32,19 @@ OutputFormTools : with
     string : OutputForm -> String
       ++ string(f) gives string corresponding to f.  Valid only
       ++ when string?(f) is true
+    list : OutputForm -> List OutputForm
+      ++ list(f) returns the list corresponding to f. Valid only if
+      ++ atom?(f) is false.
     operator : OutputForm -> OutputForm
       ++ operator(f) gives operator (head) of form f.  Valid only
       ++ when atom?(f) is false
     arguments : OutputForm -> List(OutputForm)
       ++ arguments(f) gives arguments of form f.  Valid only
       ++ when atom?(f) is false
+    outputForm: (OutputForm, List OutputForm) -> OutputForm
+      ++ outputForm(op,args) creates an OutputForm f such that
+      ++ operator(f)=op and arguments(f)=args.
+
   == add
 
     atom?(x) == ATOM(x)$Lisp
@@ -54,9 +61,14 @@ OutputFormTools : with
 
     string(x) == x pretend String
 
-    operator(x) == first(x pretend List(OutputForm))
+    list(x) == x pretend List(OutputForm)
 
-    arguments(x) == rest(x pretend List(OutputForm))
+    operator(x) == first list x
+
+    arguments(x) == rest list x
+
+    outputForm(op: OutputForm, args: List OutputForm): OutputForm ==
+      cons(op::OutputForm, args) pretend OutputForm
 @
 
 \section{License}
