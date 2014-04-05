@@ -1329,42 +1329,11 @@ printBasic x ==
   atom x => PRIN1(x,$algebraOutputStream)
   PRIN0(x,$algebraOutputStream)
 
-charybdis(u,start,linelength) ==
-  EQ(keyp u,'EQUATNUM) and not (CDDR u) =>
-    charybdis(['PAREN,u.1],start,linelength)
-  charyTop(u,start,linelength)
-
-charyTop(u,start,linelength) ==
-  u is ['SC,:l] or u is [['SC,:.],:l] =>
-    for a in l repeat charyTop(a,start,linelength)
-    '" "
-  u is [['CONCATB,:.],:m,[['SC,:.],:l]] =>
-    charyTop(['CONCATB,:m],start,linelength)
-    charyTop(['SC,:l],start+2,linelength-2)
-  u is ['CENTER,a] =>
-    b := charyTopWidth a
-    (w := WIDTH(b)) > linelength-start => charyTop(a,start,linelength)
-    charyTop(b, QUOTIENT(linelength-start-w, 2), linelength)
-  v := charyTopWidth u
-  EQ(keyp u,'ELSE) => charyElse(u,v,start,linelength)
-  WIDTH(v) > linelength => charyTrouble(u,v,start,linelength)
-  d := APP(v,start,0,nil)
-  n := superspan v
-  m := - subspan v
--->
-  $testOutputLineFlag =>
-    $testOutputLineList :=
-      [:ASSOCRIGHT SORTBY('CAR,d),:$testOutputLineList]
-  until n < m repeat
-    scylla(n,d)
-    n := n - 1
-  '" "
-
-charyTopWidth u ==
-    atom u => u
-    atom first u => putWidth u
-    NUMBERP CDAR u => u
-    putWidth u
+charybdis(u,start,linelength) == charybdisFromSPAD(u,start,linelength)
+charybdisFromSPAD(u,start,linelength) ==
+  dom := '(Algebra2dFormatter)
+  charybdisFn := getFunctionFromDomain("charybdis",dom,[$OutputForm,'(Integer),'(Integer)])
+  SPADCALL(u,start,linelength,charybdisFn)
 
 charyTrouble(u,v,start,linelength) ==
   al:= LargeMatrixp(u,linelength,2*linelength) =>
