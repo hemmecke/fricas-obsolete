@@ -21,7 +21,7 @@ subdir = src/doc/
 # files without the xvfb-run program will pop up image windows in
 # X and make working during compilation impossible.
 # The intro.htex and util.ht files are not relevant for image generation.
-GPHTS = coverex explot2d explot3d graphics SEGBIND ug01 ug07 ug08 ug10 ug11
+GPHTS = coverex explot2d explot3d graphics SEGBIND ug00 ug01 ug07 ug08 ug10 ug11
 MAYBE_VIEWPORTS=@MAYBE_VIEWPORTS@
 XVFB=@XVFB@
 
@@ -52,6 +52,7 @@ htsrcdir     = ${srcdir}/ht
 bitmapssrcdir= $(srcdir)/bitmaps
 interpsrcdir = ${fricas_src_srcdir}/interp
 inputsrcdir  = ${fricas_src_srcdir}/input
+pssrcdir     = ${srcdir}/ps
 
 httargetdir        = $(fricas_target_datadir)/hypertex/pages
 bitmapstargetdir   = $(fricas_target_datadir)/hypertex/bitmaps
@@ -76,6 +77,9 @@ ADD2HTDB      = ${fricas_target_bindir}/htadd
 HTEX2HT       = ${AWK} -f ${srcdir}/ht.awk
 HTEX2SECMENU  = ${AWK} -f ${srcdir}/secmenu.awk
 UGSYSCMD2HELP = ${AWK} -f ${srcdir}/syscmd.awk
+HTEX2INPUT    = ${AWK} -f ${srcdir}/htex2input.awk
+SPOOL2TEX     = ${AWK} -f ${srcdir}/spool2tex.awk
+UGEXAMPLES    = ${AWK} -f ${srcdir}/ugexamples.awk
 
 ###################################################################
 # The current chapters. Except for 09, there exists a .htex file for
@@ -92,6 +96,7 @@ UGSYSCMD2HELP = ${AWK} -f ${srcdir}/syscmd.awk
 # must be 09.
 # (The g below stands for "is generated".)
 
+# 00   Introduction to FriCAS
 # 01   An Overview of \Language{}
 # 02   Using Types and Modes
 # 03   Using \HyperName{}
@@ -115,7 +120,7 @@ UGSYSCMD2HELP = ${AWK} -f ${srcdir}/syscmd.awk
 # 21   Programs for FriCAS Images
 
 # The stuff that should be visible in HyperDoc
-CHAPTERS=01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 21
+CHAPTERS=00 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 21
 EXAMPLES_CHAPTER = 09
 EXAMPLES_CHAPTER_NO_LEADING_ZERO = 9
 EXAMPLES = ALIST ARRAY1 ARRAY2 BBTREE BINARY BOP BSTREE CARD CARTEN \
@@ -144,9 +149,8 @@ HD_EXAMPLES_MENU_FILES = $(patsubst %, tmp/%.menu, ${EXAMPLES})
 
 HD_HTEX = ${HD_CHAPTERS_HTEX} ${EXAMPLES_HTEX}
 
-HD_INPUT_FILES  = $(patsubst %.htex, tmp/%.input,  ${HD_HTEX})
-HD_DRIVER_FILES = $(patsubst %.htex, tmp/%.driver, ${HD_HTEX})
-HD_OUT_FILES    = $(patsubst %.htex, tmp/%.out,    ${HD_HTEX})
+HD_INPUT_FILES = $(patsubst %.htex, tmp/%.input, ${HD_HTEX})
+HD_TEX_FILES   = $(patsubst %.htex, tmp/%.tex,   ${HD_HTEX})
 
 ###################################################################
 # A few files exist in a source .ht format under ${htsrcdir}.
@@ -440,3 +444,80 @@ clean-local: mostlyclean-local
 
 distclean-local: clean-local
 	-rm -rf *.VIEW
+
+###################################################################
+# The following targets create .input files from .htex files.
+# The .input files contain the same text as the .htex file except that
+# anything outside of the second argument of an \xtc command appears
+# prefixed with "-- ". For simplicity, we require and \xtc command to
+# be written like this:
+## \xtc{
+##   SOME TEXT
+## }{
+##   COMMANDS
+## }
+# where SOME TEXT must not contain "}{" at the beginning of the line
+# and COMMAND must not include "}" at the beginning of the line.
+# COMMANDS is either one line of the form
+## \spadcommand{.... \free{...} \bound{}}
+# where \free and \bound are optional or can occur multiple times or
+# of the form
+## \begin{spadsrc}[...]
+## ...
+## \end{spadsrc}
+###################################################################
+${HD_INPUT_FILES}: tmp/%.input: ${htexsrcdir}/%.htex
+	${MKDIR_P} tmp
+	${HTEX2INPUT} $< > $@
+HD_SPOOL_FILES=${HD_TEX_FILES:%.tex=%.spool}
+${HD_SPOOL_FILES}: tmp/%.spool: tmp/%.input
+	${MKDIR_P} tmp
+	echo ")read $<" | FRICAS_INITFILE='' ${INTERPSYS} > $@
+${HD_TEX_FILES}: tmp/%.tex: tmp/%.spool
+	${MKDIR_P} tmp
+	cat $< | ${SPOOL2TEX} > $@
+
+input-files: ${HD_INPUT_FILES}
+
+spool-files: ${HD_SPOOL_FILES}
+
+tex-files: ${HD_TEX_FILES}
+
+ug09.tex: examples.list
+	${UGEXAMPLES} $< > $@
+
+pics.mk:
+	grep '\(\\head{\|\\psXtc\|\xtc\|\\noOutputXtc\|\\nullXtc\|epsffile\|\\spadgraph\)' ${srcdir}/htex/ug*.htex \
+	| awk -f ${srcdir}/ugepsf.awk > $@
+
+PSSOURCES = \
+  exit help home up	\
+  ribbon2r ribbons2 ribbons2b \
+  2Dctrl 3Dctrl SEGBIND arrowr knot3 \
+  h-alldoms h-allrank h-atsearch h-brfront h-comsearch h-consearch	\
+  h-docsearch h-gensearch h-matargs h-matats h-matdesc h-matexamp	\
+  h-matexports h-matimp h-matinv h-matmap h-matops h-matpage		\
+  h-matrelops h-matrixops h-matsource h-matxref h-root
+
+PS_FILES = ${patsubst %, %.ps, ${PSSOURCES}}
+
+${PS_FILES}: %.ps: ${pssrcdir}/%.ps
+	cp $< $@
+
+pics: pics.mk viewports ${PS_FILES}
+	${MAKE} -f pics.mk pics
+
+book.dvi: ug09.tex tex-files
+	TEXINPUTS=$$TEXINPUTS:${srcdir}:tmp:. latex book.tex
+
+book.ps: book.dvi
+	dvips $<
+
+book.pdf: book.ps
+	ps2pdf $<
+
+index: book.dvi
+	makeindex book
+
+
+###################################################################
