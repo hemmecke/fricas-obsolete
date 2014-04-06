@@ -1,0 +1,111 @@
+\documentclass[twoside,a4paper]{book}
+\usepackage{fricas}
+
+\begin{document}
+%
+% \thispagestyle{empty}
+% \vspace*{1in}
+% {\Large\sf Richard D. Jenks \hfill Robert S. Sutor \newline
+% \vskip 1in
+% \begin{center}
+% \LARGE\sf AXIOM \\
+% \quad \\ \quad \\
+% \Large\sf The Scientific Computation System
+% \quad \\ \quad \\ \vskip 1.5in
+% \normalsize\rm Draft: \today
+% \end{center}}
+% \newpage
+% \thispagestyle{empty}
+% \quad
+%
+\pagenumbering{roman}
+\setcounter{page}{0}
+
+\begin{quote}
+\color{red}\Large
+  This is an attempt to make the content of the Axiom book (by Jenks
+  and Sutor) available again in order to describe the FriCAS project
+  (which is a fork of the original Axiom code). The following
+  material is mainly taken from the original Axiom book, but is partly
+  tailored to new developments in FriCAS.
+
+  \vspace{1cm}
+
+  \textbf{WARNING: This is work-in-progress! There might be errors and
+    even false statements.}
+
+  Plan is as follows:
+  \begin{enumerate}
+  \item Make LaTeX compilation work and include (generated) pictures
+    and generated output of algebra commands.
+  \item Simplify and remove redundant \LaTeX{} commands.
+  \item Build on modern advanced latex packages.
+  \item Generate indices and hyperrefs.
+  \end{enumerate}
+
+  All of the above will be done by taking care of still generating the
+  same \texttt{.ht} files although the technicalities might look
+  different. The contents of the files (no matter how wrong it
+  actually is) will only be changed marginally. Rewriting of the
+  contents will only happen after the technical part of producing the
+  PDF file has been finished.
+
+  \hspace*{\fill}Ralf Hemmecke
+\end{quote}
+
+%\input{dedicate}
+%\input{foreword}
+\clearpage
+\tableofcontents
+%\input{bios}
+%
+\pagenumbering{arabic}
+\setcounter{chapter}{-1}
+\input{ug00}
+\input{tecintro}  % This ha no chapter number.
+
+\part{Basic Features of \Language{}}
+%
+\input{ug01}
+\input{ug02}
+\input{ug03}
+\input{ug04}
+\input{ug05}
+\input{ug06}
+
+%--rhx: TODO:
+% Unfortunately ug07 uses \item[\spadfun{foo}] which doesn't work
+% since \spadfun has a verbatim-like argument. Fortunately, that only
+% happens inside the description environment. So we simply redefine it
+% for this chapter. Better rewrite the text in ug07.
+\begingroup
+\let\spaddescriptionsave\description
+\def\description{\def\spadfun{\textspadfun}\spaddescriptionsave}
+\input{ug07}
+\endgroup
+
+\part{Advanced Problem Solving and Examples}
+%
+\input{ug08}
+\input{ug09}
+
+\part{Advanced Programming in \Language{}}
+%
+\input{ug10}
+\input{ug11}
+\input{ug12}
+\input{ug13}
+\input{ug14}
+\input{ug15}
+%
+\appendix
+
+\input{ug16}
+%\input{ug17}
+%\input{ug18}
+%\input{ug19}
+%\input{ug20}
+\input{ug21}
+%
+\printindex
+\end{document}

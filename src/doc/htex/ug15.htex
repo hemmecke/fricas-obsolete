@@ -31,12 +31,9 @@
 
 
 
-\texht{\setcounter{chapter}{14}}{} % Chapter 15
-
 % *********************************************************************
 \head{chapter}{What's New in FriCAS}{ugWhatsNew}
 % *********************************************************************
-
 
 %------------------------------------------------------------------
 \head{section}{Release Notes}{releaseNotes}
@@ -385,7 +382,7 @@ Bug fixes, in particular:
 
 \item Types like "failed" now consistently use string quotes in output form.
 
-\item Fixed pattern matching using \spad{\%i} in patterns.
+\item Fixed pattern matching using \spad{%i} in patterns.
 
 \item Fixed ')display op coerce'.
 
@@ -684,7 +681,7 @@ Bug fixes, in particular:
 \item Fixed 'possible wild ramification' problem with algebraic
   integrals.
 
-\item 'has' in interpreter now correctly handles \spad{\%}.
+\item 'has' in interpreter now correctly handles \spad{%}.
 
 \item Spad compiler can now handle single \spad{=>} at top level of a
   function.
@@ -706,7 +703,7 @@ Bug fixes, in particular:
 
 \item Updated framework for theory of computations.
 
-\item In Spad parser \spad{**, \^'} and \spad{->} are now
+\item In Spad parser \spad{**, ^'} and \spad{->} are now
   right-associative.
 
 \item Spad parser no longer transforms relational operators.
@@ -1187,8 +1184,8 @@ that modifying FriCAS algebra is now much easier.
 \head{section}{Changes to Spad language}{ugSpadChanges}
 %------------------------------------------------------------------------
 \begin{enumerate}
-\item \spad{\$} as name of current domain is no longer supported, use
-  \spad{\%} instead.
+\item \spad{$} as name of current domain is no longer supported, use
+  \spad{%} instead.
 
 \item Attributes are no longer supported, use niladic categories with
   no exports instead.
@@ -1196,12 +1193,12 @@ that modifying FriCAS algebra is now much easier.
 \item Floating point numbers without leading zero are no longer
   supported, so instead of \spad{.01} use \spad{0.01}
 
-\item Anonymous functions using \spad{\#1}, \spad{\#2}, etc. are no
-  longer supported, to define anonymous functions use \spad{+->}.
+\item Anonymous functions using \spad{#1}, \spad{#2}, etc. are no
+  longer supported, to define anonymous functions use \textspadexpr{+->}.
 
 \item Braces no longer construct sets. So instead of
-  \spad{\{'sin, 'cos\}::Set(Symbol)} use
-  \spad{set(['sin, 'cos])$Set(Symbol)}.
+  \textspadexpr{\{'sin, 'cos\}::Set(Symbol)} use
+  \spad{set(['sin, 'cos])$Set(Symbol)}. %$
 
 \item Old Spad used colon (\spad{:}) to denote conversion, like
   \spad{pretend} but performing even less checking. This is no longer
@@ -1218,7 +1215,7 @@ that modifying FriCAS algebra is now much easier.
   \spad{~=,<=,>,>=} in ways which are correct for linear order, but
   may conflict with other uses (as partial order or when generating
   \spad{OutputForm}). FriCAS no longer performs this transformation.
-  Similarly, Spad parser no longer treats \spad{\^} and \spad{\^=} in
+  Similarely, Spad parser no longer treats \spadop{^} and \spadop{^=} in
   special way.
 
 \item Quote in old Spad allowed to insert arbitrary literal Lisp data,
@@ -1230,8 +1227,8 @@ that modifying FriCAS algebra is now much easier.
   (with arguments if needed) as request to import the constructor.
   FriCAS requires \spad{import} keyword.
 
-\item In FriCAS \spad{**, \^, ->} are right associative. Also, right
-  binding power of \spad{+->} is increased, which allows more natural
+\item In FriCAS \spad{**, ^, ->} are right associative. Also, right
+  binding power of \textspadexpr{+->} is increased, which allows more natural
   writing of code.
 
 \item Few non-working experimental features are removed, in particular
@@ -1262,12 +1259,12 @@ that modifying FriCAS algebra is now much easier.
 There are also library changes that affect user code:
 
 \begin{enumerate}
-\item \spad{**} lost its definition as exponentiation, use \spad{\^}
+\item \spad{**} lost its definition as exponentiation, use \spadop{^}
   instead.
 
-\item \spad{\^} is no longer used as negation (it means exponentiation
-  now) and \spad{\^=} no longer means inequality, use \spad{not} and
-  \spad{\~=} instead.
+\item \spadop{^} is no longer used as negation (it means exponentiation
+  now) and \spadop{^=} no longer means inequality, use \spad{not} and
+  \spad{~=} instead.
 
 \item \spad{setelt} is renamed to \spad{setelt!}.
 
@@ -1307,22 +1304,22 @@ we describe many of the more important topics here.
 %
 % A new compiler is now available for \Language{}.
 % The programming language is referred to as the \Language{} Extension Language
-% (or \axiomxl{} for short), and
+% (or \aldor{} for short), and
 % improves upon the old \Language{} language in many ways.
-% The \spadcmd{)compile} command has been upgraded to be able to
+% The \spadsys{)compile} command has been upgraded to be able to
 % invoke the new or old compilers.
 % The language and the compiler are described in the hard-copy
 % documentation which came with your \Language{} system.
 %
 % To ease the chore of upgrading your {\it .spad} files (old
 % compiler) to {\it .as} files (new compiler), the
-% \spadcmd{)compile} command has been given a {\tt )translate}
+% \spadsys{)compile} command has been given a {\tt )translate}
 % option. This invokes a special version of the old compiler which
 % parses and analyzes your old code and produces augmented code
 % using the new syntax.
 % Please be aware that the translation is not necessarily one
 % hundred percent complete or correct.
-% You should attempt to compile the output with the \axiomxl{} compiler
+% You should attempt to compile the output with the \aldor{} compiler
 % and make any necessary corrections.
 
 
@@ -1355,7 +1352,7 @@ Curly braces are now used to enclose a block (see section
 for more information). For compatibility, a block can still be
 enclosed by parentheses as well.
 
-% ``Free functions'' created by the \axiomxl{} compiler can now be
+% ``Free functions'' created by the \aldor{} compiler can now be
 % loaded and used within the AXIOM interpreter. A {\it free
 % function} is a library function that is implemented outside a
 % domain or category constructor.
@@ -1486,11 +1483,11 @@ into the main Browser input box.
 %------------------------------------------------------------------------
 \head{subsection}{Documentation}{ugWhatsNewDocumentation}
 %------------------------------------------------------------------------
-\texht{
+\begin{texonly}
 We describe here a few additions to the on-line
 version of the AXIOM book which you can read with
 HyperDoc.
-}{}
+\end{texonly}
 
 A section has been added to the graphics chapter, describing
 how to build \twodim{} graphs from lists of points. An example is
@@ -1521,19 +1518,19 @@ example involving \userfun{evenRule} in the middle of the section
 \spadref{ugUserRules}
 for details.
 
-Documentation for the \spadcmd{)compile}, \spadcmd{)library} and
-\spadcmd{)load} commands has been greatly changed. This reflects
-the ability of the \spadcmd{)compile} to now invoke the \axiomxl{}
-compiler, the impending deletion of the \spadcmd{)load} command
-and the new \spadcmd{)library} command.
-The \spadcmd{)library} command replaces \spadcmd{)load} and is
+Documentation for the \spadsys{)compile}, \spadsys{)library} and
+\spadsys{)load} commands has been greatly changed. This reflects
+the ability of the \spadsys{)compile} to now invoke the \aldor{}
+compiler, the impending deletion of the \spadsys{)load} command
+and the new \spadsys{)library} command.
+The \spadsys{)library} command replaces \spadsys{)load} and is
 compatible with the compiled output from both the old and new
 compilers.
 
 %------------------------------------------------------------------------
-\head{subsection}{\axiomxl{} compiler - Enhancements and Additions}{ugTwoTwoAldor}
+\head{subsection}{\aldor{} compiler - Enhancements and Additions}{ugTwoTwoAldor}
 %------------------------------------------------------------------------
-Content removed - \axiomxl{} (now using name {\it Aldor}) is a separate
+Content removed - \aldor{} (now using name {\it Aldor}) is a separate
 project.
 %
 %------------------------------------------------------------------------
