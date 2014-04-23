@@ -172,10 +172,11 @@ polynomials, what justifies its name.
 Another example of univariate representations illustrates
 the \spadtype{LexTriangularPackage} package constructor.
 
+\typeout{--rhx: Warning: Remove semicolon in input --> output too long}
 \xtc{
 We now compute the solutions with real coordinates:
 }{
-\spadcommand{lr := realSolve(lp)\$pack \free{lp} \free{pack} \bound{lr}}
+\spadcommand{lr := realSolve(lp)\$pack; \free{lp} \free{pack} \bound{lr}}
 }
 
 \xtc{
@@ -194,11 +195,12 @@ Note that each system treated by the \spadtype{ZDSOLVE} package constructor
 needs only to be zero-dimensional w.r.t. the variables involved in the system it-self
 and not necessarily w.r.t. all the variables used to define the package.
 
+\typeout{--rhx: Warning: Remove semicolon in input --> output too long}
 \xtc{
 We can approximate these real numbers as follows.
 This computation takes between 30 sec. and 5 min, depending on your machine.
 }{
-\spadcommand{[[approximate(r,1/1000000) for r in point] for point in lr] \free{lr}}
+\spadcommand{[[approximate(r,1/1000000) for r in point] for point in lr]; \free{lr}}
 }
 
 \xtc{
@@ -261,10 +263,11 @@ However it is possible to reuse a pre-computed regular chain as follows:
 \spadcommand{realSolve(ts)\$pack  \free{ts} \free{pack}}
 }
 
+\typeout{--rhx: Warning: Remove semicolon in input --> output too long}
 \xtc{
 We compute now the full set of points with real coordinates:
 }{
-\spadcommand{lr2 := realSolve(lf)\$pack \free{lf} \free{pack}  \bound{lr2}}
+\spadcommand{lr2 := realSolve(lf)\$pack; \free{lf} \free{pack}  \bound{lr2}}
 }
 
 
