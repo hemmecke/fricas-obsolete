@@ -52,6 +52,7 @@ htsrcdir     = ${srcdir}/ht
 bitmapssrcdir= $(srcdir)/bitmaps
 interpsrcdir = ${fricas_src_srcdir}/interp
 inputsrcdir  = ${fricas_src_srcdir}/input
+sphinxsrcdir = ${srcdir}/sphinx
 pssrcdir     = ${srcdir}/ps
 
 httargetdir        = $(fricas_target_datadir)/hypertex/pages
@@ -525,3 +526,40 @@ index: book.dvi
 
 
 ###################################################################
+# The path to the source .spad files.
+SPADSOURCEURL=https://github.com/fricas/fricas/blob/master/src/algebra
+
+abbrev.list:
+#--rhx: TODO: Does not work for in-source-build!!!
+	(cd $(ALGEBRASOURCES); \
+	grep -nH '^)ab[a-z]* [a-z]*  *[A-Z0-9]* *[^ ]*' *.spad \
+	| sed -e 's/\.spad:/ /' -e 's/:)abbrev//') > $@
+
+sphinx/source/history.rst:
+	$(MKDIR_P) sphinx/source
+	echo "Commit History" > $@
+	echo "==============" >>$@
+	echo                  >>$@
+	echo ".. code::"      >>$@
+	echo                  >>$@
+	(cd ${srcdir}; git log --decorate master^^^..HEAD | sed 's/^/    /') >> $@
+
+myhtml: sphinx/stamp
+sphinx/stamp: abbrev.list sphinx/source/history.rst
+	$(MKDIR_P) sphinx/source
+	cd sphinx/source; \
+	  (echo ')compile "$(srcdir)/api.spad"'; \
+	   echo 'documentAll("../../abbrev.list")') \
+	  | fricas -nosman
+	touch $@
+
+mysphinx: sphinx/stamp
+	cd sphinx; make html
+
+newsphinx:
+	-rm -rf sphinx
+	cp -r ${sphinxsrcdir} .
+	${MAKE} mysphinx
+myclean:
+	-rm abbrev.list
+	-rm -rf sphinx
