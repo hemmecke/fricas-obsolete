@@ -144,6 +144,8 @@ install-contrib:
 	$(mkinstalldirs) '$(DESTDIR)$(bindir)'
 	$(mkinstalldirs) '$(DESTDIR)@emacsdatadir@'
 	cd contrib/emacs && $(MAKE) install;
+	$(INSTALL_DATA) ${top_srcdir}/src/doc/fricasmath.sty $(DESTDIR)@emacsdatadir@/fricasmath.sty
+	$(INSTALL_DATA) ${top_srcdir}/src/doc/tensor.sty $(DESTDIR)@emacsdatadir@/tensor.sty
 	@echo 79 FriCAS contrib installation finished.
 
 

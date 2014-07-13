@@ -1033,7 +1033,12 @@ sayHtml(x) == sayBrightly1(x, $htmlOutputStream)
 
 sayMathML(x) == sayBrightly1(x, $mathmlOutputStream)
 
-sayTeX(x) == sayBrightly1(x, $texOutputStream)
+sayTeXStream(x, $fricasOutput) ==
+    sayString(x)
+    sayNewLine()
+    FORCE_-OUTPUT $fricasOutput
+
+sayTeX(x) == if x then sayTeXStream(x, $texOutputStream)
 
 sayTexmacs(x) == sayBrightly1(x, $texmacsOutputStream)
 
