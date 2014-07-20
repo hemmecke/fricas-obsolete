@@ -19,6 +19,8 @@ efricas: Makefile
 	echo "export FRICASEDITOR" >> $@
 	echo "FRICASCMD='$(libdir)/fricas/target/$(target)/bin/fricas'" >> $@
 	echo "export FRICASCMD" >> $@
+	echo "TEXINPUTS='$(libdir)/fricas/emacs:$$TEXINPUTS'" >> $@
+	echo "export TEXINPUTS" >> $@
 	echo "if which emacs; then" >> $@
 	echo "  emacs --eval '${EMACSCMDS}' -f fricas \$$@;" >> $@
 	echo "else " >> $@

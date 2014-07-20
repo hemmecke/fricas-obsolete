@@ -162,11 +162,17 @@ This variable is buffer-local."
    "        (t (prin1 x))))"
    "    (princ #\\Newline)))"))
 (defvar fricas-annotate-regexp "\e\\([a-zA-Z\-]*\\)\n")
-(defvar fricas-TeX-preamble (concat "\\documentclass{article}"
-                                    "\\usepackage[active,dvips,tightpage,displaymath]{preview}"
-                                    "\\begin{document}"
-                                    "\\begin{preview}"))
-(defvar fricas-TeX-postamble "\\end{preview}\\end{document}")
+(defvar fricas-TeX-preamble
+  (concat
+   "\\documentclass{article}"
+   "\\usepackage{fricasmath}"
+   "\\usepackage[active,dvips,tightpage,displaymath]{preview}"
+   "\\begin{document}"
+   "\\begin{preview}"))
+(defvar fricas-TeX-postamble
+  (concat
+   "\\end{preview}"
+   "\\end{document}"))
 
 (defvar fricas-mode-syntax-table
   (let ((st (make-syntax-table)))
