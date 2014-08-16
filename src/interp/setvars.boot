@@ -1283,6 +1283,78 @@ describeSetOutputTex() ==
   '"the one you set with the )cd system command.",'%l,_
   '"The current setting is: ",'%b,setOutputTex "%display%",'%d)
 
+setOutputLinear arg ==
+  arg = "%initialize%" =>
+    $linearOutputStream := mkOutputConsoleStream()
+    $linearOutputFile := '"CONSOLE"
+    $linearOutputFormat := NIL
+
+  arg = "%display%" =>
+    if $linearOutputFormat then label := '"On:" else label := '"Off:"
+    STRCONC(label, $linearOutputFile)
+
+  (null arg) or (arg = "%describe%") or (first arg = '_?) =>
+    describeSetOutputLinear()
+
+  -- try to figure out what the argument is
+
+  if arg is [fn] and
+    fn in '(Y N YE YES NO O ON OF OFF CONSOLE y n ye yes no o on of off console)
+      then 'ok
+      else arg := [fn,'linear]
+
+  arg is [fn] =>
+    UPCASE(fn) in '(Y N YE O OF) =>
+      sayKeyedMsg("S2IV0002",'(LINEAR linear))
+    UPCASE(fn) in '(NO OFF) => $linearOutputFormat := NIL
+    UPCASE(fn) in '(YES ON) => $linearOutputFormat := true
+    UPCASE(fn) = 'CONSOLE =>
+      SHUT $linearOutputStream
+      $linearOutputStream := mkOutputConsoleStream()
+      $linearOutputFile := '"CONSOLE"
+
+  (arg is [fn,ft]) or (arg is [fn,ft,fm]) => -- aha, a file
+    if (ptype := pathnameType fn) then
+      fn := STRCONC(pathnameDirectory fn,pathnameName fn)
+      ft := ptype
+    filename := make_full_namestring([fn, ft])
+    null filename =>
+      sayKeyedMsg("S2IV0003",[fn,ft])
+    (testStream := MAKE_-OUTSTREAM(filename)) =>
+      SHUT $linearOutputStream
+      $linearOutputStream := testStream
+      $linearOutputFile := object2String filename
+      sayKeyedMsg("S2IV0004",['"linear",$linearOutputFile])
+    sayKeyedMsg("S2IV0003",[fn,ft])
+
+  sayKeyedMsg("S2IV0005",NIL)
+  describeSetOutputLinear()
+
+describeSetOutputLinear() ==
+  sayBrightly LIST ('%b,'")set output linear",'%d,_
+   '"is used to tell FriCAS to turn 1D-style output",'%l,_
+   '"printing on and off, and where to place the output.  By default, the",'%l,_
+   '"destination for the output is the screen but printing is turned off.",'%l,_
+   '%l,_
+   '"Syntax:   )set output linear <arg>",'%l,_
+  '"    where arg can be one of",'%l,_
+  '"  on          turn 1D printing on",'%l,_
+  '"  off         turn 1D printing off (default state)",'%l,_
+  '"  console     send 1D output to screen (default state)",'%l,_
+  '"  fp<.fe>     send 1D output to file with file prefix fp and file",'%l,_
+  '"              extension .fe. If not given, .fe defaults to .linear.",'%l,
+  '%l,_
+  '"If you wish to send the output to a file, you must issue this command",'%l,_
+  '"twice: once with",'%b,'"on",'%d,'"and once with the file name. For example, to send",'%l,_
+  '"1D output to the file",'%b,'"polymer.input,",'%d,'"issue the two commands",'%l,_
+  '%l,_
+  '"  )set output linear on",'%l,_
+  '"  )set output linear polymer.input",'%l,_
+  '%l,_
+  '"The output is placed in the directory from which you invoked FriCAS or",'%l,_
+  '"the one you set with the )cd system command.",'%l,_
+  '"The current setting is: ",'%b,setOutputLinear "%display%",'%d)
+
 setStreamsCalculate arg ==
   arg = "%initialize%" =>
     $streamCount := 10
