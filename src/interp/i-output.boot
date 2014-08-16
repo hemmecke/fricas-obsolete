@@ -72,6 +72,7 @@ DEFVAR($htmlFormat, false) -- if true produce HTML output
 DEFVAR($mathmlFormat, false) -- if true produce Math ML output
 DEFVAR($texFormat, false) -- if true produce tex output
 DEFVAR($texmacsFormat, false) -- if true produce Texmacs output
+DEFVAR($linearOutputFormat, false) -- if true produce 1-d output
 
 makeCharacter n == INTERN(NUM2USTR(n))
 
@@ -1131,6 +1132,17 @@ texFormat1 expr ==
   FORCE_-OUTPUT $texOutputStream
   NIL
 
+linearOutputFormat expr ==
+  ioHook("startLinearOutput")
+  linearf := '(LinearOutputFormat)
+  formatFn := getFunctionFromDomain("coerce", linearf, [$OutputForm])
+  displayFn := getFunctionFromDomain("display", linearf, [linearf])
+  SPADCALL(SPADCALL(expr,formatFn),displayFn)
+  TERPRI $linearOutputStream
+  FORCE_-OUTPUT $linearOutputStream
+  ioHook("endOfLinearOutput")
+  NIL
+
 mathmlFormat expr ==
   mml := '(MathMLFormat)
   mmlrep := '(String)
@@ -1182,6 +1194,7 @@ output(expr,domain) ==
     if $mathmlFormat  then mathmlFormat x
     if $texmacsFormat then texmacsFormat x
     if $htmlFormat    then htmlFormat x
+    if $linearOutputFormat then linearOutputFormat x
   (FUNCTIONP(opOf domain)) and (not(SYMBOLP(opOf domain))) and
     (printfun := compiledLookup("<<",'(TextWriter TextWriter $), evalDomain domain))
        and (textwrit := compiledLookup("print", '($), TextWriter())) =>

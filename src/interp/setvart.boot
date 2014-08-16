@@ -601,6 +601,23 @@ DEFPARAMETER($setOptions, '(
         chkOutputFileName
         "console"))
       NIL)
+     (linear
+      "create output in 1D style"
+      interpreter
+      FUNCTION
+      setOutputLinear
+      (("create output in 1D format"
+        LITERALS
+        $linearOutputFormat
+        (off on)
+        off)
+       (break $linearOutputFormat)
+       ("where 1D output goes (enter {\em console} or a pathname)"
+        FILENAME
+        $linearOutputFile
+        chkOutputFileName
+        "console"))
+      NIL)
 
  ))
   (quit
