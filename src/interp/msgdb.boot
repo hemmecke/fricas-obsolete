@@ -926,6 +926,8 @@ sayMSG(x) == sayBrightly1(x, $algebraOutputStream)
 
 sayFORMULA(x) == sayBrightly1(x, $formulaOutputStream)
 
+sayLinear(x) == sayBrightly1(x, $linearOutputStream)
+
 --=======================================================================
 --                Utility Functions
 --=======================================================================
