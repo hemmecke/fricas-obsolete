@@ -1,15 +1,6 @@
-)abbrev domain XHASHTBL XHashTable
 )if LiterateDoc
 \documentclass{article}
-\usepackage{url}
-\usepackage{color}
-\definecolor{bgcode}{rgb}{1,1,0.7}
-
-\usepackage{listings}
-\lstdefinelanguage{spad}{basicstyle=\footnotesize\ttfamily,%
-  numbers=left,firstnumber=last,backgroundcolor=\color{bgcode}}
-\parindent0pt
-\parskip\medskipamount
+\usepackage{literatedoc}
 
 \begin{document}
 \title{A hash table implementation via double hashing}
@@ -47,9 +38,9 @@ of the key space.
 Let's assume that the type of the marker values is \texttt{Marker}.
 Naively, and type correctly, we would have to use as representation
 like the following.
-\begin{verbatim}
+\begin{verbcode}
 Union(Marker, Record(key: Key, entry: Entry))
-\end{verbatim}
+\end{verbcode}
 
 Of course, for efficiency reasons that is undesirable. For storing
 one new key/entry pair, we would have to allocate memory in order to
@@ -98,6 +89,7 @@ the keys at creation time of the table, the \texttt{Key} parameter
 would not necessarily have to provide a hashing function of its own.
 )endif
 
+)abbrev domain XHASHTBL XHashTable
 ++ Author: Ralf Hemmecke
 ++ Keywords: hash table
 ++ Description:
@@ -261,9 +253,9 @@ Putting everything together yields the following.
 
 )if LiterateDoc
 Note that for a value $r$ of type \texttt{Rep} it always holds:
-\begin{verbatim}
+\begin{verbcode}
 2*arrayLengths(r.idx) = #(r.arr)
-\end{verbatim}
+\end{verbcode}
 and that for \texttt{n=arrayLengths(r.idx)}, \texttt{a=r.arr}, and
 $0\le i < n$ the value \texttt{a.i} is either a marker or a key and
 \texttt{a(i+n)} is either \texttt{VACANT} or of type \texttt{Entry}.
