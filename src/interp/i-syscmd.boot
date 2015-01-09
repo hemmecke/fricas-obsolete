@@ -550,6 +550,8 @@ compileAsharpCmd1 args ==
                      '" ", asharpArgs, '" ", namestring args)
     rc := OBEY command
 
+    (rc ~= 0) and $BreakMode = 'quit => EXIT_-WITH_-STATUS(rc)
+
     if (rc = 0) and doCompileLisp then
         lsp := fnameMake('".", pathnameName args, '"lsp")
         if fnameReadable?(lsp) then
