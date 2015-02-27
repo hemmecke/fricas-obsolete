@@ -1,0 +1,41 @@
+)abbrev domain OPHANDL OperatorHandlers
+OperatorHandlers(HANDLER: Type): Exports == Implementation where
+  Z ==> Integer
+  S ==> String
+  Exports == with
+    new: () -> %
+      ++ new() creates an empty structure of handlers.
+    knownHandler?: (%, Z, S) -> Boolean
+      ++ \spad{knownHandler?(x, n, op)} checks
+      ++ whether a handler for operator \spad{op} is known.
+      ++ The number \spad{n} denotes the number of arguments that the
+      ++ operator can take.
+      ++ For this function \spad{n} is either 0, 1, 2 or -1 where the value
+      ++ -1 stand for "the operator takes arbitrarily many arguments".
+      ++ It is OK if both \spad{knownOperator?(m, op)} and
+      ++ \spad{knownOperator?(n, op)} return true for different \spad{m}
+      ++ and \spad{n}.
+    handler: (%, Z, S) -> HANDLER
+      ++ \spad{handler(x, n, op)} is only valid if
+      ++ \spad{knownHandler?(n, op)} is true.
+      ++ It returns the respective handler stored in \spad{x}.
+    setHandler!: (%, Z, S, HANDLER) -> HANDLER
+      ++ \spad{setHandler!(x, n, op, hdl)} puts \spad{hdl} into the
+      ++ data structure \spad{x} such that it can be queried afterwards.
+    removeHandler!: (%, Z, S) -> Void
+      ++ \spad{removeHandler!(n, op)} removes any handler from
+      ++ an internal data structure (for the pair \spad{(n, op)}
+      ++ such that afterwards \spad{knownHandler?(x, n, op)} returns false.
+  Implementation == add
+    T ==> XHashTable(S, HANDLER)
+    Rep ==> PrimitiveArray T
+    N ==> -1 -- means n-ary.
+    import from Z, Rep
+    rep x ==> (x@%) pretend Rep
+    per x ==> (x@Rep) pretend %
+
+    new(): % == per([[table()$T, table()$T, table()$T, table()$T]$List(T)]$Rep)
+    knownHandler?(t: %, n: Z, op: S): Boolean == key?(op, rep(t).(n+1))
+    handler(t: %, n: Z, op: S): HANDLER == rep(t).(n+1).op
+    setHandler!(t: %, n: Z, op: S, h: HANDLER): HANDLER == rep(t).(n+1).op := h
+    removeHandler!(t: %, n: Z, op: S): Void == remove!(op, rep(t).(n+1))
