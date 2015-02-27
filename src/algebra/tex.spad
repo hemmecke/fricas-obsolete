@@ -103,39 +103,28 @@ TexFormat: public == private where
   LS      ==> List String
   HANDLER ==> (I, LE) -> LS -- (precedence, arguments) +-> resultstring
 
-  public == CoercibleTo OutputForm with
+  public == Join(OutputFormatterCategory, CoercibleTo OutputForm) with
     coerce: E -> %
       ++ \spad{coerce(o)} changes o in the standard output format to TeX
       ++ format.
-    convert: (E, I) -> %
-      ++ \spad{convert(o, step)} changes o in standard output format to
-      ++ TeX format and also adds the given step number. This is useful
-      ++ if you want to create equations with given numbers or have the
-      ++ equation numbers correspond to the interpreter step numbers.
-      ++ This function will be called after ')set output tex on' has
-      ++ been executed in an interpreter session.
     display: (%, I) -> Void
       ++ \spad{display(t, width)} outputs the TeX formatted code t
       ++ so that each line has length less than or equal to \spadvar{width}.
-    display: % -> Void
-      ++ \spad{display(t)} outputs the TeX formatted code t so that each
-      ++ line has length less than or equal to the value set by
-      ++ the system command \spadsys{)set output length}.
     epilogue: % -> LS
       ++ \spad{epilogue(t)} extracts the epilogue section of a TeX form t.
-    tex: % -> LS
-      ++ \spad{tex(t)} extracts the TeX section of a TeX form t.
+    format: % -> LS
+      ++ \spad{format(t)} extracts the TeX section of a TeX form t.
     new: () -> %
       ++ \spad{new()} create a new, empty object. Use \spadfun{setPrologue!},
-      ++ \spadfun{setTex!} and \spadfun{setEpilogue!} to set the various
+      ++ \spadfun{setFormat!} and \spadfun{setEpilogue!} to set the various
       ++ components of this object.
     prologue: % -> LS
       ++ \spad{prologue(t)} extracts the prologue section of a TeX form t.
     setEpilogue!: (%, LS) -> LS
       ++ \spad{setEpilogue!(t, strings)} sets the epilogue section of
       ++ a TeX form t to strings.
-    setTex!:  (%, LS) -> LS
-      ++ \spad{setTex!(t, strings)} sets the TeX section of a TeX
+    setFormat!:  (%, LS) -> LS
+      ++ \spad{setFormat!(t, strings)} sets the TeX section of a TeX
       ++ form t to strings.
     setPrologue! : (%, LS) -> LS
       ++ \spad{setPrologue!(t, strings)} sets the prologue section of
@@ -281,7 +270,7 @@ TexFormat: public == private where
 
     sayExpr(s: S): Void == sayTeX(s)$Lisp
 
-    Rep ==> Record(prolog: LS, TeX: LS, epilog: LS)
+    Rep ==> Record(prolog: LS, fmt: LS, epilog: LS)
     import from Rep
     rep x ==> (x@%) pretend Rep
     per x ==> (x@Rep) pretend %
@@ -364,11 +353,11 @@ gets the session step number as an argument.
     new(): % == newStructure("")
 
     prologue(f: %): LS == rep(f).prolog
-    tex(f: %): LS  == rep(f).TeX
+    format(f: %): LS  == rep(f).fmt
     epilogue(f: %): LS == rep(f).epilog
 
     setPrologue!(f: %, l: LS): LS == rep(f).prolog := l
-    setTex!(f: %, l: LS): LS  == rep(f).TeX := l
+    setTex!(f: %, l: LS): LS  == rep(f).fmt := l
     setEpilogue!(f: %, l: LS): LS == rep(f).epilog := l
 
     coerce(expr: E): % ==
@@ -485,7 +474,7 @@ In order to keep spaces, we also escape spaces by a backslash.
             not symbol? expr =>
                 sex: SExpression := (mathObject2String(expr)$Lisp)
                 ["[[BAD OUTPUTFORM: ", string sex, "]]"]
-            -- We've got a symbol here
+            -- We've got a symbol here.
             -- We are in the nullary case.
             str: S := string symbol expr
             knownOperator?(0, str) => handler(0, str)(prec, empty()$LE)
