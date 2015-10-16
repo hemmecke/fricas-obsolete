@@ -1,0 +1,839 @@
+-------------------------------------------------------------------
+---
+--- FriCAS MathJaxFormat
+--- Copyright (C) 2015, 2017, 2019  Ralf Hemmecke <ralf@hemmecke.org>
+---
+-------------------------------------------------------------------
+-- This program is free software: you can redistribute it and/or modify
+-- it under the terms of the GNU General Public License as published by
+-- the Free Software Foundation, either version 3 of the License, or
+-- (at your option) any later version.
+--
+-- This program is distributed in the hope that it will be useful,
+-- but WITHOUT ANY WARRANTY; without even the implied warranty of
+-- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+-- GNU General Public License for more details.
+--
+-- You should have received a copy of the GNU General Public License
+-- along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-------------------------------------------------------------------
+)if LiterateDoc
+\documentclass{article}
+\usepackage{literatedoc}
+\begin{document}
+\title{A MathJax output formatter}
+\author{Ralf Hemmecke}
+\date{14-Oct-2015}
+\maketitle
+\begin{abstract}
+In \SYSTEM{} there is a special domain \spadtype{OutputForm} that
+functions as an abstraction between algebraic expressions and the
+actual visual output. \spadtype{MathJaxFormat} provides functionality to
+transform an element of \spadtype{OutputForm} into a \TeX{} form such
+that it can be included into \LaTeX{} documents.
+\end{abstract}
+
+\tableofcontents
+
+\section{Overview}
+
+The default way in \SYSTEM{} to output something is via coercion into
+\spadtype{OutputForm}. Nearly every domain in \SYSTEM{} provides a
+function
+\begin{verbcode}
+coerce: % -> OutputForm
+\end{verbcode}
+that transforms an element of the current domain into an element of
+\spadtype{OutputForm}. The domain \spadtype{OutputForm} itself is meant to
+be an abstraction from the visual form of an expression.
+\spadtype{OutputForm} allows \SYSTEM{} to output an expression in
+different formats. By default, \SYSTEM{} transforms an element of
+\spadtype{OutputForm} into a 2-dimensional output.
+
+The main purpose of the code presented below is the transformation of
+an element of \spadtype{OutputForm} into a \LaTeX{} form such that it
+can be included into an \LaTeX{} document. An appropriate .sty file
+is provided with this code. See end of this file.
+
+\section{Introduction}
+
+Unfortunately, there is no document that clearly describes the meaning
+of the primitives in \spadtype{OutputForm}. The following code of the
+domain \spadtype{MathJaxFormat} is a complete reimplementation. The domain
+\spadtype{OutputForm} as well as the former implementation of
+\spadtype{MathJaxFormat} (by R. S. Sutor) has been analyzed and a new
+structure of the code has been designed.
+
+An important difference to the original code is that the new code is
+much more flexible. Not only does it output special \TeX{} commands
+and leaves the actual formatting to an appropriate style file, but it
+also exports access to the main driving data structure (see functions
+\spad{knownOperator?}, \spad{handler}, \spad{setHandler!}, and
+\spad{removeOperator!}). By extending, removing or overriding the
+particular entries, it is possible to customize the special output
+needs at runtime.
+
+The dispatcher routine is \spad{formatExpression(e, p)}. It first
+checks whether the given expression $e$ is a nullary operator or has 1
+or 2 or more arguments. Depending on the number of arguments it checks
+whether the given operator is known and calls the respective handler.
+If the operator is not know or if the number of arguments is bigger
+than 2, \spad{formatExpression} checks for a known $n$-ary case and
+calls the respective handler. If the operator in the expression $e$ is
+unknown, it is interpreted as a function symbol and formatted as a
+function call with arguments.
+
+\section{Implementation}
+\subsection{The \spadtype{MathJaxFormat} domain}
+)endif
+
+)abbrev domain MATHJAX MathJaxFormat
+++ \spadtype{MathJaxFormat} provides a coercion from \spadtype{OutputForm} to
+++ \TeX{} format. The particular dialect of \TeX{} used is \LaTeX{},
+++ but the target interpreter is actually MathJax
+++ \url{https://www.mathjax.org}.
+MathJaxFormat: public == private where
+  E       ==> OutputForm
+  I       ==> Integer
+  L       ==> List
+  S       ==> String
+  LE      ==> List E
+  LS      ==> List String
+  HANDLER ==> (I, LE) -> LS -- (precedence, arguments) +-> resultstring
+
+  public == Join(OutputFormatterCategory, CoercibleTo OutputForm) with
+    coerce: E -> %
+      ++ \spad{coerce(o)} changes o in the standard output format to TeX
+      ++ format.
+    display: (%, I) -> Void
+      ++ \spad{display(t, width)} outputs the TeX formatted code t
+      ++ so that each line has length less than or equal to \spadvar{width}.
+    epilogue: % -> LS
+      ++ \spad{epilogue(t)} extracts the epilogue section of a TeX form t.
+    format: % -> LS
+      ++ \spad{format(t)} extracts the TeX section of a TeX form t.
+    new: () -> %
+      ++ \spad{new()} create a new, empty object. Use \spadfun{setPrologue!},
+      ++ \spadfun{setFormat!} and \spadfun{setEpilogue!} to set the various
+      ++ components of this object.
+    prologue: % -> LS
+      ++ \spad{prologue(t)} extracts the prologue section of a TeX form t.
+    defaultEpilogue: () -> LS
+      ++ defaultEpilogue() returns the list of strings that is used
+      ++ at the end of every output.
+    defaultPrologue: () -> LS
+      ++ defaultPrologue() returns the list of strings that is used
+      ++ at the beginning of every output.
+    setDefault!: (LS, LS) -> Record(prolog: LS, epilog: LS)
+      ++ Set the prologue and epilogue that is used by default in the
+      ++ coerce and convert function.
+      ++ Between the elements of the list the stepnumber will be inserted.
+      ++ The old values are returned.
+    setEpilogue!: (%, LS) -> LS
+      ++ \spad{setEpilogue!(t, strings)} sets the epilogue section of
+      ++ a TeX form t to strings.
+    setFormat!:  (%, LS) -> LS
+      ++ \spad{setFormat!(t, strings)} sets the TeX section of a TeX
+      ++ form t to strings.
+    setPrologue! : (%, LS) -> LS
+      ++ \spad{setPrologue!(t, strings)} sets the prologue section of
+      ++ a TeX form t to strings.
+
+    operatorHandlers: () -> OperatorHandlers(HANDLER)
+      ++ \spad{operatorHandlers()} returns an internal data structure
+      ++ that is used for the selection of respective handlers.
+
+    formatExpression: (E, I) -> LS
+      ++ \spad{formatExpression(o, p)} returns a list of strings that
+      ++ represent the expression \spad{o} in \TeX{} format when
+      ++ considered in a context with outer precedence \spad{p}.
+      ++ This function is the main dispatcher function.
+      ++ It first checks whether \spad{o} is an integer or a string
+      ++ and treats these cases.
+      ++ Then, if the number $n$ of arguments is less than 3,
+      ++ it tries to find a handler for ths top-level operator of \spad{o}.
+      ++ If none is found, it checks for a handler of an n-ary operator.
+      ++ If no handler is found, the operator is treated as a function
+      ++ symbol and formatted as such.
+    theMap: HANDLER
+      ++ \spad{theMap} is a special handler to format a function.
+      ++ The respective function name n will be output like
+      ++ "\mathtt{TheMap}(\operatorname{n}".
+    nullary: S -> HANDLER
+      ++ \spad{nullary(cmd)} is a handler to format nullary operators.
+      ++ It simply returns \spad{cmd}, i.e., \spad{cmd} must not change it
+      ++ meaning even if some arbitrary string is appended to it. In other
+      ++ words, add a space or a pair of braces after it, if this is
+      ++ necessary.
+    unaryNoParen: (S, S) -> HANDLER
+      ++ \spad{unaryNoParen(left,right)} returns a handler such that
+      ++ \spad{unaryNoParen(left, right)(prec, args)} formats \spad{args.1}
+      ++ without outer parentheses and puts the result parentheses given
+      ++ by left and right.
+    binaryNoParen: S -> HANDLER
+      ++ \spad{binaryNoParen(cmd)} returns a handler such that
+      ++ \spad{binaryNoParen(cmd)(prec, args)} formats \spad{args.1} and
+      ++ \spad{args.2} without outer parentheses and puts the result
+      ++ into the first and second argument of the \TeX{} command given
+      ++ by \spad{cmd}.
+    naryNoParen: S -> HANDLER
+      ++ \spad{naryNoParen(cmd)} returns a handler such that
+      ++ \spad{naryNoParen(cmd)(prec, args)} formats all arguments
+      ++ without outer parentheses.
+      ++ These arguments will be separated by the string \spad{cmd}.
+    unary: (S, I, I) -> HANDLER
+      ++ \spad{unary(cmd, p, p1)} returns a handler such that
+      ++ \spad{unary(cmd, p, p1)(prec, args)} formats \spad{args.1}
+      ++ according to the precedence \spad{p1} and puts the result into
+      ++ the argument of the \TeX{} command given by \spad{cmd}.
+      ++ Outer parentheses are added if \spad{p < prec}.
+    binary: (S, S, S, I, I, I) -> HANDLER
+      ++ binary(l, m, r, p, p1, p2) is like binary2 but output
+      ++ looks like [l, arg1, m, arg2, r].
+    binarySwap: (S, S, S, I, I, I) -> HANDLER
+      ++ binarySwap(l, m, r, p, p1, p2) is like binary2 but output
+      ++ looks like [l, arg2, m, arg1, r].
+    binary2infix: (S, I, I, I) -> HANDLER
+      ++ \spad{binary2infix(cmd, p, p1, p2)} returns a handler such that
+      ++ \spad{binary2infix(cmd, p, p1, p2)(prec, args)} formats \spad{args.1}
+      ++ and \spad{args.2} according to the precedences
+      ++ \spad{p1} and \spad{p2}, respectively.
+      ++ It puts the result into the first and second
+      ++ argument of the infix operator given by \spad{cmd}.
+      ++ Outer parentheses are added if \spad{p < prec}.
+    binary2: (S, I, I, I) -> HANDLER
+      ++ \spad{binary2(cmd, p, p1, p2)} returns a handler such that
+      ++ \spad{binary2(cmd, p, p1, p2)(prec, args)} formats \spad{args.1}
+      ++ and \spad{args.2} according to the precedences
+      ++ \spad{p1} and \spad{p2}, respectively.
+      ++ It puts the result into the first and second
+      ++ argument of the \TeX{} command given by \spad{cmd}.
+      ++ Outer parentheses are added if \spad{p < prec}.
+    nary: (S, I) -> HANDLER
+      ++ \spad{nary(sep, p)} returns a handler such that
+      ++ \spad{nary(sep, p)(prec, args)} formats the arguments
+      ++ according to the precedence \spad{p}.
+      ++ These arguments will be separated by the string \spad{sep}.
+      ++ Outer parentheses are added if \spad{p < prec}.
+
+    -- special handlers
+    operatorWithLimits: (S, I) -> HANDLER
+      ++ \spad{operatorWithLimits(cmd, p)} returns a handler such that
+      ++ \spad{operatorWithLimits(cmd, p)(prec, args)} formats the arguments
+      ++ without parentheses and interprets the arguments
+      ++ as upper or lower limits/indices of an operator.
+      ++ \spad{cmd} is assumed to be a \TeX{} operator like $\sum$, $\prod$,
+      ++ or $\int$.
+      ++ Outer parentheses are added if \spad{p < prec}.
+    slash: I -> HANDLER
+      ++ Special treatment in order to make the / adapt to the size of
+      ++ the arguments.
+    scripts: I -> HANDLER
+      ++ \spad{scripts(p)} returns a handler such that
+      ++ \spad{scripts(p)(prec, args)} formats the first argument
+      ++ with respect to the precedence \spad{p}.
+      ++ The other arguments are formatted without parentheses and
+      ++ interpreted as subscript, superscript, presuperscript, and
+      ++ presubscript (in this order).
+      ++ Outer parentheses are added if \spad{p < prec}.
+    altsupersub: I -> HANDLER
+      ++ \spad{altsupersub(cmd, p)} returns a handler such that
+      ++ \spad{altsupersub(cmd, p)(prec, args)} formats the first argument
+      ++ with respect to the precedence \spad{p}.
+      ++ The remaining arguments are formatted without parentheses and
+      ++ interpreted as subscript, superscript, subscript, superscript, etc.
+      ++ where the subscripts and superscripts are pairwise aligned.
+      ++ Outer parentheses are added if \spad{p < prec}.
+    environment: (S, S, S) -> HANDLER
+      ++ \spad{environmnt(env, x, sep)} returns a handler that typesets
+      ++ its arguments (without parentheses) in a \LaTeX{} environment
+      ++ with name \spad{env}. The string \spad{x} is put right after
+      ++ the start of the environment.
+      ++ The arguments are separated by the string \spad{sep}.
+    matrix: (S, S) -> HANDLER
+      ++ \spad{matrix(env, sep)} returns a handler that typesets a matrix in a
+      ++ \LaTeX{} environment with name \spad{env} that takes one argument.
+      ++ The argument to this environment is the number of columns of the
+      ++ matrix.
+      ++ The rows are separated by the string \spad{sep}.
+
+  private == add
+    import from OutputForm
+    import from Character
+    import from Integer
+    import from List OutputForm
+    import from List String
+    import from OutputFormTools
+
+    sayExpr(s: S): Void == sayMathJax(s)$Lisp
+
+    Rep ==> Record(prolog: LS, fmt: LS, epilog: LS)
+    ProEpi ==> Record(prolog: LS, epilog: LS)
+    import from Rep
+    rep x ==> (x@%) pretend Rep
+    per x ==> (x@Rep) pretend %
+
+)if LiterateDoc
+By default the MathJax part is introduced by \verb'$$' and ended also
+by \verb'$$'.
+)endif
+
+    defaultProEpi: ProEpi := [["$$"], ["$$"]]
+
+    defaultPrologue(): LS == defaultProEpi.prolog
+    defaultEpilogue(): LS == defaultProEpi.epilog
+    setDefault!(p: LS, e: LS): ProEpi ==
+        result: ProEpi := [defaultPrologue(), defaultEpilogue()]
+        defaultProEpi.prolog := p
+        defaultProEpi.epilog := e
+        result
+
+)if LiterateDoc
+Precedence of operators is used to decide whether or not to put parentheses
+around an expression.
+We fix minimal and maximal precedence, although it would be possible to
+use any range, since the code only relies on a linear order.
+)endif
+
+    maxPrec ==> 10000 -- maximal precedence
+    minPrec ==> 0     -- minimal precedence
+
+)if LiterateDoc
+Internally we use a hashtable to hold all the handlers that should be
+called when an operator with a certain arity is found. This hashtable
+can be customized with the \spad{setHandler!} and
+\spad{removeHandler!} functions. Initially this table is basically empty.
+It will be filled when all functions have been defined.
+
+In fact, we manage 4 tables for nullary, unary, binary, and $n$-ary
+operators.
+)endif
+
+    N ==> -1 -- means n-ary.
+
+    -- local variable declarations and definitions
+    operatorData: OperatorHandlers(HANDLER) := new()
+
+)if LiterateDoc
+The following functions access or modify the internal data structure
+for the handlers.
+)endif
+    operatorHandlers(): OperatorHandlers(HANDLER) == operatorData
+
+)if LiterateDoc
+The function \spad{precondition} ``normalizes'' the expression inside
+\spadtype{OutputForm}. See its definition in \spadtype{OutputFormTools}.
+
+The function \spad{postcondition} is a rather fragile function, since it
+relies on the fact that for an expression $a+(-b)$ we get the list
+\begin{verbcode}
+["a", "+", "-", "b"]
+\end{verbcode}
+i.e., \verb'"+"' is followed immediately by \verb'"-"' without any
+other characters inbetween. The \verb'"+"' will be removed.
+)endif
+
+    postcondition(s: LS): LS ==
+        #s < 4 => s
+        l: LS := empty()
+        while not empty? rest s repeat
+            if first s ~= "+" or first rest s ~= "-" then l := cons(first s, l)
+            s := rest s
+        reverse! cons(first s, l)
+
+)if LiterateDoc
+\TeX{} output is put into an environment \texttt{fricasmath}. That environment
+gets the session step number as an argument.
+)endif
+
+    insert(s: S, def: LS): LS ==
+        l: LS := empty()$LS
+        empty? def => return l
+        r := first def
+        for x in rest def repeat r := concat [r, s, x]
+        [r]
+
+    newStructure(num: S): % == per
+        [insert(num, defaultPrologue()),_
+         empty()$LS,_
+         insert(num, defaultEpilogue())]
+
+    -- public function definitions
+    new(): % == newStructure("")
+
+    prologue(f: %): LS == rep(f).prolog
+    format(f: %): LS  == rep(f).fmt
+    epilogue(f: %): LS == rep(f).epilog
+
+    setPrologue!(f: %, l: LS): LS == rep(f).prolog := l
+    setTex!(f: %, l: LS): LS  == rep(f).fmt := l
+    setEpilogue!(f: %, l: LS): LS == rep(f).epilog := l
+
+    coerce(expr: E): % ==
+        f: % := new()$%
+        s: LS := formatExpression(precondition expr, minPrec)
+        setTex!(f, postcondition s)
+        f
+
+    convert(expr: E, stepNum: I): % ==
+        f: % := newStructure(string(stepNum)$S)
+        s: LS := formatExpression(precondition expr, minPrec)
+        s := postcondition s
+        if not empty? s then setTex!(f, s)
+        f
+
+)if LiterateDoc
+The original idea of the \spad{fillLines} function was to concatenate
+the strings such that each line is at most \spad{maxLineLength} long.
+For mathjax output that is not needed, so we ignore the length
+parameter and simply concatenate all lines.
+)endif
+
+    fillLines(ls: LS, maxLineLength: I): LS == [concat ls]
+
+)if LiterateDoc
+Note that the resulting \TeX{} expression is only correct when it is
+put on just one line, so we must hide the newline by a comment sign.
+)endif
+
+    display(f: %, len: I): Void ==
+        for s in prologue f repeat sayExpr s
+        for s in fillLines(format f, len) repeat sayExpr s
+        for s in epilogue f repeat sayExpr s
+        void()$Void
+
+    display(f: %) == display(f, _$LINELENGTH$Lisp pretend I)
+
+    coerce(f: %) : E ==
+        s: LS := fillLines(format f, (_$LINELENGTH$Lisp pretend I) - 4)
+        (concat [prologue f, s, epilogue f])::E
+
+    -- local function definitions
+    parenthesize(left: S, right: S, s: LS): LS == concat [[left], s, [right]]
+    formatBinary(l: S, m: S, r: S, a1: LS, a2: LS): LS ==
+        concat [cons(l, a1), cons(m, a2), [r]]
+    tex1(cmd: S, s: LS): LS == parenthesize(concat(cmd, "{"), "}", s)
+    tex2(cmd: S, s1: LS, s2: LS): LS ==
+        formatBinary(concat(cmd, "{"), "}{", "}", s1, s2)
+    addBraces(s: LS): LS == parenthesize("{", "}", s)
+    infix(op: S, s1: LS, s2: LS): LS ==
+        concat  [addBraces s1, [op], addBraces s2]
+    parenthesizeIf(needParen?: Boolean, s: LS): LS ==
+        needParen? => parenthesize("\left(", "\right)", s)
+        s
+
+    formatFunction(op: LS, args: LE): LS ==
+        concat(op, parenthesizeIf(true, nary(",", minPrec)(minPrec, args)))
+
+)if LiterateDoc
+\spad{formatInteger(i, n)} formats an integer with a space thrown in at
+every $n$-th position. The parameter $i$ is a non-negative integer.
+
+There is not yet any mechanism to break long integers
+in \TeX{}.
+)endif
+
+    formatInteger(i: I, intSplitLen: I): S ==
+        s: S := convert i -- That is never empty.
+        len: NonNegativeInteger := #s
+        len <= intSplitLen => s
+        nlen: Integer := len + (len-1) quo intSplitLen
+        str: S := new(qcoerce nlen, space())$S -- new string
+        n: Integer := intSplitLen
+        p: Integer := 0 -- space shift
+        for k in 1..len repeat
+            str(k+p) := s.k
+            n := n-1
+            if zero? n then
+               n := intSplitLen
+               p := p+1
+        str
+
+)if LiterateDoc
+\spad{texEscapeString(s)} escapes all \TeX{} special characters.
+These characters are: \verb|\ { } $ ^ _ % ~ # &|
+We prepend these characters with a backslash in front of them.
+Of course, this requires at least for \verb'\\' and \verb'\^' to define
+them appropriately in the style file
+
+In order to keep spaces, we also escape spaces by a backslash.
+)endif
+
+    texEscapeString(s: S): S ==
+        cc: CharacterClass := charClass " \{}$^_%~#&"
+        p: Integer := position(cc, s, 1)
+        zero? p => s
+        str: S := ""
+        n: Integer := 1
+        while (p := position(cc, s, n)) > 0 repeat
+            str := concat(str, s(n..p-1))
+            n := p+1
+            str := concat(str, concat("\", s.p))
+        concat(str, s(n..#s))
+
+    formatExpression(expr: E, prec: I): LS ==
+        atom? expr =>
+            integer? expr => [formatInteger(integer expr, 20)]
+            string? expr => [texEscapeString string expr]
+            not symbol? expr =>
+                sex: SExpression := (mathObject2String(expr)$Lisp)
+                ["[[BAD OUTPUTFORM: ", string sex, "]]"]
+            -- We've got a symbol here.
+            -- We are in the nullary case.
+            str: S := string symbol expr
+            knownHandler?(operatorData, 0, str) =>
+                handler(operatorData, 0, str)(prec, empty()$LE)
+            [texEscapeString str]
+
+        -- now we take apart a list
+        opex: E := operator expr
+        args: LE := arguments expr
+        not symbol? opex =>
+            formatFunction(formatExpression(opex, minPrec), args)
+
+        nargs: I := #args
+        op: S := string symbol opex
+
+        -- nargs = 1 or 2
+        nargs <= 2 and knownHandler?(operatorData, nargs, op) =>
+            handler(operatorData, nargs, op)(prec, args)
+
+        -- check n-ary
+        knownHandler?(operatorData, N, op) =>
+            handler(operatorData, N, op)(prec, args)
+
+        formatFunction(tex1("\mathit", [texEscapeString op]), args)
+
+-------------------------------------------------------------------
+-- formatting handlers
+-------------------------------------------------------------------
+)if LiterateDoc
+For
+\begin{verbcode}
+(positive?$Integer)::OutputForm pretend SExpression
+\end{verbcode}
+we get
+\begin{verbcode}
+(theMap INS-;positive?;SB;4 655)
+\end{verbcode}
+From that we extract the text between the first and second semicolon
+of the first argument.
+Unfortunately, for
+\begin{verbcode}
+addx x == ((y: Integer): Integer +-> x + y)
+((addx 10)::OutputForm) pretend SExpression
+\end{verbcode}
+we will see
+\begin{verbcode}
+(theMap
+ #<FUNCTION (LAMBDA (#:G719 |envArg|) :IN |*1;addx;1;initial|) {1004405F2B}>
+ 655)
+\end{verbcode}
+where the second entry cannot be formatted by \spad{formatExpression}, since
+it is an atom but neither a string nor a symbol.
+The only option we have for this case is to output \verb'\theMap{theMap(...)}'.
+)endif
+
+    theMap(prec: I, args: LE): LS == -- theMap: HANDLER
+        a: E := first args
+        s: S :=
+            atom? a and not string? a and not symbol? a => ";?;"
+            concat formatExpression(first args, minPrec)
+        p1 := position(char ";", s)
+        p2 := position(char ";", s, p1+1)
+        parenthesize("\mathtt{TheMap}(\operatorname{", "})", [s(p1+1..p2-1)])
+
+    nullary(op: S): HANDLER == (prec: I, args: LE): LS +-> [op]
+
+    -- We can assume #args=1.
+    unaryNoParen(left: S, right: S): HANDLER == (prec: I, args: LE): LS +->
+        parenthesize(left, right, formatExpression(first args, minPrec))
+
+    -- We can assume #args=1.
+    unary(op: S, p: I, p1: I): HANDLER == (prec: I, args: LE): LS +->
+        parenthesizeIf(p < prec,
+            cons(op, addBraces formatExpression(first args, p1)))
+    postfix(op: S, p: I, p1: I): HANDLER == (prec: I, args: LE): LS +->
+        parenthesizeIf(p < prec, concat(formatExpression(first args, p1), op))
+
+    binary(l: S, m: S, r: S, p: I, p1: I, p2: I): HANDLER ==
+      (prec: I, args: LE): LS +-> parenthesizeIf(p < prec,
+        formatBinary(l, m, r, formatExpression(args.1, p1),_
+                              formatExpression(args.2, p2)))
+
+    binarySwap(l: S, m: S, r: S, p: I, p1: I, p2: I): HANDLER ==
+      (prec: I, args: LE): LS +-> parenthesizeIf(p < prec,
+        formatBinary(l, m, r, formatExpression(args.2, p2),_
+                              formatExpression(args.1, p1)))
+
+    binary2infix(op: S, p: I, p1: I, p2: I): HANDLER ==
+        binary("{", concat ["}", op, "{"], "}", p, p1, p2)
+
+    binary2(op: S, p: I, p1: I, p2: I): HANDLER ==
+        binary(concat [op, "{"], "}{", "}", p, p1, p2)
+
+    binaryNoParen(op: S): HANDLER == binary2(op, maxPrec, minPrec, minPrec)
+
+    naryAux(sep: S, prec: I, args: LE): LS == -- not exported
+        empty? args => empty()$LS
+        l: List LS := [cons(sep, formatExpression(a, prec)) for a in rest args]
+        concat cons(formatExpression(first args, prec), l)
+
+    naryNoParen(op: S): HANDLER == (prec: I, args: LE): LS +->
+        naryAux(op, minPrec, args)
+
+)if LiterateDoc
+It is not completely clear whether we need an extra function for the
+$n$-ary concatenation with blanks, but the original \spadtype{MathJaxFormat} by
+R. S. Sutor used it and we simply copied that idea.
+)endif
+
+    naryConcatBlank(op: S): HANDLER == (prec: I, args: LE): LS +->
+        naryAux(op, prec, args)
+
+    nary(op: S, opPrec: I): HANDLER == (prec: I, args: LE): LS +->
+        parenthesizeIf(opPrec < prec, naryAux(op, opPrec, args))
+
+)if LiterateDoc
+The following function treats sums, products, and integrals.
+Such expressions either come with two or three parameters. For example:
+\begin{verbcode}
+(product(x, y))::OutputForm pretend SExpression
+(PI y x)
+\end{verbcode}
+\begin{verbcode}
+(sum(sin y, y=u..v))::OutputForm pretend SExpression
+(SIGMA2 (= y u) v (sin y))
+\end{verbcode}
+\begin{verbcode}
+(integral(sin y * cos y, y))::OutputForm pretend SExpression
+(INTSIGN (NOTHING) y (* (* (cos %N) (sin %N)) (CONCAT d %N)))
+\end{verbcode}
+In case of three parameters, the first two are the lower and upper
+limits and the third is the argument that the (sum, product, integral)
+quantor applies to.
+
+Note that one cannot simply redefine \verb'\TIMES' to
+\verb'\cdot' in the style file since that would lead to an output
+\[
+\int^{y} \cos{\%N}\cdot \sin{\%N}\cdot d\%N
+\]
+)endif
+
+    -- We can assume #args>=2.
+    operatorWithLimits(t: S, opPrec: I): HANDLER == (prec: I, args: LE): LS +->
+        s1: LS := formatExpression(args.1, minPrec) -- lower limit
+        s2: LS := formatExpression(args.2, minPrec) -- upper limit or arg
+        s: LS := [t]$LS
+        if not empty? s1 and not empty? first s1 then
+            s := concat([[t, "__{"], s1, ["}"]]$List(LS))
+        s :=
+            #args = 2 => concat(s, cons(" ", s2))
+            concat [s, ["^{"], s2, ["} "], formatExpression(args.3, minPrec)]
+        parenthesizeIf(opPrec < prec, s)
+
+    slash(opPrec: I): HANDLER == (prec: I, args: LE): LS +->
+        s1: LS := formatExpression(args.1, opPrec) -- left argument
+        s2: LS := formatExpression(args.2, opPrec) -- right argument
+        s: LS := tex1("\vphantom", formatBinary("{", "}{", "}", s1, s2))
+        s := concat [cons("\left.", s1), s, cons("\right/", s2)]
+        parenthesizeIf(opPrec < prec, s)
+
+)if LiterateDoc
+The handler \spad{altsupersub} treats an expression that is generated by
+\begin{verbcode}
+supersub(a, [sub1, super1, sub2, super2, ...])
+\end{verbcode}
+from \spadtype{OutputForm}.
+We basically turn it into something like
+\begin{verbcode}
+\ALTSUPERSUB{a}{_{sub1}^{super1}_{sub2}^{super2}...}
+\end{verbcode}
+and let an appropriate \LaTeX{} package deal with the actual formatting,
+for example, the \href{http://www.ctan.org/pkg/tensor}{tensor package}.
+)endif
+
+    emptyExpression?(s: LS): Boolean ==
+        empty? s or (empty? rest s and empty? first s)
+    altsupersub(opPrec: I): HANDLER == (prec: I, args: LE): LS +->
+        s: LS := formatExpression(first args, opPrec)
+        v: LS := tex1("\vphantom", s)
+        ops: LS := ["__", "^"]
+        n: Integer := 1
+        fe: LS := empty()
+        if not empty?(args := rest args) then
+            fe := formatExpression(first args, minPrec)
+            if not emptyExpression? fe then
+                s := concat [s, ["__"], addBraces fe]
+        if not empty?(args := rest args) then
+            fe := formatExpression(first args, minPrec)
+            if not emptyExpression? fe then s := concat [s, ["^"], addBraces fe]
+        while not empty?(args := rest args) repeat
+            if odd? n then s := concat(s, v)
+            fe := formatExpression(first args, minPrec)
+            if not emptyExpression? fe then s := concat(s, tex1(ops.n, fe))
+            n := 3-n -- 1 +-> 2, 2 +-> 1 (alternate ^ and _)
+        parenthesizeIf(opPrec < prec, s)
+
+    -- This handles multi-dots super(x,"....").
+    -- scripts(f, [sub, super, presuper, presub])
+    -- If neither of the pre scripts is there, we produce
+    -- f_{sub}^{super}, f_{sub}, or f^{super}.
+    -- Otherwise it will become \sideset{_presub^presuper}{_sub^super}{f}.
+    -- can assume #args>2
+    missingScript?(a: E): Boolean ==
+        string? a and string(a)$OutputFormTools = " "
+    subsuper(args: LE): LS ==
+       r: LS := []
+       if not empty? args then
+           a := first args; args := rest args
+           if not missingScript? a then
+              r := cons("__", addBraces formatExpression(a, minPrec))
+       if not empty? args then
+           a := first args
+           if not missingScript? a then
+              r := concat(r, cons("^", addBraces formatExpression(a, minPrec)))
+       r
+    scripts(opPrec: I): HANDLER == (prec: I, args: LE): LS +->
+        s: LS := addBraces formatExpression(first args, opPrec) -- f
+        args := rest args
+        post: LS := subsuper args
+        pre: LS := []
+        if #args > 2 then pre := subsuper rest rest args
+        s := if empty? pre then concat[s, post] -- note that post is not empty
+            else concat [["\sideset{"], pre, ["}{"], post, cons("}", s)]
+        parenthesizeIf(opPrec < prec, s)
+
+)if LiterateDoc
+The function \spad{environment} is a general handler to create a
+\LaTeX{} environment.
+)endif
+
+    environment(env: S, x: S, sep: S): HANDLER == (prec: I, args: LE): LS +->
+        concat [[concat ["\begin{", env, "}", x]],_
+                nary(sep, minPrec)(minPrec, args),_
+                [concat ["\end{", env, "}"]]]
+
+    matrix(env: S, sep: S): HANDLER == (prec: I, args: LE): LS +->
+        -- format for args is [[], [ROW ...], [ROW ...], [ROW ...]]
+        n: S := convert(# arguments first rest args)
+        environment(env, "", sep)(prec, rest args)
+
+)if LiterateDoc
+Now all function are defined and we can fill the \spad{operatorData}
+data structure.
+The operators have been mainly extracted from the definitions of
+\spadtype{OutputForm} and the original implementation of
+\spadtype{TexFormat} by R. S. Sutor
+)endif
+
+    o(n, op, hdl) ==> setHandler!(operatorHandlers, n, op, hdl)
+
+    o(0, "NOTHING",     nullary "")
+    o(0, "%pi",         nullary "\pi ")
+    o(0, "%e",          nullary concat(ucodeToString 8519, space())) -- double e
+    o(0, "%i",          nullary concat(ucodeToString 8520, space())) -- double i
+    o(0, "infinity",    nullary "\infty ")
+
+    o(1, "cos",         unary("\cos",    900, maxPrec))
+    o(1, "cot",         unary("\cot",    900, maxPrec))
+    o(1, "csc",         unary("\csc",    900, maxPrec))
+    o(1, "log",         unary("\log",    900, maxPrec))
+    o(1, "sec",         unary("\sec",    900, maxPrec))
+    o(1, "sin",         unary("\sin",    900, maxPrec))
+    o(1, "tan",         unary("\tan",    900, maxPrec))
+    o(1, "cosh",        unary("\cosh",   900, maxPrec))
+    o(1, "coth",        unary("\coth",   900, maxPrec))
+    o(1, "csch",        unary("\operatorname{csch}", 900, maxPrec))
+    o(1, "sech",        unary("\sech",   900, maxPrec))
+    o(1, "sinh",        unary("\operhatorname{sinh}", 900, maxPrec))
+    o(1, "tanh",        unary("\tanh",   900, maxPrec))
+    o(1, "acos",        unary("\arccos", 900, maxPrec))
+    o(1, "asin",        unary("\arcsin", 900, maxPrec))
+    o(1, "atan",        unary("\arctan", 900, maxPrec))
+    o(1, "erf",         unary("\operatorname{erf}",    900, maxPrec))
+
+    o(1, "-",           unary("-",         710,     710))
+    o(1, "not",         unary("\lnot",     710,     710))
+    o(1, "QUOTE",       unary("\texttt{'}", minPrec, minPrec))
+    o(1, "OVERBAR",     unary("\overline",  minPrec, minPrec))
+    o(1, "BOX",         unary("\boxed",      minPrec, minPrec))
+    o(1, "SUB",         unaryNoParen("SUB(", ")"))
+    o(1, "Aleph",       unaryNoParen("\aleph__{", "}"))
+    o(1, "BRACE",       unaryNoParen("\left\{", "\right\}"))
+    o(1, "BRACKET",     unaryNoParen("\left[", "\right]"))
+    o(1, "PAREN",       unaryNoParen("\left(", "\right)"))
+    o(1, "Gamma",       unaryNoParen("\Gamma\left(", "\right)"))
+    o(1, "ROOT",        unaryNoParen("\sqrt{", "}"))
+    o(1, "SEGMENT",     postfix("\ldots ", 340, 340))
+    o(1, "STRING",      unaryNoParen("\texttt{", "}"))
+
+    o(2, "rem",         nary("\mathbin{\mathrm{rem}}",   810))
+    o(2, "quo",         nary("\mathbin{\mathrm{quo}}",   810))
+    o(2, "exquo",       nary("\mathbin{\mathrm{exquo}}", 810))
+    o(2, "/",           nary("/", 880))
+    o(2, "SLASH",       slash 880)
+    o(2, "ZAG",         binary("\frac{\left.{","}\right|}{\left|{","}\right.}",_
+                          maxPrec, 800, 800))
+    o(2, "^",           binary2infix("^",  950, 960, minPrec))
+    o(2, "SUB",         binary2infix("__", 950, 960, minPrec))
+    o(2, "OVER",        binary2("\frac",  910, minPrec, minPrec))
+    o(2, "BINOMIAL",    binaryNoParen "\binom")
+    o(2, "EQUATNUM",    binary("(", ")\qquad ", "", maxPrec, minPrec, minPrec))
+    o(2, "OVERLABEL",   binary("\operatorname{OVERLABEL}(", ", ", ")",_
+                          maxPrec, minPrec, minPrec))
+    o(2, "PRIME",       binary2infix("^", 950, 960, minPrec))
+    o(2, "ROOT",        binarySwap("\sqrt[","]{","}",maxPrec, minPrec, minPrec))
+    o(2, "SEGMENT",     nary("\ldots ", 340))
+
+    o(2, "=",           nary("=",          400))
+    o(2, "~=",          nary("\ne ",       400))
+    o(2, "<",           nary("\lt",        400))
+    o(2, ">",           nary("\gt",        400))
+    o(2, "<=",          nary("\leq ",      400))
+    o(2, ">=",          nary("\geq ",      400))
+    o(2, "and",         nary("\land ",     300))
+    o(2, "or",          nary("\lor ",      200))
+    o(2, "LET",         nary(" := ",       125))
+    o(2, "TAG",         nary("\to ",       minPrec))
+    o(2, "+->",         nary("\mapsto ",   minPrec))
+    o(2, "|",           nary("\mid ",      minPrec))
+    o(2, "...",         nary("\ldots ",    minPrec))
+
+    o(N, "-",           nary("-",  700))
+    o(N, "+",           nary("+",  700))
+    o(N, "*",           nary("\,", 800))
+    o(N, "TENSOR",      nary("\otimes ", 850))
+    o(N, "ROW",         naryNoParen "&")
+    o(N, "AGGLST",      naryNoParen ", ")
+    o(N, "AGGSET",      naryNoParen "; ")
+    o(N, "CONCAT",      naryNoParen "")
+    o(N, "CONCATB",     naryConcatBlank "\ ")
+
+    o(N, "SIGMA",       operatorWithLimits("\sum",  750))
+    o(N, "SIGMA2",      operatorWithLimits("\sum",  750))
+    o(N, "PI",          operatorWithLimits("\prod", 750))
+    o(N, "PI2",         operatorWithLimits("\prod", 750))
+    o(N, "INTSIGN",     operatorWithLimits("\int",  700))
+
+    o(N, "ALTSUPERSUB", altsupersub 900)
+    o(N, "SUPERSUB",    scripts 900)
+    o(N, "theMap",      theMap) -- one or two arguments
+    o(N, "SC",          environment("array", "[t]{l}", "\\"))
+    o(N, "VCONCAT",     environment("array", "{c}", "\\"))
+    o(N, "MATRIX",      matrix("bmatrix", "\\"))
+
+)if LiterateDoc
+\section{Customization}
+
+The visual appearance of expressions can be changed like in the
+TexFormat domain.
+
+One can easily change the default by simply executing the
+following command.
+\begin{verbcode}
+setHandler!(-1, "AGGLST", naryNoParen ",")
+\end{verbcode}
+
+\end{document}
+)endif

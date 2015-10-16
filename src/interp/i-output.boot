@@ -69,6 +69,7 @@ DEFVAR($algebraFormat, true) -- produce 2-d algebra output
 DEFVAR($formulaFormat, false) -- if true produce script formula output
 DEFVAR($fortranFormat, false) -- if true produce fortran output
 DEFVAR($htmlFormat, false) -- if true produce HTML output
+DEFVAR($mathjaxFormat, false) -- if true produce MathJax output
 DEFVAR($mathmlFormat, false) -- if true produce Math ML output
 DEFVAR($texFormat, false) -- if true produce tex output
 DEFVAR($texmacsFormat, false) -- if true produce Texmacs output
@@ -1147,6 +1148,17 @@ linearOutputFormat expr ==
   ioHook("endOfLinearOutput")
   NIL
 
+mathjaxFormat expr ==
+  ioHook("startMathJaxOutput")
+  mathjaxf := '(MathJaxFormat)
+  formatFn := getFunctionFromDomain("coerce", mathjaxf, [$OutputForm])
+  displayFn := getFunctionFromDomain("display", mathjaxf, [mathjaxf])
+  SPADCALL(SPADCALL(expr,formatFn),displayFn)
+  TERPRI $mathjaxOutputStream
+  FORCE_-OUTPUT $mathjaxOutputStream
+  ioHook("endOfMathJaxOutput")
+  NIL
+
 mathmlFormat expr ==
   mml := '(MathMLFormat)
   mmlrep := '(String)
@@ -1199,6 +1211,7 @@ output(expr,domain) ==
     if $texmacsFormat then texmacsFormat x
     if $htmlFormat    then htmlFormat x
     if $linearOutputFormat then linearOutputFormat x
+    if $mathjaxFormat then mathjaxFormat x
   (FUNCTIONP(opOf domain)) and (not(SYMBOLP(opOf domain))) and
     (printfun := compiledLookup("<<",'(TextWriter TextWriter $), evalDomain domain))
        and (textwrit := compiledLookup("print", '($), TextWriter())) =>

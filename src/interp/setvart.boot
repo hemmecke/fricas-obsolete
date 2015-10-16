@@ -618,6 +618,23 @@ DEFPARAMETER($setOptions, '(
         chkOutputFileName
         "console"))
       NIL)
+     (mathjax
+      "create output in MathJax style"
+      interpreter
+      FUNCTION
+      setOutputMathJax
+      (("create output in MathJax format"
+        LITERALS
+        $mathjaxFormat
+        (off on)
+        off)
+       (break $mathjaxFormat)
+       ("where MathJax output goes (enter {\em console} or a pathname)"
+        FILENAME
+        $mathjaxOutputFile
+        chkOutputFileName
+        "console"))
+      NIL)
 
  ))
   (quit
