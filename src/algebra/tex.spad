@@ -129,31 +129,11 @@ TexFormat: public == private where
     setPrologue! : (%, LS) -> LS
       ++ \spad{setPrologue!(t, strings)} sets the prologue section of
       ++ a TeX form t to strings.
-    knownOperator?: (I, S) -> Boolean
-      ++ \spad{knownOperator?(n, op)} checks an internal data structure
-      ++ whether a handler for operator \spad{op} is known.
-      ++ The number \spad{n} denotes the number of arguments of the
-      ++ operator can take.
-      ++ For this function \spad{n} is either 0, 1, 2 or -1 where the value
-      ++ -1 stand for "the operator takes arbitrarily many arguments".
-      ++ It is OK if both \spad{knownOperator?(m, op)} and
-      ++ \spad{knownOperator?(n, op)} return true for different \spad{m}
-      ++ and \spad{n}.
-    handler: (I, S) -> HANDLER
-      ++ \spad{handler(n, op)} is only valid if \spad{knownOperator?(n, op)}.
-      ++ It returns a function that takes the current precedence and
-      ++ the current list of arguments of the structure for operator
-      ++ \spad{op} and returns a list of strings representing that operator
-      ++ and its arguments in \TeX{} format.
-    setHandler!: (I, S, HANDLER) -> HANDLER
-      ++ \spad{setHandler!(n, op, hdl)} puts \spad{hdl} into an internal
-      ++ data structure such that it can be queried afterwards.
-      ++ Setting or modifying a handler should be done with great care
-      ++ since it gives complete freedom of how an operator is treated.
-    removeOperator!: (I, S) -> Void
-      ++ \spad{removeOperator(n, op)} removes any handler from
-      ++ an internal data structure (for the pair \spad{(n, op)}
-      ++ such that afterwards \spad{knownOperator?(n, op)} returns false.
+
+    operatorHandlers: () -> OperatorHandlers(HANDLER)
+      ++ \spad{operatorHandlers()} returns an internal data structure
+      ++ that is used for the selection of respective handlers.
+
     formatExpression: (E, I) -> LS
       ++ \spad{formatExpression(o, p)} returns a list of strings that
       ++ represent the expression \spad{o} in \TeX{} format when
@@ -296,27 +276,16 @@ In fact, we manage 4 tables for nullary, unary, binary, and $n$-ary
 operators.
 )endif
 
-    OperatorData ==> XHashTable(I, XHashTable(S, HANDLER))
     N ==> -1 -- means n-ary.
 
     -- local variable declarations and definitions
-    operatorData: OperatorData := table([_
-        [0, table()],_
-        [1, table()],_
-        [2, table()],_
-        [N, table()] _
-    ])
+    operatorData: OperatorHandlers(HANDLER) := new()
 
 )if LiterateDoc
 The following functions access or modify the internal data structure
 for the handlers.
 )endif
-
-    knownOperator?(prec: I, op: S): Boolean == key?(op, operatorData.prec)
-    handler(prec: I, op: S): HANDLER == operatorData.prec.op
-    setHandler!(prec: I, op: S, h: HANDLER): HANDLER ==
-        operatorData.prec.op := h
-    removeOperator!(prec: I, op: S): Void == remove!(op, operatorData.prec)
+    operatorHandlers(): OperatorHandlers(HANDLER) == operatorData
 
 )if LiterateDoc
 The function \spad{precondition} ``normalizes'' the expression inside
@@ -398,14 +367,14 @@ put on just one line, so we must hide the newline by a comment sign.
 
     display(f: %, len: I): Void ==
         for s in prologue f repeat sayExpr s
-        for s in fillLines(tex f, len) repeat sayExpr concat(s, "%")
+        for s in fillLines(format f, len) repeat sayExpr concat(s, "%")
         for s in epilogue f repeat sayExpr s
         void()$Void
 
     display(f: %) == display(f, _$LINELENGTH$Lisp pretend I)
 
     coerce(f: %) : E ==
-        s: LS := fillLines(tex f, (_$LINELENGTH$Lisp pretend I) - 4)
+        s: LS := fillLines(format f, (_$LINELENGTH$Lisp pretend I) - 4)
         (concat [prologue f, s, epilogue f])::E
 
     -- local function definitions
@@ -477,7 +446,8 @@ In order to keep spaces, we also escape spaces by a backslash.
             -- We've got a symbol here.
             -- We are in the nullary case.
             str: S := string symbol expr
-            knownOperator?(0, str) => handler(0, str)(prec, empty()$LE)
+            knownHandler?(operatorData, 0, str) =>
+                handler(operatorData, 0, str)(prec, empty()$LE)
             tex1("\SYMBOL", [texEscapeString str])
 
         -- now we take apart a list
@@ -490,11 +460,12 @@ In order to keep spaces, we also escape spaces by a backslash.
         op: S := string symbol opex
 
         -- nargs = 1 or 2
-        nargs <= 2 and knownOperator?(nargs, op) =>
-            handler(nargs, op)(prec, args)
+        nargs <= 2 and knownHandler?(operatorData, nargs, op) =>
+            handler(operatorData, nargs, op)(prec, args)
 
         -- check n-ary
-        knownOperator?(N, op) => handler(N, op)(prec, args)
+        knownHandler?(operatorData, N, op) =>
+            handler(operatorData, N, op)(prec, args)
 
         formatFunction(tex1("\FUN", [texEscapeString op]), args)
 
@@ -684,7 +655,7 @@ The operators have been mainly extracted from the definitions of
 \spadtype{TexFormat} by R. S. Sutor
 )endif
 
-    o(n, op, hdl) ==> operatorData.n.op := hdl
+    o(n, op, hdl) ==> setHandler!(operatorHandlers, n, op, hdl)
 
     o(0, "NOTHING",     nullary "")
     o(0, "%pi",         nullary "\pi ")
