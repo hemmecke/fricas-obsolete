@@ -922,6 +922,79 @@ describeSetOutputMathml() ==
   '"The current setting is: ",'%b,setOutputMathml "%display%",'%d)
 
 
+setOutputMathJax arg ==
+  arg = "%initialize%" =>
+    $mathjaxOutputStream := mkOutputConsoleStream()
+    $mathjaxOutputFile := '"CONSOLE"
+    $mathjaxFormat := NIL
+
+  arg = "%display%" =>
+    if $mathjaxFormat then label := '"On:" else label := '"Off:"
+    STRCONC(label,$mathjaxOutputFile)
+
+  (null arg) or (arg = "%describe%") or (first arg = '_?) =>
+    describeSetOutputMathJax()
+
+  -- try to figure out what the argument is
+
+  if arg is [fn] and
+    fn in '(Y N YE YES NO O ON OF OFF CONSOLE y n ye yes no o on of off console)
+      then 'ok
+      else arg := [fn,'mathjax]
+
+  arg is [fn] =>
+    UPCASE(fn) in '(Y N YE O OF) =>
+      sayKeyedMsg("S2IV0002",'(MathJax mathjax))
+    UPCASE(fn) in '(NO OFF)  => $mathjaxFormat := NIL
+    UPCASE(fn) in '(YES ON) => $mathjaxFormat := true
+    UPCASE(fn) = 'CONSOLE =>
+      SHUT $mathjaxOutputStream
+      $mathjaxOutputStream := mkOutputConsoleStream()
+      $mathjaxOutputFile := '"CONSOLE"
+
+  (arg is [fn,ft]) or (arg is [fn,ft,fm]) => -- aha, a file
+    if (ptype := pathnameType fn) then
+      fn := STRCONC(pathnameDirectory fn,pathnameName fn)
+      ft := ptype
+    filename := make_full_namestring([fn, ft])
+    null filename =>
+      sayKeyedMsg("S2IV0003",[fn,ft])
+    (testStream := MAKE_-OUTSTREAM(filename)) =>
+      SHUT $mathjaxOutputStream
+      $mathjaxOutputStream := testStream
+      $mathjaxOutputFile := object2String filename
+      sayKeyedMsg("S2IV0004",['"MathJax",$mathjaxOutputFile])
+    sayKeyedMsg("S2IV0003",[fn,ft])
+
+  sayKeyedMsg("S2IV0005",NIL)
+  describeSetOutputMathJax()
+
+describeSetOutputMathJax() ==
+  sayBrightly LIST ('%b,'")set output mathjax",'%d,_
+   '"is used to tell FriCAS to turn MathJax-style output",'%l,_
+   '"printing on and off, and where to place the output.  By default, the",'%l,_
+   '"destination for the output is the screen but printing is turned off.",'%l,_
+   '%l,_
+   '"Syntax:   )set output mathjax <arg>",'%l,_
+  '"    where arg can be one of",'%l,_
+  '"  on          turn MathJax printing on",'%l,_
+  '"  off         turn MathJax printing off (default state)",'%l,_
+  '"  console     send MathJax output to screen (default state)",'%l,_
+  '"  fp<.fe>     send MathJax output to file with file prefix fp and file",'%l,_
+  '"              extension .fe. If not given, .fe defaults to .mathjax.",'%l,
+  '%l,_
+  '"If you wish to send the output to a file, you must issue this command",'%l,_
+  '"twice: once with",'%b,'"on",'%d,'"and once with the file name. For example, to send",'%l,_
+  '"MathJax output to the file",'%b,'"polymer.mathjax,",'%d,'"issue the two commands",'%l,_
+  '%l,_
+  '"  )set output mathjax on",'%l,_
+  '"  )set output mathjax polymer",'%l,_
+  '%l,_
+  '"The output is placed in the directory from which you invoked FriCAS or",'%l,_
+  '"the one you set with the )cd system command.",'%l,_
+  '"The current setting is: ",'%b,setOutputMathJax "%display%",'%d)
+
+
 setOutputTexmacs arg ==
   arg = "%initialize%" =>
     $texmacsOutputStream := mkOutputConsoleStream()
