@@ -176,8 +176,6 @@ MathJaxFormat: public == private where
       ++ according to the precedence \spad{p1} and puts the result into
       ++ the argument of the \TeX{} command given by \spad{cmd}.
       ++ Outer parentheses are added if \spad{p < prec}.
-    unary2: (S, S, I, I) -> HANDLER
-      ++ unary(s, p, p1) is like unary2(concat(s,"{"), "}", p, p1).
     binary: (S, S, S, I, I, I) -> HANDLER
       ++ binary(l, m, r, p, p1, p2) is like binary2 but output
       ++ looks like [l, arg1, m, arg2, r].
@@ -256,7 +254,7 @@ MathJaxFormat: public == private where
     import from List String
     import from OutputFormTools
 
-    sayExpr(s: S): Void == sayTeX(s)$Lisp
+    sayExpr(s: S): Void == sayMathJax(s)$Lisp
 
     Rep ==> Record(prolog: LS, fmt: LS, epilog: LS)
     import from Rep
@@ -517,12 +515,9 @@ The only option we have for this case is to output \verb'\theMap{theMap(...)}'.
         parenthesize(left, right, formatExpression(first args, minPrec))
 
     -- We can assume #args=1.
-    unary2(l: S, r: S, p: I, p1: I): HANDLER == (prec: I, args: LE): LS +->
+    unary(op: S, p: I, p1: I): HANDLER == (prec: I, args: LE): LS +->
         parenthesizeIf(p < prec,
-                       parenthesize(l, r, formatExpression(first args, p1)))
-
-    unary(op: S, p: I, p1: I): HANDLER == unary2(concat(op ,"{"), "}", p, p1)
-
+            cons(op, addBraces formatExpression(first args, p1)))
     postfix(op: S, p: I, p1: I): HANDLER == (prec: I, args: LE): LS +->
         parenthesizeIf(p < prec, concat(formatExpression(first args, p1), op))
 
@@ -642,26 +637,23 @@ for example, the \href{http://www.ctan.org/pkg/tensor}{tensor package}.
     -- can assume #args>2
     missingScript?(a: E): Boolean ==
         string? a and string(a)$OutputFormTools = " "
+    subsuper(args: LE): LS ==
+       r: LS := []
+       if not empty? args then
+           a := first args; args := rest args
+           if not missingScript? a then
+              r := cons("__", addBraces formatExpression(a, minPrec))
+       if not empty? args then
+           a := first args
+           if not missingScript? a then
+              r := concat(r, cons("^", addBraces formatExpression(a, minPrec)))
+       r
     scripts(opPrec: I): HANDLER == (prec: I, args: LE): LS +->
         s: LS := addBraces formatExpression(first args, opPrec) -- f
         args := rest args
-        post: LS := []
+        post: LS := subsuper args
         pre: LS := []
-        if not empty? args and not missingScript?(first args) then
-            l: LS := addBraces formatExpression(first args, minPrec)
-            post := cons("__", l)
-            args := rest args
-        if not empty? args and not missingScript?(first args) then
-            l: LS := addBraces formatExpression(first args, minPrec)
-            post := concat(post, cons("^", l))
-            args := rest args
-        if not empty? args and not missingScript?(first args) then
-            l: LS := addBraces formatExpression(first args, minPrec)
-            pre := cons("__", l)
-            args := rest args
-        if not empty? args and not missingScript?(first args) then
-            l: LS := addBraces formatExpression(first args, minPrec)
-            pre := concat(pre, cons("^", l))
+        if #args > 2 then pre := subsuper rest rest args
         s := if empty? pre then concat[s, post] -- note that post is not empty
             else concat [["\sideset{"], pre, ["}{"], post, cons("}", s)]
         parenthesizeIf(opPrec < prec, s)
