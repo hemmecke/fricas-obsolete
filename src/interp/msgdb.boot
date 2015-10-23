@@ -1052,7 +1052,7 @@ sayFORMULA(x) == sayBrightly1(x, $formulaOutputStream)
 
 sayLinear(x) == sayBrightly1(x, $linearOutputStream)
 
-sayMathJax(x) == sayBrightly1(x, $mathjaxOutputStream)
+sayMathJax(x) == sayTeXStream(x, $mathjaxOutputStream)
 
 --=======================================================================
 --                Utility Functions
