@@ -225,7 +225,7 @@ MathJaxFormat: public == private where
       ++ interpreted as subscript, superscript, presuperscript, and
       ++ presubscript (in this order).
       ++ Outer parentheses are added if \spad{p < prec}.
-    altsupersub: (S, I) -> HANDLER
+    altsupersub: I -> HANDLER
       ++ \spad{altsupersub(cmd, p)} returns a handler such that
       ++ \spad{altsupersub(cmd, p)(prec, args)} formats the first argument
       ++ with respect to the precedence \spad{p}.
@@ -618,16 +618,27 @@ and let an appropriate \LaTeX{} package deal with the actual formatting,
 for example, the \href{http://www.ctan.org/pkg/tensor}{tensor package}.
 )endif
 
-    altsupersub(op: S, opPrec: I): HANDLER == (prec: I, args: LE): LS +->
-        s1: LS := formatExpression(first args, opPrec)
-        s: LS := empty()
-        ops: S := "__^"
+    emptyExpression?(s: LS): Boolean ==
+        empty? s or (empty? rest s and empty? first s)
+    altsupersub(opPrec: I): HANDLER == (prec: I, args: LE): LS +->
+        s: LS := formatExpression(first args, opPrec)
+        v: LS := tex1("\vphantom", s)
+        ops: LS := ["__", "^"]
         n: Integer := 1
-        for a in rest args repeat
-            fe: S := concat formatExpression(a, minPrec)
-            s := concat(s, concat [concat(ops.n, "{"), fe, "}"])
+        fe: LS := empty()
+        if not empty?(args := rest args) then
+            fe := formatExpression(first args, minPrec)
+            if not emptyExpression? fe then
+                s := concat [s, ["__"], addBraces fe]
+        if not empty?(args := rest args) then
+            fe := formatExpression(first args, minPrec)
+            if not emptyExpression? fe then s := concat [s, ["^"], addBraces fe]
+        while not empty?(args := rest args) repeat
+            if odd? n then s := concat(s, v)
+            fe := formatExpression(first args, minPrec)
+            if not emptyExpression? fe then s := concat(s, tex1(ops.n, fe))
             n := 3-n -- 1 +-> 2, 2 +-> 1 (alternate ^ and _)
-        parenthesizeIf(opPrec < prec, tex2(op, s1, s))
+        parenthesizeIf(opPrec < prec, s)
 
     -- This handles multi-dots super(x,"....").
     -- scripts(f, [sub, super, presuper, presub])
@@ -770,7 +781,7 @@ The operators have been mainly extracted from the definitions of
     o(N, "PI2",         operatorWithLimits("\prod", 750))
     o(N, "INTSIGN",     operatorWithLimits("\int",  700))
 
-    o(N, "ALTSUPERSUB", altsupersub("\ALTSUPERSUB", 900))
+    o(N, "ALTSUPERSUB", altsupersub 900)
     o(N, "SUPERSUB",    scripts 900)
     o(N, "theMap",      theMap) -- one or two arguments
     o(N, "SC",          environment("array", "[t]{l}", "\\"))
