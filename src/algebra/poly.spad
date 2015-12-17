@@ -71,6 +71,8 @@ FreeModuleCategory(R, S) : Category == Exports where
           ++ \spad{linearExtend: (f, x)} returns the linear extension
           ++ of a map defined on the basis applied to a linear combination
         if R has Comparable then Comparable
+        if S has (with coerce: S -> Vector NonNegativeInteger) then
+             totalDegree: % -> NonNegativeInteger
       add
         if R has Comparable then
           smaller?(p : %, q : %) : Boolean ==
@@ -86,6 +88,17 @@ FreeModuleCategory(R, S) : Category == Exports where
                                           leadingCoefficient(q))
                   else
                       return smaller?(leadingSupport(p), leadingSupport(q))
+        if S has with (coerce: S -> Vector NonNegativeInteger) then
+          totalDegree(p: %): NonNegativeInteger ==
+             V ==> Vector NonNegativeInteger
+             zero? p => 0
+             t: NonNegativeInteger := 0
+             for s in support p repeat
+                 v := s::V
+                 d: NonNegativeInteger := 0
+                 for i in 1..#v repeat d := d + qelt(v, i)
+                 t := max(t, d)
+             t
 
 )abbrev domain FM FreeModule
 ++ Author: Dave Barton, James Davenport, Barry Trager
@@ -302,6 +315,7 @@ PolynomialRing(R : Join(SemiRng, AbelianMonoid), E : OrderedAbelianMonoid
               ) : T == C
  where
   T == Join(FiniteAbelianMonoidRing(R, E),
+            FreeModuleCategory(R, E),
             VariablesCommuteWithCoefficients) with
     --assertions
        if R has canonicalUnitNormal then canonicalUnitNormal
