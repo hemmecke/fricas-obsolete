@@ -40,10 +40,6 @@ GeneralDistributedMultivariatePolynomial(vl, R, E) : public == private where
       Vec ==> Vector(NonNegativeInteger)
       zero?(p : %) : Boolean == empty?(p::Rep)
 
-      totalDegree p ==
-         zero? p => 0
-         "max"/[reduce("+",(t.k)::(Vector NNI), 0) for t in p]
-
       monomial(p : %, v : OV, e : NonNegativeInteger) : % ==
          locv := lookup v
          p*monomial(1,
