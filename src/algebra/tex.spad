@@ -864,7 +864,8 @@ Furthermore, the \verb'\COMMA' command adds a small space after the comma.
 One can, however, easily change the default by simply executing the
 following command.
 \begin{verbcode}
-setHandler!(-1, "AGGLST", naryNoParen ",")
+h:=operatorHandlers()$TexFormat;
+setHandler!(h, -1 , "AGGLST" , naryNoParen ", ");
 \end{verbcode}
 
 \end{document}
