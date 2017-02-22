@@ -1,7 +1,7 @@
 -------------------------------------------------------------------
 ---
 --- FriCAS Web API Generator
---- Copyright (C) 2014,  Ralf Hemmecke <ralf@hemmecke.org>
+--- Copyright (C) 2014-2017,  Ralf Hemmecke <ralf@hemmecke.org>
 ---
 -------------------------------------------------------------------
 -- This program is free software: you can redistribute it and/or modify
@@ -654,8 +654,6 @@ ConstructorData: CoercibleTo(OutputForm) with
         dom = sxPercent =>
             -- if % is unconditionally of category s.3
             key?(cat, cex) and cex.cat.cond = true => return true@SEX
-            -- if for (Foo ...) we ask for (has % (Foo ...))
-            cat = catsig => return true@SEX
             return s
 
         -- let FriCAS compute whether "s.2 has s.3"
@@ -690,9 +688,26 @@ ConstructorData: CoercibleTo(OutputForm) with
         -- No further idea how to simplify.
         return s
 
+    -- percentHas?(s, catsig) returns true if s is
+    -- '(has % catsig)' and false otherwise.
+    percentHas?(s: SEX, catsig: SEX): Boolean ==
+        not hasForm?(s) => false
+        dom: SEX := s.2
+        cat: SEX := s.3
+        dom = sxPercent and cat = catsig
+
     L ==> LiteralForm SEX
-    simplifyAndForm(a: Set L,
-                    cex: CATEXPORTS, catsig: SEX, argcats: ARGCATS): DNF ==
+    -- Note that in case a is an andClause of at least two literals and
+    -- there is a literal l of the form '(has % Foo)' and 'catsig=Foo',
+    -- then l can be removed from the literals, because in something like
+    -- "if cond and % has Foo then Foo" is equivalent to
+    -- "if cond then Foo".
+    -- However, if we simply have "if % has Foo then Foo", we can
+    -- remove exporting Foo completely. This case is not treated here, but
+    -- in removeFalseExports(form, cex), because it does not only work
+    -- on the conditions, but on the whole export list.
+    simplifyAndClause(a: Set L,
+                      cex: CATEXPORTS, catsig: SEX, argcats: ARGCATS): DNF ==
         d: DNF := true
         for l in members a repeat
             sx: SEX := simplifyHasForm(element l, cex, catsig, argcats)
@@ -702,6 +717,16 @@ ConstructorData: CoercibleTo(OutputForm) with
                 positive? l => return false
             -- sx is an unevaluteted SExpression
             d := d /\ literal(positive? l, sx)
+        -- Now d is an andClause.
+        andClause: List L := members first members(d::Set(Set L))
+        -- If the condition d (andClause) consists of just one literal, we
+        -- can simply return that condition.
+        if #andClause = 1 then return d
+        -- Otherwise, all conditions of the form '(has % catsig)' can be
+        -- removed.
+        d := true
+        for l in andClause | not percentHas?(element l, catsig) repeat
+            d := d /\ (l::DNF)
         d
 
     -- implies?(clause1, clause2) returns true, if clause1 implies
@@ -767,7 +792,7 @@ ConstructorData: CoercibleTo(OutputForm) with
                 cex: CATEXPORTS, catsig: SEX, ac: ARGCATS): DNF ==
         s: Set Set L := condition :: Set(Set L)
         r: DNF := false
-        for a in members s repeat r := r \/ simplifyAndForm(a, cex, catsig, ac)
+        for a in members s repeat r := r \/ simplifyAndClause(a, cex, catsig, ac)
         simplifyViaInheritance r
 
     addArgCat!(argcat: CATEXPORTS, t: SEX): CATEXPORTS ==
@@ -790,23 +815,72 @@ ConstructorData: CoercibleTo(OutputForm) with
         constructorKind toString(t.1) ~= "category" => argcat
         addArgCat!(argcat, t)
 
+    -- onePositiveLiteral(d) returns an SExpression s, such that
+    -- (d=s::DNF). If no such s exists, it returns NIL, i.e, an
+    -- SExpression x such that null? x is true.
+    onePositiveLiteral(d: DNF): SEX ==
+        sxNil: SEX := convert(empty()$List(SEX))
+        dnfList: List Set L := members(d :: Set(Set L))
+        #dnfList ~= 1 => return sxNil
+        a: List L := members first dnfList
+        #a ~= 1 => return sxNil
+        l: LiteralForm := first a
+        if positive? l then element l else sxNil
+
+    -- removeFalseExports!(form, cex) removes exports from cex whose
+    -- conditions are false or cannot be true.
+    -- Remove export 'Foo' if the condition is just '(has % Foo)',
+    -- i.e., ce.cond is a single literal, and % has no arguments.
+    -- If % has arguments, then 'if arg has Bar then Foo' would lead
+    -- to a condition '(has arg Bar) \/ (has % Foo)' for the export of
+    -- Foo, i.e., not a condition with just one literal. In such a
+    -- case we could simplify to '(has arg Bar)', but this is not yet done.
+    -- In other words, we can remove exports that have '(has % Foo)' from
+    -- the export list if Foo is not among the exports cex, regardless
+    -- of the number of arguments of %.
+    removeFalseExports!(form: SEX, cex: CATEXPORTS): CATEXPORTS ==
+        -- First remove 'Foo' if the (only) condition is '% has Foo'.
+        catsigs: List SEX := keys cex
+        for catsig in catsigs | not (cex.catsig.cond = true) repeat
+            ce: CATEXPORT := cex.catsig
+            s: SEX := onePositiveLiteral(ce.cond)
+            if not null? s and percentHas?(s, catsig) then remove!(catsig, cex)
+
+        -- Now we can remove all exports with condition '% has Foo', if
+        -- Foo is not among the exports of %.
+        catsigs := keys cex
+        for catsig in catsigs | not (cex.catsig.cond = true) repeat
+            ce: CATEXPORT := cex.catsig
+            s: SEX := onePositiveLiteral(ce.cond)
+            if not null? s and hasForm?(s) and s.2 = sxPercent then
+                -- Check that s.3 is not exported in cex.
+                -- Note that we assume here that cex has saturated exports.
+                if not key?(s.3, cex) then remove!(catsig, cex)
+        return cex
+
     catExports(form: SEX): CATEXPORTS == -- auxiliary for categoryExports
         key?(form, allCategoryExports) => allCategoryExports.form
         not list? form => error "catExports: not a correct form"
         x := constructorData toString(form.1)
         args: List SEX := rest destruct form
         cex: CATEXPORTS := saturateExports! explicitExports(x, args)
+        -- Although we are not yet finished with cex, we set it already, so
+        -- that a recursive call of catExports with identical argument,
+        -- returns already by returning that temporary result instead of
+        -- recursing indefinitely.
+        -- Fixes Problem with SemiRng and BiModule(%,%) after commit r2102.
+        allCategoryExports.form := cex
         -- Now we have collected all signatures and categories. It's time
         -- to try to evaluate and simplify the conditions.
         argcats: ARGCATS := empty()
         for id in argumentIdentifiers x for t in argumentTypes x repeat
             argcat: CATEXPORTS := argumentCategory t
             if not empty? argcat then argcats.id := argcat
-        for catsig in keys cex | not(cex.catsig.cond = true) repeat
+        -- simplify the conditions
+        for catsig in keys cex | not (cex.catsig.cond = true) repeat
             ce: CATEXPORT := cex.catsig
             ce.cond := simplifyDNF(ce.cond, cex, catsig, argcats)
-        allCategoryExports.form := cex
-        cex
+        removeFalseExports!(form, cex)
 
     computeConstructorData(s: String): % == -- auxiliary
         -- kind = "category", "domain", "package"
