@@ -696,8 +696,8 @@ The operators have been mainly extracted from the definitions of
 
     o(0, "NOTHING",     nullary "")
     o(0, "%pi",         nullary "\pi ")
-    o(0, "%e",          nullary "ⅇ ")
-    o(0, "%i",          nullary "ⅈ ")
+    o(0, "%e",          nullary concat(ucodeToString 8519, space())) -- double e
+    o(0, "%i",          nullary concat(ucodeToString 8520, space())) -- double i
     o(0, "infinity",    nullary "\infty ")
 
     o(1, "cos",         unary("\cos",    900, maxPrec))
