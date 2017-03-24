@@ -4,6 +4,7 @@ BEGIN {
     print ")set break resume"
     print ")lisp (setf |$ioHook| (lambda (x &optional args) (cond ((eq x '|startTeXOutput|) (SAY \"-- \\\\begin{TeXOutput}\")) ((eq x '|endOfTeXOutput|) (SAY \"-- \\\\end{TeXOutput}\")) ((eq x '|startKeyedMsg|) (SAY \"-- \\\\begin{MessageOutput}\")) ((eq x '|endOfKeyedMsg|) (SAY \"-- \\\\end{MessageOutput}\")) ((eq x '|startSysCmd|) (SAY \"-- \\\\begin{SysCmdOutput}\")) ((eq x '|endSysCmd|) (SAY \"-- \\\\end{SysCmdOutput}\")) ((eq x '|startPatternMsg|) (SAY \"-- \\\\begin{MessageOutput}\")) ((eq x '|endPatternMsg|) (SAY \"-- \\\\end{MessageOutput}\")))))"
     print ")set output tex on"
+    print ")set output mathjax on"
     print ")set output algebra off"
     print ")set message time off"
     print ")set streams calculate 7"
