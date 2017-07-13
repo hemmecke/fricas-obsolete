@@ -828,7 +828,8 @@ ConstructorData: CoercibleTo(OutputForm) with
         if positive? l then element l else sxNil
 
     -- removeFalseExports!(form, cex) removes exports from cex whose
-    -- conditions are false or cannot be true.
+    -- conditions are false or cannot be true where cex are the exports
+    -- corresponding to form.
     -- Remove export 'Foo' if the condition is just '(has % Foo)',
     -- i.e., ce.cond is a single literal, and % has no arguments.
     -- If % has arguments, then 'if arg has Bar then Foo' would lead
@@ -848,6 +849,17 @@ ConstructorData: CoercibleTo(OutputForm) with
 
         -- Now we can remove all exports with condition '% has Foo', if
         -- Foo is not among the exports of %.
+        -- WRONG!
+        -- Assume
+        --   C1: Category == with {if % has shallowlyMutable then foo: % -> %}
+        --   D1: C1 == add ...
+        --   D2: Join(C1, shallowlyMutable) == add ...
+        -- then D1 wouldn't export foo, while D2 would, so we cannot simply
+        -- remove foo from the exports of C1.
+        -- However, since FriCAS does not have the "extend" keyword (as Aldor),
+        -- if the argument "form" is a domain, i.e. kind="domain", then
+        -- removal of the signature is OK.
+        constructorKind toString(form.1) ~= "domain" => return cex
         catsigs := keys cex
         for catsig in catsigs | not (cex.catsig.cond = true) repeat
             ce: CATEXPORT := cex.catsig
@@ -1257,11 +1269,15 @@ ConstructorDocumentation: with
         for s in sigs repeat h(plainSIGNATURE s) := funSIGNATURE s
         [h.sig for sig in sort(lt, keys h)]
 
+    -- The treatment of signatures might lead to a listing of signatures
+    -- with repeated entries. However, as of the time of review
+    -- (12-Jul-2017), arguments come with at most one "cxCATEGORY" form,
+    -- i.e., we could even write "sigs := formatCATEGORYType c".
     formatJoinType(type: SEX): CATSSIGS ==
         cats: List String := empty()
         sigs: List String := empty()
         for c in destruct cdr type repeat
-            car c = sxCATEGORY => sigs := formatCATEGORYType c
+            car c = sxCATEGORY => sigs := concat(formatCATEGORYType c, sigs)
             cats := cons(type2rstref c, cats)
         [reverse! cats, sigs]
 
