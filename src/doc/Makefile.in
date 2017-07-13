@@ -547,11 +547,10 @@ sphinx/source/history.rst:
 myhtml: sphinx/stamp
 sphinx/stamp: abbrev.list sphinx/source/history.rst
 	$(MKDIR_P) sphinx/source
-	cd sphinx/source; \
+	(cd sphinx/source; \
 	  (echo ')compile "$(srcdir)/api.spad"'; \
 	   echo 'documentAll("../../abbrev.list")') \
-	  | fricas -nosman
-	touch $@
+	  | fricas -nosman) > $@
 
 mysphinx: sphinx/stamp
 	cd sphinx; make html
