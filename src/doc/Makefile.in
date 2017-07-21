@@ -507,6 +507,10 @@ ${PS_FILES}: %.ps: ${pssrcdir}/%.ps
 pics: pics.mk viewports ${PS_FILES}
 	${MAKE} -f pics.mk pics
 
+book: index
+	rm book.dvi; make book.dvi
+	rm book.dvi; make book.pdf
+
 book.dvi: ug09.tex tex-files
 	TEXINPUTS=$$TEXINPUTS:${srcdir}:tmp:. latex book.tex
 
