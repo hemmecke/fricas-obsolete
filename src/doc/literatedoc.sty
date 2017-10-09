@@ -49,6 +49,20 @@
   breaklines=true,
   literate={->}{$\to$}{2},
 ]}
+\usepackage{fancyhdr}
+%-- The following is just for draft mode.
+\newcount\hours\newcount\minutes
+\minutes=\time \hours=\the\minutes
+\divide\hours by 60 \multiply\hours by 60 \advance\minutes by -\hours
+\divide\hours by 60
+\newcommand{\CurrentTime}{\the\hours:\ifnum\minutes<10{0}\fi\the\minutes}
+\lfoot{}
+\cfoot{}
+\rfoot{{\footnotesize [\today~(\CurrentTime)]} \thepage}
+\pagestyle{fancy}
+\let\rhxmaketitle\maketitle
+\def\maketitle{\rhxmaketitle\thispagestyle{fancy}}
+
 \parindent0pt
 \parskip\medskipamount
 \def\SYSTEM{FriCAS}
