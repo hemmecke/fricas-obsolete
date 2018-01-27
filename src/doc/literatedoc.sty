@@ -30,6 +30,10 @@
 %% ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
 %% OF THE POSSIBILITY OF SUCH DAMAGE.
 
+\parindent0pt
+\parskip\medskipamount
+\usepackage[top=3cm, bottom=3cm, left=3cm, right=4cm]{geometry}
+
 \usepackage{url}
 \usepackage{color}
 \definecolor{bgcode}{rgb}{1,1,0.7}
@@ -55,16 +59,16 @@
 \minutes=\time \hours=\the\minutes
 \divide\hours by 60 \multiply\hours by 60 \advance\minutes by -\hours
 \divide\hours by 60
-\newcommand{\CurrentTime}{\the\hours:\ifnum\minutes<10{0}\fi\the\minutes}
-\lfoot{}
+\def\rhx@two@digits#1{\ifnum#1<10 0\fi\number#1}
+\newcommand{\CurrentTime}{\rhx@two@digits{\the\hours}:\rhx@two@digits{\the\minutes}}
+\lfoot{{\the\year-\rhx@two@digits{\the\month}-\rhx@two@digits{\the\day}~(\CurrentTime)}}
 \cfoot{}
-\rfoot{{\footnotesize [\today~(\CurrentTime)]} \thepage}
+\rfoot{\jobname~\thepage}
+\lhead{}
 \pagestyle{fancy}
 \let\rhxmaketitle\maketitle
 \def\maketitle{\rhxmaketitle\thispagestyle{fancy}}
 
-\parindent0pt
-\parskip\medskipamount
 \def\SYSTEM{FriCAS}
 \usepackage{hyperref}
 \def\spadtype#1{\href{http://fricas.github.io/api/#1.html}{#1}}
