@@ -780,6 +780,8 @@ Group() : Category == Join(Monoid, unitsKnown) with
       import from RepeatedSquaring(%)
       x : % / y : % == x*inv(y)
       recip(x : %) == inv(x)
+      leftRecip(x : %) == recip(x)
+      rightRecip(x : %) == recip(x)
       x : % ^ n : Integer ==
           zero? n => 1
           n < 0 => expt(inv(x), qcoerce(-n)@PositiveInteger)
