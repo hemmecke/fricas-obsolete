@@ -35,8 +35,17 @@ InnerSparseUnivariatePowerSeries(Coef) : Exports == Implementation where
       ++ expansion of st, so that refer corresponds to the exponent in
       ++ str up to which the stream is expanded.
     getRef : % -> REF
-      ++ getRef(f) returns a reference containing the order to which the
-      ++ terms of f have been computed.
+      ++ \spad{getRef(f)} returns a reference containing the order up to
+      ++ which there is full knowlegde about the terms of the series.
+      ++ \spad{explicitlyEmpty?(f)} and \spad{explicitEntries?(f)}
+      ++ should always studied before \spad{getRef(f)}.
+      ++ \spad{explicitlyEmpty?(f)} eventually refers
+      ++ to \spad{deref(getRef f)=plusInfinity()}.
+      ++ If \spad{explicitEntries?(f)} is true, then \spad{deref(getRef f)}
+      ++ is the order up to which \spad{getStream(f)} is computed;
+      ++ otherwise, it is known that all coefficients smaller than
+      ++ \spad{deref(getRef f)} are zero, i.e., it is a lower bound of
+      ++ the order of the series.
     getStream : % -> ST
       ++ getStream(f) returns the stream of terms representing the series f.
     series : ST -> %
