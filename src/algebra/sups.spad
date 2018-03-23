@@ -30,6 +30,10 @@ InnerSparseUnivariatePowerSeries(Coef) : Exports == Implementation where
     makeSeries : (REF, ST) -> %
       ++ makeSeries(refer, str) creates a power series from the reference
       ++ \spad{refer} and the stream \spad{str}.
+      ++ Note that because of the way this domain works internally,
+      ++ makeSeries assumes that refer is automatically updated during
+      ++ expansion of st, so that refer corresponds to the exponent in
+      ++ str up to which the stream is expanded.
     getRef : % -> REF
       ++ getRef(f) returns a reference containing the order to which the
       ++ terms of f have been computed.
