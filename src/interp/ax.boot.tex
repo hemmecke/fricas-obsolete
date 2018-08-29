@@ -37,6 +37,15 @@ where \verb'filename' is actually unused and could be removed and
 \verb'constructors' should be a list of constructor names, i.e., names
 of categories, domains, and packages in their unabbreviated form.
 
+For example, in the following way this function is called from within
+a fricas session.
+\begin{code}
+cd /path/to/fricas
+fricas -nosman
+)read src/interp/ax.boot
+)boot makeAxExportForm("unused", (list 'DirectProductCategory))
+\end{code}
+
 It returns a list that represents the \texttt{.ap} (parsed source)
 (see \verb'aldor -hall') form of the constructors. However, since the
 output is only needed for a construction of an \xAldor{} \xFriCAS{}
@@ -59,6 +68,9 @@ Let us first state what different situations we identified.
 \item Ordinary categories. See Section~\ref{sec:Category}.
 \item Ordinary categories with default packages. See
   Section~\ref{sec:Category+Default}.
+\item Ordinary categories with default packages that contain
+  conditional implementations. See
+  Section~\ref{sec:Category+ConditionalDefault}.
 \item Initial domains, i.e., domains that will be extended in the
   course of building \file{libfricas.al}. These domains are listed in
   the variable \verb'$extendedDomains'. %$
@@ -323,6 +335,308 @@ Note that the \verb'elt' function is translated into \verb'apply'.
 
 
 
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Ordinary Categories with Conditional Default Packages}
+\label{sec:Category+ConditionalDefault}.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The category \verb'DirectProductCategory' with default conditional
+exports and conditional default implementations.
+
+
+
+\begin{code}
+DirectProductCategory(dim : NonNegativeInteger, R : Type) : Category ==
+  Join(IndexedAggregate(Integer, R), CoercibleTo Vector R, _
+           AbelianProductCategory(R), finiteAggregate) with
+           -- attribute to indicate an aggregate of finite size
+         directProduct : Vector R -> %
+           ++ directProduct(v) converts the vector v to
+           ++ a direct product. Error: if the length of v is
+           ++ different from dim.
+         if R has SetCategory then FullyRetractableTo R
+         if R has Ring then
+           DifferentialExtension R
+           FullyLinearlyExplicitOver R
+         if R has AbelianMonoid and R has Monoid then
+           unitVector : PositiveInteger -> %
+             ++ unitVector(n) produces a vector with 1 in position n and
+             ++ zero elsewhere.
+         if R has SemiRng then
+           SemiRng
+           BiModule(R, R)
+           if R has AbelianMonoid then
+             dot : (%, %) -> R
+               ++ dot(x, y) computes the inner product of the vectors x and y.
+         if R has Monoid then Monoid
+         if R has SemiGroup then
+           SemiGroup
+           _* : (R, %) -> %
+             ++ r * y multiplies the element r times each component of the
+             ++ vector y.
+           _* : (%, R) -> %
+             ++ y * r multiplies each component of the vector y by the element r.
+         if R has Finite then Finite
+         if R has CommutativeRing then
+           Algebra R
+           CommutativeRing
+         if R has unitsKnown then unitsKnown
+         if R has OrderedSet then OrderedSet
+         if R has OrderedAbelianMonoidSup then OrderedAbelianMonoidSup
+         if R has Field then VectorSpace R
+ add
+      if R has Ring then
+        equation2R : Vector % -> Matrix R
+
+        coerce(n : Integer) : %          == n::R::%
+        characteristic()             == characteristic()$R
+        differentiate(z : %, d : R -> R) == map(d, z)
+
+        equation2R v ==
+          ans : Matrix(R) := new(dim, #v, 0)
+          for i in minRowIndex ans .. maxRowIndex ans repeat
+            for j in minColIndex ans .. maxColIndex ans repeat
+              qsetelt!(ans, i, j, qelt(qelt(v, j), i))
+          ans
+
+        reducedSystem(m : Matrix %) : Matrix(R) ==
+          empty? m => new(dim*nrows(m), ncols(m), 0)
+          reduce(vertConcat, [equation2R row(m, i)
+                 for i in minRowIndex m .. maxRowIndex m])$List(Matrix R)
+
+        reducedSystem(m : Matrix %, v : Vector %):
+          Record(mat : Matrix R, vec : Vector R) ==
+            vh : Vector(R) :=
+              empty? v => empty()
+              rh := reducedSystem(v::Matrix %)@Matrix(R)
+              column(rh, minColIndex rh)
+            [reducedSystem(m)@Matrix(R), vh]
+
+      if R has Field then
+        x / b       == x * inv b
+        dimension() == dim::CardinalNumber
+
+      if R has Finite then
+          size() == size()$R ^ dim
+
+          index n ==
+              s := size()$R
+              r := new(dim, index(1)$R)$Vector(R)
+              n0 : Integer := n-1
+              for i in 1..dim repeat
+                  d := divide(n0, s)
+                  r.i := index((1+d.remainder)::PositiveInteger)$R
+                  n0 := d.quotient
+
+              directProduct r
+
+          lookup v ==
+              s := size()$R
+              pow : NonNegativeInteger := 1
+              res : Integer := 1
+              for i in 1..dim repeat
+                  res := res + (lookup(v.i)$R - 1)*pow
+                  pow := pow * s
+
+              res::PositiveInteger
+\end{code}
+
+It is translated into \ldots
+\begin{code}
+(|Sequence| (|Import| NIL |AxiomLib|) (|Import| NIL |Boolean|)
+  (|Foreign| (|Declare| |dummyDefault| |Exit|) |Lisp|)
+  (|Define|
+   (|Declare| |DirectProductCategory|
+    (|Apply| ->
+     (|Comma|
+      . #1=((|Declare| |#1| |NonNegativeInteger|)
+            (|Declare| |#2| |Type|)))
+     |Category|))
+   (|Lambda| (|Comma| . #1#) |Category|
+             (|Label| |DirectProductCategory|
+              (|With| NIL
+               (|Sequence|
+                (|Apply| |IndexedAggregate| |Integer| |#2|)
+                (|Apply| |CoercibleTo| (|Apply| |Vector| |#2|))
+                (|Apply| |AbelianProductCategory| |#2|)
+                |finiteAggregate|
+                (|Declare| |directProduct|
+                 (|Apply| ->
+                  (|Comma| (|Apply| |Vector| |#2|)) %))
+                (|If| (|Test| (|Has| |#2| |SetCategory|))
+                 (|Apply| |FullyRetractableTo|
+                  (|PretendTo| |#2| |SetCategory|))
+                 NIL)
+                (|If| (|Test| (|Has| |#2| |Ring|))
+                 (|Sequence|
+                  (|Apply| |DifferentialExtension|
+                   (|PretendTo| |#2| |Ring|))
+                  (|Apply| |FullyLinearlyExplicitOver|
+                   (|PretendTo| |#2| |Ring|)))
+                 NIL)
+                (|If| (|Test| (|Has| |#2| |AbelianMonoid|))
+                 (|If| (|Test| (|Has| |#2| |Monoid|))
+                  (|Declare| |unitVector|
+                   (|Apply| -> (|Comma| |PositiveInteger|)
+                    %))
+                  NIL)
+                 NIL)
+                (|If| (|Test| (|Has| |#2| |SemiRng|))
+                 (|Sequence| |SemiRng|
+                             (|Apply| |BiModule|
+                              (|PretendTo| |#2| |SemiRng|)
+                              (|PretendTo| |#2| |SemiRng|))
+                             (|If|
+                              (|Test|
+                               (|Has| |#2| |AbelianMonoid|))
+                              (|Declare| |dot|
+                               (|Apply| -> (|Comma| % %)
+                                |#2|))
+                              NIL))
+                 NIL)
+                (|If| (|Test| (|Has| |#2| |Monoid|)) |Monoid|
+                 NIL)
+                (|If| (|Test| (|Has| |#2| |SemiGroup|))
+                 (|Sequence| |SemiGroup|
+                             (|Declare| *
+                              (|Apply| -> (|Comma| |#2| %)
+                               %))
+                             (|Declare| *
+                              (|Apply| -> (|Comma| % |#2|)
+                               %)))
+                 NIL)
+                (|If| (|Test| (|Has| |#2| |Finite|)) |Finite|
+                 NIL)
+                (|If| (|Test| (|Has| |#2| |CommutativeRing|))
+                 (|Sequence|
+                  (|Apply| |Algebra|
+                   (|PretendTo| |#2| |CommutativeRing|))
+                  |CommutativeRing|)
+                 NIL)
+                (|If| (|Test| (|Has| |#2| |unitsKnown|))
+                 |unitsKnown| NIL)
+                (|If| (|Test| (|Has| |#2| |OrderedSet|))
+                 |OrderedSet| NIL)
+                (|If|
+                 (|Test|
+                  (|Has| |#2| |OrderedAbelianMonoidSup|))
+                 |OrderedAbelianMonoidSup| NIL)
+                (|If| (|Test| (|Has| |#2| |Field|))
+                 (|Apply| |VectorSpace|
+                  (|PretendTo| |#2| |Field|))
+                 NIL)
+                (|Default|
+                 (|Sequence|
+                  (|Define|
+                   (|Declare| /
+                    (|Apply| -> (|Comma| % |#2|) %))
+                   (|Lambda|
+                    (|Comma| (|Declare| |t#1| %)
+                     (|Declare| |t#2| |#2|))
+                    % (|Label| / |dummyDefault|)))
+                  (|Define|
+                   (|Declare| |characteristic|
+                    (|Apply| -> (|Comma|)
+                     |NonNegativeInteger|))
+                   (|Lambda| (|Comma|) |NonNegativeInteger|
+                             (|Label| |characteristic|
+                              |dummyDefault|)))
+                  (|Define|
+                   (|Declare| |coerce|
+                    (|Apply| -> (|Comma| |Integer|) %))
+                   (|Lambda|
+                    (|Comma| (|Declare| |t#1| |Integer|)) %
+                    (|Label| |coerce| |dummyDefault|)))
+                  (|Define|
+                   (|Declare| |differentiate|
+                    (|Apply| ->
+                     (|Comma| %
+                      #2=(|Apply| -> (|Comma| |#2|) |#2|))
+                     %))
+                   (|Lambda|
+                    (|Comma| (|Declare| |t#1| %)
+                     (|Declare| |t#2| #2#))
+                    %
+                    (|Label| |differentiate|
+                     |dummyDefault|)))
+                  (|Define|
+                   (|Declare| |dimension|
+                    (|Apply| -> (|Comma|) |CardinalNumber|))
+                   (|Lambda| (|Comma|) |CardinalNumber|
+                             (|Label| |dimension|
+                              |dummyDefault|)))
+                  (|Define|
+                   (|Declare| |index|
+                    (|Apply| -> (|Comma| |PositiveInteger|)
+                     %))
+                   (|Lambda|
+                    (|Comma|
+                     (|Declare| |t#1| |PositiveInteger|))
+                    % (|Label| |index| |dummyDefault|)))
+                  (|Define|
+                   (|Declare| |lookup|
+                    (|Apply| -> (|Comma| %)
+                     |PositiveInteger|))
+                   (|Lambda| (|Comma| (|Declare| |t#1| %))
+                             |PositiveInteger|
+                             (|Label| |lookup|
+                              |dummyDefault|)))
+                  (|Define|
+                   (|Declare| |reducedSystem|
+                    (|Apply| ->
+                     (|Comma|
+                      #3=(|Apply| |Matrix|
+                          (|PretendTo| % |AbelianMonoid|)))
+                     #4=(|Apply| |Matrix|
+                         (|PretendTo| |#2|
+                          |AbelianMonoid|))))
+                   (|Lambda| (|Comma| (|Declare| |t#1| #3#))
+                             #4#
+                             (|Label| |reducedSystem|
+                              |dummyDefault|)))
+                  (|Define|
+                   (|Declare| |reducedSystem|
+                    (|Apply| ->
+                     (|Comma|
+                      #5=(|Apply| |Matrix|
+                          (|PretendTo| % |AbelianMonoid|))
+                      #6=(|Apply| |Vector|
+                          (|PretendTo| % |Type|)))
+                     #7=(|Apply| |Record|
+                         (|Declare| |mat|
+                          (|Apply| |Matrix|
+                           (|PretendTo| |#2|
+                            |AbelianMonoid|)))
+                         (|Declare| |vec|
+                          (|Apply| |Vector|
+                           (|PretendTo| |#2| |Type|))))))
+                   (|Lambda|
+                    (|Comma| (|Declare| |t#1| #5#)
+                     (|Declare| |t#2| #6#))
+                    #7#
+                    (|Label| |reducedSystem|
+                     |dummyDefault|)))
+                  (|Define|
+                   (|Declare| |size|
+                    (|Apply| -> (|Comma|)
+                     |NonNegativeInteger|))
+                   (|Lambda| (|Comma|) |NonNegativeInteger|
+                             (|Label| |size|
+                              |dummyDefault|)))))))))))
+\end{code}
+That is the parsed source of the Aldor code \ldots
+\begin{code}
+import from AxiomLib;
+import from Boolean;
+import dummyDefault: Exit from Foreign Lisp;
+\end{code}
 
 
 
