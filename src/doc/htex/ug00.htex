@@ -117,7 +117,7 @@ generate the correct command to issue to compute the answer.
 \begin{texonly}
 \begin{figure}[thb]
 \vspace*{5.10in}
-\caption{Computing the roots of $x^{49}-49x^4+9.$}\label{fig-intro-br}
+\caption{Computing the roots of $x^{49}-49x^4+9.$\label{fig-intro-br}}
 \vskip .5\baselineskip
 \end{figure}
 \end{texonly}
@@ -202,6 +202,12 @@ tables.
 A particularly useful structure for interactive use is the
 infinite stream:
 
+\begin{inputonly}
+p(0) == 1
+p(1) == x
+p(n) == ((2*n-1)*x*p(n-1) - (n-1) * p(n-2))/n
+p(2)
+\end{inputonly}
 %
 \xtc{
 Create the infinite stream of derivatives of Legendre
