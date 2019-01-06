@@ -1976,12 +1976,20 @@ But let's get the fifteenth coefficient of \spad{y}.
 }{
 \spadcommand{coefficient(y,15) \free{y} \bound{y15}}
 }
-\xtc{
+\noOutputXtc{
 If you look at \spad{y}
 then you see that the coefficients up to order \spad{15}
 have all been computed.
 }{
+\spadcommand{)set stream showall on}
+}
+\xtc{
+}{
 \spadcommand{y \free{y15}}
+}
+\noOutputXtc{
+}{
+\spadcommand{)set stream showall off}
 }
 
 % *********************************************************************

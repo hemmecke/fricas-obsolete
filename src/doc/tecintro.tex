@@ -263,24 +263,33 @@ are also algebraic sets.
 Likewise, fields and integral domains are rings and algebraic sets.
 However fields and integral domains are not ordered sets.
 
-\vfill
 \begin{texonly}
 \vskip .5\baselineskip
 %\horizontalline
 \begin{figure}[htbp]
-\vspace*{3in}
-\begin{center}
-\begin{tabular}{ccccc}
-       &            & \spadtype{SetCategory}              \\
-       & $\swarrow$ & $\downarrow$            & $\searrow$ \\
-\spadtype{Ring} &   & \spadtype{Finite}   &           & \spadtype{OrderedSet}\\
-$\downarrow$    &   &               & $\searrow$ & $\downarrow$ \\
-\spadtype{IntegralDomain}&   &             &            & \spadtype{OrderedSet} \\
-$\downarrow$      &    \\
-\spadtype{Field}&            &    \\
-\end{tabular}
-\end{center}
-\caption{A simplified category hierarchy.}\label{fig:techintro-1}
+  \begin{center}
+    \begin{tikzpicture}[every node/.style = {shape=rectangle, rounded corners,
+        draw, align=center, top color=white, bottom color=gray!20}]]
+      \node(SetCategory) at (3,6) {\spadtype{SetCategory}};
+      \node(Ring) at (0,4) {\spadtype{Ring}};
+      \node(IntegralDomain) at (0,2) {\spadtype{IntegralDomain}};
+      \node(Field) at (0,0) {\spadtype{Field}};
+      \node(Finite) at (3,4) {\spadtype{Finite}};
+      \node(OrderedSet) at (6,4) {\spadtype{OrderedSet}};
+      \node(OrderedFinite) at (6,2) {\spadtype{OrderedFinite}};
+
+      \draw[->](SetCategory)--(Ring);
+      \draw[->]               (Ring)--(IntegralDomain);
+      \draw[->]                       (IntegralDomain)--(Field);
+
+      \draw[->](SetCategory)--(Finite);
+      \draw[->]               (Finite)--(OrderedFinite);
+
+      \draw[->](SetCategory)--(OrderedSet);
+      \draw[->]               (OrderedSet)--(OrderedFinite);
+    \end{tikzpicture}
+  \end{center}
+  \caption{A simplified category hierarchy.\label{fig:techintro-1}}
 \end{figure}
 %\horizontalline
 \vskip .5\baselineskip
