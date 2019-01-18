@@ -1,10 +1,15 @@
 \documentclass{article}
-\usepackage{verbatim}
 \usepackage{hyperref}
 \newtheorem{Example}{Example}
 \newcommand{\file}[1]{\texttt{#1}}
 \newcommand{\xAldor}{\textsc{Aldor}}
 \newcommand{\xFriCAS}{\textsc{FriCAS}}
+\usepackage{color}
+\definecolor{bgcode}{rgb}{1,1,0.7}
+\usepackage{listings}
+\lstnewenvironment{code}%
+  {\lstset{basicstyle=\scriptsize\ttfamily,backgroundcolor=\color{bgcode}}}%
+  {}
 
 \begin{document}
 \title{Comments on ax.boot}
@@ -25,9 +30,9 @@ The most important function in \file{ax.boot} is the function
 %
 The function takes as input a filename and a list of constructors.
 Via LISP it would be called like
-\begin{verbatim}
+\begin{code}
 (|makeAxExportForm| filename constructors)
-\end{verbatim}
+\end{code}
 where \verb'filename' is actually unused and could be removed and
 \verb'constructors' should be a list of constructor names, i.e., names
 of categories, domains, and packages in their unabbreviated form.
@@ -77,15 +82,15 @@ Let us first state what different situations we identified.
 \section{Ordinary Domains}\label{sec:Domain}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 The domain \verb'Stack'.
-\begin{verbatim}
+\begin{code}
 Stack(S:SetCategory): StackAggregate S with
     stack: List S -> %
   == add
     Rep := Reference List S
     ...
-\end{verbatim}
+\end{code}
 It is translated into \ldots
-\begin{verbatim}
+\begin{code}
 (|Sequence| (|Import| NIL |FriCASLib|) (|Import| NIL |Boolean|)
     (|Export|
         (|Declare| |Stack|
@@ -98,16 +103,16 @@ It is translated into \ldots
                                       (|Comma| (|Apply| |List| |#1|))
                                       %))))))
         NIL NIL))
-\end{verbatim}
+\end{code}
 That is the parsed source of the Aldor code \ldots
-\begin{verbatim}
+\begin{code}
 import from FriCASLib;
 import from Boolean;
 export Stack: (T: SetCategory) -> with {
                                         StackAggregate T;
                                         stack: List T -> %;
                                   }
-\end{verbatim}
+\end{code}
 Note that nothing appears before the \verb'with'. No problem because
 that is equivalent to a \verb'Join' in Aldor.
 
@@ -134,7 +139,7 @@ that is equivalent to a \verb'Join' in Aldor.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 The category \verb'SquareFreeNormalizedTriangularSetCategory' without
 a default package.
-\begin{verbatim}
+\begin{code}
 SquareFreeNormalizedTriangularSetCategory(_
         R: GcdDomain,_
         E: OrderedAbelianMonoidSup,_
@@ -143,9 +148,9 @@ SquareFreeNormalizedTriangularSetCategory(_
     Join(_
         SquareFreeRegularTriangularSetCategory(R,E,V,P),_
          NormalizedTriangularSetCategory(R,E,V,P))
-\end{verbatim}
+\end{code}
 It is translated into \ldots
-\begin{verbatim}
+\begin{code}
 (|Sequence| (|Import| NIL |FriCASLib|) (|Import| NIL |Boolean|)
     (|Define|
         (|Declare| |SquareFreeNormalizedTriangularSetCategory|
@@ -173,9 +178,9 @@ It is translated into \ldots
                                           |#1| |#2| |#3| |#4|)
                                  (|Apply| |NormalizedTriangularSetCategory|
                                           |#1| |#2| |#3| |#4|)))))))
-\end{verbatim}
+\end{code}
 That is the parsed source of the Aldor code \ldots
-\begin{verbatim}
+\begin{code}
 import from FriCASLib;
 import from Boolean;
 SquareFreeNormalizedTriangularSetCategory: (
@@ -192,7 +197,7 @@ SquareFreeNormalizedTriangularSetCategory: (
         SquareFreeRegularTriangularSetCategory(R, E, V, P),
         NormalizedTriangularSetCategory(R, E, V, P)
 }
-\end{verbatim}
+\end{code}
   Again, nothing appears in front of the \verb'with'. No problem
   because that is equivalent to a \verb'Join' in Aldor.
 
@@ -218,7 +223,7 @@ SquareFreeNormalizedTriangularSetCategory: (
 \label{sec:Category+Default}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 The category \verb'StringAggregate' with default package.
-\begin{verbatim}
+\begin{code}
 StringAggregate: Category == OneDimensionalArrayAggregate Character with
     lowerCase       : % -> %
     lowerCase_!: % -> %
@@ -234,9 +239,9 @@ StringAggregate: Category == OneDimensionalArrayAggregate Character with
    prefix?(s, t)         == substring?(s, t, minIndex t)
    coerce(c:Character):% == new(1, c)
    elt(s:%, t:%): %      == concat(s,t)$%
-\end{verbatim}
+\end{code}
 It is translated into \ldots
-\begin{verbatim}
+\begin{code}
 (|Sequence| (|Import| NIL |FriCASLib|) (|Import| NIL |Boolean|)
     (|Foreign| (|Declare| |dummyDefault| |Exit|) |Lisp|)
     (|Define| (|Declare| |StringAggregate| |Category|)
@@ -278,9 +283,9 @@ It is translated into \ldots
                                      |dummyDefault|)))
                             ...
                             ))))))
-\end{verbatim}
+\end{code}
 That is the parsed source of the Aldor code \ldots
-\begin{verbatim}
+\begin{code}
 import from FriCASLib;
 import from Boolean;
 import dummyDefault: Exit from Foreign Lisp;
@@ -298,7 +303,7 @@ StringAggregate: Category == with {
    lowerCase: % -> %      == (t: %): %         +-> dummyDefault;
    ...
 }
-\end{verbatim}
+\end{code}
 It is important to note that the actual default functions are given by
 a dummy implementation that is imported from LISP.
 
@@ -329,7 +334,7 @@ Note that the \verb'elt' function is translated into \verb'apply'.
 \section{Initial Domains without Arguments}
 \label{sec:InitDomain}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{verbatim}
+\begin{code}
 SingleInteger(): Join(IntegerNumberSystem,Logic,OpenMath) with
    canonical
    canonicalsClosed
@@ -346,9 +351,9 @@ SingleInteger(): Join(IntegerNumberSystem,Logic,OpenMath) with
    Or   : (%,%) -> %
  == add
    ...
-\end{verbatim}
+\end{code}
 It is translated into \ldots
-\begin{verbatim}
+\begin{code}
 (|Sequence| (|Import| NIL |FriCASLib|) (|Import| NIL |Boolean|)
     (|Extend|
         (|Define|
@@ -408,9 +413,9 @@ It is translated into \ldots
                                    (|Declare| |Or|
                                     (|Apply| -> (|Comma| % %) %)))))
                    NIL))))
-\end{verbatim}
+\end{code}
 That is the parsed source of the Aldor code \ldots
-\begin{verbatim}
+\begin{code}
 import from FriCASLib;
 import from Boolean;
 extend SingleInteger: with {
@@ -449,7 +454,7 @@ extend SingleInteger: with {
         And: (%,%) -> %;
         Or : (%,%) -> %;
 }) add;
-\end{verbatim}
+\end{code}
 
 
 
@@ -465,7 +470,7 @@ extend SingleInteger: with {
 \section{Initial Domains with Arguments}
 \label{sec:ParametrizedInitDomain}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{verbatim}
+\begin{code}
 SegmentBinding(S:Type): Type with
   equation: (Symbol, Segment S) -> %
   variable: % -> Symbol
@@ -474,9 +479,9 @@ SegmentBinding(S:Type): Type with
  == add
   Rep := Record(var:Symbol, seg:Segment S)
   ...
-\end{verbatim}
+\end{code}
 It is translated into \ldots
-\begin{verbatim}
+\begin{code}
 (|Sequence| (|Import| NIL |FriCASLib|) (|Import| NIL |Boolean|)
     (|Sequence|
         (|Define|
@@ -514,9 +519,9 @@ It is translated into \ldots
                                       |SegmentBindingExtendCategory|
                                       |#1|))
                                     NIL)))))))
-\end{verbatim}
+\end{code}
 That is the parsed source of the Aldor code \ldots
-\begin{verbatim}
+\begin{code}
 import from FriCASLib;
 import from Boolean;
 SegmentBindingExtendCategory: (S: Type) -> Category ==
@@ -529,10 +534,10 @@ SegmentBindingExtendCategory: (S: Type) -> Category ==
 extend SegmentBinding: (S: Type) -> SegmentBindingExtendCategory S ==
   (S: Type): SegmentBindingExtendCategory S +->
     (add pretend SegmentBindingExtendCategory S) add;
-\end{verbatim}
+\end{code}
 The last lines are actually equivalent to
-\begin{verbatim}
+\begin{code}
 extend SegmentBinding(S: Type): SegmentBindingExtendCategory S ==
     (add pretend SegmentBindingExtendCategory S) add;
-\end{verbatim}
+\end{code}
 \end{document}
