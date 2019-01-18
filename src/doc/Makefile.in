@@ -508,7 +508,14 @@ ${PS_FILES}: %.ps: ${pssrcdir}/%.ps
 pics: pics.mk viewports ${PS_FILES}
 	${MAKE} -f pics.mk pics
 
-book.dvi: ug09.tex tex-files
+version.tex: ${top_srcdir}/.git/HEAD
+	echo "This PDF has been produced from the FriCAS repository." > $@
+	echo >> $@
+	(cd $(top_srcdir); echo "\url{https://github.com/hemmecke/fricas/commit/$$(git log -1 --pretty=%H)}\\\\") >> $@
+	(cd $(top_srcdir); echo "on top of SVN version $$(git log -100|grep git-svn-id|head -1|sed 's|.*fricas/trunk@||;s| .*||')") >> $@
+	echo >> $@
+
+book.dvi: ug09.tex tex-files version.tex
 	TEXINPUTS=$$TEXINPUTS:${srcdir}:tmp:. latex book.tex
 
 book.ps: book.dvi

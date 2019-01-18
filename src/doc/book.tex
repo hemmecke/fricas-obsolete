@@ -1,61 +1,71 @@
 \documentclass[twoside,a4paper]{book}
 \usepackage{fricas}
+\title{The \Language{} System for Computer Mathematics}
 
 \begin{document}
-%
-% \thispagestyle{empty}
-% \vspace*{1in}
-% {\Large\sf Richard D. Jenks \hfill Robert S. Sutor \newline
-% \vskip 1in
-% \begin{center}
-% \LARGE\sf AXIOM \\
-% \quad \\ \quad \\
-% \Large\sf The Scientific Computation System
-% \quad \\ \quad \\ \vskip 1.5in
-% \normalsize\rm Draft: \today
-% \end{center}}
-% \newpage
-% \thispagestyle{empty}
-% \quad
-%
-\pagenumbering{roman}
+\maketitle
+\pagenumbering{roman}%
 \setcounter{page}{0}
 
-\begin{quote}
-\color{red}\Large
-  This is an attempt to make the content of the Axiom book (by Jenks
-  and Sutor) available again in order to describe the FriCAS project
-  (which is a fork of the original Axiom code). The following
-  material is mainly taken from the original Axiom book, but is partly
-  tailored to new developments in FriCAS.
 
-  \vspace{1cm}
+\section*{General note}
+This is the original Axiom book from 1992 with title %
+``\emph{AXIOM---The Scientific Computation System}'' by Jenks and
+Sutor in its adaptation for the \Language{} fork of the Axiom source
+code.
 
-  \textbf{WARNING: This is work-in-progress! There might be errors and
-    even false statements.}
+It counts as the official version for the \Language{} project.
 
-  Plan is as follows:
-  \begin{enumerate}
-  \item Make LaTeX compilation work and include (generated) pictures
-    and generated output of algebra commands.
-  \item Simplify and remove redundant \LaTeX{} commands.
-  \item Build on modern advanced latex packages.
-  \item Generate indices and hyperrefs.
-  \end{enumerate}
+The original sources (including the text and scripts) for this book
+where released in 2002 under the modified BSD license that is found in
+the file \texttt{license/LICENSE.AXIOM} in the source code repository
+of \Language{}.
 
-  All of the above will be done by taking care of still generating the
-  same \texttt{.ht} files although the technicalities might look
-  different. The contents of the files (no matter how wrong it
-  actually is) will only be changed marginally. Rewriting of the
-  contents will only happen after the technical part of producing the
-  PDF file has been finished.
+\url{http://fricas.sourceforge.net/}
 
-  \hspace*{\fill}Ralf Hemmecke
-\end{quote}
+\url{http://fricas.github.io/}
+
+\InputIfFileExists{version.tex}{}{}
+
+\section*{Warning}
+Since this book is a moving target, each part of its generation is
+automated. In particular, the output of \Language{} commands
+(including their typesetting in \LaTeX{}) is automated. However, that
+sometimes means that you see boxes with output that does not fit the
+width of the page. We use the breqn \LaTeX{} package to break
+equations appropriately. Unfortunately, that does not always work
+nicely.
+
+If you find other inaccuracies, please report them to the mailing list
+\href{mailto:fricas-devel@googlegroups.com}{fricas-devel@googlegroups.com}.
+
+\section*{Authors}
+
+The book is an effort of quite a number of people.
+%
+The original Axiom book lists the following people as authors:
+Manuel Bronstein,
+William H. Burge,
+Timothy P. Daly,
+Patrizia Gianni,
+Johannes Grabmeier,
+Scott C. Morrison,
+Jonathan M. Steinbach,
+Robert S. Sutor,
+Barry M. Trager,
+Stephen M. Watt,
+Richard D. Jenks,
+Clifton J. Williamson.
+
+Since \Language{} has been forked from the Axiom project, there have
+been a number of contributions and corrections by Martin Baker,
+Riccardo Guida, Waldek Hebisch, Ralf Hemmecke.
+
 
 %\input{dedicate}
 %\input{foreword}
 \clearpage
+
 \tableofcontents
 %\input{bios}
 %
