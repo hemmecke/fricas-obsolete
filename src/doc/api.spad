@@ -1139,6 +1139,7 @@ ConstructorDocumentation: with
       ++ ":spadsource:`/${FILENAME}.spad#L${LINENUMBER}`".
       ++ Configure extlinks in sphinx/src/conf.py for the actual
       ++ URL that will be used.
+
   == add
     import from SExpressionOperations
     import from ConstructorDataBaseTools
@@ -1168,6 +1169,8 @@ ConstructorDocumentation: with
         c2 = char "1" => false
         lowerCase s1 < lowerCase s2
 
+    leftTrimSpace(s: String): String == leftTrim(s, char " ")
+
     -- joinBy(sep, l) returns a string where all elements of l are
     -- concatenated by sep as the separation string.
     joinBy(separator: String, l: List String): String ==
@@ -1180,45 +1183,64 @@ ConstructorDocumentation: with
     -- concatenated with ", " as the separation string and with
     -- parentheses around the expression if the length of the list l is
     -- different from 1.
+    -- Additionally, parentheses will be added around the argument, if
+    -- the argument string begins with a space.
     formatTUPLE(l: List String): String ==
-        #l = 1 => first l -- one entry --> no parentheses
-        concat ["(", joinBy(", ", l), ")"]
+        #l = 1 => -- one entry
+            a := first l
+            a.1 ~= char " " => a -- without parens
+            a.1 := char "("
+            concat [a, ")"]
+        concat ["(", joinBy(", ", map(leftTrimSpace, l)), ")"]
 
     -- formatTypeWithArguments(id, args) returns the prefix form of id
     -- with arguments arg, i.e. for ("f", ["a", "b"]) we get
     -- "f(a, b)". The one-argument case ("f", ["a"]) will return
-    -- "f a" without parentheses.
+    -- "f a" without parentheses if the firt character of "a" is not a
+    -- space and will return "f(a)" otherwise.
     formatTypeWithArguments(id: String, args: List String): String ==
         empty? args => id
-        empty? rest args => concat [id, " ", first args] -- just one argument
+        empty? rest args => -- just one argument
+            a := first args
+            a.1 ~= char " " => concat [id, " ", a] -- without parens
+            a.1 := char "("
+            concat [id, a, ")"]
         concat(id, formatTUPLE args)
 
     nostyle(str: String): String == str
 
-    type2rst(s: SEX, style: String -> String): String ==
+    type2rstAux(s: SEX, style: String -> String): String ==
         -- Assume an expression like (EltableAggregate Key (Integer))
         -- Transform it into Eltable(Key, Integer) where Eltable and
         -- Integer will be links, but Key will not.
         -- As a special case we accept (SIGNATURE id (A B ...)) and
         -- treat it like (Mapping A B ...) as needed in formatSIGNATURE.
+        -- If a constructed type is complex like "A -> B", then we mark
+        -- it by prepending a space in front of it.
         not list? s => toString s
         s1: SEX := car s
         s := cdr s
         -- Write a: B instead of :(a,B).
-        s1 = sxColon => concat [toString(s.1), ": ", type2rst(s.2, style)]
+        s1 = sxColon =>
+            concat [toString(s.1), ": ", leftTrimSpace type2rstAux(s.2, style)]
         s1 = sxMapping or s1 = sxSIGNATURE =>
             if s1 = sxSIGNATURE then
                s := cdr s -- remove the function id
                a := cdr s -- additional information
                s := car s -- the type part
                -- constant case first -- write 0: % instead of 0: () -> %
-               not null? a and car a = sxconstant => return type2rst(s, style)
-            tt: String := type2rst(car s, style) -- target type
+               not null? a and car a = sxconstant =>
+                   return type2rstAux(s, style)
+            tt: String := leftTrimSpace type2rstAux(car s, style) -- target type
             sourceTypes: List SEX := destruct cdr s
-            st: String := formatTUPLE [type2rst(x, style) for x in sourceTypes]
-            concat [st, " -> ", tt]
-        args: List String := [type2rst(x, style) for x in destruct s]
+            t: List String := [type2rstAux(x, style) for x in sourceTypes]
+            st: String := formatTUPLE t
+            concat [" ", st, " -> ", tt]
+        args: List String := [type2rstAux(x, style) for x in destruct s]
         formatTypeWithArguments(style toString s1, args)
+
+    type2rst(s: SEX, style: String -> String): String ==
+        leftTrimSpace type2rstAux(s, style)
 
     type2rstref(s: SEX): String == type2rst(s, reftype)
 
@@ -1416,7 +1438,7 @@ ConstructorDocumentation: with
             if type ~= "Type" then cats.type := catref
         concat [["", cats.cat] for cat in sort(lt, keys cats)]
 
-    -- restructuredText(con, fn, pos) creates a list of reStructuredText
+    -- reStructuredText(con, fn, pos) creates a list of reStructuredText
     -- lines for the constructor con.
     -- The parameters fn and pos are used to create a link to the source
     -- file and line number of the constructor.
