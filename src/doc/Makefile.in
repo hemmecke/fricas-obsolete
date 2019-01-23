@@ -553,7 +553,7 @@ sphinx/stamp: abbrev.list sphinx/source/history.rst
 	(cd sphinx/source; \
 	  (echo ')compile "$(srcdir)/api.spad"'; \
 	   echo 'documentAll("../../abbrev.list")') \
-	  | fricas -nosman) > $@
+	  | FRICAS_INITFILE='' $(FRICAS)/bin/fricas -nosman) > $@
 
 mysphinx: sphinx/stamp
 	cd sphinx; make html
