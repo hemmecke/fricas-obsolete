@@ -157,7 +157,7 @@ category of all domains, and
 %\footnote{\spadtype{CoercibleTo(OutputForm)}
 %can also be written (and is written in the definition above) without
 %parentheses.}
-The operation \spad{Join} is a system-defined operation that
+The operation \spadtype{Join} is a system-defined operation that
 \spadkey{Join}
 forms a single category from two or more other categories.
 
@@ -530,7 +530,7 @@ While such statements are only comments,
 \index{correctness}
 \Language{} can enforce their intention simply by shifting the burden of
 responsibility onto the author of a domain.
-A domain belongs to category \spad{Ring} only if the
+A domain belongs to category \spadtype{Ring} only if the
 author asserts that the domain  belongs to \spadtype{Ring} or
 to a category that extends \spadtype{Ring}.
 
@@ -746,7 +746,7 @@ polynomials and other algebraic structures.
 Because of this conditional,
 the domain \spadtype{Fraction(Integer)} exports
 an operation
-\spadfun{ceiling}: \spad{Fraction Integer->Integer}, but
+\spadfun{ceiling}: \spadtype{Fraction Integer->Integer}, but
 \spadtype{Fraction Polynomial Integer} does not.
 
 Conditionals can also appear in the default definitions for the

@@ -467,8 +467,8 @@ Bug fixes, in particular:
 \item In Spad '\$Lisp' calls now must have a type.
 
 \item In Spad \spad{error} did only minimal checking of its argument.
-  Now argument to \spad{error} must be a \spad{String} or \spad{OutputForm}
-  or a literal list of \spad{OutputForm}-s.
+  Now argument to \spad{error} must be a \spadtype{String} or
+  \spadtype{OutputForm} or a literal list of \spadtype{OutputForm}-s.
 
 \end{itemize}
 
@@ -1306,13 +1306,13 @@ that modifying FriCAS algebra is now much easier.
   FriCAS this is no longer supported, so one has to write brackets and
   braces as is.
 
-\item \spad{SubsetCategory} was handled in special way by the
+\item \spadtype{SubsetCategory} was handled in special way by the
   compiler. This is no longer supported.
 
 \item Old Spad compiler used to transform relational operators
   \spad{~=,<=,>,>=} in ways which are correct for linear order, but
   may conflict with other uses (as partial order or when generating
-  \spad{OutputForm}). FriCAS no longer performs this transformation.
+  \spadtype{OutputForm}). FriCAS no longer performs this transformation.
   Similarely, Spad parser no longer treats \spadop{^} and \spadop{^=} in
   special way.
 
@@ -1348,9 +1348,9 @@ that modifying FriCAS algebra is now much easier.
 
 \item '\$Lisp' calls now must have a type
 
-\item \spad{error} did only minimal checking of its argument.  Now
-  argument to \spad{error} must be a \spad{String} or \spad{OutputForm}
-  or a literal list of \spad{OutputForm}-s.
+\item \spad{error} did only minimal checking of its argument. Now
+  argument to \spad{error} must be a \spadtype{String} or
+  \spadtype{OutputForm} or a literal list of \spadtype{OutputForm}-s.
 
 \end{enumerate}
 
@@ -1369,8 +1369,8 @@ There are also library changes that affect user code:
 \item Operator properties are now symbols and not strings, so instead
   of \spad{has?(op, "even")} use \spad{has?(op, 'even)}
 
-\item There is new category \spad{Comparable}, several constructors
-  that asserted \spad{OrderedSet} now only assert \spad{Comparable}.
+\item There is new category \spadtype{Comparable}, several constructors
+  that asserted \spadtype{OrderedSet} now only assert \spadtype{Comparable}.
 \end{enumerate}
 
 

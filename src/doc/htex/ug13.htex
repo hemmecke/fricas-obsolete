@@ -223,7 +223,7 @@ the same kind of
 expression that can appear to the right of an
 \spadSyntax{==} in a category definition.
 If a domain constructor is unconditionally a member of two or more
-categories, a \spad{Join} form is used.
+categories, a \spadtype{Join} form is used.
 \spadkey{Join}
 The {\tt Exports} part of the definition of
 \spadtype{FlexibleArray(S)} reads, for example:
@@ -334,13 +334,13 @@ before).
 % *********************************************************************
 %
 The {\tt Implementation} part of an \Language{} capsule for a
-domain constructor uses the special variable \spad{Rep} to
+domain constructor uses the special variable \spadtype{Rep} to
 \index{Rep @ {\tt Rep}}
 identify the lower level data type used to represent the objects
 \index{representation!of a domain}
 of the domain.
 \index{domain!representation}
-The \spad{Rep} for quadratic forms is \spadtype{SquareMatrix(n, K)}.
+The \spadtype{Rep} for quadratic forms is \spadtype{SquareMatrix(n, K)}.
 This means that all objects of the domain are required to be
 \spad{n} by \spad{n} matrices with elements from \spadtype{K}.
 
@@ -372,7 +372,7 @@ Since the argument is already a matrix, this coercion does no computation.
 
 Within the context of a capsule, an object of \spadSyntax{%} is
 regarded both as a quadratic form {\it and} as a
-matrix.\footnote{In case each of \textspadsyntax{\%} and \spad{Rep}
+matrix.\footnote{In case each of \textspadsyntax{\%} and \spadtype{Rep}
 have the same named operation available,
 the one from \textspadsyntax{\%} takes precedence.
 Thus, if you want the one from \textspadsyntax{Rep}, you must
