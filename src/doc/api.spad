@@ -1520,7 +1520,7 @@ ConstructorDocumentation: with
         writeLine!(f)
         close! f
 
-    CONINFO ==> Record(fn: String, pos: String)
+    CONINFO ==> Record(fn: String, pos: String, ckind: String)
     CONSTRUCTORS ==> XHashTable(String, CONINFO)
 
     -- We assume there is a file abbrev.list (given through the 'path'
@@ -1536,12 +1536,12 @@ ConstructorDocumentation: with
         f: TextFile := open(path::FileName)
         while not endOfFile? f repeat
             l: List String := split(readLine! f, char " ")
-            constructors(l.5) := [l.1, l.2]
+            constructors(l.5) := [l.1, l.2, l.3]
         close! f
         constructors
 
     documentConstructors(title: String, kind: String, cs: CONSTRUCTORS): Void ==
-        l: List String := [x for x in keys cs | constructorKind x = kind]
+        l: List String := [x for x in keys cs | cs.x.ckind = kind]
         l := sort!(lex, l)
         documentConstructorsTOC(title, l) -- table of contents
         for c in l repeat reStructuredTextFile(c, cs.c.fn, cs.c.pos) -- files
