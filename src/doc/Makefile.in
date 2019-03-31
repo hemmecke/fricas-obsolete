@@ -556,7 +556,7 @@ sphinx/stamp: abbrev.list sphinx/source/history.rst
 	  | FRICAS_INITFILE='' $(FRICAS)/bin/fricas -nosman) > $@
 
 mysphinx: sphinx/stamp
-	cd sphinx; make html
+	cd sphinx; ${MAKE} html
 
 newsphinx:
 	-rm -rf sphinx
