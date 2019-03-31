@@ -36,7 +36,7 @@ extensions = [
 # See http://docs.readthedocs.org/en/latest/faq.html for this on_rtd stuff.
 import os
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
-spad_source_url = os.environ.get('SPADSOURCERUL')
+spad_source_url = os.environ.get('SPADSOURCEURL')
 if on_rtd or spad_source_url == None:
   spad_source_url = 'https://github.com/fricas/fricas/blob/master/src/algebra'
 
