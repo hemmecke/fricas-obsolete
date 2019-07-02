@@ -989,7 +989,6 @@ ConstructorDocumentationSphinxTools: with
     -- Manually create such pages.
     reftype(str: String): String ==
         import from List String
-        member?(str, ["%", "Record", "Union", "Enumeration"]) => str
         concat ["\ ", sphinxref(str, label(str)), "\ "]
 
 -------------------------------------------------------------------
@@ -1120,27 +1119,21 @@ ConstructorDocumentationTeXTools: with
 
 -------------------------------------------------------------------
 
-)abbrev package CONDOC ConstructorDocumentation
-ConstructorDocumentation: with
-    documentAll: String -> Void
-      ++ documentAll(abbrevs) takes a path to a file that contains
-      ++ lines in the form
-      ++ "FILENAME LINENUMBER KIND ABBREV CONSTRUCTOR"
-      ++ which looks, for example, like this
-      ++ "acplot 48 domain ACPLOT PlaneAlgebraicCurvePlot".
-      ++ These lines denote the constructors that are going to be output.
-      ++ The ABBREV column is currently unused.
-      ++ The FILENAME and LINENUMBER denote the .spad file and the
-      ++ corresponding line number where the constructor is defined.
-      ++ The KIND, ABBREV, and CONSTRUCTOR columns are as they appear
-      ++ in the ")abbrev" declaration in the respective file.
-      ++ The FILENAME, LINENUMBER and url will be used to construct
-      ++ a link to the source code in the form
-      ++ ":spadsource:`/${FILENAME}.spad#L${LINENUMBER}`".
-      ++ Configure extlinks in sphinx/src/conf.py for the actual
-      ++ URL that will be used.
-
-  == add
+)abbrev package CONDOCG ConstructorDocumentationGeneric
+ConstructorDocumentationGeneric(rcs): Exports == Implementation where
+  rcs: XHashTable(String, String) -- replacement for constructors
+    -- If for some constructor c the entry rcs.c does not exist,
+    -- then just c is output, if the entry exists and is empty, then
+    -- it is considered as a constructor of the package to document and
+    -- a sphinx ':ref: structure is output. If constructors.c is non empty,
+    -- then it is used as the replacement text for c.
+  CONINFO ==> Record(fn: String, pos: String, ckind: String)
+  CONSTRUCTORS ==> XHashTable(String, CONINFO)
+  Exports ==> with
+    documentConstructors: (String, String, CONSTRUCTORS) -> Void
+      ++ documentConstructors(title, kind, cs) documents all constructors
+      ++ of a certain kind (category, package, domain).
+  Implementation ==> add
     import from SExpressionOperations
     import from ConstructorDataBaseTools
     import from ConstructorDocumentationSphinxTools
@@ -1208,6 +1201,14 @@ ConstructorDocumentation: with
         concat(id, formatTUPLE args)
 
     nostyle(str: String): String == str
+    xreftype(str: String): String ==
+        import from List String
+        not key?(str, rcs) => str
+        c := rcs.str
+        empty? c => reftype str
+        member?(str, ["%", "Record", "Union", "Enumeration", "Void", "Type"]) =>
+            str
+        c
 
     type2rstAux(s: SEX, style: String -> String): String ==
         -- Assume an expression like (EltableAggregate Key (Integer))
@@ -1242,7 +1243,7 @@ ConstructorDocumentation: with
     type2rst(s: SEX, style: String -> String): String ==
         leftTrimSpace type2rstAux(s, style)
 
-    type2rstref(s: SEX): String == type2rst(s, reftype)
+    type2rstref(s: SEX): String == type2rst(s, xreftype)
 
     formatHeader(con: String, argids: List String): List String ==
         con := formatTypeWithArguments(con, argids)
@@ -1276,10 +1277,10 @@ ConstructorDocumentation: with
     -- Function name is highlighed. Documentation is close.
     funSIGNATURE(s: SEX): String ==
         id := concat [":spadfun:`", formatFunctionIdentifier s, "`"]
-        formatSIGNATURE(s, id, reftype)
+        formatSIGNATURE(s, id, xreftype)
     -- Function name links to where the documentation is.
     refSIGNATURE(s: SEX, ref: String): String ==
-        formatSIGNATURE(s, sphinxref(formatFunctionIdentifier s, ref), reftype)
+        formatSIGNATURE(s, sphinxref(formatFunctionIdentifier s, ref), xreftype)
     -- signature without embellishment (for key in XHashTable)
     plainSIGNATURE(s: SEX): String ==
         formatSIGNATURE(s, formatFunctionIdentifier s, nostyle)
@@ -1520,6 +1521,33 @@ ConstructorDocumentation: with
         writeLine!(f)
         close! f
 
+    documentConstructors(title: String, kind: String, cs: CONSTRUCTORS): Void ==
+        l: List String := [x for x in keys cs | cs.x.ckind = kind]
+        l := sort!(lex, l)
+        documentConstructorsTOC(title, l) -- table of contents
+        for c in l repeat reStructuredTextFile(c, cs.c.fn, cs.c.pos) -- files
+
+)abbrev package CONDOC ConstructorDocumentation
+ConstructorDocumentation: with
+    documentAll: String -> Void
+      ++ documentAll(abbrevs) takes a path to a file that contains
+      ++ lines in the form
+      ++ "FILENAME LINENUMBER KIND ABBREV CONSTRUCTOR"
+      ++ which looks, for example, like this
+      ++ "acplot 48 domain ACPLOT PlaneAlgebraicCurvePlot".
+      ++ These lines denote the constructors that are going to be output.
+      ++ The ABBREV column is currently unused.
+      ++ The FILENAME and LINENUMBER denote the .spad file and the
+      ++ corresponding line number where the constructor is defined.
+      ++ The KIND, ABBREV, and CONSTRUCTOR columns are as they appear
+      ++ in the ")abbrev" declaration in the respective file.
+      ++ The FILENAME, LINENUMBER and url will be used to construct
+      ++ a link to the source code in the form
+      ++ ":spadsource:`/${FILENAME}.spad#L${LINENUMBER}`".
+      ++ Configure extlinks in sphinx/src/conf.py for the actual
+      ++ URL that will be used.
+
+  == add
     CONINFO ==> Record(fn: String, pos: String, ckind: String)
     CONSTRUCTORS ==> XHashTable(String, CONINFO)
 
@@ -1539,12 +1567,6 @@ ConstructorDocumentation: with
             constructors(l.5) := [l.1, l.2, l.3]
         close! f
         constructors
-
-    documentConstructors(title: String, kind: String, cs: CONSTRUCTORS): Void ==
-        l: List String := [x for x in keys cs | cs.x.ckind = kind]
-        l := sort!(lex, l)
-        documentConstructorsTOC(title, l) -- table of contents
-        for c in l repeat reStructuredTextFile(c, cs.c.fn, cs.c.pos) -- files
 
     -- exported function
     documentAll(abbrevs: String): Void ==
@@ -1577,6 +1599,17 @@ ConstructorDocumentation: with
         writeLine!(f)
         close! f
         constructors: CONSTRUCTORS := getConstructors abbrevs
+        RCS ==> XHashTable(String, String) -- replacement constructors
+        rcs: RCS := empty()
+        all: List SExpression := destruct(allConstructors()$Lisp)
+        fricasconstructors: List String := [string symbol x for x in all]
+        fricasapiurl: String := "https://fricas.github.io/api/"
+        for x in fricasconstructors repeat
+            s: String := concat ["`", x, " <", fricasapiurl, x, ".html>`__ "]
+            rcs.x := s
+        -- Override with the constructors that we want to document locally.
+        for x in keys constructors repeat rcs.x := ""
+        import from ConstructorDocumentationGeneric(rcs)
         documentConstructors("Categories", "category", constructors)
         documentConstructors("Domains",    "domain",   constructors)
         documentConstructors("Packages",   "package",  constructors)
