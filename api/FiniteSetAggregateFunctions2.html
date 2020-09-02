@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FiniteSetAggregateFunctions2(S, A, R, B) &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="FloatEllipticFunctions" href="FloatEllipticFunctions.html" />
+    <link rel="prev" title="FiniteLinearAggregateSort(S, V)" href="FiniteLinearAggregateSort.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="FloatEllipticFunctions.html" title="FloatEllipticFunctions"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="FiniteLinearAggregateSort.html" title="FiniteLinearAggregateSort(S, V)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">FiniteSetAggregateFunctions2(S, A, R, B)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="finitesetaggregatefunctions2-s-a-r-b">
+<span id="l-finite-set-aggregate-functions2"></span><span id="index-0"></span><h1>FiniteSetAggregateFunctions2(S, A, R, B)<a class="headerlink" href="#finitesetaggregatefunctions2-s-a-r-b" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/aggcat2.spad#L122">aggcat2.spad line 122</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/aggcat2.spad#L122">[edit on github]</a></p>
+<ul class="simple">
+<li><p>S: <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p></li>
+<li><p>A: <a class="reference internal" href="FiniteSetAggregate.html#l-finite-set-aggregate"><span class="std std-ref">FiniteSetAggregate</span></a> S</p></li>
+<li><p>R: <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p></li>
+<li><p>B: <a class="reference internal" href="FiniteSetAggregate.html#l-finite-set-aggregate"><span class="std std-ref">FiniteSetAggregate</span></a> R</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">FiniteSetAggregateFunctions2</span></code> provides functions involving two finite set aggregates where the underlying domains might be different. An example of this is to create a set of rational numbers by mapping a function across a set of integers, where the function divides each integer by 1000.</p>
+<span class="target" id="l-finite-set-aggregate-functions2-map"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">map</span>: (S -&gt; R, A) -&gt; B</dt><dd><p><code class="docutils literal notranslate"><span class="pre">map(f,</span> <span class="pre">a)</span></code> applies function <code class="docutils literal notranslate"><span class="pre">f</span></code> to each member of aggregate <code class="docutils literal notranslate"><span class="pre">a</span></code>, creating a new aggregate with a possibly different underlying domain.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-set-aggregate-functions2-reduce"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">reduce</span>: ((S, R) -&gt; R, A, R) -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">reduce(f,</span> <span class="pre">a,</span> <span class="pre">r)</span></code> applies function <code class="docutils literal notranslate"><span class="pre">f</span></code> to each successive element of the aggregate <code class="docutils literal notranslate"><span class="pre">a</span></code> and an accumulant initialised to <code class="docutils literal notranslate"><span class="pre">r</span></code>. For example, <code class="docutils literal notranslate"><span class="pre">reduce(_+\$Integer,</span> <span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3],</span> <span class="pre">0)</span></code> does a <code class="docutils literal notranslate"><span class="pre">3+(2+(1+0))</span></code>. Note: third argument <code class="docutils literal notranslate"><span class="pre">r</span></code> may be regarded as an identity element for the function.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-set-aggregate-functions2-scan"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">scan</span>: ((S, R) -&gt; R, A, R) -&gt; B</dt><dd><p><code class="docutils literal notranslate"><span class="pre">scan(f,</span> <span class="pre">a,</span> <span class="pre">r)</span></code> successively applies <code class="docutils literal notranslate"><span class="pre">reduce(f,</span> <span class="pre">x,</span> <span class="pre">r)</span></code> to more and more leading sub-aggregates <code class="docutils literal notranslate"><span class="pre">x</span></code> of aggregate <code class="docutils literal notranslate"><span class="pre">a</span></code>. More precisely, if <code class="docutils literal notranslate"><span class="pre">a</span></code> is <code class="docutils literal notranslate"><span class="pre">[a1,</span> <span class="pre">a2,</span> <span class="pre">...]</span></code>, then <code class="docutils literal notranslate"><span class="pre">scan(f,</span> <span class="pre">a,</span> <span class="pre">r)</span></code> returns spad {[reduce(f, [a1], r), reduce(f, [a1, a2], r), …]}.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="FloatEllipticFunctions.html" title="FloatEllipticFunctions"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="FiniteLinearAggregateSort.html" title="FiniteLinearAggregateSort(S, V)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">FiniteSetAggregateFunctions2(S, A, R, B)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

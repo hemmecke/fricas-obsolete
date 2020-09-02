@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IntegralBasisTools(R, UP, F) &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="IntegrateSolutions(F, L)" href="IntegrateSolutions.html" />
+    <link rel="prev" title="IntegralBasisPolynomialTools(K, R, UP, L)" href="IntegralBasisPolynomialTools.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="IntegrateSolutions.html" title="IntegrateSolutions(F, L)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="IntegralBasisPolynomialTools.html" title="IntegralBasisPolynomialTools(K, R, UP, L)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">IntegralBasisTools(R, UP, F)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="integralbasistools-r-up-f">
+<span id="l-integral-basis-tools"></span><span id="index-0"></span><h1>IntegralBasisTools(R, UP, F)<a class="headerlink" href="#integralbasistools-r-up-f" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/intclos.spad#L62">intclos.spad line 62</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/intclos.spad#L62">[edit on github]</a></p>
+<ul>
+<li><p>R: <a class="reference internal" href="EuclideanDomain.html#l-euclidean-domain"><span class="std std-ref">EuclideanDomain</span></a> with</p>
+<blockquote>
+<div><p><span class="spadfun">squareFree</span>: % -&gt; <a class="reference internal" href="Factored.html#l-factored"><span class="std std-ref">Factored</span></a> %</p>
+</div></blockquote>
+</li>
+<li><p>UP: <a class="reference internal" href="UnivariatePolynomialCategory.html#l-univariate-polynomial-category"><span class="std std-ref">UnivariatePolynomialCategory</span></a> R</p></li>
+<li><p>F: <a class="reference internal" href="FramedAlgebra.html#l-framed-algebra"><span class="std std-ref">FramedAlgebra</span></a>(R, UP)</p></li>
+</ul>
+<p>This package contains functions used in the packages FunctionFieldIntegralBasis and NumberFieldIntegralBasis.</p>
+<span class="target" id="l-integral-basis-tools-diagonal-product"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">diagonalProduct</span>: <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">diagonalProduct(m)</span></code> returns the product of the elements on the diagonal of the matrix <code class="docutils literal notranslate"><span class="pre">m</span></code></p>
+</dd>
+</dl>
+<span class="target" id="l-integral-basis-tools-divide-if-can"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">divideIfCan!</span>: (<a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R, <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R, R, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">divideIfCan!(matrix,</span> <span class="pre">matrixOut,</span> <span class="pre">prime,</span> <span class="pre">n)</span></code> attempts to divide the entries of <code class="docutils literal notranslate"><span class="pre">matrix</span></code> by <code class="docutils literal notranslate"><span class="pre">prime</span></code> and store the result in <code class="docutils literal notranslate"><span class="pre">matrixOut</span></code>. If it is successful, 1 is returned and if not, <code class="docutils literal notranslate"><span class="pre">prime</span></code> is returned. Here both <code class="docutils literal notranslate"><span class="pre">matrix</span></code> and <code class="docutils literal notranslate"><span class="pre">matrixOut</span></code> are <code class="docutils literal notranslate"><span class="pre">n</span></code>-by-<code class="docutils literal notranslate"><span class="pre">n</span></code> upper triangular matrices.</p>
+</dd>
+</dl>
+<span class="target" id="l-integral-basis-tools-idealiser"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">idealiser</span>: (<a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R, <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R) -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">idealiser(m1,</span> <span class="pre">m2)</span></code> computes the order of an ideal defined by <code class="docutils literal notranslate"><span class="pre">m1</span></code> and <code class="docutils literal notranslate"><span class="pre">m2</span></code></p>
+</dd>
+</dl>
+<dl class="simple" id="index-4">
+<dt><span class="spadfun">idealiser</span>: (<a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R, <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R, R) -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">idealiser(m1,</span> <span class="pre">m2,</span> <span class="pre">d)</span></code> computes the order of an ideal defined by <code class="docutils literal notranslate"><span class="pre">m1</span></code> and <code class="docutils literal notranslate"><span class="pre">m2</span></code> where <code class="docutils literal notranslate"><span class="pre">d</span></code> is the known part of the denominator</p>
+</dd>
+</dl>
+<span class="target" id="l-integral-basis-tools-idealiser-matrix"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">idealiserMatrix</span>: (<a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R, <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R) -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">idealiserMatrix(m1,</span> <span class="pre">m2)</span></code> returns the matrix representing the linear conditions on the Ring associatied with an ideal defined by <code class="docutils literal notranslate"><span class="pre">m1</span></code> and <code class="docutils literal notranslate"><span class="pre">m2</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-integral-basis-tools-least-power"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">leastPower</span>: (<a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">leastPower(p,</span> <span class="pre">n)</span></code> returns <code class="docutils literal notranslate"><span class="pre">e</span></code>, where <code class="docutils literal notranslate"><span class="pre">e</span></code> is the smallest integer such that <code class="docutils literal notranslate"><span class="pre">p</span> <span class="pre">^e</span> <span class="pre">&gt;=</span> <span class="pre">n</span></code></p>
+</dd>
+</dl>
+<span class="target" id="l-integral-basis-tools-matrix-gcd"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">matrixGcd</span>: (<a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R, R, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">matrixGcd(mat,</span> <span class="pre">sing,</span> <span class="pre">n)</span></code> is <code class="docutils literal notranslate"><span class="pre">gcd(sing,</span> <span class="pre">g)</span></code> where <code class="docutils literal notranslate"><span class="pre">g</span></code> is the <code class="docutils literal notranslate"><span class="pre">gcd</span></code> of the entries of the <code class="docutils literal notranslate"><span class="pre">n</span></code>-by-<code class="docutils literal notranslate"><span class="pre">n</span></code> upper-triangular matrix <code class="docutils literal notranslate"><span class="pre">mat</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-integral-basis-tools-module-sum"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">moduleSum</span>: (Record(basis: <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R, basisDen: R, basisInv: <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R), Record(basis: <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R, basisDen: R, basisInv: <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R)) -&gt; Record(basis: <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R, basisDen: R, basisInv: <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">moduleSum(m1,</span> <span class="pre">m2)</span></code> returns the sum of two modules in the framed algebra <code class="docutils literal notranslate"><span class="pre">F</span></code>. Each module <code class="docutils literal notranslate"><span class="pre">mi</span></code> is represented as follows: <code class="docutils literal notranslate"><span class="pre">F</span></code> is a framed algebra with <code class="docutils literal notranslate"><span class="pre">R</span></code>-module basis <code class="docutils literal notranslate"><span class="pre">w1,</span> <span class="pre">w2,</span> <span class="pre">...,</span> <span class="pre">wn</span></code> and <code class="docutils literal notranslate"><span class="pre">mi</span></code> is a record <code class="docutils literal notranslate"><span class="pre">[basis,</span> <span class="pre">basisDen,</span> <span class="pre">basisInv]</span></code>. If <code class="docutils literal notranslate"><span class="pre">basis</span></code> is the matrix <code class="docutils literal notranslate"><span class="pre">(aij,</span> <span class="pre">i</span> <span class="pre">=</span> <span class="pre">1..n,</span> <span class="pre">j</span> <span class="pre">=</span> <span class="pre">1..n)</span></code>, then a basis <code class="docutils literal notranslate"><span class="pre">v1,</span> <span class="pre">...,</span> <span class="pre">vn</span></code> for <code class="docutils literal notranslate"><span class="pre">mi</span></code> is given by <code class="docutils literal notranslate"><span class="pre">vi</span> <span class="pre">=</span> <span class="pre">(1/basisDen)</span> <span class="pre">*</span> <span class="pre">sum(aij</span> <span class="pre">*</span> <span class="pre">wj,</span> <span class="pre">j</span> <span class="pre">=</span> <span class="pre">1..n)</span></code>, i.e. the <code class="docutils literal notranslate"><span class="pre">i</span></code>th row of ‘basis’ contains the coordinates of the <code class="docutils literal notranslate"><span class="pre">i</span></code>th basis vector. Similarly, the <code class="docutils literal notranslate"><span class="pre">i</span></code>th row of the matrix <code class="docutils literal notranslate"><span class="pre">basisInv</span></code> contains the coordinates of <code class="docutils literal notranslate"><span class="pre">wi</span></code> with respect to the basis <code class="docutils literal notranslate"><span class="pre">v1,</span> <span class="pre">...,</span> <span class="pre">vn</span></code>: if <code class="docutils literal notranslate"><span class="pre">basisInv</span></code> is the matrix <code class="docutils literal notranslate"><span class="pre">(bij,</span> <span class="pre">i</span> <span class="pre">=</span> <span class="pre">1..n,</span> <span class="pre">j</span> <span class="pre">=</span> <span class="pre">1..n)</span></code>, then <code class="docutils literal notranslate"><span class="pre">wi</span> <span class="pre">=</span> <span class="pre">sum(bij</span> <span class="pre">*</span> <span class="pre">vj,</span> <span class="pre">j</span> <span class="pre">=</span> <span class="pre">1..n)</span></code>.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="IntegrateSolutions.html" title="IntegrateSolutions(F, L)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="IntegralBasisPolynomialTools.html" title="IntegralBasisPolynomialTools(K, R, UP, L)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">IntegralBasisTools(R, UP, F)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LexTriangularPackage(R, ls) &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="LinearCombinationUtilities(F, UP)" href="LinearCombinationUtilities.html" />
+    <link rel="prev" title="LeadingCoefDetermination(OV, E, Z, P)" href="LeadingCoefDetermination.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="LinearCombinationUtilities.html" title="LinearCombinationUtilities(F, UP)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="LeadingCoefDetermination.html" title="LeadingCoefDetermination(OV, E, Z, P)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">LexTriangularPackage(R, ls)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="lextriangularpackage-r-ls">
+<span id="l-lex-triangular-package"></span><span id="index-0"></span><h1>LexTriangularPackage(R, ls)<a class="headerlink" href="#lextriangularpackage-r-ls" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/zerodim.spad#L110">zerodim.spad line 110</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/zerodim.spad#L110">[edit on github]</a></p>
+<ul class="simple">
+<li><p>R: <a class="reference internal" href="GcdDomain.html#l-gcd-domain"><span class="std std-ref">GcdDomain</span></a></p></li>
+<li><p>ls: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a></p></li>
+</ul>
+<p>A package for solving polynomial systems with finitely many solutions. The decompositions are given by means of regular triangular sets. The computations use lexicographical Groebner bases. The main operations are <a class="reference internal" href="#l-lex-triangular-package-lex-triangular"><span class="std std-ref">lexTriangular</span></a> and <a class="reference internal" href="#l-lex-triangular-package-square-free-lex-triangular"><span class="std std-ref">squareFreeLexTriangular</span></a>. The second one provide decompositions by means of square-free regular triangular sets. Both are based on the <em>lexTriangular</em> method described in [1]. They differ from the algorithm described in [2] by the fact that multiciplities of the roots are not kept. With the <a class="reference internal" href="#l-lex-triangular-package-square-free-lex-triangular"><span class="std std-ref">squareFreeLexTriangular</span></a> operation all multiciplities are removed. With the other operation some multiciplities may remain. Both operations admit an optional argument to produce normalized triangular sets.</p>
+<span class="target" id="l-lex-triangular-package-fglm-if-can"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">fglmIfCan</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NewSparseMultivariatePolynomial.html#l-new-sparse-multivariate-polynomial"><span class="std std-ref">NewSparseMultivariatePolynomial</span></a>(R, <a class="reference internal" href="OrderedVariableList.html#l-ordered-variable-list"><span class="std std-ref">OrderedVariableList</span></a> ls) -&gt; Union(<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NewSparseMultivariatePolynomial.html#l-new-sparse-multivariate-polynomial"><span class="std std-ref">NewSparseMultivariatePolynomial</span></a>(R, <a class="reference internal" href="OrderedVariableList.html#l-ordered-variable-list"><span class="std std-ref">OrderedVariableList</span></a> ls), failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">fglmIfCan(lp)</span></code> returns the lexicographical Groebner basis of <code class="docutils literal notranslate"><span class="pre">lp</span></code> by using the <em>FGLM</em> strategy, if <code class="docutils literal notranslate"><span class="pre">zeroDimensional?(lp)</span></code> holds .</p>
+</dd>
+</dl>
+<span class="target" id="l-lex-triangular-package-groebner"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">groebner</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NewSparseMultivariatePolynomial.html#l-new-sparse-multivariate-polynomial"><span class="std std-ref">NewSparseMultivariatePolynomial</span></a>(R, <a class="reference internal" href="OrderedVariableList.html#l-ordered-variable-list"><span class="std std-ref">OrderedVariableList</span></a> ls) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NewSparseMultivariatePolynomial.html#l-new-sparse-multivariate-polynomial"><span class="std std-ref">NewSparseMultivariatePolynomial</span></a>(R, <a class="reference internal" href="OrderedVariableList.html#l-ordered-variable-list"><span class="std std-ref">OrderedVariableList</span></a> ls)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">groebner(lp)</span></code> returns the lexicographical Groebner basis of <code class="docutils literal notranslate"><span class="pre">lp</span></code>. If <code class="docutils literal notranslate"><span class="pre">lp</span></code> generates a zero-dimensional ideal then the <em>FGLM</em> strategy is used, otherwise the <em>Sugar</em> strategy is used.</p>
+</dd>
+</dl>
+<span class="target" id="l-lex-triangular-package-lex-triangular"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">lexTriangular</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NewSparseMultivariatePolynomial.html#l-new-sparse-multivariate-polynomial"><span class="std std-ref">NewSparseMultivariatePolynomial</span></a>(R, <a class="reference internal" href="OrderedVariableList.html#l-ordered-variable-list"><span class="std std-ref">OrderedVariableList</span></a> ls), <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="RegularChain.html#l-regular-chain"><span class="std std-ref">RegularChain</span></a>(R, ls)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">lexTriangular(base,</span> <span class="pre">norm?)</span></code> decomposes the variety associated with <code class="docutils literal notranslate"><span class="pre">base</span></code> into regular chains. Thus a point belongs to this variety iff it is a regular zero of a regular set in in the output. Note that <code class="docutils literal notranslate"><span class="pre">base</span></code> needs to be a lexicographical Groebner basis of a zero-dimensional ideal. If <code class="docutils literal notranslate"><span class="pre">norm?</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code> then the regular sets are normalized.</p>
+</dd>
+</dl>
+<span class="target" id="l-lex-triangular-package-square-free-lex-triangular"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">squareFreeLexTriangular</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NewSparseMultivariatePolynomial.html#l-new-sparse-multivariate-polynomial"><span class="std std-ref">NewSparseMultivariatePolynomial</span></a>(R, <a class="reference internal" href="OrderedVariableList.html#l-ordered-variable-list"><span class="std std-ref">OrderedVariableList</span></a> ls), <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="SquareFreeRegularTriangularSet.html#l-square-free-regular-triangular-set"><span class="std std-ref">SquareFreeRegularTriangularSet</span></a>(R, <a class="reference internal" href="IndexedExponents.html#l-indexed-exponents"><span class="std std-ref">IndexedExponents</span></a> <a class="reference internal" href="OrderedVariableList.html#l-ordered-variable-list"><span class="std std-ref">OrderedVariableList</span></a> ls, <a class="reference internal" href="OrderedVariableList.html#l-ordered-variable-list"><span class="std std-ref">OrderedVariableList</span></a> ls, <a class="reference internal" href="NewSparseMultivariatePolynomial.html#l-new-sparse-multivariate-polynomial"><span class="std std-ref">NewSparseMultivariatePolynomial</span></a>(R, <a class="reference internal" href="OrderedVariableList.html#l-ordered-variable-list"><span class="std std-ref">OrderedVariableList</span></a> ls))</dt><dd><p><code class="docutils literal notranslate"><span class="pre">squareFreeLexTriangular(base,</span> <span class="pre">norm?)</span></code> decomposes the variety associated with <code class="docutils literal notranslate"><span class="pre">base</span></code> into square-free regular chains. Thus a point belongs to this variety iff it is a regular zero of a regular set in in the output. Note that <code class="docutils literal notranslate"><span class="pre">base</span></code> needs to be a lexicographical Groebner basis of a zero-dimensional ideal. If <code class="docutils literal notranslate"><span class="pre">norm?</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code> then the regular sets are normalized.</p>
+</dd>
+</dl>
+<span class="target" id="l-lex-triangular-package-zero-dimensional"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">zeroDimensional?</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NewSparseMultivariatePolynomial.html#l-new-sparse-multivariate-polynomial"><span class="std std-ref">NewSparseMultivariatePolynomial</span></a>(R, <a class="reference internal" href="OrderedVariableList.html#l-ordered-variable-list"><span class="std std-ref">OrderedVariableList</span></a> ls) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">zeroDimensional?(lp)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> iff <code class="docutils literal notranslate"><span class="pre">lp</span></code> generates a zero-dimensional ideal <code class="docutils literal notranslate"><span class="pre">w</span></code>.<code class="docutils literal notranslate"><span class="pre">r</span></code>.<code class="docutils literal notranslate"><span class="pre">t</span></code>. the variables involved in <code class="docutils literal notranslate"><span class="pre">lp</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-lex-triangular-package-zero-set-split"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">zeroSetSplit</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NewSparseMultivariatePolynomial.html#l-new-sparse-multivariate-polynomial"><span class="std std-ref">NewSparseMultivariatePolynomial</span></a>(R, <a class="reference internal" href="OrderedVariableList.html#l-ordered-variable-list"><span class="std std-ref">OrderedVariableList</span></a> ls), <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="RegularChain.html#l-regular-chain"><span class="std std-ref">RegularChain</span></a>(R, ls)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">zeroSetSplit(lp,</span> <span class="pre">norm?)</span></code> decomposes the variety associated with <code class="docutils literal notranslate"><span class="pre">lp</span></code> into regular chains. Thus a point belongs to this variety iff it is a regular zero of a regular set in in the output. Note that <code class="docutils literal notranslate"><span class="pre">lp</span></code> needs to generate a zero-dimensional ideal. If <code class="docutils literal notranslate"><span class="pre">norm?</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code> then the regular sets are normalized.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-7">
+<dt><span class="spadfun">zeroSetSplit</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NewSparseMultivariatePolynomial.html#l-new-sparse-multivariate-polynomial"><span class="std std-ref">NewSparseMultivariatePolynomial</span></a>(R, <a class="reference internal" href="OrderedVariableList.html#l-ordered-variable-list"><span class="std std-ref">OrderedVariableList</span></a> ls), <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="SquareFreeRegularTriangularSet.html#l-square-free-regular-triangular-set"><span class="std std-ref">SquareFreeRegularTriangularSet</span></a>(R, <a class="reference internal" href="IndexedExponents.html#l-indexed-exponents"><span class="std std-ref">IndexedExponents</span></a> <a class="reference internal" href="OrderedVariableList.html#l-ordered-variable-list"><span class="std std-ref">OrderedVariableList</span></a> ls, <a class="reference internal" href="OrderedVariableList.html#l-ordered-variable-list"><span class="std std-ref">OrderedVariableList</span></a> ls, <a class="reference internal" href="NewSparseMultivariatePolynomial.html#l-new-sparse-multivariate-polynomial"><span class="std std-ref">NewSparseMultivariatePolynomial</span></a>(R, <a class="reference internal" href="OrderedVariableList.html#l-ordered-variable-list"><span class="std std-ref">OrderedVariableList</span></a> ls))</dt><dd><p><code class="docutils literal notranslate"><span class="pre">zeroSetSplit(lp,</span> <span class="pre">norm?)</span></code> decomposes the variety associated with <code class="docutils literal notranslate"><span class="pre">lp</span></code> into square-free regular chains. Thus a point belongs to this variety iff it is a regular zero of a regular set in in the output. Note that <code class="docutils literal notranslate"><span class="pre">lp</span></code> needs to generate a zero-dimensional ideal. If <code class="docutils literal notranslate"><span class="pre">norm?</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code> then the regular sets are normalized.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="LinearCombinationUtilities.html" title="LinearCombinationUtilities(F, UP)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="LeadingCoefDetermination.html" title="LeadingCoefDetermination(OV, E, Z, P)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">LexTriangularPackage(R, ls)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

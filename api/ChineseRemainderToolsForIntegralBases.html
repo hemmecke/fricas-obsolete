@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChineseRemainderToolsForIntegralBases(K, R, UP) &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="CoerceVectorMatrixPackage R" href="CoerceVectorMatrixPackage.html" />
+    <link rel="prev" title="CharacteristicPolynomialPackage R" href="CharacteristicPolynomialPackage.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="CoerceVectorMatrixPackage.html" title="CoerceVectorMatrixPackage R"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="CharacteristicPolynomialPackage.html" title="CharacteristicPolynomialPackage R"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">ChineseRemainderToolsForIntegralBases(K, R, UP)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="chineseremaindertoolsforintegralbases-k-r-up">
+<span id="l-chinese-remainder-tools-for-integral-bases"></span><span id="index-0"></span><h1>ChineseRemainderToolsForIntegralBases(K, R, UP)<a class="headerlink" href="#chineseremaindertoolsforintegralbases-k-r-up" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/padiclib.spad#L88">padiclib.spad line 88</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/padiclib.spad#L88">[edit on github]</a></p>
+<ul class="simple">
+<li><p>K: <a class="reference internal" href="FiniteFieldCategory.html#l-finite-field-category"><span class="std std-ref">FiniteFieldCategory</span></a></p></li>
+<li><p>R: <a class="reference internal" href="UnivariatePolynomialCategory.html#l-univariate-polynomial-category"><span class="std std-ref">UnivariatePolynomialCategory</span></a> K</p></li>
+<li><p>UP: <a class="reference internal" href="UnivariatePolynomialCategory.html#l-univariate-polynomial-category"><span class="std std-ref">UnivariatePolynomialCategory</span></a> R</p></li>
+</ul>
+<p>Author: Clifton Williamson Date Created: 9 August 1993 Basic Operations: chineseRemainder, factorList Related Domains: PAdicWildFunctionFieldIntegralBasis(<code class="docutils literal notranslate"><span class="pre">K</span></code>, <code class="docutils literal notranslate"><span class="pre">R</span></code>, UP, <code class="docutils literal notranslate"><span class="pre">F</span></code>) Also See: WildFunctionFieldIntegralBasis, FunctionFieldIntegralBasis AMS Classifications: Keywords: function field, finite field, integral basis Examples: References: Description:</p>
+<span class="target" id="l-chinese-remainder-tools-for-integral-bases-chinese-remainder"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">chineseRemainder</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> UP, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(basis: <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R, basisDen: R, basisInv: <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R), <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; Record(basis: <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R, basisDen: R, basisInv: <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">chineseRemainder(lu,</span> <span class="pre">lr,</span> <span class="pre">n)</span></code> undocumented</p>
+</dd>
+</dl>
+<span class="target" id="l-chinese-remainder-tools-for-integral-bases-factor-list"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">factorList</span>: (K, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> K</dt><dd><p><code class="docutils literal notranslate"><span class="pre">factorList(k,</span> <span class="pre">n,</span> <span class="pre">m,</span> <span class="pre">j)</span></code> undocumented</p>
+</dd>
+</dl>
+<span class="target" id="l-chinese-remainder-tools-for-integral-bases-list-conjugate-bases"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">listConjugateBases</span>: (Record(basis: <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R, basisDen: R, basisInv: <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R), <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(basis: <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R, basisDen: R, basisInv: <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">listConjugateBases(bas,</span> <span class="pre">q,</span> <span class="pre">n)</span></code> returns the list <code class="docutils literal notranslate"><span class="pre">[bas,</span> <span class="pre">bas^Frob,</span> <span class="pre">bas^(Frob^2),</span> <span class="pre">...bas^(Frob^(n-1))]</span></code>, where <code class="docutils literal notranslate"><span class="pre">Frob</span></code> raises the coefficients of all polynomials appearing in the basis <code class="docutils literal notranslate"><span class="pre">bas</span></code> to the <code class="docutils literal notranslate"><span class="pre">q</span></code>th power.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="CoerceVectorMatrixPackage.html" title="CoerceVectorMatrixPackage R"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="CharacteristicPolynomialPackage.html" title="CharacteristicPolynomialPackage R"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">ChineseRemainderToolsForIntegralBases(K, R, UP)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

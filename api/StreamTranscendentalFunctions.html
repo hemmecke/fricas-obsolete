@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamTranscendentalFunctions Coef &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="StreamTranscendentalFunctionsNonCommutative Coef" href="StreamTranscendentalFunctionsNonCommutative.html" />
+    <link rel="prev" title="StreamTensor R" href="StreamTensor.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="StreamTranscendentalFunctionsNonCommutative.html" title="StreamTranscendentalFunctionsNonCommutative Coef"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="StreamTensor.html" title="StreamTensor R"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">StreamTranscendentalFunctions Coef</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="streamtranscendentalfunctions-coef">
+<span id="l-stream-transcendental-functions"></span><span id="index-0"></span><h1>StreamTranscendentalFunctions Coef<a class="headerlink" href="#streamtranscendentalfunctions-coef" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/sttf.spad#L1">sttf.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/sttf.spad#L1">[edit on github]</a></p>
+<ul class="simple">
+<li><p>Coef: <a class="reference internal" href="Algebra.html#l-algebra"><span class="std std-ref">Algebra</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></p></li>
+</ul>
+<p>StreamTranscendentalFunctions implements transcendental functions on Taylor series, where a Taylor series is represented by a stream of its coefficients.</p>
+<span class="target" id="id1"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">^</span>: (<a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef, <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef) -&gt; <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef</dt><dd><p><code class="docutils literal notranslate"><span class="pre">st1</span> <span class="pre">^</span> <span class="pre">st2</span></code> computes the power of a power series <code class="docutils literal notranslate"><span class="pre">st1</span></code> by another power series <code class="docutils literal notranslate"><span class="pre">st2</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-stream-transcendental-functions-acos"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">acos</span>: <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef -&gt; <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef</dt><dd><p><code class="docutils literal notranslate"><span class="pre">acos(st)</span></code> computes arccosine of a power series <code class="docutils literal notranslate"><span class="pre">st</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-stream-transcendental-functions-acosh"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">acosh</span>: <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef -&gt; <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef</dt><dd><p><code class="docutils literal notranslate"><span class="pre">acosh(st)</span></code> computes the inverse hyperbolic cosine of a power series <code class="docutils literal notranslate"><span class="pre">st</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-stream-transcendental-functions-acot"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">acot</span>: <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef -&gt; <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef</dt><dd><p><code class="docutils literal notranslate"><span class="pre">acot(st)</span></code> computes arccotangent of a power series <code class="docutils literal notranslate"><span class="pre">st</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-stream-transcendental-functions-acoth"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">acoth</span>: <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef -&gt; <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef</dt><dd><p><code class="docutils literal notranslate"><span class="pre">acoth(st)</span></code> computes the inverse hyperbolic cotangent of a power series <code class="docutils literal notranslate"><span class="pre">st</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-stream-transcendental-functions-acsc"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">acsc</span>: <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef -&gt; <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef</dt><dd><p><code class="docutils literal notranslate"><span class="pre">acsc(st)</span></code> computes arccosecant of a power series <code class="docutils literal notranslate"><span class="pre">st</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-stream-transcendental-functions-acsch"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">acsch</span>: <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef -&gt; <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef</dt><dd><p><code class="docutils literal notranslate"><span class="pre">acsch(st)</span></code> computes the inverse hyperbolic cosecant of a power series <code class="docutils literal notranslate"><span class="pre">st</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-stream-transcendental-functions-asec"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">asec</span>: <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef -&gt; <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef</dt><dd><p><code class="docutils literal notranslate"><span class="pre">asec(st)</span></code> computes arcsecant of a power series <code class="docutils literal notranslate"><span class="pre">st</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-stream-transcendental-functions-asech"></span><dl class="simple" id="index-9">
+<dt><span class="spadfun">asech</span>: <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef -&gt; <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef</dt><dd><p><code class="docutils literal notranslate"><span class="pre">asech(st)</span></code> computes the inverse hyperbolic secant of a power series <code class="docutils literal notranslate"><span class="pre">st</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-stream-transcendental-functions-asin"></span><dl class="simple" id="index-10">
+<dt><span class="spadfun">asin</span>: <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef -&gt; <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef</dt><dd><p><code class="docutils literal notranslate"><span class="pre">asin(st)</span></code> computes arcsine of a power series <code class="docutils literal notranslate"><span class="pre">st</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-stream-transcendental-functions-asinh"></span><dl class="simple" id="index-11">
+<dt><span class="spadfun">asinh</span>: <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef -&gt; <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef</dt><dd><p><code class="docutils literal notranslate"><span class="pre">asinh(st)</span></code> computes the inverse hyperbolic sine of a power series <code class="docutils literal notranslate"><span class="pre">st</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-stream-transcendental-functions-atan"></span><dl class="simple" id="index-12">
+<dt><span class="spadfun">atan</span>: <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef -&gt; <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef</dt><dd><p><code class="docutils literal notranslate"><span class="pre">atan(st)</span></code> computes arctangent of a power series <code class="docutils literal notranslate"><span class="pre">st</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-stream-transcendental-functions-atanh"></span><dl class="simple" id="index-13">
+<dt><span class="spadfun">atanh</span>: <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef -&gt; <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef</dt><dd><p><code class="docutils literal notranslate"><span class="pre">atanh(st)</span></code> computes the inverse hyperbolic tangent of a power series <code class="docutils literal notranslate"><span class="pre">st</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-stream-transcendental-functions-cos"></span><dl class="simple" id="index-14">
+<dt><span class="spadfun">cos</span>: <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef -&gt; <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef</dt><dd><p><code class="docutils literal notranslate"><span class="pre">cos(st)</span></code> computes cosine of a power series <code class="docutils literal notranslate"><span class="pre">st</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-stream-transcendental-functions-cosh"></span><dl class="simple" id="index-15">
+<dt><span class="spadfun">cosh</span>: <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef -&gt; <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef</dt><dd><p><code class="docutils literal notranslate"><span class="pre">cosh(st)</span></code> computes the hyperbolic cosine of a power series <code class="docutils literal notranslate"><span class="pre">st</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-stream-transcendental-functions-cot"></span><dl class="simple" id="index-16">
+<dt><span class="spadfun">cot</span>: <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef -&gt; <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef</dt><dd><p><code class="docutils literal notranslate"><span class="pre">cot(st)</span></code> computes cotangent of a power series <code class="docutils literal notranslate"><span class="pre">st</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-stream-transcendental-functions-coth"></span><dl class="simple" id="index-17">
+<dt><span class="spadfun">coth</span>: <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef -&gt; <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coth(st)</span></code> computes the hyperbolic cotangent of a power series <code class="docutils literal notranslate"><span class="pre">st</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-stream-transcendental-functions-csc"></span><dl class="simple" id="index-18">
+<dt><span class="spadfun">csc</span>: <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef -&gt; <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef</dt><dd><p><code class="docutils literal notranslate"><span class="pre">csc(st)</span></code> computes cosecant of a power series <code class="docutils literal notranslate"><span class="pre">st</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-stream-transcendental-functions-csch"></span><dl class="simple" id="index-19">
+<dt><span class="spadfun">csch</span>: <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef -&gt; <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef</dt><dd><p><code class="docutils literal notranslate"><span class="pre">csch(st)</span></code> computes the hyperbolic cosecant of a power series <code class="docutils literal notranslate"><span class="pre">st</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-stream-transcendental-functions-exp"></span><dl class="simple" id="index-20">
+<dt><span class="spadfun">exp</span>: <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef -&gt; <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef</dt><dd><p><code class="docutils literal notranslate"><span class="pre">exp(st)</span></code> computes the exponential of a power series <code class="docutils literal notranslate"><span class="pre">st</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-stream-transcendental-functions-log"></span><dl class="simple" id="index-21">
+<dt><span class="spadfun">log</span>: <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef -&gt; <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef</dt><dd><p><code class="docutils literal notranslate"><span class="pre">log(st)</span></code> computes the log of a power series.</p>
+</dd>
+</dl>
+<span class="target" id="l-stream-transcendental-functions-sec"></span><dl class="simple" id="index-22">
+<dt><span class="spadfun">sec</span>: <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef -&gt; <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sec(st)</span></code> computes secant of a power series <code class="docutils literal notranslate"><span class="pre">st</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-stream-transcendental-functions-sech"></span><dl class="simple" id="index-23">
+<dt><span class="spadfun">sech</span>: <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef -&gt; <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sech(st)</span></code> computes the hyperbolic secant of a power series <code class="docutils literal notranslate"><span class="pre">st</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-stream-transcendental-functions-sin"></span><dl class="simple" id="index-24">
+<dt><span class="spadfun">sin</span>: <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef -&gt; <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sin(st)</span></code> computes sine of a power series <code class="docutils literal notranslate"><span class="pre">st</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-stream-transcendental-functions-sincos"></span><dl class="simple" id="index-25">
+<dt><span class="spadfun">sincos</span>: <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef -&gt; Record(sin: <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef, cos: <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sincos(st)</span></code> returns a record containing the sine and cosine of a power series <code class="docutils literal notranslate"><span class="pre">st</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-stream-transcendental-functions-sinh"></span><dl class="simple" id="index-26">
+<dt><span class="spadfun">sinh</span>: <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef -&gt; <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sinh(st)</span></code> computes the hyperbolic sine of a power series <code class="docutils literal notranslate"><span class="pre">st</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-stream-transcendental-functions-sinhcosh"></span><dl class="simple" id="index-27">
+<dt><span class="spadfun">sinhcosh</span>: <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef -&gt; Record(sinh: <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef, cosh: <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sinhcosh(st)</span></code> returns a record containing the hyperbolic sine and cosine of a power series <code class="docutils literal notranslate"><span class="pre">st</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-stream-transcendental-functions-tan"></span><dl class="simple" id="index-28">
+<dt><span class="spadfun">tan</span>: <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef -&gt; <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef</dt><dd><p><code class="docutils literal notranslate"><span class="pre">tan(st)</span></code> computes tangent of a power series <code class="docutils literal notranslate"><span class="pre">st</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-stream-transcendental-functions-tanh"></span><dl class="simple" id="index-29">
+<dt><span class="spadfun">tanh</span>: <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef -&gt; <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef</dt><dd><p><code class="docutils literal notranslate"><span class="pre">tanh(st)</span></code> computes the hyperbolic tangent of a power series <code class="docutils literal notranslate"><span class="pre">st</span></code>.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="StreamTranscendentalFunctionsNonCommutative.html" title="StreamTranscendentalFunctionsNonCommutative Coef"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="StreamTensor.html" title="StreamTensor R"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">StreamTranscendentalFunctions Coef</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

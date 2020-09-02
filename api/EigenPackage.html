@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EigenPackage R &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ElementaryFunction(R, F)" href="ElementaryFunction.html" />
+    <link rel="prev" title="DrawOptionFunctions1 S" href="DrawOptionFunctions1.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="ElementaryFunction.html" title="ElementaryFunction(R, F)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="DrawOptionFunctions1.html" title="DrawOptionFunctions1 S"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">EigenPackage R</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="eigenpackage-r">
+<span id="l-eigen-package"></span><span id="index-0"></span><h1>EigenPackage R<a class="headerlink" href="#eigenpackage-r" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/eigen.spad#L218">eigen.spad line 218</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/eigen.spad#L218">[edit on github]</a></p>
+<ul class="simple">
+<li><p>R: <a class="reference internal" href="GcdDomain.html#l-gcd-domain"><span class="std std-ref">GcdDomain</span></a></p></li>
+</ul>
+<p>This is a package for the exact computation of eigenvalues and eigenvectors. This package works for matrices with coefficients which are rational functions over a ring where we can factor polynomials. Eigenvalues not in base field are represented by their minimal polynomial.</p>
+<span class="target" id="l-eigen-package-characteristic-polynomial"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">characteristicPolynomial</span>: (<a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>) -&gt; <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">characteristicPolynomial(m,</span> <span class="pre">var)</span></code> returns the characteristicPolynomial of the matrix <code class="docutils literal notranslate"><span class="pre">m</span></code> using the symbol var as the main variable.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-2">
+<dt><span class="spadfun">characteristicPolynomial</span>: <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R -&gt; <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">characteristicPolynomial(m)</span></code> returns the characteristicPolynomial of the matrix <code class="docutils literal notranslate"><span class="pre">m</span></code> using a new generated symbol symbol as the main variable.</p>
+</dd>
+</dl>
+<span class="target" id="l-eigen-package-eigenvalues"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">eigenvalues</span>: <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Union(<a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R, <a class="reference internal" href="SuchThat.html#l-such-that"><span class="std std-ref">SuchThat</span></a>(<a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R)) if R has <a class="reference internal" href="PolynomialFactorizationExplicit.html#l-polynomial-factorization-explicit"><span class="std std-ref">PolynomialFactorizationExplicit</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">eigenvalues(m)</span></code> returns the eigenvalues of the matrix <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-eigen-package-eigenvector"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">eigenvector</span>: (Union(<a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R, <a class="reference internal" href="SuchThat.html#l-such-that"><span class="std std-ref">SuchThat</span></a>(<a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R)), <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">eigenvector(eigval,</span> <span class="pre">m)</span></code> returns the eigenvectors belonging to the eigenvalue <code class="docutils literal notranslate"><span class="pre">eigval</span></code> for the matrix <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-eigen-package-eigenvectors"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">eigenvectors</span>: <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(eigval: Union(<a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R, <a class="reference internal" href="SuchThat.html#l-such-that"><span class="std std-ref">SuchThat</span></a>(<a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R)), eigmult: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, eigvec: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R) if R has <a class="reference internal" href="PolynomialFactorizationExplicit.html#l-polynomial-factorization-explicit"><span class="std std-ref">PolynomialFactorizationExplicit</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">eigenvectors(m)</span></code> returns the eigenvalues and eigenvectors for the matrix <code class="docutils literal notranslate"><span class="pre">m</span></code>. The eigenvalues in base field and the corresponding eigenvectors are explicitely computed, while the other ones are given via their minimal polynomial and the corresponding eigenvectors are expressed in terms of a “generic” root of such a polynomial.</p>
+</dd>
+</dl>
+<span class="target" id="l-eigen-package-generalized-eigenvector"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">generalizedEigenvector</span>: (Record(eigval: Union(<a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R, <a class="reference internal" href="SuchThat.html#l-such-that"><span class="std std-ref">SuchThat</span></a>(<a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R)), eigmult: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, eigvec: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R), <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">generalizedEigenvector(eigen,</span> <span class="pre">m)</span></code> returns the generalized eigenvectors of the matrix relative to the eigenvalue <code class="docutils literal notranslate"><span class="pre">eigen</span></code>, as returned by the function eigenvectors.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-7">
+<dt><span class="spadfun">generalizedEigenvector</span>: (Union(<a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R, <a class="reference internal" href="SuchThat.html#l-such-that"><span class="std std-ref">SuchThat</span></a>(<a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R)), <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">generalizedEigenvector(alpha,</span> <span class="pre">m,</span> <span class="pre">k,</span> <span class="pre">g)</span></code> returns the generalized eigenvectors of the matrix relative to the eigenvalue <code class="docutils literal notranslate"><span class="pre">alpha</span></code>. The integers <code class="docutils literal notranslate"><span class="pre">k</span></code> and <code class="docutils literal notranslate"><span class="pre">g</span></code> are respectively the algebraic and the geometric multiplicity of tye eigenvalue <code class="docutils literal notranslate"><span class="pre">alpha</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-eigen-package-generalized-eigenvectors"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">generalizedEigenvectors</span>: <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(eigval: Union(<a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R, <a class="reference internal" href="SuchThat.html#l-such-that"><span class="std std-ref">SuchThat</span></a>(<a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R)), geneigvec: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R) if R has <a class="reference internal" href="PolynomialFactorizationExplicit.html#l-polynomial-factorization-explicit"><span class="std std-ref">PolynomialFactorizationExplicit</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">generalizedEigenvectors(m)</span></code> returns the generalized returns the generalized eigenvectors of the matrix <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="ElementaryFunction.html" title="ElementaryFunction(R, F)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="DrawOptionFunctions1.html" title="DrawOptionFunctions1 S"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">EigenPackage R</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

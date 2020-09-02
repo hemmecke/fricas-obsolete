@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DistributionPackage R &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="DistributionPolynomialPackage(R, S, UPS)" href="DistributionPolynomialPackage.html" />
+    <link rel="prev" title="DistributionFunctions2(R1, R2)" href="DistributionFunctions2.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="DistributionPolynomialPackage.html" title="DistributionPolynomialPackage(R, S, UPS)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="DistributionFunctions2.html" title="DistributionFunctions2(R1, R2)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">DistributionPackage R</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="distributionpackage-r">
+<span id="l-distribution-package"></span><span id="index-0"></span><h1>DistributionPackage R<a class="headerlink" href="#distributionpackage-r" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/distro.spad#L1169">distro.spad line 1169</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/distro.spad#L1169">[edit on github]</a></p>
+<ul class="simple">
+<li><p>R: <a class="reference internal" href="CommutativeRing.html#l-commutative-ring"><span class="std std-ref">CommutativeRing</span></a></p></li>
+</ul>
+<p>Various popular distributions.</p>
+<span class="target" id="l-distribution-package-arcsine-distribution"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">arcsineDistribution</span>: R -&gt; <a class="reference internal" href="Distribution.html#l-distribution"><span class="std std-ref">Distribution</span></a> R if R has <a class="reference internal" href="Algebra.html#l-algebra"><span class="std std-ref">Algebra</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">arcsineDistribution(a)</span></code> produces the arcsine distribution of variance <code class="docutils literal notranslate"><span class="pre">a</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-distribution-package-bernoulli-distribution01"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">bernoulliDistribution01</span>: R -&gt; <a class="reference internal" href="Distribution.html#l-distribution"><span class="std std-ref">Distribution</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">bernoulliDistribution01(a)</span></code> produces the distribution of a projection of trace a</p>
+</dd>
+</dl>
+<span class="target" id="l-distribution-package-free-poisson-distribution"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">freePoissonDistribution</span>: R -&gt; <a class="reference internal" href="Distribution.html#l-distribution"><span class="std std-ref">Distribution</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">freePoissonDistribution(a)</span></code> produces a free Poisson distribution of variance <code class="docutils literal notranslate"><span class="pre">a</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-distribution-package-gaussian-distribution"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">gaussianDistribution</span>: R -&gt; <a class="reference internal" href="Distribution.html#l-distribution"><span class="std std-ref">Distribution</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">gaussianDistribution(a)</span></code> produces a gaussian distribution of variance <code class="docutils literal notranslate"><span class="pre">a</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-distribution-package-poisson-distribution"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">poissonDistribution</span>: R -&gt; <a class="reference internal" href="Distribution.html#l-distribution"><span class="std std-ref">Distribution</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">poissonDistribution(a)</span></code> produces a Poisson distribution of variance <code class="docutils literal notranslate"><span class="pre">a</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-distribution-package-wigner-distribution"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">wignerDistribution</span>: R -&gt; <a class="reference internal" href="Distribution.html#l-distribution"><span class="std std-ref">Distribution</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">wignerDistribution(a)</span></code> produces a Wigner distribution of variance <code class="docutils literal notranslate"><span class="pre">a</span></code>.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="DistributionPolynomialPackage.html" title="DistributionPolynomialPackage(R, S, UPS)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="DistributionFunctions2.html" title="DistributionFunctions2(R1, R2)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">DistributionPackage R</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

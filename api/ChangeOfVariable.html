@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChangeOfVariable(F, UP, UPUP) &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="CharacteristicPolynomial2 F" href="CharacteristicPolynomial2.html" />
+    <link rel="prev" title="CartesianTensorFunctions2(minix, dim, S, T)" href="CartesianTensorFunctions2.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="CharacteristicPolynomial2.html" title="CharacteristicPolynomial2 F"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="CartesianTensorFunctions2.html" title="CartesianTensorFunctions2(minix, dim, S, T)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">ChangeOfVariable(F, UP, UPUP)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="changeofvariable-f-up-upup">
+<span id="l-change-of-variable"></span><span id="index-0"></span><h1>ChangeOfVariable(F, UP, UPUP)<a class="headerlink" href="#changeofvariable-f-up-upup" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/curve.spad#L437">curve.spad line 437</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/curve.spad#L437">[edit on github]</a></p>
+<ul class="simple">
+<li><p>F: <a class="reference internal" href="UniqueFactorizationDomain.html#l-unique-factorization-domain"><span class="std std-ref">UniqueFactorizationDomain</span></a></p></li>
+<li><p>UP: <a class="reference internal" href="UnivariatePolynomialCategory.html#l-univariate-polynomial-category"><span class="std std-ref">UnivariatePolynomialCategory</span></a> F</p></li>
+<li><p>UPUP: <a class="reference internal" href="UnivariatePolynomialCategory.html#l-univariate-polynomial-category"><span class="std std-ref">UnivariatePolynomialCategory</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP</p></li>
+</ul>
+<p>Tools to send a point to infinity on an algebraic curve.</p>
+<span class="target" id="l-change-of-variable-chvar"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">chvar</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> UPUP, UPUP) -&gt; Record(func: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> UPUP, poly: UPUP, c1: <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP, c2: <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP, deg: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">chvar(lf,</span> <span class="pre">p)</span></code> is like chvar(<code class="docutils literal notranslate"><span class="pre">f</span></code>, <code class="docutils literal notranslate"><span class="pre">p</span></code>) but handles list of functions</p>
+</dd>
+</dl>
+<dl class="simple" id="index-2">
+<dt><span class="spadfun">chvar</span>: (UPUP, UPUP) -&gt; Record(func: UPUP, poly: UPUP, c1: <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP, c2: <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP, deg: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">chvar(f(x,</span> <span class="pre">y),</span> <span class="pre">p(x,</span> <span class="pre">y))</span></code> returns <code class="docutils literal notranslate"><span class="pre">[g(z,</span> <span class="pre">t),</span> <span class="pre">q(z,</span> <span class="pre">t),</span> <span class="pre">c1(x),</span> <span class="pre">c2(x),</span> <span class="pre">n]</span></code> such that under the change of variable <code class="docutils literal notranslate"><span class="pre">z</span> <span class="pre">=</span> <span class="pre">c1(x)</span></code>, <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">y</span> <span class="pre">*</span> <span class="pre">c2(x)</span></code>, one gets <code class="docutils literal notranslate"><span class="pre">f(x,</span> <span class="pre">y)</span> <span class="pre">=</span> <span class="pre">c1'(x)g(c1(x),</span> <span class="pre">c2(x)y)</span></code> The algebraic relation between <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> is <code class="docutils literal notranslate"><span class="pre">p(x,</span> <span class="pre">y)</span> <span class="pre">=</span> <span class="pre">0</span></code>. The algebraic relation between <code class="docutils literal notranslate"><span class="pre">z</span></code> and <code class="docutils literal notranslate"><span class="pre">t</span></code> is <code class="docutils literal notranslate"><span class="pre">q(z,</span> <span class="pre">t)</span> <span class="pre">=</span> <span class="pre">0</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-change-of-variable-eval"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">eval</span>: (UPUP, <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP, <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP) -&gt; UPUP</dt><dd><p><code class="docutils literal notranslate"><span class="pre">eval(p(x,</span> <span class="pre">y),</span> <span class="pre">f(x),</span> <span class="pre">g(x))</span></code> returns <code class="docutils literal notranslate"><span class="pre">p(f(x),</span> <span class="pre">y</span> <span class="pre">*</span> <span class="pre">g(x))</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-change-of-variable-good-point"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">goodPoint</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> UPUP, UPUP) -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">goodPoint([p1,</span> <span class="pre">...,</span> <span class="pre">pn],</span> <span class="pre">q)</span></code> returns an integer a such that a is neither a pole of <code class="docutils literal notranslate"><span class="pre">pi(x,</span> <span class="pre">y)</span></code> for some <code class="docutils literal notranslate"><span class="pre">i</span></code> nor a branch point of <code class="docutils literal notranslate"><span class="pre">q(x,</span> <span class="pre">y)</span> <span class="pre">=</span> <span class="pre">0</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-change-of-variable-mk-integral"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">mkIntegral</span>: UPUP -&gt; Record(coef: <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP, poly: UPUP)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">mkIntegral(p(x,</span> <span class="pre">y))</span></code> returns <code class="docutils literal notranslate"><span class="pre">[c(x),</span> <span class="pre">q(x,</span> <span class="pre">z)]</span></code> such that <code class="docutils literal notranslate"><span class="pre">z</span> <span class="pre">=</span> <span class="pre">c</span> <span class="pre">*</span> <span class="pre">y</span></code> is integral. The algebraic relation between <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> is <code class="docutils literal notranslate"><span class="pre">p(x,</span> <span class="pre">y)</span> <span class="pre">=</span> <span class="pre">0</span></code>. The algebraic relation between <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">z</span></code> is <code class="docutils literal notranslate"><span class="pre">q(x,</span> <span class="pre">z)</span> <span class="pre">=</span> <span class="pre">0</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-change-of-variable-rad-poly"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">radPoly</span>: UPUP -&gt; Union(Record(radicand: <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP, deg: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>), failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">radPoly(p(x,</span> <span class="pre">y))</span></code> returns <code class="docutils literal notranslate"><span class="pre">[c(x),</span> <span class="pre">n]</span></code> if <code class="docutils literal notranslate"><span class="pre">p</span></code> is of the form <code class="docutils literal notranslate"><span class="pre">y^n</span> <span class="pre">-</span> <span class="pre">c(x)</span></code>, “failed” otherwise.</p>
+</dd>
+</dl>
+<span class="target" id="l-change-of-variable-root-poly"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">rootPoly</span>: (<a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; Record(exponent: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, coef: <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP, radicand: UP)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">rootPoly(g,</span> <span class="pre">n)</span></code> returns <code class="docutils literal notranslate"><span class="pre">[m,</span> <span class="pre">c,</span> <span class="pre">P]</span></code> such that <code class="docutils literal notranslate"><span class="pre">c</span> <span class="pre">*</span> <span class="pre">g</span> <span class="pre">^</span> <span class="pre">(1/n)</span> <span class="pre">=</span> <span class="pre">P</span> <span class="pre">^</span> <span class="pre">(1/m)</span></code> thus if <code class="docutils literal notranslate"><span class="pre">y^n</span> <span class="pre">=</span> <span class="pre">g</span></code>, then <code class="docutils literal notranslate"><span class="pre">z^m</span> <span class="pre">=</span> <span class="pre">P</span></code> where <code class="docutils literal notranslate"><span class="pre">z</span> <span class="pre">=</span> <span class="pre">c</span> <span class="pre">*</span> <span class="pre">y</span></code>.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="CharacteristicPolynomial2.html" title="CharacteristicPolynomial2 F"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="CartesianTensorFunctions2.html" title="CartesianTensorFunctions2(minix, dim, S, T)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">ChangeOfVariable(F, UP, UPUP)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

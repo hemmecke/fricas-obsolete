@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TableauxBumpers S &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="TabulatedComputationPackage(Key, Entry)" href="TabulatedComputationPackage.html" />
+    <link rel="prev" title="SystemSolvePackage R" href="SystemSolvePackage.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="TabulatedComputationPackage.html" title="TabulatedComputationPackage(Key, Entry)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="SystemSolvePackage.html" title="SystemSolvePackage R"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">TableauxBumpers S</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="tableauxbumpers-s">
+<span id="l-tableaux-bumpers"></span><span id="index-0"></span><h1>TableauxBumpers S<a class="headerlink" href="#tableauxbumpers-s" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/tableau.spad#L45">tableau.spad line 45</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/tableau.spad#L45">[edit on github]</a></p>
+<ul class="simple">
+<li><p>S: <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a></p></li>
+</ul>
+<p>TableauBumpers implements the Schenstead-Knuth correspondence between sequences and pairs of Young tableaux. The 2 Young tableaux are represented as a single tableau with pairs as components.</p>
+<span class="target" id="l-tableaux-bumpers-bat1"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">bat1</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S</dt><dd><p><code class="docutils literal notranslate"><span class="pre">bat1(llp)</span></code> unbumps a tableau <code class="docutils literal notranslate"><span class="pre">llp</span></code>. Operation <code class="docutils literal notranslate"><span class="pre">bat1</span></code> is the inverse of <code class="docutils literal notranslate"><span class="pre">tab1</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-tableaux-bumpers-bat"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">bat</span>: <a class="reference internal" href="Tableau.html#l-tableau"><span class="std std-ref">Tableau</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S</dt><dd><p><code class="docutils literal notranslate"><span class="pre">bat(ls)</span></code> unbumps a tableau <code class="docutils literal notranslate"><span class="pre">ls</span></code></p>
+</dd>
+</dl>
+<span class="target" id="l-tableaux-bumpers-bumprow"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">bumprow</span>: ((S, S) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S) -&gt; Record(fs: <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>, sd: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S, td: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">bumprow(cf,</span> <span class="pre">pr,</span> <span class="pre">r)</span></code> is an auxiliary function which bumps a row <code class="docutils literal notranslate"><span class="pre">r</span></code> with a pair <code class="docutils literal notranslate"><span class="pre">pr</span></code> using comparison function <code class="docutils literal notranslate"><span class="pre">cf</span></code>, and returns a record</p>
+</dd>
+</dl>
+<span class="target" id="l-tableaux-bumpers-bumptab1"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">bumptab1</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S</dt><dd><p><code class="docutils literal notranslate"><span class="pre">bumptab1(pr,</span> <span class="pre">t)</span></code> bumps a tableau <code class="docutils literal notranslate"><span class="pre">t</span></code> with a pair <code class="docutils literal notranslate"><span class="pre">pr</span></code> using comparison function <span class="spadfun">&lt;</span>, returning a new tableau</p>
+</dd>
+</dl>
+<span class="target" id="l-tableaux-bumpers-bumptab"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">bumptab</span>: ((S, S) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S</dt><dd><p><code class="docutils literal notranslate"><span class="pre">bumptab(cf,</span> <span class="pre">pr,</span> <span class="pre">t)</span></code> bumps a tableau <code class="docutils literal notranslate"><span class="pre">t</span></code> with a pair <code class="docutils literal notranslate"><span class="pre">pr</span></code> using comparison function <code class="docutils literal notranslate"><span class="pre">cf</span></code>, returning a new tableau</p>
+</dd>
+</dl>
+<span class="target" id="l-tableaux-bumpers-inverse"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">inverse</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S</dt><dd><p><code class="docutils literal notranslate"><span class="pre">inverse(ls)</span></code> forms the inverse of a sequence <code class="docutils literal notranslate"><span class="pre">ls</span></code></p>
+</dd>
+</dl>
+<span class="target" id="l-tableaux-bumpers-lex"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">lex</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S</dt><dd><p><code class="docutils literal notranslate"><span class="pre">lex(ls)</span></code> sorts a list of pairs to lexicographic order</p>
+</dd>
+</dl>
+<span class="target" id="l-tableaux-bumpers-maxrow"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">maxrow</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S) -&gt; Record(f1: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S, f2: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S, f3: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S, f4: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">maxrow(a,</span> <span class="pre">b,</span> <span class="pre">c,</span> <span class="pre">d,</span> <span class="pre">e)</span></code> is an auxiliary function for <code class="docutils literal notranslate"><span class="pre">mr</span></code></p>
+</dd>
+</dl>
+<span class="target" id="l-tableaux-bumpers-mr"></span><dl class="simple" id="index-9">
+<dt><span class="spadfun">mr</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S -&gt; Record(f1: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S, f2: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S, f3: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S, f4: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">mr(t)</span></code> is an auxiliary function which finds the position of the maximum element of a tableau <code class="docutils literal notranslate"><span class="pre">t</span></code> which is in the lowest row, producing a record of results</p>
+</dd>
+</dl>
+<span class="target" id="l-tableaux-bumpers-slex"></span><dl class="simple" id="index-10">
+<dt><span class="spadfun">slex</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S</dt><dd><p><code class="docutils literal notranslate"><span class="pre">slex(ls)</span></code> sorts the argument sequence <code class="docutils literal notranslate"><span class="pre">ls</span></code>, then zips (see <span class="xref std std-ref">map &lt;l-`</span>-list-functions3``_map&gt;`) the original argument sequence with the sorted result to a list of pairs</p>
+</dd>
+</dl>
+<span class="target" id="l-tableaux-bumpers-tab1"></span><dl class="simple" id="index-11">
+<dt><span class="spadfun">tab1</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S</dt><dd><p><code class="docutils literal notranslate"><span class="pre">tab1(lp)</span></code> creates a tableau from a list of pairs <code class="docutils literal notranslate"><span class="pre">lp</span></code></p>
+</dd>
+</dl>
+<span class="target" id="l-tableaux-bumpers-tab"></span><dl class="simple" id="index-12">
+<dt><span class="spadfun">tab</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S -&gt; <a class="reference internal" href="Tableau.html#l-tableau"><span class="std std-ref">Tableau</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S</dt><dd><p><code class="docutils literal notranslate"><span class="pre">tab(ls)</span></code> creates a tableau from <code class="docutils literal notranslate"><span class="pre">ls</span></code> by first creating a list of pairs using <span class="xref std std-ref">slex</span>, then creating a tableau using <span class="xref std std-ref">tab1</span>.</p>
+</dd>
+</dl>
+<span class="target" id="l-tableaux-bumpers-untab"></span><dl class="simple" id="index-13">
+<dt><span class="spadfun">untab</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S</dt><dd><p><code class="docutils literal notranslate"><span class="pre">untab(lp,</span> <span class="pre">llp)</span></code> is an auxiliary function which unbumps a tableau <code class="docutils literal notranslate"><span class="pre">llp</span></code>, using <code class="docutils literal notranslate"><span class="pre">lp</span></code> to accumulate pairs</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="TabulatedComputationPackage.html" title="TabulatedComputationPackage(Key, Entry)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="SystemSolvePackage.html" title="SystemSolvePackage R"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">TableauxBumpers S</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

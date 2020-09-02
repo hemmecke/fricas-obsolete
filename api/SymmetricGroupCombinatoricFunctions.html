@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SymmetricGroupCombinatoricFunctions &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="SymmetryAnalysis(JB1, xi, eta)" href="SymmetryAnalysis.html" />
+    <link rel="prev" title="SymmetricFunctions R" href="SymmetricFunctions.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="SymmetryAnalysis.html" title="SymmetryAnalysis(JB1, xi, eta)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="SymmetricFunctions.html" title="SymmetricFunctions R"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">SymmetricGroupCombinatoricFunctions</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="symmetricgroupcombinatoricfunctions">
+<span id="l-symmetric-group-combinatoric-functions"></span><span id="index-0"></span><h1>SymmetricGroupCombinatoricFunctions<a class="headerlink" href="#symmetricgroupcombinatoricfunctions" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/sgcf.spad#L1">sgcf.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/sgcf.spad#L1">[edit on github]</a></p>
+<p>SymmetricGroupCombinatoricFunctions contains combinatoric functions concerning symmetric groups and representation theory: list young tableaus, improper partitions, subsets bijection of Coleman.</p>
+<span class="target" id="l-symmetric-group-combinatoric-functions-coleman"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">coleman</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">coleman(alpha,</span> <span class="pre">beta,</span> <span class="pre">pi)</span></code>: there is a bijection from the set of matrices having nonnegative entries and row sums <em>alpha</em>, column sums <em>beta</em> to the set of <em>Salpha - Sbeta</em> double cosets of the symmetric group <em>Sn</em>. (<em>Salpha</em> is the Young subgroup corresponding to the improper partition <em>alpha</em>). For a representing element <em>``pi``* of such a double coset, coleman(``alpha``, ``beta``, ``pi``) generates the Coleman-matrix corresponding to *alpha, beta, ``pi``*. Note: The permutation *``pi``* of *{1, 2, …, n}</em> has to be given in list form. Note: the inverse of this map is <em>inverseColeman</em> (if <a href="#id1"><span class="problematic" id="id2">*</span></a><code class="docutils literal notranslate"><span class="pre">pi</span></code><a href="#id3"><span class="problematic" id="id4">*</span></a> is the lexicographical smallest permutation in the coset). For details see James/Kerber.</p>
+</dd>
+</dl>
+<span class="target" id="l-symmetric-group-combinatoric-functions-inverse-coleman"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">inverseColeman</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">inverseColeman(alpha,</span> <span class="pre">beta,</span> <span class="pre">C)</span></code>: there is a bijection from the set of matrices having nonnegative entries and row sums <em>alpha</em>, column sums <em>beta</em> to the set of <em>Salpha - Sbeta</em> double cosets of the symmetric group <em>Sn</em>. (<em>Salpha</em> is the Young subgroup corresponding to the improper partition <em>alpha</em>). For such a matrix <code class="docutils literal notranslate"><span class="pre">C</span></code>, inverseColeman(<code class="docutils literal notranslate"><span class="pre">alpha</span></code>, <code class="docutils literal notranslate"><span class="pre">beta</span></code>, <code class="docutils literal notranslate"><span class="pre">C</span></code>) calculates the lexicographical smallest <em>``pi``* in the corresponding double coset. Note: the resulting permutation *``pi``* of *{1, 2, …, n}</em> is given in list form. Notes: the inverse of this map is <em>coleman</em>. For details, see James/Kerber.</p>
+</dd>
+</dl>
+<span class="target" id="l-symmetric-group-combinatoric-functions-list-young-tableaus"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">listYoungTableaus</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a> -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">listYoungTableaus(lambda)</span></code> where <em>lambda</em> is a proper partition generates the list of all standard tableaus of shape <em>lambda</em> by means of lattice permutations. The numbers of the lattice permutation are interpreted as column labels. Hence the contents of these lattice permutations are the conjugate of <em>lambda</em>. Notes: the functions <em>nextLatticePermutation</em> and <em>makeYoungTableau</em> are used. The entries are from <em>0, …, n-1</em>.</p>
+</dd>
+</dl>
+<span class="target" id="l-symmetric-group-combinatoric-functions-make-young-tableau"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">makeYoungTableau</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">makeYoungTableau(lambda,</span> <span class="pre">gitter)</span></code> computes for a given lattice permutation <em>gitter</em> and for an improper partition <em>lambda</em> the corresponding standard tableau of shape <em>lambda</em>. Notes: see <em>listYoungTableaus</em>. The entries are from <em>0, …, n-1</em>.</p>
+</dd>
+</dl>
+<span class="target" id="l-symmetric-group-combinatoric-functions-next-coleman"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">nextColeman</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">nextColeman(alpha,</span> <span class="pre">beta,</span> <span class="pre">C)</span></code> generates the next Coleman matrix of column sums <em>alpha</em> and row sums <em>beta</em> according to the lexicographical order from bottom-to-top. The first Coleman matrix is achieved by <em>C=new(1, 1, 0)</em>. Also, <em>new(1, 1, 0)</em> indicates that <code class="docutils literal notranslate"><span class="pre">C</span></code> is the last Coleman matrix.</p>
+</dd>
+</dl>
+<span class="target" id="l-symmetric-group-combinatoric-functions-next-lattice-permutation"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">nextLatticePermutation</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">nextLatticePermutation(lambda,</span> <span class="pre">lattP,</span> <span class="pre">constructNotFirst)</span></code> generates the lattice permutation according to the proper partition <em>lambda</em> succeeding the lattice permutation <em>lattP</em> in lexicographical order as long as <em>constructNotFirst</em> is <code class="docutils literal notranslate"><span class="pre">true</span></code>. If <em>constructNotFirst</em> is <code class="docutils literal notranslate"><span class="pre">false</span></code>, the first lattice permutation is returned. The result <em>[]</em> indicates that <em>lattP</em> has no successor.</p>
+</dd>
+</dl>
+<span class="target" id="l-symmetric-group-combinatoric-functions-next-partition"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">nextPartition</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">nextPartition(gamma,</span> <span class="pre">part,</span> <span class="pre">number)</span></code> generates the partition of <em>number</em> which follows <em>part</em> according to the right-to-left lexicographical order. The partition has the property that its components do not exceed the corresponding components of <em>gamma</em>. the first partition is achieved by <em>part=[]</em>. Also, <em>[]</em> indicates that <em>part</em> is the last partition.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-8">
+<dt><span class="spadfun">nextPartition</span>: (<a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">nextPartition(gamma,</span> <span class="pre">part,</span> <span class="pre">number)</span></code> generates the partition of <em>number</em> which follows <em>part</em> according to the right-to-left lexicographical order. The partition has the property that its components do not exceed the corresponding components of <em>gamma</em>. The first partition is achieved by <em>part=[]</em>. Also, <em>[]</em> indicates that <em>part</em> is the last partition.</p>
+</dd>
+</dl>
+<span class="target" id="l-symmetric-group-combinatoric-functions-number-of-improper-partitions"></span><dl class="simple" id="index-9">
+<dt><span class="spadfun">numberOfImproperPartitions</span>: (<a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">numberOfImproperPartitions(n,</span> <span class="pre">m)</span></code> computes the number of partitions of the nonnegative integer <code class="docutils literal notranslate"><span class="pre">n</span></code> in <code class="docutils literal notranslate"><span class="pre">m</span></code> nonnegative parts with regarding the order (improper partitions). Example: <em>numberOfImproperPartitions (3, 3)</em> is 10, since <em>[0, 0, 3], [0, 1, 2], [0, 2, 1], [0, 3, 0], [1, 0, 2], [1, 1, 1], [1, 2, 0], [2, 0, 1], [2, 1, 0], [3, 0, 0]</em> are the possibilities. Note: this operation has a recursive implementation.</p>
+</dd>
+</dl>
+<span class="target" id="l-symmetric-group-combinatoric-functions-sub-set"></span><dl class="simple" id="index-10">
+<dt><span class="spadfun">subSet</span>: (<a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">subSet(n,</span> <span class="pre">m,</span> <span class="pre">k)</span></code> calculates the <em>k</em><code class="docutils literal notranslate"><span class="pre">-</span></code>th <em>m</em>-subset of the set <em>0, 1, …, (n-1)</em> in the lexicographic order considered as a decreasing map from <em>0, …, (m-1)</em> into <em>0, …, (n-1)</em>. See <code class="docutils literal notranslate"><span class="pre">S</span></code>.<code class="docutils literal notranslate"><span class="pre">G</span></code>. Williamson: Theorem 1.60. Error: if not <em>(0 &lt;= m &lt;= n and 0 &lt; = k &lt; (n choose m))</em>.</p>
+</dd>
+</dl>
+<span class="target" id="l-symmetric-group-combinatoric-functions-unrank-improper-partitions0"></span><dl class="simple" id="index-11">
+<dt><span class="spadfun">unrankImproperPartitions0</span>: (<a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">unrankImproperPartitions0(n,</span> <span class="pre">m,</span> <span class="pre">k)</span></code> computes the <em>k</em><code class="docutils literal notranslate"><span class="pre">-</span></code>th improper partition of nonnegative <code class="docutils literal notranslate"><span class="pre">n</span></code> in <code class="docutils literal notranslate"><span class="pre">m</span></code> nonnegative parts in reverse lexicographical order. Example: <em>[0, 0, 3] &lt; [0, 1, 2] &lt; [0, 2, 1] &lt; [0, 3, 0] &lt; [1, 0, 2] &lt; [1, 1, 1] &lt; [1, 2, 0] &lt; [2, 0, 1] &lt; [2, 1, 0] &lt; [3, 0, 0]</em>. Error: if <code class="docutils literal notranslate"><span class="pre">k</span></code> is negative or too big. Note: counting of subtrees is done by <a class="reference internal" href="#l-symmetric-group-combinatoric-functions-number-of-improper-partitions"><span class="std std-ref">numberOfImproperPartitions</span></a>.</p>
+</dd>
+</dl>
+<span class="target" id="l-symmetric-group-combinatoric-functions-unrank-improper-partitions1"></span><dl class="simple" id="index-12">
+<dt><span class="spadfun">unrankImproperPartitions1</span>: (<a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">unrankImproperPartitions1(n,</span> <span class="pre">m,</span> <span class="pre">k)</span></code> computes the <em>k</em><code class="docutils literal notranslate"><span class="pre">-</span></code>th improper partition of nonnegative <code class="docutils literal notranslate"><span class="pre">n</span></code> in at most <code class="docutils literal notranslate"><span class="pre">m</span></code> nonnegative parts ordered as follows: first, in reverse lexicographically according to their non-zero parts, then according to their positions (i.e. lexicographical order using <em>subSet</em>: <em>[3, 0, 0] &lt; [0, 3, 0] &lt; [0, 0, 3] &lt; [2, 1, 0] &lt; [2, 0, 1] &lt; [0, 2, 1] &lt; [1, 2, 0] &lt; [1, 0, 2] &lt; [0, 1, 2] &lt; [1, 1, 1]</em>). Note: counting of subtrees is done by <em>numberOfImproperPartitionsInternal</em>.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="SymmetryAnalysis.html" title="SymmetryAnalysis(JB1, xi, eta)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="SymmetricFunctions.html" title="SymmetricFunctions R"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">SymmetricGroupCombinatoricFunctions</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

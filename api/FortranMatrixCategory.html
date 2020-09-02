@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FortranMatrixCategory &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="FortranMatrixFunctionCategory" href="FortranMatrixFunctionCategory.html" />
+    <link rel="prev" title="FortranMachineTypeCategory" href="FortranMachineTypeCategory.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="FortranMatrixFunctionCategory.html" title="FortranMatrixFunctionCategory"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="FortranMachineTypeCategory.html" title="FortranMachineTypeCategory"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Categories.html" accesskey="U">Categories</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">FortranMatrixCategory</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="fortranmatrixcategory">
+<span id="l-fortran-matrix-category"></span><span id="index-0"></span><h1>FortranMatrixCategory<a class="headerlink" href="#fortranmatrixcategory" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/fortcat.spad#L60">fortcat.spad line 60</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/fortcat.spad#L60">[edit on github]</a></p>
+<p><a class="reference internal" href="#l-fortran-matrix-category"><span class="std std-ref">FortranMatrixCategory</span></a> provides support for producing Functions and Subroutines when the input to these is a FriCAS object of type <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> or in domains involving <a class="reference internal" href="FortranCode.html#l-fortran-code"><span class="std std-ref">FortranCode</span></a>.</p>
+<dl class="simple">
+<dt><a class="reference internal" href="CoercibleTo.html#l-coercible-to-coerce"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-fortran-matrix-category-coerce"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="FortranCode.html#l-fortran-code"><span class="std std-ref">FortranCode</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(e)</span></code> takes an object from <a class="reference internal" href="FortranCode.html#l-fortran-code"><span class="std std-ref">FortranCode</span></a> and uses it as the body of an ASP.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-2">
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="FortranCode.html#l-fortran-code"><span class="std std-ref">FortranCode</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(e)</span></code> takes an object from <span class="xref std std-ref">List FortranCode</span> and uses it as the body of an ASP.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-3">
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="MachineFloat.html#l-machine-float"><span class="std std-ref">MachineFloat</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(v)</span></code> produces an ASP which returns the value of <code class="docutils literal notranslate"><span class="pre">v</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-4">
+<dt><span class="spadfun">coerce</span>: Record(localSymbols: <a class="reference internal" href="SymbolTable.html#l-symbol-table"><span class="std std-ref">SymbolTable</span></a>, code: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="FortranCode.html#l-fortran-code"><span class="std std-ref">FortranCode</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(e)</span></code> takes the component of <code class="docutils literal notranslate"><span class="pre">e</span></code> from <span class="xref std std-ref">List FortranCode</span> and uses it as the body of the ASP, making the declarations in the <a class="reference internal" href="SymbolTable.html#l-symbol-table"><span class="std std-ref">SymbolTable</span></a> component.</p>
+</dd>
+<dt><a class="reference internal" href="FortranProgramCategory.html#l-fortran-program-category-output-as-fortran"><span class="std std-ref">outputAsFortran</span></a>: % -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p>from <a class="reference internal" href="FortranProgramCategory.html#l-fortran-program-category"><span class="std std-ref">FortranProgramCategory</span></a></p>
+</dd>
+</dl>
+<p><a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+<p><a class="reference internal" href="FortranProgramCategory.html#l-fortran-program-category"><span class="std std-ref">FortranProgramCategory</span></a></p>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="FortranMatrixFunctionCategory.html" title="FortranMatrixFunctionCategory"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="FortranMachineTypeCategory.html" title="FortranMachineTypeCategory"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Categories.html" >Categories</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">FortranMatrixCategory</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

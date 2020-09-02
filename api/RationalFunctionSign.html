@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RationalFunctionSign R &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="RationalFunctionSum R" href="RationalFunctionSum.html" />
+    <link rel="prev" title="RationalFunctionLimitPackage R" href="RationalFunctionLimitPackage.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="RationalFunctionSum.html" title="RationalFunctionSum R"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="RationalFunctionLimitPackage.html" title="RationalFunctionLimitPackage R"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">RationalFunctionSign R</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="rationalfunctionsign-r">
+<span id="l-rational-function-sign"></span><span id="index-0"></span><h1>RationalFunctionSign R<a class="headerlink" href="#rationalfunctionsign-r" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/sign.spad#L88">sign.spad line 88</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/sign.spad#L88">[edit on github]</a></p>
+<ul class="simple">
+<li><p>R: <a class="reference internal" href="GcdDomain.html#l-gcd-domain"><span class="std std-ref">GcdDomain</span></a></p></li>
+</ul>
+<p>Find the sign of a rational function around a point or infinity.</p>
+<span class="target" id="l-rational-function-sign-sign"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">sign</span>: (<a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R, <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>) -&gt; Union(<a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sign(f,</span> <span class="pre">x,</span> <span class="pre">a,</span> <span class="pre">s)</span></code> returns the sign of <code class="docutils literal notranslate"><span class="pre">f</span></code> as <code class="docutils literal notranslate"><span class="pre">x</span></code> nears <code class="docutils literal notranslate"><span class="pre">a</span></code> from the left (below) if <code class="docutils literal notranslate"><span class="pre">s</span></code> is the string <code class="docutils literal notranslate"><span class="pre">&quot;left&quot;</span></code>, or from the right (above) if <code class="docutils literal notranslate"><span class="pre">s</span></code> is the string <code class="docutils literal notranslate"><span class="pre">&quot;right&quot;</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-2">
+<dt><span class="spadfun">sign</span>: (<a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="OrderedCompletion.html#l-ordered-completion"><span class="std std-ref">OrderedCompletion</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R) -&gt; Union(<a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sign(f,</span> <span class="pre">x,</span> <span class="pre">a)</span></code> returns the sign of <code class="docutils literal notranslate"><span class="pre">f</span></code> as <code class="docutils literal notranslate"><span class="pre">x</span></code> approaches <code class="docutils literal notranslate"><span class="pre">a</span></code>, from both sides if <code class="docutils literal notranslate"><span class="pre">a</span></code> is finite.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-3">
+<dt><span class="spadfun">sign</span>: <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R -&gt; Union(<a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sign</span> <span class="pre">f</span></code> returns the sign of <code class="docutils literal notranslate"><span class="pre">f</span></code> if it is constant everywhere.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="RationalFunctionSum.html" title="RationalFunctionSum R"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="RationalFunctionLimitPackage.html" title="RationalFunctionLimitPackage R"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">RationalFunctionSign R</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EuclideanGroebnerBasisPackage(Dom, Expon, VarSet, Dpol) &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="EvaluateCycleIndicators F" href="EvaluateCycleIndicators.html" />
+    <link rel="prev" title="ErrorFunctions" href="ErrorFunctions.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="EvaluateCycleIndicators.html" title="EvaluateCycleIndicators F"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="ErrorFunctions.html" title="ErrorFunctions"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">EuclideanGroebnerBasisPackage(Dom, Expon, VarSet, Dpol)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="euclideangroebnerbasispackage-dom-expon-varset-dpol">
+<span id="l-euclidean-groebner-basis-package"></span><span id="index-0"></span><h1>EuclideanGroebnerBasisPackage(Dom, Expon, VarSet, Dpol)<a class="headerlink" href="#euclideangroebnerbasispackage-dom-expon-varset-dpol" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/gbeuclid.spad#L37">gbeuclid.spad line 37</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/gbeuclid.spad#L37">[edit on github]</a></p>
+<ul class="simple">
+<li><p>Dom: <a class="reference internal" href="EuclideanDomain.html#l-euclidean-domain"><span class="std std-ref">EuclideanDomain</span></a></p></li>
+<li><p>Expon: <a class="reference internal" href="OrderedAbelianMonoidSup.html#l-ordered-abelian-monoid-sup"><span class="std std-ref">OrderedAbelianMonoidSup</span></a></p></li>
+<li><p>VarSet: <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a></p></li>
+<li><p>Dpol: <a class="reference internal" href="PolynomialCategory.html#l-polynomial-category"><span class="std std-ref">PolynomialCategory</span></a>(Dom, Expon, VarSet)</p></li>
+</ul>
+<p><a class="reference internal" href="#l-euclidean-groebner-basis-package"><span class="std std-ref">EuclideanGroebnerBasisPackage</span></a> computes groebner bases for polynomial ideals over euclidean domains. The basic computation provides a distinguished set of generators for these ideals. This basis allows an easy test for membership: the operation <span class="spadfun">euclideanNormalForm</span> returns zero on ideal members. The string “info” and “redcrit” can be given as additional args to provide incremental information during the computation. If “info” is given, a computational summary is given for each <code class="docutils literal notranslate"><span class="pre">s</span></code>-polynomial. If “redcrit” is given, the reduced critical pairs are printed. The term ordering is determined by the polynomial type used. Suggested types include <a class="reference internal" href="DistributedMultivariatePolynomial.html#l-distributed-multivariate-polynomial"><span class="std std-ref">DistributedMultivariatePolynomial</span></a>, <a class="reference internal" href="HomogeneousDistributedMultivariatePolynomial.html#l-homogeneous-distributed-multivariate-polynomial"><span class="std std-ref">HomogeneousDistributedMultivariatePolynomial</span></a>, <a class="reference internal" href="GeneralDistributedMultivariatePolynomial.html#l-general-distributed-multivariate-polynomial"><span class="std std-ref">GeneralDistributedMultivariatePolynomial</span></a>.</p>
+<span class="target" id="l-euclidean-groebner-basis-package-euclidean-groebner"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">euclideanGroebner</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Dpol, <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Dpol</dt><dd><p><code class="docutils literal notranslate"><span class="pre">euclideanGroebner(lp,</span> <span class="pre">infoflag)</span></code> computes a groebner basis for a polynomial ideal over a euclidean domain generated by the list of polynomials <code class="docutils literal notranslate"><span class="pre">lp</span></code>. During computation, additional information is printed out if infoflag is given as either “info” (for summary information) or “redcrit” (for reduced critical pairs)</p>
+</dd>
+</dl>
+<dl class="simple" id="index-2">
+<dt><span class="spadfun">euclideanGroebner</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Dpol, <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Dpol</dt><dd><p><code class="docutils literal notranslate"><span class="pre">euclideanGroebner(lp,</span> <span class="pre">&quot;info&quot;,</span> <span class="pre">&quot;redcrit&quot;)</span></code> computes a groebner basis for a polynomial ideal generated by the list of polynomials <code class="docutils literal notranslate"><span class="pre">lp</span></code>. If the second argument is <code class="docutils literal notranslate"><span class="pre">&quot;info&quot;</span></code>, a summary is given of the critical pairs. If the third argument is “redcrit”, critical pairs are printed.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-3">
+<dt><span class="spadfun">euclideanGroebner</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Dpol -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Dpol</dt><dd><p><code class="docutils literal notranslate"><span class="pre">euclideanGroebner(lp)</span></code> computes a groebner basis for a polynomial ideal over a euclidean domain generated by the list of polynomials <code class="docutils literal notranslate"><span class="pre">lp</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-euclidean-groebner-basis-package-euclidean-normal-form"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">euclideanNormalForm</span>: (Dpol, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Dpol) -&gt; Dpol</dt><dd><p><code class="docutils literal notranslate"><span class="pre">euclideanNormalForm(poly,</span> <span class="pre">gb)</span></code> reduces the polynomial <code class="docutils literal notranslate"><span class="pre">poly</span></code> modulo the precomputed groebner basis <code class="docutils literal notranslate"><span class="pre">gb</span></code> giving a canonical representative of the residue class.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="EvaluateCycleIndicators.html" title="EvaluateCycleIndicators F"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="ErrorFunctions.html" title="ErrorFunctions"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">EuclideanGroebnerBasisPackage(Dom, Expon, VarSet, Dpol)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

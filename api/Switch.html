@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Symbol" href="Symbol.html" />
+    <link rel="prev" title="SuchThat(S1, S2)" href="SuchThat.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="Symbol.html" title="Symbol"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="SuchThat.html" title="SuchThat(S1, S2)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Domains.html" accesskey="U">Domains</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Switch</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="switch">
+<span id="l-switch"></span><span id="index-0"></span><h1>Switch<a class="headerlink" href="#switch" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/fortran.spad#L1255">fortran.spad line 1255</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/fortran.spad#L1255">[edit on github]</a></p>
+<p>This domain builds representations of boolean expressions for use with the <a class="reference internal" href="FortranCode.html#l-fortran-code"><span class="std std-ref">FortranCode</span></a> domain.</p>
+<span class="target" id="l-switch-a-n-d"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">AND</span>: (Union(I: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, F: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Float.html#l-float"><span class="std std-ref">Float</span></a>, CF: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Complex.html#l-complex"><span class="std std-ref">Complex</span></a> <a class="reference internal" href="Float.html#l-float"><span class="std std-ref">Float</span></a>, switch: %), Union(I: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, F: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Float.html#l-float"><span class="std std-ref">Float</span></a>, CF: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Complex.html#l-complex"><span class="std std-ref">Complex</span></a> <a class="reference internal" href="Float.html#l-float"><span class="std std-ref">Float</span></a>, switch: %)) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">AND(x,</span> <span class="pre">y)</span></code> returns the <a class="reference internal" href="#l-switch"><span class="std std-ref">Switch</span></a> expression representing <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">and</span> <span class="pre">y</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="CoercibleTo.html#l-coercible-to-coerce"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-switch-coerce"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(s)</span></code> is undocumented.</p>
+</dd>
+</dl>
+<span class="target" id="l-switch-e-q"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">EQ</span>: (Union(I: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, F: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Float.html#l-float"><span class="std std-ref">Float</span></a>, CF: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Complex.html#l-complex"><span class="std std-ref">Complex</span></a> <a class="reference internal" href="Float.html#l-float"><span class="std std-ref">Float</span></a>, switch: %), Union(I: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, F: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Float.html#l-float"><span class="std std-ref">Float</span></a>, CF: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Complex.html#l-complex"><span class="std std-ref">Complex</span></a> <a class="reference internal" href="Float.html#l-float"><span class="std std-ref">Float</span></a>, switch: %)) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">EQ(x,</span> <span class="pre">y)</span></code> returns the <a class="reference internal" href="#l-switch"><span class="std std-ref">Switch</span></a> expression representing <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">y</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-switch-g-e"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">GE</span>: (Union(I: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, F: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Float.html#l-float"><span class="std std-ref">Float</span></a>, CF: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Complex.html#l-complex"><span class="std std-ref">Complex</span></a> <a class="reference internal" href="Float.html#l-float"><span class="std std-ref">Float</span></a>, switch: %), Union(I: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, F: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Float.html#l-float"><span class="std std-ref">Float</span></a>, CF: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Complex.html#l-complex"><span class="std std-ref">Complex</span></a> <a class="reference internal" href="Float.html#l-float"><span class="std std-ref">Float</span></a>, switch: %)) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">GE(x,</span> <span class="pre">y)</span></code> returns the <a class="reference internal" href="#l-switch"><span class="std std-ref">Switch</span></a> expression representing <code class="docutils literal notranslate"><span class="pre">x&gt;=y</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-switch-g-t"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">GT</span>: (Union(I: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, F: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Float.html#l-float"><span class="std std-ref">Float</span></a>, CF: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Complex.html#l-complex"><span class="std std-ref">Complex</span></a> <a class="reference internal" href="Float.html#l-float"><span class="std std-ref">Float</span></a>, switch: %), Union(I: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, F: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Float.html#l-float"><span class="std std-ref">Float</span></a>, CF: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Complex.html#l-complex"><span class="std std-ref">Complex</span></a> <a class="reference internal" href="Float.html#l-float"><span class="std std-ref">Float</span></a>, switch: %)) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">GT(x,</span> <span class="pre">y)</span></code> returns the <a class="reference internal" href="#l-switch"><span class="std std-ref">Switch</span></a> expression representing <code class="docutils literal notranslate"><span class="pre">x&gt;y</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-switch-l-e"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">LE</span>: (Union(I: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, F: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Float.html#l-float"><span class="std std-ref">Float</span></a>, CF: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Complex.html#l-complex"><span class="std std-ref">Complex</span></a> <a class="reference internal" href="Float.html#l-float"><span class="std std-ref">Float</span></a>, switch: %), Union(I: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, F: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Float.html#l-float"><span class="std std-ref">Float</span></a>, CF: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Complex.html#l-complex"><span class="std std-ref">Complex</span></a> <a class="reference internal" href="Float.html#l-float"><span class="std std-ref">Float</span></a>, switch: %)) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">LE(x,</span> <span class="pre">y)</span></code> returns the <a class="reference internal" href="#l-switch"><span class="std std-ref">Switch</span></a> expression representing <code class="docutils literal notranslate"><span class="pre">x&lt;=y</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-switch-l-t"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">LT</span>: (Union(I: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, F: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Float.html#l-float"><span class="std std-ref">Float</span></a>, CF: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Complex.html#l-complex"><span class="std std-ref">Complex</span></a> <a class="reference internal" href="Float.html#l-float"><span class="std std-ref">Float</span></a>, switch: %), Union(I: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, F: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Float.html#l-float"><span class="std std-ref">Float</span></a>, CF: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Complex.html#l-complex"><span class="std std-ref">Complex</span></a> <a class="reference internal" href="Float.html#l-float"><span class="std std-ref">Float</span></a>, switch: %)) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">LT(x,</span> <span class="pre">y)</span></code> returns the <a class="reference internal" href="#l-switch"><span class="std std-ref">Switch</span></a> expression representing <code class="docutils literal notranslate"><span class="pre">x&lt;y</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-switch-n-o-t"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">NOT</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">NOT(x)</span></code> returns the <a class="reference internal" href="#l-switch"><span class="std std-ref">Switch</span></a> expression representing <code class="docutils literal notranslate"><span class="pre">\~~x</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-9">
+<dt><span class="spadfun">NOT</span>: Union(I: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, F: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Float.html#l-float"><span class="std std-ref">Float</span></a>, CF: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Complex.html#l-complex"><span class="std std-ref">Complex</span></a> <a class="reference internal" href="Float.html#l-float"><span class="std std-ref">Float</span></a>, switch: %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">NOT(x)</span></code> returns the <a class="reference internal" href="#l-switch"><span class="std std-ref">Switch</span></a> expression representing <code class="docutils literal notranslate"><span class="pre">\~~x</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-switch-o-r"></span><dl class="simple" id="index-10">
+<dt><span class="spadfun">OR</span>: (Union(I: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, F: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Float.html#l-float"><span class="std std-ref">Float</span></a>, CF: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Complex.html#l-complex"><span class="std std-ref">Complex</span></a> <a class="reference internal" href="Float.html#l-float"><span class="std std-ref">Float</span></a>, switch: %), Union(I: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, F: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Float.html#l-float"><span class="std std-ref">Float</span></a>, CF: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Complex.html#l-complex"><span class="std std-ref">Complex</span></a> <a class="reference internal" href="Float.html#l-float"><span class="std std-ref">Float</span></a>, switch: %)) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">OR(x,</span> <span class="pre">y)</span></code> returns the <a class="reference internal" href="#l-switch"><span class="std std-ref">Switch</span></a> expression representing <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">or</span> <span class="pre">y</span></code>.</p>
+</dd>
+</dl>
+<p><a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="Symbol.html" title="Symbol"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="SuchThat.html" title="SuchThat(S1, S2)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Domains.html" >Domains</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Switch</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

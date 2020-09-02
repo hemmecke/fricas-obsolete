@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ModularHermitePadeSolver(F, S) &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ModularHermitianRowReduction R" href="ModularHermitianRowReduction.html" />
+    <link rel="prev" title="ModularHermitePade" href="ModularHermitePade.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="ModularHermitianRowReduction.html" title="ModularHermitianRowReduction R"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="ModularHermitePade.html" title="ModularHermitePade"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">ModularHermitePadeSolver(F, S)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="modularhermitepadesolver-f-s">
+<span id="l-modular-hermite-pade-solver"></span><span id="index-0"></span><h1>ModularHermitePadeSolver(F, S)<a class="headerlink" href="#modularhermitepadesolver-f-s" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/modhpsol.spad#L1591">modhpsol.spad line 1591</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/modhpsol.spad#L1591">[edit on github]</a></p>
+<ul class="simple">
+<li><p>F: <a class="reference internal" href="CommutativeRing.html#l-commutative-ring"><span class="std std-ref">CommutativeRing</span></a></p></li>
+<li><p>S: <a class="reference internal" href="CommutativeRing.html#l-commutative-ring"><span class="std std-ref">CommutativeRing</span></a></p></li>
+</ul>
+<p>This package provides generic interface to modular Hermite-Pade solver.</p>
+<span class="target" id="l-modular-hermite-pade-solver-gen-monte-carlo-check"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">gen_Monte_Carlo_check</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> S -&gt; Union(good, reject, no_solution), <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> F, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="U32Vector.html#l-u32-vector"><span class="std std-ref">U32Vector</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="U32Vector.html#l-u32-vector"><span class="std std-ref">U32Vector</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> S -&gt; Union(good, reject, no_solution)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">gen_Monte_Carlo_check(check,</span> <span class="pre">l,</span> <span class="pre">kind,</span> <span class="pre">qvar,</span> <span class="pre">sigma,</span> <span class="pre">gen)</span></code> returns Monte Carlo <code class="docutils literal notranslate"><span class="pre">check</span></code> for solutions to guessing problem. If Monte Carlo <code class="docutils literal notranslate"><span class="pre">check</span></code> is unavailable returns <code class="docutils literal notranslate"><span class="pre">check</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-modular-hermite-pade-solver-h-p-solve"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">HP_solve</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> F, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="U32Vector.html#l-u32-vector"><span class="std std-ref">U32Vector</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="U32Vector.html#l-u32-vector"><span class="std std-ref">U32Vector</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> S -&gt; Union(good, reject, no_solution)) -&gt; Union(<a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> S, <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">HP_solve(l,</span> <span class="pre">degs,</span> <span class="pre">kind,</span> <span class="pre">sigma,</span> <span class="pre">gen</span> <span class="pre">check)</span></code> finds a <code class="docutils literal notranslate"><span class="pre">sigma</span></code> basis with degree bounds given by <code class="docutils literal notranslate"><span class="pre">degs</span></code>. It returns <code class="docutils literal notranslate"><span class="pre">false</span></code> if there is no interpolating vector that is correct up to (and including) <code class="docutils literal notranslate"><span class="pre">z^</span></code>(<code class="docutils literal notranslate"><span class="pre">sigma</span></code>-1) with <code class="docutils literal notranslate"><span class="pre">sigma</span></code> <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> <a href="#id1"><span class="problematic" id="id2">|degs+[1, 1, ..., 1]|</span></a> or if check rejects all solutions. It returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if it can not handle given problem.</p>
+</dd>
+</dl>
+<span class="target" id="l-modular-hermite-pade-solver-l-l-f-to-l-p-a"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">LLF_to_LPA</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> F, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; Union(<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="U32Vector.html#l-u32-vector"><span class="std std-ref">U32Vector</span></a>, failed)</dt><dd><p>modular reduction</p>
+</dd>
+</dl>
+<span class="target" id="l-modular-hermite-pade-solver-v-s-u-p-s-to-v-p-a"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">VSUPS_to_VPA</span>: (<a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> S, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="U32Vector.html#l-u32-vector"><span class="std std-ref">U32Vector</span></a></dt><dd><p>modular reduction</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="ModularHermitianRowReduction.html" title="ModularHermitianRowReduction R"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="ModularHermitePade.html" title="ModularHermitePade"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">ModularHermitePadeSolver(F, S)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

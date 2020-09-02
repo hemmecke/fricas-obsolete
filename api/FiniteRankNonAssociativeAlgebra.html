@@ -1,0 +1,364 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FiniteRankNonAssociativeAlgebra R &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="FiniteSetAggregate S" href="FiniteSetAggregate.html" />
+    <link rel="prev" title="FiniteRankAlgebra(R, UP)" href="FiniteRankAlgebra.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="FiniteSetAggregate.html" title="FiniteSetAggregate S"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="FiniteRankAlgebra.html" title="FiniteRankAlgebra(R, UP)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Categories.html" accesskey="U">Categories</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">FiniteRankNonAssociativeAlgebra R</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="finiteranknonassociativealgebra-r">
+<span id="l-finite-rank-non-associative-algebra"></span><span id="index-0"></span><h1>FiniteRankNonAssociativeAlgebra R<a class="headerlink" href="#finiteranknonassociativealgebra-r" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/naalgc.spad#L224">naalgc.spad line 224</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/naalgc.spad#L224">[edit on github]</a></p>
+<ul class="simple">
+<li><p>R: <a class="reference internal" href="CommutativeRing.html#l-commutative-ring"><span class="std std-ref">CommutativeRing</span></a></p></li>
+</ul>
+<p>A FiniteRankNonAssociativeAlgebra is a non associative algebra over a commutative ring <code class="docutils literal notranslate"><span class="pre">R</span></code> which is a free <code class="docutils literal notranslate"><span class="pre">R</span></code>-module of finite rank.</p>
+<dl class="simple">
+<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-0"><span class="std std-ref">0</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Magma.html#id1"><span class="std std-ref">*</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
+</dd>
+<dt><a class="reference internal" href="RightModule.html#id1"><span class="std std-ref">*</span></a>: (%, R) -&gt; %</dt><dd><p>from <a class="reference internal" href="RightModule.html#l-right-module"><span class="std std-ref">RightModule</span></a> R</p>
+</dd>
+<dt><a class="reference internal" href="AbelianGroup.html#id1"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianMonoid.html#id1"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianSemiGroup.html#id1"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l-abelian-semi-group"><span class="std std-ref">AbelianSemiGroup</span></a></p>
+</dd>
+<dt><a class="reference internal" href="LeftModule.html#id1"><span class="std std-ref">*</span></a>: (R, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="LeftModule.html#l-left-module"><span class="std std-ref">LeftModule</span></a> R</p>
+</dd>
+<dt><a class="reference internal" href="AbelianSemiGroup.html#id2"><span class="std std-ref">+</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l-abelian-semi-group"><span class="std std-ref">AbelianSemiGroup</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianGroup.html#id2"><span class="std std-ref">-</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianGroup.html#id2"><span class="std std-ref">-</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
+</dd>
+<dt><a class="reference internal" href="BasicType.html#id1"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Magma.html#id2"><span class="std std-ref">^</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
+</dd>
+<dt><a class="reference internal" href="BasicType.html#id2"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-finite-rank-non-associative-algebra-alternative"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">alternative?</span>: () -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">alternative?()</span></code> tests if <code class="docutils literal notranslate"><span class="pre">2*associator(a,</span> <span class="pre">a,</span> <span class="pre">b)</span> <span class="pre">=</span> <span class="pre">0</span> <span class="pre">=</span> <span class="pre">2*associator(a,</span> <span class="pre">b,</span> <span class="pre">b)</span></code> for all <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code> in the algebra. Note: we only can test this; in general we don<code class="docutils literal notranslate"><span class="pre">'t</span></code> know whether <code class="docutils literal notranslate"><span class="pre">2*a=0</span></code> implies <code class="docutils literal notranslate"><span class="pre">a=0</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-rank-non-associative-algebra-anti-associative"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">antiAssociative?</span>: () -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">antiAssociative?()</span></code> tests if multiplication in algebra is anti-associative, i.e. <code class="docutils literal notranslate"><span class="pre">(a*b)*c</span> <span class="pre">+</span> <span class="pre">a*(b*c)</span> <span class="pre">=</span> <span class="pre">0</span></code> for all <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code>, <code class="docutils literal notranslate"><span class="pre">c</span></code> in the algebra.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-rank-non-associative-algebra-anti-commutative"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">antiCommutative?</span>: () -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">antiCommutative?()</span></code> tests if <code class="docutils literal notranslate"><span class="pre">a*a</span> <span class="pre">=</span> <span class="pre">0</span></code> for all <code class="docutils literal notranslate"><span class="pre">a</span></code> in the algebra. Note: this implies <code class="docutils literal notranslate"><span class="pre">a*b</span> <span class="pre">+</span> <span class="pre">b*a</span> <span class="pre">=</span> <span class="pre">0</span></code> for all <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="NonAssociativeSemiRng.html#l-non-associative-semi-rng-anti-commutator"><span class="std std-ref">antiCommutator</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeSemiRng.html#l-non-associative-semi-rng"><span class="std std-ref">NonAssociativeSemiRng</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-finite-rank-non-associative-algebra-associative"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">associative?</span>: () -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">associative?()</span></code> tests if multiplication in algebra is associative.</p>
+</dd>
+<dt><a class="reference internal" href="NonAssociativeRng.html#l-non-associative-rng-associator"><span class="std std-ref">associator</span></a>: (%, %, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRng.html#l-non-associative-rng"><span class="std std-ref">NonAssociativeRng</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-finite-rank-non-associative-algebra-associator-dependence"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">associatorDependence</span>: () -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> R if R has <a class="reference internal" href="IntegralDomain.html#l-integral-domain"><span class="std std-ref">IntegralDomain</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">associatorDependence()</span></code> looks for the associator identities, i.e. finds a basis of the solutions of the linear combinations of the six permutations of <code class="docutils literal notranslate"><span class="pre">associator(a,</span> <span class="pre">b,</span> <span class="pre">c)</span></code> which yield 0, for all <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code>, <code class="docutils literal notranslate"><span class="pre">c</span></code> in the algebra. The order of the permutations is <code class="docutils literal notranslate"><span class="pre">123</span> <span class="pre">231</span> <span class="pre">312</span> <span class="pre">132</span> <span class="pre">321</span> <span class="pre">213</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="CoercibleTo.html#l-coercible-to-coerce"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-finite-rank-non-associative-algebra-commutative"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">commutative?</span>: () -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">commutative?()</span></code> tests if multiplication in the algebra is commutative.</p>
+</dd>
+<dt><a class="reference internal" href="NonAssociativeRng.html#l-non-associative-rng-commutator"><span class="std std-ref">commutator</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRng.html#l-non-associative-rng"><span class="std std-ref">NonAssociativeRng</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-finite-rank-non-associative-algebra-conditions-for-idempotents"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">conditionsForIdempotents</span>: <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">conditionsForIdempotents([v1,</span> <span class="pre">...,</span> <span class="pre">vn])</span></code> determines a complete list of polynomial equations for the coefficients of idempotents with respect to the <code class="docutils literal notranslate"><span class="pre">R</span></code>-module basis <code class="docutils literal notranslate"><span class="pre">v1</span></code>, …, <code class="docutils literal notranslate"><span class="pre">vn</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-rank-non-associative-algebra-coordinates"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">coordinates</span>: (%, <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> %) -&gt; <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coordinates(a,</span> <span class="pre">[v1,</span> <span class="pre">...,</span> <span class="pre">vn])</span></code> returns the coordinates of <code class="docutils literal notranslate"><span class="pre">a</span></code> with respect to the <code class="docutils literal notranslate"><span class="pre">R</span></code>-module basis <code class="docutils literal notranslate"><span class="pre">v1</span></code>, …, <code class="docutils literal notranslate"><span class="pre">vn</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-9">
+<dt><span class="spadfun">coordinates</span>: (<a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> %, <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> %) -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coordinates([a1,</span> <span class="pre">...,</span> <span class="pre">am],</span> <span class="pre">[v1,</span> <span class="pre">...,</span> <span class="pre">vn])</span></code> returns a matrix whose <code class="docutils literal notranslate"><span class="pre">i</span></code>-th row is formed by the coordinates of <code class="docutils literal notranslate"><span class="pre">ai</span></code> with respect to the <code class="docutils literal notranslate"><span class="pre">R</span></code>-module basis <code class="docutils literal notranslate"><span class="pre">v1</span></code>, …, <code class="docutils literal notranslate"><span class="pre">vn</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-rank-non-associative-algebra-flexible"></span><dl class="simple" id="index-10">
+<dt><span class="spadfun">flexible?</span>: () -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">flexible?()</span></code> tests if <code class="docutils literal notranslate"><span class="pre">2*associator(a,</span> <span class="pre">b,</span> <span class="pre">a)</span> <span class="pre">=</span> <span class="pre">0</span></code> for all <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code> in the algebra. Note: we only can test this; in general we don<code class="docutils literal notranslate"><span class="pre">'t</span></code> know whether <code class="docutils literal notranslate"><span class="pre">2*a=0</span></code> implies <code class="docutils literal notranslate"><span class="pre">a=0</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l-single-integer"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash-update"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-finite-rank-non-associative-algebra-jacobi-identity"></span><dl class="simple" id="index-11">
+<dt><span class="spadfun">jacobiIdentity?</span>: () -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jacobiIdentity?()</span></code> tests if <code class="docutils literal notranslate"><span class="pre">(a*b)*c</span> <span class="pre">+</span> <span class="pre">(b*c)*a</span> <span class="pre">+</span> <span class="pre">(c*a)*b</span> <span class="pre">=</span> <span class="pre">0</span></code> for all <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code>, <code class="docutils literal notranslate"><span class="pre">c</span></code> in the algebra. For example, this holds for crossed products of 3-dimensional vectors.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-rank-non-associative-algebra-jordan-admissible"></span><dl class="simple" id="index-12">
+<dt><span class="spadfun">jordanAdmissible?</span>: () -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jordanAdmissible?()</span></code> tests if 2 is invertible in the coefficient domain and the multiplication defined by <code class="docutils literal notranslate"><span class="pre">(1/2)(a*b+b*a)</span></code> determines a Jordan algebra, i.e. satisfies the Jordan identity. The property of <a class="reference internal" href="CommutativeStar.html#l-commutative-star"><span class="std std-ref">CommutativeStar</span></a> follows from by definition.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-rank-non-associative-algebra-jordan-algebra"></span><dl class="simple" id="index-13">
+<dt><span class="spadfun">jordanAlgebra?</span>: () -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jordanAlgebra?()</span></code> tests if the algebra is commutative, characteristic is not 2, and <code class="docutils literal notranslate"><span class="pre">(a*b)*a^2</span> <span class="pre">-</span> <span class="pre">a*(b*a^2)</span> <span class="pre">=</span> <span class="pre">0</span></code> for all <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code>, <code class="docutils literal notranslate"><span class="pre">c</span></code> in the algebra (Jordan identity). Example: for every associative algebra <code class="docutils literal notranslate"><span class="pre">(A,</span> <span class="pre">+,</span> <span class="pre">&#64;)</span></code> we can construct a Jordan algebra <code class="docutils literal notranslate"><span class="pre">(A,</span> <span class="pre">+,</span> <span class="pre">*)</span></code>, where <code class="docutils literal notranslate"><span class="pre">a*b</span> <span class="pre">:=</span> <span class="pre">(a&#64;b+b&#64;a)/2</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-latex"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-finite-rank-non-associative-algebra-left-alternative"></span><dl class="simple" id="index-14">
+<dt><span class="spadfun">leftAlternative?</span>: () -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">leftAlternative?()</span></code> tests if <code class="docutils literal notranslate"><span class="pre">2*associator(a,</span> <span class="pre">a,</span> <span class="pre">b)</span> <span class="pre">=</span> <span class="pre">0</span></code> for all <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code> in the algebra. Note: we only can test this; in general we don<code class="docutils literal notranslate"><span class="pre">'t</span></code> know whether <code class="docutils literal notranslate"><span class="pre">2*a=0</span></code> implies <code class="docutils literal notranslate"><span class="pre">a=0</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-rank-non-associative-algebra-left-characteristic-polynomial"></span><dl class="simple" id="index-15">
+<dt><span class="spadfun">leftCharacteristicPolynomial</span>: % -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">leftCharacteristicPolynomial(a)</span></code> returns the characteristic polynomial of the left regular representation of <code class="docutils literal notranslate"><span class="pre">a</span></code> with respect to any basis.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-rank-non-associative-algebra-left-discriminant"></span><dl class="simple" id="index-16">
+<dt><span class="spadfun">leftDiscriminant</span>: <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> % -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">leftDiscriminant([v1,</span> <span class="pre">...,</span> <span class="pre">vn])</span></code> returns the determinant of the <code class="docutils literal notranslate"><span class="pre">n</span></code>-by-<code class="docutils literal notranslate"><span class="pre">n</span></code> matrix whose element at the <code class="docutils literal notranslate"><span class="pre">i</span></code><code class="docutils literal notranslate"><span class="pre">-</span></code>th row and <code class="docutils literal notranslate"><span class="pre">j</span></code><code class="docutils literal notranslate"><span class="pre">-</span></code>th column is given by the left trace of the product <code class="docutils literal notranslate"><span class="pre">vi*vj</span></code>. Note: the same as <code class="docutils literal notranslate"><span class="pre">determinant(leftTraceMatrix([v1,</span> <span class="pre">...,</span> <span class="pre">vn]))</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-rank-non-associative-algebra-left-minimal-polynomial"></span><dl class="simple" id="index-17">
+<dt><span class="spadfun">leftMinimalPolynomial</span>: % -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> R if R has <a class="reference internal" href="IntegralDomain.html#l-integral-domain"><span class="std std-ref">IntegralDomain</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">leftMinimalPolynomial(a)</span></code> returns the polynomial determined by the smallest non-trivial linear combination of left powers of <code class="docutils literal notranslate"><span class="pre">a</span></code>. Note: the polynomial never has a constant term as in general the algebra has no unit.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-rank-non-associative-algebra-left-norm"></span><dl class="simple" id="index-18">
+<dt><span class="spadfun">leftNorm</span>: % -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">leftNorm(a)</span></code> returns the determinant of the left regular representation of <code class="docutils literal notranslate"><span class="pre">a</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="Magma.html#l-magma-left-power"><span class="std std-ref">leftPower</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-finite-rank-non-associative-algebra-left-recip"></span><dl class="simple" id="index-19">
+<dt><span class="spadfun">leftRecip</span>: % -&gt; Union(%, failed) if R has <a class="reference internal" href="IntegralDomain.html#l-integral-domain"><span class="std std-ref">IntegralDomain</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">leftRecip(a)</span></code> returns an element, which is a left inverse of <code class="docutils literal notranslate"><span class="pre">a</span></code>, or <code class="docutils literal notranslate"><span class="pre">&quot;failed&quot;</span></code> if there is no unit element, if such an element doesn<code class="docutils literal notranslate"><span class="pre">'t</span></code> exist or cannot be determined (see unitsKnown).</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-rank-non-associative-algebra-left-regular-representation"></span><dl class="simple" id="index-20">
+<dt><span class="spadfun">leftRegularRepresentation</span>: (%, <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> %) -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">leftRegularRepresentation(a,</span> <span class="pre">[v1,</span> <span class="pre">...,</span> <span class="pre">vn])</span></code> returns the matrix <code class="docutils literal notranslate"><span class="pre">m</span></code> of the linear map defined by left multiplication by <code class="docutils literal notranslate"><span class="pre">a</span></code> with respect to the <code class="docutils literal notranslate"><span class="pre">R</span></code>-module basis <code class="docutils literal notranslate"><span class="pre">b</span> <span class="pre">=</span> <span class="pre">[v1,</span> <span class="pre">...,</span> <span class="pre">vn]</span></code>. That is for all <code class="docutils literal notranslate"><span class="pre">x</span></code> <code class="docutils literal notranslate"><span class="pre">coordinates(a*x,</span> <span class="pre">b)</span> <span class="pre">=</span> <span class="pre">m*coordinates(x,</span> <span class="pre">b)</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-rank-non-associative-algebra-left-trace"></span><dl class="simple" id="index-21">
+<dt><span class="spadfun">leftTrace</span>: % -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">leftTrace(a)</span></code> returns the trace of the left regular representation of <code class="docutils literal notranslate"><span class="pre">a</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-rank-non-associative-algebra-left-trace-matrix"></span><dl class="simple" id="index-22">
+<dt><span class="spadfun">leftTraceMatrix</span>: <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> % -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">leftTraceMatrix([v1,</span> <span class="pre">...,</span> <span class="pre">vn])</span></code> is the <code class="docutils literal notranslate"><span class="pre">n</span></code>-by-<code class="docutils literal notranslate"><span class="pre">n</span></code> matrix whose element at the <code class="docutils literal notranslate"><span class="pre">i</span></code><code class="docutils literal notranslate"><span class="pre">-</span></code>th row and <code class="docutils literal notranslate"><span class="pre">j</span></code><code class="docutils literal notranslate"><span class="pre">-</span></code>th column is given by the left trace of the product <code class="docutils literal notranslate"><span class="pre">vi*vj</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-rank-non-associative-algebra-left-unit"></span><dl class="simple" id="index-23">
+<dt><span class="spadfun">leftUnit</span>: () -&gt; Union(%, failed) if R has <a class="reference internal" href="IntegralDomain.html#l-integral-domain"><span class="std std-ref">IntegralDomain</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">leftUnit()</span></code> returns a left unit of the algebra (not necessarily unique), or <code class="docutils literal notranslate"><span class="pre">&quot;failed&quot;</span></code> if there is none.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-rank-non-associative-algebra-left-units"></span><dl class="simple" id="index-24">
+<dt><span class="spadfun">leftUnits</span>: () -&gt; Union(Record(particular: %, basis: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %), failed) if R has <a class="reference internal" href="IntegralDomain.html#l-integral-domain"><span class="std std-ref">IntegralDomain</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">leftUnits()</span></code> returns the affine space of all left units of the algebra, or <code class="docutils literal notranslate"><span class="pre">&quot;failed&quot;</span></code> if there is none.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-rank-non-associative-algebra-lie-admissible"></span><dl class="simple" id="index-25">
+<dt><span class="spadfun">lieAdmissible?</span>: () -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">lieAdmissible?()</span></code> tests if the algebra defined by the commutators is a Lie algebra, i.e. satisfies the Jacobi identity. The property of anticommutativity follows from definition.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-rank-non-associative-algebra-lie-algebra"></span><dl class="simple" id="index-26">
+<dt><span class="spadfun">lieAlgebra?</span>: () -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">lieAlgebra?()</span></code> tests if the algebra is anticommutative and <code class="docutils literal notranslate"><span class="pre">(a*b)*c</span> <span class="pre">+</span> <span class="pre">(b*c)*a</span> <span class="pre">+</span> <span class="pre">(c*a)*b</span> <span class="pre">=</span> <span class="pre">0</span></code> for all <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code>, <code class="docutils literal notranslate"><span class="pre">c</span></code> in the algebra (Jacobi identity). Example: for every associative algebra <code class="docutils literal notranslate"><span class="pre">(A,</span> <span class="pre">+,</span> <span class="pre">&#64;)</span></code> we can construct a Lie algebra <code class="docutils literal notranslate"><span class="pre">(A,</span> <span class="pre">+,</span> <span class="pre">*)</span></code>, where <code class="docutils literal notranslate"><span class="pre">a*b</span> <span class="pre">:=</span> <span class="pre">a&#64;b-b&#64;a</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-rank-non-associative-algebra-noncommutative-jordan-algebra"></span><dl class="simple" id="index-27">
+<dt><span class="spadfun">noncommutativeJordanAlgebra?</span>: () -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">noncommutativeJordanAlgebra?()</span></code> tests if the algebra is flexible and Jordan admissible.</p>
+</dd>
+<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-opposite"><span class="std std-ref">opposite?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+<dt><a class="reference internal" href="NonAssociativeAlgebra.html#l-non-associative-algebra-plenary-power"><span class="std std-ref">plenaryPower</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeAlgebra.html#l-non-associative-algebra"><span class="std std-ref">NonAssociativeAlgebra</span></a> R</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-rank-non-associative-algebra-power-associative"></span><dl class="simple" id="index-28">
+<dt><span class="spadfun">powerAssociative?</span>: () -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">powerAssociative?()</span></code> tests if all subalgebras generated by a single element are associative.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-rank-non-associative-algebra-rank"></span><dl class="simple" id="index-29">
+<dt><span class="spadfun">rank</span>: () -&gt; <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">rank()</span></code> returns the rank of the algebra as <code class="docutils literal notranslate"><span class="pre">R</span></code>-module.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-rank-non-associative-algebra-recip"></span><dl class="simple" id="index-30">
+<dt><span class="spadfun">recip</span>: % -&gt; Union(%, failed) if R has <a class="reference internal" href="IntegralDomain.html#l-integral-domain"><span class="std std-ref">IntegralDomain</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">recip(a)</span></code> returns an element, which is both a left and a right inverse of <code class="docutils literal notranslate"><span class="pre">a</span></code>, or <code class="docutils literal notranslate"><span class="pre">&quot;failed&quot;</span></code> if there is no unit element, if such an element doesn<code class="docutils literal notranslate"><span class="pre">'t</span></code> exist or cannot be determined (see unitsKnown).</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-rank-non-associative-algebra-represents"></span><dl class="simple" id="index-31">
+<dt><span class="spadfun">represents</span>: (<a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> R, <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">represents([a1,</span> <span class="pre">...,</span> <span class="pre">am],</span> <span class="pre">[v1,</span> <span class="pre">...,</span> <span class="pre">vm])</span></code> returns the linear combination <code class="docutils literal notranslate"><span class="pre">a1*vm</span> <span class="pre">+</span> <span class="pre">...</span> <span class="pre">+</span> <span class="pre">an*vm</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-rank-non-associative-algebra-right-alternative"></span><dl class="simple" id="index-32">
+<dt><span class="spadfun">rightAlternative?</span>: () -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">rightAlternative?()</span></code> tests if <code class="docutils literal notranslate"><span class="pre">2*associator(a,</span> <span class="pre">b,</span> <span class="pre">b)</span> <span class="pre">=</span> <span class="pre">0</span></code> for all <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code> in the algebra. Note: we only can test this; in general we don<code class="docutils literal notranslate"><span class="pre">'t</span></code> know whether <code class="docutils literal notranslate"><span class="pre">2*a=0</span></code> implies <code class="docutils literal notranslate"><span class="pre">a=0</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-rank-non-associative-algebra-right-characteristic-polynomial"></span><dl class="simple" id="index-33">
+<dt><span class="spadfun">rightCharacteristicPolynomial</span>: % -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">rightCharacteristicPolynomial(a)</span></code> returns the characteristic polynomial of the right regular representation of <code class="docutils literal notranslate"><span class="pre">a</span></code> with respect to any basis.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-rank-non-associative-algebra-right-discriminant"></span><dl class="simple" id="index-34">
+<dt><span class="spadfun">rightDiscriminant</span>: <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> % -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">rightDiscriminant([v1,</span> <span class="pre">...,</span> <span class="pre">vn])</span></code> returns the determinant of the <code class="docutils literal notranslate"><span class="pre">n</span></code>-by-<code class="docutils literal notranslate"><span class="pre">n</span></code> matrix whose element at the <code class="docutils literal notranslate"><span class="pre">i</span></code><code class="docutils literal notranslate"><span class="pre">-</span></code>th row and <code class="docutils literal notranslate"><span class="pre">j</span></code><code class="docutils literal notranslate"><span class="pre">-</span></code>th column is given by the right trace of the product <code class="docutils literal notranslate"><span class="pre">vi*vj</span></code>. Note: the same as <code class="docutils literal notranslate"><span class="pre">determinant(rightTraceMatrix([v1,</span> <span class="pre">...,</span> <span class="pre">vn]))</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-rank-non-associative-algebra-right-minimal-polynomial"></span><dl class="simple" id="index-35">
+<dt><span class="spadfun">rightMinimalPolynomial</span>: % -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> R if R has <a class="reference internal" href="IntegralDomain.html#l-integral-domain"><span class="std std-ref">IntegralDomain</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">rightMinimalPolynomial(a)</span></code> returns the polynomial determined by the smallest non-trivial linear combination of right powers of <code class="docutils literal notranslate"><span class="pre">a</span></code>. Note: the polynomial never has a constant term as in general the algebra has no unit.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-rank-non-associative-algebra-right-norm"></span><dl class="simple" id="index-36">
+<dt><span class="spadfun">rightNorm</span>: % -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">rightNorm(a)</span></code> returns the determinant of the right regular representation of <code class="docutils literal notranslate"><span class="pre">a</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="Magma.html#l-magma-right-power"><span class="std std-ref">rightPower</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-finite-rank-non-associative-algebra-right-recip"></span><dl class="simple" id="index-37">
+<dt><span class="spadfun">rightRecip</span>: % -&gt; Union(%, failed) if R has <a class="reference internal" href="IntegralDomain.html#l-integral-domain"><span class="std std-ref">IntegralDomain</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">rightRecip(a)</span></code> returns an element, which is a right inverse of <code class="docutils literal notranslate"><span class="pre">a</span></code>, or <code class="docutils literal notranslate"><span class="pre">&quot;failed&quot;</span></code> if there is no unit element, if such an element doesn<code class="docutils literal notranslate"><span class="pre">'t</span></code> exist or cannot be determined (see unitsKnown).</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-rank-non-associative-algebra-right-regular-representation"></span><dl class="simple" id="index-38">
+<dt><span class="spadfun">rightRegularRepresentation</span>: (%, <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> %) -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">rightRegularRepresentation(a,</span> <span class="pre">[v1,</span> <span class="pre">...,</span> <span class="pre">vn])</span></code> returns the matrix <code class="docutils literal notranslate"><span class="pre">m</span></code> of the linear map defined by right multiplication by <code class="docutils literal notranslate"><span class="pre">a</span></code> with respect to the <code class="docutils literal notranslate"><span class="pre">R</span></code>-module basis <code class="docutils literal notranslate"><span class="pre">b</span> <span class="pre">=</span> <span class="pre">[v1,</span> <span class="pre">...,</span> <span class="pre">vn]</span></code>. That is for all <code class="docutils literal notranslate"><span class="pre">x</span></code> <code class="docutils literal notranslate"><span class="pre">coordinates(x*a,</span> <span class="pre">b)</span> <span class="pre">=</span> <span class="pre">m*coordinates(x,</span> <span class="pre">b)</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-rank-non-associative-algebra-right-trace"></span><dl class="simple" id="index-39">
+<dt><span class="spadfun">rightTrace</span>: % -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">rightTrace(a)</span></code> returns the trace of the right regular representation of <code class="docutils literal notranslate"><span class="pre">a</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-rank-non-associative-algebra-right-trace-matrix"></span><dl class="simple" id="index-40">
+<dt><span class="spadfun">rightTraceMatrix</span>: <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> % -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">rightTraceMatrix([v1,</span> <span class="pre">...,</span> <span class="pre">vn])</span></code> is the <code class="docutils literal notranslate"><span class="pre">n</span></code>-by-<code class="docutils literal notranslate"><span class="pre">n</span></code> matrix whose element at the <code class="docutils literal notranslate"><span class="pre">i</span></code><code class="docutils literal notranslate"><span class="pre">-</span></code>th row and <code class="docutils literal notranslate"><span class="pre">j</span></code><code class="docutils literal notranslate"><span class="pre">-</span></code>th column is given by the right trace of the product <code class="docutils literal notranslate"><span class="pre">vi*vj</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-rank-non-associative-algebra-right-unit"></span><dl class="simple" id="index-41">
+<dt><span class="spadfun">rightUnit</span>: () -&gt; Union(%, failed) if R has <a class="reference internal" href="IntegralDomain.html#l-integral-domain"><span class="std std-ref">IntegralDomain</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">rightUnit()</span></code> returns a right unit of the algebra (not necessarily unique), or <code class="docutils literal notranslate"><span class="pre">&quot;failed&quot;</span></code> if there is none.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-rank-non-associative-algebra-right-units"></span><dl class="simple" id="index-42">
+<dt><span class="spadfun">rightUnits</span>: () -&gt; Union(Record(particular: %, basis: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %), failed) if R has <a class="reference internal" href="IntegralDomain.html#l-integral-domain"><span class="std std-ref">IntegralDomain</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">rightUnits()</span></code> returns the affine space of all right units of the algebra, or <code class="docutils literal notranslate"><span class="pre">&quot;failed&quot;</span></code> if there is none.</p>
+</dd>
+<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-sample"><span class="std std-ref">sample</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-finite-rank-non-associative-algebra-some-basis"></span><dl class="simple" id="index-43">
+<dt><span class="spadfun">someBasis</span>: () -&gt; <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">someBasis()</span></code> returns some <code class="docutils literal notranslate"><span class="pre">R</span></code>-module basis.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-rank-non-associative-algebra-structural-constants"></span><dl class="simple" id="index-44">
+<dt><span class="spadfun">structuralConstants</span>: <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> % -&gt; <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">structuralConstants([v1,</span> <span class="pre">v2,</span> <span class="pre">...,</span> <span class="pre">vm])</span></code> calculates the structural constants <code class="docutils literal notranslate"><span class="pre">[(gammaijk)</span> <span class="pre">for</span> <span class="pre">k</span> <span class="pre">in</span> <span class="pre">1..m]</span></code> defined by <code class="docutils literal notranslate"><span class="pre">vi</span> <span class="pre">*</span> <span class="pre">vj</span> <span class="pre">=</span> <span class="pre">gammaij1</span> <span class="pre">*</span> <span class="pre">v1</span> <span class="pre">+</span> <span class="pre">...</span> <span class="pre">+</span> <span class="pre">gammaijm</span> <span class="pre">*</span> <span class="pre">vm</span></code>, where <code class="docutils literal notranslate"><span class="pre">[v1,</span> <span class="pre">...,</span> <span class="pre">vm]</span></code> is an <code class="docutils literal notranslate"><span class="pre">R</span></code>-module basis of a subalgebra.</p>
+</dd>
+<dt><a class="reference internal" href="CancellationAbelianMonoid.html#l-cancellation-abelian-monoid-subtract-if-can"><span class="std std-ref">subtractIfCan</span></a>: (%, %) -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="CancellationAbelianMonoid.html#l-cancellation-abelian-monoid"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-finite-rank-non-associative-algebra-unit"></span><dl class="simple" id="index-45">
+<dt><span class="spadfun">unit</span>: () -&gt; Union(%, failed) if R has <a class="reference internal" href="IntegralDomain.html#l-integral-domain"><span class="std std-ref">IntegralDomain</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">unit()</span></code> returns a unit of the algebra (necessarily unique), or <code class="docutils literal notranslate"><span class="pre">&quot;failed&quot;</span></code> if there is none.</p>
+</dd>
+<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-zero"><span class="std std-ref">zero?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+</dl>
+<p><a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
+<p><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+<p><a class="reference internal" href="AbelianSemiGroup.html#l-abelian-semi-group"><span class="std std-ref">AbelianSemiGroup</span></a></p>
+<p><a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+<p><a class="reference internal" href="BiModule.html#l-bi-module"><span class="std std-ref">BiModule</span></a>(R, R)</p>
+<p><a class="reference internal" href="CancellationAbelianMonoid.html#l-cancellation-abelian-monoid"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
+<p><a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+<p><a class="reference internal" href="LeftModule.html#l-left-module"><span class="std std-ref">LeftModule</span></a> R</p>
+<p><a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
+<p><a class="reference internal" href="Module.html#l-module"><span class="std std-ref">Module</span></a> R</p>
+<p><a class="reference internal" href="NonAssociativeAlgebra.html#l-non-associative-algebra"><span class="std std-ref">NonAssociativeAlgebra</span></a> R</p>
+<p><a class="reference internal" href="NonAssociativeRng.html#l-non-associative-rng"><span class="std std-ref">NonAssociativeRng</span></a></p>
+<p><a class="reference internal" href="NonAssociativeSemiRng.html#l-non-associative-semi-rng"><span class="std std-ref">NonAssociativeSemiRng</span></a></p>
+<p><a class="reference internal" href="RightModule.html#l-right-module"><span class="std std-ref">RightModule</span></a> R</p>
+<p><a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+<p><a class="reference internal" href="unitsKnown.html#l-units-known"><span class="std std-ref">unitsKnown</span></a> if R has <a class="reference internal" href="IntegralDomain.html#l-integral-domain"><span class="std std-ref">IntegralDomain</span></a></p>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="FiniteSetAggregate.html" title="FiniteSetAggregate S"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="FiniteRankAlgebra.html" title="FiniteRankAlgebra(R, UP)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Categories.html" >Categories</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">FiniteRankNonAssociativeAlgebra R</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FortranProgram(name, returnType, arguments, symbols) &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="FortranScalarType" href="FortranScalarType.html" />
+    <link rel="prev" title="FortranFormat" href="FortranFormat.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="FortranScalarType.html" title="FortranScalarType"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="FortranFormat.html" title="FortranFormat"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Domains.html" accesskey="U">Domains</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">FortranProgram(name, returnType, arguments, symbols)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="fortranprogram-name-returntype-arguments-symbols">
+<span id="l-fortran-program"></span><span id="index-0"></span><h1>FortranProgram(name, returnType, arguments, symbols)<a class="headerlink" href="#fortranprogram-name-returntype-arguments-symbols" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/fortran.spad#L726">fortran.spad line 726</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/fortran.spad#L726">[edit on github]</a></p>
+<ul class="simple">
+<li><p>name: <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a></p></li>
+<li><p>returnType: Union(fst: <a class="reference internal" href="FortranScalarType.html#l-fortran-scalar-type"><span class="std std-ref">FortranScalarType</span></a>, void: void)</p></li>
+<li><p>arguments: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a></p></li>
+<li><p>symbols: <a class="reference internal" href="SymbolTable.html#l-symbol-table"><span class="std std-ref">SymbolTable</span></a></p></li>
+</ul>
+<p><a class="reference internal" href="#l-fortran-program"><span class="std std-ref">FortranProgram</span></a> allows the user to build and manipulate simple models of FORTRAN subprograms. These can then be transformed into actual FORTRAN notation.</p>
+<dl class="simple">
+<dt><a class="reference internal" href="CoercibleTo.html#l-coercible-to-coerce"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-fortran-program-coerce"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="Equation.html#l-equation"><span class="std std-ref">Equation</span></a> <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Complex.html#l-complex"><span class="std std-ref">Complex</span></a> <a class="reference internal" href="Float.html#l-float"><span class="std std-ref">Float</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(eq)</span></code> is undocumented.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-2">
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="Equation.html#l-equation"><span class="std std-ref">Equation</span></a> <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Float.html#l-float"><span class="std std-ref">Float</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(eq)</span></code> is undocumented.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-3">
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="Equation.html#l-equation"><span class="std std-ref">Equation</span></a> <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(eq)</span></code> is undocumented.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-4">
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="Equation.html#l-equation"><span class="std std-ref">Equation</span></a> <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="MachineComplex.html#l-machine-complex"><span class="std std-ref">MachineComplex</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(eq)</span></code> is undocumented.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-5">
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="Equation.html#l-equation"><span class="std std-ref">Equation</span></a> <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="MachineFloat.html#l-machine-float"><span class="std std-ref">MachineFloat</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(eq)</span></code> is undocumented.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-6">
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="Equation.html#l-equation"><span class="std std-ref">Equation</span></a> <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="MachineInteger.html#l-machine-integer"><span class="std std-ref">MachineInteger</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(eq)</span></code> is undocumented.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-7">
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Complex.html#l-complex"><span class="std std-ref">Complex</span></a> <a class="reference internal" href="Float.html#l-float"><span class="std std-ref">Float</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(e)</span></code> is undocumented.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-8">
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Float.html#l-float"><span class="std std-ref">Float</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(e)</span></code> is undocumented.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-9">
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(e)</span></code> is undocumented.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-10">
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="MachineComplex.html#l-machine-complex"><span class="std std-ref">MachineComplex</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(e)</span></code> is undocumented.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-11">
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="MachineFloat.html#l-machine-float"><span class="std std-ref">MachineFloat</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(e)</span></code> is undocumented.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-12">
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="MachineInteger.html#l-machine-integer"><span class="std std-ref">MachineInteger</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(e)</span></code> is undocumented.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-13">
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="FortranCode.html#l-fortran-code"><span class="std std-ref">FortranCode</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(fc)</span></code> is undocumented.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-14">
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="FortranCode.html#l-fortran-code"><span class="std std-ref">FortranCode</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(lfc)</span></code> is undocumented.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-15">
+<dt><span class="spadfun">coerce</span>: Record(localSymbols: <a class="reference internal" href="SymbolTable.html#l-symbol-table"><span class="std std-ref">SymbolTable</span></a>, code: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="FortranCode.html#l-fortran-code"><span class="std std-ref">FortranCode</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(r)</span></code> is undocumented.</p>
+</dd>
+<dt><a class="reference internal" href="FortranProgramCategory.html#l-fortran-program-category-output-as-fortran"><span class="std std-ref">outputAsFortran</span></a>: % -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p>from <a class="reference internal" href="FortranProgramCategory.html#l-fortran-program-category"><span class="std std-ref">FortranProgramCategory</span></a></p>
+</dd>
+</dl>
+<p><a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+<p><a class="reference internal" href="FortranProgramCategory.html#l-fortran-program-category"><span class="std std-ref">FortranProgramCategory</span></a></p>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="FortranScalarType.html" title="FortranScalarType"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="FortranFormat.html" title="FortranFormat"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Domains.html" >Domains</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">FortranProgram(name, returnType, arguments, symbols)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

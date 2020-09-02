@@ -1,0 +1,264 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Permutation S &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="PermutationGroup S" href="PermutationGroup.html" />
+    <link rel="prev" title="PendantTree S" href="PendantTree.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="PermutationGroup.html" title="PermutationGroup S"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="PendantTree.html" title="PendantTree S"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Domains.html" accesskey="U">Domains</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Permutation S</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="permutation-s">
+<span id="l-permutation"></span><span id="index-0"></span><h1>Permutation S<a class="headerlink" href="#permutation-s" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/perm.spad#L43">perm.spad line 43</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/perm.spad#L43">[edit on github]</a></p>
+<ul class="simple">
+<li><p>S: <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p></li>
+</ul>
+<p>Permutation(<code class="docutils literal notranslate"><span class="pre">S</span></code>) implements the group of all bijections on a set <code class="docutils literal notranslate"><span class="pre">S</span></code>, which move only a finite number of points. A permutation is considered as a map from <code class="docutils literal notranslate"><span class="pre">S</span></code> into <code class="docutils literal notranslate"><span class="pre">S</span></code>. In particular multiplication is defined as composition of maps: <em>pi1 * pi2 = pi1 o pi2</em>. The internal representation of permuatations are two lists of equal length representing preimages and images.</p>
+<dl class="simple">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-1"><span class="std std-ref">1</span></a>: %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Magma.html#id1"><span class="std std-ref">*</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Group.html#id1"><span class="std std-ref">/</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="Group.html#l-group"><span class="std std-ref">Group</span></a></p>
+</dd>
+<dt><a class="reference internal" href="PermutationCategory.html#id1"><span class="std std-ref">&lt;</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PermutationCategory.html#l-permutation-category"><span class="std std-ref">PermutationCategory</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="PartialOrder.html#id2"><span class="std std-ref">&lt;=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a> if S has <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a> or S has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l-partial-order"><span class="std std-ref">PartialOrder</span></a></p>
+</dd>
+<dt><a class="reference internal" href="BasicType.html#id1"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+<dt><a class="reference internal" href="PartialOrder.html#id3"><span class="std std-ref">&gt;</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a> if S has <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a> or S has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l-partial-order"><span class="std std-ref">PartialOrder</span></a></p>
+</dd>
+<dt><a class="reference internal" href="PartialOrder.html#id4"><span class="std std-ref">&gt;=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a> if S has <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a> or S has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l-partial-order"><span class="std std-ref">PartialOrder</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Group.html#id2"><span class="std std-ref">^</span></a>: (%, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Group.html#l-group"><span class="std std-ref">Group</span></a></p>
+</dd>
+<dt><a class="reference internal" href="MagmaWithUnit.html#id1"><span class="std std-ref">^</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Magma.html#id2"><span class="std std-ref">^</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
+</dd>
+<dt><a class="reference internal" href="BasicType.html#id2"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+<dt><a class="reference internal" href="CoercibleTo.html#l-coercible-to-coerce"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-permutation-coerce"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(lls)</span></code> coerces a list of cycles <em>lls</em> to a permutation, each cycle being a list with no repetitions, is coerced to the permutation, which maps <em>ls.i</em> to <em>ls.i+1</em>, indices modulo the length of the list, then these permutations are mutiplied. Error: if repetitions occur in one cycle.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-2">
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(ls)</span></code> coerces a cycle <em>ls</em>, i.e. a list with not repetitions to a permutation, which maps <em>ls.i</em> to <em>ls.i+1</em>, indices modulo the length of the list. Error: if repetitions occur.</p>
+</dd>
+</dl>
+<span class="target" id="l-permutation-coerce-images"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">coerceImages</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S -&gt; % if S has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a> or S has <a class="reference internal" href="IntegerNumberSystem.html#l-integer-number-system"><span class="std std-ref">IntegerNumberSystem</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerceImages(ls)</span></code> coerces the list <em>ls</em> to a permutation whose image is given by <em>ls</em> and the preimage is fixed to be <em>[1, …, n]</em>. Note: {coerceImages(<code class="docutils literal notranslate"><span class="pre">ls</span></code>)=coercePreimagesImages([1, …, <code class="docutils literal notranslate"><span class="pre">n</span></code>], <code class="docutils literal notranslate"><span class="pre">ls</span></code>)}. We assume that both preimage and image do not contain repetitions.</p>
+</dd>
+</dl>
+<span class="target" id="l-permutation-coerce-list-of-pairs"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">coerceListOfPairs</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerceListOfPairs(lls)</span></code> coerces a list of pairs <em>lls</em> to a permutation. Error: if not consistent, i.e. the set of the first elements coincides with the set of second elements. coerce(<code class="docutils literal notranslate"><span class="pre">p</span></code>) generates output of the permutation <code class="docutils literal notranslate"><span class="pre">p</span></code> with domain OutputForm.</p>
+</dd>
+</dl>
+<span class="target" id="l-permutation-coerce-preimages-images"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">coercePreimagesImages</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coercePreimagesImages(lls)</span></code> coerces the representation <em>lls</em> of a permutation as a list of preimages and images to a permutation. We assume that both preimage and image do not contain repetitions.</p>
+</dd>
+<dt><a class="reference internal" href="Group.html#l-group-commutator"><span class="std std-ref">commutator</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="Group.html#l-group"><span class="std std-ref">Group</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Group.html#l-group-conjugate"><span class="std std-ref">conjugate</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="Group.html#l-group"><span class="std std-ref">Group</span></a></p>
+</dd>
+<dt><a class="reference internal" href="PermutationCategory.html#l-permutation-category-cycle"><span class="std std-ref">cycle</span></a>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S -&gt; %</dt><dd><p>from <a class="reference internal" href="PermutationCategory.html#l-permutation-category"><span class="std std-ref">PermutationCategory</span></a> S</p>
+</dd>
+</dl>
+<span class="target" id="l-permutation-cycle-partition"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">cyclePartition</span>: % -&gt; <a class="reference internal" href="Partition.html#l-partition"><span class="std std-ref">Partition</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">cyclePartition(p)</span></code> returns the cycle structure of a permutation <code class="docutils literal notranslate"><span class="pre">p</span></code> including cycles of length 1 only if <code class="docutils literal notranslate"><span class="pre">S</span></code> is finite.</p>
+</dd>
+<dt><a class="reference internal" href="PermutationCategory.html#l-permutation-category-cycles"><span class="std std-ref">cycles</span></a>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S -&gt; %</dt><dd><p>from <a class="reference internal" href="PermutationCategory.html#l-permutation-category"><span class="std std-ref">PermutationCategory</span></a> S</p>
+</dd>
+</dl>
+<span class="target" id="l-permutation-degree"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">degree</span>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">degree(p)</span></code> returns the number of points moved by the permutation <code class="docutils literal notranslate"><span class="pre">p</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="PermutationCategory.html#l-permutation-category-elt"><span class="std std-ref">elt</span></a>: (%, S) -&gt; S</dt><dd><p>from <a class="reference internal" href="PermutationCategory.html#l-permutation-category"><span class="std std-ref">PermutationCategory</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="PermutationCategory.html#l-permutation-category-eval"><span class="std std-ref">eval</span></a>: (%, S) -&gt; S</dt><dd><p>from <a class="reference internal" href="PermutationCategory.html#l-permutation-category"><span class="std std-ref">PermutationCategory</span></a> S</p>
+</dd>
+</dl>
+<span class="target" id="l-permutation-even"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">even?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">even?(p)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if and only if <code class="docutils literal notranslate"><span class="pre">p</span></code> is an even permutation, i.e. <em>sign(p)</em> is 1.</p>
+</dd>
+</dl>
+<span class="target" id="l-permutation-fixed-points"></span><dl class="simple" id="index-9">
+<dt><span class="spadfun">fixedPoints</span>: % -&gt; <a class="reference internal" href="Set.html#l-set"><span class="std std-ref">Set</span></a> S if S has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">fixedPoints(p)</span></code> returns the points fixed by the permutation <code class="docutils literal notranslate"><span class="pre">p</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l-single-integer"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash-update"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Group.html#l-group-inv"><span class="std std-ref">inv</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="Group.html#l-group"><span class="std std-ref">Group</span></a></p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-latex"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-left-power"><span class="std std-ref">leftPower</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Magma.html#l-magma-left-power"><span class="std std-ref">leftPower</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
+</dd>
+<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-left-recip"><span class="std std-ref">leftRecip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-permutation-list-representation"></span><dl class="simple" id="index-10">
+<dt><span class="spadfun">listRepresentation</span>: % -&gt; Record(preimage: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S, image: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">listRepresentation(p)</span></code> produces a representation <em>rep</em> of the permutation <code class="docutils literal notranslate"><span class="pre">p</span></code> as a list of preimages and images, <code class="docutils literal notranslate"><span class="pre">i</span></code>.<code class="docutils literal notranslate"><span class="pre">e</span></code> <code class="docutils literal notranslate"><span class="pre">p</span></code> maps <em>(rep.preimage).k</em> to <em>(rep.image).k</em> for all indices <code class="docutils literal notranslate"><span class="pre">k</span></code>. Elements of <code class="docutils literal notranslate"><span class="pre">S</span></code> not in <em>(rep.preimage).k</em> are fixed points, and these are the only fixed points of the permutation.</p>
+</dd>
+<dt><a class="reference internal" href="OrderedSet.html#l-ordered-set-max"><span class="std std-ref">max</span></a>: (%, %) -&gt; % if S has <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a> or S has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a></p>
+</dd>
+<dt><a class="reference internal" href="OrderedSet.html#l-ordered-set-min"><span class="std std-ref">min</span></a>: (%, %) -&gt; % if S has <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a> or S has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-permutation-moved-points"></span><dl class="simple" id="index-11">
+<dt><span class="spadfun">movedPoints</span>: % -&gt; <a class="reference internal" href="Set.html#l-set"><span class="std std-ref">Set</span></a> S</dt><dd><p><code class="docutils literal notranslate"><span class="pre">movedPoints(p)</span></code> returns the set of points moved by the permutation <code class="docutils literal notranslate"><span class="pre">p</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-permutation-number-of-cycles"></span><dl class="simple" id="index-12">
+<dt><span class="spadfun">numberOfCycles</span>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">numberOfCycles(p)</span></code> returns the number of non-trivial cycles of the permutation <code class="docutils literal notranslate"><span class="pre">p</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-permutation-odd"></span><dl class="simple" id="index-13">
+<dt><span class="spadfun">odd?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">odd?(p)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if and only if <code class="docutils literal notranslate"><span class="pre">p</span></code> is an odd permutation i.e. <em>sign(p)</em> is <em>-1</em>.</p>
+</dd>
+<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-one"><span class="std std-ref">one?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+<dt><a class="reference internal" href="PermutationCategory.html#l-permutation-category-orbit"><span class="std std-ref">orbit</span></a>: (%, S) -&gt; <a class="reference internal" href="Set.html#l-set"><span class="std std-ref">Set</span></a> S</dt><dd><p>from <a class="reference internal" href="PermutationCategory.html#l-permutation-category"><span class="std std-ref">PermutationCategory</span></a> S</p>
+</dd>
+</dl>
+<span class="target" id="l-permutation-order"></span><dl class="simple" id="index-14">
+<dt><span class="spadfun">order</span>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">order(p)</span></code> returns the order of a permutation <code class="docutils literal notranslate"><span class="pre">p</span></code> as a group element.</p>
+</dd>
+<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-recip"><span class="std std-ref">recip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-right-power"><span class="std std-ref">rightPower</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Magma.html#l-magma-right-power"><span class="std std-ref">rightPower</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
+</dd>
+<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-right-recip"><span class="std std-ref">rightRecip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-sample"><span class="std std-ref">sample</span></a>: %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-permutation-sign"></span><dl class="simple" id="index-15">
+<dt><span class="spadfun">sign</span>: % -&gt; <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">sign(p)</span></code> returns the signum of the permutation <code class="docutils literal notranslate"><span class="pre">p</span></code>, <code class="docutils literal notranslate"><span class="pre">+1</span></code> or <code class="docutils literal notranslate"><span class="pre">-1</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="Comparable.html#l-comparable-smaller"><span class="std std-ref">smaller?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a> if S has <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a> or S has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-permutation-sort"></span><dl class="simple" id="index-16">
+<dt><span class="spadfun">sort</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sort(lp)</span></code> sorts a list of permutations <em>lp</em> according to cycle structure first according to length of cycles, second, if <code class="docutils literal notranslate"><span class="pre">S</span></code> has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a> or <code class="docutils literal notranslate"><span class="pre">S</span></code> has <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a> according to lexicographical order of entries in cycles of equal length.</p>
+</dd>
+</dl>
+<p><a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+<p><a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+<p><a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a> if S has <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a> or S has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></p>
+<p><a class="reference internal" href="Group.html#l-group"><span class="std std-ref">Group</span></a></p>
+<p><a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
+<p><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
+<p><a class="reference internal" href="Monoid.html#l-monoid"><span class="std std-ref">Monoid</span></a></p>
+<p><a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a> if S has <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a> or S has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></p>
+<p><a class="reference internal" href="PartialOrder.html#l-partial-order"><span class="std std-ref">PartialOrder</span></a> if S has <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a> or S has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></p>
+<p><a class="reference internal" href="PermutationCategory.html#l-permutation-category"><span class="std std-ref">PermutationCategory</span></a> S</p>
+<p><a class="reference internal" href="SemiGroup.html#l-semi-group"><span class="std std-ref">SemiGroup</span></a></p>
+<p><a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+<p><a class="reference internal" href="TwoSidedRecip.html#l-two-sided-recip"><span class="std std-ref">TwoSidedRecip</span></a></p>
+<p><a class="reference internal" href="unitsKnown.html#l-units-known"><span class="std std-ref">unitsKnown</span></a></p>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="PermutationGroup.html" title="PermutationGroup S"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="PendantTree.html" title="PendantTree S"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Domains.html" >Domains</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Permutation S</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

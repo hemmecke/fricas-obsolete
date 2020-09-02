@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TextFile &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="TextWriter" href="TextWriter.html" />
+    <link rel="prev" title="TexmacsFormat" href="TexmacsFormat.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="TextWriter.html" title="TextWriter"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="TexmacsFormat.html" title="TexmacsFormat"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Domains.html" accesskey="U">Domains</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">TextFile</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="textfile">
+<span id="l-text-file"></span><span id="index-0"></span><h1>TextFile<a class="headerlink" href="#textfile" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/files.spad#L144">files.spad line 144</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/files.spad#L144">[edit on github]</a></p>
+<p>This domain provides an implementation of text files. Text is stored in these files using the native character set of the computer.</p>
+<dl class="simple">
+<dt><a class="reference internal" href="BasicType.html#id1"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+<dt><a class="reference internal" href="BasicType.html#id2"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+<dt><a class="reference internal" href="FileCategory.html#l-file-category-close"><span class="std std-ref">close!</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="FileCategory.html#l-file-category"><span class="std std-ref">FileCategory</span></a>(<a class="reference internal" href="FileName.html#l-file-name"><span class="std std-ref">FileName</span></a>, <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>)</p>
+</dd>
+<dt><a class="reference internal" href="CoercibleTo.html#l-coercible-to-coerce"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-text-file-end-of-file"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">endOfFile?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">endOfFile?(f)</span></code> tests whether the file <code class="docutils literal notranslate"><span class="pre">f</span></code> is positioned after the end of all text. If the file is open for output, then this test is always <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="FileCategory.html#l-file-category-flush"><span class="std std-ref">flush</span></a>: % -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p>from <a class="reference internal" href="FileCategory.html#l-file-category"><span class="std std-ref">FileCategory</span></a>(<a class="reference internal" href="FileName.html#l-file-name"><span class="std std-ref">FileName</span></a>, <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>)</p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l-single-integer"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash-update"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+<dt><a class="reference internal" href="FileCategory.html#l-file-category-iomode"><span class="std std-ref">iomode</span></a>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="FileCategory.html#l-file-category"><span class="std std-ref">FileCategory</span></a>(<a class="reference internal" href="FileName.html#l-file-name"><span class="std std-ref">FileName</span></a>, <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>)</p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-latex"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+<dt><a class="reference internal" href="FileCategory.html#l-file-category-name"><span class="std std-ref">name</span></a>: % -&gt; <a class="reference internal" href="FileName.html#l-file-name"><span class="std std-ref">FileName</span></a></dt><dd><p>from <a class="reference internal" href="FileCategory.html#l-file-category"><span class="std std-ref">FileCategory</span></a>(<a class="reference internal" href="FileName.html#l-file-name"><span class="std std-ref">FileName</span></a>, <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>)</p>
+</dd>
+<dt><a class="reference internal" href="FileCategory.html#l-file-category-open"><span class="std std-ref">open</span></a>: (<a class="reference internal" href="FileName.html#l-file-name"><span class="std std-ref">FileName</span></a>, <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="FileCategory.html#l-file-category"><span class="std std-ref">FileCategory</span></a>(<a class="reference internal" href="FileName.html#l-file-name"><span class="std std-ref">FileName</span></a>, <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>)</p>
+</dd>
+<dt><a class="reference internal" href="FileCategory.html#l-file-category-open"><span class="std std-ref">open</span></a>: <a class="reference internal" href="FileName.html#l-file-name"><span class="std std-ref">FileName</span></a> -&gt; %</dt><dd><p>from <a class="reference internal" href="FileCategory.html#l-file-category"><span class="std std-ref">FileCategory</span></a>(<a class="reference internal" href="FileName.html#l-file-name"><span class="std std-ref">FileName</span></a>, <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>)</p>
+</dd>
+<dt><a class="reference internal" href="FileCategory.html#l-file-category-read"><span class="std std-ref">read!</span></a>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="FileCategory.html#l-file-category"><span class="std std-ref">FileCategory</span></a>(<a class="reference internal" href="FileName.html#l-file-name"><span class="std std-ref">FileName</span></a>, <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>)</p>
+</dd>
+</dl>
+<span class="target" id="l-text-file-read-if-can"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">readIfCan!</span>: % -&gt; Union(<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">readIfCan!(f)</span></code> returns a string of the contents of a line from file <code class="docutils literal notranslate"><span class="pre">f</span></code>, if possible. If <code class="docutils literal notranslate"><span class="pre">f</span></code> is not readable or if it is positioned at the end of file, then <code class="docutils literal notranslate"><span class="pre">&quot;failed&quot;</span></code> is returned.</p>
+</dd>
+</dl>
+<span class="target" id="l-text-file-read-line"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">readLine!</span>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">readLine!(f)</span></code> returns a string of the contents of a line from the file <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-text-file-read-line-if-can"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">readLineIfCan!</span>: % -&gt; Union(<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">readLineIfCan!(f)</span></code> returns a string of the contents of a line from file <code class="docutils literal notranslate"><span class="pre">f</span></code>, if possible. If <code class="docutils literal notranslate"><span class="pre">f</span></code> is not readable or if it is positioned at the end of file, then <code class="docutils literal notranslate"><span class="pre">&quot;failed&quot;</span></code> is returned.</p>
+</dd>
+<dt><a class="reference internal" href="FileCategory.html#l-file-category-reopen"><span class="std std-ref">reopen!</span></a>: (%, <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="FileCategory.html#l-file-category"><span class="std std-ref">FileCategory</span></a>(<a class="reference internal" href="FileName.html#l-file-name"><span class="std std-ref">FileName</span></a>, <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>)</p>
+</dd>
+<dt><a class="reference internal" href="FileCategory.html#l-file-category-write"><span class="std std-ref">write!</span></a>: (%, <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>) -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="FileCategory.html#l-file-category"><span class="std std-ref">FileCategory</span></a>(<a class="reference internal" href="FileName.html#l-file-name"><span class="std std-ref">FileName</span></a>, <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>)</p>
+</dd>
+</dl>
+<span class="target" id="l-text-file-write-line"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">writeLine!</span>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">writeLine!(f)</span></code> finishes the current line in the file <code class="docutils literal notranslate"><span class="pre">f</span></code>. An empty string is returned. The call <code class="docutils literal notranslate"><span class="pre">writeLine!(f)</span></code> is equivalent to <code class="docutils literal notranslate"><span class="pre">writeLine!(f,&quot;&quot;)</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-6">
+<dt><span class="spadfun">writeLine!</span>: (%, <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>) -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">writeLine!(f,</span> <span class="pre">s)</span></code> writes the contents of the string <code class="docutils literal notranslate"><span class="pre">s</span></code> and finishes the current line in the file <code class="docutils literal notranslate"><span class="pre">f</span></code>. The value of <code class="docutils literal notranslate"><span class="pre">s</span></code> is returned.</p>
+</dd>
+</dl>
+<p><a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+<p><a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+<p><a class="reference internal" href="FileCategory.html#l-file-category"><span class="std std-ref">FileCategory</span></a>(<a class="reference internal" href="FileName.html#l-file-name"><span class="std std-ref">FileName</span></a>, <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>)</p>
+<p><a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="TextWriter.html" title="TextWriter"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="TexmacsFormat.html" title="TexmacsFormat"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Domains.html" >Domains</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">TextFile</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BasicOperatorFunctions1 A &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="BezoutMatrix(R, UP, M, Row, Col)" href="BezoutMatrix.html" />
+    <link rel="prev" title="BalancedFactorisation(R, UP)" href="BalancedFactorisation.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="BezoutMatrix.html" title="BezoutMatrix(R, UP, M, Row, Col)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="BalancedFactorisation.html" title="BalancedFactorisation(R, UP)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">BasicOperatorFunctions1 A</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="basicoperatorfunctions1-a">
+<span id="l-basic-operator-functions1"></span><span id="index-0"></span><h1>BasicOperatorFunctions1 A<a class="headerlink" href="#basicoperatorfunctions1-a" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/op.spad#L183">op.spad line 183</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/op.spad#L183">[edit on github]</a></p>
+<ul class="simple">
+<li><p>A: <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p></li>
+</ul>
+<p>This package exports functions to set some commonly used properties of operators, including properties which contain functions.</p>
+<span class="target" id="l-basic-operator-functions1-constant-operator"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">constantOperator</span>: A -&gt; <a class="reference internal" href="BasicOperator.html#l-basic-operator"><span class="std std-ref">BasicOperator</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">constantOperator(a)</span></code> returns a nullary operator op such that <code class="docutils literal notranslate"><span class="pre">op()</span></code> always evaluate to <code class="docutils literal notranslate"><span class="pre">a</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-basic-operator-functions1-constant-op-if-can"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">constantOpIfCan</span>: <a class="reference internal" href="BasicOperator.html#l-basic-operator"><span class="std std-ref">BasicOperator</span></a> -&gt; Union(A, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">constantOpIfCan(op)</span></code> returns <code class="docutils literal notranslate"><span class="pre">a</span></code> if <code class="docutils literal notranslate"><span class="pre">op</span></code> is the constant nullary operator always returning <code class="docutils literal notranslate"><span class="pre">a</span></code>, “failed” otherwise.</p>
+</dd>
+</dl>
+<span class="target" id="l-basic-operator-functions1-derivative"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">derivative</span>: (<a class="reference internal" href="BasicOperator.html#l-basic-operator"><span class="std std-ref">BasicOperator</span></a>, A -&gt; A) -&gt; <a class="reference internal" href="BasicOperator.html#l-basic-operator"><span class="std std-ref">BasicOperator</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">derivative(op,</span> <span class="pre">foo)</span></code> attaches foo as the “%diff” property of <code class="docutils literal notranslate"><span class="pre">op</span></code>. If <code class="docutils literal notranslate"><span class="pre">op</span></code> has an “%diff” property <code class="docutils literal notranslate"><span class="pre">f</span></code>, then applying a derivation <code class="docutils literal notranslate"><span class="pre">D</span></code> to <code class="docutils literal notranslate"><span class="pre">op</span></code>(a) returns <code class="docutils literal notranslate"><span class="pre">f(a)</span> <span class="pre">*</span> <span class="pre">D(a)</span></code>. Argument <code class="docutils literal notranslate"><span class="pre">op</span></code> must be unary.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-4">
+<dt><span class="spadfun">derivative</span>: (<a class="reference internal" href="BasicOperator.html#l-basic-operator"><span class="std std-ref">BasicOperator</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a>(<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> A -&gt; A)) -&gt; <a class="reference internal" href="BasicOperator.html#l-basic-operator"><span class="std std-ref">BasicOperator</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">derivative(op,</span> <span class="pre">[foo1,</span> <span class="pre">...,</span> <span class="pre">foon])</span></code> attaches [<code class="docutils literal notranslate"><span class="pre">foo1</span></code>, …, foon] as the “%diff” property of <code class="docutils literal notranslate"><span class="pre">op</span></code>. If <code class="docutils literal notranslate"><span class="pre">op</span></code> has an “%diff” property <code class="docutils literal notranslate"><span class="pre">[f1,</span> <span class="pre">...,</span> <span class="pre">fn]</span></code> then applying a derivation <code class="docutils literal notranslate"><span class="pre">D</span></code> to <code class="docutils literal notranslate"><span class="pre">op(a1,</span> <span class="pre">...,</span> <span class="pre">an)</span></code> returns <code class="docutils literal notranslate"><span class="pre">f1(a1,</span> <span class="pre">...,</span> <span class="pre">an)</span> <span class="pre">*</span> <span class="pre">D(a1)</span> <span class="pre">+</span> <span class="pre">...</span> <span class="pre">+</span> <span class="pre">fn(a1,</span> <span class="pre">...,</span> <span class="pre">an)</span> <span class="pre">*</span> <span class="pre">D(an)</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-5">
+<dt><span class="spadfun">derivative</span>: <a class="reference internal" href="BasicOperator.html#l-basic-operator"><span class="std std-ref">BasicOperator</span></a> -&gt; Union(<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a>(<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> A -&gt; A), failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">derivative(op)</span></code> returns the value of the “%diff” property of <code class="docutils literal notranslate"><span class="pre">op</span></code> if it has one, and “failed” otherwise.</p>
+</dd>
+</dl>
+<span class="target" id="l-basic-operator-functions1-evaluate"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">evaluate</span>: (<a class="reference internal" href="BasicOperator.html#l-basic-operator"><span class="std std-ref">BasicOperator</span></a>, A -&gt; A) -&gt; <a class="reference internal" href="BasicOperator.html#l-basic-operator"><span class="std std-ref">BasicOperator</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">evaluate(op,</span> <span class="pre">foo)</span></code> attaches foo as the “%eval” property of <code class="docutils literal notranslate"><span class="pre">op</span></code>. If <code class="docutils literal notranslate"><span class="pre">op</span></code> has an “%eval” property <code class="docutils literal notranslate"><span class="pre">f</span></code>, then applying <code class="docutils literal notranslate"><span class="pre">op</span></code> to a returns the result of <code class="docutils literal notranslate"><span class="pre">f(a)</span></code>. Argument <code class="docutils literal notranslate"><span class="pre">op</span></code> must be unary.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-7">
+<dt><span class="spadfun">evaluate</span>: (<a class="reference internal" href="BasicOperator.html#l-basic-operator"><span class="std std-ref">BasicOperator</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> A -&gt; A) -&gt; <a class="reference internal" href="BasicOperator.html#l-basic-operator"><span class="std std-ref">BasicOperator</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">evaluate(op,</span> <span class="pre">foo)</span></code> attaches foo as the “%eval” property of <code class="docutils literal notranslate"><span class="pre">op</span></code>. If <code class="docutils literal notranslate"><span class="pre">op</span></code> has an “%eval” property <code class="docutils literal notranslate"><span class="pre">f</span></code>, then applying <code class="docutils literal notranslate"><span class="pre">op</span></code> to <code class="docutils literal notranslate"><span class="pre">(a1,</span> <span class="pre">...,</span> <span class="pre">an)</span></code> returns the result of <code class="docutils literal notranslate"><span class="pre">f(a1,</span> <span class="pre">...,</span> <span class="pre">an)</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-8">
+<dt><span class="spadfun">evaluate</span>: (<a class="reference internal" href="BasicOperator.html#l-basic-operator"><span class="std std-ref">BasicOperator</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> A) -&gt; Union(A, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">evaluate(op,</span> <span class="pre">[a1,...,an])</span></code> checks if <code class="docutils literal notranslate"><span class="pre">op</span></code> has an “%eval” property <code class="docutils literal notranslate"><span class="pre">f</span></code>. If it has, then <code class="docutils literal notranslate"><span class="pre">f(a1,</span> <span class="pre">...,</span> <span class="pre">an)</span></code> is returned, and “failed” otherwise.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-9">
+<dt><span class="spadfun">evaluate</span>: <a class="reference internal" href="BasicOperator.html#l-basic-operator"><span class="std std-ref">BasicOperator</span></a> -&gt; Union(<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> A -&gt; A, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">evaluate(op)</span></code> returns the value of the “%eval” property of <code class="docutils literal notranslate"><span class="pre">op</span></code> if it has one, and “failed” otherwise.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="BezoutMatrix.html" title="BezoutMatrix(R, UP, M, Row, Col)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="BalancedFactorisation.html" title="BalancedFactorisation(R, UP)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">BasicOperatorFunctions1 A</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

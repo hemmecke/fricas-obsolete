@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinGroebnerPackage(lv, F) &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="LiouvillianFunction(R, F)" href="LiouvillianFunction.html" />
+    <link rel="prev" title="LinearSystemPolynomialPackage(R, E, OV, P)" href="LinearSystemPolynomialPackage.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="LiouvillianFunction.html" title="LiouvillianFunction(R, F)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="LinearSystemPolynomialPackage.html" title="LinearSystemPolynomialPackage(R, E, OV, P)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">LinGroebnerPackage(lv, F)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="lingroebnerpackage-lv-f">
+<span id="l-lin-groebner-package"></span><span id="index-0"></span><h1>LinGroebnerPackage(lv, F)<a class="headerlink" href="#lingroebnerpackage-lv-f" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/lingrob.spad#L1">lingrob.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/lingrob.spad#L1">[edit on github]</a></p>
+<ul class="simple">
+<li><p>lv: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a></p></li>
+<li><p>F: <a class="reference internal" href="GcdDomain.html#l-gcd-domain"><span class="std std-ref">GcdDomain</span></a></p></li>
+</ul>
+<p>Given a Groebner basis <code class="docutils literal notranslate"><span class="pre">B</span></code> with respect to the total degree ordering for a zero-dimensional ideal <code class="docutils literal notranslate"><span class="pre">I</span></code>, compute a Groebner basis with respect to the lexicographical ordering by using linear algebra. This is an internal package, operations in this package may crash the system on invalid input.</p>
+<span class="target" id="l-lin-groebner-package-anticoord"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">anticoord</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> F, <a class="reference internal" href="DistributedMultivariatePolynomial.html#l-distributed-multivariate-polynomial"><span class="std std-ref">DistributedMultivariatePolynomial</span></a>(lv, F), <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="DistributedMultivariatePolynomial.html#l-distributed-multivariate-polynomial"><span class="std std-ref">DistributedMultivariatePolynomial</span></a>(lv, F)) -&gt; <a class="reference internal" href="DistributedMultivariatePolynomial.html#l-distributed-multivariate-polynomial"><span class="std std-ref">DistributedMultivariatePolynomial</span></a>(lv, F)</dt><dd><p><a href="#id1"><span class="problematic" id="id2">``</span></a>anticoord <a href="#id3"><span class="problematic" id="id4">``</span></a>undocumented</p>
+</dd>
+</dl>
+<span class="target" id="l-lin-groebner-package-choosemon"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">choosemon</span>: (<a class="reference internal" href="DistributedMultivariatePolynomial.html#l-distributed-multivariate-polynomial"><span class="std std-ref">DistributedMultivariatePolynomial</span></a>(lv, F), <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="DistributedMultivariatePolynomial.html#l-distributed-multivariate-polynomial"><span class="std std-ref">DistributedMultivariatePolynomial</span></a>(lv, F)) -&gt; <a class="reference internal" href="DistributedMultivariatePolynomial.html#l-distributed-multivariate-polynomial"><span class="std std-ref">DistributedMultivariatePolynomial</span></a>(lv, F)</dt><dd><p><a href="#id5"><span class="problematic" id="id6">``</span></a>choosemon <a href="#id7"><span class="problematic" id="id8">``</span></a>undocumented</p>
+</dd>
+</dl>
+<span class="target" id="l-lin-groebner-package-compute-basis"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">computeBasis</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="HomogeneousDistributedMultivariatePolynomial.html#l-homogeneous-distributed-multivariate-polynomial"><span class="std std-ref">HomogeneousDistributedMultivariatePolynomial</span></a>(lv, F) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="HomogeneousDistributedMultivariatePolynomial.html#l-homogeneous-distributed-multivariate-polynomial"><span class="std std-ref">HomogeneousDistributedMultivariatePolynomial</span></a>(lv, F)</dt><dd><p>computeBasis is a helper function which computes a basis of a linear space which contains a lexicographic Groebner basis. It expects a basis (ordered by total degree, reverse lexicographic) of a zero dimensional ideal.</p>
+</dd>
+</dl>
+<span class="target" id="l-lin-groebner-package-coord"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">coord</span>: (<a class="reference internal" href="HomogeneousDistributedMultivariatePolynomial.html#l-homogeneous-distributed-multivariate-polynomial"><span class="std std-ref">HomogeneousDistributedMultivariatePolynomial</span></a>(lv, F), <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="HomogeneousDistributedMultivariatePolynomial.html#l-homogeneous-distributed-multivariate-polynomial"><span class="std std-ref">HomogeneousDistributedMultivariatePolynomial</span></a>(lv, F)) -&gt; <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> F</dt><dd><p><a href="#id9"><span class="problematic" id="id10">``</span></a>coord <a href="#id11"><span class="problematic" id="id12">``</span></a>undocumented</p>
+</dd>
+</dl>
+<span class="target" id="l-lin-groebner-package-groebgen"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">groebgen</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="DistributedMultivariatePolynomial.html#l-distributed-multivariate-polynomial"><span class="std std-ref">DistributedMultivariatePolynomial</span></a>(lv, F) -&gt; Record(glbase: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="DistributedMultivariatePolynomial.html#l-distributed-multivariate-polynomial"><span class="std std-ref">DistributedMultivariatePolynomial</span></a>(lv, F), glval: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>)</dt><dd><p><a href="#id13"><span class="problematic" id="id14">``</span></a>groebgen <a href="#id15"><span class="problematic" id="id16">``</span></a>undocumented</p>
+</dd>
+</dl>
+<span class="target" id="l-lin-groebner-package-intcomp-basis"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">intcompBasis</span>: (<a class="reference internal" href="OrderedVariableList.html#l-ordered-variable-list"><span class="std std-ref">OrderedVariableList</span></a> lv, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="HomogeneousDistributedMultivariatePolynomial.html#l-homogeneous-distributed-multivariate-polynomial"><span class="std std-ref">HomogeneousDistributedMultivariatePolynomial</span></a>(lv, F), <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="HomogeneousDistributedMultivariatePolynomial.html#l-homogeneous-distributed-multivariate-polynomial"><span class="std std-ref">HomogeneousDistributedMultivariatePolynomial</span></a>(lv, F)) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="HomogeneousDistributedMultivariatePolynomial.html#l-homogeneous-distributed-multivariate-polynomial"><span class="std std-ref">HomogeneousDistributedMultivariatePolynomial</span></a>(lv, F)</dt><dd><p><a href="#id17"><span class="problematic" id="id18">``</span></a>intcompBasis <a href="#id19"><span class="problematic" id="id20">``</span></a>undocumented</p>
+</dd>
+</dl>
+<span class="target" id="l-lin-groebner-package-lin-gen-pos"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">linGenPos</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="HomogeneousDistributedMultivariatePolynomial.html#l-homogeneous-distributed-multivariate-polynomial"><span class="std std-ref">HomogeneousDistributedMultivariatePolynomial</span></a>(lv, F) -&gt; Record(gblist: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="DistributedMultivariatePolynomial.html#l-distributed-multivariate-polynomial"><span class="std std-ref">DistributedMultivariatePolynomial</span></a>(lv, F), gvlist: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>)</dt><dd><p><a href="#id21"><span class="problematic" id="id22">``</span></a>linGenPos <a href="#id23"><span class="problematic" id="id24">``</span></a>undocumented</p>
+</dd>
+</dl>
+<span class="target" id="l-lin-groebner-package-min-pol"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">minPol</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="HomogeneousDistributedMultivariatePolynomial.html#l-homogeneous-distributed-multivariate-polynomial"><span class="std std-ref">HomogeneousDistributedMultivariatePolynomial</span></a>(lv, F), <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="HomogeneousDistributedMultivariatePolynomial.html#l-homogeneous-distributed-multivariate-polynomial"><span class="std std-ref">HomogeneousDistributedMultivariatePolynomial</span></a>(lv, F), <a class="reference internal" href="OrderedVariableList.html#l-ordered-variable-list"><span class="std std-ref">OrderedVariableList</span></a> lv) -&gt; <a class="reference internal" href="HomogeneousDistributedMultivariatePolynomial.html#l-homogeneous-distributed-multivariate-polynomial"><span class="std std-ref">HomogeneousDistributedMultivariatePolynomial</span></a>(lv, F)</dt><dd><p><a href="#id25"><span class="problematic" id="id26">``</span></a>minPol <a href="#id27"><span class="problematic" id="id28">``</span></a>undocumented</p>
+</dd>
+</dl>
+<dl class="simple" id="index-9">
+<dt><span class="spadfun">minPol</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="HomogeneousDistributedMultivariatePolynomial.html#l-homogeneous-distributed-multivariate-polynomial"><span class="std std-ref">HomogeneousDistributedMultivariatePolynomial</span></a>(lv, F), <a class="reference internal" href="OrderedVariableList.html#l-ordered-variable-list"><span class="std std-ref">OrderedVariableList</span></a> lv) -&gt; <a class="reference internal" href="HomogeneousDistributedMultivariatePolynomial.html#l-homogeneous-distributed-multivariate-polynomial"><span class="std std-ref">HomogeneousDistributedMultivariatePolynomial</span></a>(lv, F)</dt><dd><p><a href="#id29"><span class="problematic" id="id30">``</span></a>minPol <a href="#id31"><span class="problematic" id="id32">``</span></a>undocumented</p>
+</dd>
+</dl>
+<span class="target" id="l-lin-groebner-package-totolex"></span><dl class="simple" id="index-10">
+<dt><span class="spadfun">totolex</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="HomogeneousDistributedMultivariatePolynomial.html#l-homogeneous-distributed-multivariate-polynomial"><span class="std std-ref">HomogeneousDistributedMultivariatePolynomial</span></a>(lv, F) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="DistributedMultivariatePolynomial.html#l-distributed-multivariate-polynomial"><span class="std std-ref">DistributedMultivariatePolynomial</span></a>(lv, F)</dt><dd><p><a href="#id33"><span class="problematic" id="id34">``</span></a>totolex <a href="#id35"><span class="problematic" id="id36">``</span></a>undocumented</p>
+</dd>
+</dl>
+<span class="target" id="l-lin-groebner-package-transform"></span><dl class="simple" id="index-11">
+<dt><span class="spadfun">transform</span>: <a class="reference internal" href="DistributedMultivariatePolynomial.html#l-distributed-multivariate-polynomial"><span class="std std-ref">DistributedMultivariatePolynomial</span></a>(lv, F) -&gt; <a class="reference internal" href="HomogeneousDistributedMultivariatePolynomial.html#l-homogeneous-distributed-multivariate-polynomial"><span class="std std-ref">HomogeneousDistributedMultivariatePolynomial</span></a>(lv, F)</dt><dd><p><a href="#id37"><span class="problematic" id="id38">``</span></a>transform <a href="#id39"><span class="problematic" id="id40">``</span></a>undocumented</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="LiouvillianFunction.html" title="LiouvillianFunction(R, F)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="LinearSystemPolynomialPackage.html" title="LinearSystemPolynomialPackage(R, E, OV, P)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">LinGroebnerPackage(lv, F)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

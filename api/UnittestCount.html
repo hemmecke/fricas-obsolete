@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UnittestCount &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="UnivariateFormalPowerSeriesFunctions Coef" href="UnivariateFormalPowerSeriesFunctions.html" />
+    <link rel="prev" title="UnittestAux R" href="UnittestAux.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="UnivariateFormalPowerSeriesFunctions.html" title="UnivariateFormalPowerSeriesFunctions Coef"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="UnittestAux.html" title="UnittestAux R"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">UnittestCount</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="unittestcount">
+<span id="l-unittest-count"></span><span id="index-0"></span><h1>UnittestCount<a class="headerlink" href="#unittestcount" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/unittest.spad#L66">unittest.spad line 66</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/unittest.spad#L66">[edit on github]</a></p>
+<p>UnittestCount is a package that keeps track of statistics collected during testing. It is separate from <a class="reference internal" href="UnittestAux.html#l-unittest-aux"><span class="std std-ref">UnittestAux</span></a> because the latter takes an argument, and we want the state to be common for all arguments.</p>
+<span class="target" id="l-unittest-count-add-warning"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">addWarning</span>: <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a> -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">addWarning</span> <span class="pre">s</span></code> is an internal function that adds <code class="docutils literal notranslate"><span class="pre">s</span></code>, together with an indication of the current testcase and the current testsuite to the list of warnings.</p>
+</dd>
+</dl>
+<span class="target" id="l-unittest-count-chk-library-error"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">chkLibraryError</span>: () -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p>chkLibraryError is an internal function that steps the number of tests.</p>
+</dd>
+</dl>
+<span class="target" id="l-unittest-count-dec-fatal"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">decFatal</span>: () -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p>decFatal is an internal function that declares that the preceding test did not fail with a fatal error.</p>
+</dd>
+</dl>
+<span class="target" id="l-unittest-count-dec-xf-fatal"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">decXfFatal</span>: () -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p>like decFatal, but for expected failures.</p>
+</dd>
+</dl>
+<span class="target" id="l-unittest-count-dec-xf-pass"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">decXfPass</span>: () -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">decXfPass()</span></code> is an internal function that declares that the preceding test did not pass unexpectedly. This function should only be used for testing library errors</p>
+</dd>
+</dl>
+<span class="target" id="l-unittest-count-inc-fail"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">incFail</span>: (<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a>) -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">incFail(s,</span> <span class="pre">o)</span></code> is an internal function that steps the number of failed tests and records in- and output.</p>
+</dd>
+</dl>
+<span class="target" id="l-unittest-count-inc-fatal"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">incFatal</span>: <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a> -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">incFatal</span> <span class="pre">s</span></code> is an internal function that steps the number of fatal tests and records input.</p>
+</dd>
+</dl>
+<span class="target" id="l-unittest-count-inc-library-error"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">incLibraryError</span>: (<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a>) -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p>incLibraryError is an internal function that steps the number of failed tests, but not the number of tests.</p>
+</dd>
+</dl>
+<span class="target" id="l-unittest-count-inc-pass"></span><dl class="simple" id="index-9">
+<dt><span class="spadfun">incPass</span>: () -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p>incPass is an internal function that steps the number of passed tests.</p>
+</dd>
+</dl>
+<span class="target" id="l-unittest-count-inc-xf-fail"></span><dl class="simple" id="index-10">
+<dt><span class="spadfun">incXfFail</span>: () -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">incXfFail()</span></code> is an internal function that steps the number expected failures.</p>
+</dd>
+</dl>
+<span class="target" id="l-unittest-count-inc-xf-fatal"></span><dl class="simple" id="index-11">
+<dt><span class="spadfun">incXfFatal</span>: <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a> -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p>like incFatal, but for expected failures.</p>
+</dd>
+</dl>
+<span class="target" id="l-unittest-count-inc-xf-library-error"></span><dl class="simple" id="index-12">
+<dt><span class="spadfun">incXfLibraryError</span>: (<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a>) -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p>like incLibraryError, but using expected failures.</p>
+</dd>
+</dl>
+<span class="target" id="l-unittest-count-inc-xf-pass"></span><dl class="simple" id="index-13">
+<dt><span class="spadfun">incXfPass</span>: (<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a>) -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">incXfPass(s,</span> <span class="pre">o)</span></code> is an internal function that steps the number of tests that passed but were expected to fail and records in- and output.</p>
+</dd>
+</dl>
+<span class="target" id="l-unittest-count-statistics"></span><dl class="simple" id="index-14">
+<dt><span class="spadfun">statistics</span>: () -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">statistics()</span></code> prints out a summary of the outcome of the testcases so far. Use <code class="docutils literal notranslate"><span class="pre">clear</span> <span class="pre">completely</span></code> to reset the statistics.</p>
+</dd>
+</dl>
+<span class="target" id="l-unittest-count-testcase"></span><dl class="simple" id="index-15">
+<dt><span class="spadfun">testcase</span>: <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a> -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">testcase</span> <span class="pre">s</span></code> starts a new testcase with <code class="docutils literal notranslate"><span class="pre">s</span></code> as title. It also calls <code class="docutils literal notranslate"><span class="pre">clear</span> <span class="pre">all</span></code>. A testcase is composed of several tests.</p>
+</dd>
+</dl>
+<span class="target" id="l-unittest-count-testcase-no-clear"></span><dl class="simple" id="index-16">
+<dt><span class="spadfun">testcaseNoClear</span>: <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a> -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">testcaseNoClear</span> <span class="pre">s</span></code>, starts a new testcase with <code class="docutils literal notranslate"><span class="pre">s</span></code> as title, without calling <code class="docutils literal notranslate"><span class="pre">clear</span> <span class="pre">all</span></code>. A testcase is composed of several tests.</p>
+</dd>
+</dl>
+<span class="target" id="l-unittest-count-testsuite"></span><dl class="simple" id="index-17">
+<dt><span class="spadfun">testsuite</span>: <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a> -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">testsuite</span> <span class="pre">s</span></code> starts a new testsuite with <code class="docutils literal notranslate"><span class="pre">s</span></code> as title. It also calls <code class="docutils literal notranslate"><span class="pre">clear</span> <span class="pre">all</span></code>. A testsuite is composed of several testcases.</p>
+</dd>
+</dl>
+<span class="target" id="l-unittest-count-testsuite-no-clear"></span><dl class="simple" id="index-18">
+<dt><span class="spadfun">testsuiteNoClear</span>: <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a> -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">testsuiteNoClear</span> <span class="pre">s</span></code> starts a new testsuite with <code class="docutils literal notranslate"><span class="pre">s</span></code> as title, without calling <code class="docutils literal notranslate"><span class="pre">clear</span> <span class="pre">all</span></code>. A testsuite is composed of several testcases.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="UnivariateFormalPowerSeriesFunctions.html" title="UnivariateFormalPowerSeriesFunctions Coef"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="UnittestAux.html" title="UnittestAux R"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">UnittestCount</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

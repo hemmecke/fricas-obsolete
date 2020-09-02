@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinearCombinationUtilities(F, UP) &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="LinearDependence(S, R)" href="LinearDependence.html" />
+    <link rel="prev" title="LexTriangularPackage(R, ls)" href="LexTriangularPackage.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="LinearDependence.html" title="LinearDependence(S, R)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="LexTriangularPackage.html" title="LexTriangularPackage(R, ls)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">LinearCombinationUtilities(F, UP)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="linearcombinationutilities-f-up">
+<span id="l-linear-combination-utilities"></span><span id="index-0"></span><h1>LinearCombinationUtilities(F, UP)<a class="headerlink" href="#linearcombinationutilities-f-up" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/intpar.spad#L1">intpar.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/intpar.spad#L1">[edit on github]</a></p>
+<ul class="simple">
+<li><p>F: <a class="reference internal" href="Field.html#l-field"><span class="std std-ref">Field</span></a></p></li>
+<li><p>UP: <a class="reference internal" href="UnivariatePolynomialCategory.html#l-univariate-polynomial-category"><span class="std std-ref">UnivariatePolynomialCategory</span></a> F</p></li>
+</ul>
+<p>undocumented</p>
+<span class="target" id="l-linear-combination-utilities-dehomogenize"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">dehomogenize</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(ratpart: F, coeffs: <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> F) -&gt; Record(particular: Union(Record(ratpart: F, coeffs: <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> F), failed), basis: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(ratpart: F, coeffs: <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> F))</dt><dd><p><code class="docutils literal notranslate"><span class="pre">dehomogenize(ls)</span></code> converts list of solutions (a, [<code class="docutils literal notranslate"><span class="pre">c0</span></code>, <code class="docutils literal notranslate"><span class="pre">c1</span></code>, …, <code class="docutils literal notranslate"><span class="pre">cn</span></code>]) to homogeneous equation <code class="docutils literal notranslate"><span class="pre">L</span></code>(a) + <code class="docutils literal notranslate"><span class="pre">c0</span></code> <code class="docutils literal notranslate"><span class="pre">f</span></code> + <code class="docutils literal notranslate"><span class="pre">c1</span></code> <code class="docutils literal notranslate"><span class="pre">g1</span></code> + … + <code class="docutils literal notranslate"><span class="pre">cn</span></code> <code class="docutils literal notranslate"><span class="pre">gn</span></code> = 0 into list of solutions of inhomogeneous equation <code class="docutils literal notranslate"><span class="pre">L</span></code>(a) + <code class="docutils literal notranslate"><span class="pre">f</span></code> + <code class="docutils literal notranslate"><span class="pre">c1</span></code> <code class="docutils literal notranslate"><span class="pre">g1</span></code> + … + <code class="docutils literal notranslate"><span class="pre">cn</span></code> <code class="docutils literal notranslate"><span class="pre">gn</span></code> = 0. This transformation works the same for all equations, so we only need list of solutions as argument</p>
+</dd>
+</dl>
+<span class="target" id="l-linear-combination-utilities-lin-comb"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">lin_comb!</span>: (<a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> F, <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> F, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> F) -&gt; <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">lin_comb!(v,</span> <span class="pre">w,</span> <span class="pre">[f1,</span> <span class="pre">...,</span> <span class="pre">fn])</span></code> computes linear combination <code class="docutils literal notranslate"><span class="pre">w</span></code> + <code class="docutils literal notranslate"><span class="pre">v</span></code>(1) <code class="docutils literal notranslate"><span class="pre">f1</span></code> + … <code class="docutils literal notranslate"><span class="pre">v</span></code>(<code class="docutils literal notranslate"><span class="pre">n</span></code>) <code class="docutils literal notranslate"><span class="pre">fn</span></code> by modifying <code class="docutils literal notranslate"><span class="pre">w</span></code> in place. Vector <code class="docutils literal notranslate"><span class="pre">v</span></code> and list [<code class="docutils literal notranslate"><span class="pre">f1</span></code>, …, <code class="docutils literal notranslate"><span class="pre">fn</span></code>] must be of equal length.</p>
+</dd>
+</dl>
+<span class="target" id="id1"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">lin_comb</span>: (<a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> F, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> F) -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">lin_comb(v,</span> <span class="pre">[f1,</span> <span class="pre">...,</span> <span class="pre">fn])</span></code> computes linear combination <code class="docutils literal notranslate"><span class="pre">v</span></code>(1) <code class="docutils literal notranslate"><span class="pre">f1</span></code> + … <code class="docutils literal notranslate"><span class="pre">v</span></code>(<code class="docutils literal notranslate"><span class="pre">n</span></code>) <code class="docutils literal notranslate"><span class="pre">fn</span></code>. Vector <code class="docutils literal notranslate"><span class="pre">v</span></code> and list [<code class="docutils literal notranslate"><span class="pre">f1</span></code>, …, <code class="docutils literal notranslate"><span class="pre">fn</span></code>] must be of equal length.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-4">
+<dt><span class="spadfun">lin_comb</span>: (<a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> F, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP) -&gt; <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP</dt><dd><p><code class="docutils literal notranslate"><span class="pre">lin_comb(v,</span> <span class="pre">[f1,</span> <span class="pre">...,</span> <span class="pre">fn])</span></code> computes linear combination <code class="docutils literal notranslate"><span class="pre">v</span></code>(1) <code class="docutils literal notranslate"><span class="pre">f1</span></code> + … <code class="docutils literal notranslate"><span class="pre">v</span></code>(<code class="docutils literal notranslate"><span class="pre">n</span></code>) <code class="docutils literal notranslate"><span class="pre">fn</span></code>. Vector <code class="docutils literal notranslate"><span class="pre">v</span></code> and list [<code class="docutils literal notranslate"><span class="pre">f1</span></code>, …, <code class="docutils literal notranslate"><span class="pre">fn</span></code>] must be of equal length.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-5">
+<dt><span class="spadfun">lin_comb</span>: (<a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> F, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="LaurentPolynomial.html#l-laurent-polynomial"><span class="std std-ref">LaurentPolynomial</span></a>(F, UP)) -&gt; <a class="reference internal" href="LaurentPolynomial.html#l-laurent-polynomial"><span class="std std-ref">LaurentPolynomial</span></a>(F, UP)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">lin_comb(v,</span> <span class="pre">[f1,</span> <span class="pre">...,</span> <span class="pre">fn])</span></code> computes linear combination <code class="docutils literal notranslate"><span class="pre">v</span></code>(1) <code class="docutils literal notranslate"><span class="pre">f1</span></code> + … <code class="docutils literal notranslate"><span class="pre">v</span></code>(<code class="docutils literal notranslate"><span class="pre">n</span></code>) <code class="docutils literal notranslate"><span class="pre">fn</span></code>. Vector <code class="docutils literal notranslate"><span class="pre">v</span></code> and list [<code class="docutils literal notranslate"><span class="pre">f1</span></code>, …, <code class="docutils literal notranslate"><span class="pre">fn</span></code>] must be of equal length.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-6">
+<dt><span class="spadfun">lin_comb</span>: (<a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> F, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> UP) -&gt; UP</dt><dd><p><code class="docutils literal notranslate"><span class="pre">lin_comb(v,</span> <span class="pre">[f1,</span> <span class="pre">...,</span> <span class="pre">fn])</span></code> computes linear combination <code class="docutils literal notranslate"><span class="pre">v</span></code>(1) <code class="docutils literal notranslate"><span class="pre">f1</span></code> + … <code class="docutils literal notranslate"><span class="pre">v</span></code>(<code class="docutils literal notranslate"><span class="pre">n</span></code>) <code class="docutils literal notranslate"><span class="pre">fn</span></code>. Vector <code class="docutils literal notranslate"><span class="pre">v</span></code> and list [<code class="docutils literal notranslate"><span class="pre">f1</span></code>, …, <code class="docutils literal notranslate"><span class="pre">fn</span></code>] must be of equal length.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-7">
+<dt><span class="spadfun">lin_comb</span>: (<a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> F, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> F) -&gt; <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">lin_comb(v,</span> <span class="pre">[f1,</span> <span class="pre">...,</span> <span class="pre">fn])</span></code> computes linear combination <code class="docutils literal notranslate"><span class="pre">v</span></code>(1) <code class="docutils literal notranslate"><span class="pre">f1</span></code> + … <code class="docutils literal notranslate"><span class="pre">v</span></code>(<code class="docutils literal notranslate"><span class="pre">n</span></code>) <code class="docutils literal notranslate"><span class="pre">fn</span></code>. Vector <code class="docutils literal notranslate"><span class="pre">v</span></code> and list [<code class="docutils literal notranslate"><span class="pre">f1</span></code>, …, <code class="docutils literal notranslate"><span class="pre">fn</span></code>] must be of equal positive length.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-8">
+<dt><span class="spadfun">lin_comb</span>: (<a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> F) -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">lin_comb(v,</span> <span class="pre">[f1,</span> <span class="pre">...,</span> <span class="pre">fn])</span></code> computes linear combination <code class="docutils literal notranslate"><span class="pre">v</span></code>(1) <code class="docutils literal notranslate"><span class="pre">f1</span></code> + … <code class="docutils literal notranslate"><span class="pre">v</span></code>(<code class="docutils literal notranslate"><span class="pre">n</span></code>) <code class="docutils literal notranslate"><span class="pre">fn</span></code>. Vector <code class="docutils literal notranslate"><span class="pre">v</span></code> and list [<code class="docutils literal notranslate"><span class="pre">f1</span></code>, …, <code class="docutils literal notranslate"><span class="pre">fn</span></code>] must be of equal length.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-9">
+<dt><span class="spadfun">lin_comb</span>: (<a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP) -&gt; <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP</dt><dd><p><code class="docutils literal notranslate"><span class="pre">lin_comb(v,</span> <span class="pre">[f1,</span> <span class="pre">...,</span> <span class="pre">fn])</span></code> computes linear combination <code class="docutils literal notranslate"><span class="pre">v</span></code>(1) <code class="docutils literal notranslate"><span class="pre">f1</span></code> + … <code class="docutils literal notranslate"><span class="pre">v</span></code>(<code class="docutils literal notranslate"><span class="pre">n</span></code>) <code class="docutils literal notranslate"><span class="pre">fn</span></code>. Vector <code class="docutils literal notranslate"><span class="pre">v</span></code> and list [<code class="docutils literal notranslate"><span class="pre">f1</span></code>, …, <code class="docutils literal notranslate"><span class="pre">fn</span></code>] must be of equal length.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="LinearDependence.html" title="LinearDependence(S, R)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="LexTriangularPackage.html" title="LexTriangularPackage(R, ls)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">LinearCombinationUtilities(F, UP)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

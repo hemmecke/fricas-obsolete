@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ListToMap(A, B) &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="LLLReduction" href="LLLReduction.html" />
+    <link rel="prev" title="ListPackage T" href="ListPackage.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="LLLReduction.html" title="LLLReduction"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="ListPackage.html" title="ListPackage T"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">ListToMap(A, B)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="listtomap-a-b">
+<span id="l-list-to-map"></span><span id="index-0"></span><h1>ListToMap(A, B)<a class="headerlink" href="#listtomap-a-b" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/list.spad#L371">list.spad line 371</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/list.spad#L371">[edit on github]</a></p>
+<ul class="simple">
+<li><p>A: <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p></li>
+<li><p>B: <a class="reference internal" href="Type.html#l-type"><span class="std std-ref">Type</span></a></p></li>
+</ul>
+<p><a class="reference internal" href="#l-list-to-map"><span class="std std-ref">ListToMap</span></a> allows mappings to be described by a pair of lists of equal lengths. The image of an element <code class="docutils literal notranslate"><span class="pre">x</span></code>, which appears in position <code class="docutils literal notranslate"><span class="pre">n</span></code> in the first list, is then the <code class="docutils literal notranslate"><span class="pre">n</span></code>th element of the second list. A default value or default function can be specified to be used when <code class="docutils literal notranslate"><span class="pre">x</span></code> does not appear in the first list. In the absence of defaults, an error will occur in that case.</p>
+<span class="target" id="l-list-to-map-match"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">match</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> A, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> B) -&gt; A -&gt; B</dt><dd><p><code class="docutils literal notranslate"><span class="pre">match(la,</span> <span class="pre">lb)</span></code> creates a map with no default source or target values defined by lists <code class="docutils literal notranslate"><span class="pre">la</span></code> and <code class="docutils literal notranslate"><span class="pre">lb</span></code> of equal length. The target of a source value <code class="docutils literal notranslate"><span class="pre">x</span></code> in <code class="docutils literal notranslate"><span class="pre">la</span></code> is the value <code class="docutils literal notranslate"><span class="pre">y</span></code> with the same index in <code class="docutils literal notranslate"><span class="pre">lb</span></code>. Error: if <code class="docutils literal notranslate"><span class="pre">la</span></code> and <code class="docutils literal notranslate"><span class="pre">lb</span></code> are not of equal length. Note: when this map is applied, an error occurs when applied to a value missing from <code class="docutils literal notranslate"><span class="pre">la</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-2">
+<dt><span class="spadfun">match</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> A, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> B, A -&gt; B) -&gt; A -&gt; B</dt><dd><p><code class="docutils literal notranslate"><span class="pre">match(la,</span> <span class="pre">lb,</span> <span class="pre">f)</span></code> creates a map defined by lists <code class="docutils literal notranslate"><span class="pre">la</span></code> and <code class="docutils literal notranslate"><span class="pre">lb</span></code> of equal length. The target of a source value <code class="docutils literal notranslate"><span class="pre">x</span></code> in <code class="docutils literal notranslate"><span class="pre">la</span></code> is the value <code class="docutils literal notranslate"><span class="pre">y</span></code> with the same index in <code class="docutils literal notranslate"><span class="pre">lb</span></code>. Argument <code class="docutils literal notranslate"><span class="pre">f</span></code> is used as the function to call when the given function argument is not in <code class="docutils literal notranslate"><span class="pre">la</span></code>. The value returned is <code class="docutils literal notranslate"><span class="pre">f</span></code> applied to that argument.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-3">
+<dt><span class="spadfun">match</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> A, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> B, A) -&gt; B</dt><dd><p><code class="docutils literal notranslate"><span class="pre">match(la,</span> <span class="pre">lb,</span> <span class="pre">a)</span></code> creates a map defined by lists <code class="docutils literal notranslate"><span class="pre">la</span></code> and <code class="docutils literal notranslate"><span class="pre">lb</span></code> of equal length, where <code class="docutils literal notranslate"><span class="pre">a</span></code> is used as the default source value if the given one is not in <code class="docutils literal notranslate"><span class="pre">la</span></code>. The target of a source value <code class="docutils literal notranslate"><span class="pre">x</span></code> in <code class="docutils literal notranslate"><span class="pre">la</span></code> is the value <code class="docutils literal notranslate"><span class="pre">y</span></code> with the same index in <code class="docutils literal notranslate"><span class="pre">lb</span></code>. Error: if <code class="docutils literal notranslate"><span class="pre">la</span></code> and <code class="docutils literal notranslate"><span class="pre">lb</span></code> are not of equal length.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-4">
+<dt><span class="spadfun">match</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> A, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> B, A, A -&gt; B) -&gt; B</dt><dd><p><code class="docutils literal notranslate"><span class="pre">match(la,</span> <span class="pre">lb,</span> <span class="pre">a,</span> <span class="pre">f)</span></code> creates a map defined by lists <code class="docutils literal notranslate"><span class="pre">la</span></code> and <code class="docutils literal notranslate"><span class="pre">lb</span></code> of equal length, and applies this map to a. The target of a source value <code class="docutils literal notranslate"><span class="pre">x</span></code> in <code class="docutils literal notranslate"><span class="pre">la</span></code> is the value <code class="docutils literal notranslate"><span class="pre">y</span></code> with the same index in <code class="docutils literal notranslate"><span class="pre">lb</span></code>. Argument <code class="docutils literal notranslate"><span class="pre">f</span></code> is a default function to call if a is not in <code class="docutils literal notranslate"><span class="pre">la</span></code>. The value returned is then obtained by applying <code class="docutils literal notranslate"><span class="pre">f</span></code> to argument a.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-5">
+<dt><span class="spadfun">match</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> A, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> B, A, B) -&gt; B</dt><dd><p><code class="docutils literal notranslate"><span class="pre">match(la,</span> <span class="pre">lb,</span> <span class="pre">a,</span> <span class="pre">b)</span></code> creates a map defined by lists <code class="docutils literal notranslate"><span class="pre">la</span></code> and <code class="docutils literal notranslate"><span class="pre">lb</span></code> of equal length, and applies this map to a. The target of a source value <code class="docutils literal notranslate"><span class="pre">x</span></code> in <code class="docutils literal notranslate"><span class="pre">la</span></code> is the value <code class="docutils literal notranslate"><span class="pre">y</span></code> with the same index in <code class="docutils literal notranslate"><span class="pre">lb</span></code>. Argument <code class="docutils literal notranslate"><span class="pre">b</span></code> is the default target value if a is not in <code class="docutils literal notranslate"><span class="pre">la</span></code>. Error: if <code class="docutils literal notranslate"><span class="pre">la</span></code> and <code class="docutils literal notranslate"><span class="pre">lb</span></code> are not of equal length.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-6">
+<dt><span class="spadfun">match</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> A, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> B, B) -&gt; A -&gt; B</dt><dd><p><code class="docutils literal notranslate"><span class="pre">match(la,</span> <span class="pre">lb,</span> <span class="pre">b)</span></code> creates a map defined by lists <code class="docutils literal notranslate"><span class="pre">la</span></code> and <code class="docutils literal notranslate"><span class="pre">lb</span></code> of equal length, where <code class="docutils literal notranslate"><span class="pre">b</span></code> is used as the default target value if the given function argument is not in <code class="docutils literal notranslate"><span class="pre">la</span></code>. The target of a source value <code class="docutils literal notranslate"><span class="pre">x</span></code> in <code class="docutils literal notranslate"><span class="pre">la</span></code> is the value <code class="docutils literal notranslate"><span class="pre">y</span></code> with the same index in <code class="docutils literal notranslate"><span class="pre">lb</span></code>. Error: if <code class="docutils literal notranslate"><span class="pre">la</span></code> and <code class="docutils literal notranslate"><span class="pre">lb</span></code> are not of equal length.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="LLLReduction.html" title="LLLReduction"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="ListPackage.html" title="ListPackage T"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">ListToMap(A, B)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

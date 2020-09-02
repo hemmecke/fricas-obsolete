@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeierstrassPreparation R &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="WildFunctionFieldIntegralBasis(K, R, UP, F)" href="WildFunctionFieldIntegralBasis.html" />
+    <link rel="prev" title="ViewportPackage" href="ViewportPackage.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="WildFunctionFieldIntegralBasis.html" title="WildFunctionFieldIntegralBasis(K, R, UP, F)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="ViewportPackage.html" title="ViewportPackage"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">WeierstrassPreparation R</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="weierstrasspreparation-r">
+<span id="l-weierstrass-preparation"></span><span id="index-0"></span><h1>WeierstrassPreparation R<a class="headerlink" href="#weierstrasspreparation-r" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/weier.spad#L1">weier.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/weier.spad#L1">[edit on github]</a></p>
+<ul class="simple">
+<li><p>R: <a class="reference internal" href="Field.html#l-field"><span class="std std-ref">Field</span></a></p></li>
+</ul>
+<p>This package implements the Weierstrass preparation theorem <code class="docutils literal notranslate"><span class="pre">f</span></code> for multivariate power series. weierstrass(<code class="docutils literal notranslate"><span class="pre">v</span></code>, <code class="docutils literal notranslate"><span class="pre">p</span></code>) where <code class="docutils literal notranslate"><span class="pre">v</span></code> is a variable, and <code class="docutils literal notranslate"><span class="pre">p</span></code> is a TaylorSeries(<code class="docutils literal notranslate"><span class="pre">R</span></code>) in which there is term of form c*v^s where <code class="docutils literal notranslate"><span class="pre">c</span></code> is a constant. Let <code class="docutils literal notranslate"><span class="pre">s</span></code> be minimal as above. The result is a list of TaylorSeries coefficients A[<code class="docutils literal notranslate"><span class="pre">i</span></code>] of the equivalent polynomial A = A[0] + A[1]<code class="docutils literal notranslate"><span class="pre">*v</span></code> + A[2]<code class="docutils literal notranslate"><span class="pre">*v^2</span></code> + … + A[<code class="docutils literal notranslate"><span class="pre">s</span></code>-1]<code class="docutils literal notranslate"><span class="pre">*v^</span></code>(<code class="docutils literal notranslate"><span class="pre">s</span></code>-1) + <code class="docutils literal notranslate"><span class="pre">v^s</span></code> such that p=A*B , <code class="docutils literal notranslate"><span class="pre">B</span></code> being a TaylorSeries of minimum degree 0</p>
+<span class="target" id="l-weierstrass-preparation-weierstrass"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">weierstrass</span>: (<a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="TaylorSeries.html#l-taylor-series"><span class="std std-ref">TaylorSeries</span></a> R) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="TaylorSeries.html#l-taylor-series"><span class="std std-ref">TaylorSeries</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">weierstrass(v,</span> <span class="pre">ts)</span></code> where <code class="docutils literal notranslate"><span class="pre">v</span></code> is a variable and <code class="docutils literal notranslate"><span class="pre">ts</span></code> is a TaylorSeries, implements the Weierstrass Preparation Theorem. The result is a list of TaylorSeries that are the coefficients of the equivalent series.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="WildFunctionFieldIntegralBasis.html" title="WildFunctionFieldIntegralBasis(K, R, UP, F)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="ViewportPackage.html" title="ViewportPackage"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">WeierstrassPreparation R</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

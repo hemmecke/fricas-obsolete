@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EltableAggregate(Dom, Im) &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="EntireRing" href="EntireRing.html" />
+    <link rel="prev" title="Eltable(D, I)" href="Eltable.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="EntireRing.html" title="EntireRing"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="Eltable.html" title="Eltable(D, I)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Categories.html" accesskey="U">Categories</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">EltableAggregate(Dom, Im)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="eltableaggregate-dom-im">
+<span id="l-eltable-aggregate"></span><span id="index-0"></span><h1>EltableAggregate(Dom, Im)<a class="headerlink" href="#eltableaggregate-dom-im" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/aggcat.spad#L780">aggcat.spad line 780</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/aggcat.spad#L780">[edit on github]</a></p>
+<ul class="simple">
+<li><p>Dom: <a class="reference internal" href="Type.html#l-type"><span class="std std-ref">Type</span></a></p></li>
+<li><p>Im: <a class="reference internal" href="Type.html#l-type"><span class="std std-ref">Type</span></a></p></li>
+</ul>
+<p>An eltable aggregate is one which can be viewed as a function. For example, the list <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">7,</span> <span class="pre">4]</span></code> can be applied to 1, 2, and 3 respectively and will return the integers 1, 7, and 4; thus this list may be viewed as mapping 1 to 1, 2 to 7 and 3 to 4. In general, an aggregate can map members of a domain <em>Dom</em> to an image domain <em>Im</em>.</p>
+<dl class="simple">
+<dt><a class="reference internal" href="Eltable.html#l-eltable-elt"><span class="std std-ref">elt</span></a>: (%, Dom) -&gt; Im</dt><dd><p>from <a class="reference internal" href="Eltable.html#l-eltable"><span class="std std-ref">Eltable</span></a>(Dom, Im)</p>
+</dd>
+</dl>
+<span class="target" id="l-eltable-aggregate-elt"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">elt</span>: (%, Dom, Im) -&gt; Im</dt><dd><p><code class="docutils literal notranslate"><span class="pre">elt(u,</span> <span class="pre">x,</span> <span class="pre">y)</span></code> applies <code class="docutils literal notranslate"><span class="pre">u</span></code> to <code class="docutils literal notranslate"><span class="pre">x</span></code> if <code class="docutils literal notranslate"><span class="pre">x</span></code> is in the domain of <code class="docutils literal notranslate"><span class="pre">u</span></code>, and returns <code class="docutils literal notranslate"><span class="pre">y</span></code> otherwise.</p>
+</dd>
+</dl>
+<span class="target" id="l-eltable-aggregate-qelt"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">qelt</span>: (%, Dom) -&gt; Im</dt><dd><p><code class="docutils literal notranslate"><span class="pre">qelt(u,</span> <span class="pre">x)</span></code> applies <code class="docutils literal notranslate"><span class="pre">u</span></code> to <code class="docutils literal notranslate"><span class="pre">x</span></code> without checking whether <code class="docutils literal notranslate"><span class="pre">x</span></code> is in the domain of <code class="docutils literal notranslate"><span class="pre">u</span></code>. If <code class="docutils literal notranslate"><span class="pre">x</span></code> is not in the domain of <code class="docutils literal notranslate"><span class="pre">u</span></code> a memory-access violation may occur. If a check on whether <code class="docutils literal notranslate"><span class="pre">x</span></code> is in the domain of <code class="docutils literal notranslate"><span class="pre">u</span></code> is required, use the function <code class="docutils literal notranslate"><span class="pre">elt</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-eltable-aggregate-qsetelt"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">qsetelt!</span>: (%, Dom, Im) -&gt; Im if % has <a class="reference internal" href="shallowlyMutable.html#l-shallowly-mutable"><span class="std std-ref">shallowlyMutable</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">qsetelt!(u,</span> <span class="pre">x,</span> <span class="pre">y)</span></code> sets the image of <code class="docutils literal notranslate"><span class="pre">x</span></code> to be <code class="docutils literal notranslate"><span class="pre">y</span></code> under <code class="docutils literal notranslate"><span class="pre">u</span></code>, without checking that <code class="docutils literal notranslate"><span class="pre">x</span></code> is in the domain of <code class="docutils literal notranslate"><span class="pre">u</span></code>. If such a check is required use the function <code class="docutils literal notranslate"><span class="pre">setelt!</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-eltable-aggregate-setelt"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">setelt!</span>: (%, Dom, Im) -&gt; Im if % has <a class="reference internal" href="shallowlyMutable.html#l-shallowly-mutable"><span class="std std-ref">shallowlyMutable</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">setelt!(u,</span> <span class="pre">x,</span> <span class="pre">y)</span></code> sets the image of <code class="docutils literal notranslate"><span class="pre">x</span></code> to be <code class="docutils literal notranslate"><span class="pre">y</span></code> under <code class="docutils literal notranslate"><span class="pre">u</span></code>, if <code class="docutils literal notranslate"><span class="pre">x</span></code> is in the domain of <code class="docutils literal notranslate"><span class="pre">u</span></code>. Error: if <code class="docutils literal notranslate"><span class="pre">x</span></code> is not in the domain of <code class="docutils literal notranslate"><span class="pre">u</span></code>.</p>
+</dd>
+</dl>
+<p><a class="reference internal" href="Eltable.html#l-eltable"><span class="std std-ref">Eltable</span></a>(Dom, Im)</p>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="EntireRing.html" title="EntireRing"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="Eltable.html" title="Eltable(D, I)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Categories.html" >Categories</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">EltableAggregate(Dom, Im)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

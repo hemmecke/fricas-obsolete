@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FiniteFieldSolveLinearPolynomialEquation(F, FP, FPP) &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="FiniteGroupPackage G" href="FiniteGroupPackage.html" />
+    <link rel="prev" title="FiniteFieldPolynomialPackage2(F, GF)" href="FiniteFieldPolynomialPackage2.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="FiniteGroupPackage.html" title="FiniteGroupPackage G"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="FiniteFieldPolynomialPackage2.html" title="FiniteFieldPolynomialPackage2(F, GF)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">FiniteFieldSolveLinearPolynomialEquation(F, FP, FPP)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="finitefieldsolvelinearpolynomialequation-f-fp-fpp">
+<span id="l-finite-field-solve-linear-polynomial-equation"></span><span id="index-0"></span><h1>FiniteFieldSolveLinearPolynomialEquation(F, FP, FPP)<a class="headerlink" href="#finitefieldsolvelinearpolynomialequation-f-fp-fpp" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/ffcat.spad#L645">ffcat.spad line 645</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/ffcat.spad#L645">[edit on github]</a></p>
+<ul class="simple">
+<li><p>F: <a class="reference internal" href="FiniteFieldCategory.html#l-finite-field-category"><span class="std std-ref">FiniteFieldCategory</span></a></p></li>
+<li><p>FP: <a class="reference internal" href="UnivariatePolynomialCategory.html#l-univariate-polynomial-category"><span class="std std-ref">UnivariatePolynomialCategory</span></a> F</p></li>
+<li><p>FPP: <a class="reference internal" href="UnivariatePolynomialCategory.html#l-univariate-polynomial-category"><span class="std std-ref">UnivariatePolynomialCategory</span></a> FP</p></li>
+</ul>
+<p>This package solves linear diophantine equations for Bivariate polynomials over finite fields</p>
+<span class="target" id="l-finite-field-solve-linear-polynomial-equation-solve-linear-polynomial-equation"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">solveLinearPolynomialEquation</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> FPP, FPP) -&gt; Union(<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> FPP, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">solveLinearPolynomialEquation([f1,</span> <span class="pre">...,</span> <span class="pre">fn],</span> <span class="pre">g)</span></code> (where the <code class="docutils literal notranslate"><span class="pre">fi</span></code> are relatively prime to each other) returns a list of <code class="docutils literal notranslate"><span class="pre">ai</span></code> such that <code class="docutils literal notranslate"><span class="pre">g/prod</span> <span class="pre">fi</span> <span class="pre">=</span> <span class="pre">sum</span> <span class="pre">ai/fi</span></code> or returns “failed” if no such list of <code class="docutils literal notranslate"><span class="pre">ai</span></code><code class="docutils literal notranslate"><span class="pre">'s</span></code> exists.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="FiniteGroupPackage.html" title="FiniteGroupPackage G"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="FiniteFieldPolynomialPackage2.html" title="FiniteFieldPolynomialPackage2(F, GF)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">FiniteFieldSolveLinearPolynomialEquation(F, FP, FPP)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

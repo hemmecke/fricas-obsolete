@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CombinatorialFunctionCategory &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="CombinatorialOpsCategory" href="CombinatorialOpsCategory.html" />
+    <link rel="prev" title="Collection S" href="Collection.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="CombinatorialOpsCategory.html" title="CombinatorialOpsCategory"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="Collection.html" title="Collection S"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Categories.html" accesskey="U">Categories</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">CombinatorialFunctionCategory</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="combinatorialfunctioncategory">
+<span id="l-combinatorial-function-category"></span><span id="index-0"></span><h1>CombinatorialFunctionCategory<a class="headerlink" href="#combinatorialfunctioncategory" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/trigcat.spad#L217">trigcat.spad line 217</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/trigcat.spad#L217">[edit on github]</a></p>
+<p>Category for the usual combinatorial functions.</p>
+<span class="target" id="l-combinatorial-function-category-binomial"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">binomial</span>: (%, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">binomial(n,</span> <span class="pre">r)</span></code> returns the <code class="docutils literal notranslate"><span class="pre">(n,</span> <span class="pre">r)</span></code> binomial coefficient (often denoted in the literature by <code class="docutils literal notranslate"><span class="pre">C(n,</span> <span class="pre">r)</span></code>). Note: <code class="docutils literal notranslate"><span class="pre">C(n,</span> <span class="pre">r)</span> <span class="pre">=</span> <span class="pre">n!/(r!(n-r)!)</span></code> where <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;=</span> <span class="pre">r</span> <span class="pre">&gt;=</span> <span class="pre">0</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-combinatorial-function-category-factorial"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">factorial</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">factorial(n)</span></code> computes the factorial of <code class="docutils literal notranslate"><span class="pre">n</span></code> (denoted in the literature by <code class="docutils literal notranslate"><span class="pre">n!</span></code>) Note: <code class="docutils literal notranslate"><span class="pre">n!</span> <span class="pre">=</span> <span class="pre">n</span> <span class="pre">(n-1)!</span> <span class="pre">when</span> <span class="pre">n</span> <span class="pre">&gt;</span> <span class="pre">0</span></code>; also, <code class="docutils literal notranslate"><span class="pre">0!</span> <span class="pre">=</span> <span class="pre">1</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-combinatorial-function-category-permutation"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">permutation</span>: (%, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">permutation(n,</span> <span class="pre">m)</span></code> returns the number of permutations of <code class="docutils literal notranslate"><span class="pre">n</span></code> objects taken <code class="docutils literal notranslate"><span class="pre">m</span></code> at a time. Note: <code class="docutils literal notranslate"><span class="pre">permutation(n,</span> <span class="pre">m)</span> <span class="pre">=</span> <span class="pre">n!/(n-m)!</span></code>.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="CombinatorialOpsCategory.html" title="CombinatorialOpsCategory"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="Collection.html" title="Collection S"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Categories.html" >Categories</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">CombinatorialFunctionCategory</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

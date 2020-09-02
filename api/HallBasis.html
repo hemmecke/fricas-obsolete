@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HallBasis &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="HankelPackage R" href="HankelPackage.html" />
+    <link rel="prev" title="GuessPolynomialInteger" href="GuessPolynomialInteger.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="HankelPackage.html" title="HankelPackage R"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="GuessPolynomialInteger.html" title="GuessPolynomialInteger"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">HallBasis</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="hallbasis">
+<span id="l-hall-basis"></span><span id="index-0"></span><h1>HallBasis<a class="headerlink" href="#hallbasis" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/fnla.spad#L70">fnla.spad line 70</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/fnla.spad#L70">[edit on github]</a></p>
+<p>Author : Larry Lambe Date Created : August 1988 Related Constructors: OrderedSetInts, Commutator, FreeNilpotentLie AMS Classification: Primary 17B05, 17B30; Secondary 17A50 Keywords: free Lie algebra, Hall basis, basic commutators Description : Generate a basis for the free Lie algebra on <code class="docutils literal notranslate"><span class="pre">n</span></code> generators over a ring <code class="docutils literal notranslate"><span class="pre">R</span></code> with identity up to basic commutators of length <code class="docutils literal notranslate"><span class="pre">c</span></code> using the algorithm of <code class="docutils literal notranslate"><span class="pre">P</span></code>. Hall as given in Serre<code class="docutils literal notranslate"><span class="pre">'s</span></code> book Lie Groups <code class="docutils literal notranslate"><span class="pre">--</span></code> Lie Algebras</p>
+<span class="target" id="l-hall-basis-basis"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">basis</span>: (<a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">basis(numberOfGens,</span> <span class="pre">maximalWeight)</span></code> generates a vector of elements of the form [left, weight, right] which represents a <code class="docutils literal notranslate"><span class="pre">P</span></code>. Hall basis element for the free lie algebra on <code class="docutils literal notranslate"><span class="pre">numberOfGens</span></code> generators. We only generate those basis elements of weight less than or equal to maximalWeight</p>
+</dd>
+</dl>
+<span class="target" id="l-hall-basis-in-hall-basis"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">inHallBasis?</span>: (<a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">inHallBasis?(numberOfGens,</span> <span class="pre">leftCandidate,</span> <span class="pre">rightCandidate,</span> <span class="pre">left)</span></code> tests to see if a new element should be added to the <code class="docutils literal notranslate"><span class="pre">P</span></code>. Hall basis being constructed. The list <code class="docutils literal notranslate"><span class="pre">[leftCandidate,</span> <span class="pre">wt,</span> <span class="pre">rightCandidate]</span></code> is included in the basis if in the unique factorization of <code class="docutils literal notranslate"><span class="pre">rightCandidate</span></code>, we have left factor leftOfRight, and leftOfRight <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code> <code class="docutils literal notranslate"><span class="pre">leftCandidate</span></code></p>
+</dd>
+</dl>
+<span class="target" id="l-hall-basis-lfunc"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">lfunc</span>: (<a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">lfunc(d,</span> <span class="pre">n)</span></code> computes the rank of the <code class="docutils literal notranslate"><span class="pre">n</span></code>th factor in the lower central series of the free <code class="docutils literal notranslate"><span class="pre">d</span></code>-generated free Lie algebra; This rank is <code class="docutils literal notranslate"><span class="pre">d</span></code> if <code class="docutils literal notranslate"><span class="pre">n</span></code> = 1 and binom(<code class="docutils literal notranslate"><span class="pre">d</span></code>, 2) if <code class="docutils literal notranslate"><span class="pre">n</span></code> = 2</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="HankelPackage.html" title="HankelPackage R"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="GuessPolynomialInteger.html" title="GuessPolynomialInteger"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">HallBasis</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

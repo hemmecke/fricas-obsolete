@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InputForm &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Integer" href="Integer.html" />
+    <link rel="prev" title="InnerTaylorSeries Coef" href="InnerTaylorSeries.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="Integer.html" title="Integer"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="InnerTaylorSeries.html" title="InnerTaylorSeries Coef"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Domains.html" accesskey="U">Domains</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">InputForm</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="inputform">
+<span id="l-input-form"></span><span id="index-0"></span><h1>InputForm<a class="headerlink" href="#inputform" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/mkfunc.spad#L1">mkfunc.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/mkfunc.spad#L1">[edit on github]</a></p>
+<p>Domain of parsed forms which can be passed to the interpreter. This is also the interface between algebra code and facilities in the interpreter.</p>
+<span class="target" id="l-input-form-0"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">0</span>: %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">0</span></code> returns the input form corresponding to 0.</p>
+</dd>
+</dl>
+<span class="target" id="l-input-form-1"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">1</span>: %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">1</span></code> returns the input form corresponding to 1.</p>
+</dd>
+<dt><a class="reference internal" href="SExpressionCategory.html#id1"><span class="std std-ref">#</span></a>: % -&gt; <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p>from <a class="reference internal" href="SExpressionCategory.html#l-s-expression-category"><span class="std std-ref">SExpressionCategory</span></a>(<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>)</p>
+</dd>
+</dl>
+<span class="target" id="id1"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">*</span>: (%, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">*</span> <span class="pre">b</span></code> returns the input form corresponding to <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">*</span> <span class="pre">b</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="id2"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">+</span>: (%, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">+</span> <span class="pre">b</span></code> returns the input form corresponding to <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">+</span> <span class="pre">b</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="id3"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">/</span>: (%, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">/</span> <span class="pre">b</span></code> returns the input form corresponding to <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">/</span> <span class="pre">b</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="BasicType.html#id1"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+</dl>
+<span class="target" id="id4"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">^</span>: (%, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">^</span> <span class="pre">b</span></code> returns the input form corresponding to <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">^</span> <span class="pre">b</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-7">
+<dt><span class="spadfun">^</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">^</span> <span class="pre">b</span></code> returns the input form corresponding to <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">^</span> <span class="pre">b</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="BasicType.html#id2"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+<dt><a class="reference internal" href="SExpressionCategory.html#l-s-expression-category-atom"><span class="std std-ref">atom?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="SExpressionCategory.html#l-s-expression-category"><span class="std std-ref">SExpressionCategory</span></a>(<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>)</p>
+</dd>
+</dl>
+<span class="target" id="l-input-form-binary"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">binary</span>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">binary(op,</span> <span class="pre">[a1,</span> <span class="pre">...,</span> <span class="pre">an])</span></code> returns the input form corresponding to <code class="docutils literal notranslate"><span class="pre">a1</span> <span class="pre">op</span> <span class="pre">a2</span> <span class="pre">op</span> <span class="pre">...</span> <span class="pre">op</span> <span class="pre">an</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="SExpressionCategory.html#l-s-expression-category-car"><span class="std std-ref">car</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="SExpressionCategory.html#l-s-expression-category"><span class="std std-ref">SExpressionCategory</span></a>(<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>)</p>
+</dd>
+<dt><a class="reference internal" href="SExpressionCategory.html#l-s-expression-category-cdr"><span class="std std-ref">cdr</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="SExpressionCategory.html#l-s-expression-category"><span class="std std-ref">SExpressionCategory</span></a>(<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>)</p>
+</dd>
+<dt><a class="reference internal" href="CoercibleTo.html#l-coercible-to-coerce"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-input-form-compile"></span><dl class="simple" id="index-9">
+<dt><span class="spadfun">compile</span>: (<a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %) -&gt; <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">compile(f,</span> <span class="pre">[t1,</span> <span class="pre">...,</span> <span class="pre">tn])</span></code> forces the interpreter to compile the function <code class="docutils literal notranslate"><span class="pre">f</span></code> with signature <code class="docutils literal notranslate"><span class="pre">(t1,</span> <span class="pre">...,</span> <span class="pre">tn)</span> <span class="pre">-&gt;</span> <span class="pre">?</span></code>. returns the symbol <code class="docutils literal notranslate"><span class="pre">f</span></code> if successful. Error: if <code class="docutils literal notranslate"><span class="pre">f</span></code> was not defined beforehand in the interpreter, or if the <code class="docutils literal notranslate"><span class="pre">ti</span></code><code class="docutils literal notranslate"><span class="pre">'s</span></code> are not valid types, or if the compiler fails.</p>
+</dd>
+<dt><a class="reference internal" href="ConvertibleTo.html#l-convertible-to-convert"><span class="std std-ref">convert</span></a>: % -&gt; <a class="reference internal" href="SExpression.html#l-s-expression"><span class="std std-ref">SExpression</span></a></dt><dd><p>from <a class="reference internal" href="ConvertibleTo.html#l-convertible-to"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="SExpression.html#l-s-expression"><span class="std std-ref">SExpression</span></a></p>
+</dd>
+<dt><a class="reference internal" href="SExpressionCategory.html#l-s-expression-category-convert"><span class="std std-ref">convert</span></a>: <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a> -&gt; %</dt><dd><p>from <a class="reference internal" href="SExpressionCategory.html#l-s-expression-category"><span class="std std-ref">SExpressionCategory</span></a>(<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>)</p>
+</dd>
+<dt><a class="reference internal" href="SExpressionCategory.html#l-s-expression-category-convert"><span class="std std-ref">convert</span></a>: <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a> -&gt; %</dt><dd><p>from <a class="reference internal" href="SExpressionCategory.html#l-s-expression-category"><span class="std std-ref">SExpressionCategory</span></a>(<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>)</p>
+</dd>
+<dt><a class="reference internal" href="SExpressionCategory.html#l-s-expression-category-convert"><span class="std std-ref">convert</span></a>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> % -&gt; %</dt><dd><p>from <a class="reference internal" href="SExpressionCategory.html#l-s-expression-category"><span class="std std-ref">SExpressionCategory</span></a>(<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>)</p>
+</dd>
+</dl>
+<span class="target" id="l-input-form-convert"></span><dl class="simple" id="index-10">
+<dt><span class="spadfun">convert</span>: <a class="reference internal" href="SExpression.html#l-s-expression"><span class="std std-ref">SExpression</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">convert(s)</span></code> makes <code class="docutils literal notranslate"><span class="pre">s</span></code> into an input form.</p>
+</dd>
+<dt><a class="reference internal" href="SExpressionCategory.html#l-s-expression-category-convert"><span class="std std-ref">convert</span></a>: <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p>from <a class="reference internal" href="SExpressionCategory.html#l-s-expression-category"><span class="std std-ref">SExpressionCategory</span></a>(<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>)</p>
+</dd>
+<dt><a class="reference internal" href="SExpressionCategory.html#l-s-expression-category-convert"><span class="std std-ref">convert</span></a>: <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a> -&gt; %</dt><dd><p>from <a class="reference internal" href="SExpressionCategory.html#l-s-expression-category"><span class="std std-ref">SExpressionCategory</span></a>(<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>)</p>
+</dd>
+</dl>
+<span class="target" id="l-input-form-declare"></span><dl class="simple" id="index-11">
+<dt><span class="spadfun">declare</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> % -&gt; <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">declare(t)</span></code> returns a name <code class="docutils literal notranslate"><span class="pre">f</span></code> such that <code class="docutils literal notranslate"><span class="pre">f</span></code> has been declared to the interpreter to be of type <code class="docutils literal notranslate"><span class="pre">t</span></code>, but has not been assigned a value yet. Note: <code class="docutils literal notranslate"><span class="pre">t</span></code> should be created as <code class="docutils literal notranslate"><span class="pre">devaluate(T)\$Lisp</span></code> where <code class="docutils literal notranslate"><span class="pre">T</span></code> is the actual type of <code class="docutils literal notranslate"><span class="pre">f</span></code> (this hack is required for the case where <code class="docutils literal notranslate"><span class="pre">T</span></code> is a mapping type).</p>
+</dd>
+<dt><a class="reference internal" href="SExpressionCategory.html#l-s-expression-category-destruct"><span class="std std-ref">destruct</span></a>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %</dt><dd><p>from <a class="reference internal" href="SExpressionCategory.html#l-s-expression-category"><span class="std std-ref">SExpressionCategory</span></a>(<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>)</p>
+</dd>
+<dt><a class="reference internal" href="SExpressionCategory.html#l-s-expression-category-elt"><span class="std std-ref">elt</span></a>: (%, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="SExpressionCategory.html#l-s-expression-category"><span class="std std-ref">SExpressionCategory</span></a>(<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>)</p>
+</dd>
+<dt><a class="reference internal" href="SExpressionCategory.html#l-s-expression-category-elt"><span class="std std-ref">elt</span></a>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="SExpressionCategory.html#l-s-expression-category"><span class="std std-ref">SExpressionCategory</span></a>(<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>)</p>
+</dd>
+<dt><a class="reference internal" href="SExpressionCategory.html#l-s-expression-category-eq"><span class="std std-ref">eq</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="SExpressionCategory.html#l-s-expression-category"><span class="std std-ref">SExpressionCategory</span></a>(<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>)</p>
+</dd>
+</dl>
+<span class="target" id="l-input-form-flatten"></span><dl class="simple" id="index-12">
+<dt><span class="spadfun">flatten</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">flatten(s)</span></code> returns an input form corresponding to <code class="docutils literal notranslate"><span class="pre">s</span></code> with all the nested operations flattened to triples using new local variables. If <code class="docutils literal notranslate"><span class="pre">s</span></code> is a piece of code, this speeds up the compilation tremendously later on.</p>
+</dd>
+<dt><a class="reference internal" href="SExpressionCategory.html#l-s-expression-category-float"><span class="std std-ref">float</span></a>: % -&gt; <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a></dt><dd><p>from <a class="reference internal" href="SExpressionCategory.html#l-s-expression-category"><span class="std std-ref">SExpressionCategory</span></a>(<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>)</p>
+</dd>
+<dt><a class="reference internal" href="SExpressionCategory.html#id2"><span class="std std-ref">float?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="SExpressionCategory.html#l-s-expression-category"><span class="std std-ref">SExpressionCategory</span></a>(<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>)</p>
+</dd>
+</dl>
+<span class="target" id="l-input-form-function"></span><dl class="simple" id="index-13">
+<dt><span class="spadfun">function</span>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">function(code,</span> <span class="pre">[x1,</span> <span class="pre">...,</span> <span class="pre">xn],</span> <span class="pre">f)</span></code> returns the input form corresponding to <code class="docutils literal notranslate"><span class="pre">f(x1,</span> <span class="pre">...,</span> <span class="pre">xn)</span> <span class="pre">==</span> <span class="pre">code</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l-single-integer"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash-update"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+<dt><a class="reference internal" href="SExpressionCategory.html#l-s-expression-category-integer"><span class="std std-ref">integer</span></a>: % -&gt; <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p>from <a class="reference internal" href="SExpressionCategory.html#l-s-expression-category"><span class="std std-ref">SExpressionCategory</span></a>(<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>)</p>
+</dd>
+<dt><a class="reference internal" href="SExpressionCategory.html#id3"><span class="std std-ref">integer?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="SExpressionCategory.html#l-s-expression-category"><span class="std std-ref">SExpressionCategory</span></a>(<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>)</p>
+</dd>
+</dl>
+<span class="target" id="l-input-form-interpret"></span><dl class="simple" id="index-14">
+<dt><span class="spadfun">interpret</span>: % -&gt; <a class="reference internal" href="Any.html#l-any"><span class="std std-ref">Any</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">interpret(f)</span></code> passes <code class="docutils literal notranslate"><span class="pre">f</span></code> to the interpreter.</p>
+</dd>
+</dl>
+<span class="target" id="l-input-form-lambda"></span><dl class="simple" id="index-15">
+<dt><span class="spadfun">lambda</span>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">lambda(code,</span> <span class="pre">[x1,</span> <span class="pre">...,</span> <span class="pre">xn])</span></code> returns the input form corresponding to <code class="docutils literal notranslate"><span class="pre">(x1,</span> <span class="pre">...,</span> <span class="pre">xn)</span> <span class="pre">+-&gt;</span> <span class="pre">code</span></code> if <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;</span> <span class="pre">1</span></code>, or to <code class="docutils literal notranslate"><span class="pre">x1</span> <span class="pre">+-&gt;</span> <span class="pre">code</span></code> if <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">1</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-latex"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+<dt><a class="reference internal" href="SExpressionCategory.html#l-s-expression-category-list"><span class="std std-ref">list?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="SExpressionCategory.html#l-s-expression-category"><span class="std std-ref">SExpressionCategory</span></a>(<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>)</p>
+</dd>
+<dt><a class="reference internal" href="SExpressionCategory.html#l-s-expression-category-null"><span class="std std-ref">null?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="SExpressionCategory.html#l-s-expression-category"><span class="std std-ref">SExpressionCategory</span></a>(<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>)</p>
+</dd>
+<dt><a class="reference internal" href="SExpressionCategory.html#l-s-expression-category-pair"><span class="std std-ref">pair?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="SExpressionCategory.html#l-s-expression-category"><span class="std std-ref">SExpressionCategory</span></a>(<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>)</p>
+</dd>
+</dl>
+<span class="target" id="l-input-form-parse"></span><dl class="simple" id="index-16">
+<dt><span class="spadfun">parse</span>: <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">parse(s)</span></code> is the inverse of unparse. It parses a string to InputForm</p>
+</dd>
+<dt><a class="reference internal" href="SExpressionCategory.html#l-s-expression-category-string"><span class="std std-ref">string</span></a>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SExpressionCategory.html#l-s-expression-category"><span class="std std-ref">SExpressionCategory</span></a>(<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>)</p>
+</dd>
+<dt><a class="reference internal" href="SExpressionCategory.html#id4"><span class="std std-ref">string?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="SExpressionCategory.html#l-s-expression-category"><span class="std std-ref">SExpressionCategory</span></a>(<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>)</p>
+</dd>
+<dt><a class="reference internal" href="SExpressionCategory.html#l-s-expression-category-symbol"><span class="std std-ref">symbol</span></a>: % -&gt; <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a></dt><dd><p>from <a class="reference internal" href="SExpressionCategory.html#l-s-expression-category"><span class="std std-ref">SExpressionCategory</span></a>(<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>)</p>
+</dd>
+<dt><a class="reference internal" href="SExpressionCategory.html#id5"><span class="std std-ref">symbol?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="SExpressionCategory.html#l-s-expression-category"><span class="std std-ref">SExpressionCategory</span></a>(<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>)</p>
+</dd>
+</dl>
+<span class="target" id="l-input-form-unparse"></span><dl class="simple" id="index-17">
+<dt><span class="spadfun">unparse</span>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">unparse(f)</span></code> returns a string <code class="docutils literal notranslate"><span class="pre">s</span></code> such that the parser would transform <code class="docutils literal notranslate"><span class="pre">s</span></code> to <code class="docutils literal notranslate"><span class="pre">f</span></code>. Error: if <code class="docutils literal notranslate"><span class="pre">f</span></code> is not the parsed form of a string.</p>
+</dd>
+</dl>
+<p><a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+<p><a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+<p><a class="reference internal" href="ConvertibleTo.html#l-convertible-to"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="SExpression.html#l-s-expression"><span class="std std-ref">SExpression</span></a></p>
+<p><a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+<p><a class="reference internal" href="SExpressionCategory.html#l-s-expression-category"><span class="std std-ref">SExpressionCategory</span></a>(<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>)</p>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="Integer.html" title="Integer"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="InnerTaylorSeries.html" title="InnerTaylorSeries Coef"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Domains.html" >Domains</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">InputForm</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

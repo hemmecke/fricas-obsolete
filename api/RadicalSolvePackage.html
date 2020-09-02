@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RadicalSolvePackage R &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="RadixUtilities" href="RadixUtilities.html" />
+    <link rel="prev" title="RadicalEigenPackage" href="RadicalEigenPackage.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="RadixUtilities.html" title="RadixUtilities"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="RadicalEigenPackage.html" title="RadicalEigenPackage"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">RadicalSolvePackage R</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="radicalsolvepackage-r">
+<span id="l-radical-solve-package"></span><span id="index-0"></span><h1>RadicalSolvePackage R<a class="headerlink" href="#radicalsolvepackage-r" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/solverad.spad#L46">solverad.spad line 46</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/solverad.spad#L46">[edit on github]</a></p>
+<ul class="simple">
+<li><p>R: Join(<a class="reference internal" href="PolynomialFactorizationExplicit.html#l-polynomial-factorization-explicit"><span class="std std-ref">PolynomialFactorizationExplicit</span></a>, <a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a>, <a class="reference internal" href="CharacteristicZero.html#l-characteristic-zero"><span class="std std-ref">CharacteristicZero</span></a>)</p></li>
+</ul>
+<p>This package tries to find solutions expressed in terms of radicals for systems of equations of rational functions with coefficients in an integral domain <code class="docutils literal notranslate"><span class="pre">R</span></code>.</p>
+<span class="target" id="l-radical-solve-package-contract-solve"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">contractSolve</span>: (<a class="reference internal" href="Equation.html#l-equation"><span class="std std-ref">Equation</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>) -&gt; <a class="reference internal" href="SuchThat.html#l-such-that"><span class="std std-ref">SuchThat</span></a>(<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> R, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Equation.html#l-equation"><span class="std std-ref">Equation</span></a> <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> R)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">contractSolve(eq,</span> <span class="pre">x)</span></code> finds the solutions expressed in terms of radicals of the equation of rational functions <code class="docutils literal notranslate"><span class="pre">eq</span></code> with respect to the symbol <code class="docutils literal notranslate"><span class="pre">x</span></code>. The result contains new symbols for common subexpressions in order to reduce the size of the output.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-2">
+<dt><span class="spadfun">contractSolve</span>: (<a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>) -&gt; <a class="reference internal" href="SuchThat.html#l-such-that"><span class="std std-ref">SuchThat</span></a>(<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> R, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Equation.html#l-equation"><span class="std std-ref">Equation</span></a> <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> R)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">contractSolve(rf,</span> <span class="pre">x)</span></code> finds the solutions expressed in terms of radicals of the equation <code class="docutils literal notranslate"><span class="pre">rf</span></code> = 0 with respect to the symbol <code class="docutils literal notranslate"><span class="pre">x</span></code>, where <code class="docutils literal notranslate"><span class="pre">rf</span></code> is a rational function. The result contains new symbols for common subexpressions in order to reduce the size of the output.</p>
+</dd>
+</dl>
+<span class="target" id="l-radical-solve-package-radical-roots"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">radicalRoots</span>: (<a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">radicalRoots(rf,</span> <span class="pre">x)</span></code> finds the roots expressed in terms of radicals of the rational function <code class="docutils literal notranslate"><span class="pre">rf</span></code> with respect to the symbol <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-4">
+<dt><span class="spadfun">radicalRoots</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">radicalRoots(lrf,</span> <span class="pre">lvar)</span></code> finds the roots expressed in terms of radicals of the list of rational functions <code class="docutils literal notranslate"><span class="pre">lrf</span></code> with respect to the list of symbols lvar.</p>
+</dd>
+</dl>
+<span class="target" id="l-radical-solve-package-radical-solve"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">radicalSolve</span>: (<a class="reference internal" href="Equation.html#l-equation"><span class="std std-ref">Equation</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Equation.html#l-equation"><span class="std std-ref">Equation</span></a> <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">radicalSolve(eq,</span> <span class="pre">x)</span></code> finds the solutions expressed in terms of radicals of the equation of rational functions <code class="docutils literal notranslate"><span class="pre">eq</span></code> with respect to the symbol <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-6">
+<dt><span class="spadfun">radicalSolve</span>: (<a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Equation.html#l-equation"><span class="std std-ref">Equation</span></a> <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">radicalSolve(rf,</span> <span class="pre">x)</span></code> finds the solutions expressed in terms of radicals of the equation <code class="docutils literal notranslate"><span class="pre">rf</span></code> = 0 with respect to the symbol <code class="docutils literal notranslate"><span class="pre">x</span></code>, where <code class="docutils literal notranslate"><span class="pre">rf</span></code> is a rational function.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-7">
+<dt><span class="spadfun">radicalSolve</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Equation.html#l-equation"><span class="std std-ref">Equation</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Equation.html#l-equation"><span class="std std-ref">Equation</span></a> <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">radicalSolve(leq,</span> <span class="pre">lvar)</span></code> finds the solutions expressed in terms of radicals of the system of equations of rational functions <code class="docutils literal notranslate"><span class="pre">leq</span></code> with respect to the list of symbols lvar.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-8">
+<dt><span class="spadfun">radicalSolve</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Equation.html#l-equation"><span class="std std-ref">Equation</span></a> <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">radicalSolve(lrf,</span> <span class="pre">lvar)</span></code> finds the solutions expressed in terms of radicals of the system of equations <code class="docutils literal notranslate"><span class="pre">lrf</span></code> = 0 with respect to the list of symbols lvar, where <code class="docutils literal notranslate"><span class="pre">lrf</span></code> is a list of rational functions.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-9">
+<dt><span class="spadfun">radicalSolve</span>: <a class="reference internal" href="Equation.html#l-equation"><span class="std std-ref">Equation</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Equation.html#l-equation"><span class="std std-ref">Equation</span></a> <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">radicalSolve(eq)</span></code> finds the solutions expressed in terms of radicals of the equation of rational functions <code class="docutils literal notranslate"><span class="pre">eq</span></code> with respect to the unique symbol <code class="docutils literal notranslate"><span class="pre">x</span></code> appearing in <code class="docutils literal notranslate"><span class="pre">eq</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-10">
+<dt><span class="spadfun">radicalSolve</span>: <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Equation.html#l-equation"><span class="std std-ref">Equation</span></a> <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">radicalSolve(rf)</span></code> finds the solutions expressed in terms of radicals of the equation <code class="docutils literal notranslate"><span class="pre">rf</span></code> = 0, where <code class="docutils literal notranslate"><span class="pre">rf</span></code> is a univariate rational function.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-11">
+<dt><span class="spadfun">radicalSolve</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Equation.html#l-equation"><span class="std std-ref">Equation</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Equation.html#l-equation"><span class="std std-ref">Equation</span></a> <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">radicalSolve(leq)</span></code> finds the solutions expressed in terms of radicals of the system of equations of rational functions <code class="docutils literal notranslate"><span class="pre">leq</span></code> with respect to all symbols appearing in <code class="docutils literal notranslate"><span class="pre">leq</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-12">
+<dt><span class="spadfun">radicalSolve</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Equation.html#l-equation"><span class="std std-ref">Equation</span></a> <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">radicalSolve(lrf)</span></code> finds the solutions expressed in terms of radicals of the system of equations <code class="docutils literal notranslate"><span class="pre">lrf</span></code> = 0, where <code class="docutils literal notranslate"><span class="pre">lrf</span></code> is a list of rational functions.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="RadixUtilities.html" title="RadixUtilities"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="RadicalEigenPackage.html" title="RadicalEigenPackage"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">RadicalSolvePackage R</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

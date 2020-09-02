@@ -1,0 +1,339 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RectangularMatrixCategory(m, n, R, Row, Col) &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="RecursiveAggregate S" href="RecursiveAggregate.html" />
+    <link rel="prev" title="RealRootCharacterizationCategory(TheField, ThePols)" href="RealRootCharacterizationCategory.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="RecursiveAggregate.html" title="RecursiveAggregate S"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="RealRootCharacterizationCategory.html" title="RealRootCharacterizationCategory(TheField, ThePols)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Categories.html" accesskey="U">Categories</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">RectangularMatrixCategory(m, n, R, Row, Col)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="rectangularmatrixcategory-m-n-r-row-col">
+<span id="l-rectangular-matrix-category"></span><span id="index-0"></span><h1>RectangularMatrixCategory(m, n, R, Row, Col)<a class="headerlink" href="#rectangularmatrixcategory-m-n-r-row-col" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/matcat.spad#L706">matcat.spad line 706</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/matcat.spad#L706">[edit on github]</a></p>
+<ul class="simple">
+<li><p>m: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></p></li>
+<li><p>n: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></p></li>
+<li><p>R: Join(<a class="reference internal" href="SemiRng.html#l-semi-rng"><span class="std std-ref">SemiRng</span></a>, <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a>)</p></li>
+<li><p>Row: <a class="reference internal" href="DirectProductCategory.html#l-direct-product-category"><span class="std std-ref">DirectProductCategory</span></a>(n, R)</p></li>
+<li><p>Col: <a class="reference internal" href="DirectProductCategory.html#l-direct-product-category"><span class="std std-ref">DirectProductCategory</span></a>(m, R)</p></li>
+</ul>
+<p><a class="reference internal" href="#l-rectangular-matrix-category"><span class="std std-ref">RectangularMatrixCategory</span></a> is a category of matrices of fixed dimensions. The dimensions of the matrix will be parameters of the domain. Domains in this category will be <code class="docutils literal notranslate"><span class="pre">R</span></code>-modules and will be non-mutable.</p>
+<dl class="simple">
+<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-0"><span class="std std-ref">0</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Aggregate.html#id1"><span class="std std-ref">#</span></a>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="Aggregate.html#l-aggregate"><span class="std std-ref">Aggregate</span></a></p>
+</dd>
+<dt><a class="reference internal" href="RightModule.html#id1"><span class="std std-ref">*</span></a>: (%, R) -&gt; %</dt><dd><p>from <a class="reference internal" href="RightModule.html#l-right-module"><span class="std std-ref">RightModule</span></a> R</p>
+</dd>
+<dt><a class="reference internal" href="AbelianGroup.html#id1"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, %) -&gt; % if R has <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianMonoid.html#id1"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianSemiGroup.html#id1"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l-abelian-semi-group"><span class="std std-ref">AbelianSemiGroup</span></a></p>
+</dd>
+<dt><a class="reference internal" href="LeftModule.html#id1"><span class="std std-ref">*</span></a>: (R, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="LeftModule.html#l-left-module"><span class="std std-ref">LeftModule</span></a> R</p>
+</dd>
+<dt><a class="reference internal" href="AbelianSemiGroup.html#id2"><span class="std std-ref">+</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l-abelian-semi-group"><span class="std std-ref">AbelianSemiGroup</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianGroup.html#id2"><span class="std std-ref">-</span></a>: % -&gt; % if R has <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianGroup.html#id2"><span class="std std-ref">-</span></a>: (%, %) -&gt; % if R has <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
+</dd>
+</dl>
+<span class="target" id="id1"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">/</span>: (%, R) -&gt; % if R has <a class="reference internal" href="Field.html#l-field"><span class="std std-ref">Field</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">m/r</span></code> divides the elements of <code class="docutils literal notranslate"><span class="pre">m</span></code> by <code class="docutils literal notranslate"><span class="pre">r</span></code>. Error: if <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">=</span> <span class="pre">0</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="BasicType.html#id1"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+<dt><a class="reference internal" href="BasicType.html#id2"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-rectangular-matrix-category-antisymmetric"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">antisymmetric?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">antisymmetric?(m)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the matrix <code class="docutils literal notranslate"><span class="pre">m</span></code> is square and antisymmetric (i.e. <code class="docutils literal notranslate"><span class="pre">m[i,</span> <span class="pre">j]</span> <span class="pre">=</span> <span class="pre">-m[j,</span> <span class="pre">i]</span></code> for all <code class="docutils literal notranslate"><span class="pre">i</span></code> and <code class="docutils literal notranslate"><span class="pre">j</span></code>) and <code class="docutils literal notranslate"><span class="pre">false</span></code> otherwise.</p>
+</dd>
+<dt><a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate-any"><span class="std std-ref">any?</span></a>: (R -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate"><span class="std std-ref">HomogeneousAggregate</span></a> R</p>
+</dd>
+<dt><a class="reference internal" href="CoercibleTo.html#l-coercible-to-coerce"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-rectangular-matrix-category-column"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">column</span>: (%, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; Col</dt><dd><p><code class="docutils literal notranslate"><span class="pre">column(m,</span> <span class="pre">j)</span></code> returns the <code class="docutils literal notranslate"><span class="pre">j</span></code>th column of the matrix <code class="docutils literal notranslate"><span class="pre">m</span></code>. Error: if the index outside the proper range.</p>
+</dd>
+</dl>
+<span class="target" id="l-rectangular-matrix-category-column-space"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">columnSpace</span>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Col if R has <a class="reference internal" href="EuclideanDomain.html#l-euclidean-domain"><span class="std std-ref">EuclideanDomain</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">columnSpace(m)</span></code> returns a sublist of columns of the matrix <code class="docutils literal notranslate"><span class="pre">m</span></code> forming a basis of its column space.</p>
+</dd>
+<dt><a class="reference internal" href="ConvertibleTo.html#l-convertible-to-convert"><span class="std std-ref">convert</span></a>: % -&gt; <a class="reference internal" href="InputForm.html#l-input-form"><span class="std std-ref">InputForm</span></a> if R has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="ConvertibleTo.html#l-convertible-to"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="InputForm.html#l-input-form"><span class="std std-ref">InputForm</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Aggregate.html#l-aggregate-copy"><span class="std std-ref">copy</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="Aggregate.html#l-aggregate"><span class="std std-ref">Aggregate</span></a></p>
+</dd>
+<dt><a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate-count"><span class="std std-ref">count</span></a>: (R -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>, %) -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate"><span class="std std-ref">HomogeneousAggregate</span></a> R</p>
+</dd>
+<dt><a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate-count"><span class="std std-ref">count</span></a>: (R, %) -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate"><span class="std std-ref">HomogeneousAggregate</span></a> R</p>
+</dd>
+</dl>
+<span class="target" id="l-rectangular-matrix-category-diagonal"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">diagonal?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">diagonal?(m)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the matrix <code class="docutils literal notranslate"><span class="pre">m</span></code> is square and diagonal (i.e. all entries of <code class="docutils literal notranslate"><span class="pre">m</span></code> not on the diagonal are zero) and <code class="docutils literal notranslate"><span class="pre">false</span></code> otherwise.</p>
+</dd>
+</dl>
+<span class="target" id="l-rectangular-matrix-category-elt"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">elt</span>: (%, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">elt(m,</span> <span class="pre">i,</span> <span class="pre">j)</span></code> returns the element in the <code class="docutils literal notranslate"><span class="pre">i</span></code>th row and <code class="docutils literal notranslate"><span class="pre">j</span></code>th column of the matrix <code class="docutils literal notranslate"><span class="pre">m</span></code>. Error: if indices are outside the proper ranges.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-7">
+<dt><span class="spadfun">elt</span>: (%, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, R) -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">elt(m,</span> <span class="pre">i,</span> <span class="pre">j,</span> <span class="pre">r)</span></code> returns the element in the <code class="docutils literal notranslate"><span class="pre">i</span></code>th row and <code class="docutils literal notranslate"><span class="pre">j</span></code>th column of the matrix <code class="docutils literal notranslate"><span class="pre">m</span></code>, if <code class="docutils literal notranslate"><span class="pre">m</span></code> has an <code class="docutils literal notranslate"><span class="pre">i</span></code>th row and a <code class="docutils literal notranslate"><span class="pre">j</span></code>th column, and returns <code class="docutils literal notranslate"><span class="pre">r</span></code> otherwise.</p>
+</dd>
+<dt><a class="reference internal" href="Aggregate.html#l-aggregate-empty"><span class="std std-ref">empty</span></a>: () -&gt; %</dt><dd><p>from <a class="reference internal" href="Aggregate.html#l-aggregate"><span class="std std-ref">Aggregate</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Aggregate.html#id2"><span class="std std-ref">empty?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Aggregate.html#l-aggregate"><span class="std std-ref">Aggregate</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Finite.html#l-finite-enumerate"><span class="std std-ref">enumerate</span></a>: () -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> % if R has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Aggregate.html#l-aggregate-eq"><span class="std std-ref">eq?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Aggregate.html#l-aggregate"><span class="std std-ref">Aggregate</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Evalable.html#l-evalable-eval"><span class="std std-ref">eval</span></a>: (%, <a class="reference internal" href="Equation.html#l-equation"><span class="std std-ref">Equation</span></a> R) -&gt; % if R has <a class="reference internal" href="Evalable.html#l-evalable"><span class="std std-ref">Evalable</span></a> R</dt><dd><p>from <a class="reference internal" href="Evalable.html#l-evalable"><span class="std std-ref">Evalable</span></a> R</p>
+</dd>
+<dt><a class="reference internal" href="Evalable.html#l-evalable-eval"><span class="std std-ref">eval</span></a>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Equation.html#l-equation"><span class="std std-ref">Equation</span></a> R) -&gt; % if R has <a class="reference internal" href="Evalable.html#l-evalable"><span class="std std-ref">Evalable</span></a> R</dt><dd><p>from <a class="reference internal" href="Evalable.html#l-evalable"><span class="std std-ref">Evalable</span></a> R</p>
+</dd>
+<dt><a class="reference internal" href="InnerEvalable.html#l-inner-evalable-eval"><span class="std std-ref">eval</span></a>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> R, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> R) -&gt; % if R has <a class="reference internal" href="Evalable.html#l-evalable"><span class="std std-ref">Evalable</span></a> R</dt><dd><p>from <a class="reference internal" href="InnerEvalable.html#l-inner-evalable"><span class="std std-ref">InnerEvalable</span></a>(R, R)</p>
+</dd>
+<dt><a class="reference internal" href="InnerEvalable.html#l-inner-evalable-eval"><span class="std std-ref">eval</span></a>: (%, R, R) -&gt; % if R has <a class="reference internal" href="Evalable.html#l-evalable"><span class="std std-ref">Evalable</span></a> R</dt><dd><p>from <a class="reference internal" href="InnerEvalable.html#l-inner-evalable"><span class="std std-ref">InnerEvalable</span></a>(R, R)</p>
+</dd>
+<dt><a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate-every"><span class="std std-ref">every?</span></a>: (R -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate"><span class="std std-ref">HomogeneousAggregate</span></a> R</p>
+</dd>
+</dl>
+<span class="target" id="l-rectangular-matrix-category-exquo"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">exquo</span>: (%, R) -&gt; Union(%, failed) if R has <a class="reference internal" href="IntegralDomain.html#l-integral-domain"><span class="std std-ref">IntegralDomain</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">exquo(m,</span> <span class="pre">r)</span></code> computes the exact quotient of the elements of <code class="docutils literal notranslate"><span class="pre">m</span></code> by <code class="docutils literal notranslate"><span class="pre">r</span></code>, returning <code class="docutils literal notranslate"><span class="pre">&quot;failed&quot;</span></code> if this is not possible.</p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l-single-integer"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash-update"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Finite.html#l-finite-index"><span class="std std-ref">index</span></a>: <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a> -&gt; % if R has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-latex"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Aggregate.html#l-aggregate-less"><span class="std std-ref">less?</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Aggregate.html#l-aggregate"><span class="std std-ref">Aggregate</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-rectangular-matrix-category-list-of-lists"></span><dl class="simple" id="index-9">
+<dt><span class="spadfun">listOfLists</span>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">listOfLists(m)</span></code> returns the rows of the matrix <code class="docutils literal notranslate"><span class="pre">m</span></code> as a list of lists.</p>
+</dd>
+<dt><a class="reference internal" href="Finite.html#l-finite-lookup"><span class="std std-ref">lookup</span></a>: % -&gt; <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a> if R has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></p>
+</dd>
+<dt><a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate-map"><span class="std std-ref">map!</span></a>: (R -&gt; R, %) -&gt; % if % has <a class="reference internal" href="shallowlyMutable.html#l-shallowly-mutable"><span class="std std-ref">shallowlyMutable</span></a></dt><dd><p>from <a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate"><span class="std std-ref">HomogeneousAggregate</span></a> R</p>
+</dd>
+</dl>
+<span class="target" id="l-rectangular-matrix-category-map"></span><dl class="simple" id="index-10">
+<dt><span class="spadfun">map</span>: ((R, R) -&gt; R, %, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">map(f,</span> <span class="pre">a,</span> <span class="pre">b)</span></code> returns <code class="docutils literal notranslate"><span class="pre">c</span></code>, where <code class="docutils literal notranslate"><span class="pre">c</span></code> is such that <code class="docutils literal notranslate"><span class="pre">c(i,</span> <span class="pre">j)</span> <span class="pre">=</span> <span class="pre">f(a(i,</span> <span class="pre">j),</span> <span class="pre">b(i,</span> <span class="pre">j))</span></code> for all <code class="docutils literal notranslate"><span class="pre">i</span></code>, <code class="docutils literal notranslate"><span class="pre">j</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-11">
+<dt><span class="spadfun">map</span>: (R -&gt; R, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">map(f,</span> <span class="pre">a)</span></code> returns <code class="docutils literal notranslate"><span class="pre">b</span></code>, where <code class="docutils literal notranslate"><span class="pre">b(i,</span> <span class="pre">j)</span> <span class="pre">=</span> <span class="pre">a(i,</span> <span class="pre">j)</span></code> for all <code class="docutils literal notranslate"><span class="pre">i</span></code>, <code class="docutils literal notranslate"><span class="pre">j</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-rectangular-matrix-category-matrix"></span><dl class="simple" id="index-12">
+<dt><span class="spadfun">matrix</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> R -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">matrix(l)</span></code> converts the list of lists <code class="docutils literal notranslate"><span class="pre">l</span></code> to a matrix, where the list of lists is viewed as a list of the rows of the matrix.</p>
+</dd>
+<dt><a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate-max"><span class="std std-ref">max</span></a>: % -&gt; R if R has <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a></dt><dd><p>from <a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate"><span class="std std-ref">HomogeneousAggregate</span></a> R</p>
+</dd>
+<dt><a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate-max"><span class="std std-ref">max</span></a>: ((R, R) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>, %) -&gt; R</dt><dd><p>from <a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate"><span class="std std-ref">HomogeneousAggregate</span></a> R</p>
+</dd>
+</dl>
+<span class="target" id="l-rectangular-matrix-category-max-col-index"></span><dl class="simple" id="index-13">
+<dt><span class="spadfun">maxColIndex</span>: % -&gt; <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">maxColIndex(m)</span></code> returns the index of the ‘last’ column of the matrix <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-rectangular-matrix-category-max-row-index"></span><dl class="simple" id="index-14">
+<dt><span class="spadfun">maxRowIndex</span>: % -&gt; <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">maxRowIndex(m)</span></code> returns the index of the ‘last’ row of the matrix <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate-member"><span class="std std-ref">member?</span></a>: (R, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate"><span class="std std-ref">HomogeneousAggregate</span></a> R</p>
+</dd>
+<dt><a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate-members"><span class="std std-ref">members</span></a>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> R</dt><dd><p>from <a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate"><span class="std std-ref">HomogeneousAggregate</span></a> R</p>
+</dd>
+<dt><a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate-min"><span class="std std-ref">min</span></a>: % -&gt; R if R has <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a></dt><dd><p>from <a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate"><span class="std std-ref">HomogeneousAggregate</span></a> R</p>
+</dd>
+</dl>
+<span class="target" id="l-rectangular-matrix-category-min-col-index"></span><dl class="simple" id="index-15">
+<dt><span class="spadfun">minColIndex</span>: % -&gt; <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">minColIndex(m)</span></code> returns the index of the ‘first’ column of the matrix <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-rectangular-matrix-category-min-row-index"></span><dl class="simple" id="index-16">
+<dt><span class="spadfun">minRowIndex</span>: % -&gt; <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">minRowIndex(m)</span></code> returns the index of the ‘first’ row of the matrix <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="Aggregate.html#l-aggregate-more"><span class="std std-ref">more?</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Aggregate.html#l-aggregate"><span class="std std-ref">Aggregate</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-rectangular-matrix-category-ncols"></span><dl class="simple" id="index-17">
+<dt><span class="spadfun">ncols</span>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">ncols(m)</span></code> returns the number of columns in the matrix <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-rectangular-matrix-category-nrows"></span><dl class="simple" id="index-18">
+<dt><span class="spadfun">nrows</span>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">nrows(m)</span></code> returns the number of rows in the matrix <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-rectangular-matrix-category-nullity"></span><dl class="simple" id="index-19">
+<dt><span class="spadfun">nullity</span>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a> if R has <a class="reference internal" href="IntegralDomain.html#l-integral-domain"><span class="std std-ref">IntegralDomain</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">nullity(m)</span></code> returns the nullity of the matrix <code class="docutils literal notranslate"><span class="pre">m</span></code>. This is the dimension of the null space of the matrix <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-rectangular-matrix-category-null-space"></span><dl class="simple" id="index-20">
+<dt><span class="spadfun">nullSpace</span>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Col if R has <a class="reference internal" href="IntegralDomain.html#l-integral-domain"><span class="std std-ref">IntegralDomain</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">nullSpace(m)</span></code>+ returns a basis for the null space of the matrix <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-opposite"><span class="std std-ref">opposite?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+<dt><a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate-parts"><span class="std std-ref">parts</span></a>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> R</dt><dd><p>from <a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate"><span class="std std-ref">HomogeneousAggregate</span></a> R</p>
+</dd>
+</dl>
+<span class="target" id="l-rectangular-matrix-category-qelt"></span><dl class="simple" id="index-21">
+<dt><span class="spadfun">qelt</span>: (%, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">qelt(m,</span> <span class="pre">i,</span> <span class="pre">j)</span></code> returns the element in the <code class="docutils literal notranslate"><span class="pre">i</span></code>th row and <code class="docutils literal notranslate"><span class="pre">j</span></code>th column of the matrix <code class="docutils literal notranslate"><span class="pre">m</span></code>. Note: there is NO error check to determine if indices are in the proper ranges.</p>
+</dd>
+<dt><a class="reference internal" href="Finite.html#l-finite-random"><span class="std std-ref">random</span></a>: () -&gt; % if R has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-rectangular-matrix-category-rank"></span><dl class="simple" id="index-22">
+<dt><span class="spadfun">rank</span>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a> if R has <a class="reference internal" href="IntegralDomain.html#l-integral-domain"><span class="std std-ref">IntegralDomain</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">rank(m)</span></code> returns the rank of the matrix <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-rectangular-matrix-category-row"></span><dl class="simple" id="index-23">
+<dt><span class="spadfun">row</span>: (%, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; Row</dt><dd><p><code class="docutils literal notranslate"><span class="pre">row(m,</span> <span class="pre">i)</span></code> returns the <code class="docutils literal notranslate"><span class="pre">i</span></code>th row of the matrix <code class="docutils literal notranslate"><span class="pre">m</span></code>. Error: if the index is outside the proper range.</p>
+</dd>
+</dl>
+<span class="target" id="l-rectangular-matrix-category-row-echelon"></span><dl class="simple" id="index-24">
+<dt><span class="spadfun">rowEchelon</span>: % -&gt; % if R has <a class="reference internal" href="EuclideanDomain.html#l-euclidean-domain"><span class="std std-ref">EuclideanDomain</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">rowEchelon(m)</span></code> returns the row echelon form of the matrix <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-sample"><span class="std std-ref">sample</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Finite.html#l-finite-size"><span class="std std-ref">size</span></a>: () -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a> if R has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Aggregate.html#l-aggregate-size"><span class="std std-ref">size?</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Aggregate.html#l-aggregate"><span class="std std-ref">Aggregate</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Comparable.html#l-comparable-smaller"><span class="std std-ref">smaller?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a> if R has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-rectangular-matrix-category-square"></span><dl class="simple" id="index-25">
+<dt><span class="spadfun">square?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">square?(m)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if <code class="docutils literal notranslate"><span class="pre">m</span></code> is a square matrix (i.e. if <code class="docutils literal notranslate"><span class="pre">m</span></code> has the same number of rows as columns) and <code class="docutils literal notranslate"><span class="pre">false</span></code> otherwise.</p>
+</dd>
+<dt><a class="reference internal" href="CancellationAbelianMonoid.html#l-cancellation-abelian-monoid-subtract-if-can"><span class="std std-ref">subtractIfCan</span></a>: (%, %) -&gt; Union(%, failed) if R has <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></dt><dd><p>from <a class="reference internal" href="CancellationAbelianMonoid.html#l-cancellation-abelian-monoid"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-rectangular-matrix-category-symmetric"></span><dl class="simple" id="index-26">
+<dt><span class="spadfun">symmetric?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">symmetric?(m)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the matrix <code class="docutils literal notranslate"><span class="pre">m</span></code> is square and symmetric (i.e. <code class="docutils literal notranslate"><span class="pre">m[i,</span> <span class="pre">j]</span> <span class="pre">=</span> <span class="pre">m[j,</span> <span class="pre">i]</span></code> for all <code class="docutils literal notranslate"><span class="pre">i</span></code> and <code class="docutils literal notranslate"><span class="pre">j</span></code>) and <code class="docutils literal notranslate"><span class="pre">false</span></code> otherwise.</p>
+</dd>
+<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-zero"><span class="std std-ref">zero?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+</dl>
+<p><a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a> if R has <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
+<p><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+<p><a class="reference internal" href="AbelianSemiGroup.html#l-abelian-semi-group"><span class="std std-ref">AbelianSemiGroup</span></a></p>
+<p><a class="reference internal" href="Aggregate.html#l-aggregate"><span class="std std-ref">Aggregate</span></a></p>
+<p><a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+<p><a class="reference internal" href="BiModule.html#l-bi-module"><span class="std std-ref">BiModule</span></a>(R, R)</p>
+<p><a class="reference internal" href="CancellationAbelianMonoid.html#l-cancellation-abelian-monoid"><span class="std std-ref">CancellationAbelianMonoid</span></a> if R has <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
+<p><a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+<p><a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a> if R has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></p>
+<p><a class="reference internal" href="ConvertibleTo.html#l-convertible-to"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="InputForm.html#l-input-form"><span class="std std-ref">InputForm</span></a> if R has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></p>
+<p><a class="reference internal" href="Evalable.html#l-evalable"><span class="std std-ref">Evalable</span></a> R if R has <a class="reference internal" href="Evalable.html#l-evalable"><span class="std std-ref">Evalable</span></a> R</p>
+<p><a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a> if R has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></p>
+<p><a class="reference internal" href="finiteAggregate.html#l-finite-aggregate"><span class="std std-ref">finiteAggregate</span></a></p>
+<p><a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate"><span class="std std-ref">HomogeneousAggregate</span></a> R</p>
+<p><a class="reference internal" href="InnerEvalable.html#l-inner-evalable"><span class="std std-ref">InnerEvalable</span></a>(R, R) if R has <a class="reference internal" href="Evalable.html#l-evalable"><span class="std std-ref">Evalable</span></a> R</p>
+<p><a class="reference internal" href="LeftModule.html#l-left-module"><span class="std std-ref">LeftModule</span></a> R</p>
+<p><a class="reference internal" href="Module.html#l-module"><span class="std std-ref">Module</span></a> R if R has <a class="reference internal" href="CommutativeRing.html#l-commutative-ring"><span class="std std-ref">CommutativeRing</span></a></p>
+<p><a class="reference internal" href="RightModule.html#l-right-module"><span class="std std-ref">RightModule</span></a> R</p>
+<p><a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="RecursiveAggregate.html" title="RecursiveAggregate S"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="RealRootCharacterizationCategory.html" title="RealRootCharacterizationCategory(TheField, ThePols)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Categories.html" >Categories</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">RectangularMatrixCategory(m, n, R, Row, Col)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

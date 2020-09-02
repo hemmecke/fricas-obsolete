@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExpressionToUnivariatePowerSeries(R, FE) &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ExpressionTubePlot" href="ExpressionTubePlot.html" />
+    <link rel="prev" title="ExpressionToOpenMath R" href="ExpressionToOpenMath.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="ExpressionTubePlot.html" title="ExpressionTubePlot"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="ExpressionToOpenMath.html" title="ExpressionToOpenMath R"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">ExpressionToUnivariatePowerSeries(R, FE)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="expressiontounivariatepowerseries-r-fe">
+<span id="l-expression-to-univariate-power-series"></span><span id="index-0"></span><h1>ExpressionToUnivariatePowerSeries(R, FE)<a class="headerlink" href="#expressiontounivariatepowerseries-r-fe" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/expr2ups.spad#L1">expr2ups.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/expr2ups.spad#L1">[edit on github]</a></p>
+<ul class="simple">
+<li><p>R: Join(<a class="reference internal" href="GcdDomain.html#l-gcd-domain"><span class="std std-ref">GcdDomain</span></a>, <a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a>, <a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="LinearlyExplicitOver.html#l-linearly-explicit-over"><span class="std std-ref">LinearlyExplicitOver</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>)</p></li>
+<li><p>FE: Join(<a class="reference internal" href="AlgebraicallyClosedField.html#l-algebraically-closed-field"><span class="std std-ref">AlgebraicallyClosedField</span></a>, <a class="reference internal" href="TranscendentalFunctionCategory.html#l-transcendental-function-category"><span class="std std-ref">TranscendentalFunctionCategory</span></a>, <a class="reference internal" href="FunctionSpace.html#l-function-space"><span class="std std-ref">FunctionSpace</span></a> R)</p></li>
+</ul>
+<p>This package provides functions to convert functional expressions to power series.</p>
+<span class="target" id="l-expression-to-univariate-power-series-laurent"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">laurent</span>: (FE, <a class="reference internal" href="Equation.html#l-equation"><span class="std std-ref">Equation</span></a> FE) -&gt; <a class="reference internal" href="Any.html#l-any"><span class="std std-ref">Any</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">laurent(f,</span> <span class="pre">x</span> <span class="pre">=</span> <span class="pre">a)</span></code> expands the expression <code class="docutils literal notranslate"><span class="pre">f</span></code> as a Laurent series in powers of <code class="docutils literal notranslate"><span class="pre">(x</span> <span class="pre">-</span> <span class="pre">a)</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-2">
+<dt><span class="spadfun">laurent</span>: (FE, <a class="reference internal" href="Equation.html#l-equation"><span class="std std-ref">Equation</span></a> FE, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="Any.html#l-any"><span class="std std-ref">Any</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">laurent(f,</span> <span class="pre">x</span> <span class="pre">=</span> <span class="pre">a,</span> <span class="pre">n)</span></code> expands the expression <code class="docutils literal notranslate"><span class="pre">f</span></code> as a Laurent series in powers of <code class="docutils literal notranslate"><span class="pre">(x</span> <span class="pre">-</span> <span class="pre">a)</span></code>; terms will be computed up to order at least <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-3">
+<dt><span class="spadfun">laurent</span>: (FE, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="Any.html#l-any"><span class="std std-ref">Any</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">laurent(f,</span> <span class="pre">n)</span></code> returns a Laurent expansion of the expression <code class="docutils literal notranslate"><span class="pre">f</span></code>. Note: <code class="docutils literal notranslate"><span class="pre">f</span></code> should have only one variable; the series will be expanded in powers of that variable and terms will be computed up to order at least <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-4">
+<dt><span class="spadfun">laurent</span>: FE -&gt; <a class="reference internal" href="Any.html#l-any"><span class="std std-ref">Any</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">laurent(f)</span></code> returns a Laurent expansion of the expression <code class="docutils literal notranslate"><span class="pre">f</span></code>. Note: <code class="docutils literal notranslate"><span class="pre">f</span></code> should have only one variable; the series will be expanded in powers of that variable.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-5">
+<dt><span class="spadfun">laurent</span>: <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a> -&gt; <a class="reference internal" href="Any.html#l-any"><span class="std std-ref">Any</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">laurent(x)</span></code> returns <code class="docutils literal notranslate"><span class="pre">x</span></code> viewed as a Laurent series.</p>
+</dd>
+</dl>
+<span class="target" id="l-expression-to-univariate-power-series-puiseux"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">puiseux</span>: (FE, <a class="reference internal" href="Equation.html#l-equation"><span class="std std-ref">Equation</span></a> FE) -&gt; <a class="reference internal" href="Any.html#l-any"><span class="std std-ref">Any</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">puiseux(f,</span> <span class="pre">x</span> <span class="pre">=</span> <span class="pre">a)</span></code> expands the expression <code class="docutils literal notranslate"><span class="pre">f</span></code> as a Puiseux series in powers of <code class="docutils literal notranslate"><span class="pre">(x</span> <span class="pre">-</span> <span class="pre">a)</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-7">
+<dt><span class="spadfun">puiseux</span>: (FE, <a class="reference internal" href="Equation.html#l-equation"><span class="std std-ref">Equation</span></a> FE, <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="Any.html#l-any"><span class="std std-ref">Any</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">puiseux(f,</span> <span class="pre">x</span> <span class="pre">=</span> <span class="pre">a,</span> <span class="pre">n)</span></code> expands the expression <code class="docutils literal notranslate"><span class="pre">f</span></code> as a Puiseux series in powers of <code class="docutils literal notranslate"><span class="pre">(x</span> <span class="pre">-</span> <span class="pre">a)</span></code>; terms will be computed up to order at least <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-8">
+<dt><span class="spadfun">puiseux</span>: (FE, <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="Any.html#l-any"><span class="std std-ref">Any</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">puiseux(f,</span> <span class="pre">n)</span></code> returns a Puiseux expansion of the expression <code class="docutils literal notranslate"><span class="pre">f</span></code>. Note: <code class="docutils literal notranslate"><span class="pre">f</span></code> should have only one variable; the series will be expanded in powers of that variable and terms will be computed up to order at least <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-9">
+<dt><span class="spadfun">puiseux</span>: FE -&gt; <a class="reference internal" href="Any.html#l-any"><span class="std std-ref">Any</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">puiseux(f)</span></code> returns a Puiseux expansion of the expression <code class="docutils literal notranslate"><span class="pre">f</span></code>. Note: <code class="docutils literal notranslate"><span class="pre">f</span></code> should have only one variable; the series will be expanded in powers of that variable.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-10">
+<dt><span class="spadfun">puiseux</span>: <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a> -&gt; <a class="reference internal" href="Any.html#l-any"><span class="std std-ref">Any</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">puiseux(x)</span></code> returns <code class="docutils literal notranslate"><span class="pre">x</span></code> viewed as a Puiseux series.</p>
+</dd>
+</dl>
+<span class="target" id="l-expression-to-univariate-power-series-series"></span><dl class="simple" id="index-11">
+<dt><span class="spadfun">series</span>: (FE, <a class="reference internal" href="Equation.html#l-equation"><span class="std std-ref">Equation</span></a> FE) -&gt; <a class="reference internal" href="Any.html#l-any"><span class="std std-ref">Any</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">series(f,</span> <span class="pre">x</span> <span class="pre">=</span> <span class="pre">a)</span></code> expands the expression <code class="docutils literal notranslate"><span class="pre">f</span></code> as a series in powers of (<code class="docutils literal notranslate"><span class="pre">x</span></code> - a).</p>
+</dd>
+</dl>
+<dl class="simple" id="index-12">
+<dt><span class="spadfun">series</span>: (FE, <a class="reference internal" href="Equation.html#l-equation"><span class="std std-ref">Equation</span></a> FE, <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="Any.html#l-any"><span class="std std-ref">Any</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">series(f,</span> <span class="pre">x</span> <span class="pre">=</span> <span class="pre">a,</span> <span class="pre">n)</span></code> expands the expression <code class="docutils literal notranslate"><span class="pre">f</span></code> as a series in powers of (<code class="docutils literal notranslate"><span class="pre">x</span></code> - a); terms will be computed up to order at least <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-13">
+<dt><span class="spadfun">series</span>: (FE, <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="Any.html#l-any"><span class="std std-ref">Any</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">series(f,</span> <span class="pre">n)</span></code> returns a series expansion of the expression <code class="docutils literal notranslate"><span class="pre">f</span></code>. Note: <code class="docutils literal notranslate"><span class="pre">f</span></code> should have only one variable; the series will be expanded in powers of that variable and terms will be computed up to order at least <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-14">
+<dt><span class="spadfun">series</span>: FE -&gt; <a class="reference internal" href="Any.html#l-any"><span class="std std-ref">Any</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">series(f)</span></code> returns a series expansion of the expression <code class="docutils literal notranslate"><span class="pre">f</span></code>. Note: <code class="docutils literal notranslate"><span class="pre">f</span></code> should have only one variable; the series will be expanded in powers of that variable.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-15">
+<dt><span class="spadfun">series</span>: <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a> -&gt; <a class="reference internal" href="Any.html#l-any"><span class="std std-ref">Any</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">series(x)</span></code> returns <code class="docutils literal notranslate"><span class="pre">x</span></code> viewed as a series.</p>
+</dd>
+</dl>
+<span class="target" id="l-expression-to-univariate-power-series-taylor"></span><dl class="simple" id="index-16">
+<dt><span class="spadfun">taylor</span>: (FE, <a class="reference internal" href="Equation.html#l-equation"><span class="std std-ref">Equation</span></a> FE) -&gt; <a class="reference internal" href="Any.html#l-any"><span class="std std-ref">Any</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">taylor(f,</span> <span class="pre">x</span> <span class="pre">=</span> <span class="pre">a)</span></code> expands the expression <code class="docutils literal notranslate"><span class="pre">f</span></code> as a Taylor series in powers of <code class="docutils literal notranslate"><span class="pre">(x</span> <span class="pre">-</span> <span class="pre">a)</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-17">
+<dt><span class="spadfun">taylor</span>: (FE, <a class="reference internal" href="Equation.html#l-equation"><span class="std std-ref">Equation</span></a> FE, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Any.html#l-any"><span class="std std-ref">Any</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">taylor(f,</span> <span class="pre">x</span> <span class="pre">=</span> <span class="pre">a)</span></code> expands the expression <code class="docutils literal notranslate"><span class="pre">f</span></code> as a Taylor series in powers of <code class="docutils literal notranslate"><span class="pre">(x</span> <span class="pre">-</span> <span class="pre">a)</span></code>; terms will be computed up to order at least <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-18">
+<dt><span class="spadfun">taylor</span>: (FE, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Any.html#l-any"><span class="std std-ref">Any</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">taylor(f,</span> <span class="pre">n)</span></code> returns a Taylor expansion of the expression <code class="docutils literal notranslate"><span class="pre">f</span></code>. Note: <code class="docutils literal notranslate"><span class="pre">f</span></code> should have only one variable; the series will be expanded in powers of that variable and terms will be computed up to order at least <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-19">
+<dt><span class="spadfun">taylor</span>: FE -&gt; <a class="reference internal" href="Any.html#l-any"><span class="std std-ref">Any</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">taylor(f)</span></code> returns a Taylor expansion of the expression <code class="docutils literal notranslate"><span class="pre">f</span></code>. Note: <code class="docutils literal notranslate"><span class="pre">f</span></code> should have only one variable; the series will be expanded in powers of that variable.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-20">
+<dt><span class="spadfun">taylor</span>: <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a> -&gt; <a class="reference internal" href="Any.html#l-any"><span class="std std-ref">Any</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">taylor(x)</span></code> returns <code class="docutils literal notranslate"><span class="pre">x</span></code> viewed as a Taylor series.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="ExpressionTubePlot.html" title="ExpressionTubePlot"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="ExpressionToOpenMath.html" title="ExpressionToOpenMath R"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">ExpressionToUnivariatePowerSeries(R, FE)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

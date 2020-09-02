@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExpressionTubePlot &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ExtendedPolynomialReduction(C, E, R)" href="ExtendedPolynomialReduction.html" />
+    <link rel="prev" title="ExpressionToUnivariatePowerSeries(R, FE)" href="ExpressionToUnivariatePowerSeries.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="ExtendedPolynomialReduction.html" title="ExtendedPolynomialReduction(C, E, R)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="ExpressionToUnivariatePowerSeries.html" title="ExpressionToUnivariatePowerSeries(R, FE)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">ExpressionTubePlot</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="expressiontubeplot">
+<span id="l-expression-tube-plot"></span><span id="index-0"></span><h1>ExpressionTubePlot<a class="headerlink" href="#expressiontubeplot" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/tube.spad#L167">tube.spad line 167</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/tube.spad#L167">[edit on github]</a></p>
+<p>Author: Clifton <code class="docutils literal notranslate"><span class="pre">J</span></code>. Williamson Date Created: Bastille Day 1989 Keywords: Examples: Package for constructing tubes around 3-dimensional parametric curves.</p>
+<span class="target" id="l-expression-tube-plot-constant-to-unary-function"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">constantToUnaryFunction</span>: <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a> -&gt; <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a> -&gt; <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">constantToUnaryFunction(s)</span></code> is a local function which takes the value of <code class="docutils literal notranslate"><span class="pre">s</span></code>, which may be a function of a constant, and returns a function which always returns the value <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a> <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-expression-tube-plot-tube-plot"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">tubePlot</span>: (<a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a> -&gt; <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>, <a class="reference internal" href="Segment.html#l-segment"><span class="std std-ref">Segment</span></a> <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>, <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a> -&gt; <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="TubePlot.html#l-tube-plot"><span class="std std-ref">TubePlot</span></a> <a class="reference internal" href="Plot3D.html#l-plot3-d"><span class="std std-ref">Plot3D</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">tubePlot(f,</span> <span class="pre">g,</span> <span class="pre">h,</span> <span class="pre">colorFcn,</span> <span class="pre">a..b,</span> <span class="pre">r,</span> <span class="pre">n)</span></code> puts a tube of radius <code class="docutils literal notranslate"><span class="pre">r</span></code>(<code class="docutils literal notranslate"><span class="pre">t</span></code>) with <code class="docutils literal notranslate"><span class="pre">n</span></code> points on each circle about the curve <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">f(t)</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">g(t)</span></code>, <code class="docutils literal notranslate"><span class="pre">z</span> <span class="pre">=</span> <span class="pre">h(t)</span></code> for <code class="docutils literal notranslate"><span class="pre">t</span></code> in <code class="docutils literal notranslate"><span class="pre">[a,</span> <span class="pre">b]</span></code>. The tube is considered to be open.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-3">
+<dt><span class="spadfun">tubePlot</span>: (<a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a> -&gt; <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>, <a class="reference internal" href="Segment.html#l-segment"><span class="std std-ref">Segment</span></a> <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>, <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a> -&gt; <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>) -&gt; <a class="reference internal" href="TubePlot.html#l-tube-plot"><span class="std std-ref">TubePlot</span></a> <a class="reference internal" href="Plot3D.html#l-plot3-d"><span class="std std-ref">Plot3D</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">tubePlot(f,</span> <span class="pre">g,</span> <span class="pre">h,</span> <span class="pre">colorFcn,</span> <span class="pre">a..b,</span> <span class="pre">r,</span> <span class="pre">n,</span> <span class="pre">s)</span></code> puts a tube of radius <code class="docutils literal notranslate"><span class="pre">r(t)</span></code> with <code class="docutils literal notranslate"><span class="pre">n</span></code> points on each circle about the curve <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">f(t)</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">g(t)</span></code>, <code class="docutils literal notranslate"><span class="pre">z</span> <span class="pre">=</span> <span class="pre">h(t)</span></code> for <code class="docutils literal notranslate"><span class="pre">t</span></code> in <code class="docutils literal notranslate"><span class="pre">[a,b]</span></code>. If <code class="docutils literal notranslate"><span class="pre">s</span></code> = “closed”, the tube is considered to be closed; if <code class="docutils literal notranslate"><span class="pre">s</span></code> = “open”, the tube is considered to be open.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-4">
+<dt><span class="spadfun">tubePlot</span>: (<a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a> -&gt; <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>, <a class="reference internal" href="Segment.html#l-segment"><span class="std std-ref">Segment</span></a> <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>, <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="TubePlot.html#l-tube-plot"><span class="std std-ref">TubePlot</span></a> <a class="reference internal" href="Plot3D.html#l-plot3-d"><span class="std std-ref">Plot3D</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">tubePlot(f,</span> <span class="pre">g,</span> <span class="pre">h,</span> <span class="pre">colorFcn,</span> <span class="pre">a..b,</span> <span class="pre">r,</span> <span class="pre">n)</span></code> puts a tube of radius <code class="docutils literal notranslate"><span class="pre">r</span></code> with <code class="docutils literal notranslate"><span class="pre">n</span></code> points on each circle about the curve <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">f(t)</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">g(t)</span></code>, <code class="docutils literal notranslate"><span class="pre">z</span> <span class="pre">=</span> <span class="pre">h(t)</span></code> for <code class="docutils literal notranslate"><span class="pre">t</span></code> in <code class="docutils literal notranslate"><span class="pre">[a,</span> <span class="pre">b]</span></code>. The tube is considered to be open.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-5">
+<dt><span class="spadfun">tubePlot</span>: (<a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a> -&gt; <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>, <a class="reference internal" href="Segment.html#l-segment"><span class="std std-ref">Segment</span></a> <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>, <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>) -&gt; <a class="reference internal" href="TubePlot.html#l-tube-plot"><span class="std std-ref">TubePlot</span></a> <a class="reference internal" href="Plot3D.html#l-plot3-d"><span class="std std-ref">Plot3D</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">tubePlot(f,</span> <span class="pre">g,</span> <span class="pre">h,</span> <span class="pre">colorFcn,</span> <span class="pre">a..b,</span> <span class="pre">r,</span> <span class="pre">n,</span> <span class="pre">s)</span></code> puts a tube of radius <code class="docutils literal notranslate"><span class="pre">r</span></code> with <code class="docutils literal notranslate"><span class="pre">n</span></code> points on each circle about the curve <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">f(t)</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">g(t)</span></code>, <code class="docutils literal notranslate"><span class="pre">z</span> <span class="pre">=</span> <span class="pre">h(t)</span></code> for <code class="docutils literal notranslate"><span class="pre">t</span></code> in <code class="docutils literal notranslate"><span class="pre">[a,</span> <span class="pre">b]</span></code>. If <code class="docutils literal notranslate"><span class="pre">s</span></code> = “closed”, the tube is considered to be closed; if <code class="docutils literal notranslate"><span class="pre">s</span></code> = “open”, the tube is considered to be open.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="ExtendedPolynomialReduction.html" title="ExtendedPolynomialReduction(C, E, R)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="ExpressionToUnivariatePowerSeries.html" title="ExpressionToUnivariatePowerSeries(R, FE)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">ExpressionTubePlot</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

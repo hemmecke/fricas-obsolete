@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FiniteDivisorFunctions2(R1, UP1, UPUP1, F1, R2, UP2, UPUP2, F2) &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="FiniteFieldFunctions GF" href="FiniteFieldFunctions.html" />
+    <link rel="prev" title="FiniteAbelianMonoidRingFunctions2(E, R1, A1, R2, A2)" href="FiniteAbelianMonoidRingFunctions2.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="FiniteFieldFunctions.html" title="FiniteFieldFunctions GF"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="FiniteAbelianMonoidRingFunctions2.html" title="FiniteAbelianMonoidRingFunctions2(E, R1, A1, R2, A2)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">FiniteDivisorFunctions2(R1, UP1, UPUP1, F1, R2, UP2, UPUP2, F2)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="finitedivisorfunctions2-r1-up1-upup1-f1-r2-up2-upup2-f2">
+<span id="l-finite-divisor-functions2"></span><span id="index-0"></span><h1>FiniteDivisorFunctions2(R1, UP1, UPUP1, F1, R2, UP2, UPUP2, F2)<a class="headerlink" href="#finitedivisorfunctions2-r1-up1-upup1-f1-r2-up2-upup2-f2" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/divisor.spad#L947">divisor.spad line 947</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/divisor.spad#L947">[edit on github]</a></p>
+<ul class="simple">
+<li><p>R1: <a class="reference internal" href="Field.html#l-field"><span class="std std-ref">Field</span></a></p></li>
+<li><p>UP1: <a class="reference internal" href="UnivariatePolynomialCategory.html#l-univariate-polynomial-category"><span class="std std-ref">UnivariatePolynomialCategory</span></a> R1</p></li>
+<li><p>UPUP1: <a class="reference internal" href="UnivariatePolynomialCategory.html#l-univariate-polynomial-category"><span class="std std-ref">UnivariatePolynomialCategory</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP1</p></li>
+<li><p>F1: <a class="reference internal" href="FunctionFieldCategory.html#l-function-field-category"><span class="std std-ref">FunctionFieldCategory</span></a>(R1, UP1, UPUP1)</p></li>
+<li><p>R2: <a class="reference internal" href="Field.html#l-field"><span class="std std-ref">Field</span></a></p></li>
+<li><p>UP2: <a class="reference internal" href="UnivariatePolynomialCategory.html#l-univariate-polynomial-category"><span class="std std-ref">UnivariatePolynomialCategory</span></a> R2</p></li>
+<li><p>UPUP2: <a class="reference internal" href="UnivariatePolynomialCategory.html#l-univariate-polynomial-category"><span class="std std-ref">UnivariatePolynomialCategory</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP2</p></li>
+<li><p>F2: <a class="reference internal" href="FunctionFieldCategory.html#l-function-field-category"><span class="std std-ref">FunctionFieldCategory</span></a>(R2, UP2, UPUP2)</p></li>
+</ul>
+<p>Lift a map to finite divisors. Author: Manuel Bronstein Date Created: 1988</p>
+<span class="target" id="l-finite-divisor-functions2-map"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">map</span>: (R1 -&gt; R2, <a class="reference internal" href="FiniteDivisor.html#l-finite-divisor"><span class="std std-ref">FiniteDivisor</span></a>(R1, UP1, UPUP1, F1)) -&gt; <a class="reference internal" href="FiniteDivisor.html#l-finite-divisor"><span class="std std-ref">FiniteDivisor</span></a>(R2, UP2, UPUP2, F2)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">map(f,</span> <span class="pre">d)</span></code> is undocumented.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="FiniteFieldFunctions.html" title="FiniteFieldFunctions GF"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="FiniteAbelianMonoidRingFunctions2.html" title="FiniteAbelianMonoidRingFunctions2(E, R1, A1, R2, A2)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">FiniteDivisorFunctions2(R1, UP1, UPUP1, F1, R2, UP2, UPUP2, F2)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

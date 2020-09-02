@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneDimensionalArrayFunctions2(A, B) &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="OnePointCompletionFunctions2(R, S)" href="OnePointCompletionFunctions2.html" />
+    <link rel="prev" title="ODETools(F, LODO)" href="ODETools.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="OnePointCompletionFunctions2.html" title="OnePointCompletionFunctions2(R, S)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="ODETools.html" title="ODETools(F, LODO)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">OneDimensionalArrayFunctions2(A, B)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="onedimensionalarrayfunctions2-a-b">
+<span id="l-one-dimensional-array-functions2"></span><span id="index-0"></span><h1>OneDimensionalArrayFunctions2(A, B)<a class="headerlink" href="#onedimensionalarrayfunctions2-a-b" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/array1.spad#L468">array1.spad line 468</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/array1.spad#L468">[edit on github]</a></p>
+<ul class="simple">
+<li><p>A: <a class="reference internal" href="Type.html#l-type"><span class="std std-ref">Type</span></a></p></li>
+<li><p>B: <a class="reference internal" href="Type.html#l-type"><span class="std std-ref">Type</span></a></p></li>
+</ul>
+<p>This package provides tools for operating on one-dimensional arrays with unary and binary functions involving different underlying types</p>
+<span class="target" id="l-one-dimensional-array-functions2-map"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">map</span>: (A -&gt; B, <a class="reference internal" href="OneDimensionalArray.html#l-one-dimensional-array"><span class="std std-ref">OneDimensionalArray</span></a> A) -&gt; <a class="reference internal" href="OneDimensionalArray.html#l-one-dimensional-array"><span class="std std-ref">OneDimensionalArray</span></a> B</dt><dd><p><code class="docutils literal notranslate"><span class="pre">map(f,</span> <span class="pre">a)</span></code> applies function <code class="docutils literal notranslate"><span class="pre">f</span></code> to each member of one-dimensional array <code class="docutils literal notranslate"><span class="pre">a</span></code> resulting in a new one-dimensional array over a possibly different underlying domain.</p>
+</dd>
+</dl>
+<span class="target" id="l-one-dimensional-array-functions2-reduce"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">reduce</span>: ((A, B) -&gt; B, <a class="reference internal" href="OneDimensionalArray.html#l-one-dimensional-array"><span class="std std-ref">OneDimensionalArray</span></a> A, B) -&gt; B</dt><dd><p><code class="docutils literal notranslate"><span class="pre">reduce(f,</span> <span class="pre">a,</span> <span class="pre">r)</span></code> applies function <code class="docutils literal notranslate"><span class="pre">f</span></code> to each successive element of the one-dimensional array <code class="docutils literal notranslate"><span class="pre">a</span></code> and an accumulant initialized to <code class="docutils literal notranslate"><span class="pre">r</span></code>. For example, <code class="docutils literal notranslate"><span class="pre">reduce(_+\$Integer,</span> <span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3],</span> <span class="pre">0)</span></code> does <code class="docutils literal notranslate"><span class="pre">3+(2+(1+0))</span></code>. Note: third argument <code class="docutils literal notranslate"><span class="pre">r</span></code> may be regarded as the identity element for the function <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-one-dimensional-array-functions2-scan"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">scan</span>: ((A, B) -&gt; B, <a class="reference internal" href="OneDimensionalArray.html#l-one-dimensional-array"><span class="std std-ref">OneDimensionalArray</span></a> A, B) -&gt; <a class="reference internal" href="OneDimensionalArray.html#l-one-dimensional-array"><span class="std std-ref">OneDimensionalArray</span></a> B</dt><dd><p><code class="docutils literal notranslate"><span class="pre">scan(f,</span> <span class="pre">a,</span> <span class="pre">r)</span></code> successively applies <code class="docutils literal notranslate"><span class="pre">reduce(f,</span> <span class="pre">x,</span> <span class="pre">r)</span></code> to more and more leading sub-arrays <code class="docutils literal notranslate"><span class="pre">x</span></code> of one-dimensional array <code class="docutils literal notranslate"><span class="pre">a</span></code>. More precisely, if <code class="docutils literal notranslate"><span class="pre">a</span></code> is <code class="docutils literal notranslate"><span class="pre">[a1,</span> <span class="pre">a2,</span> <span class="pre">...]</span></code>, then <code class="docutils literal notranslate"><span class="pre">scan(f,</span> <span class="pre">a,</span> <span class="pre">r)</span></code> returns <code class="docutils literal notranslate"><span class="pre">[reduce(f,</span> <span class="pre">[a1],</span> <span class="pre">r),</span> <span class="pre">reduce(f,</span> <span class="pre">[a1,</span> <span class="pre">a2],</span> <span class="pre">r),</span> <span class="pre">...]</span></code>.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="OnePointCompletionFunctions2.html" title="OnePointCompletionFunctions2(R, S)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="ODETools.html" title="ODETools(F, LODO)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">OneDimensionalArrayFunctions2(A, B)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

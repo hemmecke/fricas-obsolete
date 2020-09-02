@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UnivariatePolynomialDecompositionPackage(R, UP) &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="UnivariatePolynomialDivisionPackage(R, UP)" href="UnivariatePolynomialDivisionPackage.html" />
+    <link rel="prev" title="UnivariatePolynomialCommonDenominator(R, Q, UP)" href="UnivariatePolynomialCommonDenominator.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="UnivariatePolynomialDivisionPackage.html" title="UnivariatePolynomialDivisionPackage(R, UP)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="UnivariatePolynomialCommonDenominator.html" title="UnivariatePolynomialCommonDenominator(R, Q, UP)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">UnivariatePolynomialDecompositionPackage(R, UP)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="univariatepolynomialdecompositionpackage-r-up">
+<span id="l-univariate-polynomial-decomposition-package"></span><span id="index-0"></span><h1>UnivariatePolynomialDecompositionPackage(R, UP)<a class="headerlink" href="#univariatepolynomialdecompositionpackage-r-up" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/updecomp.spad#L41">updecomp.spad line 41</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/updecomp.spad#L41">[edit on github]</a></p>
+<ul class="simple">
+<li><p>R: <a class="reference internal" href="IntegralDomain.html#l-integral-domain"><span class="std std-ref">IntegralDomain</span></a></p></li>
+<li><p>UP: <a class="reference internal" href="UnivariatePolynomialCategory.html#l-univariate-polynomial-category"><span class="std std-ref">UnivariatePolynomialCategory</span></a> R</p></li>
+</ul>
+<p>UnivariatePolynomialDecompositionPackage implements functional decomposition of univariate polynomial with coefficients in an <code class="docutils literal notranslate"><span class="pre">IntegralDomain</span></code> of <code class="docutils literal notranslate"><span class="pre">CharacteristicZero</span></code>.</p>
+<span class="target" id="l-univariate-polynomial-decomposition-package-complete-decompose"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">completeDecompose</span>: UP -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> UP if R has <a class="reference internal" href="Field.html#l-field"><span class="std std-ref">Field</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">completeDecompose(f)</span></code> returns a list of factors of <code class="docutils literal notranslate"><span class="pre">f</span></code> for the functional decomposition of <code class="docutils literal notranslate"><span class="pre">f</span></code>. [<code class="docutils literal notranslate"><span class="pre">f1</span></code>, …, <code class="docutils literal notranslate"><span class="pre">fn</span></code>] means <code class="docutils literal notranslate"><span class="pre">f</span></code> = <code class="docutils literal notranslate"><span class="pre">f1</span></code> <code class="docutils literal notranslate"><span class="pre">o</span></code> … <code class="docutils literal notranslate"><span class="pre">o</span></code> <code class="docutils literal notranslate"><span class="pre">fn</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-univariate-polynomial-decomposition-package-decompose-if-can"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">decomposeIfCan</span>: UP -&gt; Union(Record(left: UP, right: UP), failed) if R has <a class="reference internal" href="Field.html#l-field"><span class="std std-ref">Field</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">decomposeIfCan(f)</span></code> returns a functional decomposition of the polynomial <code class="docutils literal notranslate"><span class="pre">f</span></code> or “failed” if it has not found any.</p>
+</dd>
+</dl>
+<span class="target" id="l-univariate-polynomial-decomposition-package-left-factor-if-can"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">leftFactorIfCan</span>: (UP, UP) -&gt; Union(UP, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">leftFactorIfCan(f,</span> <span class="pre">h)</span></code> returns the left factor (<code class="docutils literal notranslate"><span class="pre">g</span></code> in <code class="docutils literal notranslate"><span class="pre">f</span></code> = <code class="docutils literal notranslate"><span class="pre">g</span></code> <code class="docutils literal notranslate"><span class="pre">o</span></code> <code class="docutils literal notranslate"><span class="pre">h</span></code>) of the functional decomposition of the polynomial <code class="docutils literal notranslate"><span class="pre">f</span></code> with given <code class="docutils literal notranslate"><span class="pre">h</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;failed&quot;</span></code> if <code class="docutils literal notranslate"><span class="pre">g</span></code> does not exist.</p>
+</dd>
+</dl>
+<span class="target" id="l-univariate-polynomial-decomposition-package-monic-complete-decompose"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">monicCompleteDecompose</span>: UP -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> UP</dt><dd><p><code class="docutils literal notranslate"><span class="pre">monicCompleteDecompose(f)</span></code> returns a list of factors of <code class="docutils literal notranslate"><span class="pre">f</span></code> for the functional decomposition of monic polynomial <code class="docutils literal notranslate"><span class="pre">f</span></code>. [<code class="docutils literal notranslate"><span class="pre">f1</span></code>, …, <code class="docutils literal notranslate"><span class="pre">fn</span></code>] means <code class="docutils literal notranslate"><span class="pre">f</span></code> = <code class="docutils literal notranslate"><span class="pre">f1</span></code> <code class="docutils literal notranslate"><span class="pre">o</span></code> … <code class="docutils literal notranslate"><span class="pre">o</span></code> <code class="docutils literal notranslate"><span class="pre">fn</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-univariate-polynomial-decomposition-package-monic-decompose-if-can"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">monicDecomposeIfCan</span>: UP -&gt; Union(Record(left: UP, right: UP), failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">monicDecomposeIfCan(f)</span></code> returns a functional decomposition of the monic polynomial <code class="docutils literal notranslate"><span class="pre">f</span></code> or “failed” if it has not found any.</p>
+</dd>
+</dl>
+<span class="target" id="l-univariate-polynomial-decomposition-package-monic-right-factor-if-can"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">monicRightFactorIfCan</span>: (UP, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; Union(UP, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">monicRightFactorIfCan(f,</span> <span class="pre">d)</span></code> returns a candidate to be the monic right factor (<code class="docutils literal notranslate"><span class="pre">h</span></code> in <code class="docutils literal notranslate"><span class="pre">f</span></code> = <code class="docutils literal notranslate"><span class="pre">g</span></code> <code class="docutils literal notranslate"><span class="pre">o</span></code> <code class="docutils literal notranslate"><span class="pre">h</span></code>) of degree <code class="docutils literal notranslate"><span class="pre">d</span></code> of a functional decomposition of the polynomial <code class="docutils literal notranslate"><span class="pre">f</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;failed&quot;</span></code> if no such candidate.</p>
+</dd>
+</dl>
+<span class="target" id="l-univariate-polynomial-decomposition-package-right-factor-if-can"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">rightFactorIfCan</span>: (UP, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, R) -&gt; Union(UP, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">rightFactorIfCan(f,</span> <span class="pre">d,</span> <span class="pre">c)</span></code> returns a candidate to be the right factor (<code class="docutils literal notranslate"><span class="pre">h</span></code> in <code class="docutils literal notranslate"><span class="pre">f</span></code> = <code class="docutils literal notranslate"><span class="pre">g</span></code> <code class="docutils literal notranslate"><span class="pre">o</span></code> <code class="docutils literal notranslate"><span class="pre">h</span></code>) of degree <code class="docutils literal notranslate"><span class="pre">d</span></code> with leading coefficient <code class="docutils literal notranslate"><span class="pre">c</span></code> of a functional decomposition of the polynomial <code class="docutils literal notranslate"><span class="pre">f</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;failed&quot;</span></code> if no such candidate.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="UnivariatePolynomialDivisionPackage.html" title="UnivariatePolynomialDivisionPackage(R, UP)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="UnivariatePolynomialCommonDenominator.html" title="UnivariatePolynomialCommonDenominator(R, Q, UP)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">UnivariatePolynomialDecompositionPackage(R, UP)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

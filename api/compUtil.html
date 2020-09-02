@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>compUtil UT &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ConstantLinearDependence(R, F)" href="ConstantLinearDependence.html" />
+    <link rel="prev" title="ComplexTrigonometricManipulations(R, F)" href="ComplexTrigonometricManipulations.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="ConstantLinearDependence.html" title="ConstantLinearDependence(R, F)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="ComplexTrigonometricManipulations.html" title="ComplexTrigonometricManipulations(R, F)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">compUtil UT</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="computil-ut">
+<span id="l-comp-util"></span><span id="index-0"></span><h1>compUtil UT<a class="headerlink" href="#computil-ut" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/computation.spad#L2260">computation.spad line 2260</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/computation.spad#L2260">[edit on github]</a></p>
+<ul class="simple">
+<li><p>UT: <a class="reference internal" href="VarCat.html#l-var-cat"><span class="std std-ref">VarCat</span></a></p></li>
+</ul>
+<p>macro to simplify output</p>
+<span class="target" id="l-comp-util-coerce"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="Lambda.html#l-lambda"><span class="std std-ref">Lambda</span></a> UT -&gt; <a class="reference internal" href="SKICombinators.html#l-s-k-i-combinators"><span class="std std-ref">SKICombinators</span></a> UT</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce</span> <span class="pre">Lambda</span></code> term to SKI combinators. this process is known as abstraction elimination. it is done by applying the following rules until all lambda terms have been eliminated. rule LS1: Lam[<code class="docutils literal notranslate"><span class="pre">x</span></code>] <code class="docutils literal notranslate"><span class="pre">=&gt;</span></code> <code class="docutils literal notranslate"><span class="pre">x</span></code> rule LS2: Lam[(<code class="docutils literal notranslate"><span class="pre">E1</span></code> <code class="docutils literal notranslate"><span class="pre">E2</span></code>)] <code class="docutils literal notranslate"><span class="pre">=&gt;</span></code> (Lam[<code class="docutils literal notranslate"><span class="pre">E1</span></code>] Lam[<code class="docutils literal notranslate"><span class="pre">E2</span></code>]) rule LS3: Lam[<code class="docutils literal notranslate"><span class="pre">\x</span></code>.<code class="docutils literal notranslate"><span class="pre">E</span></code>] <code class="docutils literal notranslate"><span class="pre">=&gt;</span></code> (<code class="docutils literal notranslate"><span class="pre">K</span></code> Lam[<code class="docutils literal notranslate"><span class="pre">E</span></code>]) (if <code class="docutils literal notranslate"><span class="pre">x</span></code> does not occur free in <code class="docutils literal notranslate"><span class="pre">E</span></code>) rule LS4: Lam[<code class="docutils literal notranslate"><span class="pre">\x</span></code>.<code class="docutils literal notranslate"><span class="pre">x</span></code>] <code class="docutils literal notranslate"><span class="pre">=&gt;</span></code> <code class="docutils literal notranslate"><span class="pre">I</span></code> rule LS5: Lam[<code class="docutils literal notranslate"><span class="pre">\x</span></code>.y.<code class="docutils literal notranslate"><span class="pre">E</span></code>] <code class="docutils literal notranslate"><span class="pre">=&gt;</span></code> Lam[<code class="docutils literal notranslate"><span class="pre">\x</span></code>.Lam[y.<code class="docutils literal notranslate"><span class="pre">E</span></code>]] (if <code class="docutils literal notranslate"><span class="pre">x</span></code> occurs free in <code class="docutils literal notranslate"><span class="pre">E</span></code>) rule LS6: Lam[<code class="docutils literal notranslate"><span class="pre">\x</span></code>.(<code class="docutils literal notranslate"><span class="pre">E1</span></code> <code class="docutils literal notranslate"><span class="pre">E2</span></code>)] <code class="docutils literal notranslate"><span class="pre">=&gt;</span></code> (<code class="docutils literal notranslate"><span class="pre">S</span></code> Lam[<code class="docutils literal notranslate"><span class="pre">\x</span></code>.<code class="docutils literal notranslate"><span class="pre">E1</span></code>] Lam[<code class="docutils literal notranslate"><span class="pre">\x</span></code>.<code class="docutils literal notranslate"><span class="pre">E2</span></code>])</p>
+</dd>
+</dl>
+<dl class="simple" id="index-2">
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="SKICombinators.html#l-s-k-i-combinators"><span class="std std-ref">SKICombinators</span></a> UT -&gt; <a class="reference internal" href="ILogic.html#l-i-logic"><span class="std std-ref">ILogic</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce</span> <span class="pre">combinators</span></code> to intuitionistic logic this is known as the Curry-Howard isomorphism it uses the following rules: rule SI1: Ski[Kab] <code class="docutils literal notranslate"><span class="pre">=&gt;</span></code> a <code class="docutils literal notranslate"><span class="pre">-&gt;</span></code> (<code class="docutils literal notranslate"><span class="pre">b</span></code> <code class="docutils literal notranslate"><span class="pre">-&gt;</span></code> a), rule SI2: Ski[Sabc] <code class="docutils literal notranslate"><span class="pre">=&gt;</span></code> (a <code class="docutils literal notranslate"><span class="pre">-&gt;</span></code> (<code class="docutils literal notranslate"><span class="pre">b</span></code> <code class="docutils literal notranslate"><span class="pre">-&gt;</span></code> <code class="docutils literal notranslate"><span class="pre">c</span></code>)) <code class="docutils literal notranslate"><span class="pre">-&gt;</span></code> ((a <code class="docutils literal notranslate"><span class="pre">-&gt;</span></code> <code class="docutils literal notranslate"><span class="pre">b</span></code>) <code class="docutils literal notranslate"><span class="pre">-&gt;</span></code> (a <code class="docutils literal notranslate"><span class="pre">-&gt;</span></code> <code class="docutils literal notranslate"><span class="pre">c</span></code>)), rule SI3: Ski[a a-<code class="docutils literal notranslate"><span class="pre">&gt;b</span></code>] <code class="docutils literal notranslate"><span class="pre">=&gt;</span></code> <code class="docutils literal notranslate"><span class="pre">b</span></code> the last rule is function application (modus ponens)</p>
+</dd>
+</dl>
+<dl class="simple" id="index-3">
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="SKICombinators.html#l-s-k-i-combinators"><span class="std std-ref">SKICombinators</span></a> UT -&gt; <a class="reference internal" href="Lambda.html#l-lambda"><span class="std std-ref">Lambda</span></a> UT</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce</span> <span class="pre">SKI</span></code> combinators to Lambda term. this conversion is done by applying the following rules rule SL1: Ski[<code class="docutils literal notranslate"><span class="pre">I</span></code>] = <code class="docutils literal notranslate"><span class="pre">\x</span></code>.0 rule SL2: Ski[<code class="docutils literal notranslate"><span class="pre">K</span></code>] = <code class="docutils literal notranslate"><span class="pre">\x</span></code>.y.1 rule SL3: Ski[<code class="docutils literal notranslate"><span class="pre">S</span></code>] = <code class="docutils literal notranslate"><span class="pre">\x</span></code>.y.<code class="docutils literal notranslate"><span class="pre">\z</span></code>.(2 0 (1 0)) rule SL4: Ski[(<code class="docutils literal notranslate"><span class="pre">E1</span></code> <code class="docutils literal notranslate"><span class="pre">E2</span></code>)] = (Ski[<code class="docutils literal notranslate"><span class="pre">E1</span></code>] Ski[<code class="docutils literal notranslate"><span class="pre">E2</span></code>])</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="ConstantLinearDependence.html" title="ConstantLinearDependence(R, F)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="ComplexTrigonometricManipulations.html" title="ComplexTrigonometricManipulations(R, F)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">compUtil UT</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

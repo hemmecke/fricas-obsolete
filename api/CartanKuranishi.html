@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CartanKuranishi(JB, D) &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="CartesianTensorFunctions2(minix, dim, S, T)" href="CartesianTensorFunctions2.html" />
+    <link rel="prev" title="BrillhartTests UP" href="BrillhartTests.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="CartesianTensorFunctions2.html" title="CartesianTensorFunctions2(minix, dim, S, T)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="BrillhartTests.html" title="BrillhartTests UP"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">CartanKuranishi(JB, D)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="cartankuranishi-jb-d">
+<span id="l-cartan-kuranishi"></span><span id="index-0"></span><h1>CartanKuranishi(JB, D)<a class="headerlink" href="#cartankuranishi-jb-d" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/jet.spad#L4572">jet.spad line 4572</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/jet.spad#L4572">[edit on github]</a></p>
+<ul class="simple">
+<li><p>JB: <a class="reference internal" href="JetBundleCategory.html#l-jet-bundle-category"><span class="std std-ref">JetBundleCategory</span></a></p></li>
+<li><p>D: <a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p></li>
+</ul>
+<p><a class="reference internal" href="#l-cartan-kuranishi"><span class="std std-ref">CartanKuranishi</span></a> is a package for the completion of a given differential equation to an involutive equation. Procedures for Cartan characters and Hilbert polynomial are also provided. Based on the Cartan-Kuranishi theorem as it is used in formal theory.</p>
+<span class="target" id="l-cartan-kuranishi-alpha"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">alpha</span>: (<a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">alpha(q,</span> <span class="pre">beta)</span></code> computes the Cartan characters for a differential equation of order <code class="docutils literal notranslate"><span class="pre">q</span></code> and with characters <code class="docutils literal notranslate"><span class="pre">beta</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-cartan-kuranishi-alpha-hilbert"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">alphaHilbert</span>: <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a> -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">alphaHilbert(hp)</span></code> computes the Cartan characters for the Hilbert polynomial <code class="docutils literal notranslate"><span class="pre">hp</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-cartan-kuranishi-arb-functions"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">arbFunctions</span>: (<a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">arbFunctions(q,</span> <span class="pre">j,</span> <span class="pre">cc)</span></code> uses the Cartan characters <code class="docutils literal notranslate"><span class="pre">cc</span></code> to compute the number of arbitrary functions of differentiation order <code class="docutils literal notranslate"><span class="pre">j</span></code> in the general solution of a differential equation of order <code class="docutils literal notranslate"><span class="pre">q</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-cartan-kuranishi-bound"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">bound</span>: (<a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">bound(n,</span> <span class="pre">m,</span> <span class="pre">q)</span></code> computes an upper bound for the number of prolongations needed to make the symbol of an equation of order <code class="docutils literal notranslate"><span class="pre">q</span></code> with <code class="docutils literal notranslate"><span class="pre">n</span></code> independent and <code class="docutils literal notranslate"><span class="pre">m</span></code> dependent variables involutive.</p>
+</dd>
+</dl>
+<span class="target" id="l-cartan-kuranishi-complete2"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">complete2</span>: <a class="reference internal" href="JetDifferentialEquation.html#l-jet-differential-equation"><span class="std std-ref">JetDifferentialEquation</span></a>(JB, D) -&gt; Record(IDe: <a class="reference internal" href="JetDifferentialEquation.html#l-jet-differential-equation"><span class="std std-ref">JetDifferentialEquation</span></a>(JB, D), ISys: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> D, Order: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, NumProj: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, Dim: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, CarChar: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">complete2(de)</span></code> is like <span class="spadfun">complete</span> but returns the involutive equation <code class="docutils literal notranslate"><span class="pre">IDe</span></code>, a basis <code class="docutils literal notranslate"><span class="pre">ISys</span></code> for the involutive system without prolongations, its order <code class="docutils literal notranslate"><span class="pre">Order</span></code>, the number <code class="docutils literal notranslate"><span class="pre">NumProj</span></code> of needed projections and the Cartan characters <code class="docutils literal notranslate"><span class="pre">CarChar</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-cartan-kuranishi-complete"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">complete</span>: <a class="reference internal" href="JetDifferentialEquation.html#l-jet-differential-equation"><span class="std std-ref">JetDifferentialEquation</span></a>(JB, D) -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">complete(de)</span></code> completes <code class="docutils literal notranslate"><span class="pre">de</span></code> to an involutive equation. No result is returned; the display depends of the setting of the output flags with <span class="spadfun">setOutput</span>.</p>
+</dd>
+</dl>
+<span class="target" id="l-cartan-kuranishi-gauge"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">gauge</span>: (<a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">gauge(q,</span> <span class="pre">j,</span> <span class="pre">gamma)</span></code> computes the gauge corrections to the number of arbitrary functions of differentiation order <code class="docutils literal notranslate"><span class="pre">j</span></code> for a system of order <code class="docutils literal notranslate"><span class="pre">q</span></code> with <code class="docutils literal notranslate"><span class="pre">gamma</span></code> gauge functions.</p>
+</dd>
+</dl>
+<span class="target" id="l-cartan-kuranishi-gauge-hilbert"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">gaugeHilbert</span>: (<a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">gaugeHilbert(q,</span> <span class="pre">gamma)</span></code> computes the gauge correction to the Hilbert polynomial for a system of order <code class="docutils literal notranslate"><span class="pre">q</span></code> with <code class="docutils literal notranslate"><span class="pre">gamma</span></code> gauge functions.</p>
+</dd>
+</dl>
+<span class="target" id="l-cartan-kuranishi-hilbert"></span><dl class="simple" id="index-9">
+<dt><span class="spadfun">hilbert</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a> -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">hilbert(cc)</span></code> computes the Hilbert polynomial to the Cartan characters <code class="docutils literal notranslate"><span class="pre">cc</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-cartan-kuranishi-set-out-mode"></span><dl class="simple" id="index-10">
+<dt><span class="spadfun">setOutMode</span>: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a> -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">setOutput(i)</span></code> controls amount of generated output during the completion algorithm: <code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">=</span> <span class="pre">0</span></code> –&gt; no display, <code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">=</span> <span class="pre">1</span></code> –&gt; result is displayed, <code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">=</span> <span class="pre">2</span></code> –&gt; Cartan characters are displayed, <code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">=</span> <span class="pre">3</span></code> –&gt; integrability conditions are traced, <code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">=</span> <span class="pre">4</span></code> –&gt; intermediate dimensions are traced, <code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">=</span> <span class="pre">5</span></code> –&gt; all intermediate systems are traced, <code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">=</span> <span class="pre">6</span></code> –&gt; all intermediate systems and symbols are traced, if <code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">&gt;</span> <span class="pre">10</span></code> then TeX output is produced. Default is 0. The old value is returned.</p>
+</dd>
+</dl>
+<span class="target" id="l-cartan-kuranishi-set-red-mode"></span><dl class="simple" id="index-11">
+<dt><span class="spadfun">setRedMode</span>: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a> -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">setRedMode(i)</span></code> sets the flag for the reduction mode. Returns old value. Current values are: <code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">=</span> <span class="pre">0</span></code> –&gt; No reduction of integrability conditions etc. <code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">=</span> <span class="pre">1</span></code> –&gt; Autoreduction of complete system and reduction of all integrability conditions. Default is 0.</p>
+</dd>
+</dl>
+<span class="target" id="l-cartan-kuranishi-set-simp-mode"></span><dl class="simple" id="index-12">
+<dt><span class="spadfun">setSimpMode</span>: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a> -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">setSimpMode(i)</span></code> sets the simplification mode used in <code class="docutils literal notranslate"><span class="pre">JetDifferentialEquation</span></code>. Returns old value.</p>
+</dd>
+</dl>
+<span class="target" id="l-cartan-kuranishi-stirling"></span><dl class="simple" id="index-13">
+<dt><span class="spadfun">stirling</span>: (<a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">stirling(i,</span> <span class="pre">k,</span> <span class="pre">q)</span></code> computes the corresponding modified Stirling number.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="CartesianTensorFunctions2.html" title="CartesianTensorFunctions2(minix, dim, S, T)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="BrillhartTests.html" title="BrillhartTests UP"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">CartanKuranishi(JB, D)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

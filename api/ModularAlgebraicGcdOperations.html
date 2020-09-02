@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ModularAlgebraicGcdOperations(MP, MPT, MD) &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ModularEvaluationCategory(PT, MP)" href="ModularEvaluationCategory.html" />
+    <link rel="prev" title="MeetSemilattice" href="MeetSemilattice.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="ModularEvaluationCategory.html" title="ModularEvaluationCategory(PT, MP)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="MeetSemilattice.html" title="MeetSemilattice"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Categories.html" accesskey="U">Categories</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">ModularAlgebraicGcdOperations(MP, MPT, MD)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="modularalgebraicgcdoperations-mp-mpt-md">
+<span id="l-modular-algebraic-gcd-operations"></span><span id="index-0"></span><h1>ModularAlgebraicGcdOperations(MP, MPT, MD)<a class="headerlink" href="#modularalgebraicgcdoperations-mp-mpt-md" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/amodgcd.spad#L23">amodgcd.spad line 23</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/amodgcd.spad#L23">[edit on github]</a></p>
+<ul class="simple">
+<li><p>MP: <a class="reference internal" href="Type.html#l-type"><span class="std std-ref">Type</span></a></p></li>
+<li><p>MPT: <a class="reference internal" href="Type.html#l-type"><span class="std std-ref">Type</span></a></p></li>
+<li><p>MD: <a class="reference internal" href="Type.html#l-type"><span class="std std-ref">Type</span></a></p></li>
+</ul>
+<p>This category specifies operations needed by ModularAlgebraicGcd package. Since we have multiple implementations we specify interface here and put implementations in separate packages. Most operations are done using special purpose abstract representation. Apropriate types are passesd as parametes: <code class="docutils literal notranslate"><span class="pre">MPT</span></code> is type of modular polynomials in one variable with coefficients in some algebraic extension. <code class="docutils literal notranslate"><span class="pre">MD</span></code> is type of modulus. Final results are converted to packed representation, with coefficients (from prime field) stored in one array and exponents (in main variable and in auxilary variables representing generators of algebrac extension) stored in parallel array.</p>
+<span class="target" id="l-modular-algebraic-gcd-operations-canonical-if-can"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">canonicalIfCan</span>: (MPT, MD) -&gt; Union(MPT, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">canonicalIfCan(x,</span> <span class="pre">m)</span></code> tries to divide <code class="docutils literal notranslate"><span class="pre">x</span></code> by its leading coefficient modulo <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-modular-algebraic-gcd-operations-degree"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">degree</span>: MPT -&gt; <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">degree(x)</span></code> gives degree of <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-modular-algebraic-gcd-operations-m-pto-m-p-t"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">MPtoMPT</span>: (MP, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, MD) -&gt; Union(MPT, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">MPtoMPT(p,</span> <span class="pre">s,</span> <span class="pre">ls,</span> <span class="pre">m)</span></code> converts <code class="docutils literal notranslate"><span class="pre">p</span></code> to packed represntation.</p>
+</dd>
+</dl>
+<span class="target" id="l-modular-algebraic-gcd-operations-pack-exps"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">pack_exps</span>: (<a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, MD) -&gt; <a class="reference internal" href="SortedExponentVector.html#l-sorted-exponent-vector"><span class="std std-ref">SortedExponentVector</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">pack_exps(d,</span> <span class="pre">s,</span> <span class="pre">m)</span></code> produces vector of exponents up to degree <code class="docutils literal notranslate"><span class="pre">d</span></code>. <code class="docutils literal notranslate"><span class="pre">s</span></code> is size (degree) of algebraic extension. Use together with <code class="docutils literal notranslate"><span class="pre">repack1</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-modular-algebraic-gcd-operations-pack-modulus"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">pack_modulus</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> MP, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; Union(MD, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">pack_modulus(lp,</span> <span class="pre">ls,</span> <span class="pre">p)</span></code> converts <code class="docutils literal notranslate"><span class="pre">lp</span></code>, <code class="docutils literal notranslate"><span class="pre">ls</span></code> and prime <code class="docutils literal notranslate"><span class="pre">p</span></code> which together describe algebraic extension to packed representation.</p>
+</dd>
+</dl>
+<span class="target" id="l-modular-algebraic-gcd-operations-pseudo-rem"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">pseudoRem</span>: (MPT, MPT, MD) -&gt; MPT</dt><dd><p><code class="docutils literal notranslate"><span class="pre">pseudoRem(x,</span> <span class="pre">y,</span> <span class="pre">m)</span></code> computes pseudoremainder of <code class="docutils literal notranslate"><span class="pre">x</span></code> by <code class="docutils literal notranslate"><span class="pre">y</span></code> modulo <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-modular-algebraic-gcd-operations-repack1"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">repack1</span>: (MPT, <a class="reference internal" href="U32Vector.html#l-u32-vector"><span class="std std-ref">U32Vector</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, MD) -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">repack1(x,</span> <span class="pre">a,</span> <span class="pre">d,</span> <span class="pre">m)</span></code> stores coefficients of <code class="docutils literal notranslate"><span class="pre">x</span></code> in a. <code class="docutils literal notranslate"><span class="pre">d</span></code> is degree of <code class="docutils literal notranslate"><span class="pre">x</span></code>. Corresponding exponents are given by pack_exps.</p>
+</dd>
+</dl>
+<span class="target" id="l-modular-algebraic-gcd-operations-zero"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">zero?</span>: MPT -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">zero?(x)</span></code> checks if <code class="docutils literal notranslate"><span class="pre">x</span></code> is zero.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="ModularEvaluationCategory.html" title="ModularEvaluationCategory(PT, MP)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="MeetSemilattice.html" title="MeetSemilattice"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Categories.html" >Categories</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">ModularAlgebraicGcdOperations(MP, MPT, MD)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

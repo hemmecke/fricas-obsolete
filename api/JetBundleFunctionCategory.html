@@ -1,0 +1,410 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JetBundleFunctionCategory JB &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="JoinSemilattice" href="JoinSemilattice.html" />
+    <link rel="prev" title="JetBundleCategory" href="JetBundleCategory.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="JoinSemilattice.html" title="JoinSemilattice"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="JetBundleCategory.html" title="JetBundleCategory"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Categories.html" accesskey="U">Categories</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">JetBundleFunctionCategory JB</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="jetbundlefunctioncategory-jb">
+<span id="l-jet-bundle-function-category"></span><span id="index-0"></span><h1>JetBundleFunctionCategory JB<a class="headerlink" href="#jetbundlefunctioncategory-jb" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/jet.spad#L494">jet.spad line 494</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/jet.spad#L494">[edit on github]</a></p>
+<ul class="simple">
+<li><p>JB: <a class="reference internal" href="JetBundleCategory.html#l-jet-bundle-category"><span class="std std-ref">JetBundleCategory</span></a></p></li>
+</ul>
+<p><a class="reference internal" href="#l-jet-bundle-function-category"><span class="std std-ref">JetBundleFunctionCategory</span></a> defines the category of functions (local sections) over a jet bundle. The formal derivative is defined already here. It uses the Jacobi matrix of the functions. The columns of the matrices are enumerated by jet variables. Thus they are represented as a <span class="xref std std-ref">Record</span> of the matrix and a list of the jet variables. Several simplification routines are implemented already here.</p>
+<dl class="simple">
+<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-0"><span class="std std-ref">0</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-1"><span class="std std-ref">1</span></a>: %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Magma.html#id1"><span class="std std-ref">*</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianGroup.html#id1"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianMonoid.html#id1"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianSemiGroup.html#id1"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l-abelian-semi-group"><span class="std std-ref">AbelianSemiGroup</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianSemiGroup.html#id2"><span class="std std-ref">+</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l-abelian-semi-group"><span class="std std-ref">AbelianSemiGroup</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianGroup.html#id2"><span class="std std-ref">-</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianGroup.html#id2"><span class="std std-ref">-</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
+</dd>
+<dt><a class="reference internal" href="BasicType.html#id1"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+<dt><a class="reference internal" href="MagmaWithUnit.html#id1"><span class="std std-ref">^</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Magma.html#id2"><span class="std std-ref">^</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
+</dd>
+<dt><a class="reference internal" href="BasicType.html#id2"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Rng.html#l-rng-annihilate"><span class="std std-ref">annihilate?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Rng.html#l-rng"><span class="std std-ref">Rng</span></a></p>
+</dd>
+<dt><a class="reference internal" href="NonAssociativeSemiRng.html#l-non-associative-semi-rng-anti-commutator"><span class="std std-ref">antiCommutator</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeSemiRng.html#l-non-associative-semi-rng"><span class="std std-ref">NonAssociativeSemiRng</span></a></p>
+</dd>
+<dt><a class="reference internal" href="EntireRing.html#l-entire-ring-associates"><span class="std std-ref">associates?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="EntireRing.html#l-entire-ring"><span class="std std-ref">EntireRing</span></a></p>
+</dd>
+<dt><a class="reference internal" href="NonAssociativeRng.html#l-non-associative-rng-associator"><span class="std std-ref">associator</span></a>: (%, %, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRng.html#l-non-associative-rng"><span class="std std-ref">NonAssociativeRng</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-jet-bundle-function-category-auto-reduce"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">autoReduce</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">autoReduce(sys)</span></code> tries to simplify a system by solving each equation for its leading term and substituting it into the other equations.</p>
+</dd>
+<dt><a class="reference internal" href="NonAssociativeRing.html#l-non-associative-ring-characteristic"><span class="std std-ref">characteristic</span></a>: () -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="NonAssociativeRing.html#l-non-associative-ring"><span class="std std-ref">NonAssociativeRing</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-jet-bundle-function-category-class"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">class</span>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">class(f)</span></code> is defined as the highest class of the jet variables effectively occurring in <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="Algebra.html#l-algebra-coerce"><span class="std std-ref">coerce</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="Algebra.html#l-algebra"><span class="std std-ref">Algebra</span></a> %</p>
+</dd>
+<dt><a class="reference internal" href="CoercibleTo.html#l-coercible-to-coerce"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+</dd>
+<dt><a class="reference internal" href="NonAssociativeRing.html#l-non-associative-ring-coerce"><span class="std std-ref">coerce</span></a>: <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a> -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRing.html#l-non-associative-ring"><span class="std std-ref">NonAssociativeRing</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-jet-bundle-function-category-coerce"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">coerce</span>: JB -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(jv)</span></code> coerces the jet variable <code class="docutils literal notranslate"><span class="pre">jv</span></code> into a local section.</p>
+</dd>
+<dt><a class="reference internal" href="NonAssociativeRng.html#l-non-associative-rng-commutator"><span class="std std-ref">commutator</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRng.html#l-non-associative-rng"><span class="std std-ref">NonAssociativeRng</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-jet-bundle-function-category-const"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">const?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">const?(f)</span></code> checks whether <code class="docutils literal notranslate"><span class="pre">f</span></code> depends of jet variables.</p>
+</dd>
+<dt><a class="reference internal" href="PartialDifferentialRing.html#l-partial-differential-ring-d"><span class="std std-ref">D</span></a>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="PartialDifferentialRing.html#l-partial-differential-ring"><span class="std std-ref">PartialDifferentialRing</span></a> <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a></p>
+</dd>
+<dt><a class="reference internal" href="PartialDifferentialRing.html#l-partial-differential-ring-d"><span class="std std-ref">D</span></a>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="PartialDifferentialRing.html#l-partial-differential-ring"><span class="std std-ref">PartialDifferentialRing</span></a> <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a></p>
+</dd>
+<dt><a class="reference internal" href="PartialDifferentialRing.html#l-partial-differential-ring-d"><span class="std std-ref">D</span></a>: (%, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="PartialDifferentialRing.html#l-partial-differential-ring"><span class="std std-ref">PartialDifferentialRing</span></a> <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a></p>
+</dd>
+<dt><a class="reference internal" href="PartialDifferentialRing.html#l-partial-differential-ring-d"><span class="std std-ref">D</span></a>: (%, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="PartialDifferentialRing.html#l-partial-differential-ring"><span class="std std-ref">PartialDifferentialRing</span></a> <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-jet-bundle-function-category-denominator"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">denominator</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">denominator(f)</span></code> yields the denominator of <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-jet-bundle-function-category-differentiate"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">differentiate</span>: (%, JB) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">differentiate(f,</span> <span class="pre">jv)</span></code> differentiates the function <code class="docutils literal notranslate"><span class="pre">f</span></code> <code class="docutils literal notranslate"><span class="pre">wrt</span></code> the jet variable <code class="docutils literal notranslate"><span class="pre">jv</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="PartialDifferentialRing.html#l-partial-differential-ring-differentiate"><span class="std std-ref">differentiate</span></a>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="PartialDifferentialRing.html#l-partial-differential-ring"><span class="std std-ref">PartialDifferentialRing</span></a> <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a></p>
+</dd>
+<dt><a class="reference internal" href="PartialDifferentialRing.html#l-partial-differential-ring-differentiate"><span class="std std-ref">differentiate</span></a>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="PartialDifferentialRing.html#l-partial-differential-ring"><span class="std std-ref">PartialDifferentialRing</span></a> <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a></p>
+</dd>
+<dt><a class="reference internal" href="PartialDifferentialRing.html#l-partial-differential-ring-differentiate"><span class="std std-ref">differentiate</span></a>: (%, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="PartialDifferentialRing.html#l-partial-differential-ring"><span class="std std-ref">PartialDifferentialRing</span></a> <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a></p>
+</dd>
+<dt><a class="reference internal" href="PartialDifferentialRing.html#l-partial-differential-ring-differentiate"><span class="std std-ref">differentiate</span></a>: (%, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="PartialDifferentialRing.html#l-partial-differential-ring"><span class="std std-ref">PartialDifferentialRing</span></a> <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-jet-bundle-function-category-dimension"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">dimension</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %, <a class="reference internal" href="SparseEchelonMatrix.html#l-sparse-echelon-matrix"><span class="std std-ref">SparseEchelonMatrix</span></a>(JB, %), <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">dimension(sys,</span> <span class="pre">jm,</span> <span class="pre">q)</span></code> computes the dimension of the manifold described by the system <code class="docutils literal notranslate"><span class="pre">sys</span></code> with Jacobi matrix <code class="docutils literal notranslate"><span class="pre">jm</span></code> in the jet bundle of order <code class="docutils literal notranslate"><span class="pre">q</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-jet-bundle-function-category-d-subst"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">dSubst</span>: (%, JB, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">dSubst(f,</span> <span class="pre">jv,</span> <span class="pre">exp)</span></code> is like <code class="docutils literal notranslate"><span class="pre">subst(f,</span> <span class="pre">jv,</span> <span class="pre">exp)</span></code>. But additionally for all derivatives of <code class="docutils literal notranslate"><span class="pre">jv</span></code> the corresponding substitutions are performed.</p>
+</dd>
+<dt><a class="reference internal" href="EntireRing.html#l-entire-ring-exquo"><span class="std std-ref">exquo</span></a>: (%, %) -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="EntireRing.html#l-entire-ring"><span class="std std-ref">EntireRing</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-jet-bundle-function-category-extract-symbol"></span><dl class="simple" id="index-9">
+<dt><span class="spadfun">extractSymbol</span>: <a class="reference internal" href="SparseEchelonMatrix.html#l-sparse-echelon-matrix"><span class="std std-ref">SparseEchelonMatrix</span></a>(JB, %) -&gt; <a class="reference internal" href="SparseEchelonMatrix.html#l-sparse-echelon-matrix"><span class="std std-ref">SparseEchelonMatrix</span></a>(JB, %)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">extractSymbol(jm)</span></code> extracts the highest order part of the Jacobi matrix.</p>
+</dd>
+</dl>
+<span class="target" id="l-jet-bundle-function-category-formal-diff2"></span><dl class="simple" id="index-10">
+<dt><span class="spadfun">formalDiff2</span>: (%, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>, <a class="reference internal" href="SparseEchelonMatrix.html#l-sparse-echelon-matrix"><span class="std std-ref">SparseEchelonMatrix</span></a>(JB, %)) -&gt; Record(DPhi: %, JVars: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> JB)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">formalDiff2(f,</span> <span class="pre">i,</span> <span class="pre">jm)</span></code> formally differentiates the function <code class="docutils literal notranslate"><span class="pre">f</span></code> with the Jacobi matrix <code class="docutils literal notranslate"><span class="pre">jm</span></code> <code class="docutils literal notranslate"><span class="pre">wrt</span></code> the <code class="docutils literal notranslate"><span class="pre">i</span></code><code class="docutils literal notranslate"><span class="pre">-</span></code>th independent variable. <code class="docutils literal notranslate"><span class="pre">JVars</span></code> is a list of the jet variables effectively in the result <code class="docutils literal notranslate"><span class="pre">DPhi</span></code> (might be too large).</p>
+</dd>
+</dl>
+<dl class="simple" id="index-11">
+<dt><span class="spadfun">formalDiff2</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>, <a class="reference internal" href="SparseEchelonMatrix.html#l-sparse-echelon-matrix"><span class="std std-ref">SparseEchelonMatrix</span></a>(JB, %)) -&gt; Record(DSys: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %, JVars: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> JB)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">formalDiff2(sys,</span> <span class="pre">i,</span> <span class="pre">jm)</span></code> is like the other <span class="spadfun">``formalDiff2`</span><a href="#id1"><span class="problematic" id="id2">`</span></a> but for systems.</p>
+</dd>
+</dl>
+<span class="target" id="l-jet-bundle-function-category-formal-diff"></span><dl class="simple" id="index-12">
+<dt><span class="spadfun">formalDiff</span>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">formalDiff(f,</span> <span class="pre">mu)</span></code> formally differentiates <code class="docutils literal notranslate"><span class="pre">f</span></code> as indicated by the multi-index <code class="docutils literal notranslate"><span class="pre">mu</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-13">
+<dt><span class="spadfun">formalDiff</span>: (%, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">formalDiff(f,</span> <span class="pre">i)</span></code> formally (totally) differentiates <code class="docutils literal notranslate"><span class="pre">f</span></code> <code class="docutils literal notranslate"><span class="pre">wrt</span></code> the <code class="docutils literal notranslate"><span class="pre">i</span></code><code class="docutils literal notranslate"><span class="pre">-</span></code>th independent variable.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-14">
+<dt><span class="spadfun">formalDiff</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">formalDiff(sys,</span> <span class="pre">i)</span></code> formally differentiates a family <code class="docutils literal notranslate"><span class="pre">sys</span></code> of functions <code class="docutils literal notranslate"><span class="pre">wrt</span></code> the <code class="docutils literal notranslate"><span class="pre">i</span></code><code class="docutils literal notranslate"><span class="pre">-</span></code>th independent variable.</p>
+</dd>
+</dl>
+<span class="target" id="l-jet-bundle-function-category-free-of"></span><dl class="simple" id="index-15">
+<dt><span class="spadfun">freeOf?</span>: (%, JB) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">freeOf?(fun,</span> <span class="pre">jv)</span></code> checks whether <code class="docutils literal notranslate"><span class="pre">fun</span></code> contains the jet variable <code class="docutils literal notranslate"><span class="pre">jv</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="GcdDomain.html#l-gcd-domain-gcd"><span class="std std-ref">gcd</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="GcdDomain.html#l-gcd-domain"><span class="std std-ref">GcdDomain</span></a></p>
+</dd>
+<dt><a class="reference internal" href="GcdDomain.html#l-gcd-domain-gcd"><span class="std std-ref">gcd</span></a>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> % -&gt; %</dt><dd><p>from <a class="reference internal" href="GcdDomain.html#l-gcd-domain"><span class="std std-ref">GcdDomain</span></a></p>
+</dd>
+<dt><a class="reference internal" href="GcdDomain.html#l-gcd-domain-gcd-polynomial"><span class="std std-ref">gcdPolynomial</span></a>: (<a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %, <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %) -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %</dt><dd><p>from <a class="reference internal" href="GcdDomain.html#l-gcd-domain"><span class="std std-ref">GcdDomain</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-jet-bundle-function-category-get-notation"></span><p id="index-16"><span class="spadfun">getNotation</span>: () -&gt; <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a></p>
+<dl class="simple">
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l-single-integer"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash-update"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-jet-bundle-function-category-jacobi-matrix"></span><dl class="simple" id="index-17">
+<dt><span class="spadfun">jacobiMatrix</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> JB) -&gt; <a class="reference internal" href="SparseEchelonMatrix.html#l-sparse-echelon-matrix"><span class="std std-ref">SparseEchelonMatrix</span></a>(JB, %)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jacobiMatrix(sys,</span> <span class="pre">jvars)</span></code> constructs the Jacobi matrix of the family <code class="docutils literal notranslate"><span class="pre">sys</span></code> of functions. <code class="docutils literal notranslate"><span class="pre">jvars</span></code> contains for each function the effectively occurring jet variables. The columns of the matrix are ordered.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-18">
+<dt><span class="spadfun">jacobiMatrix</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> % -&gt; <a class="reference internal" href="SparseEchelonMatrix.html#l-sparse-echelon-matrix"><span class="std std-ref">SparseEchelonMatrix</span></a>(JB, %)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jacobiMatrix(sys)</span></code> constructs the Jacobi matrix of the family <code class="docutils literal notranslate"><span class="pre">sys</span></code> of functions.</p>
+</dd>
+</dl>
+<span class="target" id="l-jet-bundle-function-category-jet-variables"></span><dl class="simple" id="index-19">
+<dt><span class="spadfun">jetVariables</span>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> JB</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jetVariables(f)</span></code> yields all jet variables effectively occurring in <code class="docutils literal notranslate"><span class="pre">f</span></code> in an ordered list.</p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-latex"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+<dt><a class="reference internal" href="GcdDomain.html#l-gcd-domain-lcm"><span class="std std-ref">lcm</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="GcdDomain.html#l-gcd-domain"><span class="std std-ref">GcdDomain</span></a></p>
+</dd>
+<dt><a class="reference internal" href="GcdDomain.html#l-gcd-domain-lcm"><span class="std std-ref">lcm</span></a>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> % -&gt; %</dt><dd><p>from <a class="reference internal" href="GcdDomain.html#l-gcd-domain"><span class="std std-ref">GcdDomain</span></a></p>
+</dd>
+<dt><a class="reference internal" href="LeftOreRing.html#l-left-ore-ring-lcm-coef"><span class="std std-ref">lcmCoef</span></a>: (%, %) -&gt; Record(llcm_res: %, coeff1: %, coeff2: %)</dt><dd><p>from <a class="reference internal" href="LeftOreRing.html#l-left-ore-ring"><span class="std std-ref">LeftOreRing</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-jet-bundle-function-category-leading-der"></span><dl class="simple" id="index-20">
+<dt><span class="spadfun">leadingDer</span>: % -&gt; JB</dt><dd><p><code class="docutils literal notranslate"><span class="pre">leadingDer(fun)</span></code> yields the leading derivative of <code class="docutils literal notranslate"><span class="pre">fun</span></code>. If <code class="docutils literal notranslate"><span class="pre">fun</span></code> contains no derivatives <code class="docutils literal notranslate"><span class="pre">1</span></code> is returned.</p>
+</dd>
+<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-left-power"><span class="std std-ref">leftPower</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Magma.html#l-magma-left-power"><span class="std std-ref">leftPower</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
+</dd>
+<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-left-recip"><span class="std std-ref">leftRecip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-jet-bundle-function-category-num-dep-var"></span><p id="index-21"><span class="spadfun">numDepVar</span>: () -&gt; <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a></p>
+<span class="target" id="l-jet-bundle-function-category-numerator"></span><dl class="simple" id="index-22">
+<dt><span class="spadfun">numerator</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">numerator(f)</span></code> yields the numerator of <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-jet-bundle-function-category-num-ind-var"></span><p id="index-23"><span class="spadfun">numIndVar</span>: () -&gt; <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a></p>
+<dl class="simple">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-one"><span class="std std-ref">one?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-opposite"><span class="std std-ref">opposite?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-jet-bundle-function-category-order"></span><dl class="simple" id="index-24">
+<dt><span class="spadfun">order</span>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">order(f)</span></code> gives highest order of the jet variables effectively occurring in <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-jet-bundle-function-category-order-dim"></span><dl class="simple" id="index-25">
+<dt><span class="spadfun">orderDim</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %, <a class="reference internal" href="SparseEchelonMatrix.html#l-sparse-echelon-matrix"><span class="std std-ref">SparseEchelonMatrix</span></a>(JB, %), <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">orderDim(sys,</span> <span class="pre">jm,</span> <span class="pre">q)</span></code> computes the dimension of the manifold described by the system <code class="docutils literal notranslate"><span class="pre">sys</span></code> with Jacobi matrix <code class="docutils literal notranslate"><span class="pre">jm</span></code> in the jet bundle of order <code class="docutils literal notranslate"><span class="pre">q</span></code> over the jet bundle of order <code class="docutils literal notranslate"><span class="pre">q-1</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-jet-bundle-function-category-p"></span><p id="index-26"><span class="spadfun">P</span>: (<a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</p>
+<p id="index-27"><span class="spadfun">P</span>: (<a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</p>
+<p id="index-28"><span class="spadfun">P</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a> -&gt; %</p>
+<p id="index-29"><span class="spadfun">P</span>: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a> -&gt; %</p>
+<dl class="simple">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-recip"><span class="std std-ref">recip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-jet-bundle-function-category-reduce-mod"></span><dl class="simple" id="index-30">
+<dt><span class="spadfun">reduceMod</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">reduceMod(sys1,</span> <span class="pre">sys2)</span></code> reduces the system <code class="docutils literal notranslate"><span class="pre">sys1</span></code> modulo the system <code class="docutils literal notranslate"><span class="pre">sys2</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="RetractableTo.html#l-retractable-to-retract"><span class="std std-ref">retract</span></a>: % -&gt; JB</dt><dd><p>from <a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> JB</p>
+</dd>
+<dt><a class="reference internal" href="RetractableTo.html#l-retractable-to-retract-if-can"><span class="std std-ref">retractIfCan</span></a>: % -&gt; Union(JB, failed)</dt><dd><p>from <a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> JB</p>
+</dd>
+<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-right-power"><span class="std std-ref">rightPower</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Magma.html#l-magma-right-power"><span class="std std-ref">rightPower</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
+</dd>
+<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-right-recip"><span class="std std-ref">rightRecip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-sample"><span class="std std-ref">sample</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-jet-bundle-function-category-set-notation"></span><p id="index-31"><span class="spadfun">setNotation</span>: <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a> -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></p>
+<span class="target" id="l-jet-bundle-function-category-simplify"></span><dl class="simple" id="index-32">
+<dt><span class="spadfun">simplify</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %, <a class="reference internal" href="SparseEchelonMatrix.html#l-sparse-echelon-matrix"><span class="std std-ref">SparseEchelonMatrix</span></a>(JB, %)) -&gt; Record(Sys: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %, JM: <a class="reference internal" href="SparseEchelonMatrix.html#l-sparse-echelon-matrix"><span class="std std-ref">SparseEchelonMatrix</span></a>(JB, %), Depend: Union(failed, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>))</dt><dd><p><code class="docutils literal notranslate"><span class="pre">simplify(sys,</span> <span class="pre">jm)</span></code> simplifies a system with given Jacobi matrix. The Jacobi matrix of the simplified system is returned, too. <code class="docutils literal notranslate"><span class="pre">Depend</span></code> contains for each equation of the simplified system the numbers of the equations of the original system out of which it is build, if it is possible to obtain this information. If one can generate equations of lower order by purely algebraic operations, then <code class="docutils literal notranslate"><span class="pre">simplify</span></code> should do this.</p>
+</dd>
+</dl>
+<span class="target" id="l-jet-bundle-function-category-simp-mod"></span><dl class="simple" id="index-33">
+<dt><span class="spadfun">simpMod</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">simpMod(sys1,</span> <span class="pre">sys2)</span></code> simplifies the system <code class="docutils literal notranslate"><span class="pre">sys1</span></code> modulo the system <code class="docutils literal notranslate"><span class="pre">sys2</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-34">
+<dt><span class="spadfun">simpMod</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %, <a class="reference internal" href="SparseEchelonMatrix.html#l-sparse-echelon-matrix"><span class="std std-ref">SparseEchelonMatrix</span></a>(JB, %), <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %) -&gt; Record(Sys: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %, JM: <a class="reference internal" href="SparseEchelonMatrix.html#l-sparse-echelon-matrix"><span class="std std-ref">SparseEchelonMatrix</span></a>(JB, %), Depend: Union(failed, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>))</dt><dd><p><code class="docutils literal notranslate"><span class="pre">simpMod(sys1,</span> <span class="pre">sys2)</span></code> simplifies the system <code class="docutils literal notranslate"><span class="pre">sys1</span></code> modulo the system <code class="docutils literal notranslate"><span class="pre">sys2</span></code>. Returns the same information as <code class="docutils literal notranslate"><span class="pre">simplify</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-jet-bundle-function-category-simp-one"></span><dl class="simple" id="index-35">
+<dt><span class="spadfun">simpOne</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">simpOne(f)</span></code> removes unnecessary coefficients and exponents, denominators etc.</p>
+</dd>
+</dl>
+<span class="target" id="l-jet-bundle-function-category-solve-for"></span><dl class="simple" id="index-36">
+<dt><span class="spadfun">solveFor</span>: (%, JB) -&gt; Union(%, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">solveFor(fun,</span> <span class="pre">jv)</span></code> tries to solve <code class="docutils literal notranslate"><span class="pre">fun</span></code> for the jet variable <code class="docutils literal notranslate"><span class="pre">jv</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-jet-bundle-function-category-sort-l-d"></span><dl class="simple" id="index-37">
+<dt><span class="spadfun">sortLD</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sortLD(sys)</span></code> sorts the functions in <code class="docutils literal notranslate"><span class="pre">sys</span></code> according to their leading derivatives.</p>
+</dd>
+</dl>
+<span class="target" id="l-jet-bundle-function-category-subst"></span><dl class="simple" id="index-38">
+<dt><span class="spadfun">subst</span>: (%, JB, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">subst(f,</span> <span class="pre">jv,</span> <span class="pre">exp)</span></code> substitutes <code class="docutils literal notranslate"><span class="pre">exp</span></code> for the jet variable <code class="docutils literal notranslate"><span class="pre">jv</span></code> in the function <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="CancellationAbelianMonoid.html#l-cancellation-abelian-monoid-subtract-if-can"><span class="std std-ref">subtractIfCan</span></a>: (%, %) -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="CancellationAbelianMonoid.html#l-cancellation-abelian-monoid"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-jet-bundle-function-category-symbol"></span><dl class="simple" id="index-39">
+<dt><span class="spadfun">symbol</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> % -&gt; <a class="reference internal" href="SparseEchelonMatrix.html#l-sparse-echelon-matrix"><span class="std std-ref">SparseEchelonMatrix</span></a>(JB, %)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">symbol(sys)</span></code> computes directly the symbol of the family <code class="docutils literal notranslate"><span class="pre">sys</span></code> of functions.</p>
+</dd>
+</dl>
+<span class="target" id="l-jet-bundle-function-category-u"></span><p id="index-40"><span class="spadfun">U</span>: () -&gt; %</p>
+<p id="index-41"><span class="spadfun">U</span>: <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a> -&gt; %</p>
+<dl class="simple">
+<dt><a class="reference internal" href="EntireRing.html#l-entire-ring-unit"><span class="std std-ref">unit?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="EntireRing.html#l-entire-ring"><span class="std std-ref">EntireRing</span></a></p>
+</dd>
+<dt><a class="reference internal" href="EntireRing.html#l-entire-ring-unit-canonical"><span class="std std-ref">unitCanonical</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="EntireRing.html#l-entire-ring"><span class="std std-ref">EntireRing</span></a></p>
+</dd>
+<dt><a class="reference internal" href="EntireRing.html#l-entire-ring-unit-normal"><span class="std std-ref">unitNormal</span></a>: % -&gt; Record(unit: %, canonical: %, associate: %)</dt><dd><p>from <a class="reference internal" href="EntireRing.html#l-entire-ring"><span class="std std-ref">EntireRing</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-jet-bundle-function-category-x"></span><p id="index-42"><span class="spadfun">X</span>: () -&gt; %</p>
+<p id="index-43"><span class="spadfun">X</span>: <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a> -&gt; %</p>
+<dl class="simple">
+<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-zero"><span class="std std-ref">zero?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+</dl>
+<p><a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
+<p><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+<p><a class="reference internal" href="AbelianSemiGroup.html#l-abelian-semi-group"><span class="std std-ref">AbelianSemiGroup</span></a></p>
+<p><a class="reference internal" href="Algebra.html#l-algebra"><span class="std std-ref">Algebra</span></a> %</p>
+<p><a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+<p><a class="reference internal" href="BiModule.html#l-bi-module"><span class="std std-ref">BiModule</span></a>(%, %)</p>
+<p><a class="reference internal" href="CancellationAbelianMonoid.html#l-cancellation-abelian-monoid"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
+<p><a class="reference internal" href="CoercibleFrom.html#l-coercible-from"><span class="std std-ref">CoercibleFrom</span></a> JB</p>
+<p><a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+<p><a class="reference internal" href="CommutativeRing.html#l-commutative-ring"><span class="std std-ref">CommutativeRing</span></a></p>
+<p><a class="reference internal" href="CommutativeStar.html#l-commutative-star"><span class="std std-ref">CommutativeStar</span></a></p>
+<p><a class="reference internal" href="EntireRing.html#l-entire-ring"><span class="std std-ref">EntireRing</span></a></p>
+<p><a class="reference internal" href="GcdDomain.html#l-gcd-domain"><span class="std std-ref">GcdDomain</span></a></p>
+<p><a class="reference internal" href="IntegralDomain.html#l-integral-domain"><span class="std std-ref">IntegralDomain</span></a></p>
+<p><a class="reference internal" href="LeftModule.html#l-left-module"><span class="std std-ref">LeftModule</span></a> %</p>
+<p><a class="reference internal" href="LeftOreRing.html#l-left-ore-ring"><span class="std std-ref">LeftOreRing</span></a></p>
+<p><a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
+<p><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
+<p><a class="reference internal" href="Module.html#l-module"><span class="std std-ref">Module</span></a> %</p>
+<p><a class="reference internal" href="Monoid.html#l-monoid"><span class="std std-ref">Monoid</span></a></p>
+<p><a class="reference internal" href="NonAssociativeRing.html#l-non-associative-ring"><span class="std std-ref">NonAssociativeRing</span></a></p>
+<p><a class="reference internal" href="NonAssociativeRng.html#l-non-associative-rng"><span class="std std-ref">NonAssociativeRng</span></a></p>
+<p><a class="reference internal" href="NonAssociativeSemiRing.html#l-non-associative-semi-ring"><span class="std std-ref">NonAssociativeSemiRing</span></a></p>
+<p><a class="reference internal" href="NonAssociativeSemiRng.html#l-non-associative-semi-rng"><span class="std std-ref">NonAssociativeSemiRng</span></a></p>
+<p><a class="reference internal" href="noZeroDivisors.html#l-no-zero-divisors"><span class="std std-ref">noZeroDivisors</span></a></p>
+<p><a class="reference internal" href="PartialDifferentialRing.html#l-partial-differential-ring"><span class="std std-ref">PartialDifferentialRing</span></a> <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a></p>
+<p><a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> JB</p>
+<p><a class="reference internal" href="RightModule.html#l-right-module"><span class="std std-ref">RightModule</span></a> %</p>
+<p><a class="reference internal" href="Ring.html#l-ring"><span class="std std-ref">Ring</span></a></p>
+<p><a class="reference internal" href="Rng.html#l-rng"><span class="std std-ref">Rng</span></a></p>
+<p><a class="reference internal" href="SemiGroup.html#l-semi-group"><span class="std std-ref">SemiGroup</span></a></p>
+<p><a class="reference internal" href="SemiRing.html#l-semi-ring"><span class="std std-ref">SemiRing</span></a></p>
+<p><a class="reference internal" href="SemiRng.html#l-semi-rng"><span class="std std-ref">SemiRng</span></a></p>
+<p><a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+<p><a class="reference internal" href="TwoSidedRecip.html#l-two-sided-recip"><span class="std std-ref">TwoSidedRecip</span></a></p>
+<p><a class="reference internal" href="unitsKnown.html#l-units-known"><span class="std std-ref">unitsKnown</span></a></p>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="JoinSemilattice.html" title="JoinSemilattice"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="JetBundleCategory.html" title="JetBundleCategory"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Categories.html" >Categories</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">JetBundleFunctionCategory JB</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

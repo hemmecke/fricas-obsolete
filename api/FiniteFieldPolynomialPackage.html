@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FiniteFieldPolynomialPackage GF &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="FiniteFieldPolynomialPackage2(F, GF)" href="FiniteFieldPolynomialPackage2.html" />
+    <link rel="prev" title="FiniteFieldHomomorphisms(F1, GF, F2)" href="FiniteFieldHomomorphisms.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="FiniteFieldPolynomialPackage2.html" title="FiniteFieldPolynomialPackage2(F, GF)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="FiniteFieldHomomorphisms.html" title="FiniteFieldHomomorphisms(F1, GF, F2)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">FiniteFieldPolynomialPackage GF</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="finitefieldpolynomialpackage-gf">
+<span id="l-finite-field-polynomial-package"></span><span id="index-0"></span><h1>FiniteFieldPolynomialPackage GF<a class="headerlink" href="#finitefieldpolynomialpackage-gf" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/ffpoly.spad#L1">ffpoly.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/ffpoly.spad#L1">[edit on github]</a></p>
+<ul class="simple">
+<li><p>GF: <a class="reference internal" href="FiniteFieldCategory.html#l-finite-field-category"><span class="std std-ref">FiniteFieldCategory</span></a></p></li>
+</ul>
+<p>This package provides a number of functions for generating, counting and testing irreducible, normal, primitive, random polynomials over finite fields.</p>
+<span class="target" id="l-finite-field-polynomial-package-create-irreducible-poly"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">createIrreduciblePoly</span>: <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a> -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> GF</dt><dd><p><code class="docutils literal notranslate"><span class="pre">createIrreduciblePoly(n)</span></code>$FFPOLY(<code class="docutils literal notranslate"><span class="pre">GF</span></code>) generates a monic irreducible univariate polynomial of degree <code class="docutils literal notranslate"><span class="pre">n</span></code> over the finite field <em>GF</em>.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-field-polynomial-package-create-normal-poly"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">createNormalPoly</span>: <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a> -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> GF</dt><dd><p><code class="docutils literal notranslate"><span class="pre">createNormalPoly(n)</span></code>$FFPOLY(<code class="docutils literal notranslate"><span class="pre">GF</span></code>) generates a normal polynomial of degree <code class="docutils literal notranslate"><span class="pre">n</span></code> over the finite field <em>GF</em>.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-field-polynomial-package-create-normal-primitive-poly"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">createNormalPrimitivePoly</span>: <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a> -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> GF</dt><dd><p><code class="docutils literal notranslate"><span class="pre">createNormalPrimitivePoly(n)</span></code>$FFPOLY(<code class="docutils literal notranslate"><span class="pre">GF</span></code>) generates a normal and primitive polynomial of degree <code class="docutils literal notranslate"><span class="pre">n</span></code> over the field <em>GF</em>. Note: this function is equivalent to createPrimitiveNormalPoly(<code class="docutils literal notranslate"><span class="pre">n</span></code>)</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-field-polynomial-package-create-primitive-normal-poly"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">createPrimitiveNormalPoly</span>: <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a> -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> GF</dt><dd><p><code class="docutils literal notranslate"><span class="pre">createPrimitiveNormalPoly(n)</span></code>$FFPOLY(<code class="docutils literal notranslate"><span class="pre">GF</span></code>) generates a normal and primitive polynomial of degree <code class="docutils literal notranslate"><span class="pre">n</span></code> over the field <em>GF</em>.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-field-polynomial-package-create-primitive-poly"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">createPrimitivePoly</span>: <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a> -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> GF</dt><dd><p><code class="docutils literal notranslate"><span class="pre">createPrimitivePoly(n)</span></code>$FFPOLY(<code class="docutils literal notranslate"><span class="pre">GF</span></code>) generates a primitive polynomial of degree <code class="docutils literal notranslate"><span class="pre">n</span></code> over the finite field <em>GF</em>.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-field-polynomial-package-least-affine-multiple"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">leastAffineMultiple</span>: <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> GF -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> GF</dt><dd><p><code class="docutils literal notranslate"><span class="pre">leastAffineMultiple(f)</span></code> computes the least affine polynomial which is divisible by the polynomial <code class="docutils literal notranslate"><span class="pre">f</span></code> over the finite field <em>GF</em>, i.e. a polynomial whose exponents are 0 or a power of <code class="docutils literal notranslate"><span class="pre">q</span></code>, the size of <em>GF</em>.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-field-polynomial-package-next-irreducible-poly"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">nextIrreduciblePoly</span>: <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> GF -&gt; Union(<a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> GF, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">nextIrreduciblePoly(f)</span></code> yields the next monic irreducible polynomial over a finite field <em>GF</em> of the same degree as <code class="docutils literal notranslate"><span class="pre">f</span></code> in the following order, or “failed” if there are no greater ones. Error: if <code class="docutils literal notranslate"><span class="pre">f</span></code> has degree 0. Note: the input polynomial <code class="docutils literal notranslate"><span class="pre">f</span></code> is made monic. Also, <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">&lt;</span> <span class="pre">g</span></code> if the number of monomials of <code class="docutils literal notranslate"><span class="pre">f</span></code> is less than this number for <code class="docutils literal notranslate"><span class="pre">g</span></code>. If <code class="docutils literal notranslate"><span class="pre">f</span></code> and <code class="docutils literal notranslate"><span class="pre">g</span></code> have the same number of monomials, the lists of exponents are compared lexicographically. If these lists are also equal, the lists of coefficients are compared according to the lexicographic ordering induced by the ordering of the elements of <em>GF</em> given by <em>lookup</em>.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-field-polynomial-package-next-normal-poly"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">nextNormalPoly</span>: <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> GF -&gt; Union(<a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> GF, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">nextNormalPoly(f)</span></code> yields the next normal polynomial over a finite field <em>GF</em> of the same degree as <code class="docutils literal notranslate"><span class="pre">f</span></code> in the following order, or “failed” if there are no greater ones. Error: if <code class="docutils literal notranslate"><span class="pre">f</span></code> has degree 0. Note: the input polynomial <code class="docutils literal notranslate"><span class="pre">f</span></code> is made monic. Also, <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">&lt;</span> <span class="pre">g</span></code> if the <em>lookup</em> of the coefficient of the term of degree <em>n-1</em> of <code class="docutils literal notranslate"><span class="pre">f</span></code> is less than that for <code class="docutils literal notranslate"><span class="pre">g</span></code>. In case these numbers are equal, <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">&lt;</span> <span class="pre">g</span></code> if if the number of monomials of <code class="docutils literal notranslate"><span class="pre">f</span></code> is less that for <code class="docutils literal notranslate"><span class="pre">g</span></code> or if the list of exponents of <code class="docutils literal notranslate"><span class="pre">f</span></code> are lexicographically less than the corresponding list for <code class="docutils literal notranslate"><span class="pre">g</span></code>. If these lists are also equal, the lists of coefficients are compared according to the lexicographic ordering induced by the ordering of the elements of <em>GF</em> given by <em>lookup</em>.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-field-polynomial-package-next-normal-primitive-poly"></span><dl class="simple" id="index-9">
+<dt><span class="spadfun">nextNormalPrimitivePoly</span>: <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> GF -&gt; Union(<a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> GF, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">nextNormalPrimitivePoly(f)</span></code> yields the next normal primitive polynomial over a finite field <em>GF</em> of the same degree as <code class="docutils literal notranslate"><span class="pre">f</span></code> in the following order, or “failed” if there are no greater ones. Error: if <code class="docutils literal notranslate"><span class="pre">f</span></code> has degree 0. Note: the input polynomial <code class="docutils literal notranslate"><span class="pre">f</span></code> is made monic. Also, <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">&lt;</span> <span class="pre">g</span></code> if the <em>lookup</em> of the constant term of <code class="docutils literal notranslate"><span class="pre">f</span></code> is less than this number for <code class="docutils literal notranslate"><span class="pre">g</span></code> or if <em>lookup</em> of the coefficient of the term of degree <em>n-1</em> of <code class="docutils literal notranslate"><span class="pre">f</span></code> is less than this number for <code class="docutils literal notranslate"><span class="pre">g</span></code>. Otherwise, <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">&lt;</span> <span class="pre">g</span></code> if the number of monomials of <code class="docutils literal notranslate"><span class="pre">f</span></code> is less than that for <code class="docutils literal notranslate"><span class="pre">g</span></code> or if the lists of exponents for <code class="docutils literal notranslate"><span class="pre">f</span></code> are lexicographically less than those for <code class="docutils literal notranslate"><span class="pre">g</span></code>. If these lists are also equal, the lists of coefficients are compared according to the lexicographic ordering induced by the ordering of the elements of <em>GF</em> given by <em>lookup</em>. This operation is equivalent to nextPrimitiveNormalPoly(<code class="docutils literal notranslate"><span class="pre">f</span></code>).</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-field-polynomial-package-next-primitive-normal-poly"></span><dl class="simple" id="index-10">
+<dt><span class="spadfun">nextPrimitiveNormalPoly</span>: <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> GF -&gt; Union(<a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> GF, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">nextPrimitiveNormalPoly(f)</span></code> yields the next primitive normal polynomial over a finite field <em>GF</em> of the same degree as <code class="docutils literal notranslate"><span class="pre">f</span></code> in the following order, or “failed” if there are no greater ones. Error: if <code class="docutils literal notranslate"><span class="pre">f</span></code> has degree 0. Note: the input polynomial <code class="docutils literal notranslate"><span class="pre">f</span></code> is made monic. Also, <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">&lt;</span> <span class="pre">g</span></code> if the <em>lookup</em> of the constant term of <code class="docutils literal notranslate"><span class="pre">f</span></code> is less than this number for <code class="docutils literal notranslate"><span class="pre">g</span></code> or, in case these numbers are equal, if the <em>lookup</em> of the coefficient of the term of degree <em>n-1</em> of <code class="docutils literal notranslate"><span class="pre">f</span></code> is less than this number for <code class="docutils literal notranslate"><span class="pre">g</span></code>. If these numbers are equals, <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">&lt;</span> <span class="pre">g</span></code> if the number of monomials of <code class="docutils literal notranslate"><span class="pre">f</span></code> is less than that for <code class="docutils literal notranslate"><span class="pre">g</span></code>, or if the lists of exponents for <code class="docutils literal notranslate"><span class="pre">f</span></code> are lexicographically less than those for <code class="docutils literal notranslate"><span class="pre">g</span></code>. If these lists are also equal, the lists of coefficients are coefficients according to the lexicographic ordering induced by the ordering of the elements of <em>GF</em> given by <em>lookup</em>. This operation is equivalent to nextNormalPrimitivePoly(<code class="docutils literal notranslate"><span class="pre">f</span></code>).</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-field-polynomial-package-next-primitive-poly"></span><dl class="simple" id="index-11">
+<dt><span class="spadfun">nextPrimitivePoly</span>: <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> GF -&gt; Union(<a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> GF, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">nextPrimitivePoly(f)</span></code> yields the next primitive polynomial over a finite field <em>GF</em> of the same degree as <code class="docutils literal notranslate"><span class="pre">f</span></code> in the following order, or “failed” if there are no greater ones. Error: if <code class="docutils literal notranslate"><span class="pre">f</span></code> has degree 0. Note: the input polynomial <code class="docutils literal notranslate"><span class="pre">f</span></code> is made monic. Also, <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">&lt;</span> <span class="pre">g</span></code> if the <em>lookup</em> of the constant term of <code class="docutils literal notranslate"><span class="pre">f</span></code> is less than this number for <code class="docutils literal notranslate"><span class="pre">g</span></code>. If these values are equal, then <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">&lt;</span> <span class="pre">g</span></code> if if the number of monomials of <code class="docutils literal notranslate"><span class="pre">f</span></code> is less than that for <code class="docutils literal notranslate"><span class="pre">g</span></code> or if the lists of exponents of <code class="docutils literal notranslate"><span class="pre">f</span></code> are lexicographically less than the corresponding list for <code class="docutils literal notranslate"><span class="pre">g</span></code>. If these lists are also equal, the lists of coefficients are compared according to the lexicographic ordering induced by the ordering of the elements of <em>GF</em> given by <em>lookup</em>.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-field-polynomial-package-normal"></span><dl class="simple" id="index-12">
+<dt><span class="spadfun">normal?</span>: <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> GF -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">normal?(f)</span></code> tests whether the polynomial <code class="docutils literal notranslate"><span class="pre">f</span></code> over a finite field is normal, i.e. its roots are linearly independent over the field.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-field-polynomial-package-number-of-irreducible-poly"></span><dl class="simple" id="index-13">
+<dt><span class="spadfun">numberOfIrreduciblePoly</span>: <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a> -&gt; <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">numberOfIrreduciblePoly(n)</span></code>$FFPOLY(<code class="docutils literal notranslate"><span class="pre">GF</span></code>) yields the number of monic irreducible univariate polynomials of degree <code class="docutils literal notranslate"><span class="pre">n</span></code> over the finite field <em>GF</em>.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-field-polynomial-package-number-of-normal-poly"></span><dl class="simple" id="index-14">
+<dt><span class="spadfun">numberOfNormalPoly</span>: <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a> -&gt; <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">numberOfNormalPoly(n)</span></code>$FFPOLY(<code class="docutils literal notranslate"><span class="pre">GF</span></code>) yields the number of normal polynomials of degree <code class="docutils literal notranslate"><span class="pre">n</span></code> over the finite field <em>GF</em>.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-field-polynomial-package-number-of-primitive-poly"></span><dl class="simple" id="index-15">
+<dt><span class="spadfun">numberOfPrimitivePoly</span>: <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a> -&gt; <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">numberOfPrimitivePoly(n)</span></code>$FFPOLY(<code class="docutils literal notranslate"><span class="pre">GF</span></code>) yields the number of primitive polynomials of degree <code class="docutils literal notranslate"><span class="pre">n</span></code> over the finite field <em>GF</em>.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-field-polynomial-package-primitive"></span><dl class="simple" id="index-16">
+<dt><span class="spadfun">primitive?</span>: <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> GF -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">primitive?(f)</span></code> tests whether the polynomial <code class="docutils literal notranslate"><span class="pre">f</span></code> over a finite field is primitive, i.e. all its roots are primitive.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-field-polynomial-package-random"></span><dl class="simple" id="index-17">
+<dt><span class="spadfun">random</span>: (<a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> GF</dt><dd><p><code class="docutils literal notranslate"><span class="pre">random(m,</span> <span class="pre">n)</span></code>$FFPOLY(<code class="docutils literal notranslate"><span class="pre">GF</span></code>) generates a random monic polynomial of degree <code class="docutils literal notranslate"><span class="pre">d</span></code> over the finite field <em>GF</em>, <code class="docutils literal notranslate"><span class="pre">d</span></code> between <code class="docutils literal notranslate"><span class="pre">m</span></code> and <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-18">
+<dt><span class="spadfun">random</span>: <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a> -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> GF</dt><dd><p><code class="docutils literal notranslate"><span class="pre">random(n)</span></code>$FFPOLY(<code class="docutils literal notranslate"><span class="pre">GF</span></code>) generates a random monic polynomial of degree <code class="docutils literal notranslate"><span class="pre">n</span></code> over the finite field <em>GF</em>.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-field-polynomial-package-reduced-q-powers"></span><dl class="simple" id="index-19">
+<dt><span class="spadfun">reducedQPowers</span>: <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> GF -&gt; <a class="reference internal" href="PrimitiveArray.html#l-primitive-array"><span class="std std-ref">PrimitiveArray</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> GF</dt><dd><p><code class="docutils literal notranslate"><span class="pre">reducedQPowers(f)</span></code> generates <code class="docutils literal notranslate"><span class="pre">[x,</span> <span class="pre">x^q,</span> <span class="pre">x^(q^2),</span> <span class="pre">...,</span> <span class="pre">x^(q^(n-1))]</span></code> reduced modulo <code class="docutils literal notranslate"><span class="pre">f</span></code> where <code class="docutils literal notranslate"><span class="pre">q</span> <span class="pre">=</span> <span class="pre">size()\$GF</span></code> and <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">degree</span> <span class="pre">f</span></code>.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="FiniteFieldPolynomialPackage2.html" title="FiniteFieldPolynomialPackage2(F, GF)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="FiniteFieldHomomorphisms.html" title="FiniteFieldHomomorphisms(F1, GF, F2)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">FiniteFieldPolynomialPackage GF</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

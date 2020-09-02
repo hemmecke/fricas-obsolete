@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Download" href="download.html" />
+    <link rel="prev" title="ZeroDimensionalSolvePackage(R, ls, ls2)" href="api/ZeroDimensionalSolvePackage.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="download.html" title="Download"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="api/ZeroDimensionalSolvePackage.html" title="ZeroDimensionalSolvePackage(R, ls, ls2)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Features</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="features">
+<h1>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h1>
+<p>The capabilities of <a class="reference external" href="https://fricas.github.io/index.html">FriCAS</a> cover areas such as</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>linear, polynomial and differential system solving</p></li>
+<li><p>integration (most complete implementation of the
+<a class="reference external" href="https://en.wikipedia.org/wiki/Risch_algorithm">Risch algorithm</a>)</p></li>
+<li><p>vector, matrix, and tensor calculus, eigenvalus, eigenvectors,</p></li>
+<li><p>symbolic expression manipulation,</p></li>
+<li><p>non-commutative polynomials</p></li>
+<li><p>limit calculation,</p></li>
+<li><p>arithmetic with Taylor, Laurent, and Puiseux series,</p></li>
+<li><p>combinatorics, symmetric polynomials, special functions, number
+theory,</p></li>
+<li><p>arbitrary precision numerical computations,</p></li>
+<li><p>modular arithmetic,</p></li>
+<li><p>continued fractions, partial fraction decomposition,</p></li>
+<li><p>integer factorization, polynomial factorization,</p></li>
+<li><p>polynomial ideals, Gröbner bases, Gröbner factorization,
+triangular sets, regular chains,</p></li>
+<li><p>computation with cardinal numbers.</p></li>
+</ul>
+</div></blockquote>
+<p>A distinguished feature of <a class="reference external" href="https://fricas.github.io/index.html">FriCAS</a> is its type system. It
+allows to create and compute with domains such as matrices of
+polynomials over finite fields or polynomials having square matrices
+with rational entries as their coefficient ring.</p>
+<p>FriCAS provides structures such as</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>complex numbers, quaternions, octonions,</p></li>
+<li><p>groups, rings, fields, algebraic extension rings,</p></li>
+<li><p>modules, (graded) algebras, finite fields,</p></li>
+<li><p>non-commutative and non-associative algebras,</p></li>
+<li><p>Clifford algebras, exterior algebras,</p></li>
+</ul>
+</div></blockquote>
+<p>The type system of <a class="reference external" href="https://fricas.github.io/index.html">FriCAS</a> is based on its statically typed
+programming lanuguage (<a class="reference external" href="http://axiom-wiki.newsynthesis.org/ProgrammingSPAD">SPAD</a>).</p>
+<p><a class="reference external" href="https://fricas.github.io/index.html">FriCAS</a> can be extend by programs written in <a class="reference external" href="http://axiom-wiki.newsynthesis.org/ProgrammingSPAD">SPAD</a> that are compiled
+to machine code in the same way as the algebra library that comes with
+<a class="reference external" href="https://fricas.github.io/index.html">FriCAS</a>.</p>
+<p>In a <a class="reference external" href="https://fricas.github.io/index.html">FriCAS</a> session the type system is somewhat relaxed.
+Although underneath everything is computed with a distingused type,
+the interpreter tries to figure out in many cases what the best way is
+to convert the user input into an appropriate type. Should the
+interpreter fail to guess correctly, users can always specify the
+types that they want.</p>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">FriCAS API</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">History</a></li>
+</ul>
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/features.rst.txt"
+           rel="nofollow">Show Source</a></li>
+    <li><a href="https://github.com/hemmecke/fricas/blob/formatted/src/doc/sphinx/source/features.rst"
+           rel="nofollow">Show on GitHub</a></li>
+    <li><a href="https://github.com/hemmecke/fricas/edit/formatted/src/doc/sphinx/source/features.rst"
+           rel="nofollow">Edit on GitHub</a></li>
+  </ul>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="download.html" title="Download"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="api/ZeroDimensionalSolvePackage.html" title="ZeroDimensionalSolvePackage(R, ls, ls2)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Features</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

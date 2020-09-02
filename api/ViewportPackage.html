@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ViewportPackage &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="WeierstrassPreparation R" href="WeierstrassPreparation.html" />
+    <link rel="prev" title="ViewDefaultsPackage" href="ViewDefaultsPackage.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="WeierstrassPreparation.html" title="WeierstrassPreparation R"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="ViewDefaultsPackage.html" title="ViewDefaultsPackage"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">ViewportPackage</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="viewportpackage">
+<span id="l-viewport-package"></span><span id="index-0"></span><h1>ViewportPackage<a class="headerlink" href="#viewportpackage" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/viewpack.spad#L1">viewpack.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/viewpack.spad#L1">[edit on github]</a></p>
+<p>ViewportPackage provides functions for creating GraphImages and TwoDimensionalViewports from lists of lists of points.</p>
+<span class="target" id="l-viewport-package-coerce"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="GraphImage.html#l-graph-image"><span class="std std-ref">GraphImage</span></a> -&gt; <a class="reference internal" href="TwoDimensionalViewport.html#l-two-dimensional-viewport"><span class="std std-ref">TwoDimensionalViewport</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(gi)</span></code> converts the indicated <a class="reference internal" href="GraphImage.html#l-graph-image"><span class="std std-ref">GraphImage</span></a>, <code class="docutils literal notranslate"><span class="pre">gi</span></code>, into the <a class="reference internal" href="TwoDimensionalViewport.html#l-two-dimensional-viewport"><span class="std std-ref">TwoDimensionalViewport</span></a> form.</p>
+</dd>
+</dl>
+<span class="target" id="l-viewport-package-draw-curves"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">drawCurves</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="DrawOption.html#l-draw-option"><span class="std std-ref">DrawOption</span></a>) -&gt; <a class="reference internal" href="TwoDimensionalViewport.html#l-two-dimensional-viewport"><span class="std std-ref">TwoDimensionalViewport</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">drawCurves([[p0],</span> <span class="pre">[p1],</span> <span class="pre">...,</span> <span class="pre">[pn]],</span> <span class="pre">[options])</span></code> creates a <a class="reference internal" href="TwoDimensionalViewport.html#l-two-dimensional-viewport"><span class="std std-ref">TwoDimensionalViewport</span></a> from the list of lists of points, <code class="docutils literal notranslate"><span class="pre">p0</span></code> throught <code class="docutils literal notranslate"><span class="pre">pn</span></code>, using the options specified in the list <code class="docutils literal notranslate"><span class="pre">options</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-3">
+<dt><span class="spadfun">drawCurves</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>, <a class="reference internal" href="Palette.html#l-palette"><span class="std std-ref">Palette</span></a>, <a class="reference internal" href="Palette.html#l-palette"><span class="std std-ref">Palette</span></a>, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="DrawOption.html#l-draw-option"><span class="std std-ref">DrawOption</span></a>) -&gt; <a class="reference internal" href="TwoDimensionalViewport.html#l-two-dimensional-viewport"><span class="std std-ref">TwoDimensionalViewport</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">drawCurves([[p0],</span> <span class="pre">[p1],</span> <span class="pre">...,</span> <span class="pre">[pn]],</span> <span class="pre">ptColor,</span> <span class="pre">lineColor,</span> <span class="pre">ptSize,</span> <span class="pre">[options])</span></code> creates a <a class="reference internal" href="TwoDimensionalViewport.html#l-two-dimensional-viewport"><span class="std std-ref">TwoDimensionalViewport</span></a> from the list of lists of points, <code class="docutils literal notranslate"><span class="pre">p0</span></code> throught <code class="docutils literal notranslate"><span class="pre">pn</span></code>, using the options specified in the list <code class="docutils literal notranslate"><span class="pre">options</span></code>. The point color is specified by <code class="docutils literal notranslate"><span class="pre">ptColor</span></code>, the line color is specified by <code class="docutils literal notranslate"><span class="pre">lineColor</span></code>, and the point size is specified by <code class="docutils literal notranslate"><span class="pre">ptSize</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-viewport-package-graph-curves"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">graphCurves</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="DrawOption.html#l-draw-option"><span class="std std-ref">DrawOption</span></a>) -&gt; <a class="reference internal" href="GraphImage.html#l-graph-image"><span class="std std-ref">GraphImage</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">graphCurves([[p0],</span> <span class="pre">[p1],</span> <span class="pre">...,</span> <span class="pre">[pn]],</span> <span class="pre">[options])</span></code> creates a <a class="reference internal" href="GraphImage.html#l-graph-image"><span class="std std-ref">GraphImage</span></a> from the list of lists of points, <code class="docutils literal notranslate"><span class="pre">p0</span></code> throught <code class="docutils literal notranslate"><span class="pre">pn</span></code>, using the options specified in the list <code class="docutils literal notranslate"><span class="pre">options</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-5">
+<dt><span class="spadfun">graphCurves</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>, <a class="reference internal" href="Palette.html#l-palette"><span class="std std-ref">Palette</span></a>, <a class="reference internal" href="Palette.html#l-palette"><span class="std std-ref">Palette</span></a>, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="DrawOption.html#l-draw-option"><span class="std std-ref">DrawOption</span></a>) -&gt; <a class="reference internal" href="GraphImage.html#l-graph-image"><span class="std std-ref">GraphImage</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">graphCurves([[p0],</span> <span class="pre">[p1],</span> <span class="pre">...,</span> <span class="pre">[pn]],</span> <span class="pre">ptColor,</span> <span class="pre">lineColor,</span> <span class="pre">ptSize,</span> <span class="pre">[options])</span></code> creates a <a class="reference internal" href="GraphImage.html#l-graph-image"><span class="std std-ref">GraphImage</span></a> from the list of lists of points, <code class="docutils literal notranslate"><span class="pre">p0</span></code> throught <code class="docutils literal notranslate"><span class="pre">pn</span></code>, using the options specified in the list <code class="docutils literal notranslate"><span class="pre">options</span></code>. The graph point color is specified by <code class="docutils literal notranslate"><span class="pre">ptColor</span></code>, the graph line color is specified by <code class="docutils literal notranslate"><span class="pre">lineColor</span></code>, and the size of the points is specified by <code class="docutils literal notranslate"><span class="pre">ptSize</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-6">
+<dt><span class="spadfun">graphCurves</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a> -&gt; <a class="reference internal" href="GraphImage.html#l-graph-image"><span class="std std-ref">GraphImage</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">graphCurves([[p0],</span> <span class="pre">[p1],</span> <span class="pre">...,</span> <span class="pre">[pn]])</span></code> creates a <a class="reference internal" href="GraphImage.html#l-graph-image"><span class="std std-ref">GraphImage</span></a> from the list of lists of points indicated by <code class="docutils literal notranslate"><span class="pre">p0</span></code> through <code class="docutils literal notranslate"><span class="pre">pn</span></code>.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="WeierstrassPreparation.html" title="WeierstrassPreparation R"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="ViewDefaultsPackage.html" title="ViewDefaultsPackage"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">ViewportPackage</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IntegerCombinatoricFunctions I &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="IntegerFactorizationPackage I" href="IntegerFactorizationPackage.html" />
+    <link rel="prev" title="IntegerBits" href="IntegerBits.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="IntegerFactorizationPackage.html" title="IntegerFactorizationPackage I"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="IntegerBits.html" title="IntegerBits"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">IntegerCombinatoricFunctions I</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="integercombinatoricfunctions-i">
+<span id="l-integer-combinatoric-functions"></span><span id="index-0"></span><h1>IntegerCombinatoricFunctions I<a class="headerlink" href="#integercombinatoricfunctions-i" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/combinat.spad#L1">combinat.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/combinat.spad#L1">[edit on github]</a></p>
+<ul class="simple">
+<li><p>I: <a class="reference internal" href="IntegerNumberSystem.html#l-integer-number-system"><span class="std std-ref">IntegerNumberSystem</span></a></p></li>
+</ul>
+<p>The <a class="reference internal" href="#l-integer-combinatoric-functions"><span class="std std-ref">IntegerCombinatoricFunctions</span></a> package provides some standard functions in combinatorics.</p>
+<span class="target" id="l-integer-combinatoric-functions-binomial"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">binomial</span>: (I, I) -&gt; I</dt><dd><p><code class="docutils literal notranslate"><span class="pre">binomial(n,</span> <span class="pre">r)</span></code> returns the binomial coefficient <code class="docutils literal notranslate"><span class="pre">C(n,</span> <span class="pre">r)</span> <span class="pre">=</span> <span class="pre">n!/(r!</span> <span class="pre">(n-r)!)</span></code>, where <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;=</span> <span class="pre">r</span> <span class="pre">&gt;=</span> <span class="pre">0</span></code>. This is the number of combinations of <code class="docutils literal notranslate"><span class="pre">n</span></code> objects taken <code class="docutils literal notranslate"><span class="pre">r</span></code> at a time.</p>
+</dd>
+</dl>
+<span class="target" id="l-integer-combinatoric-functions-catalan"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">catalan</span>: I -&gt; I</dt><dd><p><code class="docutils literal notranslate"><span class="pre">catalan(n)</span></code> returns the <code class="docutils literal notranslate"><span class="pre">n</span></code>-th Catalan number</p>
+</dd>
+</dl>
+<span class="target" id="l-integer-combinatoric-functions-distinct-partition"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">distinct_partition</span>: I -&gt; I</dt><dd><p><code class="docutils literal notranslate"><span class="pre">distinct_partition(n)</span></code> returns the number of partitions of the integer <code class="docutils literal notranslate"><span class="pre">n</span></code> with distinct members. This is the number of ways that <code class="docutils literal notranslate"><span class="pre">n</span></code> can be written as a sum of distinct positive integers. For <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;</span> <span class="pre">0</span></code> this is the same as number of ways that <code class="docutils literal notranslate"><span class="pre">n</span></code> can be written as a sum of odd positive integers.</p>
+</dd>
+</dl>
+<span class="target" id="l-integer-combinatoric-functions-factorial"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">factorial</span>: I -&gt; I</dt><dd><p><code class="docutils literal notranslate"><span class="pre">factorial(n)</span></code> returns <code class="docutils literal notranslate"><span class="pre">n!</span></code>. this is the product of all integers between 1 and <code class="docutils literal notranslate"><span class="pre">n</span></code> (inclusive). Note: <code class="docutils literal notranslate"><span class="pre">0!</span></code> is defined to be 1.</p>
+</dd>
+</dl>
+<span class="target" id="l-integer-combinatoric-functions-multinomial"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">multinomial</span>: (I, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> I) -&gt; I</dt><dd><p><code class="docutils literal notranslate"><span class="pre">multinomial(n,</span> <span class="pre">[m1,</span> <span class="pre">m2,</span> <span class="pre">...,</span> <span class="pre">mk])</span></code> returns the multinomial coefficient <code class="docutils literal notranslate"><span class="pre">n!/(m1!</span> <span class="pre">m2!</span> <span class="pre">...</span> <span class="pre">mk!)</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-integer-combinatoric-functions-partition"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">partition</span>: I -&gt; I</dt><dd><p><code class="docutils literal notranslate"><span class="pre">partition(n)</span></code> returns the number of partitions of the integer <code class="docutils literal notranslate"><span class="pre">n</span></code>. This is the number of distinct ways that <code class="docutils literal notranslate"><span class="pre">n</span></code> can be written as a sum of positive integers.</p>
+</dd>
+</dl>
+<span class="target" id="l-integer-combinatoric-functions-permutation"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">permutation</span>: (I, I) -&gt; I</dt><dd><p><code class="docutils literal notranslate"><span class="pre">permutation(n)</span></code> returns <code class="docutils literal notranslate"><span class="pre">!P(n,</span> <span class="pre">r)</span> <span class="pre">=</span> <span class="pre">n!/(n-r)!</span></code>. This is the number of permutations of <code class="docutils literal notranslate"><span class="pre">n</span></code> objects taken <code class="docutils literal notranslate"><span class="pre">r</span></code> at a time.</p>
+</dd>
+</dl>
+<span class="target" id="l-integer-combinatoric-functions-stirling1"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">stirling1</span>: (I, I) -&gt; I</dt><dd><p><code class="docutils literal notranslate"><span class="pre">stirling1(n,</span> <span class="pre">m)</span></code> returns the Stirling number of the first kind denoted <code class="docutils literal notranslate"><span class="pre">S[n,</span> <span class="pre">m]</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-integer-combinatoric-functions-stirling2"></span><dl class="simple" id="index-9">
+<dt><span class="spadfun">stirling2</span>: (I, I) -&gt; I</dt><dd><p><code class="docutils literal notranslate"><span class="pre">stirling2(n,</span> <span class="pre">m)</span></code> returns the Stirling number of the second kind denoted <code class="docutils literal notranslate"><span class="pre">SS[n,</span> <span class="pre">m]</span></code>.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="IntegerFactorizationPackage.html" title="IntegerFactorizationPackage I"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="IntegerBits.html" title="IntegerBits"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">IntegerCombinatoricFunctions I</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

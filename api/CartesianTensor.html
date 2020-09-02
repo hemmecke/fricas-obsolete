@@ -1,0 +1,254 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CartesianTensor(minix, dim, R) &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Cell TheField" href="Cell.html" />
+    <link rel="prev" title="CardinalNumber" href="CardinalNumber.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="Cell.html" title="Cell TheField"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="CardinalNumber.html" title="CardinalNumber"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Domains.html" accesskey="U">Domains</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">CartesianTensor(minix, dim, R)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="cartesiantensor-minix-dim-r">
+<span id="l-cartesian-tensor"></span><span id="index-0"></span><h1>CartesianTensor(minix, dim, R)<a class="headerlink" href="#cartesiantensor-minix-dim-r" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/carten.spad#L85">carten.spad line 85</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/carten.spad#L85">[edit on github]</a></p>
+<ul class="simple">
+<li><p>minix: <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></p></li>
+<li><p>dim: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></p></li>
+<li><p>R: <a class="reference internal" href="CommutativeRing.html#l-commutative-ring"><span class="std std-ref">CommutativeRing</span></a></p></li>
+</ul>
+<p>CartesianTensor(minix, dim, <code class="docutils literal notranslate"><span class="pre">R</span></code>) provides Cartesian tensors with components belonging to a commutative ring <code class="docutils literal notranslate"><span class="pre">R</span></code>. These tensors can have any number of indices. Each index takes values from <code class="docutils literal notranslate"><span class="pre">minix</span></code> to <code class="docutils literal notranslate"><span class="pre">minix</span> <span class="pre">+</span> <span class="pre">dim</span> <span class="pre">-</span> <span class="pre">1</span></code>.</p>
+<dl class="simple">
+<dt><a class="reference internal" href="GradedModule.html#l-graded-module-0"><span class="std std-ref">0</span></a>: %</dt><dd><p>from <a class="reference internal" href="GradedModule.html#l-graded-module"><span class="std std-ref">GradedModule</span></a>(R, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>)</p>
+</dd>
+<dt><a class="reference internal" href="GradedAlgebra.html#l-graded-algebra-1"><span class="std std-ref">1</span></a>: %</dt><dd><p>from <a class="reference internal" href="GradedAlgebra.html#l-graded-algebra"><span class="std std-ref">GradedAlgebra</span></a>(R, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>)</p>
+</dd>
+</dl>
+<span class="target" id="id1"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">*</span>: (%, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">s*t</span></code> is the inner product of the tensors <code class="docutils literal notranslate"><span class="pre">s</span></code> and <code class="docutils literal notranslate"><span class="pre">t</span></code> which contracts the last index of <code class="docutils literal notranslate"><span class="pre">s</span></code> with the first index of <code class="docutils literal notranslate"><span class="pre">t</span></code>, i.e. <code class="docutils literal notranslate"><span class="pre">t*s</span> <span class="pre">=</span> <span class="pre">contract(t,</span> <span class="pre">rank</span> <span class="pre">t,</span> <span class="pre">s,</span> <span class="pre">1)</span></code> <code class="docutils literal notranslate"><span class="pre">t*s</span> <span class="pre">=</span> <span class="pre">sum(k=1..N,</span> <span class="pre">t[i1,</span> <span class="pre">..,</span> <span class="pre">iN,</span> <span class="pre">k]*s[k,</span> <span class="pre">j1,</span> <span class="pre">..,</span> <span class="pre">jM])</span></code> This is compatible with the use of <code class="docutils literal notranslate"><span class="pre">M*v</span></code> to denote the matrix-vector inner product.</p>
+</dd>
+<dt><a class="reference internal" href="GradedModule.html#id1"><span class="std std-ref">*</span></a>: (%, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="GradedModule.html#l-graded-module"><span class="std std-ref">GradedModule</span></a>(<a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>)</p>
+</dd>
+<dt><a class="reference internal" href="GradedModule.html#id1"><span class="std std-ref">*</span></a>: (%, R) -&gt; %</dt><dd><p>from <a class="reference internal" href="GradedModule.html#l-graded-module"><span class="std std-ref">GradedModule</span></a>(R, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>)</p>
+</dd>
+<dt><a class="reference internal" href="GradedModule.html#id1"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="GradedModule.html#l-graded-module"><span class="std std-ref">GradedModule</span></a>(<a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>)</p>
+</dd>
+<dt><a class="reference internal" href="GradedModule.html#id1"><span class="std std-ref">*</span></a>: (R, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="GradedModule.html#l-graded-module"><span class="std std-ref">GradedModule</span></a>(R, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>)</p>
+</dd>
+<dt><a class="reference internal" href="GradedModule.html#id2"><span class="std std-ref">+</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="GradedModule.html#l-graded-module"><span class="std std-ref">GradedModule</span></a>(R, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>)</p>
+</dd>
+<dt><a class="reference internal" href="GradedModule.html#id3"><span class="std std-ref">-</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="GradedModule.html#l-graded-module"><span class="std std-ref">GradedModule</span></a>(R, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>)</p>
+</dd>
+<dt><a class="reference internal" href="GradedModule.html#id3"><span class="std std-ref">-</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="GradedModule.html#l-graded-module"><span class="std std-ref">GradedModule</span></a>(R, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>)</p>
+</dd>
+<dt><a class="reference internal" href="BasicType.html#id1"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+<dt><a class="reference internal" href="BasicType.html#id2"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+<dt><a class="reference internal" href="CoercibleTo.html#l-coercible-to-coerce"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-cartesian-tensor-coerce"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="DirectProduct.html#l-direct-product"><span class="std std-ref">DirectProduct</span></a>(dim, R) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(v)</span></code> views a vector as a rank 1 tensor.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-3">
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce([t_1,</span> <span class="pre">...,</span> <span class="pre">t_dim])</span></code> allows tensors to be constructed using lists.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-4">
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> R -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce([r_1,</span> <span class="pre">...,</span> <span class="pre">r_dim])</span></code> allows tensors to be constructed using lists.</p>
+</dd>
+<dt><a class="reference internal" href="CoercibleFrom.html#l-coercible-from-coerce"><span class="std std-ref">coerce</span></a>: R -&gt; %</dt><dd><p>from <a class="reference internal" href="CoercibleFrom.html#l-coercible-from"><span class="std std-ref">CoercibleFrom</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="index-5">
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="SquareMatrix.html#l-square-matrix"><span class="std std-ref">SquareMatrix</span></a>(dim, R) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(m)</span></code> views a matrix as a rank 2 tensor.</p>
+</dd>
+</dl>
+<span class="target" id="l-cartesian-tensor-contract"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">contract</span>: (%, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, %, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">contract(t,</span> <span class="pre">i,</span> <span class="pre">s,</span> <span class="pre">j)</span></code> is the inner product of tenors <code class="docutils literal notranslate"><span class="pre">s</span></code> and <code class="docutils literal notranslate"><span class="pre">t</span></code> which sums along the <code class="docutils literal notranslate"><span class="pre">k1</span></code><code class="docutils literal notranslate"><span class="pre">-</span></code>th index of <code class="docutils literal notranslate"><span class="pre">t</span></code> and the <code class="docutils literal notranslate"><span class="pre">k2</span></code><code class="docutils literal notranslate"><span class="pre">-</span></code>th index of <code class="docutils literal notranslate"><span class="pre">s</span></code>. For example, if <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">=</span> <span class="pre">contract(s,</span> <span class="pre">2,</span> <span class="pre">t,</span> <span class="pre">1)</span></code> for rank 3 tensors rank 3 tensors <code class="docutils literal notranslate"><span class="pre">s</span></code> and <code class="docutils literal notranslate"><span class="pre">t</span></code>, then <code class="docutils literal notranslate"><span class="pre">r</span></code> is the rank 4 <code class="docutils literal notranslate"><span class="pre">(=</span> <span class="pre">3</span> <span class="pre">+</span> <span class="pre">3</span> <span class="pre">-</span> <span class="pre">2)</span></code> tensor given by <code class="docutils literal notranslate"><span class="pre">r(i,</span> <span class="pre">j,</span> <span class="pre">k,</span> <span class="pre">l)</span> <span class="pre">=</span> <span class="pre">sum(h=1..dim,</span> <span class="pre">s(i,</span> <span class="pre">h,</span> <span class="pre">j)*t(h,</span> <span class="pre">k,</span> <span class="pre">l))</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-7">
+<dt><span class="spadfun">contract</span>: (%, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">contract(t,</span> <span class="pre">i,</span> <span class="pre">j)</span></code> is the contraction of tensor <code class="docutils literal notranslate"><span class="pre">t</span></code> which sums along the <code class="docutils literal notranslate"><span class="pre">i</span></code><code class="docutils literal notranslate"><span class="pre">-</span></code>th and <code class="docutils literal notranslate"><span class="pre">j</span></code><code class="docutils literal notranslate"><span class="pre">-</span></code>th indices. For example, if <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">=</span> <span class="pre">contract(t,</span> <span class="pre">1,</span> <span class="pre">3)</span></code> for a rank 4 tensor <code class="docutils literal notranslate"><span class="pre">t</span></code>, then <code class="docutils literal notranslate"><span class="pre">r</span></code> is the rank 2 <code class="docutils literal notranslate"><span class="pre">(=</span> <span class="pre">4</span> <span class="pre">-</span> <span class="pre">2)</span></code> tensor given by <code class="docutils literal notranslate"><span class="pre">r(i,</span> <span class="pre">j)</span> <span class="pre">=</span> <span class="pre">sum(h=1..dim,</span> <span class="pre">t(h,</span> <span class="pre">i,</span> <span class="pre">h,</span> <span class="pre">j))</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="GradedModule.html#l-graded-module-degree"><span class="std std-ref">degree</span></a>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="GradedModule.html#l-graded-module"><span class="std std-ref">GradedModule</span></a>(R, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>)</p>
+</dd>
+</dl>
+<span class="target" id="l-cartesian-tensor-elt"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">elt</span>: % -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">elt(t)</span></code> gives the component of a rank 0 tensor.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-9">
+<dt><span class="spadfun">elt</span>: (%, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">elt(t,</span> <span class="pre">i)</span></code> gives a component of a rank 1 tensor.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-10">
+<dt><span class="spadfun">elt</span>: (%, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">elt(t,</span> <span class="pre">i,</span> <span class="pre">j)</span></code> gives a component of a rank 2 tensor.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-11">
+<dt><span class="spadfun">elt</span>: (%, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">elt(t,</span> <span class="pre">i,</span> <span class="pre">j,</span> <span class="pre">k)</span></code> gives a component of a rank 3 tensor.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-12">
+<dt><span class="spadfun">elt</span>: (%, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">elt(t,</span> <span class="pre">i,</span> <span class="pre">j,</span> <span class="pre">k,</span> <span class="pre">l)</span></code> gives a component of a rank 4 tensor.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-13">
+<dt><span class="spadfun">elt</span>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">elt(t,</span> <span class="pre">[i1,</span> <span class="pre">...,</span> <span class="pre">iN])</span></code> gives a component of a rank <code class="docutils literal notranslate"><span class="pre">N</span></code> tensor.</p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l-single-integer"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash-update"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-cartesian-tensor-kronecker-delta"></span><dl class="simple" id="index-14">
+<dt><span class="spadfun">kroneckerDelta</span>: () -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">kroneckerDelta()</span></code> is the rank 2 tensor defined by <code class="docutils literal notranslate"><span class="pre">kroneckerDelta()(i,</span> <span class="pre">j)</span></code> <code class="docutils literal notranslate"><span class="pre">=</span> <span class="pre">1</span> <span class="pre">if</span> <span class="pre">i</span> <span class="pre">=</span> <span class="pre">j</span></code> <code class="docutils literal notranslate"><span class="pre">=</span> <span class="pre">0</span> <span class="pre">if</span> <span class="pre">i</span> <span class="pre">\~=</span> <span class="pre">j</span></code></p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-latex"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-cartesian-tensor-levi-civita-symbol"></span><dl class="simple" id="index-15">
+<dt><span class="spadfun">leviCivitaSymbol</span>: () -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">leviCivitaSymbol()</span></code> is the rank <code class="docutils literal notranslate"><span class="pre">dim</span></code> tensor defined by <code class="docutils literal notranslate"><span class="pre">leviCivitaSymbol()(i1,</span> <span class="pre">...idim)</span> <span class="pre">=</span> <span class="pre">+1/0/-1</span></code> if <code class="docutils literal notranslate"><span class="pre">i1,</span> <span class="pre">...,</span> <span class="pre">idim</span></code> is an even/is nota /is an odd permutation of <code class="docutils literal notranslate"><span class="pre">minix,</span> <span class="pre">...,</span> <span class="pre">minix+dim-1</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-cartesian-tensor-product"></span><dl class="simple" id="index-16">
+<dt><span class="spadfun">product</span>: (%, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">product(s,</span> <span class="pre">t)</span></code> is the outer product of the tensors <code class="docutils literal notranslate"><span class="pre">s</span></code> and <code class="docutils literal notranslate"><span class="pre">t</span></code>. For example, if <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">=</span> <span class="pre">product(s,</span> <span class="pre">t)</span></code> for rank 2 tensors <code class="docutils literal notranslate"><span class="pre">s</span></code> and <code class="docutils literal notranslate"><span class="pre">t</span></code>, then <code class="docutils literal notranslate"><span class="pre">r</span></code> is a rank 4 tensor given by <code class="docutils literal notranslate"><span class="pre">r(i,</span> <span class="pre">j,</span> <span class="pre">k,</span> <span class="pre">l)</span> <span class="pre">=</span> <span class="pre">s(i,</span> <span class="pre">j)*t(k,</span> <span class="pre">l)</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-cartesian-tensor-rank"></span><dl class="simple" id="index-17">
+<dt><span class="spadfun">rank</span>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">rank(t)</span></code> returns the tensorial rank of <code class="docutils literal notranslate"><span class="pre">t</span></code> (that is, the number of indices). This is the same as the graded module degree.</p>
+</dd>
+</dl>
+<span class="target" id="l-cartesian-tensor-ravel"></span><dl class="simple" id="index-18">
+<dt><span class="spadfun">ravel</span>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">ravel(t)</span></code> produces a list of components from a tensor such that <code class="docutils literal notranslate"><span class="pre">unravel(ravel(t))</span> <span class="pre">=</span> <span class="pre">t</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-cartesian-tensor-reindex"></span><dl class="simple" id="index-19">
+<dt><span class="spadfun">reindex</span>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">reindex(t,</span> <span class="pre">[i1,</span> <span class="pre">...,</span> <span class="pre">idim])</span></code> permutes the indices of <code class="docutils literal notranslate"><span class="pre">t</span></code>. For example, if <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">=</span> <span class="pre">reindex(t,</span> <span class="pre">[4,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3])</span></code> for a rank 4 tensor <code class="docutils literal notranslate"><span class="pre">t</span></code>, then <code class="docutils literal notranslate"><span class="pre">r</span></code> is the rank for tensor given by <code class="docutils literal notranslate"><span class="pre">r(i,</span> <span class="pre">j,</span> <span class="pre">k,</span> <span class="pre">l)</span> <span class="pre">=</span> <span class="pre">t(l,</span> <span class="pre">i,</span> <span class="pre">j,</span> <span class="pre">k)</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="RetractableTo.html#l-retractable-to-retract"><span class="std std-ref">retract</span></a>: % -&gt; R</dt><dd><p>from <a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> R</p>
+</dd>
+<dt><a class="reference internal" href="RetractableTo.html#l-retractable-to-retract-if-can"><span class="std std-ref">retractIfCan</span></a>: % -&gt; Union(R, failed)</dt><dd><p>from <a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> R</p>
+</dd>
+</dl>
+<span class="target" id="l-cartesian-tensor-sample"></span><dl class="simple" id="index-20">
+<dt><span class="spadfun">sample</span>: () -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sample()</span></code> returns an object of type %.</p>
+</dd>
+</dl>
+<span class="target" id="l-cartesian-tensor-transpose"></span><dl class="simple" id="index-21">
+<dt><span class="spadfun">transpose</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">transpose(t)</span></code> exchanges the first and last indices of <code class="docutils literal notranslate"><span class="pre">t</span></code>. For example, if <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">=</span> <span class="pre">transpose(t)</span></code> for a rank 4 tensor <code class="docutils literal notranslate"><span class="pre">t</span></code>, then <code class="docutils literal notranslate"><span class="pre">r</span></code> is the rank 4 tensor given by <code class="docutils literal notranslate"><span class="pre">r(i,</span> <span class="pre">j,</span> <span class="pre">k,</span> <span class="pre">l)</span> <span class="pre">=</span> <span class="pre">t(l,</span> <span class="pre">j,</span> <span class="pre">k,</span> <span class="pre">i)</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-22">
+<dt><span class="spadfun">transpose</span>: (%, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">transpose(t,</span> <span class="pre">i,</span> <span class="pre">j)</span></code> exchanges the <code class="docutils literal notranslate"><span class="pre">i</span></code><code class="docutils literal notranslate"><span class="pre">-</span></code>th and <code class="docutils literal notranslate"><span class="pre">j</span></code><code class="docutils literal notranslate"><span class="pre">-</span></code>th indices of <code class="docutils literal notranslate"><span class="pre">t</span></code>. For example, if <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">=</span> <span class="pre">transpose(t,</span> <span class="pre">2,</span> <span class="pre">3)</span></code> for a rank 4 tensor <code class="docutils literal notranslate"><span class="pre">t</span></code>, then <code class="docutils literal notranslate"><span class="pre">r</span></code> is the rank 4 tensor given by <code class="docutils literal notranslate"><span class="pre">r(i,</span> <span class="pre">j,</span> <span class="pre">k,</span> <span class="pre">l)</span> <span class="pre">=</span> <span class="pre">t(i,</span> <span class="pre">k,</span> <span class="pre">j,</span> <span class="pre">l)</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-cartesian-tensor-unravel"></span><dl class="simple" id="index-23">
+<dt><span class="spadfun">unravel</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> R -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">unravel(t)</span></code> produces a tensor from a list of components such that <code class="docutils literal notranslate"><span class="pre">unravel(ravel(t))</span> <span class="pre">=</span> <span class="pre">t</span></code>.</p>
+</dd>
+</dl>
+<p><a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+<p><a class="reference internal" href="CoercibleFrom.html#l-coercible-from"><span class="std std-ref">CoercibleFrom</span></a> R</p>
+<p><a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+<p><a class="reference internal" href="GradedAlgebra.html#l-graded-algebra"><span class="std std-ref">GradedAlgebra</span></a>(R, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>)</p>
+<p><a class="reference internal" href="GradedModule.html#l-graded-module"><span class="std std-ref">GradedModule</span></a>(<a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>)</p>
+<p><a class="reference internal" href="GradedModule.html#l-graded-module"><span class="std std-ref">GradedModule</span></a>(R, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>)</p>
+<p><a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> R</p>
+<p><a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="Cell.html" title="Cell TheField"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="CardinalNumber.html" title="CardinalNumber"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Domains.html" >Domains</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">CartesianTensor(minix, dim, R)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

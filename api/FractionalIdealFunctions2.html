@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FractionalIdealFunctions2(R1, F1, U1, A1, R2, F2, U2, A2) &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="FractionFreeFastGaussian(D, V)" href="FractionFreeFastGaussian.html" />
+    <link rel="prev" title="FortranOutputStackPackage" href="FortranOutputStackPackage.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="FractionFreeFastGaussian.html" title="FractionFreeFastGaussian(D, V)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="FortranOutputStackPackage.html" title="FortranOutputStackPackage"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">FractionalIdealFunctions2(R1, F1, U1, A1, R2, F2, U2, A2)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="fractionalidealfunctions2-r1-f1-u1-a1-r2-f2-u2-a2">
+<span id="l-fractional-ideal-functions2"></span><span id="index-0"></span><h1>FractionalIdealFunctions2(R1, F1, U1, A1, R2, F2, U2, A2)<a class="headerlink" href="#fractionalidealfunctions2-r1-f1-u1-a1-r2-f2-u2-a2" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/divisor.spad#L178">divisor.spad line 178</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/divisor.spad#L178">[edit on github]</a></p>
+<ul class="simple">
+<li><p>R1: <a class="reference internal" href="EuclideanDomain.html#l-euclidean-domain"><span class="std std-ref">EuclideanDomain</span></a></p></li>
+<li><p>F1: <a class="reference internal" href="QuotientFieldCategory.html#l-quotient-field-category"><span class="std std-ref">QuotientFieldCategory</span></a> R1</p></li>
+<li><p>U1: <a class="reference internal" href="UnivariatePolynomialCategory.html#l-univariate-polynomial-category"><span class="std std-ref">UnivariatePolynomialCategory</span></a> F1</p></li>
+<li><p>A1: Join(<a class="reference internal" href="FramedAlgebra.html#l-framed-algebra"><span class="std std-ref">FramedAlgebra</span></a>(F1, U1), <a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> F1)</p></li>
+<li><p>R2: <a class="reference internal" href="EuclideanDomain.html#l-euclidean-domain"><span class="std std-ref">EuclideanDomain</span></a></p></li>
+<li><p>F2: <a class="reference internal" href="QuotientFieldCategory.html#l-quotient-field-category"><span class="std std-ref">QuotientFieldCategory</span></a> R2</p></li>
+<li><p>U2: <a class="reference internal" href="UnivariatePolynomialCategory.html#l-univariate-polynomial-category"><span class="std std-ref">UnivariatePolynomialCategory</span></a> F2</p></li>
+<li><p>A2: Join(<a class="reference internal" href="FramedAlgebra.html#l-framed-algebra"><span class="std std-ref">FramedAlgebra</span></a>(F2, U2), <a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> F2)</p></li>
+</ul>
+<p>Lifting of morphisms to fractional ideals. Author: Manuel Bronstein Date Created: 1 Feb 1989 Keywords: ideal, algebra, module.</p>
+<span class="target" id="l-fractional-ideal-functions2-map"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">map</span>: (R1 -&gt; R2, <a class="reference internal" href="FractionalIdeal.html#l-fractional-ideal"><span class="std std-ref">FractionalIdeal</span></a>(R1, F1, U1, A1)) -&gt; <a class="reference internal" href="FractionalIdeal.html#l-fractional-ideal"><span class="std std-ref">FractionalIdeal</span></a>(R2, F2, U2, A2)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">map(f,</span> <span class="pre">i)</span></code> is undocumented.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="FractionFreeFastGaussian.html" title="FractionFreeFastGaussian(D, V)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="FortranOutputStackPackage.html" title="FortranOutputStackPackage"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">FractionalIdealFunctions2(R1, F1, U1, A1, R2, F2, U2, A2)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

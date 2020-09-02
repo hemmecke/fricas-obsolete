@@ -1,0 +1,436 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegularTriangularSetCategory(R, E, V, P) &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="RetractableFrom S" href="RetractableFrom.html" />
+    <link rel="prev" title="RecursivePolynomialCategory(R, E, V)" href="RecursivePolynomialCategory.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="RetractableFrom.html" title="RetractableFrom S"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="RecursivePolynomialCategory.html" title="RecursivePolynomialCategory(R, E, V)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Categories.html" accesskey="U">Categories</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">RegularTriangularSetCategory(R, E, V, P)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="regulartriangularsetcategory-r-e-v-p">
+<span id="l-regular-triangular-set-category"></span><span id="index-0"></span><h1>RegularTriangularSetCategory(R, E, V, P)<a class="headerlink" href="#regulartriangularsetcategory-r-e-v-p" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/regset.spad#L1">regset.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/regset.spad#L1">[edit on github]</a></p>
+<ul class="simple">
+<li><p>R: <a class="reference internal" href="GcdDomain.html#l-gcd-domain"><span class="std std-ref">GcdDomain</span></a></p></li>
+<li><p>E: <a class="reference internal" href="OrderedAbelianMonoidSup.html#l-ordered-abelian-monoid-sup"><span class="std std-ref">OrderedAbelianMonoidSup</span></a></p></li>
+<li><p>V: <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a></p></li>
+<li><p>P: <a class="reference internal" href="RecursivePolynomialCategory.html#l-recursive-polynomial-category"><span class="std std-ref">RecursivePolynomialCategory</span></a>(R, E, V)</p></li>
+</ul>
+<p>The category of regular triangular sets, introduced under the name regular chains in [1] (and other papers). In [3] it is proved that regular triangular sets and towers of simple extensions of a field are equivalent notions. In the following definitions, all polynomials and ideals are taken from the polynomial ring <code class="docutils literal notranslate"><span class="pre">k[x1,</span> <span class="pre">...,</span> <span class="pre">xn]</span></code> where <code class="docutils literal notranslate"><span class="pre">k</span></code> is the fraction field of <code class="docutils literal notranslate"><span class="pre">R</span></code>. The triangular set <code class="docutils literal notranslate"><span class="pre">[t1,</span> <span class="pre">...,</span> <span class="pre">tm]</span></code> is regular iff for every <code class="docutils literal notranslate"><span class="pre">i</span></code> the initial of <code class="docutils literal notranslate"><span class="pre">ti+1</span></code> is invertible in the tower of simple extensions associated with <code class="docutils literal notranslate"><span class="pre">[t1,</span> <span class="pre">...,</span> <span class="pre">ti]</span></code>. A family <code class="docutils literal notranslate"><span class="pre">[T1,</span> <span class="pre">...,</span> <span class="pre">Ts]</span></code> of regular triangular sets is a split of Kalkbrener of a given ideal <code class="docutils literal notranslate"><span class="pre">I</span></code> iff the radical of <code class="docutils literal notranslate"><span class="pre">I</span></code> is equal to the intersection of the radical ideals generated by the saturated ideals of the <code class="docutils literal notranslate"><span class="pre">[T1,</span> <span class="pre">...,</span> <span class="pre">Ti]</span></code>. A family <code class="docutils literal notranslate"><span class="pre">[T1,</span> <span class="pre">...,</span> <span class="pre">Ts]</span></code> of regular triangular sets is a split of Kalkbrener of a given triangular set <code class="docutils literal notranslate"><span class="pre">T</span></code> iff it is a split of Kalkbrener of the saturated ideal of <code class="docutils literal notranslate"><span class="pre">T</span></code>. Let <code class="docutils literal notranslate"><span class="pre">K</span></code> be an algebraic closure of <code class="docutils literal notranslate"><span class="pre">k</span></code>. Assume that <code class="docutils literal notranslate"><span class="pre">V</span></code> is finite with cardinality <code class="docutils literal notranslate"><span class="pre">n</span></code> and let <code class="docutils literal notranslate"><span class="pre">A</span></code> be the affine space <code class="docutils literal notranslate"><span class="pre">K^n</span></code>. For a regular triangular set <code class="docutils literal notranslate"><span class="pre">T</span></code> let denote by <code class="docutils literal notranslate"><span class="pre">W(T)</span></code> the set of regular zeros of <code class="docutils literal notranslate"><span class="pre">T</span></code>. A family <code class="docutils literal notranslate"><span class="pre">[T1,</span> <span class="pre">...,</span> <span class="pre">Ts]</span></code> of regular triangular sets is a split of Lazard of a given subset <code class="docutils literal notranslate"><span class="pre">S</span></code> of <code class="docutils literal notranslate"><span class="pre">A</span></code> iff the union of the <code class="docutils literal notranslate"><span class="pre">W(Ti)</span></code> contains <code class="docutils literal notranslate"><span class="pre">S</span></code> and is contained in the closure of <code class="docutils literal notranslate"><span class="pre">S</span></code> (<code class="docutils literal notranslate"><span class="pre">w</span></code>.<code class="docutils literal notranslate"><span class="pre">r</span></code>.<code class="docutils literal notranslate"><span class="pre">t</span></code>. Zariski topology). A family <code class="docutils literal notranslate"><span class="pre">[T1,</span> <span class="pre">...,</span> <span class="pre">Ts]</span></code> of regular triangular sets is a split of Lazard of a given triangular set <code class="docutils literal notranslate"><span class="pre">T</span></code> if it is a split of Lazard of <code class="docutils literal notranslate"><span class="pre">W(T)</span></code>. Note that if <code class="docutils literal notranslate"><span class="pre">[T1,</span> <span class="pre">...,</span> <span class="pre">Ts]</span></code> is a split of Lazard of <code class="docutils literal notranslate"><span class="pre">T</span></code> then it is also a split of Kalkbrener of <code class="docutils literal notranslate"><span class="pre">T</span></code>. The converse is <code class="docutils literal notranslate"><span class="pre">false</span></code>. This category provides operations related to both kinds of splits, the former being related to ideals decomposition whereas the latter deals with varieties decomposition. See the example illustrating the <a class="reference internal" href="RegularTriangularSet.html#l-regular-triangular-set"><span class="std std-ref">RegularTriangularSet</span></a> constructor for more explanations about decompositions by means of regular triangular sets.</p>
+<dl class="simple">
+<dt><a class="reference internal" href="Aggregate.html#id1"><span class="std std-ref">#</span></a>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="Aggregate.html#l-aggregate"><span class="std std-ref">Aggregate</span></a></p>
+</dd>
+<dt><a class="reference internal" href="BasicType.html#id1"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+<dt><a class="reference internal" href="BasicType.html#id2"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+<dt><a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category-algebraic"><span class="std std-ref">algebraic?</span></a>: (V, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category"><span class="std std-ref">TriangularSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+</dl>
+<span class="target" id="l-regular-triangular-set-category-algebraic-coefficients"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">algebraicCoefficients?</span>: (P, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">algebraicCoefficients?(p,</span> <span class="pre">ts)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> iff every variable of <code class="docutils literal notranslate"><span class="pre">p</span></code> which is not the main one of <code class="docutils literal notranslate"><span class="pre">p</span></code> is algebraic <code class="docutils literal notranslate"><span class="pre">w</span></code>.<code class="docutils literal notranslate"><span class="pre">r</span></code>.<code class="docutils literal notranslate"><span class="pre">t</span></code>. <code class="docutils literal notranslate"><span class="pre">ts</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category-algebraic-variables"><span class="std std-ref">algebraicVariables</span></a>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> V</dt><dd><p>from <a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category"><span class="std std-ref">TriangularSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+<dt><a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate-any"><span class="std std-ref">any?</span></a>: (P -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate"><span class="std std-ref">HomogeneousAggregate</span></a> P</p>
+</dd>
+</dl>
+<span class="target" id="l-regular-triangular-set-category-augment"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">augment</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P, %) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">augment(lp,</span> <span class="pre">ts)</span></code> returns <code class="docutils literal notranslate"><span class="pre">ts</span></code> if <code class="docutils literal notranslate"><span class="pre">empty?</span> <span class="pre">lp</span></code>, <code class="docutils literal notranslate"><span class="pre">augment(p,</span> <span class="pre">ts)</span></code> if <code class="docutils literal notranslate"><span class="pre">lp</span> <span class="pre">=</span> <span class="pre">[p]</span></code>, otherwise <code class="docutils literal notranslate"><span class="pre">augment(first</span> <span class="pre">lp,</span> <span class="pre">augment(rest</span> <span class="pre">lp,</span> <span class="pre">ts))</span></code></p>
+</dd>
+</dl>
+<dl class="simple" id="index-3">
+<dt><span class="spadfun">augment</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">augment(lp,</span> <span class="pre">lts)</span></code> returns the same as <code class="docutils literal notranslate"><span class="pre">concat([augment(lp,</span> <span class="pre">ts)</span> <span class="pre">for</span> <span class="pre">ts</span> <span class="pre">in</span> <span class="pre">lts])</span></code></p>
+</dd>
+</dl>
+<dl class="simple" id="index-4">
+<dt><span class="spadfun">augment</span>: (P, %) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">augment(p,</span> <span class="pre">ts)</span></code> assumes that <code class="docutils literal notranslate"><span class="pre">p</span></code> is a non-constant polynomial whose main variable is greater than any variable of <code class="docutils literal notranslate"><span class="pre">ts</span></code>. This operation assumes also that if <code class="docutils literal notranslate"><span class="pre">p</span></code> is added to <code class="docutils literal notranslate"><span class="pre">ts</span></code> the resulting set, say <code class="docutils literal notranslate"><span class="pre">ts+p</span></code>, is a regular triangular set. Then it returns a split of Kalkbrener of <code class="docutils literal notranslate"><span class="pre">ts+p</span></code>. This may not be <code class="docutils literal notranslate"><span class="pre">ts+p</span></code> itself, if for instance <code class="docutils literal notranslate"><span class="pre">ts+p</span></code> is required to be square-free.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-5">
+<dt><span class="spadfun">augment</span>: (P, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">augment(p,</span> <span class="pre">lts)</span></code> returns the same as <code class="docutils literal notranslate"><span class="pre">concat([augment(p,</span> <span class="pre">ts)</span> <span class="pre">for</span> <span class="pre">ts</span> <span class="pre">in</span> <span class="pre">lts])</span></code></p>
+</dd>
+<dt><a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category-auto-reduced"><span class="std std-ref">autoReduced?</span></a>: (%, (P, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category"><span class="std std-ref">TriangularSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+<dt><a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category-basic-set"><span class="std std-ref">basicSet</span></a>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P, (P, P) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>) -&gt; Union(Record(bas: %, top: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P), failed)</dt><dd><p>from <a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category"><span class="std std-ref">TriangularSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+<dt><a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category-basic-set"><span class="std std-ref">basicSet</span></a>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P, P -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>, (P, P) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>) -&gt; Union(Record(bas: %, top: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P), failed)</dt><dd><p>from <a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category"><span class="std std-ref">TriangularSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+<dt><a class="reference internal" href="CoercibleTo.html#l-coercible-to-coerce"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P</dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P</p>
+</dd>
+<dt><a class="reference internal" href="CoercibleTo.html#l-coercible-to-coerce"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+</dd>
+<dt><a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category-co-height"><span class="std std-ref">coHeight</span></a>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a> if V has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category"><span class="std std-ref">TriangularSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+<dt><a class="reference internal" href="PolynomialSetCategory.html#l-polynomial-set-category-collect"><span class="std std-ref">collect</span></a>: (%, V) -&gt; %</dt><dd><p>from <a class="reference internal" href="PolynomialSetCategory.html#l-polynomial-set-category"><span class="std std-ref">PolynomialSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+<dt><a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category-collect-quasi-monic"><span class="std std-ref">collectQuasiMonic</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category"><span class="std std-ref">TriangularSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+<dt><a class="reference internal" href="PolynomialSetCategory.html#l-polynomial-set-category-collect-under"><span class="std std-ref">collectUnder</span></a>: (%, V) -&gt; %</dt><dd><p>from <a class="reference internal" href="PolynomialSetCategory.html#l-polynomial-set-category"><span class="std std-ref">PolynomialSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+<dt><a class="reference internal" href="PolynomialSetCategory.html#l-polynomial-set-category-collect-upper"><span class="std std-ref">collectUpper</span></a>: (%, V) -&gt; %</dt><dd><p>from <a class="reference internal" href="PolynomialSetCategory.html#l-polynomial-set-category"><span class="std std-ref">PolynomialSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+<dt><a class="reference internal" href="Collection.html#l-collection-construct"><span class="std std-ref">construct</span></a>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P -&gt; %</dt><dd><p>from <a class="reference internal" href="Collection.html#l-collection"><span class="std std-ref">Collection</span></a> P</p>
+</dd>
+<dt><a class="reference internal" href="ConvertibleTo.html#l-convertible-to-convert"><span class="std std-ref">convert</span></a>: % -&gt; <a class="reference internal" href="InputForm.html#l-input-form"><span class="std std-ref">InputForm</span></a></dt><dd><p>from <a class="reference internal" href="ConvertibleTo.html#l-convertible-to"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="InputForm.html#l-input-form"><span class="std std-ref">InputForm</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Aggregate.html#l-aggregate-copy"><span class="std std-ref">copy</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="Aggregate.html#l-aggregate"><span class="std std-ref">Aggregate</span></a></p>
+</dd>
+<dt><a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate-count"><span class="std std-ref">count</span></a>: (P -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>, %) -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate"><span class="std std-ref">HomogeneousAggregate</span></a> P</p>
+</dd>
+<dt><a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate-count"><span class="std std-ref">count</span></a>: (P, %) -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate"><span class="std std-ref">HomogeneousAggregate</span></a> P</p>
+</dd>
+<dt><a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category-degree"><span class="std std-ref">degree</span></a>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category"><span class="std std-ref">TriangularSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+<dt><a class="reference internal" href="Aggregate.html#l-aggregate-empty"><span class="std std-ref">empty</span></a>: () -&gt; %</dt><dd><p>from <a class="reference internal" href="Aggregate.html#l-aggregate"><span class="std std-ref">Aggregate</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Aggregate.html#id2"><span class="std std-ref">empty?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Aggregate.html#l-aggregate"><span class="std std-ref">Aggregate</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Aggregate.html#l-aggregate-eq"><span class="std std-ref">eq?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Aggregate.html#l-aggregate"><span class="std std-ref">Aggregate</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Evalable.html#l-evalable-eval"><span class="std std-ref">eval</span></a>: (%, <a class="reference internal" href="Equation.html#l-equation"><span class="std std-ref">Equation</span></a> P) -&gt; % if P has <a class="reference internal" href="Evalable.html#l-evalable"><span class="std std-ref">Evalable</span></a> P</dt><dd><p>from <a class="reference internal" href="Evalable.html#l-evalable"><span class="std std-ref">Evalable</span></a> P</p>
+</dd>
+<dt><a class="reference internal" href="Evalable.html#l-evalable-eval"><span class="std std-ref">eval</span></a>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Equation.html#l-equation"><span class="std std-ref">Equation</span></a> P) -&gt; % if P has <a class="reference internal" href="Evalable.html#l-evalable"><span class="std std-ref">Evalable</span></a> P</dt><dd><p>from <a class="reference internal" href="Evalable.html#l-evalable"><span class="std std-ref">Evalable</span></a> P</p>
+</dd>
+<dt><a class="reference internal" href="InnerEvalable.html#l-inner-evalable-eval"><span class="std std-ref">eval</span></a>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P) -&gt; % if P has <a class="reference internal" href="Evalable.html#l-evalable"><span class="std std-ref">Evalable</span></a> P</dt><dd><p>from <a class="reference internal" href="InnerEvalable.html#l-inner-evalable"><span class="std std-ref">InnerEvalable</span></a>(P, P)</p>
+</dd>
+<dt><a class="reference internal" href="InnerEvalable.html#l-inner-evalable-eval"><span class="std std-ref">eval</span></a>: (%, P, P) -&gt; % if P has <a class="reference internal" href="Evalable.html#l-evalable"><span class="std std-ref">Evalable</span></a> P</dt><dd><p>from <a class="reference internal" href="InnerEvalable.html#l-inner-evalable"><span class="std std-ref">InnerEvalable</span></a>(P, P)</p>
+</dd>
+<dt><a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate-every"><span class="std std-ref">every?</span></a>: (P -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate"><span class="std std-ref">HomogeneousAggregate</span></a> P</p>
+</dd>
+<dt><a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category-extend"><span class="std std-ref">extend</span></a>: (%, P) -&gt; %</dt><dd><p>from <a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category"><span class="std std-ref">TriangularSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+</dl>
+<span class="target" id="l-regular-triangular-set-category-extend"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">extend</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P, %) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">extend(lp,</span> <span class="pre">ts)</span></code> returns <code class="docutils literal notranslate"><span class="pre">ts</span></code> if <code class="docutils literal notranslate"><span class="pre">empty?</span> <span class="pre">lp</span></code> <code class="docutils literal notranslate"><span class="pre">extend(p,</span> <span class="pre">ts)</span></code> if <code class="docutils literal notranslate"><span class="pre">lp</span> <span class="pre">=</span> <span class="pre">[p]</span></code> else <code class="docutils literal notranslate"><span class="pre">extend(first</span> <span class="pre">lp,</span> <span class="pre">extend(rest</span> <span class="pre">lp,</span> <span class="pre">ts))</span></code></p>
+</dd>
+</dl>
+<dl class="simple" id="index-7">
+<dt><span class="spadfun">extend</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">extend(lp,</span> <span class="pre">lts)</span></code> returns the same as <code class="docutils literal notranslate"><span class="pre">concat([extend(lp,</span> <span class="pre">ts)</span> <span class="pre">for</span> <span class="pre">ts</span> <span class="pre">in</span> <span class="pre">lts])|</span></code></p>
+</dd>
+</dl>
+<dl class="simple" id="index-8">
+<dt><span class="spadfun">extend</span>: (P, %) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">extend(p,</span> <span class="pre">ts)</span></code> assumes that <code class="docutils literal notranslate"><span class="pre">p</span></code> is a non-constant polynomial whose main variable is greater than any variable of <code class="docutils literal notranslate"><span class="pre">ts</span></code>. Then it returns a split of Kalkbrener of <code class="docutils literal notranslate"><span class="pre">ts+p</span></code>. This may not be <code class="docutils literal notranslate"><span class="pre">ts+p</span></code> itself, if for instance <code class="docutils literal notranslate"><span class="pre">ts+p</span></code> is not a regular triangular set.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-9">
+<dt><span class="spadfun">extend</span>: (P, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">extend(p,</span> <span class="pre">lts)</span></code> returns the same as <code class="docutils literal notranslate"><span class="pre">concat([extend(p,</span> <span class="pre">ts)</span> <span class="pre">for</span> <span class="pre">ts</span> <span class="pre">in</span> <span class="pre">lts])|</span></code></p>
+</dd>
+<dt><a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category-extend-if-can"><span class="std std-ref">extendIfCan</span></a>: (%, P) -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category"><span class="std std-ref">TriangularSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+<dt><a class="reference internal" href="Collection.html#l-collection-find"><span class="std std-ref">find</span></a>: (P -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>, %) -&gt; Union(P, failed)</dt><dd><p>from <a class="reference internal" href="Collection.html#l-collection"><span class="std std-ref">Collection</span></a> P</p>
+</dd>
+<dt><a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category-first"><span class="std std-ref">first</span></a>: % -&gt; Union(P, failed)</dt><dd><p>from <a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category"><span class="std std-ref">TriangularSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l-single-integer"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash-update"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+<dt><a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category-head-reduce"><span class="std std-ref">headReduce</span></a>: (P, %) -&gt; P</dt><dd><p>from <a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category"><span class="std std-ref">TriangularSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+<dt><a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category-head-reduced"><span class="std std-ref">headReduced?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category"><span class="std std-ref">TriangularSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+<dt><a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category-head-reduced"><span class="std std-ref">headReduced?</span></a>: (P, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category"><span class="std std-ref">TriangularSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+<dt><a class="reference internal" href="PolynomialSetCategory.html#l-polynomial-set-category-head-remainder"><span class="std std-ref">headRemainder</span></a>: (P, %) -&gt; Record(num: P, den: R)</dt><dd><p>from <a class="reference internal" href="PolynomialSetCategory.html#l-polynomial-set-category"><span class="std std-ref">PolynomialSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+<dt><a class="reference internal" href="PolynomialSetCategory.html#l-polynomial-set-category-iexact-quo"><span class="std std-ref">iexactQuo</span></a>: (R, R) -&gt; R</dt><dd><p>from <a class="reference internal" href="PolynomialSetCategory.html#l-polynomial-set-category"><span class="std std-ref">PolynomialSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+<dt><a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category-inf-ritt-wu"><span class="std std-ref">infRittWu?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category"><span class="std std-ref">TriangularSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+<dt><a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category-initially-reduce"><span class="std std-ref">initiallyReduce</span></a>: (P, %) -&gt; P</dt><dd><p>from <a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category"><span class="std std-ref">TriangularSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+<dt><a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category-initially-reduced"><span class="std std-ref">initiallyReduced?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category"><span class="std std-ref">TriangularSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+<dt><a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category-initially-reduced"><span class="std std-ref">initiallyReduced?</span></a>: (P, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category"><span class="std std-ref">TriangularSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+<dt><a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category-initials"><span class="std std-ref">initials</span></a>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P</dt><dd><p>from <a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category"><span class="std std-ref">TriangularSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+</dl>
+<span class="target" id="l-regular-triangular-set-category-internal-augment"></span><dl class="simple" id="index-10">
+<dt><span class="spadfun">internalAugment</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">internalAugment(lp,</span> <span class="pre">ts)</span></code> returns <code class="docutils literal notranslate"><span class="pre">ts</span></code> if <code class="docutils literal notranslate"><span class="pre">lp</span></code> is empty otherwise returns <code class="docutils literal notranslate"><span class="pre">internalAugment(rest</span> <span class="pre">lp,</span> <span class="pre">internalAugment(first</span> <span class="pre">lp,</span> <span class="pre">ts))</span></code></p>
+</dd>
+</dl>
+<dl class="simple" id="index-11">
+<dt><span class="spadfun">internalAugment</span>: (P, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">internalAugment(p,</span> <span class="pre">ts)</span></code> assumes that <code class="docutils literal notranslate"><span class="pre">augment(p,</span> <span class="pre">ts)</span></code> returns a singleton and returns it.</p>
+</dd>
+</dl>
+<span class="target" id="l-regular-triangular-set-category-intersect"></span><dl class="simple" id="index-12">
+<dt><span class="spadfun">intersect</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P, %) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">intersect(lp,</span> <span class="pre">ts)</span></code> returns <code class="docutils literal notranslate"><span class="pre">lts</span></code> a split of Lazard of the intersection of the affine variety associated with <code class="docutils literal notranslate"><span class="pre">lp</span></code> and the regular zero set of <code class="docutils literal notranslate"><span class="pre">ts</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-13">
+<dt><span class="spadfun">intersect</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">intersect(lp,</span> <span class="pre">lts)</span></code> returns the same as <code class="docutils literal notranslate"><span class="pre">concat([intersect(lp,</span> <span class="pre">ts)</span> <span class="pre">for</span> <span class="pre">ts</span> <span class="pre">in</span> <span class="pre">lts])|</span></code></p>
+</dd>
+</dl>
+<dl class="simple" id="index-14">
+<dt><span class="spadfun">intersect</span>: (P, %) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">intersect(p,</span> <span class="pre">ts)</span></code> returns the same as <code class="docutils literal notranslate"><span class="pre">intersect([p],</span> <span class="pre">ts)</span></code></p>
+</dd>
+</dl>
+<dl class="simple" id="index-15">
+<dt><span class="spadfun">intersect</span>: (P, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">intersect(p,</span> <span class="pre">lts)</span></code> returns the same as <code class="docutils literal notranslate"><span class="pre">intersect([p],</span> <span class="pre">lts)</span></code></p>
+</dd>
+</dl>
+<span class="target" id="l-regular-triangular-set-category-invertible"></span><dl class="simple" id="index-16">
+<dt><span class="spadfun">invertible?</span>: (P, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">invertible?(p,</span> <span class="pre">ts)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> iff <code class="docutils literal notranslate"><span class="pre">p</span></code> is invertible in the tower associated with <code class="docutils literal notranslate"><span class="pre">ts</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-17">
+<dt><span class="spadfun">invertible?</span>: (P, %) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(val: <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>, tower: %)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">invertible?(p,</span> <span class="pre">ts)</span></code> returns <code class="docutils literal notranslate"><span class="pre">lbwt</span></code> where <code class="docutils literal notranslate"><span class="pre">lbwt.i</span></code> is the result of <code class="docutils literal notranslate"><span class="pre">invertibleElseSplit?(p,</span> <span class="pre">lbwt.i.tower)</span></code> and the list of the <code class="docutils literal notranslate"><span class="pre">(lqrwt.i).tower</span></code> is a split of Kalkbrener of <code class="docutils literal notranslate"><span class="pre">ts</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-regular-triangular-set-category-invertible-else-split"></span><dl class="simple" id="index-18">
+<dt><span class="spadfun">invertibleElseSplit?</span>: (P, %) -&gt; Union(<a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">invertibleElseSplit?(p,</span> <span class="pre">ts)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> (resp. <code class="docutils literal notranslate"><span class="pre">false</span></code>) if <code class="docutils literal notranslate"><span class="pre">p</span></code> is invertible in the tower associated with <code class="docutils literal notranslate"><span class="pre">ts</span></code> or returns a split of Kalkbrener of <code class="docutils literal notranslate"><span class="pre">ts</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-regular-triangular-set-category-invertible-set"></span><dl class="simple" id="index-19">
+<dt><span class="spadfun">invertibleSet</span>: (P, %) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">invertibleSet(p,</span> <span class="pre">ts)</span></code> returns a split of Kalkbrener of the quotient ideal of the ideal <code class="docutils literal notranslate"><span class="pre">I</span></code> by <code class="docutils literal notranslate"><span class="pre">p</span></code> where <code class="docutils literal notranslate"><span class="pre">I</span></code> is the radical of saturated of <code class="docutils literal notranslate"><span class="pre">ts</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category-last"><span class="std std-ref">last</span></a>: % -&gt; Union(P, failed)</dt><dd><p>from <a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category"><span class="std std-ref">TriangularSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+</dl>
+<span class="target" id="l-regular-triangular-set-category-last-sub-resultant"></span><dl class="simple" id="index-20">
+<dt><span class="spadfun">lastSubResultant</span>: (P, P, %) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(val: P, tower: %)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">lastSubResultant(p1,</span> <span class="pre">p2,</span> <span class="pre">ts)</span></code> returns <code class="docutils literal notranslate"><span class="pre">lpwt</span></code> such that <code class="docutils literal notranslate"><span class="pre">lpwt.i.val</span></code> is a quasi-monic <code class="docutils literal notranslate"><span class="pre">gcd</span></code> of <code class="docutils literal notranslate"><span class="pre">p1</span></code> and <code class="docutils literal notranslate"><span class="pre">p2</span></code> <code class="docutils literal notranslate"><span class="pre">w</span></code>.<code class="docutils literal notranslate"><span class="pre">r</span></code>.<code class="docutils literal notranslate"><span class="pre">t</span></code>. <code class="docutils literal notranslate"><span class="pre">lpwt.i.tower</span></code>, for every <code class="docutils literal notranslate"><span class="pre">i</span></code>, and such that the list of the <code class="docutils literal notranslate"><span class="pre">lpwt.i.tower</span></code> is a split of Kalkbrener of <code class="docutils literal notranslate"><span class="pre">ts</span></code>. Moreover, if <code class="docutils literal notranslate"><span class="pre">p1</span></code> and <code class="docutils literal notranslate"><span class="pre">p2</span></code> do not have a non-trivial <code class="docutils literal notranslate"><span class="pre">gcd</span></code> <code class="docutils literal notranslate"><span class="pre">w</span></code>.<code class="docutils literal notranslate"><span class="pre">r</span></code>.<code class="docutils literal notranslate"><span class="pre">t</span></code>. <code class="docutils literal notranslate"><span class="pre">lpwt.i.tower</span></code> then <code class="docutils literal notranslate"><span class="pre">lpwt.i.val</span></code> is the resultant of these polynomials <code class="docutils literal notranslate"><span class="pre">w</span></code>.<code class="docutils literal notranslate"><span class="pre">r</span></code>.<code class="docutils literal notranslate"><span class="pre">t</span></code>. <code class="docutils literal notranslate"><span class="pre">lpwt.i.tower</span></code>. This assumes that <code class="docutils literal notranslate"><span class="pre">p1</span></code> and <code class="docutils literal notranslate"><span class="pre">p2</span></code> have the same maim variable and that this variable is greater that any variable occurring in <code class="docutils literal notranslate"><span class="pre">ts</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-regular-triangular-set-category-last-sub-resultant-else-split"></span><dl class="simple" id="index-21">
+<dt><span class="spadfun">lastSubResultantElseSplit</span>: (P, P, %) -&gt; Union(P, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">lastSubResultantElseSplit(p1,</span> <span class="pre">p2,</span> <span class="pre">ts)</span></code> returns either <code class="docutils literal notranslate"><span class="pre">g</span></code> a quasi-monic <code class="docutils literal notranslate"><span class="pre">gcd</span></code> of <code class="docutils literal notranslate"><span class="pre">p1</span></code> and <code class="docutils literal notranslate"><span class="pre">p2</span></code> <code class="docutils literal notranslate"><span class="pre">w</span></code>.<code class="docutils literal notranslate"><span class="pre">r</span></code>.<code class="docutils literal notranslate"><span class="pre">t</span></code>. the <code class="docutils literal notranslate"><span class="pre">ts</span></code> or a split of Kalkbrener of <code class="docutils literal notranslate"><span class="pre">ts</span></code>. This assumes that <code class="docutils literal notranslate"><span class="pre">p1</span></code> and <code class="docutils literal notranslate"><span class="pre">p2</span></code> have the same maim variable and that this variable is greater that any variable occurring in <code class="docutils literal notranslate"><span class="pre">ts</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-latex"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Aggregate.html#l-aggregate-less"><span class="std std-ref">less?</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Aggregate.html#l-aggregate"><span class="std std-ref">Aggregate</span></a></p>
+</dd>
+<dt><a class="reference internal" href="PolynomialSetCategory.html#l-polynomial-set-category-main-variable"><span class="std std-ref">mainVariable?</span></a>: (V, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PolynomialSetCategory.html#l-polynomial-set-category"><span class="std std-ref">PolynomialSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+<dt><a class="reference internal" href="PolynomialSetCategory.html#l-polynomial-set-category-main-variables"><span class="std std-ref">mainVariables</span></a>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> V</dt><dd><p>from <a class="reference internal" href="PolynomialSetCategory.html#l-polynomial-set-category"><span class="std std-ref">PolynomialSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+<dt><a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate-map"><span class="std std-ref">map!</span></a>: (P -&gt; P, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate"><span class="std std-ref">HomogeneousAggregate</span></a> P</p>
+</dd>
+<dt><a class="reference internal" href="HomogeneousAggregate.html#id1"><span class="std std-ref">map</span></a>: (P -&gt; P, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate"><span class="std std-ref">HomogeneousAggregate</span></a> P</p>
+</dd>
+<dt><a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate-max"><span class="std std-ref">max</span></a>: % -&gt; P if P has <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a></dt><dd><p>from <a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate"><span class="std std-ref">HomogeneousAggregate</span></a> P</p>
+</dd>
+<dt><a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate-max"><span class="std std-ref">max</span></a>: ((P, P) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>, %) -&gt; P</dt><dd><p>from <a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate"><span class="std std-ref">HomogeneousAggregate</span></a> P</p>
+</dd>
+<dt><a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate-member"><span class="std std-ref">member?</span></a>: (P, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate"><span class="std std-ref">HomogeneousAggregate</span></a> P</p>
+</dd>
+<dt><a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate-members"><span class="std std-ref">members</span></a>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P</dt><dd><p>from <a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate"><span class="std std-ref">HomogeneousAggregate</span></a> P</p>
+</dd>
+<dt><a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate-min"><span class="std std-ref">min</span></a>: % -&gt; P if P has <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a></dt><dd><p>from <a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate"><span class="std std-ref">HomogeneousAggregate</span></a> P</p>
+</dd>
+<dt><a class="reference internal" href="Aggregate.html#l-aggregate-more"><span class="std std-ref">more?</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Aggregate.html#l-aggregate"><span class="std std-ref">Aggregate</span></a></p>
+</dd>
+<dt><a class="reference internal" href="PolynomialSetCategory.html#l-polynomial-set-category-mvar"><span class="std std-ref">mvar</span></a>: % -&gt; V</dt><dd><p>from <a class="reference internal" href="PolynomialSetCategory.html#l-polynomial-set-category"><span class="std std-ref">PolynomialSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+<dt><a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category-normalized"><span class="std std-ref">normalized?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category"><span class="std std-ref">TriangularSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+<dt><a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category-normalized"><span class="std std-ref">normalized?</span></a>: (P, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category"><span class="std std-ref">TriangularSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+<dt><a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate-parts"><span class="std std-ref">parts</span></a>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P</dt><dd><p>from <a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate"><span class="std std-ref">HomogeneousAggregate</span></a> P</p>
+</dd>
+</dl>
+<span class="target" id="l-regular-triangular-set-category-purely-algebraic"></span><dl class="simple" id="index-22">
+<dt><span class="spadfun">purelyAlgebraic?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">purelyAlgebraic?(ts)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> iff for every algebraic variable <code class="docutils literal notranslate"><span class="pre">v</span></code> of <code class="docutils literal notranslate"><span class="pre">ts</span></code> we have <code class="docutils literal notranslate"><span class="pre">algebraicCoefficients?(t_v,</span> <span class="pre">ts_v_-)</span></code> where <code class="docutils literal notranslate"><span class="pre">ts_v</span></code> is <span class="xref std std-ref">select &lt;l–triangular-set-category_select&gt;`(``ts`</span>, <code class="docutils literal notranslate"><span class="pre">v</span></code>) and <code class="docutils literal notranslate"><span class="pre">ts_v_-</span></code> is <span class="xref std std-ref">collectUnder &lt;l–triangular-set-category_collect-under&gt;`(``ts`</span>, <code class="docutils literal notranslate"><span class="pre">v</span></code>).</p>
+</dd>
+</dl>
+<dl class="simple" id="index-23">
+<dt><span class="spadfun">purelyAlgebraic?</span>: (P, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">purelyAlgebraic?(p,</span> <span class="pre">ts)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> iff every variable of <code class="docutils literal notranslate"><span class="pre">p</span></code> is algebraic <code class="docutils literal notranslate"><span class="pre">w</span></code>.<code class="docutils literal notranslate"><span class="pre">r</span></code>.<code class="docutils literal notranslate"><span class="pre">t</span></code>. <code class="docutils literal notranslate"><span class="pre">ts</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-regular-triangular-set-category-purely-algebraic-leading-monomial"></span><dl class="simple" id="index-24">
+<dt><span class="spadfun">purelyAlgebraicLeadingMonomial?</span>: (P, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">purelyAlgebraicLeadingMonomial?(p,</span> <span class="pre">ts)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> iff the main variable of any non-constant iterarted initial of <code class="docutils literal notranslate"><span class="pre">p</span></code> is algebraic <code class="docutils literal notranslate"><span class="pre">w</span></code>.<code class="docutils literal notranslate"><span class="pre">r</span></code>.<code class="docutils literal notranslate"><span class="pre">t</span></code>. <code class="docutils literal notranslate"><span class="pre">ts</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-regular-triangular-set-category-purely-transcendental"></span><dl class="simple" id="index-25">
+<dt><span class="spadfun">purelyTranscendental?</span>: (P, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">purelyTranscendental?(p,</span> <span class="pre">ts)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> iff every variable of <code class="docutils literal notranslate"><span class="pre">p</span></code> is not algebraic <code class="docutils literal notranslate"><span class="pre">w</span></code>.<code class="docutils literal notranslate"><span class="pre">r</span></code>.<code class="docutils literal notranslate"><span class="pre">t</span></code>. <code class="docutils literal notranslate"><span class="pre">ts</span></code></p>
+</dd>
+<dt><a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category-quasi-component"><span class="std std-ref">quasiComponent</span></a>: % -&gt; Record(close: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P, open: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P)</dt><dd><p>from <a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category"><span class="std std-ref">TriangularSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+<dt><a class="reference internal" href="Collection.html#l-collection-reduce"><span class="std std-ref">reduce</span></a>: ((P, P) -&gt; P, %) -&gt; P</dt><dd><p>from <a class="reference internal" href="Collection.html#l-collection"><span class="std std-ref">Collection</span></a> P</p>
+</dd>
+<dt><a class="reference internal" href="Collection.html#l-collection-reduce"><span class="std std-ref">reduce</span></a>: ((P, P) -&gt; P, %, P) -&gt; P</dt><dd><p>from <a class="reference internal" href="Collection.html#l-collection"><span class="std std-ref">Collection</span></a> P</p>
+</dd>
+<dt><a class="reference internal" href="Collection.html#l-collection-reduce"><span class="std std-ref">reduce</span></a>: ((P, P) -&gt; P, %, P, P) -&gt; P</dt><dd><p>from <a class="reference internal" href="Collection.html#l-collection"><span class="std std-ref">Collection</span></a> P</p>
+</dd>
+<dt><a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category-reduce"><span class="std std-ref">reduce</span></a>: (P, %, (P, P) -&gt; P, (P, P) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>) -&gt; P</dt><dd><p>from <a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category"><span class="std std-ref">TriangularSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+<dt><a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category-reduce-by-quasi-monic"><span class="std std-ref">reduceByQuasiMonic</span></a>: (P, %) -&gt; P</dt><dd><p>from <a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category"><span class="std std-ref">TriangularSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+<dt><a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category-reduced"><span class="std std-ref">reduced?</span></a>: (P, %, (P, P) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category"><span class="std std-ref">TriangularSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+<dt><a class="reference internal" href="PolynomialSetCategory.html#l-polynomial-set-category-remainder"><span class="std std-ref">remainder</span></a>: (P, %) -&gt; Record(rnum: R, polnum: P, den: R)</dt><dd><p>from <a class="reference internal" href="PolynomialSetCategory.html#l-polynomial-set-category"><span class="std std-ref">PolynomialSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+<dt><a class="reference internal" href="Collection.html#l-collection-remove"><span class="std std-ref">remove</span></a>: (P -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="Collection.html#l-collection"><span class="std std-ref">Collection</span></a> P</p>
+</dd>
+<dt><a class="reference internal" href="Collection.html#l-collection-remove"><span class="std std-ref">remove</span></a>: (P, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="Collection.html#l-collection"><span class="std std-ref">Collection</span></a> P</p>
+</dd>
+<dt><a class="reference internal" href="Collection.html#l-collection-remove-duplicates"><span class="std std-ref">removeDuplicates</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="Collection.html#l-collection"><span class="std std-ref">Collection</span></a> P</p>
+</dd>
+<dt><a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category-remove-zero"><span class="std std-ref">removeZero</span></a>: (P, %) -&gt; P</dt><dd><p>from <a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category"><span class="std std-ref">TriangularSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+<dt><a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category-rest"><span class="std std-ref">rest</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category"><span class="std std-ref">TriangularSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+<dt><a class="reference internal" href="RetractableFrom.html#l-retractable-from-retract"><span class="std std-ref">retract</span></a>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P -&gt; %</dt><dd><p>from <a class="reference internal" href="RetractableFrom.html#l-retractable-from"><span class="std std-ref">RetractableFrom</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P</p>
+</dd>
+<dt><a class="reference internal" href="RetractableFrom.html#l-retractable-from-retract-if-can"><span class="std std-ref">retractIfCan</span></a>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="RetractableFrom.html#l-retractable-from"><span class="std std-ref">RetractableFrom</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P</p>
+</dd>
+<dt><a class="reference internal" href="PolynomialSetCategory.html#l-polynomial-set-category-rewrite-ideal-with-head-remainder"><span class="std std-ref">rewriteIdealWithHeadRemainder</span></a>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P, %) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P</dt><dd><p>from <a class="reference internal" href="PolynomialSetCategory.html#l-polynomial-set-category"><span class="std std-ref">PolynomialSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+<dt><a class="reference internal" href="PolynomialSetCategory.html#l-polynomial-set-category-rewrite-ideal-with-remainder"><span class="std std-ref">rewriteIdealWithRemainder</span></a>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P, %) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P</dt><dd><p>from <a class="reference internal" href="PolynomialSetCategory.html#l-polynomial-set-category"><span class="std std-ref">PolynomialSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+<dt><a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category-rewrite-set-with-reduction"><span class="std std-ref">rewriteSetWithReduction</span></a>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P, %, (P, P) -&gt; P, (P, P) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P</dt><dd><p>from <a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category"><span class="std std-ref">TriangularSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+<dt><a class="reference internal" href="PolynomialSetCategory.html#l-polynomial-set-category-rough-base"><span class="std std-ref">roughBase?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PolynomialSetCategory.html#l-polynomial-set-category"><span class="std std-ref">PolynomialSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+<dt><a class="reference internal" href="PolynomialSetCategory.html#l-polynomial-set-category-rough-equal-ideals"><span class="std std-ref">roughEqualIdeals?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PolynomialSetCategory.html#l-polynomial-set-category"><span class="std std-ref">PolynomialSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+<dt><a class="reference internal" href="PolynomialSetCategory.html#l-polynomial-set-category-rough-sub-ideal"><span class="std std-ref">roughSubIdeal?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PolynomialSetCategory.html#l-polynomial-set-category"><span class="std std-ref">PolynomialSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+<dt><a class="reference internal" href="PolynomialSetCategory.html#l-polynomial-set-category-rough-unit-ideal"><span class="std std-ref">roughUnitIdeal?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PolynomialSetCategory.html#l-polynomial-set-category"><span class="std std-ref">PolynomialSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+<dt><a class="reference internal" href="Aggregate.html#l-aggregate-sample"><span class="std std-ref">sample</span></a>: %</dt><dd><p>from <a class="reference internal" href="Aggregate.html#l-aggregate"><span class="std std-ref">Aggregate</span></a></p>
+</dd>
+<dt><a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category-select"><span class="std std-ref">select</span></a>: (%, V) -&gt; Union(P, failed)</dt><dd><p>from <a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category"><span class="std std-ref">TriangularSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+<dt><a class="reference internal" href="Collection.html#l-collection-select"><span class="std std-ref">select</span></a>: (P -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="Collection.html#l-collection"><span class="std std-ref">Collection</span></a> P</p>
+</dd>
+<dt><a class="reference internal" href="Aggregate.html#l-aggregate-size"><span class="std std-ref">size?</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Aggregate.html#l-aggregate"><span class="std std-ref">Aggregate</span></a></p>
+</dd>
+<dt><a class="reference internal" href="PolynomialSetCategory.html#l-polynomial-set-category-sort"><span class="std std-ref">sort</span></a>: (%, V) -&gt; Record(under: %, floor: %, upper: %)</dt><dd><p>from <a class="reference internal" href="PolynomialSetCategory.html#l-polynomial-set-category"><span class="std std-ref">PolynomialSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+</dl>
+<span class="target" id="l-regular-triangular-set-category-square-free-part"></span><dl class="simple" id="index-26">
+<dt><span class="spadfun">squareFreePart</span>: (P, %) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(val: P, tower: %)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">squareFreePart(p,</span> <span class="pre">ts)</span></code> returns <code class="docutils literal notranslate"><span class="pre">lpwt</span></code> such that <code class="docutils literal notranslate"><span class="pre">lpwt.i.val</span></code> is a square-free polynomial <code class="docutils literal notranslate"><span class="pre">w</span></code>.<code class="docutils literal notranslate"><span class="pre">r</span></code>.<code class="docutils literal notranslate"><span class="pre">t</span></code>. <code class="docutils literal notranslate"><span class="pre">lpwt.i.tower</span></code>, this polynomial being associated with <code class="docutils literal notranslate"><span class="pre">p</span></code> modulo <code class="docutils literal notranslate"><span class="pre">lpwt.i.tower</span></code>, for every <code class="docutils literal notranslate"><span class="pre">i</span></code>. Moreover, the list of the <code class="docutils literal notranslate"><span class="pre">lpwt.i.tower</span></code> is a split of Kalkbrener of <code class="docutils literal notranslate"><span class="pre">ts</span></code>. WARNING: This assumes that <code class="docutils literal notranslate"><span class="pre">p</span></code> is a non-constant polynomial such that if <code class="docutils literal notranslate"><span class="pre">p</span></code> is added to <code class="docutils literal notranslate"><span class="pre">ts</span></code>, then the resulting set is a regular triangular set.</p>
+</dd>
+<dt><a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category-strongly-reduce"><span class="std std-ref">stronglyReduce</span></a>: (P, %) -&gt; P</dt><dd><p>from <a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category"><span class="std std-ref">TriangularSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+<dt><a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category-strongly-reduced"><span class="std std-ref">stronglyReduced?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category"><span class="std std-ref">TriangularSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+<dt><a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category-strongly-reduced"><span class="std std-ref">stronglyReduced?</span></a>: (P, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category"><span class="std std-ref">TriangularSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+<dt><a class="reference internal" href="PolynomialSetCategory.html#l-polynomial-set-category-triangular"><span class="std std-ref">triangular?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PolynomialSetCategory.html#l-polynomial-set-category"><span class="std std-ref">PolynomialSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+<dt><a class="reference internal" href="PolynomialSetCategory.html#l-polynomial-set-category-trivial-ideal"><span class="std std-ref">trivialIdeal?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PolynomialSetCategory.html#l-polynomial-set-category"><span class="std std-ref">PolynomialSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+<dt><a class="reference internal" href="PolynomialSetCategory.html#l-polynomial-set-category-variables"><span class="std std-ref">variables</span></a>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> V</dt><dd><p>from <a class="reference internal" href="PolynomialSetCategory.html#l-polynomial-set-category"><span class="std std-ref">PolynomialSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+</dl>
+<span class="target" id="l-regular-triangular-set-category-zero-set-split"></span><dl class="simple" id="index-27">
+<dt><span class="spadfun">zeroSetSplit</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P, <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">zeroSetSplit(lp,</span> <span class="pre">clos?)</span></code> returns <code class="docutils literal notranslate"><span class="pre">lts</span></code> a split of Kalkbrener of the radical ideal associated with <code class="docutils literal notranslate"><span class="pre">lp</span></code>. If <code class="docutils literal notranslate"><span class="pre">clos?</span></code> is <code class="docutils literal notranslate"><span class="pre">false</span></code>, it is also a decomposition of the variety associated with <code class="docutils literal notranslate"><span class="pre">lp</span></code> into the regular zero set of the <code class="docutils literal notranslate"><span class="pre">ts</span></code> in <code class="docutils literal notranslate"><span class="pre">lts</span></code> (or, in other words, a split of Lazard of this variety). See the example illustrating the <a class="reference internal" href="RegularTriangularSet.html#l-regular-triangular-set"><span class="std std-ref">RegularTriangularSet</span></a> constructor for more explanations about decompositions by means of regular triangular sets.</p>
+</dd>
+<dt><a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category-zero-set-split"><span class="std std-ref">zeroSetSplit</span></a>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %</dt><dd><p>from <a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category"><span class="std std-ref">TriangularSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+<dt><a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category-zero-set-split-into-triangular-systems"><span class="std std-ref">zeroSetSplitIntoTriangularSystems</span></a>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(close: %, open: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P)</dt><dd><p>from <a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category"><span class="std std-ref">TriangularSetCategory</span></a>(R, E, V, P)</p>
+</dd>
+</dl>
+<p><a class="reference internal" href="Aggregate.html#l-aggregate"><span class="std std-ref">Aggregate</span></a></p>
+<p><a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+<p><a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P</p>
+<p><a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+<p><a class="reference internal" href="Collection.html#l-collection"><span class="std std-ref">Collection</span></a> P</p>
+<p><a class="reference internal" href="ConvertibleTo.html#l-convertible-to"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="InputForm.html#l-input-form"><span class="std std-ref">InputForm</span></a></p>
+<p><a class="reference internal" href="Evalable.html#l-evalable"><span class="std std-ref">Evalable</span></a> P if P has <a class="reference internal" href="Evalable.html#l-evalable"><span class="std std-ref">Evalable</span></a> P</p>
+<p><a class="reference internal" href="finiteAggregate.html#l-finite-aggregate"><span class="std std-ref">finiteAggregate</span></a></p>
+<p><a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate"><span class="std std-ref">HomogeneousAggregate</span></a> P</p>
+<p><a class="reference internal" href="InnerEvalable.html#l-inner-evalable"><span class="std std-ref">InnerEvalable</span></a>(P, P) if P has <a class="reference internal" href="Evalable.html#l-evalable"><span class="std std-ref">Evalable</span></a> P</p>
+<p><a class="reference internal" href="PolynomialSetCategory.html#l-polynomial-set-category"><span class="std std-ref">PolynomialSetCategory</span></a>(R, E, V, P)</p>
+<p><a class="reference internal" href="RetractableFrom.html#l-retractable-from"><span class="std std-ref">RetractableFrom</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P</p>
+<p><a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+<p><a class="reference internal" href="shallowlyMutable.html#l-shallowly-mutable"><span class="std std-ref">shallowlyMutable</span></a></p>
+<p><a class="reference internal" href="TriangularSetCategory.html#l-triangular-set-category"><span class="std std-ref">TriangularSetCategory</span></a>(R, E, V, P)</p>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="RetractableFrom.html" title="RetractableFrom S"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="RecursivePolynomialCategory.html" title="RecursivePolynomialCategory(R, E, V)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Categories.html" >Categories</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">RegularTriangularSetCategory(R, E, V, P)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

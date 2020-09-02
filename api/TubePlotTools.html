@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TubePlotTools &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="TwoDimensionalArrayFunctions(A, RA, CA, MA, B, RB, CB, MB)" href="TwoDimensionalArrayFunctions.html" />
+    <link rel="prev" title="TrigonometricManipulationsAux(G, FG)" href="TrigonometricManipulationsAux.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="TwoDimensionalArrayFunctions.html" title="TwoDimensionalArrayFunctions(A, RA, CA, MA, B, RB, CB, MB)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="TrigonometricManipulationsAux.html" title="TrigonometricManipulationsAux(G, FG)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">TubePlotTools</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="tubeplottools">
+<span id="l-tube-plot-tools"></span><span id="index-0"></span><h1>TubePlotTools<a class="headerlink" href="#tubeplottools" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/tube.spad#L52">tube.spad line 52</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/tube.spad#L52">[edit on github]</a></p>
+<p>Tools for constructing tubes around 3-dimensional parametric curves.</p>
+<span class="target" id="id1"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">*</span>: (<a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>, <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>) -&gt; <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">s</span> <span class="pre">*</span> <span class="pre">p</span></code> returns a point whose coordinates are the scalar multiple of the point <code class="docutils literal notranslate"><span class="pre">p</span></code> by the scalar <code class="docutils literal notranslate"><span class="pre">s</span></code>, preserving the color, or fourth coordinate, of <code class="docutils literal notranslate"><span class="pre">p</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="id2"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">+</span>: (<a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>, <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>) -&gt; <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">p</span> <span class="pre">+</span> <span class="pre">q</span></code> computes and returns a point whose coordinates are the sums of the coordinates of the two points <code class="docutils literal notranslate"><span class="pre">p</span></code> and <code class="docutils literal notranslate"><span class="pre">q</span></code>, using the color, or fourth coordinate, of the first point <code class="docutils literal notranslate"><span class="pre">p</span></code> as the color also of the point <code class="docutils literal notranslate"><span class="pre">q</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="id3"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">-</span>: (<a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>, <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>) -&gt; <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">p</span> <span class="pre">-</span> <span class="pre">q</span></code> computes and returns a point whose coordinates are the differences of the coordinates of two points <code class="docutils literal notranslate"><span class="pre">p</span></code> and <code class="docutils literal notranslate"><span class="pre">q</span></code>, using the color, or fourth coordinate, of the first point <code class="docutils literal notranslate"><span class="pre">p</span></code> as the color also of the point <code class="docutils literal notranslate"><span class="pre">q</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-tube-plot-tools-cos-sin-info"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">cosSinInfo</span>: <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a> -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">cosSinInfo(n)</span></code> returns the list of lists of values for <code class="docutils literal notranslate"><span class="pre">n</span></code>, in the form: <code class="docutils literal notranslate"><span class="pre">[[cos(n</span> <span class="pre">-</span> <span class="pre">1)</span> <span class="pre">a,</span> <span class="pre">sin(n</span> <span class="pre">-</span> <span class="pre">1)</span> <span class="pre">a],</span> <span class="pre">...,</span> <span class="pre">[cos</span> <span class="pre">2</span> <span class="pre">a,</span> <span class="pre">sin</span> <span class="pre">2</span> <span class="pre">a],</span> <span class="pre">[cos</span> <span class="pre">a,</span> <span class="pre">sin</span> <span class="pre">a]]</span></code> where <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">2</span> <span class="pre">pi/n</span></code>. Note: <code class="docutils literal notranslate"><span class="pre">n</span></code> should be greater than 2.</p>
+</dd>
+</dl>
+<span class="target" id="l-tube-plot-tools-cross"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">cross</span>: (<a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>, <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>) -&gt; <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">cross(p,</span> <span class="pre">q)</span></code> computes the cross product of the two points <code class="docutils literal notranslate"><span class="pre">p</span></code> and <code class="docutils literal notranslate"><span class="pre">q</span></code> using only the first three coordinates, and keeping the color of the first point <code class="docutils literal notranslate"><span class="pre">p</span></code>. The result is returned as a point.</p>
+</dd>
+</dl>
+<span class="target" id="l-tube-plot-tools-dot"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">dot</span>: (<a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>, <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>) -&gt; <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">dot(p,</span> <span class="pre">q)</span></code> computes the dot product of the two points <code class="docutils literal notranslate"><span class="pre">p</span></code> and <code class="docutils literal notranslate"><span class="pre">q</span></code> using only the first three coordinates, and returns the resulting <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>.</p>
+</dd>
+</dl>
+<span class="target" id="l-tube-plot-tools-loop-points"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">loopPoints</span>: (<a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>, <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>, <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>, <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">loopPoints(p,</span> <span class="pre">n,</span> <span class="pre">b,</span> <span class="pre">r,</span> <span class="pre">lls)</span></code> creates and returns a list of points which form the loop with radius <code class="docutils literal notranslate"><span class="pre">r</span></code>, around the center point indicated by the point <code class="docutils literal notranslate"><span class="pre">p</span></code>, with the principal normal vector of the space curve at point <code class="docutils literal notranslate"><span class="pre">p</span></code> given by the point(vector) <code class="docutils literal notranslate"><span class="pre">n</span></code>, and the binormal vector given by the point(vector) <code class="docutils literal notranslate"><span class="pre">b</span></code>, and a list of lists, <code class="docutils literal notranslate"><span class="pre">lls</span></code>, which is the <span class="spadfun">cosSinInfo</span> of the number of points defining the loop.</p>
+</dd>
+</dl>
+<span class="target" id="l-tube-plot-tools-point"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">point</span>: (<a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>, <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>, <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>, <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>) -&gt; <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">point(x1,</span> <span class="pre">x2,</span> <span class="pre">x3,</span> <span class="pre">c)</span></code> creates and returns a point from the three specified coordinates <code class="docutils literal notranslate"><span class="pre">x1</span></code>, <code class="docutils literal notranslate"><span class="pre">x2</span></code>, <code class="docutils literal notranslate"><span class="pre">x3</span></code>, and also a fourth coordinate, <code class="docutils literal notranslate"><span class="pre">c</span></code>, which is generally used to specify the color of the point.</p>
+</dd>
+</dl>
+<span class="target" id="l-tube-plot-tools-unit-vector"></span><dl class="simple" id="index-9">
+<dt><span class="spadfun">unitVector</span>: <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a> -&gt; <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">unitVector(p)</span></code> creates the unit vector of the point <code class="docutils literal notranslate"><span class="pre">p</span></code> and returns the result as a point. Note: <code class="docutils literal notranslate"><span class="pre">unitVector(p)</span> <span class="pre">=</span> <span class="pre">p/|p|</span></code>.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="TwoDimensionalArrayFunctions.html" title="TwoDimensionalArrayFunctions(A, RA, CA, MA, B, RB, CB, MB)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="TrigonometricManipulationsAux.html" title="TrigonometricManipulationsAux(G, FG)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">TubePlotTools</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

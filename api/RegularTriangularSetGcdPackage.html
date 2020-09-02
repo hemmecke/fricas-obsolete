@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegularTriangularSetGcdPackage(R, E, V, P, TS) &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="RepeatedDoubling S" href="RepeatedDoubling.html" />
+    <link rel="prev" title="RegularSetDecompositionPackage(R, E, V, P, TS)" href="RegularSetDecompositionPackage.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="RepeatedDoubling.html" title="RepeatedDoubling S"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="RegularSetDecompositionPackage.html" title="RegularSetDecompositionPackage(R, E, V, P, TS)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">RegularTriangularSetGcdPackage(R, E, V, P, TS)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="regulartriangularsetgcdpackage-r-e-v-p-ts">
+<span id="l-regular-triangular-set-gcd-package"></span><span id="index-0"></span><h1>RegularTriangularSetGcdPackage(R, E, V, P, TS)<a class="headerlink" href="#regulartriangularsetgcdpackage-r-e-v-p-ts" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/regset.spad#L717">regset.spad line 717</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/regset.spad#L717">[edit on github]</a></p>
+<ul class="simple">
+<li><p>R: <a class="reference internal" href="GcdDomain.html#l-gcd-domain"><span class="std std-ref">GcdDomain</span></a></p></li>
+<li><p>E: <a class="reference internal" href="OrderedAbelianMonoidSup.html#l-ordered-abelian-monoid-sup"><span class="std std-ref">OrderedAbelianMonoidSup</span></a></p></li>
+<li><p>V: <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a></p></li>
+<li><p>P: <a class="reference internal" href="RecursivePolynomialCategory.html#l-recursive-polynomial-category"><span class="std std-ref">RecursivePolynomialCategory</span></a>(R, E, V)</p></li>
+<li><p>TS: <a class="reference internal" href="RegularTriangularSetCategory.html#l-regular-triangular-set-category"><span class="std std-ref">RegularTriangularSetCategory</span></a>(R, E, V, P)</p></li>
+</ul>
+<p>An internal package for computing gcds and resultants of univariate polynomials with coefficients in a tower of simple extensions of a field.</p>
+<span class="target" id="l-regular-triangular-set-gcd-package-integral-last-sub-resultant"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">integralLastSubResultant</span>: (P, P, TS) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(val: P, tower: TS)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">integralLastSubResultant(p1,</span> <span class="pre">p2,</span> <span class="pre">ts)</span></code> is an internal subroutine, exported only for developement.</p>
+</dd>
+</dl>
+<span class="target" id="l-regular-triangular-set-gcd-package-internal-last-sub-resultant"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">internalLastSubResultant</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(val: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P, tower: TS), V, <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(val: P, tower: TS)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">internalLastSubResultant(lpwt,</span> <span class="pre">v,</span> <span class="pre">flag)</span></code> is an internal subroutine, exported only for developement.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-3">
+<dt><span class="spadfun">internalLastSubResultant</span>: (P, P, TS, <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>, <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(val: P, tower: TS)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">internalLastSubResultant(p1,</span> <span class="pre">p2,</span> <span class="pre">ts,</span> <span class="pre">inv?,</span> <span class="pre">break?)</span></code> is an internal subroutine, exported only for developement.</p>
+</dd>
+</dl>
+<span class="target" id="l-regular-triangular-set-gcd-package-prepare-sub-res-algo"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">prepareSubResAlgo</span>: (P, P, TS) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(val: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P, tower: TS)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">prepareSubResAlgo(p1,</span> <span class="pre">p2,</span> <span class="pre">ts)</span></code> is an internal subroutine, exported only for developement.</p>
+</dd>
+</dl>
+<span class="target" id="l-regular-triangular-set-gcd-package-start-table-gcd"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">startTableGcd!</span>: (<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>) -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">startTableGcd!(s1,</span> <span class="pre">s2,</span> <span class="pre">s3)</span></code> is an internal subroutine, exported only for developement.</p>
+</dd>
+</dl>
+<span class="target" id="l-regular-triangular-set-gcd-package-start-table-inv-set"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">startTableInvSet!</span>: (<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>) -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">startTableInvSet!(s1,</span> <span class="pre">s2,</span> <span class="pre">s3)</span></code> is an internal subroutine, exported only for developement.</p>
+</dd>
+</dl>
+<span class="target" id="l-regular-triangular-set-gcd-package-stop-table-gcd"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">stopTableGcd!</span>: () -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">stopTableGcd!()</span></code> is an internal subroutine, exported only for developement.</p>
+</dd>
+</dl>
+<span class="target" id="l-regular-triangular-set-gcd-package-stop-table-inv-set"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">stopTableInvSet!</span>: () -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">stopTableInvSet!()</span></code> is an internal subroutine, exported only for developement.</p>
+</dd>
+</dl>
+<span class="target" id="l-regular-triangular-set-gcd-package-tose-invertible"></span><dl class="simple" id="index-9">
+<dt><span class="spadfun">toseInvertible?</span>: (P, TS) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">toseInvertible?(p1,</span> <span class="pre">p2,</span> <span class="pre">ts)</span></code> has the same specifications as <a class="reference internal" href="RegularTriangularSetCategory.html#l-regular-triangular-set-category-invertible"><span class="std std-ref">invertible?</span></a>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-10">
+<dt><span class="spadfun">toseInvertible?</span>: (P, TS) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(val: <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>, tower: TS)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">toseInvertible?(p1,</span> <span class="pre">p2,</span> <span class="pre">ts)</span></code> has the same specifications as <a class="reference internal" href="RegularTriangularSetCategory.html#l-regular-triangular-set-category-invertible"><span class="std std-ref">invertible?</span></a>.</p>
+</dd>
+</dl>
+<span class="target" id="l-regular-triangular-set-gcd-package-tose-invertible-set"></span><dl class="simple" id="index-11">
+<dt><span class="spadfun">toseInvertibleSet</span>: (P, TS) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> TS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">toseInvertibleSet(p1,</span> <span class="pre">p2,</span> <span class="pre">ts)</span></code> has the same specifications as <a class="reference internal" href="RegularTriangularSetCategory.html#l-regular-triangular-set-category-invertible-set"><span class="std std-ref">invertibleSet</span></a>.</p>
+</dd>
+</dl>
+<span class="target" id="l-regular-triangular-set-gcd-package-tose-last-sub-resultant"></span><dl class="simple" id="index-12">
+<dt><span class="spadfun">toseLastSubResultant</span>: (P, P, TS) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(val: P, tower: TS)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">toseLastSubResultant(p1,</span> <span class="pre">p2,</span> <span class="pre">ts)</span></code> has the same specifications as <a class="reference internal" href="RegularTriangularSetCategory.html#l-regular-triangular-set-category-last-sub-resultant"><span class="std std-ref">lastSubResultant</span></a>.</p>
+</dd>
+</dl>
+<span class="target" id="l-regular-triangular-set-gcd-package-tose-square-free-part"></span><dl class="simple" id="index-13">
+<dt><span class="spadfun">toseSquareFreePart</span>: (P, TS) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(val: P, tower: TS)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">toseSquareFreePart(p,</span> <span class="pre">ts)</span></code> has the same specifications as <a class="reference internal" href="RegularTriangularSetCategory.html#l-regular-triangular-set-category-square-free-part"><span class="std std-ref">squareFreePart</span></a>.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="RepeatedDoubling.html" title="RepeatedDoubling S"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="RegularSetDecompositionPackage.html" title="RegularSetDecompositionPackage(R, E, V, P, TS)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">RegularTriangularSetGcdPackage(R, E, V, P, TS)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PointPackage R &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="PointsOfFiniteOrder(R0, F, UP, UPUP, R)" href="PointsOfFiniteOrder.html" />
+    <link rel="prev" title="PointFunctions2(R1, R2)" href="PointFunctions2.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="PointsOfFiniteOrder.html" title="PointsOfFiniteOrder(R0, F, UP, UPUP, R)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="PointFunctions2.html" title="PointFunctions2(R1, R2)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">PointPackage R</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="pointpackage-r">
+<span id="l-point-package"></span><span id="index-0"></span><h1>PointPackage R<a class="headerlink" href="#pointpackage-r" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/newpoint.spad#L555">newpoint.spad line 555</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/newpoint.spad#L555">[edit on github]</a></p>
+<ul class="simple">
+<li><p>R: <a class="reference internal" href="Ring.html#l-ring"><span class="std std-ref">Ring</span></a></p></li>
+</ul>
+<p>This package undocumented</p>
+<span class="target" id="l-point-package-color"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">color</span>: <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> R -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">color(pt)</span></code> returns the fourth element of the point, <code class="docutils literal notranslate"><span class="pre">pt</span></code>, although no assumptions are made with regards as to how the components of higher dimensional points are interpreted. This function is defined for the convenience of the user using specifically, color to express a fourth dimension.</p>
+</dd>
+</dl>
+<span class="target" id="l-point-package-hue"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">hue</span>: <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> R -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">hue(pt)</span></code> returns the third element of the two dimensional point, <code class="docutils literal notranslate"><span class="pre">pt</span></code>, although no assumptions are made with regards as to how the components of higher dimensional points are interpreted. This function is defined for the convenience of the user using specifically, hue to express a third dimension.</p>
+</dd>
+</dl>
+<span class="target" id="l-point-package-phi-coord"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">phiCoord</span>: <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> R -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">phiCoord(pt)</span></code> returns the third element of the point, <code class="docutils literal notranslate"><span class="pre">pt</span></code>, although no assumptions are made as to the coordinate system being used. This function is defined for the convenience of the user dealing with a spherical coordinate system.</p>
+</dd>
+</dl>
+<span class="target" id="l-point-package-r-coord"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">rCoord</span>: <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> R -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">rCoord(pt)</span></code> returns the first element of the point, <code class="docutils literal notranslate"><span class="pre">pt</span></code>, although no assumptions are made as to the coordinate system being used. This function is defined for the convenience of the user dealing with a spherical or a cylindrical coordinate system.</p>
+</dd>
+</dl>
+<span class="target" id="l-point-package-shade"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">shade</span>: <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> R -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">shade(pt)</span></code> returns the fourth element of the two dimensional point, <code class="docutils literal notranslate"><span class="pre">pt</span></code>, although no assumptions are made with regards as to how the components of higher dimensional points are interpreted. This function is defined for the convenience of the user using specifically, shade to express a fourth dimension.</p>
+</dd>
+</dl>
+<span class="target" id="l-point-package-theta-coord"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">thetaCoord</span>: <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> R -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">thetaCoord(pt)</span></code> returns the second element of the point, <code class="docutils literal notranslate"><span class="pre">pt</span></code>, although no assumptions are made as to the coordinate system being used. This function is defined for the convenience of the user dealing with a spherical or a cylindrical coordinate system.</p>
+</dd>
+</dl>
+<span class="target" id="l-point-package-x-coord"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">xCoord</span>: <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> R -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">xCoord(pt)</span></code> returns the first element of the point, <code class="docutils literal notranslate"><span class="pre">pt</span></code>, although no assumptions are made as to the coordinate system being used. This function is defined for the convenience of the user dealing with a Cartesian coordinate system.</p>
+</dd>
+</dl>
+<span class="target" id="l-point-package-y-coord"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">yCoord</span>: <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> R -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">yCoord(pt)</span></code> returns the second element of the point, <code class="docutils literal notranslate"><span class="pre">pt</span></code>, although no assumptions are made as to the coordinate system being used. This function is defined for the convenience of the user dealing with a Cartesian coordinate system.</p>
+</dd>
+</dl>
+<span class="target" id="l-point-package-z-coord"></span><dl class="simple" id="index-9">
+<dt><span class="spadfun">zCoord</span>: <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> R -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">zCoord(pt)</span></code> returns the third element of the point, <code class="docutils literal notranslate"><span class="pre">pt</span></code>, although no assumptions are made as to the coordinate system being used. This function is defined for the convenience of the user dealing with a Cartesian or a cylindrical coordinate system.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="PointsOfFiniteOrder.html" title="PointsOfFiniteOrder(R0, F, UP, UPUP, R)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="PointFunctions2.html" title="PointFunctions2(R1, R2)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">PointPackage R</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

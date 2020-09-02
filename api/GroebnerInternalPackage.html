@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GroebnerInternalPackage(Dom, Expon, Dpol) &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="GroebnerPackage(Dom, Expon, Dpol)" href="GroebnerPackage.html" />
+    <link rel="prev" title="GroebnerFactorizationPackage(Dom, Expon, VarSet, Dpol)" href="GroebnerFactorizationPackage.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="GroebnerPackage.html" title="GroebnerPackage(Dom, Expon, Dpol)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="GroebnerFactorizationPackage.html" title="GroebnerFactorizationPackage(Dom, Expon, VarSet, Dpol)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">GroebnerInternalPackage(Dom, Expon, Dpol)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="groebnerinternalpackage-dom-expon-dpol">
+<span id="l-groebner-internal-package"></span><span id="index-0"></span><h1>GroebnerInternalPackage(Dom, Expon, Dpol)<a class="headerlink" href="#groebnerinternalpackage-dom-expon-dpol" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/gbintern.spad#L1">gbintern.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/gbintern.spad#L1">[edit on github]</a></p>
+<ul class="simple">
+<li><p>Dom: <a class="reference internal" href="GcdDomain.html#l-gcd-domain"><span class="std std-ref">GcdDomain</span></a></p></li>
+<li><p>Expon: <a class="reference internal" href="OrderedAbelianMonoidSup.html#l-ordered-abelian-monoid-sup"><span class="std std-ref">OrderedAbelianMonoidSup</span></a></p></li>
+<li><p>Dpol: Join(<a class="reference internal" href="FiniteAbelianMonoidRing.html#l-finite-abelian-monoid-ring"><span class="std std-ref">FiniteAbelianMonoidRing</span></a>(Dom, Expon), <a class="reference internal" href="VariablesCommuteWithCoefficients.html#l-variables-commute-with-coefficients"><span class="std std-ref">VariablesCommuteWithCoefficients</span></a>)</p></li>
+</ul>
+<p>Author: Keywords: References: <code class="docutils literal notranslate"><span class="pre">R</span></code>. Gebauer, <code class="docutils literal notranslate"><span class="pre">M</span></code>. Moeller, On an Installation of Buchberger<code class="docutils literal notranslate"><span class="pre">'s</span></code> Algorithm, <code class="docutils literal notranslate"><span class="pre">JSC</span></code> (1988) 6, 275-286. Description This package provides low level tools for Groebner basis computations</p>
+<span class="target" id="l-groebner-internal-package-cred-pol"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">credPol</span>: (Dpol, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Dpol) -&gt; Dpol</dt><dd><p><a href="#id1"><span class="problematic" id="id2">``</span></a>credPol <a href="#id3"><span class="problematic" id="id4">``</span></a>undocumented</p>
+</dd>
+</dl>
+<span class="target" id="l-groebner-internal-package-crit-b"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">critB</span>: (Expon, Expon, Expon, Expon) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><a href="#id5"><span class="problematic" id="id6">``</span></a>critB <a href="#id7"><span class="problematic" id="id8">``</span></a>undocumented</p>
+</dd>
+</dl>
+<span class="target" id="l-groebner-internal-package-crit-bon-d"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">critBonD</span>: (Dpol, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(lcmfij: Expon, totdeg: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, poli: Dpol, polj: Dpol)) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(lcmfij: Expon, totdeg: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, poli: Dpol, polj: Dpol)</dt><dd><p><a href="#id9"><span class="problematic" id="id10">``</span></a>critBonD <a href="#id11"><span class="problematic" id="id12">``</span></a>undocumented</p>
+</dd>
+</dl>
+<span class="target" id="l-groebner-internal-package-crit-m"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">critM</span>: (Expon, Expon) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><a href="#id13"><span class="problematic" id="id14">``</span></a>critM <a href="#id15"><span class="problematic" id="id16">``</span></a>undocumented</p>
+</dd>
+</dl>
+<span class="target" id="l-groebner-internal-package-crit-mon-d1"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">critMonD1</span>: (Expon, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(lcmfij: Expon, totdeg: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, poli: Dpol, polj: Dpol)) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(lcmfij: Expon, totdeg: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, poli: Dpol, polj: Dpol)</dt><dd><p><a href="#id17"><span class="problematic" id="id18">``</span></a>critMonD1 <a href="#id19"><span class="problematic" id="id20">``</span></a>undocumented</p>
+</dd>
+</dl>
+<span class="target" id="l-groebner-internal-package-crit-m-ton-d1"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">critMTonD1</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(lcmfij: Expon, totdeg: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, poli: Dpol, polj: Dpol) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(lcmfij: Expon, totdeg: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, poli: Dpol, polj: Dpol)</dt><dd><p><a href="#id21"><span class="problematic" id="id22">``</span></a>critMTonD1 <a href="#id23"><span class="problematic" id="id24">``</span></a>undocumented</p>
+</dd>
+</dl>
+<span class="target" id="l-groebner-internal-package-critp-order"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">critpOrder</span>: (Record(lcmfij: Expon, totdeg: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, poli: Dpol, polj: Dpol), Record(lcmfij: Expon, totdeg: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, poli: Dpol, polj: Dpol)) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><a href="#id25"><span class="problematic" id="id26">``</span></a>critpOrder <a href="#id27"><span class="problematic" id="id28">``</span></a>undocumented</p>
+</dd>
+</dl>
+<span class="target" id="l-groebner-internal-package-crit-t"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">critT</span>: Record(lcmfij: Expon, totdeg: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, poli: Dpol, polj: Dpol) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><a href="#id29"><span class="problematic" id="id30">``</span></a>critT <a href="#id31"><span class="problematic" id="id32">``</span></a>undocumented</p>
+</dd>
+</dl>
+<span class="target" id="l-groebner-internal-package-fprind-i-n-f-o"></span><dl class="simple" id="index-9">
+<dt><span class="spadfun">fprindINFO</span>: (Record(lcmfij: Expon, totdeg: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, poli: Dpol, polj: Dpol), Dpol, Dpol, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><a href="#id33"><span class="problematic" id="id34">``</span></a>fprindINFO <a href="#id35"><span class="problematic" id="id36">``</span></a>undocumented</p>
+</dd>
+</dl>
+<span class="target" id="l-groebner-internal-package-gbasis"></span><dl class="simple" id="index-10">
+<dt><span class="spadfun">gbasis</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Dpol, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Dpol</dt><dd><p><code class="docutils literal notranslate"><span class="pre">gbasis(pols,</span> <span class="pre">f1,</span> <span class="pre">f2)</span></code> computes a Groebner basis of <code class="docutils literal notranslate"><span class="pre">pols</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-groebner-internal-package-gbasis-extend"></span><dl class="simple" id="index-11">
+<dt><span class="spadfun">gbasisExtend</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Dpol, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Dpol, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Dpol</dt><dd><p><code class="docutils literal notranslate"><span class="pre">gbasisExtend(pols,</span> <span class="pre">gb,</span> <span class="pre">f1,</span> <span class="pre">f2)</span></code> computes a Groebner basis of concat(<code class="docutils literal notranslate"><span class="pre">pols</span></code>, <code class="docutils literal notranslate"><span class="pre">gb</span></code>) where <code class="docutils literal notranslate"><span class="pre">gb</span></code> is assumed to be already a Groebner basis, i.e. no <code class="docutils literal notranslate"><span class="pre">S</span></code>-polynomials among elements of <code class="docutils literal notranslate"><span class="pre">gb</span></code> will ever be considered.</p>
+</dd>
+</dl>
+<span class="target" id="l-groebner-internal-package-h-monic"></span><dl class="simple" id="index-12">
+<dt><span class="spadfun">hMonic</span>: Dpol -&gt; Dpol</dt><dd><p><a href="#id37"><span class="problematic" id="id38">``</span></a>hMonic <a href="#id39"><span class="problematic" id="id40">``</span></a>undocumented</p>
+</dd>
+</dl>
+<span class="target" id="l-groebner-internal-package-lepol"></span><dl class="simple" id="index-13">
+<dt><span class="spadfun">lepol</span>: Dpol -&gt; <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><a href="#id41"><span class="problematic" id="id42">``</span></a>lepol <a href="#id43"><span class="problematic" id="id44">``</span></a>undocumented</p>
+</dd>
+</dl>
+<span class="target" id="l-groebner-internal-package-make-crit"></span><dl class="simple" id="index-14">
+<dt><span class="spadfun">makeCrit</span>: (Record(totdeg: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, pol: Dpol), Dpol, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; Record(lcmfij: Expon, totdeg: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, poli: Dpol, polj: Dpol)</dt><dd><p><a href="#id45"><span class="problematic" id="id46">``</span></a>makeCrit <a href="#id47"><span class="problematic" id="id48">``</span></a>undocumented</p>
+</dd>
+</dl>
+<span class="target" id="l-groebner-internal-package-min-gbasis"></span><dl class="simple" id="index-15">
+<dt><span class="spadfun">minGbasis</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Dpol -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Dpol</dt><dd><p><a href="#id49"><span class="problematic" id="id50">``</span></a>minGbasis <a href="#id51"><span class="problematic" id="id52">``</span></a>undocumented</p>
+</dd>
+</dl>
+<span class="target" id="l-groebner-internal-package-prinb"></span><dl class="simple" id="index-16">
+<dt><span class="spadfun">prinb</span>: <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a> -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><a href="#id53"><span class="problematic" id="id54">``</span></a>prinb <a href="#id55"><span class="problematic" id="id56">``</span></a>undocumented</p>
+</dd>
+</dl>
+<span class="target" id="l-groebner-internal-package-prind-i-n-f-o"></span><dl class="simple" id="index-17">
+<dt><span class="spadfun">prindINFO</span>: (Record(lcmfij: Expon, totdeg: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, poli: Dpol, polj: Dpol), Dpol, Dpol, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><a href="#id57"><span class="problematic" id="id58">``</span></a>prindINFO <a href="#id59"><span class="problematic" id="id60">``</span></a>undocumented</p>
+</dd>
+</dl>
+<span class="target" id="l-groebner-internal-package-prinpol-i-n-f-o"></span><dl class="simple" id="index-18">
+<dt><span class="spadfun">prinpolINFO</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Dpol -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><a href="#id61"><span class="problematic" id="id62">``</span></a>prinpolINFO <a href="#id63"><span class="problematic" id="id64">``</span></a>undocumented</p>
+</dd>
+</dl>
+<span class="target" id="l-groebner-internal-package-prinsh-i-n-f-o"></span><dl class="simple" id="index-19">
+<dt><span class="spadfun">prinshINFO</span>: Dpol -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><a href="#id65"><span class="problematic" id="id66">``</span></a>prinshINFO <a href="#id67"><span class="problematic" id="id68">``</span></a>undocumented</p>
+</dd>
+</dl>
+<span class="target" id="l-groebner-internal-package-red-po"></span><dl class="simple" id="index-20">
+<dt><span class="spadfun">redPo</span>: (Dpol, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Dpol) -&gt; Record(poly: Dpol, mult: Dom)</dt><dd><p><a href="#id69"><span class="problematic" id="id70">``</span></a>redPo <a href="#id71"><span class="problematic" id="id72">``</span></a>undocumented</p>
+</dd>
+</dl>
+<span class="target" id="l-groebner-internal-package-red-pol"></span><dl class="simple" id="index-21">
+<dt><span class="spadfun">redPol</span>: (Dpol, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Dpol) -&gt; Dpol</dt><dd><p><a href="#id73"><span class="problematic" id="id74">``</span></a>redPol <a href="#id75"><span class="problematic" id="id76">``</span></a>undocumented</p>
+</dd>
+</dl>
+<span class="target" id="l-groebner-internal-package-s-pol"></span><dl class="simple" id="index-22">
+<dt><span class="spadfun">sPol</span>: Record(lcmfij: Expon, totdeg: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, poli: Dpol, polj: Dpol) -&gt; Dpol</dt><dd><p><a href="#id77"><span class="problematic" id="id78">``</span></a>sPol <a href="#id79"><span class="problematic" id="id80">``</span></a>undocumented</p>
+</dd>
+</dl>
+<span class="target" id="l-groebner-internal-package-updat-d"></span><dl class="simple" id="index-23">
+<dt><span class="spadfun">updatD</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(lcmfij: Expon, totdeg: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, poli: Dpol, polj: Dpol), <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(lcmfij: Expon, totdeg: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, poli: Dpol, polj: Dpol)) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(lcmfij: Expon, totdeg: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, poli: Dpol, polj: Dpol)</dt><dd><p><a href="#id81"><span class="problematic" id="id82">``</span></a>updatD <a href="#id83"><span class="problematic" id="id84">``</span></a>undocumented</p>
+</dd>
+</dl>
+<span class="target" id="l-groebner-internal-package-updat-f"></span><dl class="simple" id="index-24">
+<dt><span class="spadfun">updatF</span>: (Dpol, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(totdeg: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, pol: Dpol)) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(totdeg: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, pol: Dpol)</dt><dd><p><a href="#id85"><span class="problematic" id="id86">``</span></a>updatF <a href="#id87"><span class="problematic" id="id88">``</span></a>undocumented</p>
+</dd>
+</dl>
+<span class="target" id="l-groebner-internal-package-virtual-degree"></span><dl class="simple" id="index-25">
+<dt><span class="spadfun">virtualDegree</span>: Dpol -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><a href="#id89"><span class="problematic" id="id90">``</span></a>virtualDegree <a href="#id91"><span class="problematic" id="id92">``</span></a>undocumented</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="GroebnerPackage.html" title="GroebnerPackage(Dom, Expon, Dpol)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="GroebnerFactorizationPackage.html" title="GroebnerFactorizationPackage(Dom, Expon, VarSet, Dpol)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">GroebnerInternalPackage(Dom, Expon, Dpol)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

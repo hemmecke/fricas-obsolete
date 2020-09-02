@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GaloisGroupPolynomialUtilities(R, UP) &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="GaloisGroupUtilities R" href="GaloisGroupUtilities.html" />
+    <link rel="prev" title="GaloisGroupFactorizer UP" href="GaloisGroupFactorizer.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="GaloisGroupUtilities.html" title="GaloisGroupUtilities R"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="GaloisGroupFactorizer.html" title="GaloisGroupFactorizer UP"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">GaloisGroupPolynomialUtilities(R, UP)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="galoisgrouppolynomialutilities-r-up">
+<span id="l-galois-group-polynomial-utilities"></span><span id="index-0"></span><h1>GaloisGroupPolynomialUtilities(R, UP)<a class="headerlink" href="#galoisgrouppolynomialutilities-r-up" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/galfact.spad#L116">galfact.spad line 116</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/galfact.spad#L116">[edit on github]</a></p>
+<ul class="simple">
+<li><p>R: <a class="reference internal" href="Ring.html#l-ring"><span class="std std-ref">Ring</span></a></p></li>
+<li><p>UP: <a class="reference internal" href="UnivariatePolynomialCategory.html#l-univariate-polynomial-category"><span class="std std-ref">UnivariatePolynomialCategory</span></a> R</p></li>
+</ul>
+<p><a class="reference internal" href="#l-galois-group-polynomial-utilities"><span class="std std-ref">GaloisGroupPolynomialUtilities</span></a> provides useful functions for univariate polynomials which should be added to <a class="reference internal" href="UnivariatePolynomialCategory.html#l-univariate-polynomial-category"><span class="std std-ref">UnivariatePolynomialCategory</span></a> or to <a class="reference internal" href="Factored.html#l-factored"><span class="std std-ref">Factored</span></a> (July 1994).</p>
+<span class="target" id="l-galois-group-polynomial-utilities-degree-partition"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">degreePartition</span>: <a class="reference internal" href="Factored.html#l-factored"><span class="std std-ref">Factored</span></a> UP -&gt; <a class="reference internal" href="Multiset.html#l-multiset"><span class="std std-ref">Multiset</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">degreePartition(f)</span></code> returns the degree partition (i.e. the multiset of the degrees of the irreducible factors) of the polynomial <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-galois-group-polynomial-utilities-factor-of-degree"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">factorOfDegree</span>: (<a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>, <a class="reference internal" href="Factored.html#l-factored"><span class="std std-ref">Factored</span></a> UP) -&gt; UP</dt><dd><p><code class="docutils literal notranslate"><span class="pre">factorOfDegree(d,</span> <span class="pre">f)</span></code> returns a factor of degree <code class="docutils literal notranslate"><span class="pre">d</span></code> of the factored polynomial <code class="docutils literal notranslate"><span class="pre">f</span></code>. Such a factor shall exist.</p>
+</dd>
+</dl>
+<span class="target" id="l-galois-group-polynomial-utilities-factors-of-degree"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">factorsOfDegree</span>: (<a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>, <a class="reference internal" href="Factored.html#l-factored"><span class="std std-ref">Factored</span></a> UP) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> UP</dt><dd><p><code class="docutils literal notranslate"><span class="pre">factorsOfDegree(d,</span> <span class="pre">f)</span></code> returns the factors of degree <code class="docutils literal notranslate"><span class="pre">d</span></code> of the factored polynomial <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-galois-group-polynomial-utilities-monic"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">monic?</span>: UP -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">monic?(p)</span></code> tests if <code class="docutils literal notranslate"><span class="pre">p</span></code> is monic (i.e. leading coefficient equal to 1).</p>
+</dd>
+</dl>
+<span class="target" id="l-galois-group-polynomial-utilities-reverse"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">reverse</span>: UP -&gt; UP</dt><dd><p><code class="docutils literal notranslate"><span class="pre">reverse(p)</span></code> returns the reverse polynomial of <code class="docutils literal notranslate"><span class="pre">p</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-galois-group-polynomial-utilities-scale-roots"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">scaleRoots</span>: (UP, R) -&gt; UP</dt><dd><p><code class="docutils literal notranslate"><span class="pre">scaleRoots(p,</span> <span class="pre">c)</span></code> returns the polynomial which has <code class="docutils literal notranslate"><span class="pre">c</span></code> times the roots of <code class="docutils literal notranslate"><span class="pre">p</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-galois-group-polynomial-utilities-shift-roots"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">shiftRoots</span>: (UP, R) -&gt; UP</dt><dd><p><code class="docutils literal notranslate"><span class="pre">shiftRoots(p,</span> <span class="pre">c)</span></code> returns the polynomial which has for roots <code class="docutils literal notranslate"><span class="pre">c</span></code> added to the roots of <code class="docutils literal notranslate"><span class="pre">p</span></code>.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="GaloisGroupUtilities.html" title="GaloisGroupUtilities R"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="GaloisGroupFactorizer.html" title="GaloisGroupFactorizer UP"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">GaloisGroupPolynomialUtilities(R, UP)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

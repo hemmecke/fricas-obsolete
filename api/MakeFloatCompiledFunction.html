@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MakeFloatCompiledFunction S &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="MakeFunction S" href="MakeFunction.html" />
+    <link rel="prev" title="MakeBinaryCompiledFunction(S, D1, D2, I)" href="MakeBinaryCompiledFunction.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="MakeFunction.html" title="MakeFunction S"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="MakeBinaryCompiledFunction.html" title="MakeBinaryCompiledFunction(S, D1, D2, I)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">MakeFloatCompiledFunction S</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="makefloatcompiledfunction-s">
+<span id="l-make-float-compiled-function"></span><span id="index-0"></span><h1>MakeFloatCompiledFunction S<a class="headerlink" href="#makefloatcompiledfunction-s" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/mkfunc.spad#L323">mkfunc.spad line 323</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/mkfunc.spad#L323">[edit on github]</a></p>
+<ul class="simple">
+<li><p>S: <a class="reference internal" href="ConvertibleTo.html#l-convertible-to"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="InputForm.html#l-input-form"><span class="std std-ref">InputForm</span></a></p></li>
+</ul>
+<p>MakeFloatCompiledFunction transforms top-level objects into compiled Lisp functions whose arguments are Lisp floats. This by-passes the Language{} compiler and interpreter, thereby gaining several orders of magnitude.</p>
+<span class="target" id="l-make-float-compiled-function-make-float-function"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">makeFloatFunction</span>: (S, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>) -&gt; <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a> -&gt; <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">makeFloatFunction(expr,</span> <span class="pre">x)</span></code> returns a Lisp function <code class="docutils literal notranslate"><span class="pre">f:</span> <span class="pre">\</span> <span class="pre">:ref:`DoubleFloat</span> <span class="pre">&lt;l--double-float&gt;`\</span>&#160; <span class="pre">-&gt;</span> <span class="pre">\</span> <span class="pre">:ref:`DoubleFloat</span> <span class="pre">&lt;l--double-float&gt;`\</span> <span class="pre">``\</span>&#160; <span class="pre">defined</span> <span class="pre">by</span> <span class="pre">\</span> <span class="pre">``f(x)</span> <span class="pre">==</span> <span class="pre">expr</span></code>. Function <code class="docutils literal notranslate"><span class="pre">f</span></code> is compiled and directly applicable to objects of type <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-2">
+<dt><span class="spadfun">makeFloatFunction</span>: (S, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>) -&gt; (<a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>, <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>) -&gt; <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">makeFloatFunction(expr,</span> <span class="pre">x,</span> <span class="pre">y)</span></code> returns a Lisp function <code class="docutils literal notranslate"><span class="pre">f:</span> <span class="pre">(\</span> <span class="pre">:ref:`DoubleFloat</span> <span class="pre">&lt;l--double-float&gt;`\</span> <span class="pre">,</span> <span class="pre">\</span> <span class="pre">:ref:`DoubleFloat</span> <span class="pre">&lt;l--double-float&gt;`\</span> <span class="pre">)</span> <span class="pre">-&gt;</span> <span class="pre">\</span> <span class="pre">:ref:`DoubleFloat</span> <span class="pre">&lt;l--double-float&gt;`\</span> <span class="pre">``\</span>&#160; <span class="pre">defined</span> <span class="pre">by</span> <span class="pre">\</span> <span class="pre">``f(x,</span> <span class="pre">y)</span> <span class="pre">==</span> <span class="pre">expr</span></code>. Function <code class="docutils literal notranslate"><span class="pre">f</span></code> is compiled and directly applicable to objects of type <code class="docutils literal notranslate"><span class="pre">(\</span> <span class="pre">:ref:`DoubleFloat</span> <span class="pre">&lt;l--double-float&gt;`\</span> <span class="pre">,</span> <span class="pre">\</span> <span class="pre">:ref:`DoubleFloat</span> <span class="pre">&lt;l--double-float&gt;`\</span> <span class="pre">)</span></code>.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="MakeFunction.html" title="MakeFunction S"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="MakeBinaryCompiledFunction.html" title="MakeBinaryCompiledFunction(S, D1, D2, I)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">MakeFloatCompiledFunction S</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

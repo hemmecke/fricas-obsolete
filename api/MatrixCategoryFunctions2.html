@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MatrixCategoryFunctions2(R1, Row1, Col1, M1, R2, Row2, Col2, M2) &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="MatrixCommonDenominator(R, Q)" href="MatrixCommonDenominator.html" />
+    <link rel="prev" title="MappingPackageInternalHacks3(A, B, C)" href="MappingPackageInternalHacks3.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="MatrixCommonDenominator.html" title="MatrixCommonDenominator(R, Q)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="MappingPackageInternalHacks3.html" title="MappingPackageInternalHacks3(A, B, C)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">MatrixCategoryFunctions2(R1, Row1, Col1, M1, R2, Row2, Col2, M2)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="matrixcategoryfunctions2-r1-row1-col1-m1-r2-row2-col2-m2">
+<span id="l-matrix-category-functions2"></span><span id="index-0"></span><h1>MatrixCategoryFunctions2(R1, Row1, Col1, M1, R2, Row2, Col2, M2)<a class="headerlink" href="#matrixcategoryfunctions2-r1-row1-col1-m1-r2-row2-col2-m2" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/matfuns.spad#L277">matfuns.spad line 277</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/matfuns.spad#L277">[edit on github]</a></p>
+<ul class="simple">
+<li><p>R1: Join(<a class="reference internal" href="SemiRng.html#l-semi-rng"><span class="std std-ref">SemiRng</span></a>, <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a>)</p></li>
+<li><p>Row1: <a class="reference internal" href="FiniteLinearAggregate.html#l-finite-linear-aggregate"><span class="std std-ref">FiniteLinearAggregate</span></a> R1</p></li>
+<li><p>Col1: <a class="reference internal" href="FiniteLinearAggregate.html#l-finite-linear-aggregate"><span class="std std-ref">FiniteLinearAggregate</span></a> R1</p></li>
+<li><p>M1: <a class="reference internal" href="MatrixCategory.html#l-matrix-category"><span class="std std-ref">MatrixCategory</span></a>(R1, Row1, Col1)</p></li>
+<li><p>R2: Join(<a class="reference internal" href="SemiRng.html#l-semi-rng"><span class="std std-ref">SemiRng</span></a>, <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a>)</p></li>
+<li><p>Row2: <a class="reference internal" href="FiniteLinearAggregate.html#l-finite-linear-aggregate"><span class="std std-ref">FiniteLinearAggregate</span></a> R2</p></li>
+<li><p>Col2: <a class="reference internal" href="FiniteLinearAggregate.html#l-finite-linear-aggregate"><span class="std std-ref">FiniteLinearAggregate</span></a> R2</p></li>
+<li><p>M2: <a class="reference internal" href="MatrixCategory.html#l-matrix-category"><span class="std std-ref">MatrixCategory</span></a>(R2, Row2, Col2)</p></li>
+</ul>
+<p><a class="reference internal" href="#l-matrix-category-functions2"><span class="std std-ref">MatrixCategoryFunctions2</span></a> provides functions between two matrix domains. The functions provided are <span class="spadfun">map</span> and <span class="spadfun">reduce</span>.</p>
+<span class="target" id="l-matrix-category-functions2-map"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">map</span>: (R1 -&gt; R2, M1) -&gt; M2</dt><dd><p><code class="docutils literal notranslate"><span class="pre">map(f,</span> <span class="pre">m)</span></code> applies the function <code class="docutils literal notranslate"><span class="pre">f</span></code> to the elements of the matrix <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-2">
+<dt><span class="spadfun">map</span>: (R1 -&gt; Union(R2, failed), M1) -&gt; Union(M2, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">map(f,</span> <span class="pre">m)</span></code> applies the function <code class="docutils literal notranslate"><span class="pre">f</span></code> to the elements of the matrix <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-matrix-category-functions2-reduce"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">reduce</span>: ((R1, R2) -&gt; R2, M1, R2) -&gt; R2</dt><dd><p><code class="docutils literal notranslate"><span class="pre">reduce(f,</span> <span class="pre">m,</span> <span class="pre">r)</span></code> traverses <code class="docutils literal notranslate"><span class="pre">m</span></code> row by row passing <code class="docutils literal notranslate"><span class="pre">m</span></code>(<code class="docutils literal notranslate"><span class="pre">i</span></code>, <code class="docutils literal notranslate"><span class="pre">j</span></code>) as first argument to <code class="docutils literal notranslate"><span class="pre">f</span></code>. The second argument to <code class="docutils literal notranslate"><span class="pre">f</span></code> works as accumulator, value from previous call is passed to next call. On first call <code class="docutils literal notranslate"><span class="pre">r</span></code> is passed as second argument to <code class="docutils literal notranslate"><span class="pre">f</span></code>. Return value is the last result returned by <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="MatrixCommonDenominator.html" title="MatrixCommonDenominator(R, Q)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="MappingPackageInternalHacks3.html" title="MappingPackageInternalHacks3(A, B, C)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">MatrixCategoryFunctions2(R1, Row1, Col1, M1, R2, Row2, Col2, M2)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

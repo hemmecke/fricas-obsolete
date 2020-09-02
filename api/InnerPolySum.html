@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnerPolySum(E, V, R, P) &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="InnerTrigonometricManipulations(R, F, FG)" href="InnerTrigonometricManipulations.html" />
+    <link rel="prev" title="InnerPolySign(R, UP)" href="InnerPolySign.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="InnerTrigonometricManipulations.html" title="InnerTrigonometricManipulations(R, F, FG)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="InnerPolySign.html" title="InnerPolySign(R, UP)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">InnerPolySum(E, V, R, P)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="innerpolysum-e-v-r-p">
+<span id="l-inner-poly-sum"></span><span id="index-0"></span><h1>InnerPolySum(E, V, R, P)<a class="headerlink" href="#innerpolysum-e-v-r-p" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/sum.spad#L1">sum.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/sum.spad#L1">[edit on github]</a></p>
+<ul class="simple">
+<li><p>E: <a class="reference internal" href="OrderedAbelianMonoidSup.html#l-ordered-abelian-monoid-sup"><span class="std std-ref">OrderedAbelianMonoidSup</span></a></p></li>
+<li><p>V: <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a></p></li>
+<li><p>R: <a class="reference internal" href="IntegralDomain.html#l-integral-domain"><span class="std std-ref">IntegralDomain</span></a></p></li>
+<li><p>P: <a class="reference internal" href="PolynomialCategory.html#l-polynomial-category"><span class="std std-ref">PolynomialCategory</span></a>(R, E, V)</p></li>
+</ul>
+<p>tools for the summation packages.</p>
+<span class="target" id="l-inner-poly-sum-sum"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">sum</span>: (P, V) -&gt; Record(num: P, den: <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sum(p(n),</span> <span class="pre">n)</span></code> returns <code class="docutils literal notranslate"><span class="pre">P(n)</span></code>, the indefinite sum of <code class="docutils literal notranslate"><span class="pre">p(n)</span></code> with respect to upward difference on <code class="docutils literal notranslate"><span class="pre">n</span></code>, i.e. <code class="docutils literal notranslate"><span class="pre">P(n+1)</span> <span class="pre">-</span> <span class="pre">P(n)</span> <span class="pre">=</span> <span class="pre">p(n)</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-2">
+<dt><span class="spadfun">sum</span>: (P, V, <a class="reference internal" href="Segment.html#l-segment"><span class="std std-ref">Segment</span></a> P) -&gt; Record(num: P, den: <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sum(p(n),</span> <span class="pre">n</span> <span class="pre">=</span> <span class="pre">a..b)</span></code> returns <code class="docutils literal notranslate"><span class="pre">p(a)</span> <span class="pre">+</span> <span class="pre">p(a+1)</span> <span class="pre">+</span> <span class="pre">...</span> <span class="pre">+</span> <span class="pre">p(b)</span></code>.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="InnerTrigonometricManipulations.html" title="InnerTrigonometricManipulations(R, F, FG)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="InnerPolySign.html" title="InnerPolySign(R, UP)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">InnerPolySum(E, V, R, P)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DistributionCategory R &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="DistributiveLattice" href="DistributiveLattice.html" />
+    <link rel="prev" title="DirectProductCategory(dim, R)" href="DirectProductCategory.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="DistributiveLattice.html" title="DistributiveLattice"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="DirectProductCategory.html" title="DirectProductCategory(dim, R)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Categories.html" accesskey="U">Categories</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">DistributionCategory R</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="distributioncategory-r">
+<span id="l-distribution-category"></span><span id="index-0"></span><h1>DistributionCategory R<a class="headerlink" href="#distributioncategory-r" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/distro.spad#L596">distro.spad line 596</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/distro.spad#L596">[edit on github]</a></p>
+<ul class="simple">
+<li><p>R: <a class="reference internal" href="CommutativeRing.html#l-commutative-ring"><span class="std std-ref">CommutativeRing</span></a></p></li>
+</ul>
+<p>Category of distributions formally given by moments.</p>
+<span class="target" id="l-distribution-category-0"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">0</span>: %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">0</span></code> is the Dirac distribution</p>
+</dd>
+<dt><a class="reference internal" href="BasicType.html#id1"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+</dl>
+<span class="target" id="id1"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">^</span>: (%, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">x^k</span></code> constructs the distribution of the <code class="docutils literal notranslate"><span class="pre">k</span></code>th power of the random variable with distribution <code class="docutils literal notranslate"><span class="pre">X</span></code> by picking every <code class="docutils literal notranslate"><span class="pre">k</span></code>-th moment.</p>
+</dd>
+<dt><a class="reference internal" href="BasicType.html#id2"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-distribution-category-boolean-convolution"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">booleanConvolution</span>: (%, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">booleanConvolution(x,</span> <span class="pre">y)</span></code> returns the boolean convolution of the distributions <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code></p>
+</dd>
+</dl>
+<span class="target" id="l-distribution-category-boolean-cumulant"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">booleanCumulant</span>: (%, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">booleanCumulant(x,</span> <span class="pre">n)</span></code> returns the <code class="docutils literal notranslate"><span class="pre">n</span></code>-th boolean cumulant of the distribution <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
+</dd>
+</dl>
+<span class="target" id="l-distribution-category-boolean-cumulants"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">booleanCumulants</span>: % -&gt; <a class="reference internal" href="Sequence.html#l-sequence"><span class="std std-ref">Sequence</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">booleanCumulants(x)</span></code> returns the sequence of boolean cumulants of the distribution <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-distribution-category-classical-convolution"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">classicalConvolution</span>: (%, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">classicalConvolution(x,</span> <span class="pre">y)</span></code> returns the classical convolution of the distributions <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code></p>
+</dd>
+</dl>
+<span class="target" id="l-distribution-category-classical-cumulant"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">classicalCumulant</span>: (%, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">classicalCumulant(x,</span> <span class="pre">n)</span></code> returns the <code class="docutils literal notranslate"><span class="pre">n</span></code>-th classical cumulant of the distribution <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
+</dd>
+</dl>
+<span class="target" id="l-distribution-category-classical-cumulants"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">classicalCumulants</span>: % -&gt; <a class="reference internal" href="Sequence.html#l-sequence"><span class="std std-ref">Sequence</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">classicalCumulants(x)</span></code> returns sequence of classical cumulants of the distribution <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
+</dd>
+<dt><a class="reference internal" href="CoercibleTo.html#l-coercible-to-coerce"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-distribution-category-free-convolution"></span><dl class="simple" id="index-9">
+<dt><span class="spadfun">freeConvolution</span>: (%, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">freeConvolution(x,</span> <span class="pre">y)</span></code> returns the free convolution of the distributions <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code></p>
+</dd>
+</dl>
+<span class="target" id="l-distribution-category-free-cumulant"></span><dl class="simple" id="index-10">
+<dt><span class="spadfun">freeCumulant</span>: (%, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">freeCumulant(x,</span> <span class="pre">n)</span></code> returns the <code class="docutils literal notranslate"><span class="pre">n</span></code>-th free cumulant of the distribution <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
+</dd>
+</dl>
+<span class="target" id="l-distribution-category-free-cumulants"></span><dl class="simple" id="index-11">
+<dt><span class="spadfun">freeCumulants</span>: % -&gt; <a class="reference internal" href="Sequence.html#l-sequence"><span class="std std-ref">Sequence</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">freeCumulants(x)</span></code> returns the sequence of free cumulants of the distribution <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-distribution-category-hankel-determinants"></span><dl class="simple" id="index-12">
+<dt><span class="spadfun">hankelDeterminants</span>: % -&gt; <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">hankelDeterminants(x)</span></code> returns the stream of hankel determinants of the distribution <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l-single-integer"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash-update"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-distribution-category-jacobi-parameters"></span><dl class="simple" id="index-13">
+<dt><span class="spadfun">jacobiParameters</span>: % -&gt; Record(an: <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> R, bn: <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> R) if R has <a class="reference internal" href="IntegralDomain.html#l-integral-domain"><span class="std std-ref">IntegralDomain</span></a> and R hasn’t <a class="reference internal" href="Field.html#l-field"><span class="std std-ref">Field</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jacobiParameters(x)</span></code> returns the pair of streams of Jacobi parameters of the distribution <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-14">
+<dt><span class="spadfun">jacobiParameters</span>: % -&gt; Record(an: <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> R, bn: <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> R) if R has <a class="reference internal" href="Field.html#l-field"><span class="std std-ref">Field</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">jacobiParameters(x)</span></code> returns the pair of streams of Jacobi parameters of the distribution <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-latex"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-distribution-category-moment"></span><dl class="simple" id="index-15">
+<dt><span class="spadfun">moment</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">moment(x,</span> <span class="pre">n)</span></code> returns the <code class="docutils literal notranslate"><span class="pre">n</span></code>-th moment of the distribution <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
+</dd>
+</dl>
+<span class="target" id="l-distribution-category-moments"></span><dl class="simple" id="index-16">
+<dt><span class="spadfun">moments</span>: % -&gt; <a class="reference internal" href="Sequence.html#l-sequence"><span class="std std-ref">Sequence</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">moments(x)</span></code> returns the sequence of moments of the distribution <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
+</dd>
+</dl>
+<span class="target" id="l-distribution-category-monotone-convolution"></span><dl class="simple" id="index-17">
+<dt><span class="spadfun">monotoneConvolution</span>: (%, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">monotoneConvolution(x,</span> <span class="pre">y)</span></code> returns the monotone convolution of the distributions <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code></p>
+</dd>
+</dl>
+<span class="target" id="l-distribution-category-monotone-cumulants"></span><dl class="simple" id="index-18">
+<dt><span class="spadfun">monotoneCumulants</span>: % -&gt; <a class="reference internal" href="Sequence.html#l-sequence"><span class="std std-ref">Sequence</span></a> R if R has <a class="reference internal" href="Algebra.html#l-algebra"><span class="std std-ref">Algebra</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">monotoneCumulants(x)</span></code> returns the sequence of monotone cumulants of the distribution <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-distribution-category-orthogonal-convolution"></span><dl class="simple" id="index-19">
+<dt><span class="spadfun">orthogonalConvolution</span>: (%, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">orthogonalConvolution(x,</span> <span class="pre">y)</span></code> returns the orthogonal convolution of the distributions <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code></p>
+</dd>
+</dl>
+<span class="target" id="l-distribution-category-orthogonal-polynomials"></span><dl class="simple" id="index-20">
+<dt><span class="spadfun">orthogonalPolynomials</span>: % -&gt; <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> R if R has <a class="reference internal" href="IntegralDomain.html#l-integral-domain"><span class="std std-ref">IntegralDomain</span></a> and R hasn’t <a class="reference internal" href="Field.html#l-field"><span class="std std-ref">Field</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">orthogonalPolynomials(x)</span></code> returns the stream of orthogonal polynomials.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-21">
+<dt><span class="spadfun">orthogonalPolynomials</span>: % -&gt; <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> R if R has <a class="reference internal" href="Field.html#l-field"><span class="std std-ref">Field</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">orthogonalPolynomials(x)</span></code> returns the stream of orthogonal polynomials.</p>
+</dd>
+</dl>
+<span class="target" id="l-distribution-category-subordination-convolution"></span><dl class="simple" id="index-22">
+<dt><span class="spadfun">subordinationConvolution</span>: (%, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">subordinationConvolution(x,</span> <span class="pre">y)</span></code> returns the subordination convolution of the distributions <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code></p>
+</dd>
+</dl>
+<p><a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+<p><a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+<p><a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="DistributiveLattice.html" title="DistributiveLattice"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="DirectProductCategory.html" title="DirectProductCategory(dim, R)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Categories.html" >Categories</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">DistributionCategory R</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

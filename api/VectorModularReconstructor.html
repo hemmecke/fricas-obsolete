@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VectorModularReconstructor &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="VectorSpaceBasis R" href="VectorSpaceBasis.html" />
+    <link rel="prev" title="VectorIntegerReconstructor" href="VectorIntegerReconstructor.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="VectorSpaceBasis.html" title="VectorSpaceBasis R"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="VectorIntegerReconstructor.html" title="VectorIntegerReconstructor"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Domains.html" accesskey="U">Domains</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">VectorModularReconstructor</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="vectormodularreconstructor">
+<span id="l-vector-modular-reconstructor"></span><span id="index-0"></span><h1>VectorModularReconstructor<a class="headerlink" href="#vectormodularreconstructor" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/vecrec.spad#L7">vecrec.spad line 7</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/vecrec.spad#L7">[edit on github]</a></p>
+<p>This domain supports modular methods based on evaluation and rational reconstruction. All computation are done on polynomials modulo machine sized prime <code class="docutils literal notranslate"><span class="pre">p</span></code> <code class="docutils literal notranslate"><span class="pre">--</span></code> <code class="docutils literal notranslate"><span class="pre">p</span></code> must be choosen small enough to avoid overflow in intermediate calculations. Each evaluation is supposed to produce vector of values. Once enough evaluations are known rational reconstruction produces vector of rational functions or multivariate polynomials.</p>
+<span class="target" id="l-vector-modular-reconstructor-add-slots"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">add_slots</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, %) -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p>extend reconstructor adding zeros at specified positions.</p>
+</dd>
+</dl>
+<span class="target" id="l-vector-modular-reconstructor-chinese-update"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">chinese_update</span>: (<a class="reference internal" href="U32Vector.html#l-u32-vector"><span class="std std-ref">U32Vector</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, %) -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">chinese_update(v,</span> <span class="pre">pt,</span> <span class="pre">r)</span></code> informs <code class="docutils literal notranslate"><span class="pre">r</span></code> that evaluation at <code class="docutils literal notranslate"><span class="pre">pt</span></code> gave vector of values <code class="docutils literal notranslate"><span class="pre">v</span></code></p>
+</dd>
+</dl>
+<span class="target" id="l-vector-modular-reconstructor-empty"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">empty</span>: (<a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">empty(n,</span> <span class="pre">p)</span></code> initializes reconstructor with <code class="docutils literal notranslate"><span class="pre">n</span></code> slots working modulo <code class="docutils literal notranslate"><span class="pre">p</span></code></p>
+</dd>
+</dl>
+<span class="target" id="l-vector-modular-reconstructor-rational-reconstruction"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">rational_reconstruction</span>: % -&gt; Union(Record(numers: <a class="reference internal" href="PrimitiveArray.html#l-primitive-array"><span class="std std-ref">PrimitiveArray</span></a> <a class="reference internal" href="U32Vector.html#l-u32-vector"><span class="std std-ref">U32Vector</span></a>, denoms: <a class="reference internal" href="PrimitiveArray.html#l-primitive-array"><span class="std std-ref">PrimitiveArray</span></a> <a class="reference internal" href="U32Vector.html#l-u32-vector"><span class="std std-ref">U32Vector</span></a>), failed)</dt><dd><p>reconstruct vector of rational functions based on information stored in reconstructor.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-5">
+<dt><span class="spadfun">rational_reconstruction</span>: (<a class="reference internal" href="U32Vector.html#l-u32-vector"><span class="std std-ref">U32Vector</span></a>, <a class="reference internal" href="U32Vector.html#l-u32-vector"><span class="std std-ref">U32Vector</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; Union(Record(numer: <a class="reference internal" href="U32Vector.html#l-u32-vector"><span class="std std-ref">U32Vector</span></a>, denom: <a class="reference internal" href="U32Vector.html#l-u32-vector"><span class="std std-ref">U32Vector</span></a>), failed)</dt><dd><p>reconstruct rational function</p>
+</dd>
+</dl>
+<span class="target" id="l-vector-modular-reconstructor-reconstruct"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">reconstruct</span>: (%, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="SortedExponentVector.html#l-sorted-exponent-vector"><span class="std std-ref">SortedExponentVector</span></a>) -&gt; Union(Record(nvars: <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, offsetdata: <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, expdata: <a class="reference internal" href="SortedExponentVector.html#l-sorted-exponent-vector"><span class="std std-ref">SortedExponentVector</span></a>, coeffdata: <a class="reference internal" href="U32Vector.html#l-u32-vector"><span class="std std-ref">U32Vector</span></a>), failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">reconstruct</span> <span class="pre">polynomials</span></code> in <code class="docutils literal notranslate"><span class="pre">n</span></code> + 1 variables</p>
+</dd>
+</dl>
+<dl class="simple" id="index-7">
+<dt><span class="spadfun">reconstruct</span>: (<a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="SortedExponentVector.html#l-sorted-exponent-vector"><span class="std std-ref">SortedExponentVector</span></a>, <a class="reference internal" href="PrimitiveArray.html#l-primitive-array"><span class="std std-ref">PrimitiveArray</span></a> <a class="reference internal" href="U32Vector.html#l-u32-vector"><span class="std std-ref">U32Vector</span></a>, <a class="reference internal" href="PrimitiveArray.html#l-primitive-array"><span class="std std-ref">PrimitiveArray</span></a> <a class="reference internal" href="U32Vector.html#l-u32-vector"><span class="std std-ref">U32Vector</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; Record(nvars: <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, offsetdata: <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, expdata: <a class="reference internal" href="SortedExponentVector.html#l-sorted-exponent-vector"><span class="std std-ref">SortedExponentVector</span></a>, coeffdata: <a class="reference internal" href="U32Vector.html#l-u32-vector"><span class="std std-ref">U32Vector</span></a>)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">reconstruct</span> <span class="pre">polynomials</span></code> in <code class="docutils literal notranslate"><span class="pre">n</span></code> + 1 variables from result of rational reconstruction</p>
+</dd>
+</dl>
+<span class="target" id="l-vector-modular-reconstructor-remove-denoms"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">remove_denoms</span>: (<a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="PrimitiveArray.html#l-primitive-array"><span class="std std-ref">PrimitiveArray</span></a> <a class="reference internal" href="U32Vector.html#l-u32-vector"><span class="std std-ref">U32Vector</span></a>, <a class="reference internal" href="PrimitiveArray.html#l-primitive-array"><span class="std std-ref">PrimitiveArray</span></a> <a class="reference internal" href="U32Vector.html#l-u32-vector"><span class="std std-ref">U32Vector</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="PrimitiveArray.html#l-primitive-array"><span class="std std-ref">PrimitiveArray</span></a> <a class="reference internal" href="U32Vector.html#l-u32-vector"><span class="std std-ref">U32Vector</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">remove_denoms(offsets,</span> <span class="pre">nums,</span> <span class="pre">denoms,</span> <span class="pre">p)</span></code> removes common denominator from vectors of rational functions. Several vectors of rational functions are packed into <code class="docutils literal notranslate"><span class="pre">nums</span></code> (storing numerators) and dens (storing denominators) Vector <code class="docutils literal notranslate"><span class="pre">i</span></code> starts at position <code class="docutils literal notranslate"><span class="pre">offsets</span></code>(<code class="docutils literal notranslate"><span class="pre">i</span></code>). Computations are done modulo <code class="docutils literal notranslate"><span class="pre">p</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-vector-modular-reconstructor-repack-polys"></span><dl class="simple" id="index-9">
+<dt><span class="spadfun">repack_polys</span>: (<a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="SortedExponentVector.html#l-sorted-exponent-vector"><span class="std std-ref">SortedExponentVector</span></a>, <a class="reference internal" href="PrimitiveArray.html#l-primitive-array"><span class="std std-ref">PrimitiveArray</span></a> <a class="reference internal" href="U32Vector.html#l-u32-vector"><span class="std std-ref">U32Vector</span></a>) -&gt; Record(nvars: <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, offsetdata: <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, expdata: <a class="reference internal" href="SortedExponentVector.html#l-sorted-exponent-vector"><span class="std std-ref">SortedExponentVector</span></a>, coeffdata: <a class="reference internal" href="U32Vector.html#l-u32-vector"><span class="std std-ref">U32Vector</span></a>)</dt><dd><p>convert polynomials represented as parallel vector of exponents in <code class="docutils literal notranslate"><span class="pre">k</span></code> variables and vector of univariate polynomials to parallel vector of exponents in <code class="docutils literal notranslate"><span class="pre">k+1</span></code> variables and coefficients</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="VectorSpaceBasis.html" title="VectorSpaceBasis R"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="VectorIntegerReconstructor.html" title="VectorIntegerReconstructor"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Domains.html" >Domains</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">VectorModularReconstructor</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

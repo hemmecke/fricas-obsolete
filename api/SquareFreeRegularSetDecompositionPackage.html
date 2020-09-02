@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SquareFreeRegularSetDecompositionPackage(R, E, V, P, TS) &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="SquareFreeRegularTriangularSetGcdPackage(R, E, V, P, TS)" href="SquareFreeRegularTriangularSetGcdPackage.html" />
+    <link rel="prev" title="SquareFreeQuasiComponentPackage(R, E, V, P, TS)" href="SquareFreeQuasiComponentPackage.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="SquareFreeRegularTriangularSetGcdPackage.html" title="SquareFreeRegularTriangularSetGcdPackage(R, E, V, P, TS)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="SquareFreeQuasiComponentPackage.html" title="SquareFreeQuasiComponentPackage(R, E, V, P, TS)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">SquareFreeRegularSetDecompositionPackage(R, E, V, P, TS)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="squarefreeregularsetdecompositionpackage-r-e-v-p-ts">
+<span id="l-square-free-regular-set-decomposition-package"></span><span id="index-0"></span><h1>SquareFreeRegularSetDecompositionPackage(R, E, V, P, TS)<a class="headerlink" href="#squarefreeregularsetdecompositionpackage-r-e-v-p-ts" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/sregset.spad#L862">sregset.spad line 862</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/sregset.spad#L862">[edit on github]</a></p>
+<ul class="simple">
+<li><p>R: <a class="reference internal" href="GcdDomain.html#l-gcd-domain"><span class="std std-ref">GcdDomain</span></a></p></li>
+<li><p>E: <a class="reference internal" href="OrderedAbelianMonoidSup.html#l-ordered-abelian-monoid-sup"><span class="std std-ref">OrderedAbelianMonoidSup</span></a></p></li>
+<li><p>V: <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a></p></li>
+<li><p>P: <a class="reference internal" href="RecursivePolynomialCategory.html#l-recursive-polynomial-category"><span class="std std-ref">RecursivePolynomialCategory</span></a>(R, E, V)</p></li>
+<li><p>TS: <a class="reference internal" href="SquareFreeRegularTriangularSetCategory.html#l-square-free-regular-triangular-set-category"><span class="std std-ref">SquareFreeRegularTriangularSetCategory</span></a>(R, E, V, P)</p></li>
+</ul>
+<p>A package providing a new algorithm for solving polynomial systems by means of regular chains. Two ways of solving are provided: in the sense of Zariski closure (like in Kalkbrener<code class="docutils literal notranslate"><span class="pre">'s</span></code> algorithm) or in the sense of the regular zeros (like in Wu, Wang or Lazard- Moreno methods). This algorithm is valid for nay type of regular set. It does not care about the way a polynomial is added in an regular set, or how two quasi-components are compared (by an inclusion-test), or how the invertibility test is made in the tower of simple extensions associated with a regular set. These operations are realized respectively by the domain <code class="docutils literal notranslate"><span class="pre">TS</span></code> and the packages <code class="docutils literal notranslate"><span class="pre">QCMPPK(R,</span> <span class="pre">E,</span> <span class="pre">V,</span> <span class="pre">P,</span> <span class="pre">TS)</span></code> and <code class="docutils literal notranslate"><span class="pre">RSETGCD(R,</span> <span class="pre">E,</span> <span class="pre">V,</span> <span class="pre">P,</span> <span class="pre">TS)</span></code>. The same way it does not care about the way univariate polynomial gcds (with coefficients in the tower of simple extensions associated with a regular set) are computed. The only requirement is that these gcds need to have invertible initials (normalized or not). WARNING. There is no need for a user to call diectly any operation of this package since they can be accessed by the domain <span class="xref std std-ref">TS</span>. Thus, the operations of this package are not documented.</p>
+<span class="target" id="l-square-free-regular-set-decomposition-package-algebraic-decompose"></span><p id="index-1"><span class="spadfun">algebraicDecompose</span>: (P, TS) -&gt; Record(done: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> TS, todo: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(val: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P, tower: TS))</p>
+<span class="target" id="l-square-free-regular-set-decomposition-package-convert"></span><p id="index-2"><span class="spadfun">convert</span>: Record(val: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P, tower: TS) -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></p>
+<span class="target" id="l-square-free-regular-set-decomposition-package-decompose"></span><p id="index-3"><span class="spadfun">decompose</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> TS, <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>, <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> TS</p>
+<p id="index-4"><span class="spadfun">decompose</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> TS, <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>, <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>, <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>, <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>, <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> TS</p>
+<span class="target" id="l-square-free-regular-set-decomposition-package-internal-decompose"></span><p id="index-5"><span class="spadfun">internalDecompose</span>: (P, TS) -&gt; Record(done: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> TS, todo: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(val: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P, tower: TS))</p>
+<p id="index-6"><span class="spadfun">internalDecompose</span>: (P, TS, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; Record(done: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> TS, todo: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(val: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P, tower: TS))</p>
+<p id="index-7"><span class="spadfun">internalDecompose</span>: (P, TS, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>) -&gt; Record(done: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> TS, todo: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(val: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P, tower: TS))</p>
+<span class="target" id="l-square-free-regular-set-decomposition-package-krull-number"></span><p id="index-8"><span class="spadfun">KrullNumber</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> TS) -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></p>
+<span class="target" id="l-square-free-regular-set-decomposition-package-number-of-variables"></span><p id="index-9"><span class="spadfun">numberOfVariables</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> TS) -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></p>
+<span class="target" id="l-square-free-regular-set-decomposition-package-print-info"></span><p id="index-10"><span class="spadfun">printInfo</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(val: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P, tower: TS), <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></p>
+<span class="target" id="l-square-free-regular-set-decomposition-package-transcendental-decompose"></span><p id="index-11"><span class="spadfun">transcendentalDecompose</span>: (P, TS) -&gt; Record(done: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> TS, todo: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(val: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P, tower: TS))</p>
+<p id="index-12"><span class="spadfun">transcendentalDecompose</span>: (P, TS, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; Record(done: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> TS, todo: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(val: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P, tower: TS))</p>
+<span class="target" id="l-square-free-regular-set-decomposition-package-up-date-branches"></span><p id="index-13"><span class="spadfun">upDateBranches</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> TS, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(val: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P, tower: TS), Record(done: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> TS, todo: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(val: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P, tower: TS)), <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(val: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P, tower: TS)</p>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="SquareFreeRegularTriangularSetGcdPackage.html" title="SquareFreeRegularTriangularSetGcdPackage(R, E, V, P, TS)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="SquareFreeQuasiComponentPackage.html" title="SquareFreeQuasiComponentPackage(R, E, V, P, TS)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">SquareFreeRegularSetDecompositionPackage(R, E, V, P, TS)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

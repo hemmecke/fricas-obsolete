@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RationalLODE(F, UP) &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="RationalRetractions S" href="RationalRetractions.html" />
+    <link rel="prev" title="RationalInterpolation(xx, F)" href="RationalInterpolation.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="RationalRetractions.html" title="RationalRetractions S"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="RationalInterpolation.html" title="RationalInterpolation(xx, F)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">RationalLODE(F, UP)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="rationallode-f-up">
+<span id="l-rational-l-o-d-e"></span><span id="index-0"></span><h1>RationalLODE(F, UP)<a class="headerlink" href="#rationallode-f-up" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/oderf.spad#L302">oderf.spad line 302</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/oderf.spad#L302">[edit on github]</a></p>
+<ul class="simple">
+<li><p>F: Join(<a class="reference internal" href="Field.html#l-field"><span class="std std-ref">Field</span></a>, <a class="reference internal" href="CharacteristicZero.html#l-characteristic-zero"><span class="std std-ref">CharacteristicZero</span></a>, <a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>)</p></li>
+<li><p>UP: <a class="reference internal" href="UnivariatePolynomialCategory.html#l-univariate-polynomial-category"><span class="std std-ref">UnivariatePolynomialCategory</span></a> F</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">RationalLODE</span></code> provides functions for in-field solutions of linear ordinary differential equations, in the rational case.</p>
+<span class="target" id="l-rational-l-o-d-e-indicial-equation-at-infinity"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">indicialEquationAtInfinity</span>: <a class="reference internal" href="LinearOrdinaryDifferentialOperator1.html#l-linear-ordinary-differential-operator1"><span class="std std-ref">LinearOrdinaryDifferentialOperator1</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP -&gt; UP</dt><dd><p><code class="docutils literal notranslate"><span class="pre">indicialEquationAtInfinity</span> <span class="pre">op</span></code> returns the indicial equation of <code class="docutils literal notranslate"><span class="pre">op</span></code> at infinity.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-2">
+<dt><span class="spadfun">indicialEquationAtInfinity</span>: <a class="reference internal" href="LinearOrdinaryDifferentialOperator2.html#l-linear-ordinary-differential-operator2"><span class="std std-ref">LinearOrdinaryDifferentialOperator2</span></a>(UP, <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP) -&gt; UP</dt><dd><p><code class="docutils literal notranslate"><span class="pre">indicialEquationAtInfinity</span> <span class="pre">op</span></code> returns the indicial equation of <code class="docutils literal notranslate"><span class="pre">op</span></code> at infinity.</p>
+</dd>
+</dl>
+<span class="target" id="l-rational-l-o-d-e-integrate-sols"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">integrate_sols</span>: <a class="reference internal" href="LinearOrdinaryDifferentialOperator1.html#l-linear-ordinary-differential-operator1"><span class="std std-ref">LinearOrdinaryDifferentialOperator1</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP -&gt; Record(ltilde: <a class="reference internal" href="LinearOrdinaryDifferentialOperator1.html#l-linear-ordinary-differential-operator1"><span class="std std-ref">LinearOrdinaryDifferentialOperator1</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP, r: Union(<a class="reference internal" href="LinearOrdinaryDifferentialOperator1.html#l-linear-ordinary-differential-operator1"><span class="std std-ref">LinearOrdinaryDifferentialOperator1</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP, failed))</dt><dd><p><code class="docutils literal notranslate"><span class="pre">integrate_sols(l)</span></code> integrates the solutions of an operator <code class="docutils literal notranslate"><span class="pre">l</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-rational-l-o-d-e-rat-dsolve"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">ratDsolve</span>: (<a class="reference internal" href="LinearOrdinaryDifferentialOperator1.html#l-linear-ordinary-differential-operator1"><span class="std std-ref">LinearOrdinaryDifferentialOperator1</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP, <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP) -&gt; Record(particular: Union(<a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP, failed), basis: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">ratDsolve(op,</span> <span class="pre">g)</span></code> returns <code class="docutils literal notranslate"><span class="pre">[&quot;failed&quot;,</span> <span class="pre">[]]</span></code> if the equation <code class="docutils literal notranslate"><span class="pre">op</span> <span class="pre">y</span> <span class="pre">=</span> <span class="pre">g</span></code> has no rational solution. Otherwise, it returns <code class="docutils literal notranslate"><span class="pre">[f,</span> <span class="pre">[y1,</span> <span class="pre">...,</span> <span class="pre">ym]]</span></code> where <code class="docutils literal notranslate"><span class="pre">f</span></code> is a particular rational solution and the <code class="docutils literal notranslate"><span class="pre">yi</span></code><code class="docutils literal notranslate"><span class="pre">'s</span></code> form a basis for the rational solutions of the homogeneous equation.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-5">
+<dt><span class="spadfun">ratDsolve</span>: (<a class="reference internal" href="LinearOrdinaryDifferentialOperator1.html#l-linear-ordinary-differential-operator1"><span class="std std-ref">LinearOrdinaryDifferentialOperator1</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP) -&gt; Record(basis: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP, mat: <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> F)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">ratDsolve(op,</span> <span class="pre">[g1,</span> <span class="pre">...,</span> <span class="pre">gm])</span></code> returns <code class="docutils literal notranslate"><span class="pre">[[h1,</span> <span class="pre">...,</span> <span class="pre">hq],</span> <span class="pre">M]</span></code> such that any rational solution of <code class="docutils literal notranslate"><span class="pre">op</span> <span class="pre">y</span> <span class="pre">=</span> <span class="pre">c1</span> <span class="pre">g1</span> <span class="pre">+</span> <span class="pre">...</span> <span class="pre">+</span> <span class="pre">cm</span> <span class="pre">gm</span></code> is of the form <code class="docutils literal notranslate"><span class="pre">c1</span> <span class="pre">h1</span> <span class="pre">+</span> <span class="pre">...</span> <span class="pre">+</span> <span class="pre">cq</span> <span class="pre">hq</span></code> where <code class="docutils literal notranslate"><span class="pre">M</span> <span class="pre">[c1,</span> <span class="pre">...,</span> <span class="pre">cq]</span> <span class="pre">=</span> <span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">q</span> <span class="pre">&gt;=</span> <span class="pre">m</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-6">
+<dt><span class="spadfun">ratDsolve</span>: (<a class="reference internal" href="LinearOrdinaryDifferentialOperator2.html#l-linear-ordinary-differential-operator2"><span class="std std-ref">LinearOrdinaryDifferentialOperator2</span></a>(UP, <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP), <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP) -&gt; Record(particular: Union(<a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP, failed), basis: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">ratDsolve(op,</span> <span class="pre">g)</span></code> returns <code class="docutils literal notranslate"><span class="pre">[&quot;failed&quot;,</span> <span class="pre">[]]</span></code> if the equation <code class="docutils literal notranslate"><span class="pre">op</span> <span class="pre">y</span> <span class="pre">=</span> <span class="pre">g</span></code> has no rational solution. Otherwise, it returns <code class="docutils literal notranslate"><span class="pre">[f,</span> <span class="pre">[y1,</span> <span class="pre">...,</span> <span class="pre">ym]]</span></code> where <code class="docutils literal notranslate"><span class="pre">f</span></code> is a particular rational solution and the <code class="docutils literal notranslate"><span class="pre">yi</span></code><code class="docutils literal notranslate"><span class="pre">'s</span></code> form a basis for the rational solutions of the homogeneous equation.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-7">
+<dt><span class="spadfun">ratDsolve</span>: (<a class="reference internal" href="LinearOrdinaryDifferentialOperator2.html#l-linear-ordinary-differential-operator2"><span class="std std-ref">LinearOrdinaryDifferentialOperator2</span></a>(UP, <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP), <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP) -&gt; Record(basis: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP, mat: <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> F)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">ratDsolve(op,</span> <span class="pre">[g1,</span> <span class="pre">...,</span> <span class="pre">gm])</span></code> returns <code class="docutils literal notranslate"><span class="pre">[[h1,</span> <span class="pre">...,</span> <span class="pre">hq],</span> <span class="pre">M]</span></code> such that any rational solution of <code class="docutils literal notranslate"><span class="pre">op</span> <span class="pre">y</span> <span class="pre">=</span> <span class="pre">c1</span> <span class="pre">g1</span> <span class="pre">+</span> <span class="pre">...</span> <span class="pre">+</span> <span class="pre">cm</span> <span class="pre">gm</span></code> is of the form <code class="docutils literal notranslate"><span class="pre">c1</span> <span class="pre">h1</span> <span class="pre">+</span> <span class="pre">...</span> <span class="pre">+</span> <span class="pre">cq</span> <span class="pre">hq</span></code> where <code class="docutils literal notranslate"><span class="pre">M</span> <span class="pre">[c1,</span> <span class="pre">...,</span> <span class="pre">cq]</span> <span class="pre">=</span> <span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">q</span> <span class="pre">&gt;=</span> <span class="pre">m</span></code>.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="RationalRetractions.html" title="RationalRetractions S"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="RationalInterpolation.html" title="RationalInterpolation(xx, F)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">RationalLODE(F, UP)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

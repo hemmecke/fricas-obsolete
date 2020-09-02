@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PseudoRemainderSequence(R, polR) &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="PureAlgebraicIntegration(R, F, L)" href="PureAlgebraicIntegration.html" />
+    <link rel="prev" title="PseudoLinearNormalForm K" href="PseudoLinearNormalForm.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="PureAlgebraicIntegration.html" title="PureAlgebraicIntegration(R, F, L)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="PseudoLinearNormalForm.html" title="PseudoLinearNormalForm K"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">PseudoRemainderSequence(R, polR)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="pseudoremaindersequence-r-polr">
+<span id="l-pseudo-remainder-sequence"></span><span id="index-0"></span><h1>PseudoRemainderSequence(R, polR)<a class="headerlink" href="#pseudoremaindersequence-r-polr" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/prs.spad#L1">prs.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/prs.spad#L1">[edit on github]</a></p>
+<ul class="simple">
+<li><p>R: <a class="reference internal" href="IntegralDomain.html#l-integral-domain"><span class="std std-ref">IntegralDomain</span></a></p></li>
+<li><p>polR: <a class="reference internal" href="UnivariatePolynomialCategory.html#l-univariate-polynomial-category"><span class="std std-ref">UnivariatePolynomialCategory</span></a> R</p></li>
+</ul>
+<p>This package contains some functions: <a class="reference internal" href="#l-pseudo-remainder-sequence-discriminant"><span class="std std-ref">discriminant</span></a>, <a class="reference internal" href="#l-pseudo-remainder-sequence-resultant"><span class="std std-ref">resultant</span></a>, <a class="reference internal" href="#l-pseudo-remainder-sequence-sub-resultant-gcd"><span class="std std-ref">subResultantGcd</span></a>, <a class="reference internal" href="#l-pseudo-remainder-sequence-chain-sub-resultants"><span class="std std-ref">chainSubResultants</span></a>, <a class="reference internal" href="#l-pseudo-remainder-sequence-degree-sub-resultant"><span class="std std-ref">degreeSubResultant</span></a>, <a class="reference internal" href="#l-pseudo-remainder-sequence-last-sub-resultant"><span class="std std-ref">lastSubResultant</span></a>, <a class="reference internal" href="#l-pseudo-remainder-sequence-resultant-euclidean"><span class="std std-ref">resultantEuclidean</span></a>, <a class="reference internal" href="#l-pseudo-remainder-sequence-sub-resultant-gcd-euclidean"><span class="std std-ref">subResultantGcdEuclidean</span></a>, <a class="reference internal" href="#l-pseudo-remainder-sequence-semi-sub-resultant-gcd-euclidean1"><span class="std std-ref">semiSubResultantGcdEuclidean1</span></a>, <a class="reference internal" href="#l-pseudo-remainder-sequence-semi-sub-resultant-gcd-euclidean2"><span class="std std-ref">semiSubResultantGcdEuclidean2</span></a>, etc. These procedures are coming from improvements of the subresultants algorithm.</p>
+<span class="target" id="l-pseudo-remainder-sequence-chain-sub-resultants"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">chainSubResultants</span>: (polR, polR) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> polR</dt><dd><p><code class="docutils literal notranslate"><span class="pre">chainSubResultants(P,</span> <span class="pre">Q)</span></code> computes the list of non zero subresultants of <code class="docutils literal notranslate"><span class="pre">P</span></code> and <code class="docutils literal notranslate"><span class="pre">Q</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-pseudo-remainder-sequence-degree-sub-resultant"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">degreeSubResultant</span>: (polR, polR, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; polR</dt><dd><p><code class="docutils literal notranslate"><span class="pre">degreeSubResultant(P,</span> <span class="pre">Q,</span> <span class="pre">d)</span></code> computes a subresultant of degree <code class="docutils literal notranslate"><span class="pre">d</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-pseudo-remainder-sequence-degree-sub-resultant-euclidean"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">degreeSubResultantEuclidean</span>: (polR, polR, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; Record(coef1: polR, coef2: polR, subResultant: polR)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">degreeSubResultantEuclidean(P,</span> <span class="pre">Q,</span> <span class="pre">d)</span></code> returns a subresultant <code class="docutils literal notranslate"><span class="pre">S_i</span></code> of degree <code class="docutils literal notranslate"><span class="pre">d</span></code> and carries out the equality <code class="docutils literal notranslate"><span class="pre">coef1*P</span> <span class="pre">+</span> <span class="pre">coef2*Q</span> <span class="pre">=</span> <span class="pre">S_i</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-pseudo-remainder-sequence-discriminant"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">discriminant</span>: polR -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">discriminant(P)</span></code> returns the discriminant of <code class="docutils literal notranslate"><span class="pre">P</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-pseudo-remainder-sequence-discriminant-euclidean"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">discriminantEuclidean</span>: polR -&gt; Record(coef1: polR, coef2: polR, discriminant: R)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">discriminantEuclidean(P)</span></code> carries out the equality <code class="docutils literal notranslate"><span class="pre">coef1</span> <span class="pre">*</span> <span class="pre">P</span> <span class="pre">+</span> <span class="pre">coef2</span> <span class="pre">*</span> <span class="pre">D(P)</span> <span class="pre">=</span> <span class="pre">discriminant(P)</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-pseudo-remainder-sequence-divide"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">divide</span>: (polR, polR) -&gt; Record(quotient: polR, remainder: polR)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">divide(F,</span> <span class="pre">G)</span></code> computes quotient and rest of the exact euclidean division of <code class="docutils literal notranslate"><span class="pre">F</span></code> by <code class="docutils literal notranslate"><span class="pre">G</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-pseudo-remainder-sequence-gcd"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">gcd</span>: (polR, polR) -&gt; polR if R has <a class="reference internal" href="GcdDomain.html#l-gcd-domain"><span class="std std-ref">GcdDomain</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">gcd(P,</span> <span class="pre">Q)</span></code> returns the <code class="docutils literal notranslate"><span class="pre">gcd</span></code> of <code class="docutils literal notranslate"><span class="pre">P</span></code> and <code class="docutils literal notranslate"><span class="pre">Q</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-pseudo-remainder-sequence-indice-sub-resultant"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">indiceSubResultant</span>: (polR, polR, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; polR</dt><dd><p><code class="docutils literal notranslate"><span class="pre">indiceSubResultant(P,</span> <span class="pre">Q,</span> <span class="pre">i)</span></code> returns the subresultant of indice <code class="docutils literal notranslate"><span class="pre">i</span></code></p>
+</dd>
+</dl>
+<span class="target" id="l-pseudo-remainder-sequence-indice-sub-resultant-euclidean"></span><dl class="simple" id="index-9">
+<dt><span class="spadfun">indiceSubResultantEuclidean</span>: (polR, polR, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; Record(coef1: polR, coef2: polR, subResultant: polR)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">indiceSubResultant(P,</span> <span class="pre">Q,</span> <span class="pre">i)</span></code> returns the subresultant <code class="docutils literal notranslate"><span class="pre">S_i(P,</span> <span class="pre">Q)</span></code> and carries out the equality <code class="docutils literal notranslate"><span class="pre">coef1*P</span> <span class="pre">+</span> <span class="pre">coef2*Q</span> <span class="pre">=</span> <span class="pre">S_i(P,</span> <span class="pre">Q)</span></code></p>
+</dd>
+</dl>
+<span class="target" id="l-pseudo-remainder-sequence-last-sub-resultant"></span><dl class="simple" id="index-10">
+<dt><span class="spadfun">lastSubResultant</span>: (polR, polR) -&gt; polR</dt><dd><p><code class="docutils literal notranslate"><span class="pre">lastSubResultant(P,</span> <span class="pre">Q)</span></code> computes the last non zero subresultant of <code class="docutils literal notranslate"><span class="pre">P</span></code> and <code class="docutils literal notranslate"><span class="pre">Q</span></code></p>
+</dd>
+</dl>
+<span class="target" id="l-pseudo-remainder-sequence-last-sub-resultant-euclidean"></span><dl class="simple" id="index-11">
+<dt><span class="spadfun">lastSubResultantEuclidean</span>: (polR, polR) -&gt; Record(coef1: polR, coef2: polR, subResultant: polR)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">lastSubResultantEuclidean(P,</span> <span class="pre">Q)</span></code> computes the last non zero subresultant <code class="docutils literal notranslate"><span class="pre">S</span></code> and carries out the equality <code class="docutils literal notranslate"><span class="pre">coef1*P</span> <span class="pre">+</span> <span class="pre">coef2*Q</span> <span class="pre">=</span> <span class="pre">S</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-pseudo-remainder-sequence-lazard-quotient2"></span><dl class="simple" id="index-12">
+<dt><span class="spadfun">LazardQuotient2</span>: (polR, R, R, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; polR</dt><dd><p><code class="docutils literal notranslate"><span class="pre">LazardQuotient2(F,</span> <span class="pre">x,</span> <span class="pre">y,</span> <span class="pre">n)</span></code> computes <code class="docutils literal notranslate"><span class="pre">(x^(n-1)</span> <span class="pre">*</span> <span class="pre">F)</span> <span class="pre">exquo</span> <span class="pre">y^(n-1)</span></code></p>
+</dd>
+</dl>
+<span class="target" id="l-pseudo-remainder-sequence-lazard-quotient"></span><dl class="simple" id="index-13">
+<dt><span class="spadfun">LazardQuotient</span>: (R, R, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">LazardQuotient(x,</span> <span class="pre">y,</span> <span class="pre">n)</span></code> computes <code class="docutils literal notranslate"><span class="pre">x^n</span> <span class="pre">exquo</span> <span class="pre">y^(n-1)</span></code></p>
+</dd>
+</dl>
+<span class="target" id="l-pseudo-remainder-sequence-next-sous-resultant2"></span><dl class="simple" id="index-14">
+<dt><span class="spadfun">next_sousResultant2</span>: (polR, polR, polR, R) -&gt; polR</dt><dd><p><code class="docutils literal notranslate"><span class="pre">next_sousResultant2(P,</span> <span class="pre">Q,</span> <span class="pre">Z,</span> <span class="pre">s)</span></code> returns the subresultant <code class="docutils literal notranslate"><span class="pre">S_{e-1}</span></code> where <code class="docutils literal notranslate"><span class="pre">P</span> <span class="pre">~</span> <span class="pre">S_d,</span> <span class="pre">Q</span> <span class="pre">=</span> <span class="pre">S_{d-1},</span> <span class="pre">Z</span> <span class="pre">=</span> <span class="pre">S_e,</span> <span class="pre">s</span> <span class="pre">=</span> <span class="pre">lc(S_d)</span></code></p>
+</dd>
+</dl>
+<span class="target" id="l-pseudo-remainder-sequence-resultant"></span><dl class="simple" id="index-15">
+<dt><span class="spadfun">resultant</span>: (polR, polR) -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">resultant(P,</span> <span class="pre">Q)</span></code> returns the resultant of <code class="docutils literal notranslate"><span class="pre">P</span></code> and <code class="docutils literal notranslate"><span class="pre">Q</span></code></p>
+</dd>
+</dl>
+<span class="target" id="l-pseudo-remainder-sequence-resultant-euclidean"></span><dl class="simple" id="index-16">
+<dt><span class="spadfun">resultantEuclidean</span>: (polR, polR) -&gt; Record(coef1: polR, coef2: polR, resultant: R)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">resultantEuclidean(P,</span> <span class="pre">Q)</span></code> carries out the equality <code class="docutils literal notranslate"><span class="pre">coef1*P</span> <span class="pre">+</span> <span class="pre">coef2*Q</span> <span class="pre">=</span> <span class="pre">resultant(P,</span> <span class="pre">Q)</span></code></p>
+</dd>
+</dl>
+<span class="target" id="l-pseudo-remainder-sequence-resultant-reduit"></span><dl class="simple" id="index-17">
+<dt><span class="spadfun">resultantReduit</span>: (polR, polR) -&gt; R if R has <a class="reference internal" href="GcdDomain.html#l-gcd-domain"><span class="std std-ref">GcdDomain</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">resultantReduit(P,Q)</span></code> returns the “reduce resultant” of <code class="docutils literal notranslate"><span class="pre">P</span></code> and <code class="docutils literal notranslate"><span class="pre">Q</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-pseudo-remainder-sequence-resultant-reduit-euclidean"></span><dl class="simple" id="index-18">
+<dt><span class="spadfun">resultantReduitEuclidean</span>: (polR, polR) -&gt; Record(coef1: polR, coef2: polR, resultantReduit: R) if R has <a class="reference internal" href="GcdDomain.html#l-gcd-domain"><span class="std std-ref">GcdDomain</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">resultantReduitEuclidean(P,</span> <span class="pre">Q)</span></code> returns the “reduce resultant” and carries out the equality <code class="docutils literal notranslate"><span class="pre">coef1*P</span> <span class="pre">+</span> <span class="pre">coef2*Q</span> <span class="pre">=</span> <span class="pre">resultantReduit(P,</span> <span class="pre">Q)</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-pseudo-remainder-sequence-schema"></span><dl class="simple" id="index-19">
+<dt><span class="spadfun">schema</span>: (polR, polR) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">schema(P,</span> <span class="pre">Q)</span></code> returns the list of degrees of non zero subresultants of <code class="docutils literal notranslate"><span class="pre">P</span></code> and <code class="docutils literal notranslate"><span class="pre">Q</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-pseudo-remainder-sequence-semi-degree-sub-resultant-euclidean"></span><dl class="simple" id="index-20">
+<dt><span class="spadfun">semiDegreeSubResultantEuclidean</span>: (polR, polR, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; Record(coef2: polR, subResultant: polR)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">semiDegreeSubResultantEuclidean(P,</span> <span class="pre">Q,</span> <span class="pre">d)</span></code> returns a subresultant <code class="docutils literal notranslate"><span class="pre">S_i</span></code> of degree <code class="docutils literal notranslate"><span class="pre">d</span></code> and carries out the equality <code class="docutils literal notranslate"><span class="pre">...</span> <span class="pre">P</span> <span class="pre">+</span> <span class="pre">coef2*Q</span> <span class="pre">=</span> <span class="pre">S_i</span></code>. Warning: <code class="docutils literal notranslate"><span class="pre">degree(P)</span> <span class="pre">&gt;=</span> <span class="pre">degree(Q)</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-pseudo-remainder-sequence-semi-discriminant-euclidean"></span><dl class="simple" id="index-21">
+<dt><span class="spadfun">semiDiscriminantEuclidean</span>: polR -&gt; Record(coef2: polR, discriminant: R)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">discriminantEuclidean(P)</span></code> carries out the equality <code class="docutils literal notranslate"><span class="pre">...</span> <span class="pre">P</span> <span class="pre">+</span> <span class="pre">coef2</span> <span class="pre">*</span> <span class="pre">D(P)</span> <span class="pre">=</span> <span class="pre">discriminant(P)</span></code>. Warning: <code class="docutils literal notranslate"><span class="pre">degree(P)</span> <span class="pre">&gt;=</span> <span class="pre">degree(Q)</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-pseudo-remainder-sequence-semi-indice-sub-resultant-euclidean"></span><dl class="simple" id="index-22">
+<dt><span class="spadfun">semiIndiceSubResultantEuclidean</span>: (polR, polR, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; Record(coef2: polR, subResultant: polR)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">semiIndiceSubResultantEuclidean(P,</span> <span class="pre">Q,</span> <span class="pre">i)</span></code> returns the subresultant <code class="docutils literal notranslate"><span class="pre">S_i(P,</span> <span class="pre">Q)</span></code> and carries out the equality <code class="docutils literal notranslate"><span class="pre">...</span> <span class="pre">P</span> <span class="pre">+</span> <span class="pre">coef2*Q</span> <span class="pre">=</span> <span class="pre">S_i(P,</span> <span class="pre">Q)</span></code> Warning: <code class="docutils literal notranslate"><span class="pre">degree(P)</span> <span class="pre">&gt;=</span> <span class="pre">degree(Q)</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-pseudo-remainder-sequence-semi-last-sub-resultant-euclidean"></span><dl class="simple" id="index-23">
+<dt><span class="spadfun">semiLastSubResultantEuclidean</span>: (polR, polR) -&gt; Record(coef2: polR, subResultant: polR)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">semiLastSubResultantEuclidean(P,</span> <span class="pre">Q)</span></code> computes the last non zero subresultant <code class="docutils literal notranslate"><span class="pre">S</span></code> and carries out the equality <code class="docutils literal notranslate"><span class="pre">...</span> <span class="pre">P</span> <span class="pre">+</span> <span class="pre">coef2*Q</span> <span class="pre">=</span> <span class="pre">S</span></code>. Warning: <code class="docutils literal notranslate"><span class="pre">degree(P)</span> <span class="pre">&gt;=</span> <span class="pre">degree(Q)</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-pseudo-remainder-sequence-semi-resultant-euclidean1"></span><dl class="simple" id="index-24">
+<dt><span class="spadfun">semiResultantEuclidean1</span>: (polR, polR) -&gt; Record(coef1: polR, resultant: R)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">semiResultantEuclidean1(P,</span> <span class="pre">Q)</span></code> carries out the equality <code class="docutils literal notranslate"><span class="pre">coef1.P</span> <span class="pre">+</span> <span class="pre">...</span> <span class="pre">Q</span> <span class="pre">=</span> <span class="pre">resultant(P,</span> <span class="pre">Q)</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-pseudo-remainder-sequence-semi-resultant-euclidean2"></span><dl class="simple" id="index-25">
+<dt><span class="spadfun">semiResultantEuclidean2</span>: (polR, polR) -&gt; Record(coef2: polR, resultant: R)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">semiResultantEuclidean2(P,</span> <span class="pre">Q)</span></code> carries out the equality <code class="docutils literal notranslate"><span class="pre">...</span> <span class="pre">P</span> <span class="pre">+</span> <span class="pre">coef2*Q</span> <span class="pre">=</span> <span class="pre">resultant(P,</span> <span class="pre">Q)</span></code>. Warning: <code class="docutils literal notranslate"><span class="pre">degree(P)</span> <span class="pre">&gt;=</span> <span class="pre">degree(Q)</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-pseudo-remainder-sequence-semi-resultant-reduit-euclidean"></span><dl class="simple" id="index-26">
+<dt><span class="spadfun">semiResultantReduitEuclidean</span>: (polR, polR) -&gt; Record(coef2: polR, resultantReduit: R) if R has <a class="reference internal" href="GcdDomain.html#l-gcd-domain"><span class="std std-ref">GcdDomain</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">semiResultantReduitEuclidean(P,</span> <span class="pre">Q)</span></code> returns the “reduce resultant” and carries out the equality <code class="docutils literal notranslate"><span class="pre">...</span> <span class="pre">P</span> <span class="pre">+</span> <span class="pre">coef2*Q</span> <span class="pre">=</span> <span class="pre">resultantReduit(P,</span> <span class="pre">Q)</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-pseudo-remainder-sequence-semi-sub-resultant-gcd-euclidean1"></span><dl class="simple" id="index-27">
+<dt><span class="spadfun">semiSubResultantGcdEuclidean1</span>: (polR, polR) -&gt; Record(coef1: polR, gcd: polR)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">semiSubResultantGcdEuclidean1(P,</span> <span class="pre">Q)</span></code> carries out the equality <code class="docutils literal notranslate"><span class="pre">coef1*P</span> <span class="pre">+</span> <span class="pre">...</span> <span class="pre">Q</span> <span class="pre">=</span> <span class="pre">+/-</span> <span class="pre">S_i(P,</span> <span class="pre">Q)</span></code> where the degree (not the indice) of the subresultant <code class="docutils literal notranslate"><span class="pre">S_i(P,</span> <span class="pre">Q)</span></code> is as small as possible.</p>
+</dd>
+</dl>
+<span class="target" id="l-pseudo-remainder-sequence-semi-sub-resultant-gcd-euclidean2"></span><dl class="simple" id="index-28">
+<dt><span class="spadfun">semiSubResultantGcdEuclidean2</span>: (polR, polR) -&gt; Record(coef2: polR, gcd: polR)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">semiSubResultantGcdEuclidean2(P,</span> <span class="pre">Q)</span></code> carries out the equality <code class="docutils literal notranslate"><span class="pre">...</span> <span class="pre">P</span> <span class="pre">+</span> <span class="pre">coef2*Q</span> <span class="pre">=</span> <span class="pre">+/-</span> <span class="pre">S_i(P,</span> <span class="pre">Q)</span></code> where the degree (not the indice) of the subresultant <code class="docutils literal notranslate"><span class="pre">S_i(P,</span> <span class="pre">Q)</span></code> is as small as possible. Warning: <code class="docutils literal notranslate"><span class="pre">degree(P)</span> <span class="pre">&gt;=</span> <span class="pre">degree(Q)</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-pseudo-remainder-sequence-sub-resultant-gcd"></span><dl class="simple" id="index-29">
+<dt><span class="spadfun">subResultantGcd</span>: (polR, polR) -&gt; polR</dt><dd><p><code class="docutils literal notranslate"><span class="pre">subResultantGcd(P,</span> <span class="pre">Q)</span></code> returns the <code class="docutils literal notranslate"><span class="pre">gcd</span></code> of two primitive polynomials <code class="docutils literal notranslate"><span class="pre">P</span></code> and <code class="docutils literal notranslate"><span class="pre">Q</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-pseudo-remainder-sequence-sub-resultant-gcd-euclidean"></span><dl class="simple" id="index-30">
+<dt><span class="spadfun">subResultantGcdEuclidean</span>: (polR, polR) -&gt; Record(coef1: polR, coef2: polR, gcd: polR)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">subResultantGcdEuclidean(P,</span> <span class="pre">Q)</span></code> carries out the equality <code class="docutils literal notranslate"><span class="pre">coef1*P</span> <span class="pre">+</span> <span class="pre">coef2*Q</span> <span class="pre">=</span> <span class="pre">+/-</span> <span class="pre">S_i(P,</span> <span class="pre">Q)</span></code> where the degree (not the indice) of the subresultant <code class="docutils literal notranslate"><span class="pre">S_i(P,</span> <span class="pre">Q)</span></code> is as small as possible.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="PureAlgebraicIntegration.html" title="PureAlgebraicIntegration(R, F, L)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="PseudoLinearNormalForm.html" title="PseudoLinearNormalForm K"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">PseudoRemainderSequence(R, polR)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

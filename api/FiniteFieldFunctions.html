@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FiniteFieldFunctions GF &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="FiniteFieldHomomorphisms(F1, GF, F2)" href="FiniteFieldHomomorphisms.html" />
+    <link rel="prev" title="FiniteDivisorFunctions2(R1, UP1, UPUP1, F1, R2, UP2, UPUP2, F2)" href="FiniteDivisorFunctions2.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="FiniteFieldHomomorphisms.html" title="FiniteFieldHomomorphisms(F1, GF, F2)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="FiniteDivisorFunctions2.html" title="FiniteDivisorFunctions2(R1, UP1, UPUP1, F1, R2, UP2, UPUP2, F2)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">FiniteFieldFunctions GF</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="finitefieldfunctions-gf">
+<span id="l-finite-field-functions"></span><span id="index-0"></span><h1>FiniteFieldFunctions GF<a class="headerlink" href="#finitefieldfunctions-gf" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/fff.spad#L1">fff.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/fff.spad#L1">[edit on github]</a></p>
+<ul class="simple">
+<li><p>GF: <a class="reference internal" href="FiniteFieldCategory.html#l-finite-field-category"><span class="std std-ref">FiniteFieldCategory</span></a></p></li>
+</ul>
+<p>FiniteFieldFunctions(<code class="docutils literal notranslate"><span class="pre">GF</span></code>) is a package with functions concerning finite extension fields of the finite ground field <em>GF</em>, e.g. Zech logarithms.</p>
+<span class="target" id="l-finite-field-functions-create-low-complexity-normal-basis"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">createLowComplexityNormalBasis</span>: <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a> -&gt; Union(<a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> GF, <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(value: GF, index: <a class="reference internal" href="SingleInteger.html#l-single-integer"><span class="std std-ref">SingleInteger</span></a>))</dt><dd><p><code class="docutils literal notranslate"><span class="pre">createLowComplexityNormalBasis(n)</span></code> tries to find a a low complexity normal basis of degree <em>n</em> over <em>GF</em> and returns its multiplication matrix If no low complexity basis is found it calls <span class="xref std std-ref">createNormalPoly &lt;l–finite-field-polynomial-package_create-normal-poly&gt;`(``n`</span>) to produce a normal polynomial of degree <em>n</em> over <em>GF</em></p>
+</dd>
+</dl>
+<span class="target" id="l-finite-field-functions-create-low-complexity-table"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">createLowComplexityTable</span>: <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a> -&gt; Union(<a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(value: GF, index: <a class="reference internal" href="SingleInteger.html#l-single-integer"><span class="std std-ref">SingleInteger</span></a>), failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">createLowComplexityTable(n)</span></code> tries to find a low complexity normal basis of degree <em>n</em> over <em>GF</em> and returns its multiplication matrix Fails, if it does not find a low complexity basis</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-field-functions-create-multiplication-matrix"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">createMultiplicationMatrix</span>: <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(value: GF, index: <a class="reference internal" href="SingleInteger.html#l-single-integer"><span class="std std-ref">SingleInteger</span></a>) -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> GF</dt><dd><p><code class="docutils literal notranslate"><span class="pre">createMultiplicationMatrix(m)</span></code> forms the multiplication table <em>m</em> into a matrix over the ground field.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-field-functions-create-multiplication-table"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">createMultiplicationTable</span>: <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> GF -&gt; <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(value: GF, index: <a class="reference internal" href="SingleInteger.html#l-single-integer"><span class="std std-ref">SingleInteger</span></a>)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">createMultiplicationTable(f)</span></code> generates a multiplication table for the normal basis of the field extension determined by <em>f</em>. This is needed to perform multiplications between elements represented as coordinate vectors to this basis. See <span class="xref std std-ref">FFNBP</span>, <span class="xref std std-ref">FFNBX</span>.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-field-functions-create-zech-table"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">createZechTable</span>: <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> GF -&gt; <a class="reference internal" href="PrimitiveArray.html#l-primitive-array"><span class="std std-ref">PrimitiveArray</span></a> <a class="reference internal" href="SingleInteger.html#l-single-integer"><span class="std std-ref">SingleInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">createZechTable(f)</span></code> generates a Zech logarithm table for the cyclic group representation of a extension of the ground field by the primitive polynomial <em>f(x)</em>, i.e. <code class="docutils literal notranslate"><span class="pre">Z(i)</span></code>, defined by <em>x^Z(i) = 1+x^i</em> is stored at index <code class="docutils literal notranslate"><span class="pre">i</span></code>. This is needed in particular to perform addition of field elements in finite fields represented in this way. See <span class="xref std std-ref">FFCGP</span>, <span class="xref std std-ref">FFCGX</span>.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-field-functions-size-multiplication"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">sizeMultiplication</span>: <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(value: GF, index: <a class="reference internal" href="SingleInteger.html#l-single-integer"><span class="std std-ref">SingleInteger</span></a>) -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">sizeMultiplication(m)</span></code> returns the number of entries of the multiplication table <em>m</em>.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="FiniteFieldHomomorphisms.html" title="FiniteFieldHomomorphisms(F1, GF, F2)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="FiniteDivisorFunctions2.html" title="FiniteDivisorFunctions2(R1, UP1, UPUP1, F1, R2, UP2, UPUP2, F2)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">FiniteFieldFunctions GF</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

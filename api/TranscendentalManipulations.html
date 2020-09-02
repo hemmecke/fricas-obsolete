@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TranscendentalManipulations(R, F) &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="TranscendentalRischDESystem(F, UP)" href="TranscendentalRischDESystem.html" />
+    <link rel="prev" title="TranscendentalIntegration(F, UP)" href="TranscendentalIntegration.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="TranscendentalRischDESystem.html" title="TranscendentalRischDESystem(F, UP)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="TranscendentalIntegration.html" title="TranscendentalIntegration(F, UP)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">TranscendentalManipulations(R, F)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="transcendentalmanipulations-r-f">
+<span id="l-transcendental-manipulations"></span><span id="index-0"></span><h1>TranscendentalManipulations(R, F)<a class="headerlink" href="#transcendentalmanipulations-r-f" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/manip.spad#L458">manip.spad line 458</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/manip.spad#L458">[edit on github]</a></p>
+<ul class="simple">
+<li><p>R: Join(<a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a>, <a class="reference internal" href="GcdDomain.html#l-gcd-domain"><span class="std std-ref">GcdDomain</span></a>)</p></li>
+<li><p>F: Join(<a class="reference internal" href="FunctionSpace.html#l-function-space"><span class="std std-ref">FunctionSpace</span></a> R, <a class="reference internal" href="TranscendentalFunctionCategory.html#l-transcendental-function-category"><span class="std std-ref">TranscendentalFunctionCategory</span></a>)</p></li>
+</ul>
+<p>TranscendentalManipulations provides functions to simplify and expand expressions involving transcendental operators.</p>
+<span class="target" id="l-transcendental-manipulations-cos2sec"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">cos2sec</span>: F -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">cos2sec(f)</span></code> converts every <code class="docutils literal notranslate"><span class="pre">cos(u)</span></code> appearing in <code class="docutils literal notranslate"><span class="pre">f</span></code> into <code class="docutils literal notranslate"><span class="pre">1/sec(u)</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-transcendental-manipulations-cosh2sech"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">cosh2sech</span>: F -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">cosh2sech(f)</span></code> converts every <code class="docutils literal notranslate"><span class="pre">cosh(u)</span></code> appearing in <code class="docutils literal notranslate"><span class="pre">f</span></code> into <code class="docutils literal notranslate"><span class="pre">1/sech(u)</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-transcendental-manipulations-cot2tan"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">cot2tan</span>: F -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">cot2tan(f)</span></code> converts every <code class="docutils literal notranslate"><span class="pre">cot(u)</span></code> appearing in <code class="docutils literal notranslate"><span class="pre">f</span></code> into <code class="docutils literal notranslate"><span class="pre">1/tan(u)</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-transcendental-manipulations-cot2trig"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">cot2trig</span>: F -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">cot2trig(f)</span></code> converts every <code class="docutils literal notranslate"><span class="pre">cot(u)</span></code> appearing in <code class="docutils literal notranslate"><span class="pre">f</span></code> into <code class="docutils literal notranslate"><span class="pre">cos(u)/sin(u)</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-transcendental-manipulations-coth2tanh"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">coth2tanh</span>: F -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coth2tanh(f)</span></code> converts every <code class="docutils literal notranslate"><span class="pre">coth(u)</span></code> appearing in <code class="docutils literal notranslate"><span class="pre">f</span></code> into <code class="docutils literal notranslate"><span class="pre">1/tanh(u)</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-transcendental-manipulations-coth2trigh"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">coth2trigh</span>: F -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coth2trigh(f)</span></code> converts every <code class="docutils literal notranslate"><span class="pre">coth(u)</span></code> appearing in <code class="docutils literal notranslate"><span class="pre">f</span></code> into <code class="docutils literal notranslate"><span class="pre">cosh(u)/sinh(u)</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-transcendental-manipulations-csc2sin"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">csc2sin</span>: F -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">csc2sin(f)</span></code> converts every <code class="docutils literal notranslate"><span class="pre">csc(u)</span></code> appearing in <code class="docutils literal notranslate"><span class="pre">f</span></code> into <code class="docutils literal notranslate"><span class="pre">1/sin(u)</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-transcendental-manipulations-csch2sinh"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">csch2sinh</span>: F -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">csch2sinh(f)</span></code> converts every <code class="docutils literal notranslate"><span class="pre">csch(u)</span></code> appearing in <code class="docutils literal notranslate"><span class="pre">f</span></code> into <code class="docutils literal notranslate"><span class="pre">1/sinh(u)</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-transcendental-manipulations-expand"></span><dl class="simple" id="index-9">
+<dt><span class="spadfun">expand</span>: F -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">expand(f)</span></code> performs the following expansions on <code class="docutils literal notranslate"><span class="pre">f:</span></code> begin{items} item 1. logs of products are expanded into sums of logs. item 2. trigonometric and hyperbolic trigonometric functions of sums are expanded into sums of products of trigonometric and hyperbolic trigonometric functions. item 3. formal powers of the form <code class="docutils literal notranslate"><span class="pre">(a/b)^c</span></code> are expanded into <code class="docutils literal notranslate"><span class="pre">a^c</span> <span class="pre">*</span> <span class="pre">b^(-c)</span></code>. end{items}</p>
+</dd>
+</dl>
+<span class="target" id="l-transcendental-manipulations-expand-log"></span><dl class="simple" id="index-10">
+<dt><span class="spadfun">expandLog</span>: F -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">expandLog(f)</span></code> converts every <code class="docutils literal notranslate"><span class="pre">log(a/b)</span></code> appearing in <code class="docutils literal notranslate"><span class="pre">f</span></code> into <code class="docutils literal notranslate"><span class="pre">log(a)</span> <span class="pre">-</span> <span class="pre">log(b)</span></code>, and every <code class="docutils literal notranslate"><span class="pre">log(a*b)</span></code> into <code class="docutils literal notranslate"><span class="pre">log(a)</span> <span class="pre">+</span> <span class="pre">log(b)</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-transcendental-manipulations-expand-power"></span><dl class="simple" id="index-11">
+<dt><span class="spadfun">expandPower</span>: F -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">expandPower(f)</span></code> converts every power <code class="docutils literal notranslate"><span class="pre">(a/b)^c</span></code> appearing in <code class="docutils literal notranslate"><span class="pre">f</span></code> into <code class="docutils literal notranslate"><span class="pre">a^c</span> <span class="pre">*</span> <span class="pre">b^(-c)</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-transcendental-manipulations-expand-trig-products"></span><dl class="simple" id="index-12">
+<dt><span class="spadfun">expandTrigProducts</span>: F -&gt; F if F has <a class="reference internal" href="ConvertibleTo.html#l-convertible-to"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="Pattern.html#l-pattern"><span class="std std-ref">Pattern</span></a> R and R has <a class="reference internal" href="ConvertibleTo.html#l-convertible-to"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="Pattern.html#l-pattern"><span class="std std-ref">Pattern</span></a> R and R has <a class="reference internal" href="PatternMatchable.html#l-pattern-matchable"><span class="std std-ref">PatternMatchable</span></a> R and F has <a class="reference internal" href="PatternMatchable.html#l-pattern-matchable"><span class="std std-ref">PatternMatchable</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">expandTrigProducts(e)</span></code> replaces <code class="docutils literal notranslate"><span class="pre">sin(x)*sin(y)</span></code> by <code class="docutils literal notranslate"><span class="pre">(cos(x-y)-cos(x+y))/2</span></code>, <code class="docutils literal notranslate"><span class="pre">cos(x)*cos(y)</span></code> by <code class="docutils literal notranslate"><span class="pre">(cos(x-y)+cos(x+y))/2</span></code>, and <code class="docutils literal notranslate"><span class="pre">sin(x)*cos(y)</span></code> by <code class="docutils literal notranslate"><span class="pre">(sin(x-y)+sin(x+y))/2</span></code>. Note: this operation uses pattern matcher, so it is relatively expensive. To avoid getting into an infinite loop the transformations are applied at most ten times.</p>
+</dd>
+</dl>
+<span class="target" id="l-transcendental-manipulations-htrigs"></span><dl class="simple" id="index-13">
+<dt><span class="spadfun">htrigs</span>: F -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">htrigs(f)</span></code> converts all the exponentials in <code class="docutils literal notranslate"><span class="pre">f</span></code> into hyperbolic sines and cosines.</p>
+</dd>
+</dl>
+<span class="target" id="l-transcendental-manipulations-remove-cosh-sq"></span><dl class="simple" id="index-14">
+<dt><span class="spadfun">removeCoshSq</span>: F -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">removeCoshSq(f)</span></code> converts every <code class="docutils literal notranslate"><span class="pre">cosh(u)^2</span></code> appearing in <code class="docutils literal notranslate"><span class="pre">f</span></code> into <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">-</span> <span class="pre">sinh(u)^2</span></code>, and also reduces higher powers of <code class="docutils literal notranslate"><span class="pre">cosh(u)</span></code> with that formula.</p>
+</dd>
+</dl>
+<span class="target" id="l-transcendental-manipulations-remove-cos-sq"></span><dl class="simple" id="index-15">
+<dt><span class="spadfun">removeCosSq</span>: F -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">removeCosSq(f)</span></code> converts every <code class="docutils literal notranslate"><span class="pre">cos(u)^2</span></code> appearing in <code class="docutils literal notranslate"><span class="pre">f</span></code> into <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">-</span> <span class="pre">sin(u)^2</span></code>, and also reduces higher powers of <code class="docutils literal notranslate"><span class="pre">cos(u)</span></code> with that formula.</p>
+</dd>
+</dl>
+<span class="target" id="l-transcendental-manipulations-remove-sinh-sq"></span><dl class="simple" id="index-16">
+<dt><span class="spadfun">removeSinhSq</span>: F -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">removeSinhSq(f)</span></code> converts every <code class="docutils literal notranslate"><span class="pre">sinh(u)^2</span></code> appearing in <code class="docutils literal notranslate"><span class="pre">f</span></code> into <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">-</span> <span class="pre">cosh(u)^2</span></code>, and also reduces higher powers of <code class="docutils literal notranslate"><span class="pre">sinh(u)</span></code> with that formula.</p>
+</dd>
+</dl>
+<span class="target" id="l-transcendental-manipulations-remove-sin-sq"></span><dl class="simple" id="index-17">
+<dt><span class="spadfun">removeSinSq</span>: F -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">removeSinSq(f)</span></code> converts every <code class="docutils literal notranslate"><span class="pre">sin(u)^2</span></code> appearing in <code class="docutils literal notranslate"><span class="pre">f</span></code> into <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">-</span> <span class="pre">cos(u)^2</span></code>, and also reduces higher powers of <code class="docutils literal notranslate"><span class="pre">sin(u)</span></code> with that formula.</p>
+</dd>
+</dl>
+<span class="target" id="l-transcendental-manipulations-sec2cos"></span><dl class="simple" id="index-18">
+<dt><span class="spadfun">sec2cos</span>: F -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sec2cos(f)</span></code> converts every <code class="docutils literal notranslate"><span class="pre">sec(u)</span></code> appearing in <code class="docutils literal notranslate"><span class="pre">f</span></code> into <code class="docutils literal notranslate"><span class="pre">1/cos(u)</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-transcendental-manipulations-sech2cosh"></span><dl class="simple" id="index-19">
+<dt><span class="spadfun">sech2cosh</span>: F -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sech2cosh(f)</span></code> converts every <code class="docutils literal notranslate"><span class="pre">sech(u)</span></code> appearing in <code class="docutils literal notranslate"><span class="pre">f</span></code> into <code class="docutils literal notranslate"><span class="pre">1/cosh(u)</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-transcendental-manipulations-simplify"></span><dl class="simple" id="index-20">
+<dt><span class="spadfun">simplify</span>: F -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">simplify(f)</span></code> performs the following simplifications on <code class="docutils literal notranslate"><span class="pre">f:</span></code> begin{items} item 1. rewrites trigs and hyperbolic trigs in terms of <code class="docutils literal notranslate"><span class="pre">sin</span></code> , <code class="docutils literal notranslate"><span class="pre">cos</span></code>, <code class="docutils literal notranslate"><span class="pre">sinh</span></code>, <code class="docutils literal notranslate"><span class="pre">cosh</span></code>. item 2. rewrites <code class="docutils literal notranslate"><span class="pre">sin^2</span></code> and <code class="docutils literal notranslate"><span class="pre">sinh^2</span></code> in terms of <code class="docutils literal notranslate"><span class="pre">cos</span></code> and <code class="docutils literal notranslate"><span class="pre">cosh</span></code>, item 3. rewrites <code class="docutils literal notranslate"><span class="pre">exp(a)*exp(b)</span></code> as <code class="docutils literal notranslate"><span class="pre">exp(a+b)</span></code>. item 4. rewrites <code class="docutils literal notranslate"><span class="pre">(a^(1/n))^m</span> <span class="pre">*</span> <span class="pre">(a^(1/s))^t</span></code> as a single power of a single radical of <code class="docutils literal notranslate"><span class="pre">a</span></code>. end{items}</p>
+</dd>
+</dl>
+<span class="target" id="l-transcendental-manipulations-simplify-exp"></span><dl class="simple" id="index-21">
+<dt><span class="spadfun">simplifyExp</span>: F -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">simplifyExp(f)</span></code> performs the following simplifications on <code class="docutils literal notranslate"><span class="pre">f:</span></code> begin{items} item 1. rewrites <code class="docutils literal notranslate"><span class="pre">exp(a)*exp(b)</span></code> as <code class="docutils literal notranslate"><span class="pre">exp(a+b)</span></code>. item 2. rewrites <code class="docutils literal notranslate"><span class="pre">a^b*a^c</span></code> as <code class="docutils literal notranslate"><span class="pre">a^(b+c)</span></code>. item 3. rewrites <code class="docutils literal notranslate"><span class="pre">exp(a)/exp(b)</span></code> as <code class="docutils literal notranslate"><span class="pre">exp(a-b)</span></code>. item 4. rewrites <code class="docutils literal notranslate"><span class="pre">a^b/a^c</span></code> as <code class="docutils literal notranslate"><span class="pre">a^(b-c)</span></code>. end{items}</p>
+</dd>
+</dl>
+<span class="target" id="l-transcendental-manipulations-simplify-log"></span><dl class="simple" id="index-22">
+<dt><span class="spadfun">simplifyLog</span>: F -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">simplifyLog(f)</span></code> converts every <code class="docutils literal notranslate"><span class="pre">log(a)</span> <span class="pre">-</span> <span class="pre">log(b)</span></code> appearing in <code class="docutils literal notranslate"><span class="pre">f</span></code> into <code class="docutils literal notranslate"><span class="pre">log(a/b)</span></code>, every <code class="docutils literal notranslate"><span class="pre">log(a)</span> <span class="pre">+</span> <span class="pre">log(b)</span></code> into <code class="docutils literal notranslate"><span class="pre">log(a*b)</span></code> and every <code class="docutils literal notranslate"><span class="pre">n*log(a)</span></code> into <code class="docutils literal notranslate"><span class="pre">log(a^n)</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-transcendental-manipulations-sin2csc"></span><dl class="simple" id="index-23">
+<dt><span class="spadfun">sin2csc</span>: F -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sin2csc(f)</span></code> converts every <code class="docutils literal notranslate"><span class="pre">sin(u)</span></code> appearing in <code class="docutils literal notranslate"><span class="pre">f</span></code> into <code class="docutils literal notranslate"><span class="pre">1/csc(u)</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-transcendental-manipulations-sinh2csch"></span><dl class="simple" id="index-24">
+<dt><span class="spadfun">sinh2csch</span>: F -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sinh2csch(f)</span></code> converts every <code class="docutils literal notranslate"><span class="pre">sinh(u)</span></code> appearing in <code class="docutils literal notranslate"><span class="pre">f</span></code> into <code class="docutils literal notranslate"><span class="pre">1/csch(u)</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-transcendental-manipulations-tan2cot"></span><dl class="simple" id="index-25">
+<dt><span class="spadfun">tan2cot</span>: F -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">tan2cot(f)</span></code> converts every <code class="docutils literal notranslate"><span class="pre">tan(u)</span></code> appearing in <code class="docutils literal notranslate"><span class="pre">f</span></code> into <code class="docutils literal notranslate"><span class="pre">1/cot(u)</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-transcendental-manipulations-tan2trig"></span><dl class="simple" id="index-26">
+<dt><span class="spadfun">tan2trig</span>: F -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">tan2trig(f)</span></code> converts every <code class="docutils literal notranslate"><span class="pre">tan(u)</span></code> appearing in <code class="docutils literal notranslate"><span class="pre">f</span></code> into <code class="docutils literal notranslate"><span class="pre">sin(u)/cos(u)</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-transcendental-manipulations-tanh2coth"></span><dl class="simple" id="index-27">
+<dt><span class="spadfun">tanh2coth</span>: F -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">tanh2coth(f)</span></code> converts every <code class="docutils literal notranslate"><span class="pre">tanh(u)</span></code> appearing in <code class="docutils literal notranslate"><span class="pre">f</span></code> into <code class="docutils literal notranslate"><span class="pre">1/coth(u)</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-transcendental-manipulations-tanh2trigh"></span><dl class="simple" id="index-28">
+<dt><span class="spadfun">tanh2trigh</span>: F -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">tanh2trigh(f)</span></code> converts every <code class="docutils literal notranslate"><span class="pre">tanh(u)</span></code> appearing in <code class="docutils literal notranslate"><span class="pre">f</span></code> into <code class="docutils literal notranslate"><span class="pre">sinh(u)/cosh(u)</span></code>.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="TranscendentalRischDESystem.html" title="TranscendentalRischDESystem(F, UP)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="TranscendentalIntegration.html" title="TranscendentalIntegration(F, UP)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">TranscendentalManipulations(R, F)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

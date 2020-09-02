@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TubePlot Curve &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Tuple S" href="Tuple.html" />
+    <link rel="prev" title="Tree S" href="Tree.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="Tuple.html" title="Tuple S"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="Tree.html" title="Tree S"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Domains.html" accesskey="U">Domains</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">TubePlot Curve</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="tubeplot-curve">
+<span id="l-tube-plot"></span><span id="index-0"></span><h1>TubePlot Curve<a class="headerlink" href="#tubeplot-curve" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/tube.spad#L1">tube.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/tube.spad#L1">[edit on github]</a></p>
+<ul class="simple">
+<li><p>Curve: <a class="reference internal" href="PlottableSpaceCurveCategory.html#l-plottable-space-curve-category"><span class="std std-ref">PlottableSpaceCurveCategory</span></a></p></li>
+</ul>
+<p>Package for constructing tubes around 3-dimensional parametric curves. Domain of tubes around 3-dimensional parametric curves.</p>
+<span class="target" id="l-tube-plot-closed"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">closed?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">closed?(t)</span></code> tests whether the given tube plot <code class="docutils literal notranslate"><span class="pre">t</span></code> is closed.</p>
+</dd>
+</dl>
+<span class="target" id="l-tube-plot-get-curve"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">getCurve</span>: % -&gt; Curve</dt><dd><p><code class="docutils literal notranslate"><span class="pre">getCurve(t)</span></code> returns the <a class="reference internal" href="PlottableSpaceCurveCategory.html#l-plottable-space-curve-category"><span class="std std-ref">PlottableSpaceCurveCategory</span></a> representing the parametric curve of the given tube plot <code class="docutils literal notranslate"><span class="pre">t</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-tube-plot-list-loops"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">listLoops</span>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">listLoops(t)</span></code> returns the list of lists of points, or the ‘loops’, of the given tube plot <code class="docutils literal notranslate"><span class="pre">t</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-tube-plot-open"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">open?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">open?(t)</span></code> tests whether the given tube plot <code class="docutils literal notranslate"><span class="pre">t</span></code> is open.</p>
+</dd>
+</dl>
+<span class="target" id="l-tube-plot-set-closed"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">setClosed</span>: (%, <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">setClosed(t,</span> <span class="pre">b)</span></code> declares the given tube plot <code class="docutils literal notranslate"><span class="pre">t</span></code> to be closed if <code class="docutils literal notranslate"><span class="pre">b</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>, or if <code class="docutils literal notranslate"><span class="pre">b</span></code> is <code class="docutils literal notranslate"><span class="pre">false</span></code>, <code class="docutils literal notranslate"><span class="pre">t</span></code> is set to be open.</p>
+</dd>
+</dl>
+<span class="target" id="l-tube-plot-tube"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">tube</span>: (Curve, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>, <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">tube(c,</span> <span class="pre">ll,</span> <span class="pre">b)</span></code> creates a tube of the domain <a class="reference internal" href="#l-tube-plot"><span class="std std-ref">TubePlot</span></a> from a space curve <code class="docutils literal notranslate"><span class="pre">c</span></code> of the category <a class="reference internal" href="PlottableSpaceCurveCategory.html#l-plottable-space-curve-category"><span class="std std-ref">PlottableSpaceCurveCategory</span></a>, a list of lists of points (loops) <code class="docutils literal notranslate"><span class="pre">ll</span></code> and a boolean <code class="docutils literal notranslate"><span class="pre">b</span></code> which if <code class="docutils literal notranslate"><span class="pre">true</span></code> indicates a closed tube, or if <code class="docutils literal notranslate"><span class="pre">false</span></code> an open tube.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="Tuple.html" title="Tuple S"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="Tree.html" title="Tree S"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Domains.html" >Domains</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">TubePlot Curve</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

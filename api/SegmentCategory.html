@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SegmentCategory S &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="SegmentExpansionCategory(S, L)" href="SegmentExpansionCategory.html" />
+    <link rel="prev" title="Rng" href="Rng.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="SegmentExpansionCategory.html" title="SegmentExpansionCategory(S, L)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="Rng.html" title="Rng"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Categories.html" accesskey="U">Categories</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">SegmentCategory S</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="segmentcategory-s">
+<span id="l-segment-category"></span><span id="index-0"></span><h1>SegmentCategory S<a class="headerlink" href="#segmentcategory-s" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/seg.spad#L1">seg.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/seg.spad#L1">[edit on github]</a></p>
+<ul class="simple">
+<li><p>S: <a class="reference internal" href="Type.html#l-type"><span class="std std-ref">Type</span></a></p></li>
+</ul>
+<p>This category provides operations on ranges, or <em>segments</em> as they are called.</p>
+<span class="target" id="id1"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">+</span>: (%, S) -&gt; % if S has <a class="reference internal" href="AbelianSemiGroup.html#l-abelian-semi-group"><span class="std std-ref">AbelianSemiGroup</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">(l..h)+i</span></code> returns segment <code class="docutils literal notranslate"><span class="pre">l+i</span> <span class="pre">..</span> <span class="pre">h+i</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-2">
+<dt><span class="spadfun">+</span>: (S, %) -&gt; % if S has <a class="reference internal" href="AbelianSemiGroup.html#l-abelian-semi-group"><span class="std std-ref">AbelianSemiGroup</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">i+(l..h)</span></code> returns segment <code class="docutils literal notranslate"><span class="pre">i+l</span> <span class="pre">..</span> <span class="pre">i+h</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="id2"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">-</span>: (%, S) -&gt; % if S has <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">(l..h)-i</span></code> returns segment <code class="docutils literal notranslate"><span class="pre">l-i</span> <span class="pre">..</span> <span class="pre">h-i</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="BasicType.html#id1"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a> if S has <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+<dt><a class="reference internal" href="BasicType.html#id2"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a> if S has <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-segment-category-b-y"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">BY</span>: (%, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">s</span> <span class="pre">by</span> <span class="pre">n</span></code> creates a new segment in which only every <code class="docutils literal notranslate"><span class="pre">n</span></code><code class="docutils literal notranslate"><span class="pre">-</span></code>th element is used.</p>
+</dd>
+<dt><a class="reference internal" href="CoercibleTo.html#l-coercible-to-coerce"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a> if S has <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+</dd>
+<dt><a class="reference internal" href="ConvertibleTo.html#l-convertible-to-convert"><span class="std std-ref">convert</span></a>: % -&gt; <a class="reference internal" href="InputForm.html#l-input-form"><span class="std std-ref">InputForm</span></a> if S has <a class="reference internal" href="ConvertibleTo.html#l-convertible-to"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="InputForm.html#l-input-form"><span class="std std-ref">InputForm</span></a></dt><dd><p>from <a class="reference internal" href="ConvertibleTo.html#l-convertible-to"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="InputForm.html#l-input-form"><span class="std std-ref">InputForm</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-segment-category-convert"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">convert</span>: S -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">convert(i)</span></code> creates the segment <code class="docutils literal notranslate"><span class="pre">i..i</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l-single-integer"><span class="std std-ref">SingleInteger</span></a> if S has <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash-update"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a> if S has <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-segment-category-high"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">high</span>: % -&gt; S</dt><dd><p><code class="docutils literal notranslate"><span class="pre">high(s)</span></code> returns the second endpoint of <code class="docutils literal notranslate"><span class="pre">s</span></code>. Note: <code class="docutils literal notranslate"><span class="pre">high(l..h)</span> <span class="pre">=</span> <span class="pre">h</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-segment-category-incr"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">incr</span>: % -&gt; <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">incr(s)</span></code> returns <code class="docutils literal notranslate"><span class="pre">n</span></code>, where <code class="docutils literal notranslate"><span class="pre">s</span></code> is a segment in which every <code class="docutils literal notranslate"><span class="pre">n</span></code><code class="docutils literal notranslate"><span class="pre">-</span></code>th element is used. Note: <code class="docutils literal notranslate"><span class="pre">incr(l..h</span> <span class="pre">by</span> <span class="pre">n)</span> <span class="pre">=</span> <span class="pre">n</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-latex"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a> if S has <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-segment-category-low"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">low</span>: % -&gt; S</dt><dd><p><code class="docutils literal notranslate"><span class="pre">low(s)</span></code> returns the first endpoint of <code class="docutils literal notranslate"><span class="pre">s</span></code>. Note: <code class="docutils literal notranslate"><span class="pre">low(l..h)</span> <span class="pre">=</span> <span class="pre">l</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-segment-category-reverse"></span><dl class="simple" id="index-9">
+<dt><span class="spadfun">reverse</span>: % -&gt; % if S has <a class="reference internal" href="OrderedRing.html#l-ordered-ring"><span class="std std-ref">OrderedRing</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">reverse(s)</span></code> returns segment <code class="docutils literal notranslate"><span class="pre">s</span></code> in reverse order.</p>
+</dd>
+</dl>
+<span class="target" id="l-segment-category-s-e-g-m-e-n-t"></span><dl class="simple" id="index-10">
+<dt><span class="spadfun">SEGMENT</span>: (S, S) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">l..h</span></code> creates a segment with <code class="docutils literal notranslate"><span class="pre">l</span></code> and <code class="docutils literal notranslate"><span class="pre">h</span></code> as the endpoints.</p>
+</dd>
+</dl>
+<span class="target" id="l-segment-category-segment"></span><dl class="simple" id="index-11">
+<dt><span class="spadfun">segment</span>: (S, S) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">segment(i,</span> <span class="pre">j)</span></code> is an alternate way to create the segment <code class="docutils literal notranslate"><span class="pre">i..j</span></code>.</p>
+</dd>
+</dl>
+<p><a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a> if S has <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+<p><a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a> if S has <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+<p><a class="reference internal" href="ConvertibleTo.html#l-convertible-to"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="InputForm.html#l-input-form"><span class="std std-ref">InputForm</span></a> if S has <a class="reference internal" href="ConvertibleTo.html#l-convertible-to"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="InputForm.html#l-input-form"><span class="std std-ref">InputForm</span></a></p>
+<p><a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a> if S has <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="SegmentExpansionCategory.html" title="SegmentExpansionCategory(S, L)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="Rng.html" title="Rng"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Categories.html" >Categories</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">SegmentCategory S</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,329 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeightedGraph(S, W) &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="WeightedPolynomials(R, VarSet, E, P, vl, wl, wtlevel)" href="WeightedPolynomials.html" />
+    <link rel="prev" title="Void" href="Void.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="WeightedPolynomials.html" title="WeightedPolynomials(R, VarSet, E, P, vl, wl, wtlevel)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="Void.html" title="Void"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Domains.html" accesskey="U">Domains</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">WeightedGraph(S, W)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="weightedgraph-s-w">
+<span id="l-weighted-graph"></span><span id="index-0"></span><h1>WeightedGraph(S, W)<a class="headerlink" href="#weightedgraph-s-w" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/graph.spad#L4871">graph.spad line 4871</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/graph.spad#L4871">[edit on github]</a></p>
+<ul class="simple">
+<li><p>S: <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p></li>
+<li><p>W: <a class="reference internal" href="OrderedAbelianMonoid.html#l-ordered-abelian-monoid"><span class="std std-ref">OrderedAbelianMonoid</span></a></p></li>
+</ul>
+<p>allows us to model weighted graphs This graph assigns a weight to each arrow. This is used when calculating say, lowest ‘cost’ routes. An arrow with a higher weight is more ‘costly’ in some way and therefore we try to choose the minimum weight. For arrows in series the overall weight is the sum of the individual weights. For arrows in parallel the overall weight is the minimum of the individual weights. <code class="docutils literal notranslate"><span class="pre">I</span></code> may change this in future to allow different cost metrics to be plugged in.</p>
+<span class="target" id="id1"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">*</span>: (%, %) -&gt; <a class="reference internal" href="#l-weighted-graph"><span class="std std-ref">WeightedGraph</span></a>(<a class="reference internal" href="Product.html#l-product"><span class="std std-ref">Product</span></a>(S, S), W)</dt><dd><p>tensor product : the tensor product <code class="docutils literal notranslate"><span class="pre">G*H</span></code> of graphs <code class="docutils literal notranslate"><span class="pre">G</span></code> and <code class="docutils literal notranslate"><span class="pre">H</span></code> is a graph such that the vertex set of <code class="docutils literal notranslate"><span class="pre">G*H</span></code> is the Cartesian product <code class="docutils literal notranslate"><span class="pre">V</span></code>(<code class="docutils literal notranslate"><span class="pre">G</span></code>) times <code class="docutils literal notranslate"><span class="pre">V</span></code>(<code class="docutils literal notranslate"><span class="pre">H</span></code>); and any two vertices (<code class="docutils literal notranslate"><span class="pre">u</span></code>, u’) and (<code class="docutils literal notranslate"><span class="pre">v</span></code>, <code class="docutils literal notranslate"><span class="pre">v'</span></code>) are adjacent in <code class="docutils literal notranslate"><span class="pre">G</span></code> times <code class="docutils literal notranslate"><span class="pre">H</span></code> if and only if u’ is adjacent with <code class="docutils literal notranslate"><span class="pre">v'</span></code> and <code class="docutils literal notranslate"><span class="pre">u</span></code> is adjacent with <code class="docutils literal notranslate"><span class="pre">v</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#id1"><span class="std std-ref">+</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="BasicType.html#id1"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+<dt><a class="reference internal" href="BasicType.html#id2"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-add-arrow"><span class="std std-ref">addArrow!</span></a>: (%, Record(name: <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, arrType: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, fromOb: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, toOb: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, xOffset: <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, yOffset: <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, map: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>)) -&gt; %</dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-add-arrow"><span class="std std-ref">addArrow!</span></a>: (%, <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-add-arrow"><span class="std std-ref">addArrow!</span></a>: (%, <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-add-arrow"><span class="std std-ref">addArrow!</span></a>: (%, <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, S, S) -&gt; %</dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-add-object"><span class="std std-ref">addObject!</span></a>: (%, Record(value: S, posX: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, posY: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>)) -&gt; %</dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-add-object"><span class="std std-ref">addObject!</span></a>: (%, S) -&gt; %</dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+</dl>
+<span class="target" id="l-weighted-graph-add-w-arrow"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">addWArrow!</span>: (%, <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, W) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">addWArrow!(s,</span> <span class="pre">name,</span> <span class="pre">n1,</span> <span class="pre">n2,</span> <span class="pre">w)</span></code> adds a weighted arrow to the graph <code class="docutils literal notranslate"><span class="pre">s</span></code>, where <code class="docutils literal notranslate"><span class="pre">name</span></code> is <code class="docutils literal notranslate"><span class="pre">name</span></code> of the arrow, <code class="docutils literal notranslate"><span class="pre">w</span></code> is weight of the arrow, <code class="docutils literal notranslate"><span class="pre">n1</span></code> is starting point of the arrow, <code class="docutils literal notranslate"><span class="pre">n2</span></code> is endpoint of the arrow.</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-adjacency-matrix"><span class="std std-ref">adjacencyMatrix</span></a>: % -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-arrow-name"><span class="std std-ref">arrowName</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-arrows-from-arrow"><span class="std std-ref">arrowsFromArrow</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-arrows-from-node"><span class="std std-ref">arrowsFromNode</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-arrows-to-arrow"><span class="std std-ref">arrowsToArrow</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-arrows-to-node"><span class="std std-ref">arrowsToNode</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+</dl>
+<span class="target" id="l-weighted-graph-cartesian"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">cartesian</span>: (%, %) -&gt; <a class="reference internal" href="#l-weighted-graph"><span class="std std-ref">WeightedGraph</span></a>(<a class="reference internal" href="Product.html#l-product"><span class="std std-ref">Product</span></a>(S, S), W)</dt><dd><p>Cartesian product: the vertex set of <code class="docutils literal notranslate"><span class="pre">G</span></code> <code class="docutils literal notranslate"><span class="pre">o</span></code> <code class="docutils literal notranslate"><span class="pre">H</span></code> is the Cartesian product <code class="docutils literal notranslate"><span class="pre">V</span></code>(<code class="docutils literal notranslate"><span class="pre">G</span></code>) times <code class="docutils literal notranslate"><span class="pre">V</span></code>(<code class="docutils literal notranslate"><span class="pre">H</span></code>) and any two vertices (<code class="docutils literal notranslate"><span class="pre">u</span></code>, u’) and (<code class="docutils literal notranslate"><span class="pre">v</span></code>, <code class="docutils literal notranslate"><span class="pre">v'</span></code>) are adjacent in <code class="docutils literal notranslate"><span class="pre">G</span></code> <code class="docutils literal notranslate"><span class="pre">o</span></code> <code class="docutils literal notranslate"><span class="pre">H</span></code> if and only if either <code class="docutils literal notranslate"><span class="pre">u</span></code> = <code class="docutils literal notranslate"><span class="pre">v</span></code> and u’ is adjacent with <code class="docutils literal notranslate"><span class="pre">v'</span></code> in <code class="docutils literal notranslate"><span class="pre">H</span></code>, or u’ = <code class="docutils literal notranslate"><span class="pre">v'</span></code> and <code class="docutils literal notranslate"><span class="pre">u</span></code> is adjacent with <code class="docutils literal notranslate"><span class="pre">v</span></code> in <code class="docutils literal notranslate"><span class="pre">G</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-weighted-graph-closed-cartesian"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">closedCartesian</span>: (%, %, (S, S) -&gt; S) -&gt; %</dt><dd><p>as Cartesian product but returns %.</p>
+</dd>
+</dl>
+<span class="target" id="l-weighted-graph-closed-tensor"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">closedTensor</span>: (%, %, (S, S) -&gt; S) -&gt; %</dt><dd><p>as tensor product but returns %.</p>
+</dd>
+<dt><a class="reference internal" href="CoercibleTo.html#l-coercible-to-coerce"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-weighted-graph-coerce"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="FinitePoset.html#l-finite-poset"><span class="std std-ref">FinitePoset</span></a> S -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce</span> <span class="pre">FinitePoset</span></code> to graph</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-create-width"><span class="std std-ref">createWidth</span></a>: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a> -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-create-x"><span class="std std-ref">createX</span></a>: (<a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-create-y"><span class="std std-ref">createY</span></a>: (<a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-cycle-closed"><span class="std std-ref">cycleClosed</span></a>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S, <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-cycle-open"><span class="std std-ref">cycleOpen</span></a>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S, <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-deep-diagram-svg"><span class="std std-ref">deepDiagramSvg</span></a>: (<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, %, <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>) -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-diagram-height"><span class="std std-ref">diagramHeight</span></a>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-diagrams-svg"><span class="std std-ref">diagramsSvg</span></a>: (<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %, <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>) -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-diagram-svg"><span class="std std-ref">diagramSvg</span></a>: (<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, %, <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>) -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-diagram-width"><span class="std std-ref">diagramWidth</span></a>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-distance"><span class="std std-ref">distance</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-distance-matrix"><span class="std std-ref">distanceMatrix</span></a>: % -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+</dl>
+<span class="target" id="l-weighted-graph-distance-weighted"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">distanceWeighted</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; Union(W, disjoint)</dt><dd><p>the shortest distance between ‘a’ and <code class="docutils literal notranslate"><span class="pre">'b'</span></code> in terms of weight.</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-flatten"><span class="std std-ref">flatten</span></a>: <a class="reference internal" href="DirectedGraph.html#l-directed-graph"><span class="std std-ref">DirectedGraph</span></a> % -&gt; %</dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-get-arrow-index"><span class="std std-ref">getArrowIndex</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-get-arrows"><span class="std std-ref">getArrows</span></a>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(name: <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, arrType: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, fromOb: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, toOb: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, xOffset: <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, yOffset: <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, map: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>)</dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-get-vertex-index"><span class="std std-ref">getVertexIndex</span></a>: (%, S) -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-get-vertices"><span class="std std-ref">getVertices</span></a>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(value: S, posX: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, posY: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>)</dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l-single-integer"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash-update"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-incidence-matrix"><span class="std std-ref">incidenceMatrix</span></a>: % -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-in-degree"><span class="std std-ref">inDegree</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-initial"><span class="std std-ref">initial</span></a>: () -&gt; %</dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-is-acyclic"><span class="std std-ref">isAcyclic?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-is-directed"><span class="std std-ref">isDirected?</span></a>: () -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-is-direct-successor"><span class="std std-ref">isDirectSuccessor?</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-is-fix-point"><span class="std std-ref">isFixPoint?</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-is-functional"><span class="std std-ref">isFunctional?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-is-greater-than"><span class="std std-ref">isGreaterThan?</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-kgraph"><span class="std std-ref">kgraph</span></a>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S, <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-laplacian-matrix"><span class="std std-ref">laplacianMatrix</span></a>: % -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-latex"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-loops-arrows"><span class="std std-ref">loopsArrows</span></a>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Loop.html#l-loop"><span class="std std-ref">Loop</span></a></dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-loops-at-node"><span class="std std-ref">loopsAtNode</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Loop.html#l-loop"><span class="std std-ref">Loop</span></a></dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-loops-nodes"><span class="std std-ref">loopsNodes</span></a>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Loop.html#l-loop"><span class="std std-ref">Loop</span></a></dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-loose-equals"><span class="std std-ref">looseEquals</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-map"><span class="std std-ref">map</span></a>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-map-contra"><span class="std std-ref">mapContra</span></a>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-max"><span class="std std-ref">max</span></a>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-max"><span class="std std-ref">max</span></a>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-merge"><span class="std std-ref">merge</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-min"><span class="std std-ref">min</span></a>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-min"><span class="std std-ref">min</span></a>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-node-from-arrow"><span class="std std-ref">nodeFromArrow</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-node-from-node"><span class="std std-ref">nodeFromNode</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-node-to-arrow"><span class="std std-ref">nodeToArrow</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-node-to-node"><span class="std std-ref">nodeToNode</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-out-degree"><span class="std std-ref">outDegree</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-route-arrows"><span class="std std-ref">routeArrows</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+</dl>
+<span class="target" id="l-weighted-graph-route-arrow-weight"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">routeArrowWeight</span>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; W</dt><dd><p>the cumulative weight of a given route. The route is given in terms of a sequence of arrow indexes.</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-route-nodes"><span class="std std-ref">routeNodes</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+</dl>
+<span class="target" id="l-weighted-graph-route-node-weight"></span><dl class="simple" id="index-9">
+<dt><span class="spadfun">routeNodeWeight</span>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; W</dt><dd><p>the cumulative weight of a given route. The route is given in terms of a sequence of node indexes.</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-spanning-forest-arrow"><span class="std std-ref">spanningForestArrow</span></a>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Tree.html#l-tree"><span class="std std-ref">Tree</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-spanning-forest-node"><span class="std std-ref">spanningForestNode</span></a>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Tree.html#l-tree"><span class="std std-ref">Tree</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-spanning-tree-arrow"><span class="std std-ref">spanningTreeArrow</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Tree.html#l-tree"><span class="std std-ref">Tree</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-spanning-tree-node"><span class="std std-ref">spanningTreeNode</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Tree.html#l-tree"><span class="std std-ref">Tree</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-subdiagram-svg"><span class="std std-ref">subdiagramSvg</span></a>: (<a class="reference internal" href="Scene.html#l-scene"><span class="std std-ref">Scene</span></a> <a class="reference internal" href="SCartesian.html#l-s-cartesian"><span class="std std-ref">SCartesian</span></a> 2, %, <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>, <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>) -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-terminal"><span class="std std-ref">terminal</span></a>: S -&gt; %</dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="FiniteGraph.html#l-finite-graph-unit"><span class="std std-ref">unit</span></a>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S, <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+</dd>
+</dl>
+<span class="target" id="l-weighted-graph-weighted-distance-matrix"></span><dl class="simple" id="index-10">
+<dt><span class="spadfun">weightedDistanceMatrix</span>: % -&gt; <a class="reference internal" href="TwoDimensionalArray.html#l-two-dimensional-array"><span class="std std-ref">TwoDimensionalArray</span></a> Union(W, disjoint)</dt><dd><p>The elements of the returned array will represent the distance weights between vertices. if there is no connection between the vertices then the element will be set to “disjoint”</p>
+</dd>
+</dl>
+<span class="target" id="l-weighted-graph-weighted-graph"></span><dl class="simple" id="index-11">
+<dt><span class="spadfun">weightedGraph</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(value: S, posX: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, posY: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>), <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(name: <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, arrType: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, fromOb: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, toOb: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, xOffset: <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, yOffset: <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, map: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>)) -&gt; %</dt><dd><p>constructor for graph with given objects and arrows more objects and arrows can be added later if required.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-12">
+<dt><span class="spadfun">weightedGraph</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(value: S, posX: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, posY: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, weight: W), <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(name: <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, weight: W, fromOb: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, toOb: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, xOffset: <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, yOffset: <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, map: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>)) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">weightedGraph(ob,</span> <span class="pre">ar)</span></code> constructs graph with objects on and arrows ar. More objects and arrows can be added later if required.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-13">
+<dt><span class="spadfun">weightedGraph</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>constructor for graph with given objects and adjacency matrix.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-14">
+<dt><span class="spadfun">weightedGraph</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(fromOb: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, toOb: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>)) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">weightedGraph(obs,</span> <span class="pre">ars)</span></code> constructs graph with objects <code class="docutils literal notranslate"><span class="pre">obs</span></code> and arrows ars. This constructor just has pure abstract graph information without decoration information.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-15">
+<dt><span class="spadfun">weightedGraph</span>: <a class="reference internal" href="FinitePoset.html#l-finite-poset"><span class="std std-ref">FinitePoset</span></a> S -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">weightedGraph(poset)</span></code> constructs graph from a partially ordered set. This will be a graph with, at most, one arrow between any two nodes.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-16">
+<dt><span class="spadfun">weightedGraph</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(value: S, posX: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, posY: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, weight: W) -&gt; %</dt><dd><p>constructor for graph with given objects more objects and arrows can be added later if required.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-17">
+<dt><span class="spadfun">weightedGraph</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S -&gt; %</dt><dd><p>constructor for graph with given list of object names. Use this version of the constructor if you don<code class="docutils literal notranslate"><span class="pre">'t</span></code> intend to create diagrams and therefore don<code class="docutils literal notranslate"><span class="pre">'t</span></code> care about <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code> coordinates. more objects and arrows can be added later if required.</p>
+</dd>
+</dl>
+<p><a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+<p><a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+<p><a class="reference internal" href="FiniteGraph.html#l-finite-graph"><span class="std std-ref">FiniteGraph</span></a> S</p>
+<p><a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="WeightedPolynomials.html" title="WeightedPolynomials(R, VarSet, E, P, vl, wl, wtlevel)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="Void.html" title="Void"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Domains.html" >Domains</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">WeightedGraph(S, W)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

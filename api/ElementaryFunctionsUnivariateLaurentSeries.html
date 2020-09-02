@@ -1,0 +1,277 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElementaryFunctionsUnivariateLaurentSeries(Coef, UTS, ULS) &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ElementaryFunctionsUnivariatePuiseuxSeries(Coef, ULS, UPXS, EFULS)" href="ElementaryFunctionsUnivariatePuiseuxSeries.html" />
+    <link rel="prev" title="ElementaryFunctionStructurePackage(R, F)" href="ElementaryFunctionStructurePackage.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="ElementaryFunctionsUnivariatePuiseuxSeries.html" title="ElementaryFunctionsUnivariatePuiseuxSeries(Coef, ULS, UPXS, EFULS)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="ElementaryFunctionStructurePackage.html" title="ElementaryFunctionStructurePackage(R, F)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">ElementaryFunctionsUnivariateLaurentSeries(Coef, UTS, ULS)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="elementaryfunctionsunivariatelaurentseries-coef-uts-uls">
+<span id="l-elementary-functions-univariate-laurent-series"></span><span id="index-0"></span><h1>ElementaryFunctionsUnivariateLaurentSeries(Coef, UTS, ULS)<a class="headerlink" href="#elementaryfunctionsunivariatelaurentseries-coef-uts-uls" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/efuls.spad#L1">efuls.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/efuls.spad#L1">[edit on github]</a></p>
+<ul class="simple">
+<li><p>Coef: <a class="reference internal" href="Algebra.html#l-algebra"><span class="std std-ref">Algebra</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></p></li>
+<li><p>UTS: <a class="reference internal" href="UnivariateTaylorSeriesCategory.html#l-univariate-taylor-series-category"><span class="std std-ref">UnivariateTaylorSeriesCategory</span></a> Coef</p></li>
+<li><p>ULS: <a class="reference internal" href="UnivariateLaurentSeriesConstructorCategory.html#l-univariate-laurent-series-constructor-category"><span class="std std-ref">UnivariateLaurentSeriesConstructorCategory</span></a>(Coef, UTS)</p></li>
+</ul>
+<p>This package provides elementary functions on any Laurent series domain over a field which was constructed from a Taylor series domain. These functions are implemented by calling the corresponding functions on the Taylor series domain. We also provide ‘partial functions’ which compute transcendental functions of Laurent series when possible and return “failed” when this is not possible.</p>
+<span class="target" id="id1"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">^</span>: (ULS, <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; ULS if Coef has <a class="reference internal" href="Field.html#l-field"><span class="std std-ref">Field</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">s</span> <span class="pre">^</span> <span class="pre">r</span></code> raises a Laurent series <code class="docutils literal notranslate"><span class="pre">s</span></code> to a rational power <code class="docutils literal notranslate"><span class="pre">r</span></code></p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-laurent-series-acos"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">acos</span>: ULS -&gt; ULS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">acos(z)</span></code> returns the arc-cosine of Laurent series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-laurent-series-acosh"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">acosh</span>: ULS -&gt; ULS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">acosh(z)</span></code> returns the inverse hyperbolic cosine of Laurent series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-acosh-if-can"><span class="std std-ref">acoshIfCan</span></a>: ULS -&gt; Union(ULS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> ULS</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-acos-if-can"><span class="std std-ref">acosIfCan</span></a>: ULS -&gt; Union(ULS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> ULS</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-laurent-series-acot"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">acot</span>: ULS -&gt; ULS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">acot(z)</span></code> returns the arc-cotangent of Laurent series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-laurent-series-acoth"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">acoth</span>: ULS -&gt; ULS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">acoth(z)</span></code> returns the inverse hyperbolic cotangent of Laurent series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-acoth-if-can"><span class="std std-ref">acothIfCan</span></a>: ULS -&gt; Union(ULS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> ULS</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-acot-if-can"><span class="std std-ref">acotIfCan</span></a>: ULS -&gt; Union(ULS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> ULS</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-laurent-series-acsc"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">acsc</span>: ULS -&gt; ULS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">acsc(z)</span></code> returns the arc-cosecant of Laurent series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-laurent-series-acsch"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">acsch</span>: ULS -&gt; ULS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">acsch(z)</span></code> returns the inverse hyperbolic cosecant of Laurent series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-acsch-if-can"><span class="std std-ref">acschIfCan</span></a>: ULS -&gt; Union(ULS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> ULS</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-acsc-if-can"><span class="std std-ref">acscIfCan</span></a>: ULS -&gt; Union(ULS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> ULS</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-laurent-series-asec"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">asec</span>: ULS -&gt; ULS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">asec(z)</span></code> returns the arc-secant of Laurent series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-laurent-series-asech"></span><dl class="simple" id="index-9">
+<dt><span class="spadfun">asech</span>: ULS -&gt; ULS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">asech(z)</span></code> returns the inverse hyperbolic secant of Laurent series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-asech-if-can"><span class="std std-ref">asechIfCan</span></a>: ULS -&gt; Union(ULS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> ULS</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-asec-if-can"><span class="std std-ref">asecIfCan</span></a>: ULS -&gt; Union(ULS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> ULS</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-laurent-series-asin"></span><dl class="simple" id="index-10">
+<dt><span class="spadfun">asin</span>: ULS -&gt; ULS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">asin(z)</span></code> returns the arc-sine of Laurent series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-laurent-series-asinh"></span><dl class="simple" id="index-11">
+<dt><span class="spadfun">asinh</span>: ULS -&gt; ULS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">asinh(z)</span></code> returns the inverse hyperbolic sine of Laurent series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-asinh-if-can"><span class="std std-ref">asinhIfCan</span></a>: ULS -&gt; Union(ULS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> ULS</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-asin-if-can"><span class="std std-ref">asinIfCan</span></a>: ULS -&gt; Union(ULS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> ULS</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-laurent-series-atan"></span><dl class="simple" id="index-12">
+<dt><span class="spadfun">atan</span>: ULS -&gt; ULS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">atan(z)</span></code> returns the arc-tangent of Laurent series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-laurent-series-atanh"></span><dl class="simple" id="index-13">
+<dt><span class="spadfun">atanh</span>: ULS -&gt; ULS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">atanh(z)</span></code> returns the inverse hyperbolic tangent of Laurent series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-atanh-if-can"><span class="std std-ref">atanhIfCan</span></a>: ULS -&gt; Union(ULS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> ULS</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-atan-if-can"><span class="std std-ref">atanIfCan</span></a>: ULS -&gt; Union(ULS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> ULS</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-laurent-series-cos"></span><dl class="simple" id="index-14">
+<dt><span class="spadfun">cos</span>: ULS -&gt; ULS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">cos(z)</span></code> returns the cosine of Laurent series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-laurent-series-cosh"></span><dl class="simple" id="index-15">
+<dt><span class="spadfun">cosh</span>: ULS -&gt; ULS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">cosh(z)</span></code> returns the hyperbolic cosine of Laurent series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-cosh-if-can"><span class="std std-ref">coshIfCan</span></a>: ULS -&gt; Union(ULS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> ULS</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-cos-if-can"><span class="std std-ref">cosIfCan</span></a>: ULS -&gt; Union(ULS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> ULS</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-laurent-series-cot"></span><dl class="simple" id="index-16">
+<dt><span class="spadfun">cot</span>: ULS -&gt; ULS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">cot(z)</span></code> returns the cotangent of Laurent series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-laurent-series-coth"></span><dl class="simple" id="index-17">
+<dt><span class="spadfun">coth</span>: ULS -&gt; ULS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coth(z)</span></code> returns the hyperbolic cotangent of Laurent series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-coth-if-can"><span class="std std-ref">cothIfCan</span></a>: ULS -&gt; Union(ULS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> ULS</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-cot-if-can"><span class="std std-ref">cotIfCan</span></a>: ULS -&gt; Union(ULS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> ULS</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-laurent-series-csc"></span><dl class="simple" id="index-18">
+<dt><span class="spadfun">csc</span>: ULS -&gt; ULS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">csc(z)</span></code> returns the cosecant of Laurent series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-laurent-series-csch"></span><dl class="simple" id="index-19">
+<dt><span class="spadfun">csch</span>: ULS -&gt; ULS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">csch(z)</span></code> returns the hyperbolic cosecant of Laurent series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-csch-if-can"><span class="std std-ref">cschIfCan</span></a>: ULS -&gt; Union(ULS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> ULS</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-csc-if-can"><span class="std std-ref">cscIfCan</span></a>: ULS -&gt; Union(ULS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> ULS</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-laurent-series-exp"></span><dl class="simple" id="index-20">
+<dt><span class="spadfun">exp</span>: ULS -&gt; ULS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">exp(z)</span></code> returns the exponential of Laurent series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-exp-if-can"><span class="std std-ref">expIfCan</span></a>: ULS -&gt; Union(ULS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> ULS</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-laurent-series-log"></span><dl class="simple" id="index-21">
+<dt><span class="spadfun">log</span>: ULS -&gt; ULS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">log(z)</span></code> returns the logarithm of Laurent series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-log-if-can"><span class="std std-ref">logIfCan</span></a>: ULS -&gt; Union(ULS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> ULS</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-nth-root-if-can"><span class="std std-ref">nthRootIfCan</span></a>: (ULS, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; Union(ULS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> ULS</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-laurent-series-sec"></span><dl class="simple" id="index-22">
+<dt><span class="spadfun">sec</span>: ULS -&gt; ULS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sec(z)</span></code> returns the secant of Laurent series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-laurent-series-sech"></span><dl class="simple" id="index-23">
+<dt><span class="spadfun">sech</span>: ULS -&gt; ULS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sech(z)</span></code> returns the hyperbolic secant of Laurent series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-sech-if-can"><span class="std std-ref">sechIfCan</span></a>: ULS -&gt; Union(ULS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> ULS</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-sec-if-can"><span class="std std-ref">secIfCan</span></a>: ULS -&gt; Union(ULS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> ULS</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-laurent-series-sin"></span><dl class="simple" id="index-24">
+<dt><span class="spadfun">sin</span>: ULS -&gt; ULS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sin(z)</span></code> returns the sine of Laurent series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-laurent-series-sinh"></span><dl class="simple" id="index-25">
+<dt><span class="spadfun">sinh</span>: ULS -&gt; ULS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sinh(z)</span></code> returns the hyperbolic sine of Laurent series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-sinh-if-can"><span class="std std-ref">sinhIfCan</span></a>: ULS -&gt; Union(ULS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> ULS</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-sin-if-can"><span class="std std-ref">sinIfCan</span></a>: ULS -&gt; Union(ULS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> ULS</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-laurent-series-tan"></span><dl class="simple" id="index-26">
+<dt><span class="spadfun">tan</span>: ULS -&gt; ULS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">tan(z)</span></code> returns the tangent of Laurent series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-laurent-series-tanh"></span><dl class="simple" id="index-27">
+<dt><span class="spadfun">tanh</span>: ULS -&gt; ULS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">tanh(z)</span></code> returns the hyperbolic tangent of Laurent series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-tanh-if-can"><span class="std std-ref">tanhIfCan</span></a>: ULS -&gt; Union(ULS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> ULS</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-tan-if-can"><span class="std std-ref">tanIfCan</span></a>: ULS -&gt; Union(ULS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> ULS</p>
+</dd>
+</dl>
+<p><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> ULS</p>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="ElementaryFunctionsUnivariatePuiseuxSeries.html" title="ElementaryFunctionsUnivariatePuiseuxSeries(Coef, ULS, UPXS, EFULS)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="ElementaryFunctionStructurePackage.html" title="ElementaryFunctionStructurePackage(R, F)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">ElementaryFunctionsUnivariateLaurentSeries(Coef, UTS, ULS)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

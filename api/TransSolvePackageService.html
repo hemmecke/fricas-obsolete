@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TransSolvePackageService R &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="TriangularMatrixOperations(R, Row, Col, M)" href="TriangularMatrixOperations.html" />
+    <link rel="prev" title="TransSolvePackage R" href="TransSolvePackage.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="TriangularMatrixOperations.html" title="TriangularMatrixOperations(R, Row, Col, M)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="TransSolvePackage.html" title="TransSolvePackage R"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">TransSolvePackageService R</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="transsolvepackageservice-r">
+<span id="l-trans-solve-package-service"></span><span id="index-0"></span><h1>TransSolvePackageService R<a class="headerlink" href="#transsolvepackageservice-r" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/transsolve.spad#L599">transsolve.spad line 599</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/transsolve.spad#L599">[edit on github]</a></p>
+<ul class="simple">
+<li><p>R: Join(<a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a>, <a class="reference internal" href="IntegralDomain.html#l-integral-domain"><span class="std std-ref">IntegralDomain</span></a>)</p></li>
+</ul>
+<p>This package finds the function <code class="docutils literal notranslate"><span class="pre">func3</span></code> where <code class="docutils literal notranslate"><span class="pre">func1</span></code> and <code class="docutils literal notranslate"><span class="pre">func2</span></code> are given and <code class="docutils literal notranslate"><span class="pre">func1</span></code> = <code class="docutils literal notranslate"><span class="pre">func3</span></code>(<code class="docutils literal notranslate"><span class="pre">func2</span></code>) . If there is no solution then function <code class="docutils literal notranslate"><span class="pre">func1</span></code> will be returned. An example would be <code class="docutils literal notranslate"><span class="pre">func1</span> <span class="pre">:=</span> <span class="pre">8*X^3+32*X^2-14*X</span> <span class="pre">::EXPR</span> <span class="pre">INT</span></code> and <code class="docutils literal notranslate"><span class="pre">func2</span> <span class="pre">:=</span> <span class="pre">2*X</span> <span class="pre">::EXPR</span> <span class="pre">INT</span></code> convert them via univariate to FRAC SUP EXPR INT and then the solution is <code class="docutils literal notranslate"><span class="pre">func3</span> <span class="pre">:=</span> <span class="pre">X^3+X^2-X</span></code> of type FRAC SUP EXPR INT</p>
+<span class="target" id="l-trans-solve-package-service-decompose-func"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">decomposeFunc</span>: (<a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> R, <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> R, <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> R) -&gt; <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">decomposeFunc(func1,</span> <span class="pre">func2,</span> <span class="pre">newvar)</span></code> returns a function <code class="docutils literal notranslate"><span class="pre">func3</span></code> where <code class="docutils literal notranslate"><span class="pre">func1</span></code> = <code class="docutils literal notranslate"><span class="pre">func3</span></code>(<code class="docutils literal notranslate"><span class="pre">func2</span></code>) and expresses it in the new variable newvar. If there is no solution then <code class="docutils literal notranslate"><span class="pre">func1</span></code> will be returned.</p>
+</dd>
+</dl>
+<span class="target" id="l-trans-solve-package-service-unvectorise"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">unvectorise</span>: (<a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> R, <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> R, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">unvectorise(vect,</span> <span class="pre">var,</span> <span class="pre">n)</span></code> returns <code class="docutils literal notranslate"><span class="pre">vect(1)</span> <span class="pre">+</span> <span class="pre">vect(2)*var</span> <span class="pre">+</span> <span class="pre">...</span> <span class="pre">+</span> <span class="pre">vect(n+1)*var^(n)</span></code> where <code class="docutils literal notranslate"><span class="pre">vect</span></code> is the vector of the coefficients of the polynomial, <code class="docutils literal notranslate"><span class="pre">var</span></code> the new variable and <code class="docutils literal notranslate"><span class="pre">n</span></code> the degree.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="TriangularMatrixOperations.html" title="TriangularMatrixOperations(R, Row, Col, M)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="TransSolvePackage.html" title="TransSolvePackage R"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">TransSolvePackageService R</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

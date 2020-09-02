@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnyFunctions1 S &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ApplyRules(Base, R, F)" href="ApplyRules.html" />
+    <link rel="prev" title="AlgFactor UP" href="AlgFactor.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="ApplyRules.html" title="ApplyRules(Base, R, F)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="AlgFactor.html" title="AlgFactor UP"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">AnyFunctions1 S</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="anyfunctions1-s">
+<span id="l-any-functions1"></span><span id="index-0"></span><h1>AnyFunctions1 S<a class="headerlink" href="#anyfunctions1-s" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/any.spad#L125">any.spad line 125</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/any.spad#L125">[edit on github]</a></p>
+<ul class="simple">
+<li><p>S: <a class="reference internal" href="Type.html#l-type"><span class="std std-ref">Type</span></a></p></li>
+</ul>
+<p><a class="reference internal" href="#l-any-functions1"><span class="std std-ref">AnyFunctions1</span></a> implements several utility functions for working with <a class="reference internal" href="Any.html#l-any"><span class="std std-ref">Any</span></a>. These functions are used to go back and forth between objects of <a class="reference internal" href="Any.html#l-any"><span class="std std-ref">Any</span></a> and objects of other types.</p>
+<span class="target" id="l-any-functions1-coerce"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">coerce</span>: S -&gt; <a class="reference internal" href="Any.html#l-any"><span class="std std-ref">Any</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(s)</span></code> creates an object of <a class="reference internal" href="Any.html#l-any"><span class="std std-ref">Any</span></a> from the object <code class="docutils literal notranslate"><span class="pre">s</span></code> of type <code class="docutils literal notranslate"><span class="pre">S</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-any-functions1-retract"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">retract</span>: <a class="reference internal" href="Any.html#l-any"><span class="std std-ref">Any</span></a> -&gt; S</dt><dd><p><code class="docutils literal notranslate"><span class="pre">retract(a)</span></code> tries to convert <code class="docutils literal notranslate"><span class="pre">a</span></code> into an object of type <code class="docutils literal notranslate"><span class="pre">S</span></code>. If possible, it returns the object. Error: if no such retraction is possible.</p>
+</dd>
+</dl>
+<span class="target" id="l-any-functions1-retractable"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">retractable?</span>: <a class="reference internal" href="Any.html#l-any"><span class="std std-ref">Any</span></a> -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">retractable?(a)</span></code> tests if <code class="docutils literal notranslate"><span class="pre">a</span></code> can be converted into an object of type <code class="docutils literal notranslate"><span class="pre">S</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-any-functions1-retract-if-can"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">retractIfCan</span>: <a class="reference internal" href="Any.html#l-any"><span class="std std-ref">Any</span></a> -&gt; Union(S, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">retractIfCan(a)</span></code> tries change <code class="docutils literal notranslate"><span class="pre">a</span></code> into an object of type <code class="docutils literal notranslate"><span class="pre">S</span></code>. If it can, then such an object is returned. Otherwise, “failed” is returned.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="ApplyRules.html" title="ApplyRules(Base, R, F)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="AlgFactor.html" title="AlgFactor UP"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">AnyFunctions1 S</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

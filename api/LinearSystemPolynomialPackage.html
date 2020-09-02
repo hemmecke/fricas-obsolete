@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinearSystemPolynomialPackage(R, E, OV, P) &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="LinGroebnerPackage(lv, F)" href="LinGroebnerPackage.html" />
+    <link rel="prev" title="LinearSystemMatrixPackage1 F" href="LinearSystemMatrixPackage1.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="LinGroebnerPackage.html" title="LinGroebnerPackage(lv, F)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="LinearSystemMatrixPackage1.html" title="LinearSystemMatrixPackage1 F"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">LinearSystemPolynomialPackage(R, E, OV, P)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="linearsystempolynomialpackage-r-e-ov-p">
+<span id="l-linear-system-polynomial-package"></span><span id="index-0"></span><h1>LinearSystemPolynomialPackage(R, E, OV, P)<a class="headerlink" href="#linearsystempolynomialpackage-r-e-ov-p" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/solvelin.spad#L154">solvelin.spad line 154</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/solvelin.spad#L154">[edit on github]</a></p>
+<ul class="simple">
+<li><p>R: <a class="reference internal" href="IntegralDomain.html#l-integral-domain"><span class="std std-ref">IntegralDomain</span></a></p></li>
+<li><p>E: <a class="reference internal" href="OrderedAbelianMonoidSup.html#l-ordered-abelian-monoid-sup"><span class="std std-ref">OrderedAbelianMonoidSup</span></a></p></li>
+<li><p>OV: <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a></p></li>
+<li><p>P: <a class="reference internal" href="PolynomialCategory.html#l-polynomial-category"><span class="std std-ref">PolynomialCategory</span></a>(R, E, OV)</p></li>
+</ul>
+<p>this package finds the solutions of linear systems presented as a list of polynomials.</p>
+<span class="target" id="l-linear-system-polynomial-package-into-matrix"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">intoMatrix</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> OV) -&gt; Record(mat: <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> P, vec: <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> P)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">intoMatrix(lp,</span> <span class="pre">lvar)</span></code> converts linear in symbols lvar system of polynomials <code class="docutils literal notranslate"><span class="pre">lp</span></code> = 0 into matrix form</p>
+</dd>
+</dl>
+<span class="target" id="l-linear-system-polynomial-package-lin-solve"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">linSolve</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> OV) -&gt; Record(particular: Union(<a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> P, failed), basis: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> P)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">linSolve(lp,</span> <span class="pre">lvar)</span></code> finds the solutions of the linear system of polynomials <code class="docutils literal notranslate"><span class="pre">lp</span></code> = 0 with respect to the list of symbols lvar.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="LinGroebnerPackage.html" title="LinGroebnerPackage(lv, F)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="LinearSystemMatrixPackage1.html" title="LinearSystemMatrixPackage1 F"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">LinearSystemPolynomialPackage(R, E, OV, P)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

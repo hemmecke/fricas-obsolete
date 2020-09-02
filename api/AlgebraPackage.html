@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlgebraPackage(R, A) &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="AlgFactor UP" href="AlgFactor.html" />
+    <link rel="prev" title="AlgebraicMultFact(OV, E, P)" href="AlgebraicMultFact.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="AlgFactor.html" title="AlgFactor UP"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="AlgebraicMultFact.html" title="AlgebraicMultFact(OV, E, P)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">AlgebraPackage(R, A)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="algebrapackage-r-a">
+<span id="l-algebra-package"></span><span id="index-0"></span><h1>AlgebraPackage(R, A)<a class="headerlink" href="#algebrapackage-r-a" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/naalg.spad#L522">naalg.spad line 522</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/naalg.spad#L522">[edit on github]</a></p>
+<ul class="simple">
+<li><p>R: <a class="reference internal" href="IntegralDomain.html#l-integral-domain"><span class="std std-ref">IntegralDomain</span></a></p></li>
+<li><p>A: <a class="reference internal" href="FramedNonAssociativeAlgebra.html#l-framed-non-associative-algebra"><span class="std std-ref">FramedNonAssociativeAlgebra</span></a> R</p></li>
+</ul>
+<p>AlgebraPackage assembles a variety of useful functions for general algebras.</p>
+<span class="target" id="l-algebra-package-basis"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">basis</span>: <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> A -&gt; <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> A if R has <a class="reference internal" href="EuclideanDomain.html#l-euclidean-domain"><span class="std std-ref">EuclideanDomain</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">basis(va)</span></code> selects a basis from the elements of <code class="docutils literal notranslate"><span class="pre">va</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-algebra-package-basis-of-center"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">basisOfCenter</span>: () -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> A</dt><dd><p><code class="docutils literal notranslate"><span class="pre">basisOfCenter()</span></code> returns a basis of the space of all <code class="docutils literal notranslate"><span class="pre">x</span></code> of <code class="docutils literal notranslate"><span class="pre">A</span></code> satisfying <code class="docutils literal notranslate"><span class="pre">commutator(x,</span> <span class="pre">a)</span> <span class="pre">=</span> <span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">associator(x,</span> <span class="pre">a,</span> <span class="pre">b)</span> <span class="pre">=</span> <span class="pre">associator(a,</span> <span class="pre">x,</span> <span class="pre">b)</span> <span class="pre">=</span> <span class="pre">associator(a,</span> <span class="pre">b,</span> <span class="pre">x)</span> <span class="pre">=</span> <span class="pre">0</span></code> for all <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code> in <code class="docutils literal notranslate"><span class="pre">A</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-algebra-package-basis-of-centroid"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">basisOfCentroid</span>: () -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">basisOfCentroid()</span></code> returns a basis of the centroid, i.e. the endomorphism ring of <code class="docutils literal notranslate"><span class="pre">A</span></code> considered as <code class="docutils literal notranslate"><span class="pre">(A,</span> <span class="pre">A)</span></code>-bimodule.</p>
+</dd>
+</dl>
+<span class="target" id="l-algebra-package-basis-of-commuting-elements"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">basisOfCommutingElements</span>: () -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> A</dt><dd><p><code class="docutils literal notranslate"><span class="pre">basisOfCommutingElements()</span></code> returns a basis of the space of all <code class="docutils literal notranslate"><span class="pre">x</span></code> of <code class="docutils literal notranslate"><span class="pre">A</span></code> satisfying <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">=</span> <span class="pre">commutator(x,</span> <span class="pre">a)</span></code> for all <code class="docutils literal notranslate"><span class="pre">a</span></code> in <code class="docutils literal notranslate"><span class="pre">A</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-algebra-package-basis-of-left-annihilator"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">basisOfLeftAnnihilator</span>: A -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> A</dt><dd><p><code class="docutils literal notranslate"><span class="pre">basisOfLeftAnnihilator(a)</span></code> returns a basis of the space of all <code class="docutils literal notranslate"><span class="pre">x</span></code> of <code class="docutils literal notranslate"><span class="pre">A</span></code> satisfying <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">=</span> <span class="pre">x*a</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-algebra-package-basis-of-left-nucleus"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">basisOfLeftNucleus</span>: () -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> A</dt><dd><p><code class="docutils literal notranslate"><span class="pre">basisOfLeftNucleus()</span></code> returns a basis of the space of all <code class="docutils literal notranslate"><span class="pre">x</span></code> of <code class="docutils literal notranslate"><span class="pre">A</span></code> satisfying <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">=</span> <span class="pre">associator(x,</span> <span class="pre">a,</span> <span class="pre">b)</span></code> for all <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code> in <code class="docutils literal notranslate"><span class="pre">A</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-algebra-package-basis-of-left-nucloid"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">basisOfLeftNucloid</span>: () -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">basisOfLeftNucloid()</span></code> returns a basis of the space of endomorphisms of <code class="docutils literal notranslate"><span class="pre">A</span></code> as right module. Note: left nucloid coincides with left nucleus if <code class="docutils literal notranslate"><span class="pre">A</span></code> has a unit.</p>
+</dd>
+</dl>
+<span class="target" id="l-algebra-package-basis-of-middle-nucleus"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">basisOfMiddleNucleus</span>: () -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> A</dt><dd><p><code class="docutils literal notranslate"><span class="pre">basisOfMiddleNucleus()</span></code> returns a basis of the space of all <code class="docutils literal notranslate"><span class="pre">x</span></code> of <code class="docutils literal notranslate"><span class="pre">A</span></code> satisfying <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">=</span> <span class="pre">associator(a,</span> <span class="pre">x,</span> <span class="pre">b)</span></code> for all <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code> in <code class="docutils literal notranslate"><span class="pre">A</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-algebra-package-basis-of-nucleus"></span><dl class="simple" id="index-9">
+<dt><span class="spadfun">basisOfNucleus</span>: () -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> A</dt><dd><p><code class="docutils literal notranslate"><span class="pre">basisOfNucleus()</span></code> returns a basis of the space of all <code class="docutils literal notranslate"><span class="pre">x</span></code> of <code class="docutils literal notranslate"><span class="pre">A</span></code> satisfying <code class="docutils literal notranslate"><span class="pre">associator(x,</span> <span class="pre">a,</span> <span class="pre">b)</span> <span class="pre">=</span> <span class="pre">associator(a,</span> <span class="pre">x,</span> <span class="pre">b)</span> <span class="pre">=</span> <span class="pre">associator(a,</span> <span class="pre">b,</span> <span class="pre">x)</span> <span class="pre">=</span> <span class="pre">0</span></code> for all <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code> in <code class="docutils literal notranslate"><span class="pre">A</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-algebra-package-basis-of-right-annihilator"></span><dl class="simple" id="index-10">
+<dt><span class="spadfun">basisOfRightAnnihilator</span>: A -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> A</dt><dd><p><code class="docutils literal notranslate"><span class="pre">basisOfRightAnnihilator(a)</span></code> returns a basis of the space of all <code class="docutils literal notranslate"><span class="pre">x</span></code> of <code class="docutils literal notranslate"><span class="pre">A</span></code> satisfying <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">=</span> <span class="pre">a*x</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-algebra-package-basis-of-right-nucleus"></span><dl class="simple" id="index-11">
+<dt><span class="spadfun">basisOfRightNucleus</span>: () -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> A</dt><dd><p><code class="docutils literal notranslate"><span class="pre">basisOfRightNucleus()</span></code> returns a basis of the space of all <code class="docutils literal notranslate"><span class="pre">x</span></code> of <code class="docutils literal notranslate"><span class="pre">A</span></code> satisfying <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">=</span> <span class="pre">associator(a,</span> <span class="pre">b,</span> <span class="pre">x)</span></code> for all <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code> in <code class="docutils literal notranslate"><span class="pre">A</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-algebra-package-basis-of-right-nucloid"></span><dl class="simple" id="index-12">
+<dt><span class="spadfun">basisOfRightNucloid</span>: () -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">basisOfRightNucloid()</span></code> returns a basis of the space of endomorphisms of <code class="docutils literal notranslate"><span class="pre">A</span></code> as left module. Note: right nucloid coincides with right nucleus if <code class="docutils literal notranslate"><span class="pre">A</span></code> has a unit.</p>
+</dd>
+</dl>
+<span class="target" id="l-algebra-package-bi-rank"></span><dl class="simple" id="index-13">
+<dt><span class="spadfun">biRank</span>: A -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">biRank(x)</span></code> determines the number of linearly independent elements in <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">x*bi</span></code>, <code class="docutils literal notranslate"><span class="pre">bi*x</span></code>, <code class="docutils literal notranslate"><span class="pre">bi*x*bj</span></code>, <code class="docutils literal notranslate"><span class="pre">i,</span> <span class="pre">j=1,</span> <span class="pre">...,</span> <span class="pre">n</span></code>, where <code class="docutils literal notranslate"><span class="pre">b=[b1,</span> <span class="pre">...,</span> <span class="pre">bn]</span></code> is a basis. Note: if <code class="docutils literal notranslate"><span class="pre">A</span></code> has a unit, then <a class="reference internal" href="#l-algebra-package-double-rank"><span class="std std-ref">doubleRank</span></a>, <a class="reference internal" href="#l-algebra-package-weak-bi-rank"><span class="std std-ref">weakBiRank</span></a> and <a class="reference internal" href="#l-algebra-package-bi-rank"><span class="std std-ref">biRank</span></a> coincide.</p>
+</dd>
+</dl>
+<span class="target" id="l-algebra-package-double-rank"></span><dl class="simple" id="index-14">
+<dt><span class="spadfun">doubleRank</span>: A -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">doubleRank(x)</span></code> determines the number of linearly independent elements in <code class="docutils literal notranslate"><span class="pre">b1*x</span></code>, …, <code class="docutils literal notranslate"><span class="pre">x*bn</span></code>, where <code class="docutils literal notranslate"><span class="pre">b=[b1,</span> <span class="pre">...,</span> <span class="pre">bn]</span></code> is a basis.</p>
+</dd>
+</dl>
+<span class="target" id="l-algebra-package-left-rank"></span><dl class="simple" id="index-15">
+<dt><span class="spadfun">leftRank</span>: A -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">leftRank(x)</span></code> determines the number of linearly independent elements in <code class="docutils literal notranslate"><span class="pre">x*b1</span></code>, …, <code class="docutils literal notranslate"><span class="pre">x*bn</span></code>, where <code class="docutils literal notranslate"><span class="pre">b=[b1,</span> <span class="pre">...,</span> <span class="pre">bn]</span></code> is a basis.</p>
+</dd>
+</dl>
+<span class="target" id="l-algebra-package-radical-of-left-trace-form"></span><dl class="simple" id="index-16">
+<dt><span class="spadfun">radicalOfLeftTraceForm</span>: () -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> A</dt><dd><p><code class="docutils literal notranslate"><span class="pre">radicalOfLeftTraceForm()</span></code> returns basis for null space of <code class="docutils literal notranslate"><span class="pre">leftTraceMatrix()</span></code>, if the algebra is associative, alternative or a Jordan algebra, then this space equals the radical (maximal nil ideal) of the algebra.</p>
+</dd>
+</dl>
+<span class="target" id="l-algebra-package-right-rank"></span><dl class="simple" id="index-17">
+<dt><span class="spadfun">rightRank</span>: A -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">rightRank(x)</span></code> determines the number of linearly independent elements in <code class="docutils literal notranslate"><span class="pre">b1*x</span></code>, …, <code class="docutils literal notranslate"><span class="pre">bn*x</span></code>, where <code class="docutils literal notranslate"><span class="pre">b=[b1,</span> <span class="pre">...,</span> <span class="pre">bn]</span></code> is a basis.</p>
+</dd>
+</dl>
+<span class="target" id="l-algebra-package-weak-bi-rank"></span><dl class="simple" id="index-18">
+<dt><span class="spadfun">weakBiRank</span>: A -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">weakBiRank(x)</span></code> determines the number of linearly independent elements in the <code class="docutils literal notranslate"><span class="pre">bi*x*bj</span></code>, <code class="docutils literal notranslate"><span class="pre">i,</span> <span class="pre">j=1,</span> <span class="pre">...,</span> <span class="pre">n</span></code>, where <code class="docutils literal notranslate"><span class="pre">b=[b1,</span> <span class="pre">...,</span> <span class="pre">bn]</span></code> is a basis.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="AlgFactor.html" title="AlgFactor UP"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="AlgebraicMultFact.html" title="AlgebraicMultFact(OV, E, P)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">AlgebraPackage(R, A)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

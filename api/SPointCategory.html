@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPointCategory &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="SquareFreeNormalizedTriangularSetCategory(R, E, V, P)" href="SquareFreeNormalizedTriangularSetCategory.html" />
+    <link rel="prev" title="SpecialFunctionCategory" href="SpecialFunctionCategory.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="SquareFreeNormalizedTriangularSetCategory.html" title="SquareFreeNormalizedTriangularSetCategory(R, E, V, P)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="SpecialFunctionCategory.html" title="SpecialFunctionCategory"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Categories.html" accesskey="U">Categories</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">SPointCategory</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="spointcategory">
+<span id="l-s-point-category"></span><span id="index-0"></span><h1>SPointCategory<a class="headerlink" href="#spointcategory" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/scene.spad#L828">scene.spad line 828</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/scene.spad#L828">[edit on github]</a></p>
+<p>PointCategory is the category of points and vectors in space. Points may be used to represent shapes in a scenegraph such as: the vertices of a cube or points along a line. Shapes such as these may be defined explicitly or may be plotted. We implement SetCategory to allow us to curry transforms from one point to another.</p>
+<span class="target" id="id1"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">*</span>: (<a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>, %) -&gt; %</dt><dd><p><a href="#id2"><span class="problematic" id="id3">*</span></a>(<code class="docutils literal notranslate"><span class="pre">s</span></code>, <code class="docutils literal notranslate"><span class="pre">x</span></code>) gives scalar multiplication Although, scalar multiplication is strictly only a valid operation for vectors and not points, we allow it here because there are some useful short cuts, for instance, to find the central point between two points we can add them together and scalar multiply by 0.5.</p>
+</dd>
+</dl>
+<span class="target" id="id4"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">+</span>: (%, %) -&gt; %</dt><dd><p>+(<code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code>) gives addition add the corresponding elements of the vector or point. The type (vector or point) depends on the following table: vector + vector = vector point + vector = point point + point = invalid (but interpret as vector) Although, adding two points is not strictly a valid operation, we allow it here by interpreting the point as a vector relative to the origin. We do that because there are some useful short cuts, for instance, to find the central point between two points we can add them together and scalar multiply by 0.5.</p>
+</dd>
+</dl>
+<span class="target" id="id5"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">-</span>: (%, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">-(x,</span> <span class="pre">y)</span></code> gives subtraction subtract the corresponding elements of the vector or point. The type (vector or point) depends on the following table: vector - vector = vector point - vector = point vector - point = invalid (but interpret as point) point - point = invalid (but interpret as vector) Although, subtracting two points is not strictly a valid operation, we allow it here by interpreting the result as the vector distance between the two points.</p>
+</dd>
+<dt><a class="reference internal" href="BasicType.html#id1"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+<dt><a class="reference internal" href="BasicType.html#id2"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-s-point-category-coerce"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">coerce</span>: % -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p>output</p>
+</dd>
+</dl>
+<span class="target" id="l-s-point-category-colinearity"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">colinearity</span>: (%, %) -&gt; <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">colinearity(x,</span> <span class="pre">y)</span></code> returns a measure of how parallel two vectors are independent of the length of the vectors: 1.0 is completely parallel 0.0 is completely perpendicular returned value will be between these</p>
+</dd>
+</dl>
+<span class="target" id="l-s-point-category-dimension"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">dimension</span>: % -&gt; <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">dimension(p)</span></code> returns the number of dimensions that make up the point category <code class="docutils literal notranslate"><span class="pre">p</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-s-point-category-distance"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">distance</span>: (%, %) -&gt; <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">distance(p1,</span> <span class="pre">p2)</span></code> returns the distance between the points <code class="docutils literal notranslate"><span class="pre">p1</span></code> is the first point. <code class="docutils literal notranslate"><span class="pre">p2</span></code> is the second point. There are 2 metrics associated with any SPointCategory the underlying space and the space that it is embedded in this is the distance in the underlying space.</p>
+</dd>
+</dl>
+<span class="target" id="l-s-point-category-distance-squared"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">distanceSquared</span>: (%, %) -&gt; <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">distanceSquared(p1,</span> <span class="pre">p2)</span></code> returns the distance between the points <code class="docutils literal notranslate"><span class="pre">p1</span></code> and <code class="docutils literal notranslate"><span class="pre">p2</span></code>. There are 2 metrics associated with any SPointCategory the underlying space and the space that it is embedded in this is the distance in the underlying space.</p>
+</dd>
+</dl>
+<span class="target" id="l-s-point-category-extended-coords"></span><dl class="simple" id="index-9">
+<dt><span class="spadfun">extendedCoords</span>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">extendedCoords(pt)</span></code> returns extended coordinates as a list.</p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l-single-integer"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash-update"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-s-point-category-in-bounds"></span><dl class="simple" id="index-10">
+<dt><span class="spadfun">inBounds?</span>: (%, %, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">inBounds?(pt,</span> <span class="pre">mns,</span> <span class="pre">mxs)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if <code class="docutils literal notranslate"><span class="pre">pt</span></code> is inside bounding box where bounding box is specified by min and max.</p>
+</dd>
+</dl>
+<span class="target" id="l-s-point-category-is-point"></span><dl class="simple" id="index-11">
+<dt><span class="spadfun">isPoint?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">isPoint?(p)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if this represents a point as opposed to a vector.</p>
+</dd>
+</dl>
+<span class="target" id="l-s-point-category-is-vector"></span><dl class="simple" id="index-12">
+<dt><span class="spadfun">isVector?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">isVector?</span> <span class="pre">returns</span></code> <code class="docutils literal notranslate"><span class="pre">true</span></code> if this represents a vector as opposed to a point.</p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-latex"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-s-point-category-max"></span><dl class="simple" id="index-13">
+<dt><span class="spadfun">max</span>: (%, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">max(a,</span> <span class="pre">b)</span></code> returns a point whose value in each dimension is the maximum. So if a has the largest <code class="docutils literal notranslate"><span class="pre">x</span></code> value and <code class="docutils literal notranslate"><span class="pre">b</span></code> has the largest <code class="docutils literal notranslate"><span class="pre">y</span></code> value then the result will combine these. This is useful for constructing boundary boxes around sets of points.</p>
+</dd>
+</dl>
+<span class="target" id="l-s-point-category-min"></span><dl class="simple" id="index-14">
+<dt><span class="spadfun">min</span>: (%, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">min(a,</span> <span class="pre">b)</span></code> returns a point whose value in each dimension is the minimum. So if a has the smallest <code class="docutils literal notranslate"><span class="pre">x</span></code> value and <code class="docutils literal notranslate"><span class="pre">b</span></code> has the smallest <code class="docutils literal notranslate"><span class="pre">y</span></code> value then the result will combine these. This is useful for constructing boundary boxes around sets of points.</p>
+</dd>
+</dl>
+<span class="target" id="l-s-point-category-parallel"></span><dl class="simple" id="index-15">
+<dt><span class="spadfun">parallel</span>: (%, %) -&gt; <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">parallel(x,</span> <span class="pre">y)</span></code> returns the length of the parallel component of two vectors. In the case of Euclidean space this is the dot product of two vectors. We use this function to test the colinearity</p>
+</dd>
+</dl>
+<span class="target" id="l-s-point-category-perpendicular"></span><dl class="simple" id="index-16">
+<dt><span class="spadfun">perpendicular</span>: (%, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">perpendicular(x,</span> <span class="pre">y)</span></code> returns a vector perpendicular to the two vectors in the case of 3D Euclidean space this is the cross the product of two vectors. We use this function to compute orthogonal</p>
+</dd>
+</dl>
+<span class="target" id="l-s-point-category-pnan"></span><dl class="simple" id="index-17">
+<dt><span class="spadfun">Pnan?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">Pnan?(p)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if any of its elements are not valid DoubleFloat values. Examples of invalid floating point numbers are when we have divided a given element by zero or taken sqrt of negative number at some stage? Note: we can still represent a point at infinity and we can represent points using complex numbers, but we do this using projective or conformal space or by using the appropriate instance of SPointCategory, not by using invalid floating point numbers.</p>
+</dd>
+</dl>
+<span class="target" id="l-s-point-category-screen-coords"></span><dl class="simple" id="index-18">
+<dt><span class="spadfun">screenCoords</span>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">screenCoords(pt)</span></code> returns screen coordinates as a list.</p>
+</dd>
+</dl>
+<span class="target" id="l-s-point-category-screen-coord-x"></span><dl class="simple" id="index-19">
+<dt><span class="spadfun">screenCoordX</span>: % -&gt; <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">screenCoordX(pt)</span></code> returns the <code class="docutils literal notranslate"><span class="pre">'x'</span></code>(left to right) screen coordinate.</p>
+</dd>
+</dl>
+<span class="target" id="l-s-point-category-screen-coord-y"></span><dl class="simple" id="index-20">
+<dt><span class="spadfun">screenCoordY</span>: % -&gt; <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">screenCoordY(pt)</span></code> returns the <code class="docutils literal notranslate"><span class="pre">'y'</span></code>(bottom to top) screen coordinate.</p>
+</dd>
+</dl>
+<span class="target" id="l-s-point-category-screen-coord-z"></span><dl class="simple" id="index-21">
+<dt><span class="spadfun">screenCoordZ</span>: % -&gt; <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">screenCoordZ(pt)</span></code> returns the <code class="docutils literal notranslate"><span class="pre">'z'</span></code>(out from screen) screen coordinate.</p>
+</dd>
+</dl>
+<span class="target" id="l-s-point-category-sipnt"></span><dl class="simple" id="index-22">
+<dt><span class="spadfun">sipnt</span>: (<a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sipnt(a,</span> <span class="pre">b)</span></code> constructs a 2D point defined by a and <code class="docutils literal notranslate"><span class="pre">b</span></code> of type Integer</p>
+</dd>
+</dl>
+<dl class="simple" id="index-23">
+<dt><span class="spadfun">sipnt</span>: (<a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sipnt(a,</span> <span class="pre">b,</span> <span class="pre">c)</span></code> constructs a 3D point defined by a, <code class="docutils literal notranslate"><span class="pre">b</span></code> and <code class="docutils literal notranslate"><span class="pre">c</span></code> of type Integer</p>
+</dd>
+</dl>
+<span class="target" id="l-s-point-category-sivec"></span><dl class="simple" id="index-24">
+<dt><span class="spadfun">sivec</span>: (<a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sivec(a,</span> <span class="pre">b)</span></code> constructs a 2D vector defined by a and <code class="docutils literal notranslate"><span class="pre">b</span></code> of type Integer</p>
+</dd>
+</dl>
+<dl class="simple" id="index-25">
+<dt><span class="spadfun">sivec</span>: (<a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sivec(a,</span> <span class="pre">b,</span> <span class="pre">c)</span></code> constructs a 3D vector defined by a, <code class="docutils literal notranslate"><span class="pre">b</span></code> and <code class="docutils literal notranslate"><span class="pre">c</span></code> of type Integer</p>
+</dd>
+</dl>
+<span class="target" id="l-s-point-category-spnt"></span><dl class="simple" id="index-26">
+<dt><span class="spadfun">spnt</span>: (<a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>, <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">spnt(a,</span> <span class="pre">b)</span></code> constructs a 2D point defined by a and <code class="docutils literal notranslate"><span class="pre">b</span></code> of type <code class="docutils literal notranslate"><span class="pre">R</span></code></p>
+</dd>
+</dl>
+<dl class="simple" id="index-27">
+<dt><span class="spadfun">spnt</span>: (<a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>, <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>, <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">spnt(a,</span> <span class="pre">b,</span> <span class="pre">c)</span></code> constructs a 3D point defined by a, <code class="docutils literal notranslate"><span class="pre">b</span></code> and <code class="docutils literal notranslate"><span class="pre">c</span></code> of type <code class="docutils literal notranslate"><span class="pre">R</span></code></p>
+</dd>
+</dl>
+<span class="target" id="l-s-point-category-svec"></span><dl class="simple" id="index-28">
+<dt><span class="spadfun">svec</span>: (<a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>, <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">svec(a,</span> <span class="pre">b)</span></code> constructs a 2D vector defined by a and <code class="docutils literal notranslate"><span class="pre">b</span></code> of type <code class="docutils literal notranslate"><span class="pre">R</span></code></p>
+</dd>
+</dl>
+<dl class="simple" id="index-29">
+<dt><span class="spadfun">svec</span>: (<a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>, <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>, <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">svec(a,</span> <span class="pre">b,</span> <span class="pre">c)</span></code> constructs a 3D vector defined by a, <code class="docutils literal notranslate"><span class="pre">b</span></code> and <code class="docutils literal notranslate"><span class="pre">c</span></code> of type <code class="docutils literal notranslate"><span class="pre">R</span></code></p>
+</dd>
+</dl>
+<span class="target" id="l-s-point-category-to-point"></span><dl class="simple" id="index-30">
+<dt><span class="spadfun">toPoint</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">toPoint(p)</span></code> returns a Point with the same coordinates as <code class="docutils literal notranslate"><span class="pre">p</span></code> If <code class="docutils literal notranslate"><span class="pre">p</span></code> was originally a vector then that will be treated as the distance from the origin.</p>
+</dd>
+</dl>
+<span class="target" id="l-s-point-category-to-vector"></span><dl class="simple" id="index-31">
+<dt><span class="spadfun">toVector</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">toVector</span> <span class="pre">returns</span></code> a Vector with the same coordinates as <code class="docutils literal notranslate"><span class="pre">p</span></code> If <code class="docutils literal notranslate"><span class="pre">p</span></code> was originally a point then the vector will be the distance from the origin.</p>
+</dd>
+</dl>
+<span class="target" id="l-s-point-category-unit-vector"></span><dl class="simple" id="index-32">
+<dt><span class="spadfun">unitVector</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">unitVector(p)</span></code> returns a vector with the same direction as <code class="docutils literal notranslate"><span class="pre">p</span></code> but with unit length. We scale until length is 1</p>
+</dd>
+</dl>
+<p><a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+<p><a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+<p><a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="SquareFreeNormalizedTriangularSetCategory.html" title="SquareFreeNormalizedTriangularSetCategory(R, E, V, P)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="SpecialFunctionCategory.html" title="SpecialFunctionCategory"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Categories.html" >Categories</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">SPointCategory</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

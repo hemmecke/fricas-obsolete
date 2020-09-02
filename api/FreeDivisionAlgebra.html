@@ -1,0 +1,756 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreeDivisionAlgebra(VAR, F) &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="FreeGroup S" href="FreeGroup.html" />
+    <link rel="prev" title="FractionalIdealAsModule(R, F, UP, A, ibasis)" href="FractionalIdealAsModule.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="FreeGroup.html" title="FreeGroup S"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="FractionalIdealAsModule.html" title="FractionalIdealAsModule(R, F, UP, A, ibasis)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Domains.html" accesskey="U">Domains</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">FreeDivisionAlgebra(VAR, F)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="freedivisionalgebra-var-f">
+<span id="l-free-division-algebra"></span><span id="index-0"></span><h1>FreeDivisionAlgebra(VAR, F)<a class="headerlink" href="#freedivisionalgebra-var-f" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/fdalg.spad#L8">fdalg.spad line 8</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/fdalg.spad#L8">[edit on github]</a></p>
+<ul class="simple">
+<li><p>VAR: <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a></p></li>
+<li><p>F: <a class="reference internal" href="Field.html#l-field"><span class="std std-ref">Field</span></a></p></li>
+</ul>
+<p>The elements of the Free Field are represented by Admissible Linear Systems (ALS) in standard form …</p>
+<dl class="simple">
+<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-0"><span class="std std-ref">0</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-1"><span class="std std-ref">1</span></a>: %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Magma.html#id1"><span class="std std-ref">*</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
+</dd>
+<dt><a class="reference internal" href="RightModule.html#id1"><span class="std std-ref">*</span></a>: (%, F) -&gt; %</dt><dd><p>from <a class="reference internal" href="RightModule.html#l-right-module"><span class="std std-ref">RightModule</span></a> F</p>
+</dd>
+<dt><a class="reference internal" href="RightModule.html#id1"><span class="std std-ref">*</span></a>: (%, <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="RightModule.html#l-right-module"><span class="std std-ref">RightModule</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></p>
+</dd>
+</dl>
+<span class="target" id="id1"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">*</span>: (%, <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> F) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">*</span> <span class="pre">U</span></code> column transformation</p>
+</dd>
+<dt><a class="reference internal" href="LeftModule.html#id1"><span class="std std-ref">*</span></a>: (F, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="LeftModule.html#l-left-module"><span class="std std-ref">LeftModule</span></a> F</p>
+</dd>
+<dt><a class="reference internal" href="LeftModule.html#id1"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="LeftModule.html#l-left-module"><span class="std std-ref">LeftModule</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianGroup.html#id1"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="index-2">
+<dt><span class="spadfun">*</span>: (<a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> F, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">T</span> <span class="pre">*</span> <span class="pre">f</span></code> row transformation</p>
+</dd>
+<dt><a class="reference internal" href="AbelianMonoid.html#id1"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianSemiGroup.html#id1"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l-abelian-semi-group"><span class="std std-ref">AbelianSemiGroup</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianSemiGroup.html#id2"><span class="std std-ref">+</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l-abelian-semi-group"><span class="std std-ref">AbelianSemiGroup</span></a></p>
+</dd>
+</dl>
+<span class="target" id="id2"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">+</span>: (%, F) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">+</span> <span class="pre">alpha</span></code> adds the scalar alpha to <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-4">
+<dt><span class="spadfun">+</span>: (F, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">alpha</span> <span class="pre">+</span> <span class="pre">f</span></code> adds the scalar alpha to <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="AbelianGroup.html#id2"><span class="std std-ref">-</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianGroup.html#id2"><span class="std std-ref">-</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
+</dd>
+</dl>
+<span class="target" id="id3"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">-</span>: (%, F) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">-</span> <span class="pre">alpha</span></code> subtracts the scalar alpha from <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-6">
+<dt><span class="spadfun">-</span>: (F, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">alpha</span> <span class="pre">-</span> <span class="pre">f</span></code> adds the scalar alpha to <code class="docutils literal notranslate"><span class="pre">-f</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="id4"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">/</span>: (%, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">/</span> <span class="pre">g</span></code> computes <code class="docutils literal notranslate"><span class="pre">f</span></code> * <code class="docutils literal notranslate"><span class="pre">g^</span></code>-1 for nonzero element <code class="docutils literal notranslate"><span class="pre">g</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-8">
+<dt><span class="spadfun">/</span>: (%, F) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">/</span> <span class="pre">alpha</span></code> computes <code class="docutils literal notranslate"><span class="pre">f</span></code> / alpha for nonzero alpha.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-9">
+<dt><span class="spadfun">/</span>: (F, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">alpha</span> <span class="pre">/</span> <span class="pre">f</span></code> computes alpha / <code class="docutils literal notranslate"><span class="pre">f</span></code> for nonzero <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="BasicType.html#id1"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+</dl>
+<span class="target" id="id5"></span><dl class="simple" id="index-10">
+<dt><span class="spadfun">^</span>: (%, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">f^n</span></code> returns <code class="docutils literal notranslate"><span class="pre">f^n</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="MagmaWithUnit.html#id1"><span class="std std-ref">^</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="index-11">
+<dt><span class="spadfun">^</span>: (%, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">f^n</span></code> returns <code class="docutils literal notranslate"><span class="pre">f^n</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="BasicType.html#id2"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-add-a-l-s"></span><dl class="simple" id="index-12">
+<dt><span class="spadfun">addALS</span>: (%, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">addALS(f,g)</span></code> computes <code class="docutils literal notranslate"><span class="pre">f+g</span></code> in terms of the admissible linear systems for <code class="docutils literal notranslate"><span class="pre">f</span></code> and <code class="docutils literal notranslate"><span class="pre">g</span></code> (without minimization).</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-add-columns"></span><dl class="simple" id="index-13">
+<dt><span class="spadfun">addColumns!</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, F) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">addColumns!(f,</span> <span class="pre">i,</span> <span class="pre">j,</span> <span class="pre">alpha)</span></code> adds alpha*column(<code class="docutils literal notranslate"><span class="pre">i</span></code>) to column(<code class="docutils literal notranslate"><span class="pre">j</span></code>) in A and subtracts row(<code class="docutils literal notranslate"><span class="pre">j</span></code>) from row(<code class="docutils literal notranslate"><span class="pre">i</span></code>) in <code class="docutils literal notranslate"><span class="pre">s</span></code> (in the ALS of <code class="docutils literal notranslate"><span class="pre">f</span></code>), i.e. (A*U)(U^-1*s) = <code class="docutils literal notranslate"><span class="pre">v</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-add-columns-rows"></span><dl class="simple" id="index-14">
+<dt><span class="spadfun">addColumnsRows!</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, F) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">addColumnsRows!(f,</span> <span class="pre">i,</span> <span class="pre">j,</span> <span class="pre">alpha)</span></code> adds alpha*column(<code class="docutils literal notranslate"><span class="pre">i</span></code>) to column(<code class="docutils literal notranslate"><span class="pre">j</span></code>) and subtracts alpha*row(<code class="docutils literal notranslate"><span class="pre">j</span></code>) from row(<code class="docutils literal notranslate"><span class="pre">i</span></code>) in the ALS of <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-add-m-i-n"></span><dl class="simple" id="index-15">
+<dt><span class="spadfun">addMIN</span>: (%, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">addMIN(f,g)</span></code> uses addALS(<code class="docutils literal notranslate"><span class="pre">f</span></code>,<code class="docutils literal notranslate"><span class="pre">g</span></code>) with minimization.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-add-rows"></span><dl class="simple" id="index-16">
+<dt><span class="spadfun">addRows!</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, F) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">addRows!(f,</span> <span class="pre">i,</span> <span class="pre">j,</span> <span class="pre">alpha)</span></code> adds alpha*row(<code class="docutils literal notranslate"><span class="pre">i</span></code>) to row(<code class="docutils literal notranslate"><span class="pre">j</span></code>) in the ALS of <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-add-rows-columns"></span><dl class="simple" id="index-17">
+<dt><span class="spadfun">addRowsColumns!</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, F) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">addRowsColumns!(f,</span> <span class="pre">i,</span> <span class="pre">j,</span> <span class="pre">alpha)</span></code> adds alpha*row(<code class="docutils literal notranslate"><span class="pre">i</span></code>) to row(<code class="docutils literal notranslate"><span class="pre">j</span></code>) and subtracts alpha*column(<code class="docutils literal notranslate"><span class="pre">j</span></code>) from column(<code class="docutils literal notranslate"><span class="pre">i</span></code>) in the ALS of <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-admissible-linear-system"></span><dl class="simple" id="index-18">
+<dt><span class="spadfun">admissibleLinearSystem</span>: % -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">admissibleLinearSystem(f)</span></code> output as ALS.</p>
+</dd>
+<dt><a class="reference internal" href="Rng.html#l-rng-annihilate"><span class="std std-ref">annihilate?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Rng.html#l-rng"><span class="std std-ref">Rng</span></a></p>
+</dd>
+<dt><a class="reference internal" href="NonAssociativeSemiRng.html#l-non-associative-semi-rng-anti-commutator"><span class="std std-ref">antiCommutator</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeSemiRng.html#l-non-associative-semi-rng"><span class="std std-ref">NonAssociativeSemiRng</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-append-support"></span><dl class="simple" id="index-19">
+<dt><span class="spadfun">appendSupport!</span>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="FreeMonoid.html#l-free-monoid"><span class="std std-ref">FreeMonoid</span></a> VAR) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">appendSupport!</span> <span class="pre">(f,</span> <span class="pre">lst)</span></code> appends variables not in the support.</p>
+</dd>
+<dt><a class="reference internal" href="EntireRing.html#l-entire-ring-associates"><span class="std std-ref">associates?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="EntireRing.html#l-entire-ring"><span class="std std-ref">EntireRing</span></a></p>
+</dd>
+<dt><a class="reference internal" href="NonAssociativeRng.html#l-non-associative-rng-associator"><span class="std std-ref">associator</span></a>: (%, %, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRng.html#l-non-associative-rng"><span class="std std-ref">NonAssociativeRng</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-block-elimination"></span><dl class="simple" id="index-20">
+<dt><span class="spadfun">blockElimination</span>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">blockElimination(f,</span> <span class="pre">rsrc,</span> <span class="pre">rdst,</span> <span class="pre">flg_u,</span> <span class="pre">csrc,</span> <span class="pre">cdst,</span> <span class="pre">flg_v)</span></code> returns transformation matrices if it is possible to eliminate all entries in <code class="docutils literal notranslate"><span class="pre">rdst</span></code> <code class="docutils literal notranslate"><span class="pre">x</span></code> <code class="docutils literal notranslate"><span class="pre">cdst</span></code> (including columns in <code class="docutils literal notranslate"><span class="pre">u</span></code> if <code class="docutils literal notranslate"><span class="pre">flg_u</span></code> = <code class="docutils literal notranslate"><span class="pre">true</span></code>, including rows in <code class="docutils literal notranslate"><span class="pre">v</span></code> if flg_v = <code class="docutils literal notranslate"><span class="pre">true</span></code>) by using rows in <code class="docutils literal notranslate"><span class="pre">rsrc</span></code> and columns in <code class="docutils literal notranslate"><span class="pre">csrc</span></code>. Otherwise an empty list.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-21">
+<dt><span class="spadfun">blockElimination</span>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">blockElimination(f,</span> <span class="pre">rsrc,</span> <span class="pre">rdst,</span> <span class="pre">csrc,</span> <span class="pre">cdst)</span></code> flg_u = <code class="docutils literal notranslate"><span class="pre">true</span></code>, flg_v = <code class="docutils literal notranslate"><span class="pre">true</span></code></p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-block-structure"></span><dl class="simple" id="index-22">
+<dt><span class="spadfun">blockStructure</span>: % -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">blockStructure(f)</span></code> analyzes the structure of the ALS of <code class="docutils literal notranslate"><span class="pre">f</span></code> and detects blocks with respect to an upper triangular structure. Entry (<code class="docutils literal notranslate"><span class="pre">i</span></code>,1) contains the first row, (<code class="docutils literal notranslate"><span class="pre">i</span></code>,2) the last row, (<code class="docutils literal notranslate"><span class="pre">i</span></code>,3) the size and (<code class="docutils literal notranslate"><span class="pre">i</span></code>,4) if block <code class="docutils literal notranslate"><span class="pre">i</span></code> is refined.</p>
+</dd>
+<dt><a class="reference internal" href="NonAssociativeRing.html#l-non-associative-ring-characteristic"><span class="std std-ref">characteristic</span></a>: () -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="NonAssociativeRing.html#l-non-associative-ring"><span class="std std-ref">NonAssociativeRing</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-coerce"></span><dl class="simple" id="index-23">
+<dt><span class="spadfun">coerce</span>: % -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(f)</span></code> prints the ALS of <code class="docutils literal notranslate"><span class="pre">f</span></code> if the debug flag is set and a rational expression if the alternative output flag is set.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-24">
+<dt><span class="spadfun">coerce</span>: % -&gt; <a class="reference internal" href="XDistributedPolynomial.html#l-x-distributed-polynomial"><span class="std std-ref">XDistributedPolynomial</span></a>(VAR, F)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(f)</span></code> converts the element to XDPOLY (if possible).</p>
+</dd>
+</dl>
+<dl class="simple" id="index-25">
+<dt><span class="spadfun">coerce</span>: F -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(c)</span></code> converts the constant <code class="docutils literal notranslate"><span class="pre">c</span></code> into an element of the free field represented by an ALS in minimal refined form.</p>
+</dd>
+<dt><a class="reference internal" href="Algebra.html#l-algebra-coerce"><span class="std std-ref">coerce</span></a>: <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a> -&gt; %</dt><dd><p>from <a class="reference internal" href="Algebra.html#l-algebra"><span class="std std-ref">Algebra</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="index-26">
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="FreeMonoid.html#l-free-monoid"><span class="std std-ref">FreeMonoid</span></a> VAR -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(m)</span></code> converts the monoid <code class="docutils literal notranslate"><span class="pre">m</span></code> into an element of the free field represented by an ALS in minimal refined form.</p>
+</dd>
+<dt><a class="reference internal" href="NonAssociativeRing.html#l-non-associative-ring-coerce"><span class="std std-ref">coerce</span></a>: <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a> -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRing.html#l-non-associative-ring"><span class="std std-ref">NonAssociativeRing</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="index-27">
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="XDistributedPolynomial.html#l-x-distributed-polynomial"><span class="std std-ref">XDistributedPolynomial</span></a>(VAR, F) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(p)</span></code> converts the polynomial <code class="docutils literal notranslate"><span class="pre">p</span></code> to an element in the free field represented by an minimal admissible linear system.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-column-span"></span><dl class="simple" id="index-28">
+<dt><span class="spadfun">columnSpan</span>: % -&gt; <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="XDistributedPolynomial.html#l-x-distributed-polynomial"><span class="std std-ref">XDistributedPolynomial</span></a>(VAR, F)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">columnSpan(f)</span></code> computes the column span for a regular element, that is (<code class="docutils literal notranslate"><span class="pre">v'</span></code>, <code class="docutils literal notranslate"><span class="pre">Mv'</span></code>, M^2v’, …) where PAs=Pv=v’ with PA = <code class="docutils literal notranslate"><span class="pre">I</span></code>-<code class="docutils literal notranslate"><span class="pre">M</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="NonAssociativeRng.html#l-non-associative-rng-commutator"><span class="std std-ref">commutator</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRng.html#l-non-associative-rng"><span class="std std-ref">NonAssociativeRng</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-copy"></span><dl class="simple" id="index-29">
+<dt><span class="spadfun">copy</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">copy(f)</span></code> gives a copy of the element <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-30">
+<dt><span class="spadfun">copy</span>: (%, F) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">copy(f,</span> <span class="pre">alpha)</span></code> gives a copy of element <code class="docutils literal notranslate"><span class="pre">f</span></code> multiplied by alpha.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-dimension"></span><dl class="simple" id="index-31">
+<dt><span class="spadfun">dimension</span>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">dimension(f)</span></code> returns the dimension of the ALS.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-disable-alternative-output"></span><dl class="simple" id="index-32">
+<dt><span class="spadfun">disableAlternativeOutput</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">disableAlternativeOutput(f)</span></code> disable output as rational expression.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-disable-debug-output"></span><dl class="simple" id="index-33">
+<dt><span class="spadfun">disableDebugOutput</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">disableDebugOutput(f)</span></code> disable displaying the ALS.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-display"></span><dl class="simple" id="index-34">
+<dt><span class="spadfun">display</span>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>) -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">display(f,[s])</span></code> prints the element <code class="docutils literal notranslate"><span class="pre">f</span></code> as A*(<code class="docutils literal notranslate"><span class="pre">s_1</span></code>,<code class="docutils literal notranslate"><span class="pre">s_2</span></code>,…,<code class="docutils literal notranslate"><span class="pre">s_n</span></code>)’ = <code class="docutils literal notranslate"><span class="pre">v</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-35">
+<dt><span class="spadfun">display</span>: (%, <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a>) -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">display(f,sol)</span></code> prints the element <code class="docutils literal notranslate"><span class="pre">f</span></code> as A*sol = <code class="docutils literal notranslate"><span class="pre">v</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-elt"></span><dl class="simple" id="index-36">
+<dt><span class="spadfun">elt</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">elt(f,</span> <span class="pre">i)</span></code> returns <code class="docutils literal notranslate"><span class="pre">v</span></code>(<code class="docutils literal notranslate"><span class="pre">i</span></code>) from the ALS of <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-37">
+<dt><span class="spadfun">elt</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="XDistributedPolynomial.html#l-x-distributed-polynomial"><span class="std std-ref">XDistributedPolynomial</span></a>(VAR, F)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">elt(f,</span> <span class="pre">i,</span> <span class="pre">j)</span></code> returns A(<code class="docutils literal notranslate"><span class="pre">i</span></code>,<code class="docutils literal notranslate"><span class="pre">j</span></code>) from the ALS of <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-enable-alternative-output"></span><dl class="simple" id="index-38">
+<dt><span class="spadfun">enableAlternativeOutput</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">enableAlternativeOutput(f)</span></code> enable output as rational expression.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-enable-debug-output"></span><dl class="simple" id="index-39">
+<dt><span class="spadfun">enableDebugOutput</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">enableDebugOutput(f)</span></code> enable displaying the ALS.</p>
+</dd>
+<dt><a class="reference internal" href="EntireRing.html#l-entire-ring-exquo"><span class="std std-ref">exquo</span></a>: (%, %) -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="EntireRing.html#l-entire-ring"><span class="std std-ref">EntireRing</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-extended-a-l-s"></span><dl class="simple" id="index-40">
+<dt><span class="spadfun">extendedALS</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">extendedALS(f)</span></code> returns an extended ALS for <code class="docutils literal notranslate"><span class="pre">f</span></code>, that is, 1*f (with a scalar first row).</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-factor"></span><dl class="simple" id="index-41">
+<dt><span class="spadfun">factor</span>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">factor(f)</span></code> factorizes <code class="docutils literal notranslate"><span class="pre">f</span></code> in f=f_1*f_2*…*f_k with atoms (irreducible elements) f_i. Notice that this factorization is unique only with respect to similiarity.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-factorization-equations"></span><dl class="simple" id="index-42">
+<dt><span class="spadfun">factorizationEquations</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">factorizationEquations(f,k_rows,k_cols)</span></code> for debugging purposes (interface LINPEN)</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-factorization-groebner"></span><dl class="simple" id="index-43">
+<dt><span class="spadfun">factorizationGroebner</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">factorizationGroebner(f,k_rows,k_cols)</span></code> for debugging purposes (interface LINPEN)</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-factorization-solve"></span><dl class="simple" id="index-44">
+<dt><span class="spadfun">factorizationSolve</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Equation.html#l-equation"><span class="std std-ref">Equation</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">factorizationSolve(f,k_rows,k_cols)</span></code> returns a (possible empty) list of solutions for an admissible transformation to create an upper right block of zeros of size <code class="docutils literal notranslate"><span class="pre">k_rows</span></code> times <code class="docutils literal notranslate"><span class="pre">k_cols</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-factorization-transformations"></span><dl class="simple" id="index-45">
+<dt><span class="spadfun">factorizationTransformations</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Equation.html#l-equation"><span class="std std-ref">Equation</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> F) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">factorizationTransformations(f,k_rows,k_cols,sol)</span></code> for debugging purposes (interface LINPEN)</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-factorize"></span><dl class="simple" id="index-46">
+<dt><span class="spadfun">factorize</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">factorize(f,k)</span></code> factorizes <code class="docutils literal notranslate"><span class="pre">f</span></code> in f=g*h with rank(<code class="docutils literal notranslate"><span class="pre">g</span></code>)<code class="docutils literal notranslate"><span class="pre">=k</span></code> if possible (if necessary by using non-linear techniques).</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-factors"></span><dl class="simple" id="index-47">
+<dt><span class="spadfun">factors</span>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">factors(f)</span></code> analysis the block structure of the system matrix of the ALS of <code class="docutils literal notranslate"><span class="pre">f</span></code> to split <code class="docutils literal notranslate"><span class="pre">f</span></code> into factors.</p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l-single-integer"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash-update"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-insert-rows-columns"></span><dl class="simple" id="index-48">
+<dt><span class="spadfun">insertRowsColumns</span>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">insertRowsColumns(f,</span> <span class="pre">lst_row,</span> <span class="pre">lst_col)</span></code> returns a new system with rows and columns inserted. An index <code class="docutils literal notranslate"><span class="pre">k</span></code> means a new row/column between <code class="docutils literal notranslate"><span class="pre">k</span></code> and <code class="docutils literal notranslate"><span class="pre">k+1</span></code>. The number of rows and columns have to be the same!</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-interval"></span><dl class="simple" id="index-49">
+<dt><span class="spadfun">interval</span>: (<a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">interval(i,</span> <span class="pre">j)</span></code> creates list [<code class="docutils literal notranslate"><span class="pre">i</span></code>, <code class="docutils literal notranslate"><span class="pre">i+1</span></code>, …, <code class="docutils literal notranslate"><span class="pre">j</span></code>]</p>
+</dd>
+<dt><a class="reference internal" href="DivisionRing.html#l-division-ring-inv"><span class="std std-ref">inv</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="DivisionRing.html#l-division-ring"><span class="std std-ref">DivisionRing</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-inverse"></span><dl class="simple" id="index-50">
+<dt><span class="spadfun">inverse</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">inverse(f)</span></code> <code class="docutils literal notranslate"><span class="pre">f^</span></code>-1 using invertMIN.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-invert-a-l-s"></span><dl class="simple" id="index-51">
+<dt><span class="spadfun">invertALS</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">invertALS(f)</span></code> computes <code class="docutils literal notranslate"><span class="pre">f^</span></code>-1 in terms of the ALS for <code class="docutils literal notranslate"><span class="pre">f</span></code>. There is no check if <code class="docutils literal notranslate"><span class="pre">f</span></code> is invertible!</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-invert-m-i-n"></span><dl class="simple" id="index-52">
+<dt><span class="spadfun">invertMIN</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">invertMIN(f)</span></code> uses invertSTD(<code class="docutils literal notranslate"><span class="pre">f</span></code>) and minimization to construct a minimal system for <code class="docutils literal notranslate"><span class="pre">f^</span></code>-1. Linear techniques are used to get a fine pivot block structure.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-invert-s-t-d"></span><dl class="simple" id="index-53">
+<dt><span class="spadfun">invertSTD</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">invertSTD(f)</span></code> computes the standard inverse of <code class="docutils literal notranslate"><span class="pre">f</span></code> in terems of the admissible linear system There is no check if <code class="docutils literal notranslate"><span class="pre">f</span></code> is invertible!</p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-latex"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-left-factor"></span><dl class="simple" id="index-54">
+<dt><span class="spadfun">leftFactor</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">leftFactor(f,k)</span></code> returns the left factor of rank <code class="docutils literal notranslate"><span class="pre">k</span></code> of a polynomial <code class="docutils literal notranslate"><span class="pre">f</span></code> or 1 if it<code class="docutils literal notranslate"><span class="pre">'s</span></code> not possible by linear techniques.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-left-family"></span><dl class="simple" id="index-55">
+<dt><span class="spadfun">leftFamily</span>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">leftFamily(f)</span></code> prints the left family s=A^-1*v.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-left-minimization"></span><dl class="simple" id="index-56">
+<dt><span class="spadfun">leftMinimization</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">leftMinimization(f,</span> <span class="pre">i_min,</span> <span class="pre">i_max)</span></code> tries to apply a left minimization step with respect to the pivot block with the rows/columns (<code class="docutils literal notranslate"><span class="pre">i_min</span></code>, …, i_max).</p>
+</dd>
+<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-left-power"><span class="std std-ref">leftPower</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Magma.html#l-magma-left-power"><span class="std std-ref">leftPower</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
+</dd>
+<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-left-recip"><span class="std std-ref">leftRecip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-linearization"></span><dl class="simple" id="index-57">
+<dt><span class="spadfun">linearization</span>: % -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">linearization(f)</span></code> returns the element <code class="docutils literal notranslate"><span class="pre">f</span></code> as linearization with entries represented by admissible linear systems in minimal refined form.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-58">
+<dt><span class="spadfun">linearization</span>: % -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="XDistributedPolynomial.html#l-x-distributed-polynomial"><span class="std std-ref">XDistributedPolynomial</span></a>(VAR, F)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">linearization(f)</span></code> returns the element <code class="docutils literal notranslate"><span class="pre">f</span></code> as linearization.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-matrix"></span><dl class="simple" id="index-59">
+<dt><span class="spadfun">matrix</span>: % -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="XDistributedPolynomial.html#l-x-distributed-polynomial"><span class="std std-ref">XDistributedPolynomial</span></a>(VAR, F)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">matrix(f)</span></code> returns the matrix of the ALS of <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-60">
+<dt><span class="spadfun">matrix</span>: (%, <a class="reference internal" href="FreeMonoid.html#l-free-monoid"><span class="std std-ref">FreeMonoid</span></a> VAR) -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">matrix(f,m)</span></code> returns the coefficient matrix for the monomial <code class="docutils literal notranslate"><span class="pre">m</span></code> of the ALS of <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-minimal"></span><dl class="simple" id="index-61">
+<dt><span class="spadfun">minimal?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">minimal?(f)</span></code> is <code class="docutils literal notranslate"><span class="pre">f</span></code> represented by a minimal ALS?</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-minimize"></span><dl class="simple" id="index-62">
+<dt><span class="spadfun">minimize</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">minimize(f)</span></code> minimizes the unterlying ALS by applying left and right block minimization steps. Minimality is only guaranteed if the remaining blocks are refined.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-multiply-a-l-s"></span><dl class="simple" id="index-63">
+<dt><span class="spadfun">multiplyALS</span>: (%, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">multiplyALS(f,g)</span></code> computes <code class="docutils literal notranslate"><span class="pre">f*g</span></code> in terms of the admissible linear systems for <code class="docutils literal notranslate"><span class="pre">f</span></code> and <code class="docutils literal notranslate"><span class="pre">g</span></code> (without minimization).</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-multiply-column"></span><dl class="simple" id="index-64">
+<dt><span class="spadfun">multiplyColumn!</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, F) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">multiplyColumn!(f,</span> <span class="pre">i,</span> <span class="pre">alpha)</span></code> multiplies column(<code class="docutils literal notranslate"><span class="pre">i</span></code>) by alpha in the ALS of <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-multiply-m-i-n"></span><dl class="simple" id="index-65">
+<dt><span class="spadfun">multiplyMIN</span>: (%, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">multiplyMIN(f,g)</span></code> uses multiplyALS(<code class="docutils literal notranslate"><span class="pre">f</span></code>,<code class="docutils literal notranslate"><span class="pre">g</span></code>) with minimization.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-multiply-row"></span><dl class="simple" id="index-66">
+<dt><span class="spadfun">multiplyRow!</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, F) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">multiplyRow!(f,</span> <span class="pre">i,</span> <span class="pre">alpha)</span></code> multiplies row(<code class="docutils literal notranslate"><span class="pre">i</span></code>) by alpha in the ALS of <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-mutable"></span><dl class="simple" id="index-67">
+<dt><span class="spadfun">mutable?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">mutable?(f)</span></code> is the underlying ALS of <code class="docutils literal notranslate"><span class="pre">f</span></code> mutable?</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-new"></span><dl class="simple" id="index-68">
+<dt><span class="spadfun">new</span>: (<a class="reference internal" href="FreeMonoid.html#l-free-monoid"><span class="std std-ref">FreeMonoid</span></a> VAR, F) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">new(m,c)</span></code> creates a monomial element with coefficient <code class="docutils literal notranslate"><span class="pre">c</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-69">
+<dt><span class="spadfun">new</span>: (<a class="reference internal" href="LinearMultivariateMatrixPencil.html#l-linear-multivariate-matrix-pencil"><span class="std std-ref">LinearMultivariateMatrixPencil</span></a> F, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="FreeMonoid.html#l-free-monoid"><span class="std std-ref">FreeMonoid</span></a> VAR) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">new(lp,</span> <span class="pre">lst)</span></code> creates an element by the linear multivariate matrix pencil <code class="docutils literal notranslate"><span class="pre">lp</span></code> and the list of monomials <code class="docutils literal notranslate"><span class="pre">lst</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-70">
+<dt><span class="spadfun">new</span>: F -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">new(c)</span></code> creates a constant element.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-normal-a-l-s"></span><dl class="simple" id="index-71">
+<dt><span class="spadfun">normalALS</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">normalALS(f)</span></code> removes a scalar first row of an (extended) ALS.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-normalize"></span><dl class="simple" id="index-72">
+<dt><span class="spadfun">normalize!</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">normalize!(f)</span></code> rescales the rows such that the first nonzero entry of the coefficient matrix in the diagonal is one. The right hand side is normalized by normalizeRHS! and the non-zero entry is in the last row of the corresponding block.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-normalize-d-i-a-g"></span><dl class="simple" id="index-73">
+<dt><span class="spadfun">normalizeDIAG!</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">normalizeDIAG!(f)</span></code> rescales the rows such that the first nonzero entry of the coefficient matrix in the diagonal is one.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-normalize-p-l-s"></span><dl class="simple" id="index-74">
+<dt><span class="spadfun">normalizePLS!</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">normalizePLS!(f)</span></code> scales and rearranges rows and columns of the system matrix such that the constant part of the system matrix is the identity matrix (possibly of smaller size).</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-normalize-r-h-s"></span><dl class="simple" id="index-75">
+<dt><span class="spadfun">normalizeRHS!</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">normalizeRHS!(f)</span></code> eliminates non-zero entries in the right hand side of ALS with respect of the non-zero entry with the highest index.</p>
+</dd>
+<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-one"><span class="std std-ref">one?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-opposite"><span class="std std-ref">opposite?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-pencil"></span><dl class="simple" id="index-76">
+<dt><span class="spadfun">pencil</span>: % -&gt; <a class="reference internal" href="LinearMultivariateMatrixPencil.html#l-linear-multivariate-matrix-pencil"><span class="std std-ref">LinearMultivariateMatrixPencil</span></a> F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">pencil(f)</span></code> returns a pointer to the underlying pencil.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-polynomial"></span><dl class="simple" id="index-77">
+<dt><span class="spadfun">polynomial</span>: % -&gt; <a class="reference internal" href="XDistributedPolynomial.html#l-x-distributed-polynomial"><span class="std std-ref">XDistributedPolynomial</span></a>(VAR, F)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">polynomial(f)</span></code> returns <code class="docutils literal notranslate"><span class="pre">f</span></code> as XDPOLY (if possible)</p>
+</dd>
+</dl>
+<span class="target" id="id6"></span><dl class="simple" id="index-78">
+<dt><span class="spadfun">polynomial?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">polynomial?(f)</span></code> is the ALS in polynomial form?</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-qadd-columns"></span><dl class="simple" id="index-79">
+<dt><span class="spadfun">qaddColumns!</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, F) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">addColumns!(f,</span> <span class="pre">i,</span> <span class="pre">j,</span> <span class="pre">alpha)</span></code> adds alpha*column(<code class="docutils literal notranslate"><span class="pre">i</span></code>) to column(<code class="docutils literal notranslate"><span class="pre">j</span></code>) in A and subtracts row(<code class="docutils literal notranslate"><span class="pre">j</span></code>) from row(<code class="docutils literal notranslate"><span class="pre">i</span></code>) in <code class="docutils literal notranslate"><span class="pre">s</span></code> (in the ALS of <code class="docutils literal notranslate"><span class="pre">f</span></code>), i.e. (A*U)(U^-1*s) = <code class="docutils literal notranslate"><span class="pre">v</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-qadd-rows"></span><dl class="simple" id="index-80">
+<dt><span class="spadfun">qaddRows!</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, F) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">addRows!(f,</span> <span class="pre">i,</span> <span class="pre">j,</span> <span class="pre">alpha)</span></code> adds alpha*row(<code class="docutils literal notranslate"><span class="pre">i</span></code>) to row(<code class="docutils literal notranslate"><span class="pre">j</span></code>) in the ALS of <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-qelt"></span><dl class="simple" id="index-81">
+<dt><span class="spadfun">qelt</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="XDistributedPolynomial.html#l-x-distributed-polynomial"><span class="std std-ref">XDistributedPolynomial</span></a>(VAR, F)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">qelt(f,</span> <span class="pre">i,</span> <span class="pre">j)</span></code> returns A(<code class="docutils literal notranslate"><span class="pre">i</span></code>,<code class="docutils literal notranslate"><span class="pre">j</span></code>) from the ALS of <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-qnew"></span><dl class="simple" id="index-82">
+<dt><span class="spadfun">qnew</span>: (<a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="FreeMonoid.html#l-free-monoid"><span class="std std-ref">FreeMonoid</span></a> VAR) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">qnew(n,</span> <span class="pre">lst)</span></code> creates an empty ALS of dimension <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-83">
+<dt><span class="spadfun">qnew</span>: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">qnew(n)</span></code> creates an empty ALS of dimension <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-qregular"></span><dl class="simple" id="index-84">
+<dt><span class="spadfun">qregular?</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">qregular?(f,</span> <span class="pre">i_min,</span> <span class="pre">i_max)</span></code> does the specified diagonal block define a regular element?</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-qswap-columns"></span><dl class="simple" id="index-85">
+<dt><span class="spadfun">qswapColumns!</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">swapColumns!(f,</span> <span class="pre">i,</span> <span class="pre">j)</span></code> exchanges columns <code class="docutils literal notranslate"><span class="pre">i</span></code> and <code class="docutils literal notranslate"><span class="pre">j</span></code> in the ALS of <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-qswap-rows"></span><dl class="simple" id="index-86">
+<dt><span class="spadfun">qswapRows!</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">swapRows!(f,</span> <span class="pre">i,</span> <span class="pre">j)</span></code> exchanges rows <code class="docutils literal notranslate"><span class="pre">i</span></code> and <code class="docutils literal notranslate"><span class="pre">j</span></code> in the ALS of <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-qzero"></span><dl class="simple" id="index-87">
+<dt><span class="spadfun">qzero?</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">qzero?(f,</span> <span class="pre">i_min,</span> <span class="pre">i_max,</span> <span class="pre">j_min,</span> <span class="pre">j_max)</span></code> is the spezified block zero (in the system matrix)?</p>
+</dd>
+</dl>
+<dl class="simple" id="index-88">
+<dt><span class="spadfun">qzero?</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="FreeMonoid.html#l-free-monoid"><span class="std std-ref">FreeMonoid</span></a> VAR) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">qzero?(f,</span> <span class="pre">i_min,</span> <span class="pre">i_max,</span> <span class="pre">j_min,</span> <span class="pre">j_max,</span> <span class="pre">m)</span></code> is the spezified block zero in the (system) matrix corresponding to the monomial <code class="docutils literal notranslate"><span class="pre">m?</span></code></p>
+</dd>
+</dl>
+<dl class="simple" id="index-89">
+<dt><span class="spadfun">qzero?</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">qzero?(f,</span> <span class="pre">i_min,</span> <span class="pre">i_max,</span> <span class="pre">j_min,</span> <span class="pre">j_max,</span> <span class="pre">l)</span></code> is the spezified block zero in matrix <code class="docutils literal notranslate"><span class="pre">l?</span></code></p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-rank"></span><dl class="simple" id="index-90">
+<dt><span class="spadfun">rank</span>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">rank(f)</span></code> returns the rank of the element <code class="docutils literal notranslate"><span class="pre">f</span></code>, that is, the dimension of a minimal admissible linear system (for <code class="docutils literal notranslate"><span class="pre">f</span></code>).</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-ratexpr"></span><dl class="simple" id="index-91">
+<dt><span class="spadfun">ratexpr</span>: % -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">ratexpr(f)</span></code> analysis the block structure of the admissible linear system to write <code class="docutils literal notranslate"><span class="pre">f</span></code> as rational expression.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-ratexpr-inverse"></span><dl class="simple" id="index-92">
+<dt><span class="spadfun">ratexprInverse</span>: (%, <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>) -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">ratexprInverse(f,</span> <span class="pre">flg)</span></code> returns <code class="docutils literal notranslate"><span class="pre">f</span></code> in output form if it is a polynomial, (<code class="docutils literal notranslate"><span class="pre">f</span></code>)^-1 if <code class="docutils literal notranslate"><span class="pre">f^</span></code>-1 is a polynomial, “r&lt;rank&gt;” if the system is minimal and “d&lt;dim&gt;” in general.</p>
+</dd>
+<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-recip"><span class="std std-ref">recip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-refine"></span><dl class="simple" id="index-93">
+<dt><span class="spadfun">refine!</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">refine!(f)</span></code> refines <code class="docutils literal notranslate"><span class="pre">f</span></code> using non-linear techniques.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-94">
+<dt><span class="spadfun">refine!</span>: (%, <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">refine!(f,</span> <span class="pre">flg)</span></code> refines the underlying admissible admissible linear system using simple and linear techniques and if flg=true also non-linear techniques (Groebner basis).</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-refined"></span><dl class="simple" id="index-95">
+<dt><span class="spadfun">refined?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">refined?(f)</span></code> is <code class="docutils literal notranslate"><span class="pre">f</span></code> represented by a refined ALS?</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-refinement-equations"></span><dl class="simple" id="index-96">
+<dt><span class="spadfun">refinementEquations</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>, <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">refinementEquations(f,i_min,i_max,k_rows,flg_u,flg_r)</span></code> for debugging purposes (interface LINPEN)</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-refinement-groebner"></span><dl class="simple" id="index-97">
+<dt><span class="spadfun">refinementGroebner</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>, <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">refinementGroebner(f,i_min,i_max,k_rows,flg_u,flg_r)</span></code> computes a Groebner basis for the ideal generated by the equations for creating a zero block with <code class="docutils literal notranslate"><span class="pre">k</span></code> rows within the pivot block <code class="docutils literal notranslate"><span class="pre">i_min</span></code>..<code class="docutils literal notranslate"><span class="pre">i_max</span></code> and conditions to guarantee invertible transformations.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-refinement-solve"></span><dl class="simple" id="index-98">
+<dt><span class="spadfun">refinementSolve</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>, <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Equation.html#l-equation"><span class="std std-ref">Equation</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">refinementSolve(f,i_min,i_max,k_rows,flg_u,flg_r)</span></code> Computes a list of solutions (for the entries in transformation matrices) to create a lower left block of zeros with <code class="docutils literal notranslate"><span class="pre">k</span></code> rows in the pivot block <code class="docutils literal notranslate"><span class="pre">i_min</span></code>..<code class="docutils literal notranslate"><span class="pre">i_max</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-refinement-transformations"></span><dl class="simple" id="index-99">
+<dt><span class="spadfun">refinementTransformations</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Equation.html#l-equation"><span class="std std-ref">Equation</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> F) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">refinementTransformations(f,i_min,i_max,sol)</span></code> for debugging purposes (interface LINPEN)</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-refine-u-r"></span><dl class="simple" id="index-100">
+<dt><span class="spadfun">refineUR!</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">refineUR!(f)</span></code> uses linear techniques to create upper right blocks of zeros in staircase form (as far as possible).</p>
+</dd>
+</dl>
+<dl class="simple" id="index-101">
+<dt><span class="spadfun">refineUR!</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">refineUR!(f,k)</span></code> uses linear techniques to create an upper right block of zeros with <code class="docutils literal notranslate"><span class="pre">k</span></code> rows (if possible).</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-regular"></span><dl class="simple" id="index-102">
+<dt><span class="spadfun">regular?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">regular?(f)</span></code> is <code class="docutils literal notranslate"><span class="pre">f</span></code> a regular element?</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-remove-rows-columns"></span><dl class="simple" id="index-103">
+<dt><span class="spadfun">removeRowsColumns</span>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">removeRowsColumns(f,</span> <span class="pre">lst_row,</span> <span class="pre">lst_col)</span></code> returns a new system with the specified rows and columns removed. The number of rows and columns have to be the same!</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-representation"></span><dl class="simple" id="index-104">
+<dt><span class="spadfun">representation</span>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="XDistributedPolynomial.html#l-x-distributed-polynomial"><span class="std std-ref">XDistributedPolynomial</span></a>(VAR, F)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">representation(f)</span></code> returns the element <code class="docutils literal notranslate"><span class="pre">f</span></code> as linear representation (<code class="docutils literal notranslate"><span class="pre">u</span></code>,A,<code class="docutils literal notranslate"><span class="pre">v</span></code>).</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-right-factor"></span><dl class="simple" id="index-105">
+<dt><span class="spadfun">rightFactor</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">rightFactor(f,k)</span></code> returns the right factor of rank <code class="docutils literal notranslate"><span class="pre">k</span></code> of a polynomial <code class="docutils literal notranslate"><span class="pre">f</span></code> or 1 if it<code class="docutils literal notranslate"><span class="pre">'s</span></code> not possible by linear techniques.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-right-family"></span><dl class="simple" id="index-106">
+<dt><span class="spadfun">rightFamily</span>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">rightFamily(f)</span></code> prints the right family t=u*A^-1.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-right-minimization"></span><dl class="simple" id="index-107">
+<dt><span class="spadfun">rightMinimization</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">rightMinimization(f,</span> <span class="pre">i_min,</span> <span class="pre">i_max)</span></code> tries to apply a right minimization step with respect to the pivot block with the rows/columns (<code class="docutils literal notranslate"><span class="pre">i_min</span></code>, …, i_max).</p>
+</dd>
+<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-right-power"><span class="std std-ref">rightPower</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Magma.html#l-magma-right-power"><span class="std std-ref">rightPower</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
+</dd>
+<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-right-recip"><span class="std std-ref">rightRecip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-row-span"></span><dl class="simple" id="index-108">
+<dt><span class="spadfun">rowSpan</span>: % -&gt; <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="XDistributedPolynomial.html#l-x-distributed-polynomial"><span class="std std-ref">XDistributedPolynomial</span></a>(VAR, F)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">rowSpan(f)</span></code> computes the row span for a regular element, that is (<code class="docutils literal notranslate"><span class="pre">u</span></code>; uM; <code class="docutils literal notranslate"><span class="pre">uM^2</span></code>; …) where PAs=Pv with PA = <code class="docutils literal notranslate"><span class="pre">I</span></code>-<code class="docutils literal notranslate"><span class="pre">M</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-sample"><span class="std std-ref">sample</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-scalar"></span><dl class="simple" id="index-109">
+<dt><span class="spadfun">scalar?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">scalar?(f)</span></code> is <code class="docutils literal notranslate"><span class="pre">f</span></code> scalar?</p>
+</dd>
+</dl>
+<dl class="simple" id="index-110">
+<dt><span class="spadfun">scalar?</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">scalar?(f,</span> <span class="pre">i,</span> <span class="pre">j)</span></code> is A(<code class="docutils literal notranslate"><span class="pre">i</span></code>,<code class="docutils literal notranslate"><span class="pre">j</span></code>) scalar?</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-scale-a-l-s"></span><dl class="simple" id="index-111">
+<dt><span class="spadfun">scaleALS</span>: (%, F) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">scaleALS(f,</span> <span class="pre">alpha)</span></code> computes alpha*f by scaling the right hand side of the ALS for <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-setelt"></span><dl class="simple" id="index-112">
+<dt><span class="spadfun">setelt!</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, F) -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">setelt!(f,</span> <span class="pre">i,</span> <span class="pre">alpha)</span></code> sets <code class="docutils literal notranslate"><span class="pre">v</span></code>(<code class="docutils literal notranslate"><span class="pre">i</span></code>) = alpha in the ALS of <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-113">
+<dt><span class="spadfun">setelt!</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="XDistributedPolynomial.html#l-x-distributed-polynomial"><span class="std std-ref">XDistributedPolynomial</span></a>(VAR, F)) -&gt; <a class="reference internal" href="XDistributedPolynomial.html#l-x-distributed-polynomial"><span class="std std-ref">XDistributedPolynomial</span></a>(VAR, F)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">setelt!(f,</span> <span class="pre">i,</span> <span class="pre">j,</span> <span class="pre">p)</span></code> sets A(<code class="docutils literal notranslate"><span class="pre">i</span></code>,<code class="docutils literal notranslate"><span class="pre">j</span></code>) = <code class="docutils literal notranslate"><span class="pre">p</span></code> in the ALS of <code class="docutils literal notranslate"><span class="pre">f</span></code> (where <code class="docutils literal notranslate"><span class="pre">p</span></code> has degree less equal one) if the system is in polynomial form and j&gt;i.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-set-refined"></span><dl class="simple" id="index-114">
+<dt><span class="spadfun">setRefined!</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">setRefined!(f,max_sze)</span></code> sets the internal flag if the system is refined (over the ground field) up to the specified block size.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-solution-vector"></span><dl class="simple" id="index-115">
+<dt><span class="spadfun">solutionVector</span>: % -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="XDistributedPolynomial.html#l-x-distributed-polynomial"><span class="std std-ref">XDistributedPolynomial</span></a>(VAR, F)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">solutionVector(f)</span></code> computes the solution vector <code class="docutils literal notranslate"><span class="pre">s</span></code> of As=v if <code class="docutils literal notranslate"><span class="pre">f</span></code> is polynomial.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-116">
+<dt><span class="spadfun">solutionVector</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="XDistributedPolynomial.html#l-x-distributed-polynomial"><span class="std std-ref">XDistributedPolynomial</span></a>(VAR, F)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">solutionVector(f,</span> <span class="pre">k)</span></code> computes the approximated solution vector up to powers <code class="docutils literal notranslate"><span class="pre">M^k</span></code> <code class="docutils literal notranslate"><span class="pre">v'</span></code> where PAs=Pv=v’ with PA = <code class="docutils literal notranslate"><span class="pre">I</span></code>-<code class="docutils literal notranslate"><span class="pre">M</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="CancellationAbelianMonoid.html#l-cancellation-abelian-monoid-subtract-if-can"><span class="std std-ref">subtractIfCan</span></a>: (%, %) -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="CancellationAbelianMonoid.html#l-cancellation-abelian-monoid"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-summands"></span><dl class="simple" id="index-117">
+<dt><span class="spadfun">summands</span>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">summands(f)</span></code> analysis the block structure of the system matrix of the ALS of <code class="docutils literal notranslate"><span class="pre">f</span></code> to split <code class="docutils literal notranslate"><span class="pre">f</span></code> into summands.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-swap-columns"></span><dl class="simple" id="index-118">
+<dt><span class="spadfun">swapColumns!</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">swapColumns!(f,</span> <span class="pre">i,</span> <span class="pre">j)</span></code> exchanges columns <code class="docutils literal notranslate"><span class="pre">i</span></code> and <code class="docutils literal notranslate"><span class="pre">j</span></code> in the ALS of <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-swap-rows"></span><dl class="simple" id="index-119">
+<dt><span class="spadfun">swapRows!</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">swapRows!(f,</span> <span class="pre">i,</span> <span class="pre">j)</span></code> exchanges rows <code class="docutils literal notranslate"><span class="pre">i</span></code> and <code class="docutils literal notranslate"><span class="pre">j</span></code> in the ALS of <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-swap-rows-columns"></span><dl class="simple" id="index-120">
+<dt><span class="spadfun">swapRowsColumns!</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">swapRowsColumns!(f,</span> <span class="pre">i,</span> <span class="pre">j)</span></code> exchanges rows <code class="docutils literal notranslate"><span class="pre">i</span></code> and <code class="docutils literal notranslate"><span class="pre">j</span></code> and columns <code class="docutils literal notranslate"><span class="pre">j</span></code> and <code class="docutils literal notranslate"><span class="pre">i</span></code> in the ALS of <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-toggle-alternative-output"></span><dl class="simple" id="index-121">
+<dt><span class="spadfun">toggleAlternativeOutput</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">toggleAlternativeOutput(f)</span></code> enable/disable output as rational expression.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-toggle-debug-output"></span><dl class="simple" id="index-122">
+<dt><span class="spadfun">toggleDebugOutput</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">toggleDebugOutput(f)</span></code> enable/disable ALS.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-transformation-matrix"></span><dl class="simple" id="index-123">
+<dt><span class="spadfun">transformationMatrix</span>: % -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">transformationMatrix(f)</span></code> returns the identity matrix to be modified and used within transformRows! or transformColumns!</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-transform-columns"></span><dl class="simple" id="index-124">
+<dt><span class="spadfun">transformColumns!</span>: (%, <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> F) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">transformColumns!(f,</span> <span class="pre">U)</span></code> transforms the ALS of <code class="docutils literal notranslate"><span class="pre">f</span></code> from the right.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-transform-rows"></span><dl class="simple" id="index-125">
+<dt><span class="spadfun">transformRows!</span>: (%, <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> F) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">transformRows!(f,</span> <span class="pre">T)</span></code> transforms the ALS of <code class="docutils literal notranslate"><span class="pre">f</span></code> from the left.</p>
+</dd>
+<dt><a class="reference internal" href="EntireRing.html#l-entire-ring-unit"><span class="std std-ref">unit?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="EntireRing.html#l-entire-ring"><span class="std std-ref">EntireRing</span></a></p>
+</dd>
+<dt><a class="reference internal" href="EntireRing.html#l-entire-ring-unit-canonical"><span class="std std-ref">unitCanonical</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="EntireRing.html#l-entire-ring"><span class="std std-ref">EntireRing</span></a></p>
+</dd>
+<dt><a class="reference internal" href="EntireRing.html#l-entire-ring-unit-normal"><span class="std std-ref">unitNormal</span></a>: % -&gt; Record(unit: %, canonical: %, associate: %)</dt><dd><p>from <a class="reference internal" href="EntireRing.html#l-entire-ring"><span class="std std-ref">EntireRing</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-variables"></span><dl class="simple" id="index-126">
+<dt><span class="spadfun">variables</span>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="FreeMonoid.html#l-free-monoid"><span class="std std-ref">FreeMonoid</span></a> VAR</dt><dd><p><code class="docutils literal notranslate"><span class="pre">variables(f)</span></code> returns a list of the variables.</p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-vector"></span><dl class="simple" id="index-127">
+<dt><span class="spadfun">vector</span>: % -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">vector(f)</span></code> returns <code class="docutils literal notranslate"><span class="pre">v</span></code> from the ALS of <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-128">
+<dt><span class="spadfun">vector</span>: % -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="XDistributedPolynomial.html#l-x-distributed-polynomial"><span class="std std-ref">XDistributedPolynomial</span></a>(VAR, F)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">vector(f)</span></code> returns <code class="docutils literal notranslate"><span class="pre">v</span></code> from the ALS of <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-zero"><span class="std std-ref">zero?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-free-division-algebra-zero"></span><dl class="simple" id="index-129">
+<dt><span class="spadfun">zero?</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">zero?(f,</span> <span class="pre">i,</span> <span class="pre">j)</span></code> is A(<code class="docutils literal notranslate"><span class="pre">i</span></code>,<code class="docutils literal notranslate"><span class="pre">j</span></code>) zero?</p>
+</dd>
+</dl>
+<p><a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
+<p><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+<p><a class="reference internal" href="AbelianSemiGroup.html#l-abelian-semi-group"><span class="std std-ref">AbelianSemiGroup</span></a></p>
+<p><a class="reference internal" href="Algebra.html#l-algebra"><span class="std std-ref">Algebra</span></a> F</p>
+<p><a class="reference internal" href="Algebra.html#l-algebra"><span class="std std-ref">Algebra</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></p>
+<p><a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+<p><a class="reference internal" href="BiModule.html#l-bi-module"><span class="std std-ref">BiModule</span></a>(%, %)</p>
+<p><a class="reference internal" href="BiModule.html#l-bi-module"><span class="std std-ref">BiModule</span></a>(F, F)</p>
+<p><a class="reference internal" href="BiModule.html#l-bi-module"><span class="std std-ref">BiModule</span></a>(<a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>)</p>
+<p><a class="reference internal" href="CancellationAbelianMonoid.html#l-cancellation-abelian-monoid"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
+<p><a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+<p><a class="reference internal" href="DivisionRing.html#l-division-ring"><span class="std std-ref">DivisionRing</span></a></p>
+<p><a class="reference internal" href="EntireRing.html#l-entire-ring"><span class="std std-ref">EntireRing</span></a></p>
+<p><a class="reference internal" href="LeftModule.html#l-left-module"><span class="std std-ref">LeftModule</span></a> %</p>
+<p><a class="reference internal" href="LeftModule.html#l-left-module"><span class="std std-ref">LeftModule</span></a> F</p>
+<p><a class="reference internal" href="LeftModule.html#l-left-module"><span class="std std-ref">LeftModule</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></p>
+<p><a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
+<p><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
+<p><a class="reference internal" href="Module.html#l-module"><span class="std std-ref">Module</span></a> F</p>
+<p><a class="reference internal" href="Module.html#l-module"><span class="std std-ref">Module</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></p>
+<p><a class="reference internal" href="Monoid.html#l-monoid"><span class="std std-ref">Monoid</span></a></p>
+<p><a class="reference internal" href="NonAssociativeRing.html#l-non-associative-ring"><span class="std std-ref">NonAssociativeRing</span></a></p>
+<p><a class="reference internal" href="NonAssociativeRng.html#l-non-associative-rng"><span class="std std-ref">NonAssociativeRng</span></a></p>
+<p><a class="reference internal" href="NonAssociativeSemiRing.html#l-non-associative-semi-ring"><span class="std std-ref">NonAssociativeSemiRing</span></a></p>
+<p><a class="reference internal" href="NonAssociativeSemiRng.html#l-non-associative-semi-rng"><span class="std std-ref">NonAssociativeSemiRng</span></a></p>
+<p><a class="reference internal" href="noZeroDivisors.html#l-no-zero-divisors"><span class="std std-ref">noZeroDivisors</span></a></p>
+<p><a class="reference internal" href="RightModule.html#l-right-module"><span class="std std-ref">RightModule</span></a> %</p>
+<p><a class="reference internal" href="RightModule.html#l-right-module"><span class="std std-ref">RightModule</span></a> F</p>
+<p><a class="reference internal" href="RightModule.html#l-right-module"><span class="std std-ref">RightModule</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></p>
+<p><a class="reference internal" href="Ring.html#l-ring"><span class="std std-ref">Ring</span></a></p>
+<p><a class="reference internal" href="Rng.html#l-rng"><span class="std std-ref">Rng</span></a></p>
+<p><a class="reference internal" href="SemiGroup.html#l-semi-group"><span class="std std-ref">SemiGroup</span></a></p>
+<p><a class="reference internal" href="SemiRing.html#l-semi-ring"><span class="std std-ref">SemiRing</span></a></p>
+<p><a class="reference internal" href="SemiRng.html#l-semi-rng"><span class="std std-ref">SemiRng</span></a></p>
+<p><a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+<p><a class="reference internal" href="TwoSidedRecip.html#l-two-sided-recip"><span class="std std-ref">TwoSidedRecip</span></a></p>
+<p><a class="reference internal" href="unitsKnown.html#l-units-known"><span class="std std-ref">unitsKnown</span></a></p>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="FreeGroup.html" title="FreeGroup S"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="FractionalIdealAsModule.html" title="FractionalIdealAsModule(R, F, UP, A, ibasis)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Domains.html" >Domains</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">FreeDivisionAlgebra(VAR, F)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

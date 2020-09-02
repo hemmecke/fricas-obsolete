@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FractionFreeFastGaussian(D, V) &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="FractionFreeFastGaussianFractions(D, V, VF)" href="FractionFreeFastGaussianFractions.html" />
+    <link rel="prev" title="FractionalIdealFunctions2(R1, F1, U1, A1, R2, F2, U2, A2)" href="FractionalIdealFunctions2.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="FractionFreeFastGaussianFractions.html" title="FractionFreeFastGaussianFractions(D, V, VF)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="FractionalIdealFunctions2.html" title="FractionalIdealFunctions2(R1, F1, U1, A1, R2, F2, U2, A2)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">FractionFreeFastGaussian(D, V)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="fractionfreefastgaussian-d-v">
+<span id="l-fraction-free-fast-gaussian"></span><span id="index-0"></span><h1>FractionFreeFastGaussian(D, V)<a class="headerlink" href="#fractionfreefastgaussian-d-v" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/fffg.spad#L45">fffg.spad line 45</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/fffg.spad#L45">[edit on github]</a></p>
+<ul class="simple">
+<li><p>D: Join(<a class="reference internal" href="IntegralDomain.html#l-integral-domain"><span class="std std-ref">IntegralDomain</span></a>, <a class="reference internal" href="GcdDomain.html#l-gcd-domain"><span class="std std-ref">GcdDomain</span></a>)</p></li>
+<li><p>V: <a class="reference internal" href="AbelianMonoidRing.html#l-abelian-monoid-ring"><span class="std std-ref">AbelianMonoidRing</span></a>(D, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>)</p></li>
+</ul>
+<p>This package implements the interpolation algorithm proposed in Beckermann, Bernhard and Labahn, George, Fraction-free computation of matrix rational interpolants and matrix GCDs, SIAM Journal on Matrix Analysis and Applications 22.</p>
+<span class="target" id="l-fraction-free-fast-gaussian-diff-action"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">DiffAction</span>: (<a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, V) -&gt; D</dt><dd><p><code class="docutils literal notranslate"><span class="pre">DiffAction(k,</span> <span class="pre">l,</span> <span class="pre">g)</span></code> gives the coefficient of <code class="docutils literal notranslate"><span class="pre">x^k</span></code> in <code class="docutils literal notranslate"><span class="pre">z^l</span></code> <code class="docutils literal notranslate"><span class="pre">g</span></code>(<code class="docutils literal notranslate"><span class="pre">x</span></code>), where <code class="docutils literal notranslate"><span class="pre">z*</span></code>(a+b*x+c*x^2+d*x^3+…) = (a*x+b*x^2+c*x^3+…), i.e. multiplication with <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-fraction-free-fast-gaussian-diff-c"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">DiffC</span>: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a> -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> D</dt><dd><p><code class="docutils literal notranslate"><span class="pre">DiffC</span></code> gives the coefficients <code class="docutils literal notranslate"><span class="pre">c_</span></code>{<code class="docutils literal notranslate"><span class="pre">k</span></code>, <code class="docutils literal notranslate"><span class="pre">k</span></code>} in the expansion &lt;x^k&gt; <code class="docutils literal notranslate"><span class="pre">z</span></code> <code class="docutils literal notranslate"><span class="pre">g</span></code>(<code class="docutils literal notranslate"><span class="pre">x</span></code>) = sum_{<code class="docutils literal notranslate"><span class="pre">i=0</span></code>}<code class="docutils literal notranslate"><span class="pre">^k</span></code> <code class="docutils literal notranslate"><span class="pre">c_</span></code>{<code class="docutils literal notranslate"><span class="pre">k</span></code>, <code class="docutils literal notranslate"><span class="pre">i</span></code>} &lt;x^i&gt; <code class="docutils literal notranslate"><span class="pre">g</span></code>(<code class="docutils literal notranslate"><span class="pre">x</span></code>), where <code class="docutils literal notranslate"><span class="pre">z</span></code> acts on <code class="docutils literal notranslate"><span class="pre">g</span></code>(<code class="docutils literal notranslate"><span class="pre">x</span></code>) by shifting. In fact, the result is [0, 0, 0, …]</p>
+</dd>
+</dl>
+<span class="target" id="l-fraction-free-fast-gaussian-fffg"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">fffg</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> D, (<a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> D) -&gt; D, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> D</dt><dd><p><code class="docutils literal notranslate"><span class="pre">fffg(C,</span> <span class="pre">c,</span> <span class="pre">eta)</span></code> is version of fffg which uses sum of eta as order</p>
+</dd>
+</dl>
+<dl class="simple" id="index-4">
+<dt><span class="spadfun">fffg</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> D, (<a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> D) -&gt; D, <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> D</dt><dd><p><code class="docutils literal notranslate"><span class="pre">fffg(C,</span> <span class="pre">c,</span> <span class="pre">vd,</span> <span class="pre">K)</span></code> is the general algorithm as proposed by Beckermann and Labahn.   The first argument is the list of <code class="docutils literal notranslate"><span class="pre">c_</span></code>{<code class="docutils literal notranslate"><span class="pre">i</span></code>, <code class="docutils literal notranslate"><span class="pre">i</span></code>}. These are the only values of <code class="docutils literal notranslate"><span class="pre">C</span></code> explicitely needed in <code class="docutils literal notranslate"><span class="pre">fffg</span></code>.   The second argument <code class="docutils literal notranslate"><span class="pre">c</span></code>, computes <code class="docutils literal notranslate"><span class="pre">c_k</span></code>(<code class="docutils literal notranslate"><span class="pre">M</span></code>), i.e. <code class="docutils literal notranslate"><span class="pre">c_k</span></code>(.) is the dual basis of the vector space <code class="docutils literal notranslate"><span class="pre">V</span></code>, but also knows about the special multiplication rule as descibed in Equation (2). Note that the information about <code class="docutils literal notranslate"><span class="pre">f</span></code> is therefore encoded in <code class="docutils literal notranslate"><span class="pre">c</span></code>.   <code class="docutils literal notranslate"><span class="pre">vd</span></code> is modified by the routine, on input it is the vector of degree bounds <code class="docutils literal notranslate"><span class="pre">n</span></code>, as introduced in Definition 2.1. On output it is vector of defects (degree bound minus degree of solution).   <code class="docutils literal notranslate"><span class="pre">K</span></code> is requested order of solution.</p>
+</dd>
+</dl>
+<span class="target" id="l-fraction-free-fast-gaussian-general-coefficient"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">generalCoefficient</span>: ((<a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, V) -&gt; D, <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> V, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> D) -&gt; D</dt><dd><p><code class="docutils literal notranslate"><span class="pre">generalCoefficient(action,</span> <span class="pre">f,</span> <span class="pre">k,</span> <span class="pre">p)</span></code> gives the coefficient of <code class="docutils literal notranslate"><span class="pre">x^k</span></code> in <code class="docutils literal notranslate"><span class="pre">p</span></code>(<code class="docutils literal notranslate"><span class="pre">z</span></code>)dot <code class="docutils literal notranslate"><span class="pre">f</span></code>(<code class="docutils literal notranslate"><span class="pre">x</span></code>), where the <code class="docutils literal notranslate"><span class="pre">action</span></code> of <code class="docutils literal notranslate"><span class="pre">z^l</span></code> on a polynomial in <code class="docutils literal notranslate"><span class="pre">x</span></code> is given by <code class="docutils literal notranslate"><span class="pre">action</span></code>, i.e. <code class="docutils literal notranslate"><span class="pre">action</span></code>(<code class="docutils literal notranslate"><span class="pre">k</span></code>, <code class="docutils literal notranslate"><span class="pre">l</span></code>, <code class="docutils literal notranslate"><span class="pre">f</span></code>) should return the coefficient of <code class="docutils literal notranslate"><span class="pre">x^k</span></code> in <code class="docutils literal notranslate"><span class="pre">z^l</span></code> <code class="docutils literal notranslate"><span class="pre">f</span></code>(<code class="docutils literal notranslate"><span class="pre">x</span></code>).</p>
+</dd>
+</dl>
+<span class="target" id="l-fraction-free-fast-gaussian-general-interpolation"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">generalInterpolation</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> D, (<a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, V) -&gt; D, <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> V, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> D</dt><dd><p><code class="docutils literal notranslate"><span class="pre">generalInterpolation(C,</span> <span class="pre">CA,</span> <span class="pre">f,</span> <span class="pre">eta)</span></code> performs Hermite-Pade approximation using the given action <code class="docutils literal notranslate"><span class="pre">CA</span></code> of polynomials on the elements of <code class="docutils literal notranslate"><span class="pre">f</span></code>. The result is guaranteed to be correct up to order <a href="#id1"><span class="problematic" id="id2">|eta|</span></a>-1. Given that eta is a “normal” point, the degrees on the diagonal are given by eta. The degrees of column <code class="docutils literal notranslate"><span class="pre">i</span></code> are in this case eta + <code class="docutils literal notranslate"><span class="pre">e</span></code>.<code class="docutils literal notranslate"><span class="pre">i</span></code> - [1, 1, …, 1], where the degree of zero is <code class="docutils literal notranslate"><span class="pre">-1</span></code>.   The first argument <code class="docutils literal notranslate"><span class="pre">C</span></code> is the list of coefficients <code class="docutils literal notranslate"><span class="pre">c_</span></code>{<code class="docutils literal notranslate"><span class="pre">k</span></code>, <code class="docutils literal notranslate"><span class="pre">k</span></code>} in the expansion &lt;x^k&gt; <code class="docutils literal notranslate"><span class="pre">z</span></code> <code class="docutils literal notranslate"><span class="pre">g</span></code>(<code class="docutils literal notranslate"><span class="pre">x</span></code>) = sum_{<code class="docutils literal notranslate"><span class="pre">i=0</span></code>}<code class="docutils literal notranslate"><span class="pre">^k</span></code> <code class="docutils literal notranslate"><span class="pre">c_</span></code>{<code class="docutils literal notranslate"><span class="pre">k</span></code>, <code class="docutils literal notranslate"><span class="pre">i</span></code>} &lt;x^i&gt; <code class="docutils literal notranslate"><span class="pre">g</span></code>(<code class="docutils literal notranslate"><span class="pre">x</span></code>).   The second argument, <code class="docutils literal notranslate"><span class="pre">CA</span></code>(<code class="docutils literal notranslate"><span class="pre">k</span></code>, <code class="docutils literal notranslate"><span class="pre">l</span></code>, <code class="docutils literal notranslate"><span class="pre">f</span></code>), should return the coefficient of <code class="docutils literal notranslate"><span class="pre">x^k</span></code> in <code class="docutils literal notranslate"><span class="pre">z^l</span></code> <code class="docutils literal notranslate"><span class="pre">f</span></code>(<code class="docutils literal notranslate"><span class="pre">x</span></code>).</p>
+</dd>
+</dl>
+<dl class="simple" id="index-7">
+<dt><span class="spadfun">generalInterpolation</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> D, (<a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, V) -&gt; D, <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> V, <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> D</dt><dd><p><code class="docutils literal notranslate"><span class="pre">generalInterpolation(C,</span> <span class="pre">CA,</span> <span class="pre">f,</span> <span class="pre">vd,</span> <span class="pre">K)</span></code> is like <code class="docutils literal notranslate"><span class="pre">generalInterpolation(C,</span> <span class="pre">CA,</span> <span class="pre">f,</span> <span class="pre">eta)</span></code> but solves up to order <code class="docutils literal notranslate"><span class="pre">K</span></code> and modifies <code class="docutils literal notranslate"><span class="pre">vd</span></code> to return defects of solutions</p>
+</dd>
+</dl>
+<span class="target" id="l-fraction-free-fast-gaussian-gen-vector-stream2"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">genVectorStream2</span>: (<a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>like genVectorStream, but skips every second vector.</p>
+</dd>
+</dl>
+<span class="target" id="l-fraction-free-fast-gaussian-gen-vector-stream"></span><dl class="simple" id="index-9">
+<dt><span class="spadfun">genVectorStream</span>: (<a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">genVectorStream(sumEta,</span> <span class="pre">maxEta,</span> <span class="pre">k)</span></code> generates stream of all possible non-increasing lists <code class="docutils literal notranslate"><span class="pre">eta</span></code> with maximal entry <code class="docutils literal notranslate"><span class="pre">maxEta</span></code> and sum of entries at most <code class="docutils literal notranslate"><span class="pre">sumEta</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-fraction-free-fast-gaussian-interpolate"></span><dl class="simple" id="index-10">
+<dt><span class="spadfun">interpolate</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> D, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> D, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> D</dt><dd><p><code class="docutils literal notranslate"><span class="pre">interpolate(xlist,</span> <span class="pre">ylist,</span> <span class="pre">deg)</span></code> returns the rational function with numerator degree at most <code class="docutils literal notranslate"><span class="pre">deg</span></code> and denominator degree at most <code class="docutils literal notranslate"><span class="pre">\#xlist-deg-1</span></code> that interpolates the given points using fraction free arithmetic. Note that rational interpolation does not guarantee that all given points are interpolated correctly: unattainable points may make this impossible.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-11">
+<dt><span class="spadfun">interpolate</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> D, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> D, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> D</dt><dd><p><code class="docutils literal notranslate"><span class="pre">interpolate(xlist,</span> <span class="pre">ylist,</span> <span class="pre">deg)</span></code> returns the rational function with numerator degree <code class="docutils literal notranslate"><span class="pre">deg</span></code> that interpolates the given points using fraction free arithmetic.</p>
+</dd>
+</dl>
+<span class="target" id="l-fraction-free-fast-gaussian-q-shift-action"></span><dl class="simple" id="index-12">
+<dt><span class="spadfun">qShiftAction</span>: (D, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, V) -&gt; D</dt><dd><p><code class="docutils literal notranslate"><span class="pre">qShiftAction(q,</span> <span class="pre">k,</span> <span class="pre">l,</span> <span class="pre">g)</span></code> gives the coefficient of <code class="docutils literal notranslate"><span class="pre">x^k</span></code> in <code class="docutils literal notranslate"><span class="pre">z^l</span></code> <code class="docutils literal notranslate"><span class="pre">g</span></code>(<code class="docutils literal notranslate"><span class="pre">x</span></code>), where <code class="docutils literal notranslate"><span class="pre">z*</span></code>(a+b*x+c*x^2+d*x^3+…) = (a+q*b*x+q^2*c*x^2+q^3*d*x^3+…). In terms of sequences, z*u(<code class="docutils literal notranslate"><span class="pre">n</span></code>)=q^n*u(<code class="docutils literal notranslate"><span class="pre">n</span></code>).</p>
+</dd>
+</dl>
+<span class="target" id="l-fraction-free-fast-gaussian-q-shift-c"></span><dl class="simple" id="index-13">
+<dt><span class="spadfun">qShiftC</span>: (D, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> D</dt><dd><p><code class="docutils literal notranslate"><span class="pre">qShiftC</span></code> gives the coefficients <code class="docutils literal notranslate"><span class="pre">c_</span></code>{<code class="docutils literal notranslate"><span class="pre">k</span></code>, <code class="docutils literal notranslate"><span class="pre">k</span></code>} in the expansion &lt;x^k&gt; <code class="docutils literal notranslate"><span class="pre">z</span></code> <code class="docutils literal notranslate"><span class="pre">g</span></code>(<code class="docutils literal notranslate"><span class="pre">x</span></code>) = sum_{<code class="docutils literal notranslate"><span class="pre">i=0</span></code>}<code class="docutils literal notranslate"><span class="pre">^k</span></code> <code class="docutils literal notranslate"><span class="pre">c_</span></code>{<code class="docutils literal notranslate"><span class="pre">k</span></code>, <code class="docutils literal notranslate"><span class="pre">i</span></code>} &lt;x^i&gt; <code class="docutils literal notranslate"><span class="pre">g</span></code>(<code class="docutils literal notranslate"><span class="pre">x</span></code>), where <code class="docutils literal notranslate"><span class="pre">z</span></code> acts on <code class="docutils literal notranslate"><span class="pre">g</span></code>(<code class="docutils literal notranslate"><span class="pre">x</span></code>) by shifting. In fact, the result is [1, <code class="docutils literal notranslate"><span class="pre">q</span></code>, <code class="docutils literal notranslate"><span class="pre">q^2</span></code>, …]</p>
+</dd>
+</dl>
+<span class="target" id="l-fraction-free-fast-gaussian-shift-action"></span><dl class="simple" id="index-14">
+<dt><span class="spadfun">ShiftAction</span>: (<a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, V) -&gt; D</dt><dd><p><code class="docutils literal notranslate"><span class="pre">ShiftAction(k,</span> <span class="pre">l,</span> <span class="pre">g)</span></code> gives the coefficient of <code class="docutils literal notranslate"><span class="pre">x^k</span></code> in <code class="docutils literal notranslate"><span class="pre">z^l</span></code> <code class="docutils literal notranslate"><span class="pre">g</span></code>(<code class="docutils literal notranslate"><span class="pre">x</span></code>), where <code class="docutils literal notranslate"><span class="pre">z*(a+b*x+c*x^2+d*x^3+...)</span> <span class="pre">=</span> <span class="pre">(b*x+2*c*x^2+3*d*x^3+...)</span></code>. In terms of sequences, z*u(<code class="docutils literal notranslate"><span class="pre">n</span></code>)=n*u(<code class="docutils literal notranslate"><span class="pre">n</span></code>).</p>
+</dd>
+</dl>
+<span class="target" id="l-fraction-free-fast-gaussian-shift-c"></span><dl class="simple" id="index-15">
+<dt><span class="spadfun">ShiftC</span>: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a> -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> D</dt><dd><p><code class="docutils literal notranslate"><span class="pre">ShiftC</span></code> gives the coefficients <code class="docutils literal notranslate"><span class="pre">c_</span></code>{<code class="docutils literal notranslate"><span class="pre">k</span></code>, <code class="docutils literal notranslate"><span class="pre">k</span></code>} in the expansion &lt;x^k&gt; <code class="docutils literal notranslate"><span class="pre">z</span></code> <code class="docutils literal notranslate"><span class="pre">g</span></code>(<code class="docutils literal notranslate"><span class="pre">x</span></code>) = sum_{<code class="docutils literal notranslate"><span class="pre">i=0</span></code>}<code class="docutils literal notranslate"><span class="pre">^k</span></code> <code class="docutils literal notranslate"><span class="pre">c_</span></code>{<code class="docutils literal notranslate"><span class="pre">k</span></code>, <code class="docutils literal notranslate"><span class="pre">i</span></code>} &lt;x^i&gt; <code class="docutils literal notranslate"><span class="pre">g</span></code>(<code class="docutils literal notranslate"><span class="pre">x</span></code>), where <code class="docutils literal notranslate"><span class="pre">z</span></code> acts on <code class="docutils literal notranslate"><span class="pre">g</span></code>(<code class="docutils literal notranslate"><span class="pre">x</span></code>) by shifting. In fact, the result is [0, 1, 2, …]</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="FractionFreeFastGaussianFractions.html" title="FractionFreeFastGaussianFractions(D, V, VF)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="FractionalIdealFunctions2.html" title="FractionalIdealFunctions2(R1, F1, U1, A1, R2, F2, U2, A2)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">FractionFreeFastGaussian(D, V)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlgebraicIntegrate2(R0, F, UP, UPUP, R) &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="AlgebraicIntegration(R, F)" href="AlgebraicIntegration.html" />
+    <link rel="prev" title="AlgebraicIntegrate(R0, F, UP, UPUP, R)" href="AlgebraicIntegrate.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="AlgebraicIntegration.html" title="AlgebraicIntegration(R, F)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="AlgebraicIntegrate.html" title="AlgebraicIntegrate(R0, F, UP, UPUP, R)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">AlgebraicIntegrate2(R0, F, UP, UPUP, R)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="algebraicintegrate2-r0-f-up-upup-r">
+<span id="l-algebraic-integrate2"></span><span id="index-0"></span><h1>AlgebraicIntegrate2(R0, F, UP, UPUP, R)<a class="headerlink" href="#algebraicintegrate2-r0-f-up-upup-r" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/intpar.spad#L1323">intpar.spad line 1323</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/intpar.spad#L1323">[edit on github]</a></p>
+<ul class="simple">
+<li><p>R0: Join(<a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a>, <a class="reference internal" href="IntegralDomain.html#l-integral-domain"><span class="std std-ref">IntegralDomain</span></a>, <a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>)</p></li>
+<li><p>F: Join(<a class="reference internal" href="AlgebraicallyClosedField.html#l-algebraically-closed-field"><span class="std std-ref">AlgebraicallyClosedField</span></a>, <a class="reference internal" href="FunctionSpace.html#l-function-space"><span class="std std-ref">FunctionSpace</span></a> R0)</p></li>
+<li><p>UP: <a class="reference internal" href="UnivariatePolynomialCategory.html#l-univariate-polynomial-category"><span class="std std-ref">UnivariatePolynomialCategory</span></a> F</p></li>
+<li><p>UPUP: <a class="reference internal" href="UnivariatePolynomialCategory.html#l-univariate-polynomial-category"><span class="std std-ref">UnivariatePolynomialCategory</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP</p></li>
+<li><p>R: <a class="reference internal" href="FunctionFieldCategory.html#l-function-field-category"><span class="std std-ref">FunctionFieldCategory</span></a>(F, UP, UPUP)</p></li>
+</ul>
+<p>undocumented</p>
+<span class="target" id="l-algebraic-integrate2-algextint"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">algextint</span>: (UP -&gt; UP, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(ratpart: <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP, coeffs: <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> F), (<a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(ratpart: <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP, coeffs: <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> F), <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> F -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> F, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> R) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(ratpart: R, coeffs: <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> F)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">algextint(der,</span> <span class="pre">ext,</span> <span class="pre">rde,</span> <span class="pre">csolve,</span> <span class="pre">[g1,</span> <span class="pre">...,</span> <span class="pre">gn])</span></code> returns a basis of solutions of the homogeneous system <code class="docutils literal notranslate"><span class="pre">h'</span> <span class="pre">+</span> <span class="pre">c1*g1</span> <span class="pre">+</span> <span class="pre">...</span> <span class="pre">+</span> <span class="pre">cn*gn</span> <span class="pre">=</span> <span class="pre">0</span></code>. Argument <code class="docutils literal notranslate"><span class="pre">ext</span></code> is an extended integration function on <code class="docutils literal notranslate"><span class="pre">F</span></code>, <code class="docutils literal notranslate"><span class="pre">rde</span></code> is RDE solver, <code class="docutils literal notranslate"><span class="pre">csolve</span></code> is linear solver over constants.</p>
+</dd>
+</dl>
+<span class="target" id="l-algebraic-integrate2-algextint-base"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">algextint_base</span>: (UP -&gt; UP, <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> F -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> F, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> R) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(ratpart: R, coeffs: <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> F)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">algextint_base(der,</span> <span class="pre">csolve,</span> <span class="pre">[g1,</span> <span class="pre">...,</span> <span class="pre">gn])</span></code> is like algextint(<code class="docutils literal notranslate"><span class="pre">der</span></code>, ext, rde, <code class="docutils literal notranslate"><span class="pre">csolve</span></code>, [<code class="docutils literal notranslate"><span class="pre">g1</span></code>, …, <code class="docutils literal notranslate"><span class="pre">gn</span></code>]), but assumes that field is algebraic extension of rational functions and that <code class="docutils literal notranslate"><span class="pre">gi</span></code>-<code class="docutils literal notranslate"><span class="pre">s</span></code> have no poles at infinity.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="AlgebraicIntegration.html" title="AlgebraicIntegration(R, F)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="AlgebraicIntegrate.html" title="AlgebraicIntegrate(R0, F, UP, UPUP, R)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">AlgebraicIntegrate2(R0, F, UP, UPUP, R)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RectangularMatrixCategoryFunctions2(m, n, R1, Row1, Col1, M1, R2, Row2, Col2, M2) &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="RecurrenceOperator(R, F)" href="RecurrenceOperator.html" />
+    <link rel="prev" title="RealZeroPackageQ Pol" href="RealZeroPackageQ.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="RecurrenceOperator.html" title="RecurrenceOperator(R, F)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="RealZeroPackageQ.html" title="RealZeroPackageQ Pol"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">RectangularMatrixCategoryFunctions2(m, n, R1, Row1, Col1, M1, R2, Row2, Col2, M2)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="rectangularmatrixcategoryfunctions2-m-n-r1-row1-col1-m1-r2-row2-col2-m2">
+<span id="l-rectangular-matrix-category-functions2"></span><span id="index-0"></span><h1>RectangularMatrixCategoryFunctions2(m, n, R1, Row1, Col1, M1, R2, Row2, Col2, M2)<a class="headerlink" href="#rectangularmatrixcategoryfunctions2-m-n-r1-row1-col1-m1-r2-row2-col2-m2" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/matfuns.spad#L345">matfuns.spad line 345</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/matfuns.spad#L345">[edit on github]</a></p>
+<ul class="simple">
+<li><p>m: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></p></li>
+<li><p>n: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></p></li>
+<li><p>R1: Join(<a class="reference internal" href="SemiRng.html#l-semi-rng"><span class="std std-ref">SemiRng</span></a>, <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a>)</p></li>
+<li><p>Row1: <a class="reference internal" href="DirectProductCategory.html#l-direct-product-category"><span class="std std-ref">DirectProductCategory</span></a>(n, R1)</p></li>
+<li><p>Col1: <a class="reference internal" href="DirectProductCategory.html#l-direct-product-category"><span class="std std-ref">DirectProductCategory</span></a>(m, R1)</p></li>
+<li><p>M1: <a class="reference internal" href="RectangularMatrixCategory.html#l-rectangular-matrix-category"><span class="std std-ref">RectangularMatrixCategory</span></a>(m, n, R1, Row1, Col1)</p></li>
+<li><p>R2: Join(<a class="reference internal" href="SemiRng.html#l-semi-rng"><span class="std std-ref">SemiRng</span></a>, <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a>)</p></li>
+<li><p>Row2: <a class="reference internal" href="DirectProductCategory.html#l-direct-product-category"><span class="std std-ref">DirectProductCategory</span></a>(n, R2)</p></li>
+<li><p>Col2: <a class="reference internal" href="DirectProductCategory.html#l-direct-product-category"><span class="std std-ref">DirectProductCategory</span></a>(m, R2)</p></li>
+<li><p>M2: <a class="reference internal" href="RectangularMatrixCategory.html#l-rectangular-matrix-category"><span class="std std-ref">RectangularMatrixCategory</span></a>(m, n, R2, Row2, Col2)</p></li>
+</ul>
+<p><a class="reference internal" href="#l-rectangular-matrix-category-functions2"><span class="std std-ref">RectangularMatrixCategoryFunctions2</span></a> provides functions between two matrix domains. The functions provided are <span class="spadfun">map</span> and <span class="spadfun">reduce</span>.</p>
+<span class="target" id="l-rectangular-matrix-category-functions2-map"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">map</span>: (R1 -&gt; R2, M1) -&gt; M2</dt><dd><p><code class="docutils literal notranslate"><span class="pre">map(f,</span> <span class="pre">m)</span></code> applies the function <code class="docutils literal notranslate"><span class="pre">f</span></code> to the elements of the matrix <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-rectangular-matrix-category-functions2-reduce"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">reduce</span>: ((R1, R2) -&gt; R2, M1, R2) -&gt; R2</dt><dd><p><code class="docutils literal notranslate"><span class="pre">reduce(f,</span> <span class="pre">m,</span> <span class="pre">r)</span></code> returns a matrix <code class="docutils literal notranslate"><span class="pre">n</span></code> where <code class="docutils literal notranslate"><span class="pre">n[i,</span> <span class="pre">j]</span> <span class="pre">=</span> <span class="pre">f(m[i,</span> <span class="pre">j],</span> <span class="pre">r)</span></code> for all indices spad{<code class="docutils literal notranslate"><span class="pre">i</span></code>} and <code class="docutils literal notranslate"><span class="pre">j</span></code>.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="RecurrenceOperator.html" title="RecurrenceOperator(R, F)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="RealZeroPackageQ.html" title="RealZeroPackageQ Pol"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">RectangularMatrixCategoryFunctions2(m, n, R1, Row1, Col1, M1, R2, Row2, Col2, M2)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,506 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FiniteAlgebraicExtensionField F &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="FiniteDivisorCategory(F, UP, UPUP, R)" href="FiniteDivisorCategory.html" />
+    <link rel="prev" title="finiteAggregate" href="finiteAggregate.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="FiniteDivisorCategory.html" title="FiniteDivisorCategory(F, UP, UPUP, R)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="finiteAggregate.html" title="finiteAggregate"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Categories.html" accesskey="U">Categories</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">FiniteAlgebraicExtensionField F</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="finitealgebraicextensionfield-f">
+<span id="l-finite-algebraic-extension-field"></span><span id="index-0"></span><h1>FiniteAlgebraicExtensionField F<a class="headerlink" href="#finitealgebraicextensionfield-f" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/ffcat.spad#L92">ffcat.spad line 92</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/ffcat.spad#L92">[edit on github]</a></p>
+<ul class="simple">
+<li><p>F: <a class="reference internal" href="Field.html#l-field"><span class="std std-ref">Field</span></a></p></li>
+</ul>
+<p>FiniteAlgebraicExtensionField <em>F</em> is the category of fields which are finite algebraic extensions of the field <em>F</em>. If <em>F</em> is finite then any finite algebraic extension of <em>F</em> is finite, too. Let <em>K</em> be a finite algebraic extension of the finite field <em>F</em>. The exponentiation of elements of <em>K</em> defines a <code class="docutils literal notranslate"><span class="pre">Z</span></code>-module structure on the multiplicative group of <em>K</em>. The additive group of <em>K</em> becomes a module over the ring of polynomials over <em>F</em> via the operation <span class="spadfun">linearAssociatedExp</span>(a: <code class="docutils literal notranslate"><span class="pre">K</span></code>, <code class="docutils literal notranslate"><span class="pre">f:</span></code> SparseUnivariatePolynomial <code class="docutils literal notranslate"><span class="pre">F</span></code>) which is linear over <em>F</em>, i.e. for elements <em>a</em> from <em>K</em>, <em>c, d</em> from <em>F</em> and <em>f, g</em> univariate polynomials over <em>F</em> we have <span class="spadfun">linearAssociatedExp</span>(a, cf+dg) equals <em>c</em> times <span class="spadfun">linearAssociatedExp</span>(a, <code class="docutils literal notranslate"><span class="pre">f</span></code>) plus <em>d</em> times <span class="spadfun">linearAssociatedExp</span>(a, <code class="docutils literal notranslate"><span class="pre">g</span></code>). Therefore <span class="spadfun">linearAssociatedExp</span> is defined completely by its action on monomials from <em>F[X]</em>: <span class="spadfun">linearAssociatedExp</span>(a, monomial(1, <code class="docutils literal notranslate"><span class="pre">k</span></code>)<code class="docutils literal notranslate"><span class="pre">\$</span></code>SUP(<code class="docutils literal notranslate"><span class="pre">F</span></code>)) is defined to be <span class="spadfun">Frobenius</span>(a, <code class="docutils literal notranslate"><span class="pre">k</span></code>) which is <em>a^(q^k)</em> where <em>q=size()$F</em>. The operations order and discreteLog associated with the multiplicative exponentiation have additive analogues associated to the operation <span class="spadfun">linearAssociatedExp</span>. These are the functions <span class="spadfun">linearAssociatedOrder</span> and <span class="spadfun">linearAssociatedLog</span>, respectively.</p>
+<dl class="simple">
+<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-0"><span class="std std-ref">0</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-1"><span class="std std-ref">1</span></a>: %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Magma.html#id1"><span class="std std-ref">*</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
+</dd>
+<dt><a class="reference internal" href="RightModule.html#id1"><span class="std std-ref">*</span></a>: (%, F) -&gt; %</dt><dd><p>from <a class="reference internal" href="RightModule.html#l-right-module"><span class="std std-ref">RightModule</span></a> F</p>
+</dd>
+<dt><a class="reference internal" href="RightModule.html#id1"><span class="std std-ref">*</span></a>: (%, <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="RightModule.html#l-right-module"><span class="std std-ref">RightModule</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></p>
+</dd>
+<dt><a class="reference internal" href="LeftModule.html#id1"><span class="std std-ref">*</span></a>: (F, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="LeftModule.html#l-left-module"><span class="std std-ref">LeftModule</span></a> F</p>
+</dd>
+<dt><a class="reference internal" href="LeftModule.html#id1"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="LeftModule.html#l-left-module"><span class="std std-ref">LeftModule</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianGroup.html#id1"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianMonoid.html#id1"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianSemiGroup.html#id1"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l-abelian-semi-group"><span class="std std-ref">AbelianSemiGroup</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianSemiGroup.html#id2"><span class="std std-ref">+</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l-abelian-semi-group"><span class="std std-ref">AbelianSemiGroup</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianGroup.html#id2"><span class="std std-ref">-</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianGroup.html#id2"><span class="std std-ref">-</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Field.html#id1"><span class="std std-ref">/</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="Field.html#l-field"><span class="std std-ref">Field</span></a></p>
+</dd>
+<dt><a class="reference internal" href="ExtensionField.html#id1"><span class="std std-ref">/</span></a>: (%, F) -&gt; %</dt><dd><p>from <a class="reference internal" href="ExtensionField.html#l-extension-field"><span class="std std-ref">ExtensionField</span></a> F</p>
+</dd>
+<dt><a class="reference internal" href="BasicType.html#id1"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+<dt><a class="reference internal" href="DivisionRing.html#id1"><span class="std std-ref">^</span></a>: (%, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="DivisionRing.html#l-division-ring"><span class="std std-ref">DivisionRing</span></a></p>
+</dd>
+<dt><a class="reference internal" href="MagmaWithUnit.html#id1"><span class="std std-ref">^</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Magma.html#id2"><span class="std std-ref">^</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
+</dd>
+<dt><a class="reference internal" href="BasicType.html#id2"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+<dt><a class="reference internal" href="ExtensionField.html#l-extension-field-algebraic"><span class="std std-ref">algebraic?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="ExtensionField.html#l-extension-field"><span class="std std-ref">ExtensionField</span></a> F</p>
+</dd>
+<dt><a class="reference internal" href="Rng.html#l-rng-annihilate"><span class="std std-ref">annihilate?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Rng.html#l-rng"><span class="std std-ref">Rng</span></a></p>
+</dd>
+<dt><a class="reference internal" href="NonAssociativeSemiRng.html#l-non-associative-semi-rng-anti-commutator"><span class="std std-ref">antiCommutator</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeSemiRng.html#l-non-associative-semi-rng"><span class="std std-ref">NonAssociativeSemiRng</span></a></p>
+</dd>
+<dt><a class="reference internal" href="EntireRing.html#l-entire-ring-associates"><span class="std std-ref">associates?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="EntireRing.html#l-entire-ring"><span class="std std-ref">EntireRing</span></a></p>
+</dd>
+<dt><a class="reference internal" href="NonAssociativeRng.html#l-non-associative-rng-associator"><span class="std std-ref">associator</span></a>: (%, %, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRng.html#l-non-associative-rng"><span class="std std-ref">NonAssociativeRng</span></a></p>
+</dd>
+<dt><a class="reference internal" href="FramedModule.html#l-framed-module-basis"><span class="std std-ref">basis</span></a>: () -&gt; <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> %</dt><dd><p>from <a class="reference internal" href="FramedModule.html#l-framed-module"><span class="std std-ref">FramedModule</span></a> F</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-algebraic-extension-field-basis"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">basis</span>: <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a> -&gt; <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> % if F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">basis(n)</span></code> returns a fixed basis of a subfield of % as <code class="docutils literal notranslate"><span class="pre">F</span></code>-vector space.</p>
+</dd>
+<dt><a class="reference internal" href="NonAssociativeRing.html#l-non-associative-ring-characteristic"><span class="std std-ref">characteristic</span></a>: () -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="NonAssociativeRing.html#l-non-associative-ring"><span class="std std-ref">NonAssociativeRing</span></a></p>
+</dd>
+<dt><a class="reference internal" href="FiniteRankAlgebra.html#l-finite-rank-algebra-characteristic-polynomial"><span class="std std-ref">characteristicPolynomial</span></a>: % -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> F</dt><dd><p>from <a class="reference internal" href="FiniteRankAlgebra.html#l-finite-rank-algebra"><span class="std std-ref">FiniteRankAlgebra</span></a>(F, <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> F)</p>
+</dd>
+<dt><a class="reference internal" href="FiniteFieldCategory.html#l-finite-field-category-charth-root"><span class="std std-ref">charthRoot</span></a>: % -&gt; % if F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="FiniteFieldCategory.html#l-finite-field-category"><span class="std std-ref">FiniteFieldCategory</span></a></p>
+</dd>
+<dt><a class="reference internal" href="PolynomialFactorizationExplicit.html#l-polynomial-factorization-explicit-charth-root"><span class="std std-ref">charthRoot</span></a>: % -&gt; Union(%, failed) if F has <a class="reference internal" href="CharacteristicNonZero.html#l-characteristic-non-zero"><span class="std std-ref">CharacteristicNonZero</span></a> or F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="PolynomialFactorizationExplicit.html#l-polynomial-factorization-explicit"><span class="std std-ref">PolynomialFactorizationExplicit</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Algebra.html#l-algebra-coerce"><span class="std std-ref">coerce</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="Algebra.html#l-algebra"><span class="std std-ref">Algebra</span></a> %</p>
+</dd>
+<dt><a class="reference internal" href="CoercibleTo.html#l-coercible-to-coerce"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+</dd>
+<dt><a class="reference internal" href="CoercibleFrom.html#l-coercible-from-coerce"><span class="std std-ref">coerce</span></a>: F -&gt; %</dt><dd><p>from <a class="reference internal" href="CoercibleFrom.html#l-coercible-from"><span class="std std-ref">CoercibleFrom</span></a> F</p>
+</dd>
+<dt><a class="reference internal" href="Algebra.html#l-algebra-coerce"><span class="std std-ref">coerce</span></a>: <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a> -&gt; %</dt><dd><p>from <a class="reference internal" href="Algebra.html#l-algebra"><span class="std std-ref">Algebra</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></p>
+</dd>
+<dt><a class="reference internal" href="NonAssociativeRing.html#l-non-associative-ring-coerce"><span class="std std-ref">coerce</span></a>: <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a> -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRing.html#l-non-associative-ring"><span class="std std-ref">NonAssociativeRing</span></a></p>
+</dd>
+<dt><a class="reference internal" href="NonAssociativeRng.html#l-non-associative-rng-commutator"><span class="std std-ref">commutator</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRng.html#l-non-associative-rng"><span class="std std-ref">NonAssociativeRng</span></a></p>
+</dd>
+<dt><a class="reference internal" href="PolynomialFactorizationExplicit.html#l-polynomial-factorization-explicit-condition-p"><span class="std std-ref">conditionP</span></a>: <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> % -&gt; Union(<a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> %, failed) if F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="PolynomialFactorizationExplicit.html#l-polynomial-factorization-explicit"><span class="std std-ref">PolynomialFactorizationExplicit</span></a></p>
+</dd>
+<dt><a class="reference internal" href="ConvertibleTo.html#l-convertible-to-convert"><span class="std std-ref">convert</span></a>: % -&gt; <a class="reference internal" href="InputForm.html#l-input-form"><span class="std std-ref">InputForm</span></a> if F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="ConvertibleTo.html#l-convertible-to"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="InputForm.html#l-input-form"><span class="std std-ref">InputForm</span></a></p>
+</dd>
+<dt><a class="reference internal" href="FramedModule.html#l-framed-module-convert"><span class="std std-ref">convert</span></a>: % -&gt; <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> F</dt><dd><p>from <a class="reference internal" href="FramedModule.html#l-framed-module"><span class="std std-ref">FramedModule</span></a> F</p>
+</dd>
+<dt><a class="reference internal" href="FramedModule.html#l-framed-module-convert"><span class="std std-ref">convert</span></a>: <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> F -&gt; %</dt><dd><p>from <a class="reference internal" href="FramedModule.html#l-framed-module"><span class="std std-ref">FramedModule</span></a> F</p>
+</dd>
+<dt><a class="reference internal" href="FramedModule.html#l-framed-module-coordinates"><span class="std std-ref">coordinates</span></a>: % -&gt; <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> F</dt><dd><p>from <a class="reference internal" href="FramedModule.html#l-framed-module"><span class="std std-ref">FramedModule</span></a> F</p>
+</dd>
+<dt><a class="reference internal" href="FiniteRankAlgebra.html#l-finite-rank-algebra-coordinates"><span class="std std-ref">coordinates</span></a>: (%, <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> %) -&gt; <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> F</dt><dd><p>from <a class="reference internal" href="FiniteRankAlgebra.html#l-finite-rank-algebra"><span class="std std-ref">FiniteRankAlgebra</span></a>(F, <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> F)</p>
+</dd>
+<dt><a class="reference internal" href="FiniteRankAlgebra.html#l-finite-rank-algebra-coordinates"><span class="std std-ref">coordinates</span></a>: (<a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> %, <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> %) -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> F</dt><dd><p>from <a class="reference internal" href="FiniteRankAlgebra.html#l-finite-rank-algebra"><span class="std std-ref">FiniteRankAlgebra</span></a>(F, <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> F)</p>
+</dd>
+<dt><a class="reference internal" href="FramedModule.html#l-framed-module-coordinates"><span class="std std-ref">coordinates</span></a>: <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> % -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> F</dt><dd><p>from <a class="reference internal" href="FramedModule.html#l-framed-module"><span class="std std-ref">FramedModule</span></a> F</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-algebraic-extension-field-create-normal-element"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">createNormalElement</span>: () -&gt; % if F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">createNormalElement()</span></code> computes a normal element over the ground field <code class="docutils literal notranslate"><span class="pre">F</span></code>, that is, <code class="docutils literal notranslate"><span class="pre">a^(q^i),</span> <span class="pre">0</span> <span class="pre">&lt;=</span> <span class="pre">i</span> <span class="pre">&lt;</span> <span class="pre">extensionDegree()</span></code> is an <code class="docutils literal notranslate"><span class="pre">F</span></code>-basis, where <code class="docutils literal notranslate"><span class="pre">q</span> <span class="pre">=</span> <span class="pre">size()\$F</span></code>. Reference: Such an element exists Lidl/Niederreiter: Theorem 2.35.</p>
+</dd>
+<dt><a class="reference internal" href="FiniteFieldCategory.html#l-finite-field-category-create-primitive-element"><span class="std std-ref">createPrimitiveElement</span></a>: () -&gt; % if F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="FiniteFieldCategory.html#l-finite-field-category"><span class="std std-ref">FiniteFieldCategory</span></a></p>
+</dd>
+<dt><a class="reference internal" href="DifferentialRing.html#l-differential-ring-d"><span class="std std-ref">D</span></a>: % -&gt; % if F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="DifferentialRing.html#l-differential-ring"><span class="std std-ref">DifferentialRing</span></a></p>
+</dd>
+<dt><a class="reference internal" href="DifferentialRing.html#l-differential-ring-d"><span class="std std-ref">D</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; % if F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="DifferentialRing.html#l-differential-ring"><span class="std std-ref">DifferentialRing</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-finite-algebraic-extension-field-defining-polynomial"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">definingPolynomial</span>: () -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">definingPolynomial()</span></code> returns the polynomial used to define the field extension.</p>
+</dd>
+<dt><a class="reference internal" href="ExtensionField.html#l-extension-field-degree"><span class="std std-ref">degree</span></a>: % -&gt; <a class="reference internal" href="OnePointCompletion.html#l-one-point-completion"><span class="std std-ref">OnePointCompletion</span></a> <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a></dt><dd><p>from <a class="reference internal" href="ExtensionField.html#l-extension-field"><span class="std std-ref">ExtensionField</span></a> F</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-algebraic-extension-field-degree"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">degree</span>: % -&gt; <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">degree(a)</span></code> returns the degree of the minimal polynomial of an element <code class="docutils literal notranslate"><span class="pre">a</span></code> over the ground field <code class="docutils literal notranslate"><span class="pre">F</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="DifferentialRing.html#l-differential-ring-differentiate"><span class="std std-ref">differentiate</span></a>: % -&gt; % if F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="DifferentialRing.html#l-differential-ring"><span class="std std-ref">DifferentialRing</span></a></p>
+</dd>
+<dt><a class="reference internal" href="DifferentialRing.html#l-differential-ring-differentiate"><span class="std std-ref">differentiate</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; % if F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="DifferentialRing.html#l-differential-ring"><span class="std std-ref">DifferentialRing</span></a></p>
+</dd>
+<dt><a class="reference internal" href="FiniteFieldCategory.html#l-finite-field-category-discrete-log"><span class="std std-ref">discreteLog</span></a>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a> if F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="FiniteFieldCategory.html#l-finite-field-category"><span class="std std-ref">FiniteFieldCategory</span></a></p>
+</dd>
+<dt><a class="reference internal" href="FieldOfPrimeCharacteristic.html#l-field-of-prime-characteristic-discrete-log"><span class="std std-ref">discreteLog</span></a>: (%, %) -&gt; Union(<a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, failed) if F has <a class="reference internal" href="CharacteristicNonZero.html#l-characteristic-non-zero"><span class="std std-ref">CharacteristicNonZero</span></a> or F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="FieldOfPrimeCharacteristic.html#l-field-of-prime-characteristic"><span class="std std-ref">FieldOfPrimeCharacteristic</span></a></p>
+</dd>
+<dt><a class="reference internal" href="FramedAlgebra.html#l-framed-algebra-discriminant"><span class="std std-ref">discriminant</span></a>: () -&gt; F</dt><dd><p>from <a class="reference internal" href="FramedAlgebra.html#l-framed-algebra"><span class="std std-ref">FramedAlgebra</span></a>(F, <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> F)</p>
+</dd>
+<dt><a class="reference internal" href="FiniteRankAlgebra.html#l-finite-rank-algebra-discriminant"><span class="std std-ref">discriminant</span></a>: <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> % -&gt; F</dt><dd><p>from <a class="reference internal" href="FiniteRankAlgebra.html#l-finite-rank-algebra"><span class="std std-ref">FiniteRankAlgebra</span></a>(F, <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> F)</p>
+</dd>
+<dt><a class="reference internal" href="EuclideanDomain.html#l-euclidean-domain-divide"><span class="std std-ref">divide</span></a>: (%, %) -&gt; Record(quotient: %, remainder: %)</dt><dd><p>from <a class="reference internal" href="EuclideanDomain.html#l-euclidean-domain"><span class="std std-ref">EuclideanDomain</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Finite.html#l-finite-enumerate"><span class="std std-ref">enumerate</span></a>: () -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> % if F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></p>
+</dd>
+<dt><a class="reference internal" href="EuclideanDomain.html#l-euclidean-domain-euclidean-size"><span class="std std-ref">euclideanSize</span></a>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="EuclideanDomain.html#l-euclidean-domain"><span class="std std-ref">EuclideanDomain</span></a></p>
+</dd>
+<dt><a class="reference internal" href="PrincipalIdealDomain.html#l-principal-ideal-domain-express-ideal-member"><span class="std std-ref">expressIdealMember</span></a>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %, %) -&gt; Union(<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %, failed)</dt><dd><p>from <a class="reference internal" href="PrincipalIdealDomain.html#l-principal-ideal-domain"><span class="std std-ref">PrincipalIdealDomain</span></a></p>
+</dd>
+<dt><a class="reference internal" href="EntireRing.html#l-entire-ring-exquo"><span class="std std-ref">exquo</span></a>: (%, %) -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="EntireRing.html#l-entire-ring"><span class="std std-ref">EntireRing</span></a></p>
+</dd>
+<dt><a class="reference internal" href="EuclideanDomain.html#l-euclidean-domain-extended-euclidean"><span class="std std-ref">extendedEuclidean</span></a>: (%, %) -&gt; Record(coef1: %, coef2: %, generator: %)</dt><dd><p>from <a class="reference internal" href="EuclideanDomain.html#l-euclidean-domain"><span class="std std-ref">EuclideanDomain</span></a></p>
+</dd>
+<dt><a class="reference internal" href="EuclideanDomain.html#l-euclidean-domain-extended-euclidean"><span class="std std-ref">extendedEuclidean</span></a>: (%, %, %) -&gt; Union(Record(coef1: %, coef2: %), failed)</dt><dd><p>from <a class="reference internal" href="EuclideanDomain.html#l-euclidean-domain"><span class="std std-ref">EuclideanDomain</span></a></p>
+</dd>
+<dt><a class="reference internal" href="ExtensionField.html#l-extension-field-extension-degree"><span class="std std-ref">extensionDegree</span></a>: () -&gt; <a class="reference internal" href="OnePointCompletion.html#l-one-point-completion"><span class="std std-ref">OnePointCompletion</span></a> <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a></dt><dd><p>from <a class="reference internal" href="ExtensionField.html#l-extension-field"><span class="std std-ref">ExtensionField</span></a> F</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-algebraic-extension-field-extension-degree"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">extensionDegree</span>: () -&gt; <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">extensionDegree()</span></code> returns the degree of field extension.</p>
+</dd>
+<dt><a class="reference internal" href="UniqueFactorizationDomain.html#l-unique-factorization-domain-factor"><span class="std std-ref">factor</span></a>: % -&gt; <a class="reference internal" href="Factored.html#l-factored"><span class="std std-ref">Factored</span></a> %</dt><dd><p>from <a class="reference internal" href="UniqueFactorizationDomain.html#l-unique-factorization-domain"><span class="std std-ref">UniqueFactorizationDomain</span></a></p>
+</dd>
+<dt><a class="reference internal" href="PolynomialFactorizationExplicit.html#l-polynomial-factorization-explicit-factor-polynomial"><span class="std std-ref">factorPolynomial</span></a>: <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> % -&gt; <a class="reference internal" href="Factored.html#l-factored"><span class="std std-ref">Factored</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> % if F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="PolynomialFactorizationExplicit.html#l-polynomial-factorization-explicit"><span class="std std-ref">PolynomialFactorizationExplicit</span></a></p>
+</dd>
+<dt><a class="reference internal" href="FiniteFieldCategory.html#l-finite-field-category-factors-of-cyclic-group-size"><span class="std std-ref">factorsOfCyclicGroupSize</span></a>: () -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(factor: <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, exponent: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) if F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="FiniteFieldCategory.html#l-finite-field-category"><span class="std std-ref">FiniteFieldCategory</span></a></p>
+</dd>
+<dt><a class="reference internal" href="PolynomialFactorizationExplicit.html#l-polynomial-factorization-explicit-factor-square-free-polynomial"><span class="std std-ref">factorSquareFreePolynomial</span></a>: <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> % -&gt; <a class="reference internal" href="Factored.html#l-factored"><span class="std std-ref">Factored</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> % if F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="PolynomialFactorizationExplicit.html#l-polynomial-factorization-explicit"><span class="std std-ref">PolynomialFactorizationExplicit</span></a></p>
+</dd>
+<dt><a class="reference internal" href="ExtensionField.html#l-extension-field-frobenius"><span class="std std-ref">Frobenius</span></a>: % -&gt; % if F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="ExtensionField.html#l-extension-field"><span class="std std-ref">ExtensionField</span></a> F</p>
+</dd>
+<dt><a class="reference internal" href="ExtensionField.html#l-extension-field-frobenius"><span class="std std-ref">Frobenius</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; % if F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="ExtensionField.html#l-extension-field"><span class="std std-ref">ExtensionField</span></a> F</p>
+</dd>
+<dt><a class="reference internal" href="GcdDomain.html#l-gcd-domain-gcd"><span class="std std-ref">gcd</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="GcdDomain.html#l-gcd-domain"><span class="std std-ref">GcdDomain</span></a></p>
+</dd>
+<dt><a class="reference internal" href="GcdDomain.html#l-gcd-domain-gcd"><span class="std std-ref">gcd</span></a>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> % -&gt; %</dt><dd><p>from <a class="reference internal" href="GcdDomain.html#l-gcd-domain"><span class="std std-ref">GcdDomain</span></a></p>
+</dd>
+<dt><a class="reference internal" href="PolynomialFactorizationExplicit.html#l-polynomial-factorization-explicit-gcd-polynomial"><span class="std std-ref">gcdPolynomial</span></a>: (<a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %, <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %) -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %</dt><dd><p>from <a class="reference internal" href="PolynomialFactorizationExplicit.html#l-polynomial-factorization-explicit"><span class="std std-ref">PolynomialFactorizationExplicit</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-finite-algebraic-extension-field-generator"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">generator</span>: () -&gt; % if F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">generator()</span></code> returns a root of the defining polynomial. This element generates the field as an algebra over the ground field.</p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l-single-integer"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash-update"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Finite.html#l-finite-index"><span class="std std-ref">index</span></a>: <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a> -&gt; % if F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></p>
+</dd>
+<dt><a class="reference internal" href="ExtensionField.html#l-extension-field-in-ground-field"><span class="std std-ref">inGroundField?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="ExtensionField.html#l-extension-field"><span class="std std-ref">ExtensionField</span></a> F</p>
+</dd>
+<dt><a class="reference internal" href="StepThrough.html#l-step-through-init"><span class="std std-ref">init</span></a>: % if F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="StepThrough.html#l-step-through"><span class="std std-ref">StepThrough</span></a></p>
+</dd>
+<dt><a class="reference internal" href="DivisionRing.html#l-division-ring-inv"><span class="std std-ref">inv</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="DivisionRing.html#l-division-ring"><span class="std std-ref">DivisionRing</span></a></p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-latex"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+<dt><a class="reference internal" href="GcdDomain.html#l-gcd-domain-lcm"><span class="std std-ref">lcm</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="GcdDomain.html#l-gcd-domain"><span class="std std-ref">GcdDomain</span></a></p>
+</dd>
+<dt><a class="reference internal" href="GcdDomain.html#l-gcd-domain-lcm"><span class="std std-ref">lcm</span></a>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> % -&gt; %</dt><dd><p>from <a class="reference internal" href="GcdDomain.html#l-gcd-domain"><span class="std std-ref">GcdDomain</span></a></p>
+</dd>
+<dt><a class="reference internal" href="LeftOreRing.html#l-left-ore-ring-lcm-coef"><span class="std std-ref">lcmCoef</span></a>: (%, %) -&gt; Record(llcm_res: %, coeff1: %, coeff2: %)</dt><dd><p>from <a class="reference internal" href="LeftOreRing.html#l-left-ore-ring"><span class="std std-ref">LeftOreRing</span></a></p>
+</dd>
+<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-left-power"><span class="std std-ref">leftPower</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Magma.html#l-magma-left-power"><span class="std std-ref">leftPower</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
+</dd>
+<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-left-recip"><span class="std std-ref">leftRecip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-finite-algebraic-extension-field-linear-associated-exp"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">linearAssociatedExp</span>: (%, <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> F) -&gt; % if F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">linearAssociatedExp(a,</span> <span class="pre">f)</span></code> is linear over <em>F</em>, i.e. for elements <em>a</em> from <em>$</em>, <em>c, d</em> form <em>F</em> and <em>f, g</em> univariate polynomials over <em>F</em> we have <span class="spadfun">linearAssociatedExp</span>(a, cf+dg) equals <em>c</em> times <span class="spadfun">linearAssociatedExp</span>(a, <code class="docutils literal notranslate"><span class="pre">f</span></code>) plus <em>d</em> times <span class="spadfun">linearAssociatedExp</span>(a, <code class="docutils literal notranslate"><span class="pre">g</span></code>). Therefore <span class="spadfun">linearAssociatedExp</span> is defined completely by its action on monomials from <em>F[X]</em>: <span class="spadfun">linearAssociatedExp</span>(a, monomial(1, <code class="docutils literal notranslate"><span class="pre">k</span></code>)<code class="docutils literal notranslate"><span class="pre">\$</span></code>SUP(<code class="docutils literal notranslate"><span class="pre">F</span></code>)) is defined to be <span class="spadfun">Frobenius</span>(a, <code class="docutils literal notranslate"><span class="pre">k</span></code>) which is <em>a^(q^k)</em>, where <em>q=size()$F</em>.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-algebraic-extension-field-linear-associated-log"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">linearAssociatedLog</span>: % -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> F if F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">linearAssociatedLog(a)</span></code> returns a polynomial <em>g</em>, such that <span class="spadfun">linearAssociatedExp</span>(normalElement(), <code class="docutils literal notranslate"><span class="pre">g</span></code>) equals <em>a</em>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-9">
+<dt><span class="spadfun">linearAssociatedLog</span>: (%, %) -&gt; Union(<a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> F, failed) if F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">linearAssociatedLog(b,</span> <span class="pre">a)</span></code> returns a polynomial <em>g</em>, such that the <span class="spadfun">linearAssociatedExp</span>(<code class="docutils literal notranslate"><span class="pre">b</span></code>, <code class="docutils literal notranslate"><span class="pre">g</span></code>) equals <em>a</em>. If there is no such polynomial <em>g</em>, then <span class="spadfun">linearAssociatedLog</span> fails.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-algebraic-extension-field-linear-associated-order"></span><dl class="simple" id="index-10">
+<dt><span class="spadfun">linearAssociatedOrder</span>: % -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> F if F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">linearAssociatedOrder(a)</span></code> retruns the monic polynomial <em>g</em> of least degree, such that <span class="spadfun">linearAssociatedExp</span>(a, <code class="docutils literal notranslate"><span class="pre">g</span></code>) is 0.</p>
+</dd>
+<dt><a class="reference internal" href="Finite.html#l-finite-lookup"><span class="std std-ref">lookup</span></a>: % -&gt; <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a> if F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></p>
+</dd>
+<dt><a class="reference internal" href="FiniteRankAlgebra.html#l-finite-rank-algebra-minimal-polynomial"><span class="std std-ref">minimalPolynomial</span></a>: % -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> F</dt><dd><p>from <a class="reference internal" href="FiniteRankAlgebra.html#l-finite-rank-algebra"><span class="std std-ref">FiniteRankAlgebra</span></a>(F, <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> F)</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-algebraic-extension-field-minimal-polynomial"></span><dl class="simple" id="index-11">
+<dt><span class="spadfun">minimalPolynomial</span>: (%, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> % if F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">minimalPolynomial(x,</span> <span class="pre">n)</span></code> computes the minimal polynomial of <code class="docutils literal notranslate"><span class="pre">x</span></code> over the field of extension degree <code class="docutils literal notranslate"><span class="pre">n</span></code> over the ground field <code class="docutils literal notranslate"><span class="pre">F</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="EuclideanDomain.html#l-euclidean-domain-multi-euclidean"><span class="std std-ref">multiEuclidean</span></a>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %, %) -&gt; Union(<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %, failed)</dt><dd><p>from <a class="reference internal" href="EuclideanDomain.html#l-euclidean-domain"><span class="std std-ref">EuclideanDomain</span></a></p>
+</dd>
+<dt><a class="reference internal" href="StepThrough.html#l-step-through-next-item"><span class="std std-ref">nextItem</span></a>: % -&gt; Union(%, failed) if F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="StepThrough.html#l-step-through"><span class="std std-ref">StepThrough</span></a></p>
+</dd>
+<dt><a class="reference internal" href="FiniteRankAlgebra.html#l-finite-rank-algebra-norm"><span class="std std-ref">norm</span></a>: % -&gt; F</dt><dd><p>from <a class="reference internal" href="FiniteRankAlgebra.html#l-finite-rank-algebra"><span class="std std-ref">FiniteRankAlgebra</span></a>(F, <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> F)</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-algebraic-extension-field-norm"></span><dl class="simple" id="index-12">
+<dt><span class="spadfun">norm</span>: (%, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; % if F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">norm(a,</span> <span class="pre">d)</span></code> computes the norm of <code class="docutils literal notranslate"><span class="pre">a</span></code> with respect to the field of extension degree <code class="docutils literal notranslate"><span class="pre">d</span></code> over the ground field of size. Error: if <code class="docutils literal notranslate"><span class="pre">d</span></code> does not divide the extension degree of <code class="docutils literal notranslate"><span class="pre">a</span></code>. Note: norm(a, <code class="docutils literal notranslate"><span class="pre">d</span></code>) = reduce(<a href="#id1"><span class="problematic" id="id2">*</span></a>, [a^(<code class="docutils literal notranslate"><span class="pre">q^</span></code>(d*i)) for <code class="docutils literal notranslate"><span class="pre">i</span></code> in 0..<code class="docutils literal notranslate"><span class="pre">n/d</span></code>])</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-algebraic-extension-field-normal"></span><dl class="simple" id="index-13">
+<dt><span class="spadfun">normal?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a> if F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">normal?(a)</span></code> tests whether the element <code class="docutils literal notranslate"><span class="pre">a</span></code> is normal over the ground field <code class="docutils literal notranslate"><span class="pre">F</span></code>, i.e. <code class="docutils literal notranslate"><span class="pre">a^(q^i),</span> <span class="pre">0</span> <span class="pre">&lt;=</span> <span class="pre">i</span> <span class="pre">&lt;=</span> <span class="pre">extensionDegree()-1</span></code> is an <code class="docutils literal notranslate"><span class="pre">F</span></code>-basis, where <code class="docutils literal notranslate"><span class="pre">q</span> <span class="pre">=</span> <span class="pre">size()\$F</span></code>. Implementation according to Lidl/Niederreiter: Theorem 2.39.</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-algebraic-extension-field-normal-element"></span><dl class="simple" id="index-14">
+<dt><span class="spadfun">normalElement</span>: () -&gt; % if F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">normalElement()</span></code> returns a element, normal over the ground field <code class="docutils literal notranslate"><span class="pre">F</span></code>, i.e. <code class="docutils literal notranslate"><span class="pre">a^(q^i),</span> <span class="pre">0</span> <span class="pre">&lt;=</span> <span class="pre">i</span> <span class="pre">&lt;</span> <span class="pre">extensionDegree()</span></code> is an <code class="docutils literal notranslate"><span class="pre">F</span></code>-basis, where <code class="docutils literal notranslate"><span class="pre">q</span> <span class="pre">=</span> <span class="pre">size()\$F</span></code>. At the first call, the element is computed by <a class="reference internal" href="#l-finite-algebraic-extension-field-create-normal-element"><span class="std std-ref">createNormalElement</span></a> then cached in a global variable. On subsequent calls, the element is retrieved by referencing the global variable.</p>
+</dd>
+<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-one"><span class="std std-ref">one?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-opposite"><span class="std std-ref">opposite?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+<dt><a class="reference internal" href="FieldOfPrimeCharacteristic.html#l-field-of-prime-characteristic-order"><span class="std std-ref">order</span></a>: % -&gt; <a class="reference internal" href="OnePointCompletion.html#l-one-point-completion"><span class="std std-ref">OnePointCompletion</span></a> <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a> if F has <a class="reference internal" href="CharacteristicNonZero.html#l-characteristic-non-zero"><span class="std std-ref">CharacteristicNonZero</span></a> or F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="FieldOfPrimeCharacteristic.html#l-field-of-prime-characteristic"><span class="std std-ref">FieldOfPrimeCharacteristic</span></a></p>
+</dd>
+<dt><a class="reference internal" href="FiniteFieldCategory.html#l-finite-field-category-order"><span class="std std-ref">order</span></a>: % -&gt; <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a> if F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="FiniteFieldCategory.html#l-finite-field-category"><span class="std std-ref">FiniteFieldCategory</span></a></p>
+</dd>
+<dt><a class="reference internal" href="UniqueFactorizationDomain.html#l-unique-factorization-domain-prime"><span class="std std-ref">prime?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="UniqueFactorizationDomain.html#l-unique-factorization-domain"><span class="std std-ref">UniqueFactorizationDomain</span></a></p>
+</dd>
+<dt><a class="reference internal" href="FieldOfPrimeCharacteristic.html#l-field-of-prime-characteristic-prime-frobenius"><span class="std std-ref">primeFrobenius</span></a>: % -&gt; % if F has <a class="reference internal" href="CharacteristicNonZero.html#l-characteristic-non-zero"><span class="std std-ref">CharacteristicNonZero</span></a> or F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="FieldOfPrimeCharacteristic.html#l-field-of-prime-characteristic"><span class="std std-ref">FieldOfPrimeCharacteristic</span></a></p>
+</dd>
+<dt><a class="reference internal" href="FieldOfPrimeCharacteristic.html#l-field-of-prime-characteristic-prime-frobenius"><span class="std std-ref">primeFrobenius</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; % if F has <a class="reference internal" href="CharacteristicNonZero.html#l-characteristic-non-zero"><span class="std std-ref">CharacteristicNonZero</span></a> or F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="FieldOfPrimeCharacteristic.html#l-field-of-prime-characteristic"><span class="std std-ref">FieldOfPrimeCharacteristic</span></a></p>
+</dd>
+<dt><a class="reference internal" href="FiniteFieldCategory.html#l-finite-field-category-primitive"><span class="std std-ref">primitive?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a> if F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="FiniteFieldCategory.html#l-finite-field-category"><span class="std std-ref">FiniteFieldCategory</span></a></p>
+</dd>
+<dt><a class="reference internal" href="FiniteFieldCategory.html#l-finite-field-category-primitive-element"><span class="std std-ref">primitiveElement</span></a>: () -&gt; % if F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="FiniteFieldCategory.html#l-finite-field-category"><span class="std std-ref">FiniteFieldCategory</span></a></p>
+</dd>
+<dt><a class="reference internal" href="PrincipalIdealDomain.html#l-principal-ideal-domain-principal-ideal"><span class="std std-ref">principalIdeal</span></a>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> % -&gt; Record(coef: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %, generator: %)</dt><dd><p>from <a class="reference internal" href="PrincipalIdealDomain.html#l-principal-ideal-domain"><span class="std std-ref">PrincipalIdealDomain</span></a></p>
+</dd>
+<dt><a class="reference internal" href="EuclideanDomain.html#l-euclidean-domain-quo"><span class="std std-ref">quo</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="EuclideanDomain.html#l-euclidean-domain"><span class="std std-ref">EuclideanDomain</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Finite.html#l-finite-random"><span class="std std-ref">random</span></a>: () -&gt; % if F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></p>
+</dd>
+<dt><a class="reference internal" href="FiniteRankAlgebra.html#l-finite-rank-algebra-rank"><span class="std std-ref">rank</span></a>: () -&gt; <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a></dt><dd><p>from <a class="reference internal" href="FiniteRankAlgebra.html#l-finite-rank-algebra"><span class="std std-ref">FiniteRankAlgebra</span></a>(F, <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> F)</p>
+</dd>
+<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-recip"><span class="std std-ref">recip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+<dt><a class="reference internal" href="FramedAlgebra.html#l-framed-algebra-regular-representation"><span class="std std-ref">regularRepresentation</span></a>: % -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> F</dt><dd><p>from <a class="reference internal" href="FramedAlgebra.html#l-framed-algebra"><span class="std std-ref">FramedAlgebra</span></a>(F, <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> F)</p>
+</dd>
+<dt><a class="reference internal" href="FiniteRankAlgebra.html#l-finite-rank-algebra-regular-representation"><span class="std std-ref">regularRepresentation</span></a>: (%, <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> %) -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> F</dt><dd><p>from <a class="reference internal" href="FiniteRankAlgebra.html#l-finite-rank-algebra"><span class="std std-ref">FiniteRankAlgebra</span></a>(F, <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> F)</p>
+</dd>
+<dt><a class="reference internal" href="EuclideanDomain.html#l-euclidean-domain-rem"><span class="std std-ref">rem</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="EuclideanDomain.html#l-euclidean-domain"><span class="std std-ref">EuclideanDomain</span></a></p>
+</dd>
+<dt><a class="reference internal" href="FiniteFieldCategory.html#l-finite-field-category-representation-type"><span class="std std-ref">representationType</span></a>: () -&gt; Union(prime, polynomial, normal, cyclic) if F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="FiniteFieldCategory.html#l-finite-field-category"><span class="std std-ref">FiniteFieldCategory</span></a></p>
+</dd>
+<dt><a class="reference internal" href="FiniteRankAlgebra.html#l-finite-rank-algebra-represents"><span class="std std-ref">represents</span></a>: (<a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> F, <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> %) -&gt; %</dt><dd><p>from <a class="reference internal" href="FiniteRankAlgebra.html#l-finite-rank-algebra"><span class="std std-ref">FiniteRankAlgebra</span></a>(F, <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> F)</p>
+</dd>
+<dt><a class="reference internal" href="FramedModule.html#l-framed-module-represents"><span class="std std-ref">represents</span></a>: <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> F -&gt; %</dt><dd><p>from <a class="reference internal" href="FramedModule.html#l-framed-module"><span class="std std-ref">FramedModule</span></a> F</p>
+</dd>
+<dt><a class="reference internal" href="RetractableTo.html#l-retractable-to-retract"><span class="std std-ref">retract</span></a>: % -&gt; F</dt><dd><p>from <a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> F</p>
+</dd>
+<dt><a class="reference internal" href="RetractableTo.html#l-retractable-to-retract-if-can"><span class="std std-ref">retractIfCan</span></a>: % -&gt; Union(F, failed)</dt><dd><p>from <a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> F</p>
+</dd>
+<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-right-power"><span class="std std-ref">rightPower</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Magma.html#l-magma-right-power"><span class="std std-ref">rightPower</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
+</dd>
+<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-right-recip"><span class="std std-ref">rightRecip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-sample"><span class="std std-ref">sample</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Finite.html#l-finite-size"><span class="std std-ref">size</span></a>: () -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a> if F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></p>
+</dd>
+<dt><a class="reference internal" href="EuclideanDomain.html#l-euclidean-domain-size-less"><span class="std std-ref">sizeLess?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="EuclideanDomain.html#l-euclidean-domain"><span class="std std-ref">EuclideanDomain</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Comparable.html#l-comparable-smaller"><span class="std std-ref">smaller?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a> if F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a></p>
+</dd>
+<dt><a class="reference internal" href="PolynomialFactorizationExplicit.html#l-polynomial-factorization-explicit-solve-linear-polynomial-equation"><span class="std std-ref">solveLinearPolynomialEquation</span></a>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %, <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %) -&gt; Union(<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %, failed) if F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="PolynomialFactorizationExplicit.html#l-polynomial-factorization-explicit"><span class="std std-ref">PolynomialFactorizationExplicit</span></a></p>
+</dd>
+<dt><a class="reference internal" href="UniqueFactorizationDomain.html#l-unique-factorization-domain-square-free"><span class="std std-ref">squareFree</span></a>: % -&gt; <a class="reference internal" href="Factored.html#l-factored"><span class="std std-ref">Factored</span></a> %</dt><dd><p>from <a class="reference internal" href="UniqueFactorizationDomain.html#l-unique-factorization-domain"><span class="std std-ref">UniqueFactorizationDomain</span></a></p>
+</dd>
+<dt><a class="reference internal" href="UniqueFactorizationDomain.html#l-unique-factorization-domain-square-free-part"><span class="std std-ref">squareFreePart</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="UniqueFactorizationDomain.html#l-unique-factorization-domain"><span class="std std-ref">UniqueFactorizationDomain</span></a></p>
+</dd>
+<dt><a class="reference internal" href="PolynomialFactorizationExplicit.html#l-polynomial-factorization-explicit-square-free-polynomial"><span class="std std-ref">squareFreePolynomial</span></a>: <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> % -&gt; <a class="reference internal" href="Factored.html#l-factored"><span class="std std-ref">Factored</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> % if F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="PolynomialFactorizationExplicit.html#l-polynomial-factorization-explicit"><span class="std std-ref">PolynomialFactorizationExplicit</span></a></p>
+</dd>
+<dt><a class="reference internal" href="CancellationAbelianMonoid.html#l-cancellation-abelian-monoid-subtract-if-can"><span class="std std-ref">subtractIfCan</span></a>: (%, %) -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="CancellationAbelianMonoid.html#l-cancellation-abelian-monoid"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
+</dd>
+<dt><a class="reference internal" href="FiniteFieldCategory.html#l-finite-field-category-table-for-discrete-logarithm"><span class="std std-ref">tableForDiscreteLogarithm</span></a>: <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a> -&gt; <a class="reference internal" href="Table.html#l-table"><span class="std std-ref">Table</span></a>(<a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) if F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="FiniteFieldCategory.html#l-finite-field-category"><span class="std std-ref">FiniteFieldCategory</span></a></p>
+</dd>
+<dt><a class="reference internal" href="FiniteRankAlgebra.html#l-finite-rank-algebra-trace"><span class="std std-ref">trace</span></a>: % -&gt; F</dt><dd><p>from <a class="reference internal" href="FiniteRankAlgebra.html#l-finite-rank-algebra"><span class="std std-ref">FiniteRankAlgebra</span></a>(F, <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> F)</p>
+</dd>
+</dl>
+<span class="target" id="l-finite-algebraic-extension-field-trace"></span><dl class="simple" id="index-15">
+<dt><span class="spadfun">trace</span>: (%, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; % if F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">trace(a,</span> <span class="pre">d)</span></code> computes the trace of <code class="docutils literal notranslate"><span class="pre">a</span></code> with respect to the field of extension degree <code class="docutils literal notranslate"><span class="pre">d</span></code> over the ground field of size <code class="docutils literal notranslate"><span class="pre">q</span></code>. Error: if <code class="docutils literal notranslate"><span class="pre">d</span></code> does not divide the extension degree of <code class="docutils literal notranslate"><span class="pre">a</span></code>. Note: <code class="docutils literal notranslate"><span class="pre">trace(a,</span> <span class="pre">d)</span> <span class="pre">=</span> <span class="pre">reduce(+,</span> <span class="pre">[a^(q^(d*i))</span> <span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">0..n/d])</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="FramedAlgebra.html#l-framed-algebra-trace-matrix"><span class="std std-ref">traceMatrix</span></a>: () -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> F</dt><dd><p>from <a class="reference internal" href="FramedAlgebra.html#l-framed-algebra"><span class="std std-ref">FramedAlgebra</span></a>(F, <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> F)</p>
+</dd>
+<dt><a class="reference internal" href="FiniteRankAlgebra.html#l-finite-rank-algebra-trace-matrix"><span class="std std-ref">traceMatrix</span></a>: <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> % -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> F</dt><dd><p>from <a class="reference internal" href="FiniteRankAlgebra.html#l-finite-rank-algebra"><span class="std std-ref">FiniteRankAlgebra</span></a>(F, <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> F)</p>
+</dd>
+<dt><a class="reference internal" href="ExtensionField.html#l-extension-field-transcendence-degree"><span class="std std-ref">transcendenceDegree</span></a>: () -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="ExtensionField.html#l-extension-field"><span class="std std-ref">ExtensionField</span></a> F</p>
+</dd>
+<dt><a class="reference internal" href="ExtensionField.html#l-extension-field-transcendent"><span class="std std-ref">transcendent?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="ExtensionField.html#l-extension-field"><span class="std std-ref">ExtensionField</span></a> F</p>
+</dd>
+<dt><a class="reference internal" href="EntireRing.html#l-entire-ring-unit"><span class="std std-ref">unit?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="EntireRing.html#l-entire-ring"><span class="std std-ref">EntireRing</span></a></p>
+</dd>
+<dt><a class="reference internal" href="EntireRing.html#l-entire-ring-unit-canonical"><span class="std std-ref">unitCanonical</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="EntireRing.html#l-entire-ring"><span class="std std-ref">EntireRing</span></a></p>
+</dd>
+<dt><a class="reference internal" href="EntireRing.html#l-entire-ring-unit-normal"><span class="std std-ref">unitNormal</span></a>: % -&gt; Record(unit: %, canonical: %, associate: %)</dt><dd><p>from <a class="reference internal" href="EntireRing.html#l-entire-ring"><span class="std std-ref">EntireRing</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-zero"><span class="std std-ref">zero?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+</dl>
+<p><a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
+<p><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+<p><a class="reference internal" href="AbelianSemiGroup.html#l-abelian-semi-group"><span class="std std-ref">AbelianSemiGroup</span></a></p>
+<p><a class="reference internal" href="Algebra.html#l-algebra"><span class="std std-ref">Algebra</span></a> %</p>
+<p><a class="reference internal" href="Algebra.html#l-algebra"><span class="std std-ref">Algebra</span></a> F</p>
+<p><a class="reference internal" href="Algebra.html#l-algebra"><span class="std std-ref">Algebra</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></p>
+<p><a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+<p><a class="reference internal" href="BiModule.html#l-bi-module"><span class="std std-ref">BiModule</span></a>(%, %)</p>
+<p><a class="reference internal" href="BiModule.html#l-bi-module"><span class="std std-ref">BiModule</span></a>(F, F)</p>
+<p><a class="reference internal" href="BiModule.html#l-bi-module"><span class="std std-ref">BiModule</span></a>(<a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>)</p>
+<p><a class="reference internal" href="CancellationAbelianMonoid.html#l-cancellation-abelian-monoid"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
+<p><a class="reference internal" href="canonicalsClosed.html#l-canonicals-closed"><span class="std std-ref">canonicalsClosed</span></a></p>
+<p><a class="reference internal" href="canonicalUnitNormal.html#l-canonical-unit-normal"><span class="std std-ref">canonicalUnitNormal</span></a></p>
+<p><a class="reference internal" href="CharacteristicNonZero.html#l-characteristic-non-zero"><span class="std std-ref">CharacteristicNonZero</span></a> if F has <a class="reference internal" href="CharacteristicNonZero.html#l-characteristic-non-zero"><span class="std std-ref">CharacteristicNonZero</span></a> or F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></p>
+<p><a class="reference internal" href="CharacteristicZero.html#l-characteristic-zero"><span class="std std-ref">CharacteristicZero</span></a> if F has <a class="reference internal" href="CharacteristicZero.html#l-characteristic-zero"><span class="std std-ref">CharacteristicZero</span></a></p>
+<p><a class="reference internal" href="CoercibleFrom.html#l-coercible-from"><span class="std std-ref">CoercibleFrom</span></a> F</p>
+<p><a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+<p><a class="reference internal" href="CommutativeRing.html#l-commutative-ring"><span class="std std-ref">CommutativeRing</span></a></p>
+<p><a class="reference internal" href="CommutativeStar.html#l-commutative-star"><span class="std std-ref">CommutativeStar</span></a></p>
+<p><a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a> if F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></p>
+<p><a class="reference internal" href="ConvertibleTo.html#l-convertible-to"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="InputForm.html#l-input-form"><span class="std std-ref">InputForm</span></a> if F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></p>
+<p><a class="reference internal" href="DifferentialRing.html#l-differential-ring"><span class="std std-ref">DifferentialRing</span></a> if F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></p>
+<p><a class="reference internal" href="DivisionRing.html#l-division-ring"><span class="std std-ref">DivisionRing</span></a></p>
+<p><a class="reference internal" href="EntireRing.html#l-entire-ring"><span class="std std-ref">EntireRing</span></a></p>
+<p><a class="reference internal" href="EuclideanDomain.html#l-euclidean-domain"><span class="std std-ref">EuclideanDomain</span></a></p>
+<p><a class="reference internal" href="ExtensionField.html#l-extension-field"><span class="std std-ref">ExtensionField</span></a> F</p>
+<p><a class="reference internal" href="Field.html#l-field"><span class="std std-ref">Field</span></a></p>
+<p><a class="reference internal" href="FieldOfPrimeCharacteristic.html#l-field-of-prime-characteristic"><span class="std std-ref">FieldOfPrimeCharacteristic</span></a> if F has <a class="reference internal" href="CharacteristicNonZero.html#l-characteristic-non-zero"><span class="std std-ref">CharacteristicNonZero</span></a> or F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></p>
+<p><a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a> if F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></p>
+<p><a class="reference internal" href="FiniteFieldCategory.html#l-finite-field-category"><span class="std std-ref">FiniteFieldCategory</span></a> if F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></p>
+<p><a class="reference internal" href="FiniteRankAlgebra.html#l-finite-rank-algebra"><span class="std std-ref">FiniteRankAlgebra</span></a>(F, <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> F)</p>
+<p><a class="reference internal" href="FramedAlgebra.html#l-framed-algebra"><span class="std std-ref">FramedAlgebra</span></a>(F, <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> F)</p>
+<p><a class="reference internal" href="FramedModule.html#l-framed-module"><span class="std std-ref">FramedModule</span></a> F</p>
+<p><a class="reference internal" href="GcdDomain.html#l-gcd-domain"><span class="std std-ref">GcdDomain</span></a></p>
+<p><a class="reference internal" href="IntegralDomain.html#l-integral-domain"><span class="std std-ref">IntegralDomain</span></a></p>
+<p><a class="reference internal" href="LeftModule.html#l-left-module"><span class="std std-ref">LeftModule</span></a> %</p>
+<p><a class="reference internal" href="LeftModule.html#l-left-module"><span class="std std-ref">LeftModule</span></a> F</p>
+<p><a class="reference internal" href="LeftModule.html#l-left-module"><span class="std std-ref">LeftModule</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></p>
+<p><a class="reference internal" href="LeftOreRing.html#l-left-ore-ring"><span class="std std-ref">LeftOreRing</span></a></p>
+<p><a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
+<p><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
+<p><a class="reference internal" href="Module.html#l-module"><span class="std std-ref">Module</span></a> %</p>
+<p><a class="reference internal" href="Module.html#l-module"><span class="std std-ref">Module</span></a> F</p>
+<p><a class="reference internal" href="Module.html#l-module"><span class="std std-ref">Module</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></p>
+<p><a class="reference internal" href="Monoid.html#l-monoid"><span class="std std-ref">Monoid</span></a></p>
+<p><a class="reference internal" href="NonAssociativeRing.html#l-non-associative-ring"><span class="std std-ref">NonAssociativeRing</span></a></p>
+<p><a class="reference internal" href="NonAssociativeRng.html#l-non-associative-rng"><span class="std std-ref">NonAssociativeRng</span></a></p>
+<p><a class="reference internal" href="NonAssociativeSemiRing.html#l-non-associative-semi-ring"><span class="std std-ref">NonAssociativeSemiRing</span></a></p>
+<p><a class="reference internal" href="NonAssociativeSemiRng.html#l-non-associative-semi-rng"><span class="std std-ref">NonAssociativeSemiRng</span></a></p>
+<p><a class="reference internal" href="noZeroDivisors.html#l-no-zero-divisors"><span class="std std-ref">noZeroDivisors</span></a></p>
+<p><a class="reference internal" href="PolynomialFactorizationExplicit.html#l-polynomial-factorization-explicit"><span class="std std-ref">PolynomialFactorizationExplicit</span></a> if F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></p>
+<p><a class="reference internal" href="PrincipalIdealDomain.html#l-principal-ideal-domain"><span class="std std-ref">PrincipalIdealDomain</span></a></p>
+<p><a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> F</p>
+<p><a class="reference internal" href="RightModule.html#l-right-module"><span class="std std-ref">RightModule</span></a> %</p>
+<p><a class="reference internal" href="RightModule.html#l-right-module"><span class="std std-ref">RightModule</span></a> F</p>
+<p><a class="reference internal" href="RightModule.html#l-right-module"><span class="std std-ref">RightModule</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></p>
+<p><a class="reference internal" href="Ring.html#l-ring"><span class="std std-ref">Ring</span></a></p>
+<p><a class="reference internal" href="Rng.html#l-rng"><span class="std std-ref">Rng</span></a></p>
+<p><a class="reference internal" href="SemiGroup.html#l-semi-group"><span class="std std-ref">SemiGroup</span></a></p>
+<p><a class="reference internal" href="SemiRing.html#l-semi-ring"><span class="std std-ref">SemiRing</span></a></p>
+<p><a class="reference internal" href="SemiRng.html#l-semi-rng"><span class="std std-ref">SemiRng</span></a></p>
+<p><a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+<p><a class="reference internal" href="StepThrough.html#l-step-through"><span class="std std-ref">StepThrough</span></a> if F has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></p>
+<p><a class="reference internal" href="TwoSidedRecip.html#l-two-sided-recip"><span class="std std-ref">TwoSidedRecip</span></a></p>
+<p><a class="reference internal" href="UniqueFactorizationDomain.html#l-unique-factorization-domain"><span class="std std-ref">UniqueFactorizationDomain</span></a></p>
+<p><a class="reference internal" href="unitsKnown.html#l-units-known"><span class="std std-ref">unitsKnown</span></a></p>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="FiniteDivisorCategory.html" title="FiniteDivisorCategory(F, UP, UPUP, R)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="finiteAggregate.html" title="finiteAggregate"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Categories.html" >Categories</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">FiniteAlgebraicExtensionField F</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

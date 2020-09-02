@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TranscendentalRischDESystem(F, UP) &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="TransSolvePackage R" href="TransSolvePackage.html" />
+    <link rel="prev" title="TranscendentalManipulations(R, F)" href="TranscendentalManipulations.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="TransSolvePackage.html" title="TransSolvePackage R"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="TranscendentalManipulations.html" title="TranscendentalManipulations(R, F)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">TranscendentalRischDESystem(F, UP)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="transcendentalrischdesystem-f-up">
+<span id="l-transcendental-risch-d-e-system"></span><span id="index-0"></span><h1>TranscendentalRischDESystem(F, UP)<a class="headerlink" href="#transcendentalrischdesystem-f-up" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/rdesys.spad#L1">rdesys.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/rdesys.spad#L1">[edit on github]</a></p>
+<ul class="simple">
+<li><p>F: Join(<a class="reference internal" href="Field.html#l-field"><span class="std std-ref">Field</span></a>, <a class="reference internal" href="CharacteristicZero.html#l-characteristic-zero"><span class="std std-ref">CharacteristicZero</span></a>, <a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>)</p></li>
+<li><p>UP: <a class="reference internal" href="UnivariatePolynomialCategory.html#l-univariate-polynomial-category"><span class="std std-ref">UnivariatePolynomialCategory</span></a> F</p></li>
+</ul>
+<p>Risch differential equation system, transcendental case. Author: Manuel Bronstein Date Created: 17 August 1992</p>
+<span class="target" id="l-transcendental-risch-d-e-system-base-r-d-esys"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">baseRDEsys</span>: (<a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP, <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP, <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP) -&gt; Union(<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">baseRDEsys(f,</span> <span class="pre">g1,</span> <span class="pre">g2)</span></code> returns fractions <code class="docutils literal notranslate"><span class="pre">y_1.y_2</span></code> such that <code class="docutils literal notranslate"><span class="pre">(y1',</span> <span class="pre">y2')</span> <span class="pre">+</span> <span class="pre">((0,</span> <span class="pre">-f),</span> <span class="pre">(f,</span> <span class="pre">0))</span> <span class="pre">(y1,</span> <span class="pre">y2)</span> <span class="pre">=</span> <span class="pre">(g1,</span> <span class="pre">g2)</span></code> if <code class="docutils literal notranslate"><span class="pre">y_1,y_2</span></code> exist, “failed” otherwise.</p>
+</dd>
+</dl>
+<span class="target" id="l-transcendental-risch-d-e-system-monom-r-d-esys"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">monomRDEsys</span>: (<a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP, <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP, <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP, UP -&gt; UP) -&gt; Union(Record(a: UP, b: <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP, h: UP, c1: <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP, c2: <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP, t: UP), failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">monomRDEsys(f,</span> <span class="pre">g1,</span> <span class="pre">g2,</span> <span class="pre">D)</span></code> returns <code class="docutils literal notranslate"><span class="pre">[A,</span> <span class="pre">B,</span> <span class="pre">H,</span> <span class="pre">C1,</span> <span class="pre">C2,</span> <span class="pre">T]</span></code> such that <code class="docutils literal notranslate"><span class="pre">(y1',</span> <span class="pre">y2')</span> <span class="pre">+</span> <span class="pre">((0,</span> <span class="pre">-f),</span> <span class="pre">(f,</span> <span class="pre">0))</span> <span class="pre">(y1,</span> <span class="pre">y2)</span> <span class="pre">=</span> <span class="pre">(g1,</span> <span class="pre">g2)</span></code> has a solution if and only if <code class="docutils literal notranslate"><span class="pre">y1</span> <span class="pre">=</span> <span class="pre">Q1</span> <span class="pre">/</span> <span class="pre">T,</span> <span class="pre">y2</span> <span class="pre">=</span> <span class="pre">Q2</span> <span class="pre">/</span> <span class="pre">T</span></code>, where <code class="docutils literal notranslate"><span class="pre">B,</span> <span class="pre">C1,</span> <span class="pre">C2,</span> <span class="pre">Q1,</span> <span class="pre">Q2</span></code> have no normal poles and satisfy A <code class="docutils literal notranslate"><span class="pre">(Q1',</span> <span class="pre">Q2')</span> <span class="pre">+</span> <span class="pre">((H,</span> <span class="pre">-B),</span> <span class="pre">(B,</span> <span class="pre">H))</span> <span class="pre">(Q1,</span> <span class="pre">Q2)</span> <span class="pre">=</span> <span class="pre">(C1,</span> <span class="pre">C2)</span></code> <code class="docutils literal notranslate"><span class="pre">D</span></code> is the derivation to use.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="TransSolvePackage.html" title="TransSolvePackage R"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="TranscendentalManipulations.html" title="TranscendentalManipulations(R, F)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">TranscendentalRischDESystem(F, UP)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

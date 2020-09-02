@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenMathDevice &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="OpenMathEncoding" href="OpenMathEncoding.html" />
+    <link rel="prev" title="OpenMathConnection" href="OpenMathConnection.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="OpenMathEncoding.html" title="OpenMathEncoding"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="OpenMathConnection.html" title="OpenMathConnection"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Domains.html" accesskey="U">Domains</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">OpenMathDevice</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="openmathdevice">
+<span id="l-open-math-device"></span><span id="index-0"></span><h1>OpenMathDevice<a class="headerlink" href="#openmathdevice" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/omdev.spad#L41">omdev.spad line 41</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/omdev.spad#L41">[edit on github]</a></p>
+<p><a class="reference internal" href="#l-open-math-device"><span class="std std-ref">OpenMathDevice</span></a> provides support for reading and writing openMath objects to files, strings etc. It also provides access to low-level operations from within the interpreter.</p>
+<span class="target" id="l-open-math-device-o-mclose"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">OMclose</span>: % -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMclose(dev)</span></code> closes <code class="docutils literal notranslate"><span class="pre">dev</span></code>, flushing output if necessary.</p>
+</dd>
+</dl>
+<span class="target" id="l-open-math-device-o-mget-app"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">OMgetApp</span>: % -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMgetApp(dev)</span></code> reads a begin application token from <code class="docutils literal notranslate"><span class="pre">dev</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-open-math-device-o-mget-atp"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">OMgetAtp</span>: % -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMgetAtp(dev)</span></code> reads a begin attribute pair token from <code class="docutils literal notranslate"><span class="pre">dev</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-open-math-device-o-mget-attr"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">OMgetAttr</span>: % -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMgetAttr(dev)</span></code> reads a begin attribute token from <code class="docutils literal notranslate"><span class="pre">dev</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-open-math-device-o-mget-bind"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">OMgetBind</span>: % -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMgetBind(dev)</span></code> reads a begin binder token from <code class="docutils literal notranslate"><span class="pre">dev</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-open-math-device-o-mget-b-var"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">OMgetBVar</span>: % -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMgetBVar(dev)</span></code> reads a begin bound variable list token from <code class="docutils literal notranslate"><span class="pre">dev</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-open-math-device-o-mget-end-app"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">OMgetEndApp</span>: % -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMgetEndApp(dev)</span></code> reads an end application token from <code class="docutils literal notranslate"><span class="pre">dev</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-open-math-device-o-mget-end-atp"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">OMgetEndAtp</span>: % -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMgetEndAtp(dev)</span></code> reads an end attribute pair token from <code class="docutils literal notranslate"><span class="pre">dev</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-open-math-device-o-mget-end-attr"></span><dl class="simple" id="index-9">
+<dt><span class="spadfun">OMgetEndAttr</span>: % -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMgetEndAttr(dev)</span></code> reads an end attribute token from <code class="docutils literal notranslate"><span class="pre">dev</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-open-math-device-o-mget-end-bind"></span><dl class="simple" id="index-10">
+<dt><span class="spadfun">OMgetEndBind</span>: % -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMgetEndBind(dev)</span></code> reads an end binder token from <code class="docutils literal notranslate"><span class="pre">dev</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-open-math-device-o-mget-end-b-var"></span><dl class="simple" id="index-11">
+<dt><span class="spadfun">OMgetEndBVar</span>: % -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMgetEndBVar(dev)</span></code> reads an end bound variable list token from <code class="docutils literal notranslate"><span class="pre">dev</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-open-math-device-o-mget-end-error"></span><dl class="simple" id="index-12">
+<dt><span class="spadfun">OMgetEndError</span>: % -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMgetEndError(dev)</span></code> reads an end error token from <code class="docutils literal notranslate"><span class="pre">dev</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-open-math-device-o-mget-end-object"></span><dl class="simple" id="index-13">
+<dt><span class="spadfun">OMgetEndObject</span>: % -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMgetEndObject(dev)</span></code> reads an end object token from <code class="docutils literal notranslate"><span class="pre">dev</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-open-math-device-o-mget-error"></span><dl class="simple" id="index-14">
+<dt><span class="spadfun">OMgetError</span>: % -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMgetError(dev)</span></code> reads a begin error token from <code class="docutils literal notranslate"><span class="pre">dev</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-open-math-device-o-mget-float"></span><dl class="simple" id="index-15">
+<dt><span class="spadfun">OMgetFloat</span>: % -&gt; <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMgetFloat(dev)</span></code> reads a float from <code class="docutils literal notranslate"><span class="pre">dev</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-open-math-device-o-mget-integer"></span><dl class="simple" id="index-16">
+<dt><span class="spadfun">OMgetInteger</span>: % -&gt; <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMgetInteger(dev)</span></code> reads an integer from <code class="docutils literal notranslate"><span class="pre">dev</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-open-math-device-o-mget-object"></span><dl class="simple" id="index-17">
+<dt><span class="spadfun">OMgetObject</span>: % -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMgetObject(dev)</span></code> reads a begin object token from <code class="docutils literal notranslate"><span class="pre">dev</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-open-math-device-o-mget-string"></span><dl class="simple" id="index-18">
+<dt><span class="spadfun">OMgetString</span>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMgetString(dev)</span></code> reads a string from <code class="docutils literal notranslate"><span class="pre">dev</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-open-math-device-o-mget-symbol"></span><dl class="simple" id="index-19">
+<dt><span class="spadfun">OMgetSymbol</span>: % -&gt; Record(cd: <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, name: <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMgetSymbol(dev)</span></code> reads a symbol from <code class="docutils literal notranslate"><span class="pre">dev</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-open-math-device-o-mget-type"></span><dl class="simple" id="index-20">
+<dt><span class="spadfun">OMgetType</span>: % -&gt; <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMgetType(dev)</span></code> returns the type of the next object on <code class="docutils literal notranslate"><span class="pre">dev</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-open-math-device-o-mget-variable"></span><dl class="simple" id="index-21">
+<dt><span class="spadfun">OMgetVariable</span>: % -&gt; <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMgetVariable(dev)</span></code> reads a variable from <code class="docutils literal notranslate"><span class="pre">dev</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-open-math-device-o-mopen-file"></span><dl class="simple" id="index-22">
+<dt><span class="spadfun">OMopenFile</span>: (<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, <a class="reference internal" href="OpenMathEncoding.html#l-open-math-encoding"><span class="std std-ref">OpenMathEncoding</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMopenFile(f,</span> <span class="pre">mode,</span> <span class="pre">enc)</span></code> opens file <code class="docutils literal notranslate"><span class="pre">f</span></code> for reading or writing OpenMath objects (depending on <code class="docutils literal notranslate"><span class="pre">mode</span></code> which can be <code class="docutils literal notranslate"><span class="pre">&quot;r&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;w&quot;</span></code> or “a” for read, write and append respectively), in the encoding <code class="docutils literal notranslate"><span class="pre">enc</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-open-math-device-o-mopen-string"></span><dl class="simple" id="index-23">
+<dt><span class="spadfun">OMopenString</span>: (<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, <a class="reference internal" href="OpenMathEncoding.html#l-open-math-encoding"><span class="std std-ref">OpenMathEncoding</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMopenString(s,</span> <span class="pre">mode)</span></code> opens the string <code class="docutils literal notranslate"><span class="pre">s</span></code> for reading or writing OpenMath objects in encoding <code class="docutils literal notranslate"><span class="pre">enc</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-open-math-device-o-mput-app"></span><dl class="simple" id="index-24">
+<dt><span class="spadfun">OMputApp</span>: % -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMputApp(dev)</span></code> writes a begin application token to <code class="docutils literal notranslate"><span class="pre">dev</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-open-math-device-o-mput-atp"></span><dl class="simple" id="index-25">
+<dt><span class="spadfun">OMputAtp</span>: % -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMputAtp(dev)</span></code> writes a begin attribute pair token to <code class="docutils literal notranslate"><span class="pre">dev</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-open-math-device-o-mput-attr"></span><dl class="simple" id="index-26">
+<dt><span class="spadfun">OMputAttr</span>: % -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMputAttr(dev)</span></code> writes a begin attribute token to <code class="docutils literal notranslate"><span class="pre">dev</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-open-math-device-o-mput-bind"></span><dl class="simple" id="index-27">
+<dt><span class="spadfun">OMputBind</span>: % -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMputBind(dev)</span></code> writes a begin binder token to <code class="docutils literal notranslate"><span class="pre">dev</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-open-math-device-o-mput-b-var"></span><dl class="simple" id="index-28">
+<dt><span class="spadfun">OMputBVar</span>: % -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMputBVar(dev)</span></code> writes a begin bound variable list token to <code class="docutils literal notranslate"><span class="pre">dev</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-open-math-device-o-mput-end-app"></span><dl class="simple" id="index-29">
+<dt><span class="spadfun">OMputEndApp</span>: % -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMputEndApp(dev)</span></code> writes an end application token to <code class="docutils literal notranslate"><span class="pre">dev</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-open-math-device-o-mput-end-atp"></span><dl class="simple" id="index-30">
+<dt><span class="spadfun">OMputEndAtp</span>: % -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMputEndAtp(dev)</span></code> writes an end attribute pair token to <code class="docutils literal notranslate"><span class="pre">dev</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-open-math-device-o-mput-end-attr"></span><dl class="simple" id="index-31">
+<dt><span class="spadfun">OMputEndAttr</span>: % -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMputEndAttr(dev)</span></code> writes an end attribute token to <code class="docutils literal notranslate"><span class="pre">dev</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-open-math-device-o-mput-end-bind"></span><dl class="simple" id="index-32">
+<dt><span class="spadfun">OMputEndBind</span>: % -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMputEndBind(dev)</span></code> writes an end binder token to <code class="docutils literal notranslate"><span class="pre">dev</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-open-math-device-o-mput-end-b-var"></span><dl class="simple" id="index-33">
+<dt><span class="spadfun">OMputEndBVar</span>: % -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMputEndBVar(dev)</span></code> writes an end bound variable list token to <code class="docutils literal notranslate"><span class="pre">dev</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-open-math-device-o-mput-end-error"></span><dl class="simple" id="index-34">
+<dt><span class="spadfun">OMputEndError</span>: % -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMputEndError(dev)</span></code> writes an end error token to <code class="docutils literal notranslate"><span class="pre">dev</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-open-math-device-o-mput-end-object"></span><dl class="simple" id="index-35">
+<dt><span class="spadfun">OMputEndObject</span>: % -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMputEndObject(dev)</span></code> writes an end object token to <code class="docutils literal notranslate"><span class="pre">dev</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-open-math-device-o-mput-error"></span><dl class="simple" id="index-36">
+<dt><span class="spadfun">OMputError</span>: % -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMputError(dev)</span></code> writes a begin error token to <code class="docutils literal notranslate"><span class="pre">dev</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-open-math-device-o-mput-float"></span><dl class="simple" id="index-37">
+<dt><span class="spadfun">OMputFloat</span>: (%, <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a>) -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMputFloat(dev,</span> <span class="pre">i)</span></code> writes the float <code class="docutils literal notranslate"><span class="pre">i</span></code> to <code class="docutils literal notranslate"><span class="pre">dev</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-open-math-device-o-mput-integer"></span><dl class="simple" id="index-38">
+<dt><span class="spadfun">OMputInteger</span>: (%, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMputInteger(dev,</span> <span class="pre">i)</span></code> writes the integer <code class="docutils literal notranslate"><span class="pre">i</span></code> to <code class="docutils literal notranslate"><span class="pre">dev</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-open-math-device-o-mput-object"></span><dl class="simple" id="index-39">
+<dt><span class="spadfun">OMputObject</span>: % -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMputObject(dev)</span></code> writes a begin object token to <code class="docutils literal notranslate"><span class="pre">dev</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-open-math-device-o-mput-string"></span><dl class="simple" id="index-40">
+<dt><span class="spadfun">OMputString</span>: (%, <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>) -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMputString(dev,</span> <span class="pre">i)</span></code> writes the string <code class="docutils literal notranslate"><span class="pre">i</span></code> to <code class="docutils literal notranslate"><span class="pre">dev</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-open-math-device-o-mput-symbol"></span><dl class="simple" id="index-41">
+<dt><span class="spadfun">OMputSymbol</span>: (%, <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>) -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMputSymbol(dev,</span> <span class="pre">cd,</span> <span class="pre">s)</span></code> writes the symbol <code class="docutils literal notranslate"><span class="pre">s</span></code> from <code class="docutils literal notranslate"><span class="pre">CD</span></code> <code class="docutils literal notranslate"><span class="pre">cd</span></code> to <code class="docutils literal notranslate"><span class="pre">dev</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-open-math-device-o-mput-variable"></span><dl class="simple" id="index-42">
+<dt><span class="spadfun">OMputVariable</span>: (%, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>) -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMputVariable(dev,</span> <span class="pre">i)</span></code> writes the variable <code class="docutils literal notranslate"><span class="pre">i</span></code> to <code class="docutils literal notranslate"><span class="pre">dev</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-open-math-device-o-mset-encoding"></span><dl class="simple" id="index-43">
+<dt><span class="spadfun">OMsetEncoding</span>: (%, <a class="reference internal" href="OpenMathEncoding.html#l-open-math-encoding"><span class="std std-ref">OpenMathEncoding</span></a>) -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMsetEncoding(dev,</span> <span class="pre">enc)</span></code> sets the encoding used for reading or writing OpenMath objects to or from <code class="docutils literal notranslate"><span class="pre">dev</span></code> to <code class="docutils literal notranslate"><span class="pre">enc</span></code>.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="OpenMathEncoding.html" title="OpenMathEncoding"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="OpenMathConnection.html" title="OpenMathConnection"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Domains.html" >Domains</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">OpenMathDevice</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

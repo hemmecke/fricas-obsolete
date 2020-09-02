@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GroebnerSolve(lv, F, R) &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="GroupPresentationFunctions1 S" href="GroupPresentationFunctions1.html" />
+    <link rel="prev" title="GroebnerPackage(Dom, Expon, Dpol)" href="GroebnerPackage.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="GroupPresentationFunctions1.html" title="GroupPresentationFunctions1 S"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="GroebnerPackage.html" title="GroebnerPackage(Dom, Expon, Dpol)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">GroebnerSolve(lv, F, R)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="groebnersolve-lv-f-r">
+<span id="l-groebner-solve"></span><span id="index-0"></span><h1>GroebnerSolve(lv, F, R)<a class="headerlink" href="#groebnersolve-lv-f-r" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/groebsol.spad#L1">groebsol.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/groebsol.spad#L1">[edit on github]</a></p>
+<ul class="simple">
+<li><p>lv: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a></p></li>
+<li><p>F: <a class="reference internal" href="GcdDomain.html#l-gcd-domain"><span class="std std-ref">GcdDomain</span></a></p></li>
+<li><p>R: <a class="reference internal" href="GcdDomain.html#l-gcd-domain"><span class="std std-ref">GcdDomain</span></a></p></li>
+</ul>
+<p>Author : <code class="docutils literal notranslate"><span class="pre">P</span></code>.Gianni, Summer <code class="docutils literal notranslate"><span class="pre">'88</span></code>, revised November <code class="docutils literal notranslate"><span class="pre">'89</span></code> Solve systems of polynomial equations using Groebner bases Total order Groebner bases are computed and then converted to lex ones This package is mostly intended for internal use.</p>
+<span class="target" id="l-groebner-solve-generic-position"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">genericPosition</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="DistributedMultivariatePolynomial.html#l-distributed-multivariate-polynomial"><span class="std std-ref">DistributedMultivariatePolynomial</span></a>(lv, F), <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="OrderedVariableList.html#l-ordered-variable-list"><span class="std std-ref">OrderedVariableList</span></a> lv) -&gt; Record(dpolys: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="DistributedMultivariatePolynomial.html#l-distributed-multivariate-polynomial"><span class="std std-ref">DistributedMultivariatePolynomial</span></a>(lv, F), coords: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">genericPosition(lp,</span> <span class="pre">lv)</span></code> puts a radical zero dimensional ideal in general position, for system <code class="docutils literal notranslate"><span class="pre">lp</span></code> in variables <code class="docutils literal notranslate"><span class="pre">lv</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-groebner-solve-groeb-solve"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">groebSolve</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="DistributedMultivariatePolynomial.html#l-distributed-multivariate-polynomial"><span class="std std-ref">DistributedMultivariatePolynomial</span></a>(lv, F), <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="OrderedVariableList.html#l-ordered-variable-list"><span class="std std-ref">OrderedVariableList</span></a> lv) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="DistributedMultivariatePolynomial.html#l-distributed-multivariate-polynomial"><span class="std std-ref">DistributedMultivariatePolynomial</span></a>(lv, F)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">groebSolve(lp,</span> <span class="pre">lv)</span></code> reduces the polynomial system <code class="docutils literal notranslate"><span class="pre">lp</span></code> in variables <code class="docutils literal notranslate"><span class="pre">lv</span></code> to triangular form. Algorithm based on groebner bases algorithm with linear algebra for change of ordering. Preprocessing for the general solver. The polynomials in input are of type <span class="xref std std-ref">DMP</span>.</p>
+</dd>
+</dl>
+<span class="target" id="l-groebner-solve-test-dim"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">testDim</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="HomogeneousDistributedMultivariatePolynomial.html#l-homogeneous-distributed-multivariate-polynomial"><span class="std std-ref">HomogeneousDistributedMultivariatePolynomial</span></a>(lv, F), <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="OrderedVariableList.html#l-ordered-variable-list"><span class="std std-ref">OrderedVariableList</span></a> lv) -&gt; Union(<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="HomogeneousDistributedMultivariatePolynomial.html#l-homogeneous-distributed-multivariate-polynomial"><span class="std std-ref">HomogeneousDistributedMultivariatePolynomial</span></a>(lv, F), failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">testDim(lp,</span> <span class="pre">lv)</span></code> tests if the polynomial system <code class="docutils literal notranslate"><span class="pre">lp</span></code> in variables <code class="docutils literal notranslate"><span class="pre">lv</span></code> is zero dimensional.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="GroupPresentationFunctions1.html" title="GroupPresentationFunctions1 S"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="GroebnerPackage.html" title="GroebnerPackage(Dom, Expon, Dpol)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">GroebnerSolve(lv, F, R)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

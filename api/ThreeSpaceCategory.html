@@ -1,0 +1,327 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThreeSpaceCategory R &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="TranscendentalFunctionCategory" href="TranscendentalFunctionCategory.html" />
+    <link rel="prev" title="TensorProductProperty(R, M, N, MxN, S)" href="TensorProductProperty.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="TranscendentalFunctionCategory.html" title="TranscendentalFunctionCategory"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="TensorProductProperty.html" title="TensorProductProperty(R, M, N, MxN, S)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Categories.html" accesskey="U">Categories</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">ThreeSpaceCategory R</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="threespacecategory-r">
+<span id="l-three-space-category"></span><span id="index-0"></span><h1>ThreeSpaceCategory R<a class="headerlink" href="#threespacecategory-r" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/space.spad#L1">space.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/space.spad#L1">[edit on github]</a></p>
+<ul class="simple">
+<li><p>R: <a class="reference internal" href="Ring.html#l-ring"><span class="std std-ref">Ring</span></a></p></li>
+</ul>
+<p>The category ThreeSpaceCategory is used for creating three dimensional objects using functions for defining points, curves, polygons, constructs and the subspaces containing them.</p>
+<dl class="simple">
+<dt><a class="reference internal" href="BasicType.html#id1"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+<dt><a class="reference internal" href="BasicType.html#id2"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-three-space-category-check"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">check</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">check(s)</span></code> returns lllpt, list of lists of lists of point information about the <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a> <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-three-space-category-closed-curve"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">closedCurve</span>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">closedCurve(s)</span></code> checks to see if the <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a>, <code class="docutils literal notranslate"><span class="pre">s</span></code>, is composed of a single closed curve component defined by a list of points in which the first point is also the last point, all of which are from the domain <code class="docutils literal notranslate"><span class="pre">PointDomain(m,</span> <span class="pre">R)</span></code> and if so, returns the list of points. An error is signaled otherwise.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-3">
+<dt><span class="spadfun">closedCurve</span>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> R) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">closedCurve(s,</span> <span class="pre">[[lr0],</span> <span class="pre">[lr1],</span> <span class="pre">...,</span> <span class="pre">[lrn],</span> <span class="pre">[lr0]])</span></code> adds a closed curve component defined by a list of points <code class="docutils literal notranslate"><span class="pre">lr0</span></code> through <code class="docutils literal notranslate"><span class="pre">lrn</span></code>, which are lists of elements from the domain <code class="docutils literal notranslate"><span class="pre">PointDomain(m,</span> <span class="pre">R)</span></code>, where <code class="docutils literal notranslate"><span class="pre">R</span></code> is the <a class="reference internal" href="Ring.html#l-ring"><span class="std std-ref">Ring</span></a> over which the point elements are defined and <code class="docutils literal notranslate"><span class="pre">m</span></code> is the dimension of the points, in which the last element of the list of points contains a copy of the first element list, <code class="docutils literal notranslate"><span class="pre">lr0</span></code>. The closed curve is added to the <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a>, <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-4">
+<dt><span class="spadfun">closedCurve</span>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> R) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">closedCurve(s,</span> <span class="pre">[p0,</span> <span class="pre">p1,</span> <span class="pre">...,</span> <span class="pre">pn,</span> <span class="pre">p0])</span></code> adds a closed curve component which is a list of points defined by the first element <code class="docutils literal notranslate"><span class="pre">p0</span></code> through the last element <code class="docutils literal notranslate"><span class="pre">pn</span></code> and back to the first element <code class="docutils literal notranslate"><span class="pre">p0</span></code> again, to the <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a> <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-5">
+<dt><span class="spadfun">closedCurve</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> R -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">closedCurve(lp)</span></code> sets a list of points defined by the first element of <code class="docutils literal notranslate"><span class="pre">lp</span></code> through the last element of <code class="docutils literal notranslate"><span class="pre">lp</span></code> and back to the first elelment again and returns a <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a> whose component is the closed curve defined by <code class="docutils literal notranslate"><span class="pre">lp</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="id1"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">closedCurve?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">closedCurve?(s)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a> <code class="docutils literal notranslate"><span class="pre">s</span></code> contains a single closed curve component, i.e. the first element of the curve is also the last element, or <code class="docutils literal notranslate"><span class="pre">false</span></code> otherwise.</p>
+</dd>
+</dl>
+<span class="target" id="l-three-space-category-coerce"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">coerce</span>: % -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(s)</span></code> returns the <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a> <code class="docutils literal notranslate"><span class="pre">s</span></code> to Output format.</p>
+</dd>
+</dl>
+<span class="target" id="l-three-space-category-components"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">components</span>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">components(s)</span></code> takes the <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a> <code class="docutils literal notranslate"><span class="pre">s</span></code>, and creates a list containing a unique <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a> for each single component of <code class="docutils literal notranslate"><span class="pre">s</span></code>. If <code class="docutils literal notranslate"><span class="pre">s</span></code> has no components defined, the list returned is empty.</p>
+</dd>
+</dl>
+<span class="target" id="l-three-space-category-composite"></span><dl class="simple" id="index-9">
+<dt><span class="spadfun">composite</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">composite([s1,</span> <span class="pre">s2,</span> <span class="pre">...,</span> <span class="pre">sn])</span></code> will create a new <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a> that is a union of all the components from each <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a> in the parameter list, grouped as a composite.</p>
+</dd>
+</dl>
+<span class="target" id="l-three-space-category-composites"></span><dl class="simple" id="index-10">
+<dt><span class="spadfun">composites</span>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">composites(s)</span></code> takes the <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a> <code class="docutils literal notranslate"><span class="pre">s</span></code>, and creates a list containing a unique <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a> for each single composite of <code class="docutils literal notranslate"><span class="pre">s</span></code>. If <code class="docutils literal notranslate"><span class="pre">s</span></code> has no composites defined (composites need to be explicitly created), the list returned is empty. Note that not all the components need to be part of a composite.</p>
+</dd>
+</dl>
+<span class="target" id="l-three-space-category-copy"></span><dl class="simple" id="index-11">
+<dt><span class="spadfun">copy</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">copy(s)</span></code> returns a new <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a> that is an exact copy of <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-three-space-category-create3-space"></span><dl class="simple" id="index-12">
+<dt><span class="spadfun">create3Space</span>: () -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">create3Space()</span></code> creates a <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a> object capable of holding point, curve, mesh components and any combination.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-13">
+<dt><span class="spadfun">create3Space</span>: <a class="reference internal" href="SubSpace.html#l-sub-space"><span class="std std-ref">SubSpace</span></a>(3, R) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">create3Space(s)</span></code> creates a <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a> object containing objects pre-defined within some <a class="reference internal" href="SubSpace.html#l-sub-space"><span class="std std-ref">SubSpace</span></a> <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-three-space-category-curve"></span><dl class="simple" id="index-14">
+<dt><span class="spadfun">curve</span>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">curve(s)</span></code> checks to see if the <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a>, <code class="docutils literal notranslate"><span class="pre">s</span></code>, is composed of a single curve defined by a list of points and if so, returns the curve, i.e. list of points. An error is signaled otherwise.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-15">
+<dt><span class="spadfun">curve</span>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> R) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">curve(s,</span> <span class="pre">[[p0],</span> <span class="pre">[p1],</span> <span class="pre">...,</span> <span class="pre">[pn]])</span></code> adds a space curve which is a list of points <code class="docutils literal notranslate"><span class="pre">p0</span></code> through <code class="docutils literal notranslate"><span class="pre">pn</span></code> defined by lists of elements from the domain <code class="docutils literal notranslate"><span class="pre">PointDomain(m,</span> <span class="pre">R)</span></code>, where <code class="docutils literal notranslate"><span class="pre">R</span></code> is the <a class="reference internal" href="Ring.html#l-ring"><span class="std std-ref">Ring</span></a> over which the point elements are defined and <code class="docutils literal notranslate"><span class="pre">m</span></code> is the dimension of the points, to the <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a> <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-16">
+<dt><span class="spadfun">curve</span>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> R) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">curve(s,</span> <span class="pre">[p0,</span> <span class="pre">p1,</span> <span class="pre">...,</span> <span class="pre">pn])</span></code> adds a space curve component defined by a list of points <code class="docutils literal notranslate"><span class="pre">p0</span></code> through <code class="docutils literal notranslate"><span class="pre">pn</span></code>, to the <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a> <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-17">
+<dt><span class="spadfun">curve</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> R -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">curve([p0,</span> <span class="pre">p1,</span> <span class="pre">p2,</span> <span class="pre">...,</span> <span class="pre">pn])</span></code> creates a space curve defined by the list of points <code class="docutils literal notranslate"><span class="pre">p0</span></code> through <code class="docutils literal notranslate"><span class="pre">pn</span></code>, and returns the <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a> whose component is the curve.</p>
+</dd>
+</dl>
+<span class="target" id="id2"></span><dl class="simple" id="index-18">
+<dt><span class="spadfun">curve?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">curve?(s)</span></code> queries whether the <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a>, <code class="docutils literal notranslate"><span class="pre">s</span></code>, is a curve, i.e. has one component, a list of list of points, and returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if it is, or <code class="docutils literal notranslate"><span class="pre">false</span></code> otherwise.</p>
+</dd>
+</dl>
+<span class="target" id="l-three-space-category-enter-point-data"></span><dl class="simple" id="index-19">
+<dt><span class="spadfun">enterPointData</span>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> R) -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">enterPointData(s,</span> <span class="pre">[p0,</span> <span class="pre">p1,</span> <span class="pre">...,</span> <span class="pre">pn])</span></code> adds a list of points from <code class="docutils literal notranslate"><span class="pre">p0</span></code> through <code class="docutils literal notranslate"><span class="pre">pn</span></code> to the <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a>, <code class="docutils literal notranslate"><span class="pre">s</span></code>, and returns the index, to the starting point of the list.</p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l-single-integer"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash-update"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-latex"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-three-space-category-lllip"></span><dl class="simple" id="index-20">
+<dt><span class="spadfun">lllip</span>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">lllip(s)</span></code> checks to see if the <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a>, <code class="docutils literal notranslate"><span class="pre">s</span></code>, is composed of a list of components, which are lists of curves, which are lists of indices to points, and if so, returns the list of lists of lists; An error is signaled otherwise.</p>
+</dd>
+</dl>
+<span class="target" id="l-three-space-category-lllp"></span><dl class="simple" id="index-21">
+<dt><span class="spadfun">lllp</span>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">lllp(s)</span></code> checks to see if the <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a>, <code class="docutils literal notranslate"><span class="pre">s</span></code>, is composed of a list of components, which are lists of curves, which are lists of points, and if so, returns the list of lists of lists; An error is signaled otherwise.</p>
+</dd>
+</dl>
+<span class="target" id="l-three-space-category-llprop"></span><dl class="simple" id="index-22">
+<dt><span class="spadfun">llprop</span>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="SubSpaceComponentProperty.html#l-sub-space-component-property"><span class="std std-ref">SubSpaceComponentProperty</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">llprop(s)</span></code> checks to see if the <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a>, <code class="docutils literal notranslate"><span class="pre">s</span></code>, is composed of a list of curves which are lists of the subspace component properties of the curves, and if so, returns the list of lists; An error is signaled otherwise.</p>
+</dd>
+</dl>
+<span class="target" id="l-three-space-category-lp"></span><dl class="simple" id="index-23">
+<dt><span class="spadfun">lp</span>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">lp(s)</span></code> returns the list of points component which the <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a>, <code class="docutils literal notranslate"><span class="pre">s</span></code>, contains; these points are used by reference, i.e. the component holds indices referring to the points rather than the points themselves. This allows for sharing of the points.</p>
+</dd>
+</dl>
+<span class="target" id="l-three-space-category-lprop"></span><dl class="simple" id="index-24">
+<dt><span class="spadfun">lprop</span>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="SubSpaceComponentProperty.html#l-sub-space-component-property"><span class="std std-ref">SubSpaceComponentProperty</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">lprop(s)</span></code> checks to see if the <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a>, <code class="docutils literal notranslate"><span class="pre">s</span></code>, is composed of a list of subspace component properties, and if so, returns the list; An error is signaled otherwise.</p>
+</dd>
+</dl>
+<span class="target" id="l-three-space-category-merge"></span><dl class="simple" id="index-25">
+<dt><span class="spadfun">merge</span>: (%, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">merge(s1,</span> <span class="pre">s2)</span></code> will create a new <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a> that has the components of <code class="docutils literal notranslate"><span class="pre">s1</span></code> and <code class="docutils literal notranslate"><span class="pre">s2</span></code>; Groupings of components into composites are maintained.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-26">
+<dt><span class="spadfun">merge</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">merge([s1,</span> <span class="pre">s2,</span> <span class="pre">...,</span> <span class="pre">sn])</span></code> will create a new <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a> that has the components of all the ones in the list; Groupings of components into composites are maintained.</p>
+</dd>
+</dl>
+<span class="target" id="l-three-space-category-mesh"></span><dl class="simple" id="index-27">
+<dt><span class="spadfun">mesh</span>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">mesh(s)</span></code> checks to see if the <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a>, <code class="docutils literal notranslate"><span class="pre">s</span></code>, is composed of a single surface component defined by a list curves which contain lists of points, and if so, returns the list of lists of points; An error is signaled otherwise.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-28">
+<dt><span class="spadfun">mesh</span>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> R, <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>, <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">mesh(s,</span> <span class="pre">[</span> <span class="pre">[[r10]...,</span> <span class="pre">[r1m]],</span> <span class="pre">[[r20]...,</span> <span class="pre">[r2m]],</span> <span class="pre">...,</span> <span class="pre">[[rn0]...,</span> <span class="pre">[rnm]]</span> <span class="pre">],</span> <span class="pre">close1,</span> <span class="pre">close2)</span></code> adds a surface component to the <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a> <code class="docutils literal notranslate"><span class="pre">s</span></code>, which is defined over a rectangular domain of size <code class="docutils literal notranslate"><span class="pre">WxH</span></code> where <code class="docutils literal notranslate"><span class="pre">W</span></code> is the number of lists of points from the domain <code class="docutils literal notranslate"><span class="pre">PointDomain(R)</span></code> and <code class="docutils literal notranslate"><span class="pre">H</span></code> is the number of elements in each of those lists; the booleans <code class="docutils literal notranslate"><span class="pre">close1</span></code> and <code class="docutils literal notranslate"><span class="pre">close2</span></code> indicate how the surface is to be closed: if <code class="docutils literal notranslate"><span class="pre">close1</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code> this means that each individual list (a curve) is to be closed (i.e. the last point of the list is to be connected to the first point); if <code class="docutils literal notranslate"><span class="pre">close2</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>, this means that the boundary at one end of the surface is to be connected to the boundary at the other end (the boundaries are defined as the first list of points (curve) and the last list of points (curve)).</p>
+</dd>
+</dl>
+<dl class="simple" id="index-29">
+<dt><span class="spadfun">mesh</span>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> R, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="SubSpaceComponentProperty.html#l-sub-space-component-property"><span class="std std-ref">SubSpaceComponentProperty</span></a>, <a class="reference internal" href="SubSpaceComponentProperty.html#l-sub-space-component-property"><span class="std std-ref">SubSpaceComponentProperty</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">mesh(s,</span> <span class="pre">[</span> <span class="pre">[[r10]...,</span> <span class="pre">[r1m]],</span> <span class="pre">[[r20]...,</span> <span class="pre">[r2m]],</span> <span class="pre">...,</span> <span class="pre">[[rn0]...,</span> <span class="pre">[rnm]]</span> <span class="pre">],</span> <span class="pre">[props],</span> <span class="pre">prop)</span></code> adds a surface component to the <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a> <code class="docutils literal notranslate"><span class="pre">s</span></code>, which is defined over a rectangular domain of size <code class="docutils literal notranslate"><span class="pre">WxH</span></code> where <code class="docutils literal notranslate"><span class="pre">W</span></code> is the number of lists of points from the domain <code class="docutils literal notranslate"><span class="pre">PointDomain(R)</span></code> and <code class="docutils literal notranslate"><span class="pre">H</span></code> is the number of elements in each of those lists; lprops is the list of the subspace component properties for each curve list, and prop is the subspace component property by which the points are defined.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-30">
+<dt><span class="spadfun">mesh</span>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> R, <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>, <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">mesh(s,</span> <span class="pre">[[p0],</span> <span class="pre">[p1],</span> <span class="pre">...,</span> <span class="pre">[pn]],</span> <span class="pre">close1,</span> <span class="pre">close2)</span></code> adds a surface component to the <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a>, which is defined over a list of curves, in which each of these curves is a list of points. The boolean arguments <code class="docutils literal notranslate"><span class="pre">close1</span></code> and <code class="docutils literal notranslate"><span class="pre">close2</span></code> indicate how the surface is to be closed. Argument <code class="docutils literal notranslate"><span class="pre">close1</span></code> equal <code class="docutils literal notranslate"><span class="pre">true</span></code> means that each individual list (a curve) is to be closed, i.e. the last point of the list is to be connected to the first point. Argument <code class="docutils literal notranslate"><span class="pre">close2</span></code> equal <code class="docutils literal notranslate"><span class="pre">true</span></code> means that the boundary at one end of the surface is to be connected to the boundary at the other end, i.e. the boundaries are defined as the first list of points (curve) and the last list of points (curve).</p>
+</dd>
+</dl>
+<dl class="simple" id="index-31">
+<dt><span class="spadfun">mesh</span>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> R, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="SubSpaceComponentProperty.html#l-sub-space-component-property"><span class="std std-ref">SubSpaceComponentProperty</span></a>, <a class="reference internal" href="SubSpaceComponentProperty.html#l-sub-space-component-property"><span class="std std-ref">SubSpaceComponentProperty</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">mesh(s,</span> <span class="pre">[[p0],</span> <span class="pre">[p1],</span> <span class="pre">...,</span> <span class="pre">[pn]],</span> <span class="pre">[props],</span> <span class="pre">prop)</span></code> adds a surface component, defined over a list curves which contains lists of points, to the <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a> <code class="docutils literal notranslate"><span class="pre">s</span></code>; props is a list which contains the subspace component properties for each surface parameter, and prop is the subspace component property by which the points are defined.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-32">
+<dt><span class="spadfun">mesh</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> R, <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>, <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">mesh([[p0],</span> <span class="pre">[p1],</span> <span class="pre">...,</span> <span class="pre">[pn]],</span> <span class="pre">close1,</span> <span class="pre">close2)</span></code> creates a surface defined over a list of curves, <code class="docutils literal notranslate"><span class="pre">p0</span></code> through <code class="docutils literal notranslate"><span class="pre">pn</span></code>, which are lists of points; the booleans <code class="docutils literal notranslate"><span class="pre">close1</span></code> and <code class="docutils literal notranslate"><span class="pre">close2</span></code> indicate how the surface is to be closed: <code class="docutils literal notranslate"><span class="pre">close1</span></code> set to <code class="docutils literal notranslate"><span class="pre">true</span></code> means that each individual list (a curve) is to be closed (that is, the last point of the list is to be connected to the first point); <code class="docutils literal notranslate"><span class="pre">close2</span></code> set to <code class="docutils literal notranslate"><span class="pre">true</span></code> means that the boundary at one end of the surface is to be connected to the boundary at the other end (the boundaries are defined as the first list of points (curve) and the last list of points (curve)); the <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a> containing this surface is returned.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-33">
+<dt><span class="spadfun">mesh</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> R -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">mesh([[p0],</span> <span class="pre">[p1],</span> <span class="pre">...,</span> <span class="pre">[pn]])</span></code> creates a surface defined by a list of curves which are lists, <code class="docutils literal notranslate"><span class="pre">p0</span></code> through <code class="docutils literal notranslate"><span class="pre">pn</span></code>, of points, and returns a <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a> whose component is the surface.</p>
+</dd>
+</dl>
+<span class="target" id="id3"></span><dl class="simple" id="index-34">
+<dt><span class="spadfun">mesh?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">mesh?(s)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a> <code class="docutils literal notranslate"><span class="pre">s</span></code> is composed of one component, a mesh comprising a list of curves which are lists of points, or returns <code class="docutils literal notranslate"><span class="pre">false</span></code> if otherwise</p>
+</dd>
+</dl>
+<span class="target" id="l-three-space-category-modify-point-data"></span><dl class="simple" id="index-35">
+<dt><span class="spadfun">modifyPointData</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> R) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">modifyPointData(s,</span> <span class="pre">i,</span> <span class="pre">p)</span></code> changes the point at the indexed location <code class="docutils literal notranslate"><span class="pre">i</span></code> in the <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a>, <code class="docutils literal notranslate"><span class="pre">s</span></code>, to that of point <code class="docutils literal notranslate"><span class="pre">p</span></code>. This is useful for making changes to a point which has been transformed.</p>
+</dd>
+</dl>
+<span class="target" id="l-three-space-category-number-of-components"></span><dl class="simple" id="index-36">
+<dt><span class="spadfun">numberOfComponents</span>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">numberOfComponents(s)</span></code> returns the number of distinct object components in the indicated <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a>, <code class="docutils literal notranslate"><span class="pre">s</span></code>, such as points, curves, polygons, and constructs.</p>
+</dd>
+</dl>
+<span class="target" id="l-three-space-category-number-of-composites"></span><dl class="simple" id="index-37">
+<dt><span class="spadfun">numberOfComposites</span>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">numberOfComposites(s)</span></code> returns the number of supercomponents, or composites, in the <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a>, <code class="docutils literal notranslate"><span class="pre">s</span></code>; Composites are arbitrary groupings of otherwise distinct and unrelated components; A <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a> need not have any composites defined at all and, outside of the requirement that no component can belong to more than one composite at a time, the definition and interpretation of composites are unrestricted.</p>
+</dd>
+</dl>
+<span class="target" id="l-three-space-category-objects"></span><dl class="simple" id="index-38">
+<dt><span class="spadfun">objects</span>: % -&gt; Record(points: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, curves: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, polygons: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, constructs: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">objects(s)</span></code> returns the <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a>, <code class="docutils literal notranslate"><span class="pre">s</span></code>, in the form of a 3D object record containing information on the number of points, curves, polygons and constructs comprising the <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a>..</p>
+</dd>
+</dl>
+<span class="target" id="l-three-space-category-point"></span><dl class="simple" id="index-39">
+<dt><span class="spadfun">point</span>: % -&gt; <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">point(s)</span></code> checks to see if the <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a>, <code class="docutils literal notranslate"><span class="pre">s</span></code>, is composed of only a single point and if so, returns the point. An error is signaled otherwise.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-40">
+<dt><span class="spadfun">point</span>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> R) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">point(s,</span> <span class="pre">[x,</span> <span class="pre">y,</span> <span class="pre">z])</span></code> adds a point component defined by a list of elements which are from the <code class="docutils literal notranslate"><span class="pre">PointDomain(R)</span></code> to the <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a>, <code class="docutils literal notranslate"><span class="pre">s</span></code>, where <code class="docutils literal notranslate"><span class="pre">R</span></code> is the <a class="reference internal" href="Ring.html#l-ring"><span class="std std-ref">Ring</span></a> over which the point elements are defined.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-41">
+<dt><span class="spadfun">point</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">point(s,</span> <span class="pre">i)</span></code> adds a point component which is placed into a component list of the <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a>, <code class="docutils literal notranslate"><span class="pre">s</span></code>, at the index given by <code class="docutils literal notranslate"><span class="pre">i</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-42">
+<dt><span class="spadfun">point</span>: (%, <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> R) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">point(s,</span> <span class="pre">p)</span></code> adds a point component defined by the point, <code class="docutils literal notranslate"><span class="pre">p</span></code>, specified as a list from <code class="docutils literal notranslate"><span class="pre">List(R)</span></code>, to the <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a>, <code class="docutils literal notranslate"><span class="pre">s</span></code>, where <code class="docutils literal notranslate"><span class="pre">R</span></code> is the <a class="reference internal" href="Ring.html#l-ring"><span class="std std-ref">Ring</span></a> over which the point is defined.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-43">
+<dt><span class="spadfun">point</span>: <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> R -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">point(p)</span></code> returns a <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a> object which is composed of one component, the point <code class="docutils literal notranslate"><span class="pre">p</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="id4"></span><dl class="simple" id="index-44">
+<dt><span class="spadfun">point?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">point?(s)</span></code> queries whether the <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a>, <code class="docutils literal notranslate"><span class="pre">s</span></code>, is composed of a single component which is a point and returns the boolean result.</p>
+</dd>
+</dl>
+<span class="target" id="l-three-space-category-polygon"></span><dl class="simple" id="index-45">
+<dt><span class="spadfun">polygon</span>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">polygon(s)</span></code> checks to see if the <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a>, <code class="docutils literal notranslate"><span class="pre">s</span></code>, is composed of a single polygon component defined by a list of points, and if so, returns the list of points; An error is signaled otherwise.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-46">
+<dt><span class="spadfun">polygon</span>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> R) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">polygon(s,</span> <span class="pre">[[r0],</span> <span class="pre">[r1],</span> <span class="pre">...,</span> <span class="pre">[rn]])</span></code> adds a polygon component defined by a list of points <code class="docutils literal notranslate"><span class="pre">r0</span></code> through <code class="docutils literal notranslate"><span class="pre">rn</span></code>, which are lists of elements from the domain <code class="docutils literal notranslate"><span class="pre">PointDomain(m,</span> <span class="pre">R)</span></code> to the <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a> <code class="docutils literal notranslate"><span class="pre">s</span></code>, where <code class="docutils literal notranslate"><span class="pre">m</span></code> is the dimension of the points and <code class="docutils literal notranslate"><span class="pre">R</span></code> is the <a class="reference internal" href="Ring.html#l-ring"><span class="std std-ref">Ring</span></a> over which the points are defined.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-47">
+<dt><span class="spadfun">polygon</span>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> R) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">polygon(s,</span> <span class="pre">[p0,</span> <span class="pre">p1,</span> <span class="pre">...,</span> <span class="pre">pn])</span></code> adds a polygon component defined by a list of points, <code class="docutils literal notranslate"><span class="pre">p0</span></code> throught <code class="docutils literal notranslate"><span class="pre">pn</span></code>, to the <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a> <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-48">
+<dt><span class="spadfun">polygon</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> R -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">polygon([p0,</span> <span class="pre">p1,</span> <span class="pre">...,</span> <span class="pre">pn])</span></code> creates a polygon defined by a list of points, <code class="docutils literal notranslate"><span class="pre">p0</span></code> through <code class="docutils literal notranslate"><span class="pre">pn</span></code>, and returns a <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a> whose component is the polygon.</p>
+</dd>
+</dl>
+<span class="target" id="id5"></span><dl class="simple" id="index-49">
+<dt><span class="spadfun">polygon?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">polygon?(s)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a> <code class="docutils literal notranslate"><span class="pre">s</span></code> contains a single polygon component, or <code class="docutils literal notranslate"><span class="pre">false</span></code> otherwise.</p>
+</dd>
+</dl>
+<span class="target" id="l-three-space-category-subspace"></span><dl class="simple" id="index-50">
+<dt><span class="spadfun">subspace</span>: % -&gt; <a class="reference internal" href="SubSpace.html#l-sub-space"><span class="std std-ref">SubSpace</span></a>(3, R)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">subspace(s)</span></code> returns the <a class="reference internal" href="SubSpace.html#l-sub-space"><span class="std std-ref">SubSpace</span></a> which holds all the point information in the <a class="reference internal" href="ThreeSpace.html#l-three-space"><span class="std std-ref">ThreeSpace</span></a>, <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
+</dd>
+</dl>
+<p><a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+<p><a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+<p><a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="TranscendentalFunctionCategory.html" title="TranscendentalFunctionCategory"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="TensorProductProperty.html" title="TensorProductProperty(R, M, N, MxN, S)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Categories.html" >Categories</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">ThreeSpaceCategory R</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

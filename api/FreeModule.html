@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreeModule(R, S) &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="FreeMonoid S" href="FreeMonoid.html" />
+    <link rel="prev" title="FreeMagma VarSet" href="FreeMagma.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="FreeMonoid.html" title="FreeMonoid S"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="FreeMagma.html" title="FreeMagma VarSet"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Domains.html" accesskey="U">Domains</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">FreeModule(R, S)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="freemodule-r-s">
+<span id="l-free-module"></span><span id="index-0"></span><h1>FreeModule(R, S)<a class="headerlink" href="#freemodule-r-s" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/poly.spad#L80">poly.spad line 80</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/poly.spad#L80">[edit on github]</a></p>
+<ul class="simple">
+<li><p>R: Join(<a class="reference internal" href="SemiRng.html#l-semi-rng"><span class="std std-ref">SemiRng</span></a>, <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a>)</p></li>
+<li><p>S: <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p></li>
+</ul>
+<p>A <code class="docutils literal notranslate"><span class="pre">bi</span></code>-module is a free module over a ring with generators indexed by an ordered set. Each element can be expressed as a finite linear combination of generators. Only non-zero terms are stored. old domain <code class="docutils literal notranslate"><span class="pre">FreeModule1</span></code> was merged to it in May 2009 The description of the latter: This domain implements linear combinations of elements from the domain <code class="docutils literal notranslate"><span class="pre">S</span></code> with coefficients in the domain <code class="docutils literal notranslate"><span class="pre">R</span></code> where <code class="docutils literal notranslate"><span class="pre">S</span></code> is an ordered set and <code class="docutils literal notranslate"><span class="pre">R</span></code> is a ring (which may be non-commutative). This domain is used by domains of non-commutative algebra such as: <a class="reference internal" href="XDistributedPolynomial.html#l-x-distributed-polynomial"><span class="std std-ref">XDistributedPolynomial</span></a>, <a class="reference internal" href="XRecursivePolynomial.html#l-x-recursive-polynomial"><span class="std std-ref">XRecursivePolynomial</span></a>. Author: Michel Petitot (<a class="reference external" href="mailto:petitot&#37;&#52;&#48;lifl">petitot<span>&#64;</span>lifl</a>.<code class="docutils literal notranslate"><span class="pre">fr</span></code>)</p>
+<dl class="simple">
+<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-0"><span class="std std-ref">0</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+<dt><a class="reference internal" href="RightModule.html#id1"><span class="std std-ref">*</span></a>: (%, R) -&gt; %</dt><dd><p>from <a class="reference internal" href="RightModule.html#l-right-module"><span class="std std-ref">RightModule</span></a> R</p>
+</dd>
+<dt><a class="reference internal" href="AbelianGroup.html#id1"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, %) -&gt; % if R has <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianMonoid.html#id1"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianSemiGroup.html#id1"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l-abelian-semi-group"><span class="std std-ref">AbelianSemiGroup</span></a></p>
+</dd>
+<dt><a class="reference internal" href="LeftModule.html#id1"><span class="std std-ref">*</span></a>: (R, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="LeftModule.html#l-left-module"><span class="std std-ref">LeftModule</span></a> R</p>
+</dd>
+</dl>
+<span class="target" id="id1"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">*</span>: (R, S) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">r*b</span></code> returns the product of <code class="docutils literal notranslate"><span class="pre">r</span></code> by <code class="docutils literal notranslate"><span class="pre">b</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-2">
+<dt><span class="spadfun">*</span>: (S, R) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">s*r</span></code> returns the product <code class="docutils literal notranslate"><span class="pre">r*s</span></code> used by <a class="reference internal" href="XRecursivePolynomial.html#l-x-recursive-polynomial"><span class="std std-ref">XRecursivePolynomial</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianSemiGroup.html#id2"><span class="std std-ref">+</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l-abelian-semi-group"><span class="std std-ref">AbelianSemiGroup</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianGroup.html#id2"><span class="std std-ref">-</span></a>: % -&gt; % if R has <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianGroup.html#id2"><span class="std std-ref">-</span></a>: (%, %) -&gt; % if R has <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
+</dd>
+<dt><a class="reference internal" href="PartialOrder.html#id1"><span class="std std-ref">&lt;</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a> if R has <a class="reference internal" href="OrderedAbelianMonoid.html#l-ordered-abelian-monoid"><span class="std std-ref">OrderedAbelianMonoid</span></a> and S has <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a> or S has <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a> and R has <a class="reference internal" href="OrderedAbelianMonoidSup.html#l-ordered-abelian-monoid-sup"><span class="std std-ref">OrderedAbelianMonoidSup</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l-partial-order"><span class="std std-ref">PartialOrder</span></a></p>
+</dd>
+<dt><a class="reference internal" href="PartialOrder.html#id2"><span class="std std-ref">&lt;=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a> if R has <a class="reference internal" href="OrderedAbelianMonoid.html#l-ordered-abelian-monoid"><span class="std std-ref">OrderedAbelianMonoid</span></a> and S has <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a> or S has <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a> and R has <a class="reference internal" href="OrderedAbelianMonoidSup.html#l-ordered-abelian-monoid-sup"><span class="std std-ref">OrderedAbelianMonoidSup</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l-partial-order"><span class="std std-ref">PartialOrder</span></a></p>
+</dd>
+<dt><a class="reference internal" href="BasicType.html#id1"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+<dt><a class="reference internal" href="PartialOrder.html#id3"><span class="std std-ref">&gt;</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a> if R has <a class="reference internal" href="OrderedAbelianMonoid.html#l-ordered-abelian-monoid"><span class="std std-ref">OrderedAbelianMonoid</span></a> and S has <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a> or S has <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a> and R has <a class="reference internal" href="OrderedAbelianMonoidSup.html#l-ordered-abelian-monoid-sup"><span class="std std-ref">OrderedAbelianMonoidSup</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l-partial-order"><span class="std std-ref">PartialOrder</span></a></p>
+</dd>
+<dt><a class="reference internal" href="PartialOrder.html#id4"><span class="std std-ref">&gt;=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a> if R has <a class="reference internal" href="OrderedAbelianMonoid.html#l-ordered-abelian-monoid"><span class="std std-ref">OrderedAbelianMonoid</span></a> and S has <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a> or S has <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a> and R has <a class="reference internal" href="OrderedAbelianMonoidSup.html#l-ordered-abelian-monoid-sup"><span class="std std-ref">OrderedAbelianMonoidSup</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l-partial-order"><span class="std std-ref">PartialOrder</span></a></p>
+</dd>
+<dt><a class="reference internal" href="BasicType.html#id2"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+<dt><a class="reference internal" href="FreeModuleCategory.html#l-free-module-category-coefficient"><span class="std std-ref">coefficient</span></a>: (%, S) -&gt; R</dt><dd><p>from <a class="reference internal" href="FreeModuleCategory.html#l-free-module-category"><span class="std std-ref">FreeModuleCategory</span></a>(R, S)</p>
+</dd>
+<dt><a class="reference internal" href="FreeModuleCategory.html#l-free-module-category-coefficients"><span class="std std-ref">coefficients</span></a>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> R</dt><dd><p>from <a class="reference internal" href="FreeModuleCategory.html#l-free-module-category"><span class="std std-ref">FreeModuleCategory</span></a>(R, S)</p>
+</dd>
+<dt><a class="reference internal" href="CoercibleTo.html#l-coercible-to-coerce"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+</dd>
+<dt><a class="reference internal" href="CoercibleFrom.html#l-coercible-from-coerce"><span class="std std-ref">coerce</span></a>: S -&gt; % if R has <a class="reference internal" href="SemiRing.html#l-semi-ring"><span class="std std-ref">SemiRing</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleFrom.html#l-coercible-from"><span class="std std-ref">CoercibleFrom</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category-construct"><span class="std std-ref">construct</span></a>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(k: S, c: R) -&gt; %</dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category"><span class="std std-ref">IndexedProductCategory</span></a>(R, S)</p>
+</dd>
+<dt><a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category-construct-ordered"><span class="std std-ref">constructOrdered</span></a>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(k: S, c: R) -&gt; % if S has <a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a></dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category"><span class="std std-ref">IndexedProductCategory</span></a>(R, S)</p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l-single-integer"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash-update"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-latex"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+<dt><a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category-leading-coefficient"><span class="std std-ref">leadingCoefficient</span></a>: % -&gt; R if S has <a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a></dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category"><span class="std std-ref">IndexedProductCategory</span></a>(R, S)</p>
+</dd>
+<dt><a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category-leading-monomial"><span class="std std-ref">leadingMonomial</span></a>: % -&gt; % if S has <a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a></dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category"><span class="std std-ref">IndexedProductCategory</span></a>(R, S)</p>
+</dd>
+<dt><a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category-leading-support"><span class="std std-ref">leadingSupport</span></a>: % -&gt; S if S has <a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a></dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category"><span class="std std-ref">IndexedProductCategory</span></a>(R, S)</p>
+</dd>
+<dt><a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category-leading-term"><span class="std std-ref">leadingTerm</span></a>: % -&gt; Record(k: S, c: R) if S has <a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a></dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category"><span class="std std-ref">IndexedProductCategory</span></a>(R, S)</p>
+</dd>
+<dt><a class="reference internal" href="FreeModuleCategory.html#l-free-module-category-linear-extend"><span class="std std-ref">linearExtend</span></a>: (S -&gt; R, %) -&gt; R if R has <a class="reference internal" href="CommutativeRing.html#l-commutative-ring"><span class="std std-ref">CommutativeRing</span></a></dt><dd><p>from <a class="reference internal" href="FreeModuleCategory.html#l-free-module-category"><span class="std std-ref">FreeModuleCategory</span></a>(R, S)</p>
+</dd>
+<dt><a class="reference internal" href="IndexedDirectProductCategory.html#l-indexed-direct-product-category-list-of-terms"><span class="std std-ref">listOfTerms</span></a>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(k: S, c: R)</dt><dd><p>from <a class="reference internal" href="IndexedDirectProductCategory.html#l-indexed-direct-product-category"><span class="std std-ref">IndexedDirectProductCategory</span></a>(R, S)</p>
+</dd>
+<dt><a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category-map"><span class="std std-ref">map</span></a>: (R -&gt; R, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category"><span class="std std-ref">IndexedProductCategory</span></a>(R, S)</p>
+</dd>
+<dt><a class="reference internal" href="OrderedSet.html#l-ordered-set-max"><span class="std std-ref">max</span></a>: (%, %) -&gt; % if R has <a class="reference internal" href="OrderedAbelianMonoid.html#l-ordered-abelian-monoid"><span class="std std-ref">OrderedAbelianMonoid</span></a> and S has <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a> or S has <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a> and R has <a class="reference internal" href="OrderedAbelianMonoidSup.html#l-ordered-abelian-monoid-sup"><span class="std std-ref">OrderedAbelianMonoidSup</span></a></dt><dd><p>from <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a></p>
+</dd>
+<dt><a class="reference internal" href="OrderedSet.html#l-ordered-set-min"><span class="std std-ref">min</span></a>: (%, %) -&gt; % if R has <a class="reference internal" href="OrderedAbelianMonoid.html#l-ordered-abelian-monoid"><span class="std std-ref">OrderedAbelianMonoid</span></a> and S has <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a> or S has <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a> and R has <a class="reference internal" href="OrderedAbelianMonoidSup.html#l-ordered-abelian-monoid-sup"><span class="std std-ref">OrderedAbelianMonoidSup</span></a></dt><dd><p>from <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a></p>
+</dd>
+<dt><a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category-monomial"><span class="std std-ref">monomial</span></a>: (R, S) -&gt; %</dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category"><span class="std std-ref">IndexedProductCategory</span></a>(R, S)</p>
+</dd>
+<dt><a class="reference internal" href="IndexedProductCategory.html#id1"><span class="std std-ref">monomial?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category"><span class="std std-ref">IndexedProductCategory</span></a>(R, S)</p>
+</dd>
+<dt><a class="reference internal" href="FreeModuleCategory.html#l-free-module-category-monomials"><span class="std std-ref">monomials</span></a>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %</dt><dd><p>from <a class="reference internal" href="FreeModuleCategory.html#l-free-module-category"><span class="std std-ref">FreeModuleCategory</span></a>(R, S)</p>
+</dd>
+<dt><a class="reference internal" href="IndexedDirectProductCategory.html#l-indexed-direct-product-category-number-of-monomials"><span class="std std-ref">numberOfMonomials</span></a>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="IndexedDirectProductCategory.html#l-indexed-direct-product-category"><span class="std std-ref">IndexedDirectProductCategory</span></a>(R, S)</p>
+</dd>
+<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-opposite"><span class="std std-ref">opposite?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+<dt><a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category-reductum"><span class="std std-ref">reductum</span></a>: % -&gt; % if S has <a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a></dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category"><span class="std std-ref">IndexedProductCategory</span></a>(R, S)</p>
+</dd>
+<dt><a class="reference internal" href="RetractableTo.html#l-retractable-to-retract"><span class="std std-ref">retract</span></a>: % -&gt; S if R has <a class="reference internal" href="SemiRing.html#l-semi-ring"><span class="std std-ref">SemiRing</span></a></dt><dd><p>from <a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="RetractableTo.html#l-retractable-to-retract-if-can"><span class="std std-ref">retractIfCan</span></a>: % -&gt; Union(S, failed) if R has <a class="reference internal" href="SemiRing.html#l-semi-ring"><span class="std std-ref">SemiRing</span></a></dt><dd><p>from <a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-sample"><span class="std std-ref">sample</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Comparable.html#l-comparable-smaller"><span class="std std-ref">smaller?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a> if R has <a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a> and S has <a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a> or R has <a class="reference internal" href="OrderedAbelianMonoid.html#l-ordered-abelian-monoid"><span class="std std-ref">OrderedAbelianMonoid</span></a> and S has <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a> or S has <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a> and R has <a class="reference internal" href="OrderedAbelianMonoidSup.html#l-ordered-abelian-monoid-sup"><span class="std std-ref">OrderedAbelianMonoidSup</span></a></dt><dd><p>from <a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a></p>
+</dd>
+<dt><a class="reference internal" href="CancellationAbelianMonoid.html#l-cancellation-abelian-monoid-subtract-if-can"><span class="std std-ref">subtractIfCan</span></a>: (%, %) -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="CancellationAbelianMonoid.html#l-cancellation-abelian-monoid"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
+</dd>
+<dt><a class="reference internal" href="OrderedAbelianMonoidSup.html#l-ordered-abelian-monoid-sup-sup"><span class="std std-ref">sup</span></a>: (%, %) -&gt; % if S has <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a> and R has <a class="reference internal" href="OrderedAbelianMonoidSup.html#l-ordered-abelian-monoid-sup"><span class="std std-ref">OrderedAbelianMonoidSup</span></a></dt><dd><p>from <a class="reference internal" href="OrderedAbelianMonoidSup.html#l-ordered-abelian-monoid-sup"><span class="std std-ref">OrderedAbelianMonoidSup</span></a></p>
+</dd>
+<dt><a class="reference internal" href="FreeModuleCategory.html#l-free-module-category-support"><span class="std std-ref">support</span></a>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S</dt><dd><p>from <a class="reference internal" href="FreeModuleCategory.html#l-free-module-category"><span class="std std-ref">FreeModuleCategory</span></a>(R, S)</p>
+</dd>
+<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-zero"><span class="std std-ref">zero?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+</dl>
+<p><a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a> if R has <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
+<p><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+<p><a class="reference internal" href="AbelianProductCategory.html#l-abelian-product-category"><span class="std std-ref">AbelianProductCategory</span></a> R</p>
+<p><a class="reference internal" href="AbelianSemiGroup.html#l-abelian-semi-group"><span class="std std-ref">AbelianSemiGroup</span></a></p>
+<p><a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+<p><a class="reference internal" href="BiModule.html#l-bi-module"><span class="std std-ref">BiModule</span></a>(R, R)</p>
+<p><a class="reference internal" href="CancellationAbelianMonoid.html#l-cancellation-abelian-monoid"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
+<p><a class="reference internal" href="CoercibleFrom.html#l-coercible-from"><span class="std std-ref">CoercibleFrom</span></a> S if R has <a class="reference internal" href="SemiRing.html#l-semi-ring"><span class="std std-ref">SemiRing</span></a></p>
+<p><a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+<p><a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a> if R has <a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a> and S has <a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a> or R has <a class="reference internal" href="OrderedAbelianMonoid.html#l-ordered-abelian-monoid"><span class="std std-ref">OrderedAbelianMonoid</span></a> and S has <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a> or S has <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a> and R has <a class="reference internal" href="OrderedAbelianMonoidSup.html#l-ordered-abelian-monoid-sup"><span class="std std-ref">OrderedAbelianMonoidSup</span></a></p>
+<p><a class="reference internal" href="FreeModuleCategory.html#l-free-module-category"><span class="std std-ref">FreeModuleCategory</span></a>(R, S)</p>
+<p><a class="reference internal" href="IndexedDirectProductCategory.html#l-indexed-direct-product-category"><span class="std std-ref">IndexedDirectProductCategory</span></a>(R, S)</p>
+<p><a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category"><span class="std std-ref">IndexedProductCategory</span></a>(R, S)</p>
+<p><a class="reference internal" href="LeftModule.html#l-left-module"><span class="std std-ref">LeftModule</span></a> R</p>
+<p><a class="reference internal" href="Module.html#l-module"><span class="std std-ref">Module</span></a> R if R has <a class="reference internal" href="CommutativeRing.html#l-commutative-ring"><span class="std std-ref">CommutativeRing</span></a></p>
+<p><a class="reference internal" href="OrderedAbelianMonoid.html#l-ordered-abelian-monoid"><span class="std std-ref">OrderedAbelianMonoid</span></a> if S has <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a> and R has <a class="reference internal" href="OrderedAbelianMonoidSup.html#l-ordered-abelian-monoid-sup"><span class="std std-ref">OrderedAbelianMonoidSup</span></a> or R has <a class="reference internal" href="OrderedAbelianMonoid.html#l-ordered-abelian-monoid"><span class="std std-ref">OrderedAbelianMonoid</span></a> and S has <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a></p>
+<p><a class="reference internal" href="OrderedAbelianMonoidSup.html#l-ordered-abelian-monoid-sup"><span class="std std-ref">OrderedAbelianMonoidSup</span></a> if S has <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a> and R has <a class="reference internal" href="OrderedAbelianMonoidSup.html#l-ordered-abelian-monoid-sup"><span class="std std-ref">OrderedAbelianMonoidSup</span></a></p>
+<p><a class="reference internal" href="OrderedAbelianSemiGroup.html#l-ordered-abelian-semi-group"><span class="std std-ref">OrderedAbelianSemiGroup</span></a> if R has <a class="reference internal" href="OrderedAbelianMonoid.html#l-ordered-abelian-monoid"><span class="std std-ref">OrderedAbelianMonoid</span></a> and S has <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a> or S has <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a> and R has <a class="reference internal" href="OrderedAbelianMonoidSup.html#l-ordered-abelian-monoid-sup"><span class="std std-ref">OrderedAbelianMonoidSup</span></a></p>
+<p><a class="reference internal" href="OrderedCancellationAbelianMonoid.html#l-ordered-cancellation-abelian-monoid"><span class="std std-ref">OrderedCancellationAbelianMonoid</span></a> if S has <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a> and R has <a class="reference internal" href="OrderedAbelianMonoidSup.html#l-ordered-abelian-monoid-sup"><span class="std std-ref">OrderedAbelianMonoidSup</span></a></p>
+<p><a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a> if R has <a class="reference internal" href="OrderedAbelianMonoid.html#l-ordered-abelian-monoid"><span class="std std-ref">OrderedAbelianMonoid</span></a> and S has <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a> or S has <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a> and R has <a class="reference internal" href="OrderedAbelianMonoidSup.html#l-ordered-abelian-monoid-sup"><span class="std std-ref">OrderedAbelianMonoidSup</span></a></p>
+<p><a class="reference internal" href="PartialOrder.html#l-partial-order"><span class="std std-ref">PartialOrder</span></a> if R has <a class="reference internal" href="OrderedAbelianMonoid.html#l-ordered-abelian-monoid"><span class="std std-ref">OrderedAbelianMonoid</span></a> and S has <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a> or S has <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a> and R has <a class="reference internal" href="OrderedAbelianMonoidSup.html#l-ordered-abelian-monoid-sup"><span class="std std-ref">OrderedAbelianMonoidSup</span></a></p>
+<p><a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> S if R has <a class="reference internal" href="SemiRing.html#l-semi-ring"><span class="std std-ref">SemiRing</span></a></p>
+<p><a class="reference internal" href="RightModule.html#l-right-module"><span class="std std-ref">RightModule</span></a> R</p>
+<p><a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="FreeMonoid.html" title="FreeMonoid S"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="FreeMagma.html" title="FreeMagma VarSet"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Domains.html" >Domains</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">FreeModule(R, S)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ILogic &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="IncidenceAlgebra(R, S)" href="IncidenceAlgebra.html" />
+    <link rel="prev" title="HyperellipticFiniteDivisor(F, UP, UPUP, R)" href="HyperellipticFiniteDivisor.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="IncidenceAlgebra.html" title="IncidenceAlgebra(R, S)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="HyperellipticFiniteDivisor.html" title="HyperellipticFiniteDivisor(F, UP, UPUP, R)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Domains.html" accesskey="U">Domains</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">ILogic</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="ilogic">
+<span id="l-i-logic"></span><span id="index-0"></span><h1>ILogic<a class="headerlink" href="#ilogic" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/logic.spad#L2454">logic.spad line 2454</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/logic.spad#L2454">[edit on github]</a></p>
+<p>parse result includes term returned and new index</p>
+<dl class="simple">
+<dt><span class="xref std std-ref">/\</span>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="MeetSemilattice.html#l-meet-semilattice"><span class="std std-ref">MeetSemilattice</span></a></p>
+</dd>
+</dl>
+<span class="target" id="id1"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">=</span>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>returns <code class="docutils literal notranslate"><span class="pre">true</span></code> (boolean <code class="docutils literal notranslate"><span class="pre">true</span></code>) if intuitionisticLogic values are the same. Translates from Intuitionistic Logic to Boolean Logic</p>
+</dd>
+<dt><a class="reference internal" href="JoinSemilattice.html#id1"><span class="std std-ref">\/</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="JoinSemilattice.html#l-join-semilattice"><span class="std std-ref">JoinSemilattice</span></a></p>
+</dd>
+<dt><a class="reference internal" href="BoundedJoinSemilattice.html#id1"><span class="std std-ref">_|_</span></a>: %</dt><dd><p>from <a class="reference internal" href="BoundedJoinSemilattice.html#l-bounded-join-semilattice"><span class="std std-ref">BoundedJoinSemilattice</span></a></p>
+</dd>
+</dl>
+<span class="target" id="id2"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">~</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">~(x)</span></code> returns the logical complement of <code class="docutils literal notranslate"><span class="pre">x</span></code>. TODO not sure if complement should be included here? intuitionistic logic can have complement but has different axioms to complement in Boolean algebra. Equivalent capability can be provided by implication.</p>
+</dd>
+<dt><a class="reference internal" href="BasicType.html#id2"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-i-logic-atom"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">atom?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if this is an atom, that is a leaf node otherwise return <code class="docutils literal notranslate"><span class="pre">false</span></code> if this is a compound term</p>
+</dd>
+<dt><a class="reference internal" href="CoercibleTo.html#l-coercible-to-coerce"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-i-logic-deductions"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">deductions</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %</dt><dd><p>assumes <code class="docutils literal notranslate"><span class="pre">ln</span></code> contains a list of factors which must be <code class="docutils literal notranslate"><span class="pre">true</span></code> for the whole to be <code class="docutils literal notranslate"><span class="pre">true</span></code> (such as the list produced by factor). From this deductions attempts to produce a list of other proposition that must also be <code class="docutils literal notranslate"><span class="pre">true</span></code> by using modus ponens. This is used to determine the returned type when converting ILogic to types by using the Curry-Howard isomorphism.</p>
+</dd>
+</dl>
+<span class="target" id="l-i-logic-factor"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">factor</span>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %</dt><dd><p>splits <code class="docutils literal notranslate"><span class="pre">n</span></code> into a list of factors which must be <code class="docutils literal notranslate"><span class="pre">true</span></code> for the whole to be <code class="docutils literal notranslate"><span class="pre">true</span></code>. This assumes that the top level is already a set of factors separated by <code class="docutils literal notranslate"><span class="pre">/\</span></code> otherwise the result will just be a list with one entry: <code class="docutils literal notranslate"><span class="pre">'n'</span></code>. This is used when converting ILogic to types by using the Curry-Howard isomorphism.</p>
+</dd>
+</dl>
+<span class="target" id="l-i-logic-get-children"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">getChildren</span>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %</dt><dd><p>returns child nodes if this is a compound term otherwise returns []</p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l-single-integer"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash-update"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-i-logic-implies"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">implies</span>: (%, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">implies(a,</span> <span class="pre">b)</span></code> returns the logical implication of ILogic a and <code class="docutils literal notranslate"><span class="pre">b</span></code>. a is premise, <code class="docutils literal notranslate"><span class="pre">b</span></code> is conclusion, result is <code class="docutils literal notranslate"><span class="pre">false</span></code> (contradiction) if premise=true and conclusion=false does not mean there is a causal connection</p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-latex"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-i-logic-logic-f"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">logicF</span>: () -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">false</span></code> (contradiction) is a logical constant.</p>
+</dd>
+</dl>
+<span class="target" id="l-i-logic-logic-t"></span><dl class="simple" id="index-9">
+<dt><span class="spadfun">logicT</span>: () -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">true</span></code> is a logical constant.</p>
+</dd>
+</dl>
+<span class="target" id="l-i-logic-op-type"></span><dl class="simple" id="index-10">
+<dt><span class="spadfun">opType</span>: % -&gt; <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a></dt><dd><p>if this is a compound op then opType returns the type of that op: “IMPLY”::Symbol =implies “AND”::Symbol=/“OR”::Symbol=<code class="docutils literal notranslate"><span class="pre">\/</span></code> “NOT”::Symbol=~ “OTHER”::Symbol=not compound op</p>
+</dd>
+</dl>
+<span class="target" id="l-i-logic-parse-i-l2"></span><dl class="simple" id="index-11">
+<dt><span class="spadfun">parseIL2</span>: (<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; Record(rft: %, pout: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>)</dt><dd><p>Constructs intuitionistic logic terms from a string notation assumes format like this: &lt;term2&gt; : <code class="docutils literal notranslate"><span class="pre">:=</span></code> var | “(“&lt;term&gt;”)” &lt;term&gt; : <code class="docutils literal notranslate"><span class="pre">:=</span></code> var | &lt;term&gt;/<code class="docutils literal notranslate"><span class="pre">\&lt;</span></code>term&gt; | &lt;term&gt;<code class="docutils literal notranslate"><span class="pre">\/</span></code>&lt;term&gt; | &lt;term&gt;-&gt;&lt;term&gt; | “(“&lt;term&gt;”)”</p>
+</dd>
+</dl>
+<span class="target" id="l-i-logic-parse-i-l"></span><dl class="simple" id="index-12">
+<dt><span class="spadfun">parseIL</span>: <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p>Constructs intuitionistic logic terms from a string notation assumes format like this: &lt;term&gt; : <code class="docutils literal notranslate"><span class="pre">:=</span></code> var | &lt;term&gt;/<code class="docutils literal notranslate"><span class="pre">\&lt;</span></code>term&gt; | &lt;term&gt;<code class="docutils literal notranslate"><span class="pre">\/</span></code>&lt;term&gt; | &lt;term&gt;-&gt;&lt;term&gt; | “(“&lt;term&gt;”)”</p>
+</dd>
+</dl>
+<span class="target" id="l-i-logic-parse-i-l-term"></span><dl class="simple" id="index-13">
+<dt><span class="spadfun">parseILTerm</span>: (<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; Record(rft: %, pout: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>)</dt><dd><p>parseTerm is used by parseIL. It would rarely be called externally but it is here to allow it to call parseIL that is to allow circular calls</p>
+</dd>
+</dl>
+<span class="target" id="l-i-logic-proposition"></span><dl class="simple" id="index-14">
+<dt><span class="spadfun">proposition</span>: <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p>Constructs a proposition</p>
+</dd>
+</dl>
+<span class="target" id="l-i-logic-redux"></span><dl class="simple" id="index-15">
+<dt><span class="spadfun">redux</span>: % -&gt; %</dt><dd><p>attempt to simplify theory apply recursively to subnodes normally this should not be necessary since logic values are interpreted when constructed</p>
+</dd>
+<dt><a class="reference internal" href="BoundedMeetSemilattice.html#l-bounded-meet-semilattice-t"><span class="std std-ref">T</span></a>: %</dt><dd><p>from <a class="reference internal" href="BoundedMeetSemilattice.html#l-bounded-meet-semilattice"><span class="std std-ref">BoundedMeetSemilattice</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-i-logic-to-string"></span><dl class="simple" id="index-16">
+<dt><span class="spadfun">toString</span>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p>creates a string representation of this term and its sub-terms</p>
+</dd>
+</dl>
+<span class="target" id="l-i-logic-to-string-unwrapped"></span><dl class="simple" id="index-17">
+<dt><span class="spadfun">toStringUnwrapped</span>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p>similar to ‘toString’ but does not put outer compound terms in brackets</p>
+</dd>
+</dl>
+<span class="target" id="l-i-logic-value"></span><dl class="simple" id="index-18">
+<dt><span class="spadfun">value</span>: % -&gt; <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a></dt><dd><p>returns: “T”::Symbol = <code class="docutils literal notranslate"><span class="pre">T</span></code> “F”::Symbol = <code class="docutils literal notranslate"><span class="pre">_|_</span></code> “E”::Symbol = error “P”::Symbol = proposition “C”::Symbol = compound Constructs lambda term and bind any variables with the name provided</p>
+</dd>
+</dl>
+<p><a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+<p><a class="reference internal" href="BoundedJoinSemilattice.html#l-bounded-join-semilattice"><span class="std std-ref">BoundedJoinSemilattice</span></a></p>
+<p><a class="reference internal" href="BoundedLattice.html#l-bounded-lattice"><span class="std std-ref">BoundedLattice</span></a></p>
+<p><a class="reference internal" href="BoundedMeetSemilattice.html#l-bounded-meet-semilattice"><span class="std std-ref">BoundedMeetSemilattice</span></a></p>
+<p><a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+<p><a class="reference internal" href="JoinSemilattice.html#l-join-semilattice"><span class="std std-ref">JoinSemilattice</span></a></p>
+<p><a class="reference internal" href="MeetSemilattice.html#l-meet-semilattice"><span class="std std-ref">MeetSemilattice</span></a></p>
+<p><a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="IncidenceAlgebra.html" title="IncidenceAlgebra(R, S)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="HyperellipticFiniteDivisor.html" title="HyperellipticFiniteDivisor(F, UP, UPUP, R)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Domains.html" >Domains</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">ILogic</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

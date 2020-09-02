@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NumberFormats &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="NumberTheoreticPolynomialFunctions R" href="NumberTheoreticPolynomialFunctions.html" />
+    <link rel="prev" title="NumberFieldIntegralBasis(UP, F)" href="NumberFieldIntegralBasis.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="NumberTheoreticPolynomialFunctions.html" title="NumberTheoreticPolynomialFunctions R"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="NumberFieldIntegralBasis.html" title="NumberFieldIntegralBasis(UP, F)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">NumberFormats</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="numberformats">
+<span id="l-number-formats"></span><span id="index-0"></span><h1>NumberFormats<a class="headerlink" href="#numberformats" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/outform.spad#L2">outform.spad line 2</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/outform.spad#L2">[edit on github]</a></p>
+<p>NumberFormats provides function to format and read arabic and roman numbers, to convert numbers to strings and to read floating-point numbers.</p>
+<span class="target" id="l-number-formats-format-arabic"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">FormatArabic</span>: <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a> -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">FormatArabic(n)</span></code> forms an Arabic numeral string from an integer <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-number-formats-format-radix"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">FormatRadix</span>: (<a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">FormatRadix(n,</span> <span class="pre">r)</span></code> forms a string from an integer <code class="docutils literal notranslate"><span class="pre">n</span></code> in radix <code class="docutils literal notranslate"><span class="pre">r</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-number-formats-format-roman"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">FormatRoman</span>: <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a> -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">FormatRoman(n)</span></code> forms a Roman numeral string from an integer <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-number-formats-scan-arabic"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">ScanArabic</span>: <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a> -&gt; <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">ScanArabic(s)</span></code> forms an integer from an Arabic numeral string <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-number-formats-scan-float-ignore-spaces"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">ScanFloatIgnoreSpaces</span>: <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a> -&gt; <a class="reference internal" href="Float.html#l-float"><span class="std std-ref">Float</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">ScanFloatIgnoreSpaces(s)</span></code> forms a floating point number from the string <code class="docutils literal notranslate"><span class="pre">s</span></code> ignoring any spaces. Error is generated if the string is not recognised as a floating point number.</p>
+</dd>
+</dl>
+<span class="target" id="l-number-formats-scan-float-ignore-spaces-if-can"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">ScanFloatIgnoreSpacesIfCan</span>: <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a> -&gt; Union(<a class="reference internal" href="Float.html#l-float"><span class="std std-ref">Float</span></a>, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">ScanFloatIgnoreSpacesIfCan(s)</span></code> tries to form a floating point number from the string <code class="docutils literal notranslate"><span class="pre">s</span></code> ignoring any spaces.</p>
+</dd>
+</dl>
+<span class="target" id="l-number-formats-scan-roman"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">ScanRoman</span>: <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a> -&gt; <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">ScanRoman(s)</span></code> forms an integer from a Roman numeral string <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="NumberTheoreticPolynomialFunctions.html" title="NumberTheoreticPolynomialFunctions R"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="NumberFieldIntegralBasis.html" title="NumberFieldIntegralBasis(UP, F)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">NumberFormats</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

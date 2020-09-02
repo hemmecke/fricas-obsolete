@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenerateUnivariatePowerSeries1 R &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="GenerateUnivariatePowerSeries2 FE" href="GenerateUnivariatePowerSeries2.html" />
+    <link rel="prev" title="GenerateUnivariatePowerSeries(R, FE)" href="GenerateUnivariatePowerSeries.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="GenerateUnivariatePowerSeries2.html" title="GenerateUnivariatePowerSeries2 FE"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="GenerateUnivariatePowerSeries.html" title="GenerateUnivariatePowerSeries(R, FE)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">GenerateUnivariatePowerSeries1 R</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="generateunivariatepowerseries1-r">
+<span id="l-generate-univariate-power-series1"></span><span id="index-0"></span><h1>GenerateUnivariatePowerSeries1 R<a class="headerlink" href="#generateunivariatepowerseries1-r" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/genups.spad#L1">genups.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/genups.spad#L1">[edit on github]</a></p>
+<ul class="simple">
+<li><p>R: <a class="reference internal" href="Ring.html#l-ring"><span class="std std-ref">Ring</span></a></p></li>
+</ul>
+<p><a class="reference internal" href="GenerateUnivariatePowerSeries.html#l-generate-univariate-power-series"><span class="std std-ref">GenerateUnivariatePowerSeries</span></a> provides functions that create power series from explicit formulas for their <code class="docutils literal notranslate"><span class="pre">n</span></code>th coefficient.</p>
+<span class="target" id="l-generate-univariate-power-series1-laurent"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">laurent</span>: (<a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a> -&gt; R, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, R, <a class="reference internal" href="UniversalSegment.html#l-universal-segment"><span class="std std-ref">UniversalSegment</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="Any.html#l-any"><span class="std std-ref">Any</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">laurent(n</span> <span class="pre">+-&gt;</span> <span class="pre">a(n),</span> <span class="pre">x,</span> <span class="pre">a,</span> <span class="pre">n0..)</span></code> returns <code class="docutils literal notranslate"><span class="pre">sum(n</span> <span class="pre">=</span> <span class="pre">n0..,</span> <span class="pre">a(n)</span> <span class="pre">*</span> <span class="pre">(x</span> <span class="pre">-</span> <span class="pre">a)^n)</span></code>; <code class="docutils literal notranslate"><span class="pre">laurent(n</span> <span class="pre">+-&gt;</span> <span class="pre">a(n),</span> <span class="pre">x,</span> <span class="pre">a,</span> <span class="pre">n0..n1)</span></code> returns <code class="docutils literal notranslate"><span class="pre">sum(n</span> <span class="pre">=</span> <span class="pre">n0..n1,</span> <span class="pre">a(n)</span> <span class="pre">*</span> <span class="pre">(x</span> <span class="pre">-</span> <span class="pre">a)^n)</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-generate-univariate-power-series1-puiseux"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">puiseux</span>: (<a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a> -&gt; R, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, R, <a class="reference internal" href="UniversalSegment.html#l-universal-segment"><span class="std std-ref">UniversalSegment</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="Any.html#l-any"><span class="std std-ref">Any</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">puiseux(n</span> <span class="pre">+-&gt;</span> <span class="pre">a(n),</span> <span class="pre">x,</span> <span class="pre">a,</span> <span class="pre">r0..,</span> <span class="pre">r)</span></code> returns <code class="docutils literal notranslate"><span class="pre">sum(n</span> <span class="pre">=</span> <span class="pre">r0,</span> <span class="pre">r0</span> <span class="pre">+</span> <span class="pre">r,</span> <span class="pre">r0</span> <span class="pre">+</span> <span class="pre">2*r...,</span> <span class="pre">a(n)</span> <span class="pre">*</span> <span class="pre">(x</span> <span class="pre">-</span> <span class="pre">a)^n)</span></code>; <code class="docutils literal notranslate"><span class="pre">puiseux(n</span> <span class="pre">+-&gt;</span> <span class="pre">a(n),</span> <span class="pre">x</span> <span class="pre">=</span> <span class="pre">a,</span> <span class="pre">r0..r1,</span> <span class="pre">r)</span></code> returns <code class="docutils literal notranslate"><span class="pre">sum(n</span> <span class="pre">=</span> <span class="pre">r0</span> <span class="pre">+</span> <span class="pre">k*r</span> <span class="pre">while</span> <span class="pre">n</span> <span class="pre">&lt;=</span> <span class="pre">r1,</span> <span class="pre">a(n)</span> <span class="pre">*</span> <span class="pre">(x</span> <span class="pre">-</span> <span class="pre">a)^n)</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-generate-univariate-power-series1-taylor"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">taylor</span>: (<a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a> -&gt; R, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, R) -&gt; <a class="reference internal" href="Any.html#l-any"><span class="std std-ref">Any</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">taylor(n</span> <span class="pre">+-&gt;</span> <span class="pre">a(n),</span> <span class="pre">x,</span> <span class="pre">a)</span></code> returns <code class="docutils literal notranslate"><span class="pre">sum(n</span> <span class="pre">=</span> <span class="pre">0..,</span> <span class="pre">a(n)*(x-a)^n)</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-4">
+<dt><span class="spadfun">taylor</span>: (<a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a> -&gt; R, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, R, <a class="reference internal" href="UniversalSegment.html#l-universal-segment"><span class="std std-ref">UniversalSegment</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Any.html#l-any"><span class="std std-ref">Any</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">taylor(n</span> <span class="pre">+-&gt;</span> <span class="pre">a(n),</span> <span class="pre">x,</span> <span class="pre">a,</span> <span class="pre">n0..)</span></code> returns <code class="docutils literal notranslate"><span class="pre">sum(n=n0..,</span> <span class="pre">a(n)*(x-a)^n)</span></code>; <code class="docutils literal notranslate"><span class="pre">taylor(n</span> <span class="pre">+-&gt;</span> <span class="pre">a(n),</span> <span class="pre">x,</span> <span class="pre">a,</span> <span class="pre">n0..n1)</span></code> returns <code class="docutils literal notranslate"><span class="pre">sum(n</span> <span class="pre">=</span> <span class="pre">n0..,</span> <span class="pre">a(n)*(x-a)^n)</span></code>.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="GenerateUnivariatePowerSeries2.html" title="GenerateUnivariatePowerSeries2 FE"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="GenerateUnivariatePowerSeries.html" title="GenerateUnivariatePowerSeries(R, FE)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">GenerateUnivariatePowerSeries1 R</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeltaComplex VS &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="DenavitHartenbergMatrix R" href="DenavitHartenbergMatrix.html" />
+    <link rel="prev" title="DecimalExpansion" href="DecimalExpansion.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="DenavitHartenbergMatrix.html" title="DenavitHartenbergMatrix R"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="DecimalExpansion.html" title="DecimalExpansion"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Domains.html" accesskey="U">Domains</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">DeltaComplex VS</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="deltacomplex-vs">
+<span id="l-delta-complex"></span><span id="index-0"></span><h1>DeltaComplex VS<a class="headerlink" href="#deltacomplex-vs" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/alg_top.spad#L2907">alg_top.spad line 2907</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/alg_top.spad#L2907">[edit on github]</a></p>
+<ul class="simple">
+<li><p>VS: <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p></li>
+</ul>
+<p>Similar to Simplicial Complex but faces (edges, triangles, etc.) are indexed by ‘face maps’ into the next lower face map until we get down to the vertices. for more documentation see: <a class="reference external" href="http://www.euclideanspace.com/prog/scratchpad/mycode/topology/delta/">http://www.euclideanspace.com/prog/scratchpad/mycode/topology/delta/</a> Date Created: Feb 2016 Basic Operations: Related packages: Related categories: Related Domains: FiniteSimplicialComplex is a simpler and more compact representation which can be used if edges, triangles, etc. don<code class="docutils literal notranslate"><span class="pre">'t</span></code> need to be indexed. Also See: AMS Classifications:</p>
+<dl class="simple">
+<dt><a class="reference internal" href="BasicType.html#id1"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+<dt><a class="reference internal" href="BasicType.html#id2"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-delta-complex-chain"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">chain</span>: % -&gt; <a class="reference internal" href="ChainComplex.html#l-chain-complex"><span class="std std-ref">ChainComplex</span></a></dt><dd><p>returns a matrix sequence representing the face maps in linear algebra form</p>
+</dd>
+</dl>
+<span class="target" id="l-delta-complex-co-chain"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">coChain</span>: % -&gt; <a class="reference internal" href="CoChainComplex.html#l-co-chain-complex"><span class="std std-ref">CoChainComplex</span></a> VS</dt><dd><p>returns a matrix sequence representing the face maps in linear algebra form</p>
+</dd>
+</dl>
+<span class="target" id="l-delta-complex-coerce"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">coerce</span>: % -&gt; <a class="reference internal" href="FiniteSimplicialComplex.html#l-finite-simplicial-complex"><span class="std std-ref">FiniteSimplicialComplex</span></a> VS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce</span> <span class="pre">DeltaComplex</span></code> to FiniteSimplicialComplex</p>
+</dd>
+<dt><a class="reference internal" href="CoercibleTo.html#l-coercible-to-coerce"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-delta-complex-co-homology"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">coHomology</span>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Homology.html#l-homology"><span class="std std-ref">Homology</span></a></dt><dd><p>calculate cohomology using SmithNormalForm</p>
+</dd>
+</dl>
+<span class="target" id="l-delta-complex-delta-complex"></span><p id="index-5"><span class="spadfun">deltaComplex</span>: (<a class="reference internal" href="FiniteSimplicialComplex.html#l-finite-simplicial-complex"><span class="std std-ref">FiniteSimplicialComplex</span></a> VS, <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>) -&gt; %</p>
+<dl class="simple" id="index-6">
+<dt><span class="spadfun">deltaComplex</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> VS, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p>constructor where the simplices are supplied</p>
+</dd>
+</dl>
+<dl class="simple" id="index-7">
+<dt><span class="spadfun">deltaComplex</span>: <a class="reference internal" href="FiniteCubicalComplex.html#l-finite-cubical-complex"><span class="std std-ref">FiniteCubicalComplex</span></a> VS -&gt; %</dt><dd><p>construct from FiniteCubicalComplex. This builds indexes of edges, squares and so on.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-8">
+<dt><span class="spadfun">deltaComplex</span>: <a class="reference internal" href="FiniteSimplicialComplex.html#l-finite-simplicial-complex"><span class="std std-ref">FiniteSimplicialComplex</span></a> VS -&gt; %</dt><dd><p>construct from FiniteSimplicialComplex. This builds indexes of edges, triangles and so on.</p>
+</dd>
+</dl>
+<span class="target" id="l-delta-complex-face-map"></span><dl class="simple" id="index-9">
+<dt><span class="spadfun">faceMap</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p>returns an individual face map specified by <code class="docutils literal notranslate"><span class="pre">n</span></code>. Where <code class="docutils literal notranslate"><span class="pre">'n'</span></code> is the dimension required, so <code class="docutils literal notranslate"><span class="pre">n=1</span></code> returns one dimentional faces (edges), <code class="docutils literal notranslate"><span class="pre">n=2</span></code> returns two dimentional faces (triamgles), and so on. used by fundamentalGroup.</p>
+</dd>
+</dl>
+<span class="target" id="l-delta-complex-fundamental-group"></span><dl class="simple" id="index-10">
+<dt><span class="spadfun">fundamentalGroup</span>: % -&gt; <a class="reference internal" href="GroupPresentation.html#l-group-presentation"><span class="std std-ref">GroupPresentation</span></a></dt><dd><p>Generates fundamental group from this simplicial complex.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-11">
+<dt><span class="spadfun">fundamentalGroup</span>: (%, <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>, <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>) -&gt; <a class="reference internal" href="GroupPresentation.html#l-group-presentation"><span class="std std-ref">GroupPresentation</span></a></dt><dd><p>Generates fundamental group from this simplicial complex.</p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l-single-integer"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash-update"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-delta-complex-homology"></span><dl class="simple" id="index-12">
+<dt><span class="spadfun">homology</span>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Homology.html#l-homology"><span class="std std-ref">Homology</span></a></dt><dd><p>calculate homology using SmithNormalForm</p>
+</dd>
+<dt><a class="reference internal" href="SetCategory.html#l-set-category-latex"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l-delta-complex-link"></span><dl class="simple" id="index-13">
+<dt><span class="spadfun">link</span>: (<a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>a simplical complex with one link</p>
+</dd>
+</dl>
+<span class="target" id="l-delta-complex-one-skeleton"></span><dl class="simple" id="index-14">
+<dt><span class="spadfun">oneSkeleton</span>: % -&gt; <a class="reference internal" href="UndirectedGraph.html#l-undirected-graph"><span class="std std-ref">UndirectedGraph</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>generates graph AKA 1-skeleton</p>
+</dd>
+</dl>
+<span class="target" id="l-delta-complex-triangle"></span><dl class="simple" id="index-15">
+<dt><span class="spadfun">triangle</span>: (<a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>a simplical complex with one triangle</p>
+</dd>
+</dl>
+<p><a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+<p><a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+<p><a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="DenavitHartenbergMatrix.html" title="DenavitHartenbergMatrix R"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="DecimalExpansion.html" title="DecimalExpansion"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Domains.html" >Domains</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">DeltaComplex VS</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

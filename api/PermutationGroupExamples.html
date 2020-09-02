@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PermutationGroupExamples &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="PiCoercions R" href="PiCoercions.html" />
+    <link rel="prev" title="Permanent(n, R)" href="Permanent.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="PiCoercions.html" title="PiCoercions R"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="Permanent.html" title="Permanent(n, R)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">PermutationGroupExamples</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="permutationgroupexamples">
+<span id="l-permutation-group-examples"></span><span id="index-0"></span><h1>PermutationGroupExamples<a class="headerlink" href="#permutationgroupexamples" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/permgrps.spad#L1011">permgrps.spad line 1011</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/permgrps.spad#L1011">[edit on github]</a></p>
+<p>PermutationGroupExamples provides permutation groups for some classes of groups: symmetric, alternating, dihedral, cyclic, direct products of cyclic, which are in fact the finite abelian groups of symmetric groups called Young subgroups. Furthermore, Rubik<code class="docutils literal notranslate"><span class="pre">'s</span></code> group as permutation group of 48 integers and a list of sporadic simple groups derived from the atlas of finite groups.</p>
+<span class="target" id="l-permutation-group-examples-abelian-group"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">abelianGroup</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a> -&gt; <a class="reference internal" href="PermutationGroup.html#l-permutation-group"><span class="std std-ref">PermutationGroup</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">abelianGroup([n1,</span> <span class="pre">...,</span> <span class="pre">nk])</span></code> constructs the abelian group that is the direct product of cyclic groups with order <a href="#id1"><span class="problematic" id="id2">*</span></a><code class="docutils literal notranslate"><span class="pre">ni</span></code><a href="#id3"><span class="problematic" id="id4">*</span></a>.</p>
+</dd>
+</dl>
+<span class="target" id="l-permutation-group-examples-alternating-group"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">alternatingGroup</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a> -&gt; <a class="reference internal" href="PermutationGroup.html#l-permutation-group"><span class="std std-ref">PermutationGroup</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">alternatingGroup(li)</span></code> constructs the alternating group acting on the integers in the list <em>``li``*, generators are in general the *n-2</em>-cycle <em>(``li``.3, …, ``li``.n)</em> and the 3-cycle <em>(``li``.1, ``li``.2, ``li``.3)</em>, if <code class="docutils literal notranslate"><span class="pre">n</span></code> is odd and product of the 2-cycle <em>(``li``.1, ``li``.2)</em> with <em>n-2</em>-cycle <em>(``li``.3, …, ``li``.n)</em> and the 3-cycle <em>(``li``.1, ``li``.2, ``li``.3)</em>, if <code class="docutils literal notranslate"><span class="pre">n</span></code> is even. Note: duplicates in the list will be removed.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-3">
+<dt><span class="spadfun">alternatingGroup</span>: <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a> -&gt; <a class="reference internal" href="PermutationGroup.html#l-permutation-group"><span class="std std-ref">PermutationGroup</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">alternatingGroup(n)</span></code> constructs the alternating group <em>An</em> acting on the integers 1, …, <code class="docutils literal notranslate"><span class="pre">n</span></code>, generators are in general the <em>n-2</em>-cycle <em>(3, …, n)</em> and the 3-cycle <em>(1, 2, 3)</em> if <code class="docutils literal notranslate"><span class="pre">n</span></code> is odd and the product of the 2-cycle <em>(1, 2)</em> with <em>n-2</em>-cycle <em>(3, …, n)</em> and the 3-cycle <em>(1, 2, 3)</em> if <code class="docutils literal notranslate"><span class="pre">n</span></code> is even.</p>
+</dd>
+</dl>
+<span class="target" id="l-permutation-group-examples-cyclic-group"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">cyclicGroup</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a> -&gt; <a class="reference internal" href="PermutationGroup.html#l-permutation-group"><span class="std std-ref">PermutationGroup</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">cyclicGroup([i1,</span> <span class="pre">...,</span> <span class="pre">ik])</span></code> constructs the cyclic group of order <code class="docutils literal notranslate"><span class="pre">k</span></code> acting on the integers <em>i1</em>, …, <em>ik</em>. Note: duplicates in the list will be removed.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-5">
+<dt><span class="spadfun">cyclicGroup</span>: <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a> -&gt; <a class="reference internal" href="PermutationGroup.html#l-permutation-group"><span class="std std-ref">PermutationGroup</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">cyclicGroup(n)</span></code> constructs the cyclic group of order <code class="docutils literal notranslate"><span class="pre">n</span></code> acting on the integers 1, …, <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-permutation-group-examples-dihedral-group"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">dihedralGroup</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a> -&gt; <a class="reference internal" href="PermutationGroup.html#l-permutation-group"><span class="std std-ref">PermutationGroup</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">dihedralGroup([i1,</span> <span class="pre">...,</span> <span class="pre">ik])</span></code> constructs the dihedral group of order 2k acting on the integers out of <em>i1</em>, …, <em>ik</em>. Note: duplicates in the list will be removed.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-7">
+<dt><span class="spadfun">dihedralGroup</span>: <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a> -&gt; <a class="reference internal" href="PermutationGroup.html#l-permutation-group"><span class="std std-ref">PermutationGroup</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">dihedralGroup(n)</span></code> constructs the dihedral group of order 2n acting on integers 1, …, <code class="docutils literal notranslate"><span class="pre">N</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-permutation-group-examples-janko2"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">janko2</span>: () -&gt; <a class="reference internal" href="PermutationGroup.html#l-permutation-group"><span class="std std-ref">PermutationGroup</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">janko2</span> <span class="pre">constructs</span></code> the janko group acting on the integers 1, …, 100.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-9">
+<dt><span class="spadfun">janko2</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a> -&gt; <a class="reference internal" href="PermutationGroup.html#l-permutation-group"><span class="std std-ref">PermutationGroup</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">janko2(li)</span></code> constructs the janko group acting on the 100 integers given in the list <a href="#id5"><span class="problematic" id="id6">*</span></a><code class="docutils literal notranslate"><span class="pre">li</span></code><a href="#id7"><span class="problematic" id="id8">*</span></a>. Note: duplicates in the list will be removed. Error: if <a href="#id9"><span class="problematic" id="id10">*</span></a><code class="docutils literal notranslate"><span class="pre">li</span></code><a href="#id11"><span class="problematic" id="id12">*</span></a> has less or more than 100 different entries</p>
+</dd>
+</dl>
+<span class="target" id="l-permutation-group-examples-mathieu11"></span><dl class="simple" id="index-10">
+<dt><span class="spadfun">mathieu11</span>: () -&gt; <a class="reference internal" href="PermutationGroup.html#l-permutation-group"><span class="std std-ref">PermutationGroup</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">mathieu11</span> <span class="pre">constructs</span></code> the mathieu group acting on the integers 1, …, 11.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-11">
+<dt><span class="spadfun">mathieu11</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a> -&gt; <a class="reference internal" href="PermutationGroup.html#l-permutation-group"><span class="std std-ref">PermutationGroup</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">mathieu11(li)</span></code> constructs the mathieu group acting on the 11 integers given in the list <a href="#id13"><span class="problematic" id="id14">*</span></a><code class="docutils literal notranslate"><span class="pre">li</span></code><a href="#id15"><span class="problematic" id="id16">*</span></a>. Note: duplicates in the list will be removed. error, if <a href="#id17"><span class="problematic" id="id18">*</span></a><code class="docutils literal notranslate"><span class="pre">li</span></code><a href="#id19"><span class="problematic" id="id20">*</span></a> has less or more than 11 different entries.</p>
+</dd>
+</dl>
+<span class="target" id="l-permutation-group-examples-mathieu12"></span><dl class="simple" id="index-12">
+<dt><span class="spadfun">mathieu12</span>: () -&gt; <a class="reference internal" href="PermutationGroup.html#l-permutation-group"><span class="std std-ref">PermutationGroup</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">mathieu12</span> <span class="pre">constructs</span></code> the mathieu group acting on the integers 1, …, 12.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-13">
+<dt><span class="spadfun">mathieu12</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a> -&gt; <a class="reference internal" href="PermutationGroup.html#l-permutation-group"><span class="std std-ref">PermutationGroup</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">mathieu12(li)</span></code> constructs the mathieu group acting on the 12 integers given in the list <a href="#id21"><span class="problematic" id="id22">*</span></a><code class="docutils literal notranslate"><span class="pre">li</span></code><a href="#id23"><span class="problematic" id="id24">*</span></a>. Note: duplicates in the list will be removed Error: if <a href="#id25"><span class="problematic" id="id26">*</span></a><code class="docutils literal notranslate"><span class="pre">li</span></code><a href="#id27"><span class="problematic" id="id28">*</span></a> has less or more than 12 different entries.</p>
+</dd>
+</dl>
+<span class="target" id="l-permutation-group-examples-mathieu22"></span><dl class="simple" id="index-14">
+<dt><span class="spadfun">mathieu22</span>: () -&gt; <a class="reference internal" href="PermutationGroup.html#l-permutation-group"><span class="std std-ref">PermutationGroup</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">mathieu22</span> <span class="pre">constructs</span></code> the mathieu group acting on the integers 1, …, 22.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-15">
+<dt><span class="spadfun">mathieu22</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a> -&gt; <a class="reference internal" href="PermutationGroup.html#l-permutation-group"><span class="std std-ref">PermutationGroup</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">mathieu22(li)</span></code> constructs the mathieu group acting on the 22 integers given in the list <a href="#id29"><span class="problematic" id="id30">*</span></a><code class="docutils literal notranslate"><span class="pre">li</span></code><a href="#id31"><span class="problematic" id="id32">*</span></a>. Note: duplicates in the list will be removed. Error: if <a href="#id33"><span class="problematic" id="id34">*</span></a><code class="docutils literal notranslate"><span class="pre">li</span></code><a href="#id35"><span class="problematic" id="id36">*</span></a> has less or more than 22 different entries.</p>
+</dd>
+</dl>
+<span class="target" id="l-permutation-group-examples-mathieu23"></span><dl class="simple" id="index-16">
+<dt><span class="spadfun">mathieu23</span>: () -&gt; <a class="reference internal" href="PermutationGroup.html#l-permutation-group"><span class="std std-ref">PermutationGroup</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">mathieu23</span> <span class="pre">constructs</span></code> the mathieu group acting on the integers 1, …, 23.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-17">
+<dt><span class="spadfun">mathieu23</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a> -&gt; <a class="reference internal" href="PermutationGroup.html#l-permutation-group"><span class="std std-ref">PermutationGroup</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">mathieu23(li)</span></code> constructs the mathieu group acting on the 23 integers given in the list <a href="#id37"><span class="problematic" id="id38">*</span></a><code class="docutils literal notranslate"><span class="pre">li</span></code><a href="#id39"><span class="problematic" id="id40">*</span></a>. Note: duplicates in the list will be removed. Error: if <a href="#id41"><span class="problematic" id="id42">*</span></a><code class="docutils literal notranslate"><span class="pre">li</span></code><a href="#id43"><span class="problematic" id="id44">*</span></a> has less or more than 23 different entries.</p>
+</dd>
+</dl>
+<span class="target" id="l-permutation-group-examples-mathieu24"></span><dl class="simple" id="index-18">
+<dt><span class="spadfun">mathieu24</span>: () -&gt; <a class="reference internal" href="PermutationGroup.html#l-permutation-group"><span class="std std-ref">PermutationGroup</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">mathieu24</span> <span class="pre">constructs</span></code> the mathieu group acting on the integers 1, …, 24.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-19">
+<dt><span class="spadfun">mathieu24</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a> -&gt; <a class="reference internal" href="PermutationGroup.html#l-permutation-group"><span class="std std-ref">PermutationGroup</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">mathieu24(li)</span></code> constructs the mathieu group acting on the 24 integers given in the list <a href="#id45"><span class="problematic" id="id46">*</span></a><code class="docutils literal notranslate"><span class="pre">li</span></code><a href="#id47"><span class="problematic" id="id48">*</span></a>. Note: duplicates in the list will be removed. Error: if <a href="#id49"><span class="problematic" id="id50">*</span></a><code class="docutils literal notranslate"><span class="pre">li</span></code><a href="#id51"><span class="problematic" id="id52">*</span></a> has less or more than 24 different entries.</p>
+</dd>
+</dl>
+<span class="target" id="l-permutation-group-examples-rubiks-group"></span><dl class="simple" id="index-20">
+<dt><span class="spadfun">rubiksGroup</span>: () -&gt; <a class="reference internal" href="PermutationGroup.html#l-permutation-group"><span class="std std-ref">PermutationGroup</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">rubiksGroup</span> <span class="pre">constructs</span></code> the permutation group representing Rubic<code class="docutils literal notranslate"><span class="pre">'s</span></code> Cube acting on integers <em>10*i+j</em> for <em>1 &lt;= i &lt;= 6</em>, <em>1 &lt;= j &lt;= 8</em>. The faces of Rubik<code class="docutils literal notranslate"><span class="pre">'s</span></code> Cube are labelled in the obvious way Front, Right, Up, Down, Left, Back and numbered from 1 to 6 in this given ordering, the pieces on each face (except the unmoveable center piece) are clockwise numbered from 1 to 8 starting with the piece in the upper left corner. The moves of the cube are represented as permutations on these pieces, represented as a two digit integer <em>ij</em> where <code class="docutils literal notranslate"><span class="pre">i</span></code> is the numer of theface (1 to 6) and <code class="docutils literal notranslate"><span class="pre">j</span></code> is the number of the piece on this face. The remaining ambiguities are resolved by looking at the 6 generators, which represent a 90 degree turns of the faces, or from the following pictorial description. Permutation group representing Rubic<code class="docutils literal notranslate"><span class="pre">'s</span></code> Cube acting on integers 10*i+j for 1 <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code> <code class="docutils literal notranslate"><span class="pre">i</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code> 6, 1 <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code> <code class="docutils literal notranslate"><span class="pre">j</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;=8</span></code>.  begin{verbatim}Rubik’s Cube:   +—–+ +– B   where: marks Side # :               / U   /<a href="#id57"><span class="problematic" id="id58">|/              /     / |         F(ront)    &lt;-&gt;    1      L --&gt;  +-----+ R|</span></a>         R(ight)    &lt;-&gt;    2             |     |  +         U(p)       &lt;-&gt;    3             |  F  | /          D(own)     &lt;-&gt;    4             |     <a href="#id59"><span class="problematic" id="id60">|/           L(eft)     &lt;-&gt;    5             +-----+            B(ack)     &lt;-&gt;    6                ^                |                DThe Cube's surface:                               The pieces on each side            +---+              (except the unmoveable center            |567|</span></a>              piece) are clockwise numbered            <a href="#id61"><span class="problematic" id="id62">|4U8|</span></a>              from 1 to 8 starting with the            <a href="#id63"><span class="problematic" id="id64">|321|</span></a>              piece in the upper left        +—+—+—+          corner (see figure on the        <a href="#id65"><span class="problematic" id="id66">|781|123|345|</span></a>          left).  The moves of the cube        <a href="#id67"><span class="problematic" id="id68">|6L2|8F4|2R6|</span></a>          are represented as        <a href="#id69"><span class="problematic" id="id70">|543|765|187|</span></a>          permutations on these pieces.        +—+—+—+          Each of the pieces is            <a href="#id71"><span class="problematic" id="id72">|123|</span></a>              represented as a two digit            <a href="#id73"><span class="problematic" id="id74">|8D4|</span></a>              integer ij where i is the            <a href="#id75"><span class="problematic" id="id76">|765|</span></a>              # of the side ( 1 to 6 for            +—+              F to B (see table above ))            <a href="#id77"><span class="problematic" id="id78">|567|</span></a>              and j is the # of the piece.            <a href="#id53"><span class="problematic" id="id54">|</span></a>4B8|            <a href="#id55"><span class="problematic" id="id56">|</span></a>321|            +—+end{verbatim}</p>
+</dd>
+</dl>
+<span class="target" id="l-permutation-group-examples-symmetric-group"></span><dl class="simple" id="index-21">
+<dt><span class="spadfun">symmetricGroup</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a> -&gt; <a class="reference internal" href="PermutationGroup.html#l-permutation-group"><span class="std std-ref">PermutationGroup</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">symmetricGroup(li)</span></code> constructs the symmetric group acting on the integers in the list <em>``li``*, generators are the cycle given by *``li``* and the 2-cycle *(``li``.1, ``li``.2)</em>. Note: duplicates in the list will be removed.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-22">
+<dt><span class="spadfun">symmetricGroup</span>: <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a> -&gt; <a class="reference internal" href="PermutationGroup.html#l-permutation-group"><span class="std std-ref">PermutationGroup</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">symmetricGroup(n)</span></code> constructs the symmetric group <em>Sn</em> acting on the integers 1, …, <code class="docutils literal notranslate"><span class="pre">n</span></code>, generators are the <em>n</em>-cycle <em>(1, …, n)</em> and the 2-cycle <em>(1, 2)</em>.</p>
+</dd>
+</dl>
+<span class="target" id="l-permutation-group-examples-young-group"></span><dl class="simple" id="index-23">
+<dt><span class="spadfun">youngGroup</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a> -&gt; <a class="reference internal" href="PermutationGroup.html#l-permutation-group"><span class="std std-ref">PermutationGroup</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">youngGroup([n1,</span> <span class="pre">...,</span> <span class="pre">nk])</span></code> constructs the direct product of the symmetric groups <em>Sn1</em>, …, <em>Snk</em>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-24">
+<dt><span class="spadfun">youngGroup</span>: <a class="reference internal" href="Partition.html#l-partition"><span class="std std-ref">Partition</span></a> -&gt; <a class="reference internal" href="PermutationGroup.html#l-permutation-group"><span class="std std-ref">PermutationGroup</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">youngGroup(lambda)</span></code> constructs the direct product of the symmetric groups given by the parts of the partition <em>lambda</em>.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="PiCoercions.html" title="PiCoercions R"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="Permanent.html" title="Permanent(n, R)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">PermutationGroupExamples</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

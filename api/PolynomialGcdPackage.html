@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PolynomialGcdPackage(E, OV, R, P) &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="PolynomialInterpolation(xx, F)" href="PolynomialInterpolation.html" />
+    <link rel="prev" title="PolynomialFunctions2(R, S)" href="PolynomialFunctions2.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="PolynomialInterpolation.html" title="PolynomialInterpolation(xx, F)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="PolynomialFunctions2.html" title="PolynomialFunctions2(R, S)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">PolynomialGcdPackage(E, OV, R, P)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="polynomialgcdpackage-e-ov-r-p">
+<span id="l-polynomial-gcd-package"></span><span id="index-0"></span><h1>PolynomialGcdPackage(E, OV, R, P)<a class="headerlink" href="#polynomialgcdpackage-e-ov-r-p" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/pgcd.spad#L1">pgcd.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/pgcd.spad#L1">[edit on github]</a></p>
+<ul class="simple">
+<li><p>E: <a class="reference internal" href="OrderedAbelianMonoidSup.html#l-ordered-abelian-monoid-sup"><span class="std std-ref">OrderedAbelianMonoidSup</span></a></p></li>
+<li><p>OV: <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a></p></li>
+<li><p>R: <a class="reference internal" href="EuclideanDomain.html#l-euclidean-domain"><span class="std std-ref">EuclideanDomain</span></a></p></li>
+<li><p>P: <a class="reference internal" href="PolynomialCategory.html#l-polynomial-category"><span class="std std-ref">PolynomialCategory</span></a>(R, E, OV)</p></li>
+</ul>
+<p>This package computes multivariate polynomial <code class="docutils literal notranslate"><span class="pre">gcd</span></code><code class="docutils literal notranslate"><span class="pre">'s</span></code> using a hensel lifting strategy. The contraint on the coefficient domain is imposed by the lifting strategy. It is assumed that the coefficient domain has the property that almost all specializations preserve the degree of the <code class="docutils literal notranslate"><span class="pre">gcd</span></code>.</p>
+<span class="target" id="l-polynomial-gcd-package-gcd"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">gcd</span>: (P, P) -&gt; P</dt><dd><p><code class="docutils literal notranslate"><span class="pre">gcd(p,</span> <span class="pre">q)</span></code> computes the <code class="docutils literal notranslate"><span class="pre">gcd</span></code> of the two polynomials <code class="docutils literal notranslate"><span class="pre">p</span></code> and <code class="docutils literal notranslate"><span class="pre">q</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-2">
+<dt><span class="spadfun">gcd</span>: (<a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> P, <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> P) -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> P</dt><dd><p><code class="docutils literal notranslate"><span class="pre">gcd(p,</span> <span class="pre">q)</span></code> computes the <code class="docutils literal notranslate"><span class="pre">gcd</span></code> of the two polynomials <code class="docutils literal notranslate"><span class="pre">p</span></code> and <code class="docutils literal notranslate"><span class="pre">q</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-3">
+<dt><span class="spadfun">gcd</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P -&gt; P</dt><dd><p><code class="docutils literal notranslate"><span class="pre">gcd(lp)</span></code> computes the <code class="docutils literal notranslate"><span class="pre">gcd</span></code> of the list of polynomials <code class="docutils literal notranslate"><span class="pre">lp</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-4">
+<dt><span class="spadfun">gcd</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> P -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> P</dt><dd><p><code class="docutils literal notranslate"><span class="pre">gcd(lp)</span></code> computes the <code class="docutils literal notranslate"><span class="pre">gcd</span></code> of the list of polynomials <code class="docutils literal notranslate"><span class="pre">lp</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-polynomial-gcd-package-gcd-primitive"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">gcdPrimitive</span>: (P, P) -&gt; P</dt><dd><p><code class="docutils literal notranslate"><span class="pre">gcdPrimitive(p,</span> <span class="pre">q)</span></code> computes the <code class="docutils literal notranslate"><span class="pre">gcd</span></code> of the primitive polynomials <code class="docutils literal notranslate"><span class="pre">p</span></code> and <code class="docutils literal notranslate"><span class="pre">q</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-6">
+<dt><span class="spadfun">gcdPrimitive</span>: (<a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> P, <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> P) -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> P</dt><dd><p><code class="docutils literal notranslate"><span class="pre">gcdPrimitive(p,</span> <span class="pre">q)</span></code> computes the <code class="docutils literal notranslate"><span class="pre">gcd</span></code> of the primitive polynomials <code class="docutils literal notranslate"><span class="pre">p</span></code> and <code class="docutils literal notranslate"><span class="pre">q</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="index-7">
+<dt><span class="spadfun">gcdPrimitive</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P -&gt; P</dt><dd><p><code class="docutils literal notranslate"><span class="pre">gcdPrimitive</span> <span class="pre">lp</span></code> computes the <code class="docutils literal notranslate"><span class="pre">gcd</span></code> of the list of primitive polynomials <code class="docutils literal notranslate"><span class="pre">lp</span></code>.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="PolynomialInterpolation.html" title="PolynomialInterpolation(xx, F)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="PolynomialFunctions2.html" title="PolynomialFunctions2(R, S)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">PolynomialGcdPackage(E, OV, R, P)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

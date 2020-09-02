@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XExponentialPackage(R, VarSet, XPOLY) &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="XPolynomialFactor(vl, F)" href="XPolynomialFactor.html" />
+    <link rel="prev" title="XDistributedPolynomialFunctions(VAR, F)" href="XDistributedPolynomialFunctions.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="XPolynomialFactor.html" title="XPolynomialFactor(vl, F)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="XDistributedPolynomialFunctions.html" title="XDistributedPolynomialFunctions(VAR, F)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">XExponentialPackage(R, VarSet, XPOLY)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="xexponentialpackage-r-varset-xpoly">
+<span id="l-x-exponential-package"></span><span id="index-0"></span><h1>XExponentialPackage(R, VarSet, XPOLY)<a class="headerlink" href="#xexponentialpackage-r-varset-xpoly" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/xlpoly.spad#L381">xlpoly.spad line 381</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/xlpoly.spad#L381">[edit on github]</a></p>
+<ul class="simple">
+<li><p>R: Join(<a class="reference internal" href="Ring.html#l-ring"><span class="std std-ref">Ring</span></a>, <a class="reference internal" href="Module.html#l-module"><span class="std std-ref">Module</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>)</p></li>
+<li><p>VarSet: <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a></p></li>
+<li><p>XPOLY: <a class="reference internal" href="XPolynomialsCat.html#l-x-polynomials-cat"><span class="std std-ref">XPolynomialsCat</span></a>(VarSet, R)</p></li>
+</ul>
+<p>This package provides computations of logarithms and exponentials for polynomials in non-commutative variables.   Author: Michel Petitot (<a class="reference external" href="mailto:petitot&#37;&#52;&#48;lifl">petitot<span>&#64;</span>lifl</a>.<code class="docutils literal notranslate"><span class="pre">fr</span></code>).</p>
+<span class="target" id="l-x-exponential-package-exp"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">exp</span>: (XPOLY, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; XPOLY</dt><dd><p><code class="docutils literal notranslate"><span class="pre">exp(p,</span> <span class="pre">n)</span></code> returns the exponential of <code class="docutils literal notranslate"><span class="pre">p</span></code> truncated at order <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-x-exponential-package-hausdorff"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">Hausdorff</span>: (XPOLY, XPOLY, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; XPOLY</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Hausdorff(a,</span> <span class="pre">b,</span> <span class="pre">n)</span></code> returns log(exp(a)*exp(<code class="docutils literal notranslate"><span class="pre">b</span></code>)) truncated at order <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-x-exponential-package-log"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">log</span>: (XPOLY, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; XPOLY</dt><dd><p><code class="docutils literal notranslate"><span class="pre">log(p,</span> <span class="pre">n)</span></code> returns the logarithm of <code class="docutils literal notranslate"><span class="pre">p</span></code> truncated at order <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="XPolynomialFactor.html" title="XPolynomialFactor(vl, F)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="XDistributedPolynomialFunctions.html" title="XDistributedPolynomialFunctions(VAR, F)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">XExponentialPackage(R, VarSet, XPOLY)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

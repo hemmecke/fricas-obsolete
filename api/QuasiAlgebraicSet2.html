@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuasiAlgebraicSet2 vl &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="QuasiComponentPackage(R, E, V, P, TS)" href="QuasiComponentPackage.html" />
+    <link rel="prev" title="PushVariables(R, E, OV, PPR)" href="PushVariables.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="QuasiComponentPackage.html" title="QuasiComponentPackage(R, E, V, P, TS)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="PushVariables.html" title="PushVariables(R, E, OV, PPR)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">QuasiAlgebraicSet2 vl</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="quasialgebraicset2-vl">
+<span id="l-quasi-algebraic-set2"></span><span id="index-0"></span><h1>QuasiAlgebraicSet2 vl<a class="headerlink" href="#quasialgebraicset2-vl" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/qalgset.spad#L186">qalgset.spad line 186</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/qalgset.spad#L186">[edit on github]</a></p>
+<ul class="simple">
+<li><p>vl: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a></p></li>
+</ul>
+<p><a class="reference internal" href="#l-quasi-algebraic-set2"><span class="std std-ref">QuasiAlgebraicSet2</span></a> adds a function <span class="spadfun">radicalSimplify</span> which uses <a class="reference internal" href="IdealDecompositionPackage.html#l-ideal-decomposition-package"><span class="std std-ref">IdealDecompositionPackage</span></a> to simplify the representation of a quasi-algebraic set. A quasi-algebraic set is the intersection of a Zariski closed set, defined as the common zeros of a given list of polynomials (the defining polynomials for equations), and a principal Zariski open set, defined as the complement of the common zeros of a polynomial <code class="docutils literal notranslate"><span class="pre">f</span></code> (the defining polynomial for the inequation). Quasi-algebraic sets are implemented in the domain <a class="reference internal" href="QuasiAlgebraicSet.html#l-quasi-algebraic-set"><span class="std std-ref">QuasiAlgebraicSet</span></a>, where two simplification routines are provided: <span class="spadfun">idealSimplify</span> and <span class="spadfun">simplify</span>. The function <span class="spadfun">radicalSimplify</span> is added for comparison study only. Because the domain <a class="reference internal" href="IdealDecompositionPackage.html#l-ideal-decomposition-package"><span class="std std-ref">IdealDecompositionPackage</span></a> provides facilities for computing with radical ideals, it is necessary to restrict the ground ring to the domain <span class="xref std std-ref">Fraction Integer</span>, and the polynomial ring to be of type <a class="reference internal" href="DistributedMultivariatePolynomial.html#l-distributed-multivariate-polynomial"><span class="std std-ref">DistributedMultivariatePolynomial</span></a>. The routine <span class="spadfun">radicalSimplify</span> uses these to compute groebner basis of radical ideals and is inefficient and restricted when compared to the two in <a class="reference internal" href="QuasiAlgebraicSet.html#l-quasi-algebraic-set"><span class="std std-ref">QuasiAlgebraicSet</span></a>.</p>
+<span class="target" id="l-quasi-algebraic-set2-radical-simplify"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">radicalSimplify</span>: <a class="reference internal" href="QuasiAlgebraicSet.html#l-quasi-algebraic-set"><span class="std std-ref">QuasiAlgebraicSet</span></a>(<a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="OrderedVariableList.html#l-ordered-variable-list"><span class="std std-ref">OrderedVariableList</span></a> vl, <a class="reference internal" href="DirectProduct.html#l-direct-product"><span class="std std-ref">DirectProduct</span></a>(# vl, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>), <a class="reference internal" href="DistributedMultivariatePolynomial.html#l-distributed-multivariate-polynomial"><span class="std std-ref">DistributedMultivariatePolynomial</span></a>(vl, <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>)) -&gt; <a class="reference internal" href="QuasiAlgebraicSet.html#l-quasi-algebraic-set"><span class="std std-ref">QuasiAlgebraicSet</span></a>(<a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="OrderedVariableList.html#l-ordered-variable-list"><span class="std std-ref">OrderedVariableList</span></a> vl, <a class="reference internal" href="DirectProduct.html#l-direct-product"><span class="std std-ref">DirectProduct</span></a>(# vl, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>), <a class="reference internal" href="DistributedMultivariatePolynomial.html#l-distributed-multivariate-polynomial"><span class="std std-ref">DistributedMultivariatePolynomial</span></a>(vl, <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>))</dt><dd><p><code class="docutils literal notranslate"><span class="pre">radicalSimplify(s)</span></code> returns a different and presumably simpler representation of <code class="docutils literal notranslate"><span class="pre">s</span></code> with the defining polynomials for the equations forming a groebner basis, and the defining polynomial for the inequation reduced with respect to the basis, using using groebner basis of radical ideals</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="QuasiComponentPackage.html" title="QuasiComponentPackage(R, E, V, P, TS)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="PushVariables.html" title="PushVariables(R, E, OV, PPR)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">QuasiAlgebraicSet2 vl</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

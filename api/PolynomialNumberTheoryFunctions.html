@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PolynomialNumberTheoryFunctions &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="PolynomialRationalRoots(F, UP)" href="PolynomialRationalRoots.html" />
+    <link rel="prev" title="PolynomialInterpolationAlgorithms(F, P)" href="PolynomialInterpolationAlgorithms.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="PolynomialRationalRoots.html" title="PolynomialRationalRoots(F, UP)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="PolynomialInterpolationAlgorithms.html" title="PolynomialInterpolationAlgorithms(F, P)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">PolynomialNumberTheoryFunctions</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="polynomialnumbertheoryfunctions">
+<span id="l-polynomial-number-theory-functions"></span><span id="index-0"></span><h1>PolynomialNumberTheoryFunctions<a class="headerlink" href="#polynomialnumbertheoryfunctions" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/numtheor.spad#L451">numtheor.spad line 451</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/numtheor.spad#L451">[edit on github]</a></p>
+<p>This package provides various polynomial number theoretic functions over the integers.</p>
+<span class="target" id="l-polynomial-number-theory-functions-bernoulli"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">bernoulli</span>: <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a> -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">bernoulli(n)</span></code> returns the <code class="docutils literal notranslate"><span class="pre">n</span></code>th Bernoulli polynomial <code class="docutils literal notranslate"><span class="pre">B[n](x)</span></code>. Note: Bernoulli polynomials denoted <code class="docutils literal notranslate"><span class="pre">B(n,</span> <span class="pre">x)</span></code> computed by solving the differential equation <code class="docutils literal notranslate"><span class="pre">differentiate(B(n,</span> <span class="pre">x),</span> <span class="pre">x)</span> <span class="pre">=</span> <span class="pre">n</span> <span class="pre">B(n-1,</span> <span class="pre">x)</span></code> where <code class="docutils literal notranslate"><span class="pre">B(0,</span> <span class="pre">x)</span> <span class="pre">=</span> <span class="pre">1</span></code> and initial condition comes from <code class="docutils literal notranslate"><span class="pre">B(n)</span> <span class="pre">=</span> <span class="pre">B(n,</span> <span class="pre">0)</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-polynomial-number-theory-functions-chebyshev-t"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">chebyshevT</span>: <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a> -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">chebyshevT(n)</span></code> returns the <code class="docutils literal notranslate"><span class="pre">n</span></code>th Chebyshev polynomial <code class="docutils literal notranslate"><span class="pre">T[n](x)</span></code>. Note: Chebyshev polynomials of the first kind, denoted <code class="docutils literal notranslate"><span class="pre">T[n](x)</span></code>, computed from the two term recurrence. The generating function <code class="docutils literal notranslate"><span class="pre">(1-t*x)/(1-2*t*x+t^2)</span> <span class="pre">=</span> <span class="pre">sum(T[n](x)*t^n,</span> <span class="pre">n=0..infinity)</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-polynomial-number-theory-functions-chebyshev-u"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">chebyshevU</span>: <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a> -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">chebyshevU(n)</span></code> returns the <code class="docutils literal notranslate"><span class="pre">n</span></code>th Chebyshev polynomial <code class="docutils literal notranslate"><span class="pre">U[n](x)</span></code>. Note: Chebyshev polynomials of the second kind, denoted <code class="docutils literal notranslate"><span class="pre">U[n](x)</span></code>, computed from the two term recurrence. The generating function <code class="docutils literal notranslate"><span class="pre">1/(1-2*t*x+t^2)</span> <span class="pre">=</span> <span class="pre">sum(T[n](x)*t^n,</span> <span class="pre">n=0..infinity)</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-polynomial-number-theory-functions-cyclotomic"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">cyclotomic</span>: <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a> -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">cyclotomic(n)</span></code> returns the <code class="docutils literal notranslate"><span class="pre">n</span></code>th cyclotomic polynomial <code class="docutils literal notranslate"><span class="pre">phi[n](x)</span></code>. Note: <code class="docutils literal notranslate"><span class="pre">phi[n](x)</span></code> is the factor of <code class="docutils literal notranslate"><span class="pre">x^n</span> <span class="pre">-</span> <span class="pre">1</span></code> whose roots are the primitive <code class="docutils literal notranslate"><span class="pre">n</span></code>th roots of unity.</p>
+</dd>
+</dl>
+<span class="target" id="l-polynomial-number-theory-functions-euler"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">euler</span>: <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a> -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">euler(n)</span></code> returns the <code class="docutils literal notranslate"><span class="pre">n</span></code>th Euler polynomial <code class="docutils literal notranslate"><span class="pre">E[n](x)</span></code>. Note: Euler polynomials denoted <code class="docutils literal notranslate"><span class="pre">E(n,</span> <span class="pre">x)</span></code> are computed by solving the differential equation <code class="docutils literal notranslate"><span class="pre">differentiate(E(n,</span> <span class="pre">x),</span> <span class="pre">x)</span> <span class="pre">=</span> <span class="pre">n</span> <span class="pre">E(n-1,</span> <span class="pre">x)</span></code> where <code class="docutils literal notranslate"><span class="pre">E(0,</span> <span class="pre">x)</span> <span class="pre">=</span> <span class="pre">1</span></code> and initial condition comes from <code class="docutils literal notranslate"><span class="pre">E(n)</span> <span class="pre">=</span> <span class="pre">2^n</span> <span class="pre">E(n,</span> <span class="pre">1/2)</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-polynomial-number-theory-functions-fixed-divisor"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">fixedDivisor</span>: <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a> -&gt; <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">fixedDivisor(a)</span></code> for <code class="docutils literal notranslate"><span class="pre">a(x)</span></code> in <code class="docutils literal notranslate"><span class="pre">Z[x]</span></code> is the largest integer <code class="docutils literal notranslate"><span class="pre">f</span></code> such that <code class="docutils literal notranslate"><span class="pre">f</span></code> divides <code class="docutils literal notranslate"><span class="pre">a(x=k)</span></code> for all integers <code class="docutils literal notranslate"><span class="pre">k</span></code>. Note: fixed divisor of <code class="docutils literal notranslate"><span class="pre">a</span></code> is <code class="docutils literal notranslate"><span class="pre">reduce(gcd,</span> <span class="pre">[a(x=k)</span> <span class="pre">for</span> <span class="pre">k</span> <span class="pre">in</span> <span class="pre">0..degree(a)])</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-polynomial-number-theory-functions-hermite"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">hermite</span>: <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a> -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">hermite(n)</span></code> returns the <code class="docutils literal notranslate"><span class="pre">n</span></code>th Hermite polynomial <code class="docutils literal notranslate"><span class="pre">H[n](x)</span></code>. Note: Hermite polynomials, denoted <code class="docutils literal notranslate"><span class="pre">H[n](x)</span></code>, are computed from the two term recurrence. The generating function is: <code class="docutils literal notranslate"><span class="pre">exp(2*t*x-t^2)</span> <span class="pre">=</span> <span class="pre">sum(H[n](x)*t^n/n!,</span> <span class="pre">n=0..infinity)</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-polynomial-number-theory-functions-laguerre"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">laguerre</span>: <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a> -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">laguerre(n)</span></code> returns the <code class="docutils literal notranslate"><span class="pre">n</span></code>th Laguerre polynomial <code class="docutils literal notranslate"><span class="pre">L[n](x)</span></code>. Note: Laguerre polynomials, denoted <code class="docutils literal notranslate"><span class="pre">L[n](x)</span></code>, are computed from the two term recurrence. The generating function is: <code class="docutils literal notranslate"><span class="pre">exp(x*t/(t-1))/(1-t)</span> <span class="pre">=</span> <span class="pre">sum(L[n](x)*t^n/n!,</span> <span class="pre">n=0..infinity)</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-polynomial-number-theory-functions-legendre"></span><dl class="simple" id="index-9">
+<dt><span class="spadfun">legendre</span>: <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a> -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">legendre(n)</span></code> returns the <code class="docutils literal notranslate"><span class="pre">n</span></code>th Legendre polynomial <code class="docutils literal notranslate"><span class="pre">P[n](x)</span></code>. Note: Legendre polynomials, denoted <code class="docutils literal notranslate"><span class="pre">P[n](x)</span></code>, are computed from the two term recurrence. The generating function is: <code class="docutils literal notranslate"><span class="pre">1/sqrt(1-2*t*x+t^2)</span> <span class="pre">=</span> <span class="pre">sum(P[n](x)*t^n,</span> <span class="pre">n=0..infinity)</span></code>.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="PolynomialRationalRoots.html" title="PolynomialRationalRoots(F, UP)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="PolynomialInterpolationAlgorithms.html" title="PolynomialInterpolationAlgorithms(F, P)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">PolynomialNumberTheoryFunctions</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

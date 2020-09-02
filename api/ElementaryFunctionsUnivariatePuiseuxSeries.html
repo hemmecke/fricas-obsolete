@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElementaryFunctionsUnivariatePuiseuxSeries(Coef, ULS, UPXS, EFULS) &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ElementaryIntegration(R, F)" href="ElementaryIntegration.html" />
+    <link rel="prev" title="ElementaryFunctionsUnivariateLaurentSeries(Coef, UTS, ULS)" href="ElementaryFunctionsUnivariateLaurentSeries.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="ElementaryIntegration.html" title="ElementaryIntegration(R, F)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="ElementaryFunctionsUnivariateLaurentSeries.html" title="ElementaryFunctionsUnivariateLaurentSeries(Coef, UTS, ULS)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">ElementaryFunctionsUnivariatePuiseuxSeries(Coef, ULS, UPXS, EFULS)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="elementaryfunctionsunivariatepuiseuxseries-coef-uls-upxs-efuls">
+<span id="l-elementary-functions-univariate-puiseux-series"></span><span id="index-0"></span><h1>ElementaryFunctionsUnivariatePuiseuxSeries(Coef, ULS, UPXS, EFULS)<a class="headerlink" href="#elementaryfunctionsunivariatepuiseuxseries-coef-uls-upxs-efuls" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/efupxs.spad#L1">efupxs.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/efupxs.spad#L1">[edit on github]</a></p>
+<ul class="simple">
+<li><p>Coef: <a class="reference internal" href="Algebra.html#l-algebra"><span class="std std-ref">Algebra</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></p></li>
+<li><p>ULS: <a class="reference internal" href="UnivariateLaurentSeriesCategory.html#l-univariate-laurent-series-category"><span class="std std-ref">UnivariateLaurentSeriesCategory</span></a> Coef</p></li>
+<li><p>UPXS: <a class="reference internal" href="UnivariatePuiseuxSeriesConstructorCategory.html#l-univariate-puiseux-series-constructor-category"><span class="std std-ref">UnivariatePuiseuxSeriesConstructorCategory</span></a>(Coef, ULS)</p></li>
+<li><p>EFULS: <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> ULS</p></li>
+</ul>
+<p>This package provides elementary functions on any Laurent series domain over a field which was constructed from a Taylor series domain. These functions are implemented by calling the corresponding functions on the Taylor series domain. We also provide ‘partial functions’ which compute transcendental functions of Laurent series when possible and return “failed” when this is not possible.</p>
+<span class="target" id="id1"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">^</span>: (UPXS, <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; UPXS if Coef has <a class="reference internal" href="Field.html#l-field"><span class="std std-ref">Field</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">z</span> <span class="pre">^</span> <span class="pre">r</span></code> raises a Puiseaux series <code class="docutils literal notranslate"><span class="pre">z</span></code> to a rational power <code class="docutils literal notranslate"><span class="pre">r</span></code></p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-puiseux-series-acos"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">acos</span>: UPXS -&gt; UPXS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">acos(z)</span></code> returns the arc-cosine of a Puiseux series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-puiseux-series-acosh"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">acosh</span>: UPXS -&gt; UPXS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">acosh(z)</span></code> returns the inverse hyperbolic cosine of a Puiseux series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-acosh-if-can"><span class="std std-ref">acoshIfCan</span></a>: UPXS -&gt; Union(UPXS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> UPXS</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-acos-if-can"><span class="std std-ref">acosIfCan</span></a>: UPXS -&gt; Union(UPXS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> UPXS</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-puiseux-series-acot"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">acot</span>: UPXS -&gt; UPXS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">acot(z)</span></code> returns the arc-cotangent of a Puiseux series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-puiseux-series-acoth"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">acoth</span>: UPXS -&gt; UPXS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">acoth(z)</span></code> returns the inverse hyperbolic cotangent of a Puiseux series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-acoth-if-can"><span class="std std-ref">acothIfCan</span></a>: UPXS -&gt; Union(UPXS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> UPXS</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-acot-if-can"><span class="std std-ref">acotIfCan</span></a>: UPXS -&gt; Union(UPXS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> UPXS</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-puiseux-series-acsc"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">acsc</span>: UPXS -&gt; UPXS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">acsc(z)</span></code> returns the arc-cosecant of a Puiseux series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-puiseux-series-acsch"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">acsch</span>: UPXS -&gt; UPXS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">acsch(z)</span></code> returns the inverse hyperbolic cosecant of a Puiseux series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-acsch-if-can"><span class="std std-ref">acschIfCan</span></a>: UPXS -&gt; Union(UPXS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> UPXS</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-acsc-if-can"><span class="std std-ref">acscIfCan</span></a>: UPXS -&gt; Union(UPXS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> UPXS</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-puiseux-series-asec"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">asec</span>: UPXS -&gt; UPXS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">asec(z)</span></code> returns the arc-secant of a Puiseux series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-puiseux-series-asech"></span><dl class="simple" id="index-9">
+<dt><span class="spadfun">asech</span>: UPXS -&gt; UPXS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">asech(z)</span></code> returns the inverse hyperbolic secant of a Puiseux series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-asech-if-can"><span class="std std-ref">asechIfCan</span></a>: UPXS -&gt; Union(UPXS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> UPXS</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-asec-if-can"><span class="std std-ref">asecIfCan</span></a>: UPXS -&gt; Union(UPXS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> UPXS</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-puiseux-series-asin"></span><dl class="simple" id="index-10">
+<dt><span class="spadfun">asin</span>: UPXS -&gt; UPXS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">asin(z)</span></code> returns the arc-sine of a Puiseux series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-puiseux-series-asinh"></span><dl class="simple" id="index-11">
+<dt><span class="spadfun">asinh</span>: UPXS -&gt; UPXS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">asinh(z)</span></code> returns the inverse hyperbolic sine of a Puiseux series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-asinh-if-can"><span class="std std-ref">asinhIfCan</span></a>: UPXS -&gt; Union(UPXS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> UPXS</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-asin-if-can"><span class="std std-ref">asinIfCan</span></a>: UPXS -&gt; Union(UPXS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> UPXS</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-puiseux-series-atan"></span><dl class="simple" id="index-12">
+<dt><span class="spadfun">atan</span>: UPXS -&gt; UPXS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">atan(z)</span></code> returns the arc-tangent of a Puiseux series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-puiseux-series-atanh"></span><dl class="simple" id="index-13">
+<dt><span class="spadfun">atanh</span>: UPXS -&gt; UPXS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">atanh(z)</span></code> returns the inverse hyperbolic tangent of a Puiseux series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-atanh-if-can"><span class="std std-ref">atanhIfCan</span></a>: UPXS -&gt; Union(UPXS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> UPXS</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-atan-if-can"><span class="std std-ref">atanIfCan</span></a>: UPXS -&gt; Union(UPXS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> UPXS</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-puiseux-series-cos"></span><dl class="simple" id="index-14">
+<dt><span class="spadfun">cos</span>: UPXS -&gt; UPXS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">cos(z)</span></code> returns the cosine of a Puiseux series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-puiseux-series-cosh"></span><dl class="simple" id="index-15">
+<dt><span class="spadfun">cosh</span>: UPXS -&gt; UPXS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">cosh(z)</span></code> returns the hyperbolic cosine of a Puiseux series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-cosh-if-can"><span class="std std-ref">coshIfCan</span></a>: UPXS -&gt; Union(UPXS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> UPXS</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-cos-if-can"><span class="std std-ref">cosIfCan</span></a>: UPXS -&gt; Union(UPXS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> UPXS</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-puiseux-series-cot"></span><dl class="simple" id="index-16">
+<dt><span class="spadfun">cot</span>: UPXS -&gt; UPXS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">cot(z)</span></code> returns the cotangent of a Puiseux series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-puiseux-series-coth"></span><dl class="simple" id="index-17">
+<dt><span class="spadfun">coth</span>: UPXS -&gt; UPXS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coth(z)</span></code> returns the hyperbolic cotangent of a Puiseux series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-coth-if-can"><span class="std std-ref">cothIfCan</span></a>: UPXS -&gt; Union(UPXS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> UPXS</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-cot-if-can"><span class="std std-ref">cotIfCan</span></a>: UPXS -&gt; Union(UPXS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> UPXS</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-puiseux-series-csc"></span><dl class="simple" id="index-18">
+<dt><span class="spadfun">csc</span>: UPXS -&gt; UPXS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">csc(z)</span></code> returns the cosecant of a Puiseux series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-puiseux-series-csch"></span><dl class="simple" id="index-19">
+<dt><span class="spadfun">csch</span>: UPXS -&gt; UPXS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">csch(z)</span></code> returns the hyperbolic cosecant of a Puiseux series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-csch-if-can"><span class="std std-ref">cschIfCan</span></a>: UPXS -&gt; Union(UPXS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> UPXS</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-csc-if-can"><span class="std std-ref">cscIfCan</span></a>: UPXS -&gt; Union(UPXS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> UPXS</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-puiseux-series-exp"></span><dl class="simple" id="index-20">
+<dt><span class="spadfun">exp</span>: UPXS -&gt; UPXS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">exp(z)</span></code> returns the exponential of a Puiseux series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-exp-if-can"><span class="std std-ref">expIfCan</span></a>: UPXS -&gt; Union(UPXS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> UPXS</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-puiseux-series-log"></span><dl class="simple" id="index-21">
+<dt><span class="spadfun">log</span>: UPXS -&gt; UPXS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">log(z)</span></code> returns the logarithm of a Puiseux series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-log-if-can"><span class="std std-ref">logIfCan</span></a>: UPXS -&gt; Union(UPXS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> UPXS</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-nth-root-if-can"><span class="std std-ref">nthRootIfCan</span></a>: (UPXS, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; Union(UPXS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> UPXS</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-puiseux-series-sec"></span><dl class="simple" id="index-22">
+<dt><span class="spadfun">sec</span>: UPXS -&gt; UPXS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sec(z)</span></code> returns the secant of a Puiseux series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-puiseux-series-sech"></span><dl class="simple" id="index-23">
+<dt><span class="spadfun">sech</span>: UPXS -&gt; UPXS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sech(z)</span></code> returns the hyperbolic secant of a Puiseux series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-sech-if-can"><span class="std std-ref">sechIfCan</span></a>: UPXS -&gt; Union(UPXS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> UPXS</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-sec-if-can"><span class="std std-ref">secIfCan</span></a>: UPXS -&gt; Union(UPXS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> UPXS</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-puiseux-series-sin"></span><dl class="simple" id="index-24">
+<dt><span class="spadfun">sin</span>: UPXS -&gt; UPXS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sin(z)</span></code> returns the sine of a Puiseux series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-puiseux-series-sinh"></span><dl class="simple" id="index-25">
+<dt><span class="spadfun">sinh</span>: UPXS -&gt; UPXS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sinh(z)</span></code> returns the hyperbolic sine of a Puiseux series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-sinh-if-can"><span class="std std-ref">sinhIfCan</span></a>: UPXS -&gt; Union(UPXS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> UPXS</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-sin-if-can"><span class="std std-ref">sinIfCan</span></a>: UPXS -&gt; Union(UPXS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> UPXS</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-puiseux-series-tan"></span><dl class="simple" id="index-26">
+<dt><span class="spadfun">tan</span>: UPXS -&gt; UPXS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">tan(z)</span></code> returns the tangent of a Puiseux series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-elementary-functions-univariate-puiseux-series-tanh"></span><dl class="simple" id="index-27">
+<dt><span class="spadfun">tanh</span>: UPXS -&gt; UPXS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">tanh(z)</span></code> returns the hyperbolic tangent of a Puiseux series <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-tanh-if-can"><span class="std std-ref">tanhIfCan</span></a>: UPXS -&gt; Union(UPXS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> UPXS</p>
+</dd>
+<dt><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions-tan-if-can"><span class="std std-ref">tanIfCan</span></a>: UPXS -&gt; Union(UPXS, failed)</dt><dd><p>from <a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> UPXS</p>
+</dd>
+</dl>
+<p><a class="reference internal" href="PartialTranscendentalFunctions.html#l-partial-transcendental-functions"><span class="std std-ref">PartialTranscendentalFunctions</span></a> UPXS</p>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="ElementaryIntegration.html" title="ElementaryIntegration(R, F)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="ElementaryFunctionsUnivariateLaurentSeries.html" title="ElementaryFunctionsUnivariateLaurentSeries(Coef, UTS, ULS)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">ElementaryFunctionsUnivariatePuiseuxSeries(Coef, ULS, UPXS, EFULS)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OutputFormTools &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="OutputPackage" href="OutputPackage.html" />
+    <link rel="prev" title="OrthogonalPolynomialFunctions R" href="OrthogonalPolynomialFunctions.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="OutputPackage.html" title="OutputPackage"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="OrthogonalPolynomialFunctions.html" title="OrthogonalPolynomialFunctions R"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">OutputFormTools</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="outputformtools">
+<span id="l-output-form-tools"></span><span id="index-0"></span><h1>OutputFormTools<a class="headerlink" href="#outputformtools" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/outform2.spad#L11">outform2.spad line 11</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/outform2.spad#L11">[edit on github]</a></p>
+<p>undocumented</p>
+<span class="target" id="l-output-form-tools-arguments"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">arguments</span>: <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a> -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">arguments(f)</span></code> gives arguments of form <code class="docutils literal notranslate"><span class="pre">f</span></code>. Valid only when atom?(<code class="docutils literal notranslate"><span class="pre">f</span></code>) is <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
+</dd>
+</dl>
+<span class="target" id="l-output-form-tools-atom"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">atom?</span>: <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a> -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">atom?(f)</span></code> checks if form <code class="docutils literal notranslate"><span class="pre">f</span></code> is atomic, <code class="docutils literal notranslate"><span class="pre">false</span></code> means composite</p>
+</dd>
+</dl>
+<span class="target" id="l-output-form-tools-construct"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">construct</span>: (<a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a>) -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">construct(op,</span> <span class="pre">la)</span></code> creates OutputForm with operator <code class="docutils literal notranslate"><span class="pre">op</span></code> and arguments la</p>
+</dd>
+</dl>
+<span class="target" id="l-output-form-tools-has-op"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">has_op?</span>: (<a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a>, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">has_op?(f,</span> <span class="pre">s)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> is <code class="docutils literal notranslate"><span class="pre">f</span></code> is a composite from with operator <code class="docutils literal notranslate"><span class="pre">s</span></code>, otherwise returns <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
+</dd>
+</dl>
+<span class="target" id="l-output-form-tools-integer"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">integer</span>: <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a> -&gt; <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">integer(f)</span></code> gives integer corresponding to <code class="docutils literal notranslate"><span class="pre">f</span></code>. Valid only when integer?(<code class="docutils literal notranslate"><span class="pre">f</span></code>) is <code class="docutils literal notranslate"><span class="pre">true</span></code></p>
+</dd>
+</dl>
+<span class="target" id="id1"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">integer?</span>: <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a> -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">integer?(f)</span></code> checks if <code class="docutils literal notranslate"><span class="pre">f</span></code> is an integer, this implies atom?(<code class="docutils literal notranslate"><span class="pre">f</span></code>)</p>
+</dd>
+</dl>
+<span class="target" id="l-output-form-tools-is-symbol"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">is_symbol?</span>: (<a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a>, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">is_symbol?(f,</span> <span class="pre">s)</span></code> retruns <code class="docutils literal notranslate"><span class="pre">true</span></code> if form is symbol <code class="docutils literal notranslate"><span class="pre">s</span></code>, otherwise returns <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
+</dd>
+</dl>
+<span class="target" id="l-output-form-tools-operator"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">operator</span>: <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a> -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">operator(f)</span></code> gives operator (head) of form <code class="docutils literal notranslate"><span class="pre">f</span></code>. Valid only when atom?(<code class="docutils literal notranslate"><span class="pre">f</span></code>) is <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
+</dd>
+</dl>
+<span class="target" id="l-output-form-tools-precondition"></span><dl class="simple" id="index-9">
+<dt><span class="spadfun">precondition</span>: <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a> -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">precondition(f)</span></code> prepares form for formatting.</p>
+</dd>
+</dl>
+<span class="target" id="l-output-form-tools-string"></span><dl class="simple" id="index-10">
+<dt><span class="spadfun">string</span>: <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a> -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">string(f)</span></code> gives string corresponding to <code class="docutils literal notranslate"><span class="pre">f</span></code>. Valid only when string?(<code class="docutils literal notranslate"><span class="pre">f</span></code>) is <code class="docutils literal notranslate"><span class="pre">true</span></code></p>
+</dd>
+</dl>
+<span class="target" id="id2"></span><dl class="simple" id="index-11">
+<dt><span class="spadfun">string?</span>: <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a> -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">string?(f)</span></code> checks if <code class="docutils literal notranslate"><span class="pre">f</span></code> is a string, this implies atom?(<code class="docutils literal notranslate"><span class="pre">f</span></code>)</p>
+</dd>
+</dl>
+<span class="target" id="l-output-form-tools-symbol"></span><dl class="simple" id="index-12">
+<dt><span class="spadfun">symbol</span>: <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a> -&gt; <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">symbol(f)</span></code> gives symbol corresponding to <code class="docutils literal notranslate"><span class="pre">f</span></code>. Valid only when symbol?(<code class="docutils literal notranslate"><span class="pre">f</span></code>) is <code class="docutils literal notranslate"><span class="pre">true</span></code></p>
+</dd>
+</dl>
+<span class="target" id="id3"></span><dl class="simple" id="index-13">
+<dt><span class="spadfun">symbol?</span>: <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a> -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">symbol?(f)</span></code> checks if <code class="docutils literal notranslate"><span class="pre">f</span></code> is a symbol, this implies atom?(<code class="docutils literal notranslate"><span class="pre">f</span></code>)</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="OutputPackage.html" title="OutputPackage"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="OrthogonalPolynomialFunctions.html" title="OrthogonalPolynomialFunctions R"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">OutputFormTools</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MomentPackage R &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="MonoidRingFunctions2(R, S, M)" href="MonoidRingFunctions2.html" />
+    <link rel="prev" title="ModularHermitianRowReduction R" href="ModularHermitianRowReduction.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="MonoidRingFunctions2.html" title="MonoidRingFunctions2(R, S, M)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="ModularHermitianRowReduction.html" title="ModularHermitianRowReduction R"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">MomentPackage R</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="momentpackage-r">
+<span id="l-moment-package"></span><span id="index-0"></span><h1>MomentPackage R<a class="headerlink" href="#momentpackage-r" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/distro.spad#L252">distro.spad line 252</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/distro.spad#L252">[edit on github]</a></p>
+<ul class="simple">
+<li><p>R: <a class="reference internal" href="CommutativeRing.html#l-commutative-ring"><span class="std std-ref">CommutativeRing</span></a></p></li>
+</ul>
+<p>An auxiliary package for various moment and cumulant transformations used in <code class="docutils literal notranslate"><span class="pre">Distribution</span></code>.</p>
+<span class="target" id="l-moment-package-boolean-cumulant2moment"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">booleanCumulant2moment</span>: <a class="reference internal" href="Sequence.html#l-sequence"><span class="std std-ref">Sequence</span></a> R -&gt; <a class="reference internal" href="Sequence.html#l-sequence"><span class="std std-ref">Sequence</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">booleanCumulant2moment(cc)</span></code> computes the sequence of moments from the sequence of boolean cumulants <code class="docutils literal notranslate"><span class="pre">cc</span></code></p>
+</dd>
+</dl>
+<span class="target" id="l-moment-package-cumulant2moment"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">cumulant2moment</span>: <a class="reference internal" href="Sequence.html#l-sequence"><span class="std std-ref">Sequence</span></a> R -&gt; <a class="reference internal" href="Sequence.html#l-sequence"><span class="std std-ref">Sequence</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">cumulant2moment(cc)</span></code> computes the sequence of moments from the sequence of classical cumulants <code class="docutils literal notranslate"><span class="pre">cc</span></code></p>
+</dd>
+</dl>
+<span class="target" id="l-moment-package-free-cumulant2moment"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">freeCumulant2moment</span>: <a class="reference internal" href="Sequence.html#l-sequence"><span class="std std-ref">Sequence</span></a> R -&gt; <a class="reference internal" href="Sequence.html#l-sequence"><span class="std std-ref">Sequence</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">freeCumulant2moment(cc)</span></code> computes the sequence of moments from the sequence of free cumulants <code class="docutils literal notranslate"><span class="pre">cc</span></code></p>
+</dd>
+</dl>
+<span class="target" id="l-moment-package-hankel-determinant"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">hankelDeterminant</span>: (<a class="reference internal" href="Sequence.html#l-sequence"><span class="std std-ref">Sequence</span></a> R, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">hankelDeterminant(x,</span> <span class="pre">n)</span></code> returns the <code class="docutils literal notranslate"><span class="pre">n</span></code>th Hankel determinant of the sequence <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-moment-package-jacobi2poly"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">jacobi2poly</span>: (<a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> R, <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> R) -&gt; <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">jacobi2poly(aa,</span> <span class="pre">bb)</span></code> returns the stream of orthogonal polynomials corresponding to the Jacobi parameters <code class="docutils literal notranslate"><span class="pre">a_n</span></code> and <code class="docutils literal notranslate"><span class="pre">b_n</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-moment-package-moment2boolean-cumulant"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">moment2booleanCumulant</span>: <a class="reference internal" href="Sequence.html#l-sequence"><span class="std std-ref">Sequence</span></a> R -&gt; <a class="reference internal" href="Sequence.html#l-sequence"><span class="std std-ref">Sequence</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">moment2booleanCumulant(mm)</span></code> computes the sequence of boolean cumulants from the sequence of moments <code class="docutils literal notranslate"><span class="pre">mm</span></code></p>
+</dd>
+</dl>
+<span class="target" id="l-moment-package-moment2cumulant"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">moment2cumulant</span>: <a class="reference internal" href="Sequence.html#l-sequence"><span class="std std-ref">Sequence</span></a> R -&gt; <a class="reference internal" href="Sequence.html#l-sequence"><span class="std std-ref">Sequence</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">moment2cumulant(mm)</span></code> computes the sequence of classical cumulants from the sequence of moments <code class="docutils literal notranslate"><span class="pre">mm</span></code></p>
+</dd>
+</dl>
+<span class="target" id="l-moment-package-moment2free-cumulant"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">moment2freeCumulant</span>: <a class="reference internal" href="Sequence.html#l-sequence"><span class="std std-ref">Sequence</span></a> R -&gt; <a class="reference internal" href="Sequence.html#l-sequence"><span class="std std-ref">Sequence</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">moment2freeCumulant(mm)</span></code> computes the sequence of free cumulants from the sequence of moments <code class="docutils literal notranslate"><span class="pre">mm</span></code></p>
+</dd>
+</dl>
+<span class="target" id="l-moment-package-moment2jacobi2"></span><dl class="simple" id="index-9">
+<dt><span class="spadfun">moment2jacobi2</span>: <a class="reference internal" href="Sequence.html#l-sequence"><span class="std std-ref">Sequence</span></a> R -&gt; <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Record(an: R, bn: R) if R has <a class="reference internal" href="Field.html#l-field"><span class="std std-ref">Field</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">moment2jacobi2(mm)</span></code> computes the Jacobi parameters as stream of pairs $(an, <code class="docutils literal notranslate"><span class="pre">bn</span></code>)$.</p>
+</dd>
+</dl>
+<span class="target" id="l-moment-package-moment2jacobi"></span><dl class="simple" id="index-10">
+<dt><span class="spadfun">moment2jacobi</span>: <a class="reference internal" href="Sequence.html#l-sequence"><span class="std std-ref">Sequence</span></a> R -&gt; Record(an: <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> R, bn: <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> R) if R has <a class="reference internal" href="Field.html#l-field"><span class="std std-ref">Field</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">moment2jacobi(mm)</span></code> computes the Jacobi parameters as pair of streams.</p>
+</dd>
+</dl>
+<span class="target" id="l-moment-package-moment2monotone-cumulant"></span><dl class="simple" id="index-11">
+<dt><span class="spadfun">moment2monotoneCumulant</span>: <a class="reference internal" href="Sequence.html#l-sequence"><span class="std std-ref">Sequence</span></a> R -&gt; <a class="reference internal" href="Sequence.html#l-sequence"><span class="std std-ref">Sequence</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">moment2monotoneCumulant(mm)</span></code> computes the sequence of monotone cumulants from the sequence of moments <code class="docutils literal notranslate"><span class="pre">mm</span></code></p>
+</dd>
+</dl>
+<span class="target" id="l-moment-package-moment2nth-jacobi"></span><dl class="simple" id="index-12">
+<dt><span class="spadfun">moment2nthJacobi</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> R -&gt; Record(an: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> R, bn: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> R) if R has <a class="reference internal" href="Field.html#l-field"><span class="std std-ref">Field</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">moment2nthJacobi(mm)</span></code> computes the list of Jacobi parameters from the list of moments <code class="docutils literal notranslate"><span class="pre">mm</span></code> as far as possible.</p>
+</dd>
+</dl>
+<span class="target" id="l-moment-package-moment2-stransform"></span><dl class="simple" id="index-13">
+<dt><span class="spadfun">moment2Stransform</span>: <a class="reference internal" href="Sequence.html#l-sequence"><span class="std std-ref">Sequence</span></a> R -&gt; Record(puiseux: <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, laurent: <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, coef: <a class="reference internal" href="Sequence.html#l-sequence"><span class="std std-ref">Sequence</span></a> R) if R has <a class="reference internal" href="Algebra.html#l-algebra"><span class="std std-ref">Algebra</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">moment2Stransform(x)</span></code> returns the Puiseux and Laurent order and coefficients of the <code class="docutils literal notranslate"><span class="pre">S</span></code> transform of <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
+</dd>
+</dl>
+<span class="target" id="l-moment-package-monotone-cumulant2moment"></span><dl class="simple" id="index-14">
+<dt><span class="spadfun">monotoneCumulant2moment</span>: <a class="reference internal" href="Sequence.html#l-sequence"><span class="std std-ref">Sequence</span></a> R -&gt; <a class="reference internal" href="Sequence.html#l-sequence"><span class="std std-ref">Sequence</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">monotoneCumulant2moment(hh)</span></code> computes the sequence of moments from the sequence of monotone cumulants <code class="docutils literal notranslate"><span class="pre">hh</span></code></p>
+</dd>
+</dl>
+<span class="target" id="l-moment-package-monotone-cumulant2moment-poly"></span><dl class="simple" id="index-15">
+<dt><span class="spadfun">monotoneCumulant2momentPoly</span>: <a class="reference internal" href="Sequence.html#l-sequence"><span class="std std-ref">Sequence</span></a> R -&gt; <a class="reference internal" href="Sequence.html#l-sequence"><span class="std std-ref">Sequence</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">monotoneCumulant2momentPoly(hh)</span></code> computes the sequence of moment polynomials $<code class="docutils literal notranslate"><span class="pre">m_n</span></code>(<code class="docutils literal notranslate"><span class="pre">t</span></code>)$ from the sequence of monotone cumulants <code class="docutils literal notranslate"><span class="pre">hh</span></code></p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="MonoidRingFunctions2.html" title="MonoidRingFunctions2(R, S, M)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="ModularHermitianRowReduction.html" title="ModularHermitianRowReduction R"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">MomentPackage R</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

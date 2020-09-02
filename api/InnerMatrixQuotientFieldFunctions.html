@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnerMatrixQuotientFieldFunctions(R, Row, Col, M, QF, Row2, Col2, M2) &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="InnerModularGcd(R, BP, pMod, nextMod)" href="InnerModularGcd.html" />
+    <link rel="prev" title="InnerMatrixLinearAlgebraFunctions(R, Row, Col, M)" href="InnerMatrixLinearAlgebraFunctions.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="InnerModularGcd.html" title="InnerModularGcd(R, BP, pMod, nextMod)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="InnerMatrixLinearAlgebraFunctions.html" title="InnerMatrixLinearAlgebraFunctions(R, Row, Col, M)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">InnerMatrixQuotientFieldFunctions(R, Row, Col, M, QF, Row2, Col2, M2)</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="innermatrixquotientfieldfunctions-r-row-col-m-qf-row2-col2-m2">
+<span id="l-inner-matrix-quotient-field-functions"></span><span id="index-0"></span><h1>InnerMatrixQuotientFieldFunctions(R, Row, Col, M, QF, Row2, Col2, M2)<a class="headerlink" href="#innermatrixquotientfieldfunctions-r-row-col-m-qf-row2-col2-m2" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/matfuns.spad#L401">matfuns.spad line 401</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/matfuns.spad#L401">[edit on github]</a></p>
+<ul class="simple">
+<li><p>R: <a class="reference internal" href="IntegralDomain.html#l-integral-domain"><span class="std std-ref">IntegralDomain</span></a></p></li>
+<li><p>Row: <a class="reference internal" href="FiniteLinearAggregate.html#l-finite-linear-aggregate"><span class="std std-ref">FiniteLinearAggregate</span></a> R</p></li>
+<li><p>Col: <a class="reference internal" href="FiniteLinearAggregate.html#l-finite-linear-aggregate"><span class="std std-ref">FiniteLinearAggregate</span></a> R</p></li>
+<li><p>M: <a class="reference internal" href="MatrixCategory.html#l-matrix-category"><span class="std std-ref">MatrixCategory</span></a>(R, Row, Col)</p></li>
+<li><p>QF: <a class="reference internal" href="QuotientFieldCategory.html#l-quotient-field-category"><span class="std std-ref">QuotientFieldCategory</span></a> R</p></li>
+<li><p>Row2: <a class="reference internal" href="FiniteLinearAggregate.html#l-finite-linear-aggregate"><span class="std std-ref">FiniteLinearAggregate</span></a> QF</p></li>
+<li><p>Col2: <a class="reference internal" href="FiniteLinearAggregate.html#l-finite-linear-aggregate"><span class="std std-ref">FiniteLinearAggregate</span></a> QF</p></li>
+<li><p>M2: <a class="reference internal" href="MatrixCategory.html#l-matrix-category"><span class="std std-ref">MatrixCategory</span></a>(QF, Row2, Col2)</p></li>
+</ul>
+<p><a class="reference internal" href="#l-inner-matrix-quotient-field-functions"><span class="std std-ref">InnerMatrixQuotientFieldFunctions</span></a> provides functions on matrices over an integral domain which involve the quotient field of that integral domain. The functions rowEchelon and inverse return matrices with entries in the quotient field.</p>
+<span class="target" id="l-inner-matrix-quotient-field-functions-inverse"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">inverse</span>: M -&gt; Union(M2, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">inverse(m)</span></code> returns the inverse of the matrix <code class="docutils literal notranslate"><span class="pre">m</span></code>. If the matrix is not invertible, “failed” is returned. Error: if the matrix is not square. Note: the result will have entries in the quotient field.</p>
+</dd>
+</dl>
+<span class="target" id="l-inner-matrix-quotient-field-functions-null-space"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">nullSpace</span>: M -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Col if Col2 has <a class="reference internal" href="shallowlyMutable.html#l-shallowly-mutable"><span class="std std-ref">shallowlyMutable</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">nullSpace(m)</span></code> returns a basis for the null space of the matrix <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l-inner-matrix-quotient-field-functions-row-echelon"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">rowEchelon</span>: M -&gt; M2</dt><dd><p><code class="docutils literal notranslate"><span class="pre">rowEchelon(m)</span></code> returns the row echelon form of the matrix <code class="docutils literal notranslate"><span class="pre">m</span></code>. the result will have entries in the quotient field.</p>
+</dd>
+</dl>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="../index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="InnerModularGcd.html" title="InnerModularGcd(R, BP, pMod, nextMod)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="InnerMatrixLinearAlgebraFunctions.html" title="InnerMatrixLinearAlgebraFunctions(R, Row, Col, M)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">InnerMatrixQuotientFieldFunctions(R, Row, Col, M, QF, Row2, Col2, M2)</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>

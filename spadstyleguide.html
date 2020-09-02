@@ -1,0 +1,276 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPAD Style Guide &#8212; FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/style.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Contributors" href="contributors.html" />
+    <link rel="prev" title="Development" href="development.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="contributors.html" title="Contributors"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="development.html" title="Development"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="contribute.html" >Contribute</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="development.html" accesskey="U">Development</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">SPAD Style Guide</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="spad-style-guide">
+<h1>SPAD Style Guide<a class="headerlink" href="#spad-style-guide" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="maximum-line-length">
+<h2>Maximum line length<a class="headerlink" href="#maximum-line-length" title="Permalink to this headline">¶</a></h2>
+<p>No firm rule, but use about 70 characters unless that causes problems.
+Try to avoid lines longer than 78 characters.</p>
+</div>
+<div class="section" id="file-splitting-during-compilation">
+<h2>File splitting during compilation<a class="headerlink" href="#file-splitting-during-compilation" title="Permalink to this headline">¶</a></h2>
+<p>There is a script <a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/scripts/unpack_file">src/scripts/unpack_file</a> that splits
+<code class="docutils literal notranslate"><span class="pre">.spad</span></code> source files at <code class="docutils literal notranslate"><span class="pre">)abbrev</span></code> boundaries. As a result,
+everything before the first <code class="docutils literal notranslate"><span class="pre">)abbrev</span></code> will be discarded.</p>
+<p>In particular, it means that there cannot be a global macro definition
+for the whole <code class="docutils literal notranslate"><span class="pre">.spad</span></code> file.</p>
+</div>
+<div class="section" id="literate-documentation">
+<h2>Literate documentation<a class="headerlink" href="#literate-documentation" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://axiom-wiki.newsynthesis.org/ProgrammingSPAD">SPAD</a> files can contain LaTeX parts.
+Such documentation must be included into blocks of the form:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>)if LiterateDoc
+...
+)endif
+</pre></div>
+</div>
+<p>These parts must form a proper LaTeX document. The code parts are
+included and typeset via the
+<a class="reference external" href="https://www.ctan.org/pkg/listings/">listings package</a>.</p>
+<p>To support a weak form of literate programming, the two files</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/doc/literatedoc.sty">src/doc/literatedoc.sty</a></p></li>
+<li><p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/doc/literatedoc.awk">src/doc/literatedoc.awk</a></p></li>
+</ul>
+<p>are provided.</p>
+<p>The file <a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/fmt.spad">fmt.spad</a> can be taken as an example.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cd fricas
+awk -f src/doc/literatedoc.awk src/algebra/fmt.spad &gt; fmt.tex
+TEXINPUTS=:src/doc pdflatex fmt.tex
+</pre></div>
+</div>
+</div>
+<div class="section" id="whitespace">
+<h2>Whitespace<a class="headerlink" href="#whitespace" title="Permalink to this headline">¶</a></h2>
+<p>Do not use tabs, but rather explicit spaces.</p>
+<div class="section" id="block-indentation">
+<h3>Block indentation<a class="headerlink" href="#block-indentation" title="Permalink to this headline">¶</a></h3>
+<p>4 spaces (no tabs)</p>
+</div>
+<div class="section" id="whitespaces-around-punctuation">
+<h3>Whitespaces around punctuation<a class="headerlink" href="#whitespaces-around-punctuation" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>“:” space before and after</p></li>
+<li><p>“,” space after (but not before)</p></li>
+<li><p>“;” space after (but not before)</p></li>
+<li><p>‘+’ spaces optional for most arithmetic infix operations</p></li>
+<li><p>“-” no space after for unary operations</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="continuation-lines">
+<h2>Continuation lines<a class="headerlink" href="#continuation-lines" title="Permalink to this headline">¶</a></h2>
+<p>explicit <code class="docutils literal notranslate"><span class="pre">_</span></code> (underscore) even when not required</p>
+</div>
+<div class="section" id="function-signature">
+<h2>Function signature<a class="headerlink" href="#function-signature" title="Permalink to this headline">¶</a></h2>
+<p>explicit types, that is:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>func(a : Integer) : Integer ==
+</pre></div>
+</div>
+<p>rather than:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>func(a) ==
+</pre></div>
+</div>
+</div>
+<div class="section" id="empty-list">
+<h2>Empty list<a class="headerlink" href="#empty-list" title="Permalink to this headline">¶</a></h2>
+<p>use []$T rather than empty()$T</p>
+</div>
+<div class="section" id="early-exit">
+<h2>=&gt; (early exit)<a class="headerlink" href="#early-exit" title="Permalink to this headline">¶</a></h2>
+<p>The ternary operator <code class="docutils literal notranslate"><span class="pre">cond</span> <span class="pre">?</span> <span class="pre">a</span> <span class="pre">:</span> <span class="pre">b</span></code> known from the C programming
+language can be encoded in SPAD as follows.</p>
+<p>Either:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>e := (v &gt; 0 =&gt; 1; -1)
+</pre></div>
+</div>
+<p>or:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>e := if v &gt; 0 then 1 else -1
+</pre></div>
+</div>
+</div>
+<div class="section" id="dangling-else">
+<h2>Dangling <code class="docutils literal notranslate"><span class="pre">else</span></code><a class="headerlink" href="#dangling-else" title="Permalink to this headline">¶</a></h2>
+<p>If there is space then the best option is all on one line</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>if .... then .... else ....
+</pre></div>
+</div>
+<p>Otherwise it should be like this</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>if .... then
+  ....
+else
+  ....
+</pre></div>
+</div>
+<p>Or is this a valid option?</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>if ....
+  then ....
+  else ....
+</pre></div>
+</div>
+</div>
+<div class="section" id="elt-vs-qelt">
+<h2>elt vs. qelt<a class="headerlink" href="#elt-vs-qelt" title="Permalink to this headline">¶</a></h2>
+<p>I prefer better error messages over speed.</p>
+</div>
+<div class="section" id="vs">
+<h2>_+ vs. “+”<a class="headerlink" href="#vs" title="Permalink to this headline">¶</a></h2>
+<p>Prefer the escaped version of an operator instead of letting it look
+like a string, i.e. use</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>_+(a : %, b : %) : Boolean ==
+</pre></div>
+</div>
+<p>instead of</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&quot;+&quot;(a : %, b : %) : Boolean ==
+</pre></div>
+</div>
+</div>
+<div class="section" id="boolean-valued-functions">
+<h2>Boolean valued functions<a class="headerlink" href="#boolean-valued-functions" title="Permalink to this headline">¶</a></h2>
+<p>Functions that return boolean values have names that end in <code class="docutils literal notranslate"><span class="pre">?</span></code>.
+Rather define:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>positive? : Integer -&gt; Boolean
+</pre></div>
+</div>
+<p>instead of:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>isPositive : Integer -&gt; Boolean
+</pre></div>
+</div>
+</div>
+<div class="section" id="destructive-operations">
+<h2>Destructive operations<a class="headerlink" href="#destructive-operations" title="Permalink to this headline">¶</a></h2>
+<p>Identifiers of functions that modify their arguments should be ended
+with an exclamation mark (<code class="docutils literal notranslate"><span class="pre">!</span></code>) to remind other programmers that they
+should be very careful in using such functions.</p>
+<p>Compare <code class="docutils literal notranslate"><span class="pre">reverse</span></code> with <code class="docutils literal notranslate"><span class="pre">reverse!</span></code>.</p>
+</div>
+<div class="section" id="non-public-constructors">
+<h2>Non-public constructors<a class="headerlink" href="#non-public-constructors" title="Permalink to this headline">¶</a></h2>
+<p>Constructors starting with “Inner” are meant for library developers
+but not for end-users.</p>
+</div>
+<div class="section" id="calling-unary-functions">
+<h2>Calling unary functions<a class="headerlink" href="#calling-unary-functions" title="Permalink to this headline">¶</a></h2>
+<p>Use</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>foo arg
+</pre></div>
+</div>
+<p>instead of</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>foo(arg)
+</pre></div>
+</div>
+<p>for unary functions if the argument is simple.</p>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">FriCAS API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="citation.html">Citation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">History</a></li>
+</ul>
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/spadstyleguide.rst.txt"
+           rel="nofollow">Show Source</a></li>
+    <li><a href="https://github.com/hemmecke/fricas/blob/formatted/src/doc/sphinx/source/spadstyleguide.rst"
+           rel="nofollow">Show on GitHub</a></li>
+    <li><a href="https://github.com/hemmecke/fricas/edit/formatted/src/doc/sphinx/source/spadstyleguide.rst"
+           rel="nofollow">Edit on GitHub</a></li>
+  </ul>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="contributors.html" title="Contributors"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="development.html" title="Development"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">FriCAS dc27d6f8d24fbb7a59b9b1c208e5ea960b3943d8</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="contribute.html" >Contribute</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="development.html" >Development</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">SPAD Style Guide</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2007-2020, FriCAS Team.
+    </div>
+  </body>
+</html>
