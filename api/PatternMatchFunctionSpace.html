@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PatternMatchFunctionSpace(S, R, F) &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>PatternMatchFunctionSpace(S, R, F) &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="PatternMatchAssertions.html" title="PatternMatchAssertions"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">PatternMatchFunctionSpace(S, R, F)</a></li> 
@@ -46,16 +46,16 @@
           <div class="body" role="main">
             
   <div class="section" id="patternmatchfunctionspace-s-r-f">
-<span id="l-pattern-match-function-space"></span><span id="index-0"></span><h1>PatternMatchFunctionSpace(S, R, F)<a class="headerlink" href="#patternmatchfunctionspace-s-r-f" title="Permalink to this headline">¶</a></h1>
+<span id="l5061747465726e4d6174636846756e6374696f6e5370616365"></span><span id="index-0"></span><h1>PatternMatchFunctionSpace(S, R, F)<a class="headerlink" href="#patternmatchfunctionspace-s-r-f" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/patmatch1.spad#L796">patmatch1.spad line 796</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/patmatch1.spad#L796">[edit on github]</a></p>
 <ul class="simple">
-<li><p>S: <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p></li>
-<li><p>R: Join(<a class="reference internal" href="IntegralDomain.html#l-integral-domain"><span class="std std-ref">IntegralDomain</span></a>, <a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a>, <a class="reference internal" href="PatternMatchable.html#l-pattern-matchable"><span class="std std-ref">PatternMatchable</span></a> S)</p></li>
-<li><p>F: Join(<a class="reference internal" href="FunctionSpace.html#l-function-space"><span class="std std-ref">FunctionSpace</span></a> R, <a class="reference internal" href="ConvertibleTo.html#l-convertible-to"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="Pattern.html#l-pattern"><span class="std std-ref">Pattern</span></a> S, <a class="reference internal" href="PatternMatchable.html#l-pattern-matchable"><span class="std std-ref">PatternMatchable</span></a> S, <a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> <a class="reference internal" href="Kernel.html#l-kernel"><span class="std std-ref">Kernel</span></a> %)</p></li>
+<li><p>S: <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p></li>
+<li><p>R: Join(<a class="reference internal" href="IntegralDomain.html#l496e74656772616c446f6d61696e"><span class="std std-ref">IntegralDomain</span></a>, <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a>, <a class="reference internal" href="PatternMatchable.html#l5061747465726e4d6174636861626c65"><span class="std std-ref">PatternMatchable</span></a> S)</p></li>
+<li><p>F: Join(<a class="reference internal" href="FunctionSpace.html#l46756e6374696f6e5370616365"><span class="std std-ref">FunctionSpace</span></a> R, <a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="Pattern.html#l5061747465726e"><span class="std std-ref">Pattern</span></a> S, <a class="reference internal" href="PatternMatchable.html#l5061747465726e4d6174636861626c65"><span class="std std-ref">PatternMatchable</span></a> S, <a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f"><span class="std std-ref">RetractableTo</span></a> <a class="reference internal" href="Kernel.html#l4b65726e656c"><span class="std std-ref">Kernel</span></a> %)</p></li>
 </ul>
 <p>This package provides pattern matching functions on function spaces.</p>
-<span class="target" id="l-pattern-match-function-space-pattern-match"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">patternMatch</span>: (F, <a class="reference internal" href="Pattern.html#l-pattern"><span class="std std-ref">Pattern</span></a> S, <a class="reference internal" href="PatternMatchResult.html#l-pattern-match-result"><span class="std std-ref">PatternMatchResult</span></a>(S, F)) -&gt; <a class="reference internal" href="PatternMatchResult.html#l-pattern-match-result"><span class="std std-ref">PatternMatchResult</span></a>(S, F)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">patternMatch(expr,</span> <span class="pre">pat,</span> <span class="pre">res)</span></code> matches the pattern <code class="docutils literal notranslate"><span class="pre">pat</span></code> to the expression <code class="docutils literal notranslate"><span class="pre">expr</span></code>; res contains the variables of <code class="docutils literal notranslate"><span class="pre">pat</span></code> which are already matched and their matches.</p>
+<span class="target" id="l5061747465726e4d6174636846756e6374696f6e53706163652e7061747465726e4d61746368"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">patternMatch</span>: (F, <a class="reference internal" href="Pattern.html#l5061747465726e"><span class="std std-ref">Pattern</span></a> S, <a class="reference internal" href="PatternMatchResult.html#l5061747465726e4d61746368526573756c74"><span class="std std-ref">PatternMatchResult</span></a>(S, F)) -&gt; <a class="reference internal" href="PatternMatchResult.html#l5061747465726e4d61746368526573756c74"><span class="std std-ref">PatternMatchResult</span></a>(S, F)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">patternMatch(expr,</span> <span class="pre">pat,</span> <span class="pre">res)</span></code> matches the pattern <code class="docutils literal notranslate"><span class="pre">pat</span></code> to the expression <code class="docutils literal notranslate"><span class="pre">expr</span></code>; res contains the variables of <code class="docutils literal notranslate"><span class="pre">pat</span></code> which are already matched and their matches.</p>
 </dd>
 </dl>
 </div>
@@ -105,7 +105,7 @@
         <li class="right" >
           <a href="PatternMatchAssertions.html" title="PatternMatchAssertions"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">PatternMatchFunctionSpace(S, R, F)</a></li> 

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XPBWPolynomial(VarSet, R) &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>XPBWPolynomial(VarSet, R) &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="XmlElement.html" title="XmlElement"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Domains.html" accesskey="U">Domains</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">XPBWPolynomial(VarSet, R)</a></li> 
@@ -46,248 +46,372 @@
           <div class="body" role="main">
             
   <div class="section" id="xpbwpolynomial-varset-r">
-<span id="l-x-p-b-w-polynomial"></span><span id="index-0"></span><h1>XPBWPolynomial(VarSet, R)<a class="headerlink" href="#xpbwpolynomial-varset-r" title="Permalink to this headline">¶</a></h1>
+<span id="l58504257506f6c796e6f6d69616c"></span><span id="index-0"></span><h1>XPBWPolynomial(VarSet, R)<a class="headerlink" href="#xpbwpolynomial-varset-r" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/xlpoly.spad#L756">xlpoly.spad line 756</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/xlpoly.spad#L756">[edit on github]</a></p>
 <ul class="simple">
-<li><p>VarSet: <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a></p></li>
-<li><p>R: <a class="reference internal" href="CommutativeRing.html#l-commutative-ring"><span class="std std-ref">CommutativeRing</span></a></p></li>
+<li><p>VarSet: <a class="reference internal" href="OrderedSet.html#l4f726465726564536574"><span class="std std-ref">OrderedSet</span></a></p></li>
+<li><p>R: <a class="reference internal" href="CommutativeRing.html#l436f6d6d7574617469766552696e67"><span class="std std-ref">CommutativeRing</span></a></p></li>
 </ul>
 <p>This domain constructor implements polynomials in non-commutative variables written in the Poincare-Birkhoff-Witt basis from the Lyndon basis. These polynomials can be used to compute Baker-Campbell-Hausdorff relations.   Author: Michel Petitot (<a class="reference external" href="mailto:petitot&#37;&#52;&#48;lifl">petitot<span>&#64;</span>lifl</a>.<code class="docutils literal notranslate"><span class="pre">fr</span></code>).</p>
-<dl class="simple">
-<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-0"><span class="std std-ref">0</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
-</dd>
-<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-1"><span class="std std-ref">1</span></a>: %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
-</dd>
-<dt><a class="reference internal" href="Magma.html#id1"><span class="std std-ref">*</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
-</dd>
-<dt><a class="reference internal" href="RightModule.html#id1"><span class="std std-ref">*</span></a>: (%, R) -&gt; %</dt><dd><p>from <a class="reference internal" href="RightModule.html#l-right-module"><span class="std std-ref">RightModule</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="AbelianGroup.html#id1"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianMonoid.html#id1"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianSemiGroup.html#id1"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l-abelian-semi-group"><span class="std std-ref">AbelianSemiGroup</span></a></p>
-</dd>
-<dt><a class="reference internal" href="LeftModule.html#id1"><span class="std std-ref">*</span></a>: (R, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="LeftModule.html#l-left-module"><span class="std std-ref">LeftModule</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="XFreeAlgebra.html#id1"><span class="std std-ref">*</span></a>: (VarSet, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="XFreeAlgebra.html#l-x-free-algebra"><span class="std std-ref">XFreeAlgebra</span></a>(VarSet, R)</p>
-</dd>
-<dt><a class="reference internal" href="AbelianSemiGroup.html#id2"><span class="std std-ref">+</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l-abelian-semi-group"><span class="std std-ref">AbelianSemiGroup</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianGroup.html#id2"><span class="std std-ref">-</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianGroup.html#id2"><span class="std std-ref">-</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
-</dd>
-<dt><a class="reference internal" href="BasicType.html#id1"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-</dd>
-<dt><a class="reference internal" href="MagmaWithUnit.html#id1"><span class="std std-ref">^</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
-</dd>
-<dt><a class="reference internal" href="Magma.html#id2"><span class="std std-ref">^</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
-</dd>
-<dt><a class="reference internal" href="BasicType.html#id2"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-</dd>
-<dt><a class="reference internal" href="Rng.html#l-rng-annihilate"><span class="std std-ref">annihilate?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Rng.html#l-rng"><span class="std std-ref">Rng</span></a></p>
-</dd>
-<dt><a class="reference internal" href="NonAssociativeSemiRng.html#l-non-associative-semi-rng-anti-commutator"><span class="std std-ref">antiCommutator</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeSemiRng.html#l-non-associative-semi-rng"><span class="std std-ref">NonAssociativeSemiRng</span></a></p>
-</dd>
-<dt><a class="reference internal" href="NonAssociativeRng.html#l-non-associative-rng-associator"><span class="std std-ref">associator</span></a>: (%, %, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRng.html#l-non-associative-rng"><span class="std std-ref">NonAssociativeRng</span></a></p>
-</dd>
-<dt><a class="reference internal" href="NonAssociativeRing.html#l-non-associative-ring-characteristic"><span class="std std-ref">characteristic</span></a>: () -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="NonAssociativeRing.html#l-non-associative-ring"><span class="std std-ref">NonAssociativeRing</span></a></p>
-</dd>
-<dt><a class="reference internal" href="XFreeAlgebra.html#l-x-free-algebra-coef"><span class="std std-ref">coef</span></a>: (%, %) -&gt; R</dt><dd><p>from <a class="reference internal" href="XFreeAlgebra.html#l-x-free-algebra"><span class="std std-ref">XFreeAlgebra</span></a>(VarSet, R)</p>
-</dd>
-<dt><a class="reference internal" href="XFreeAlgebra.html#l-x-free-algebra-coef"><span class="std std-ref">coef</span></a>: (%, <a class="reference internal" href="FreeMonoid.html#l-free-monoid"><span class="std std-ref">FreeMonoid</span></a> VarSet) -&gt; R</dt><dd><p>from <a class="reference internal" href="XFreeAlgebra.html#l-x-free-algebra"><span class="std std-ref">XFreeAlgebra</span></a>(VarSet, R)</p>
-</dd>
-<dt><a class="reference internal" href="FreeModuleCategory.html#l-free-module-category-coefficient"><span class="std std-ref">coefficient</span></a>: (%, <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l-poincare-birkhoff-witt-lyndon-basis"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet) -&gt; R</dt><dd><p>from <a class="reference internal" href="FreeModuleCategory.html#l-free-module-category"><span class="std std-ref">FreeModuleCategory</span></a>(R, <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l-poincare-birkhoff-witt-lyndon-basis"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet)</p>
-</dd>
-<dt><a class="reference internal" href="FreeModuleCategory.html#l-free-module-category-coefficients"><span class="std std-ref">coefficients</span></a>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> R</dt><dd><p>from <a class="reference internal" href="FreeModuleCategory.html#l-free-module-category"><span class="std std-ref">FreeModuleCategory</span></a>(R, <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l-poincare-birkhoff-witt-lyndon-basis"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet)</p>
-</dd>
-<dt><a class="reference internal" href="CoercibleTo.html#l-coercible-to-coerce"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e30">
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f69642e30"><span class="std std-ref">0</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-x-p-b-w-polynomial-coerce"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">coerce</span>: % -&gt; <a class="reference internal" href="XDistributedPolynomial.html#l-x-distributed-polynomial"><span class="std std-ref">XDistributedPolynomial</span></a>(VarSet, R)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(p)</span></code> returns <code class="docutils literal notranslate"><span class="pre">p</span></code> as a distributed polynomial.</p>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e31">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e69742e31"><span class="std std-ref">1</span></a>: %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e2a">
+<dt><a class="reference internal" href="Magma.html#l4d61676d612e2a"><span class="std std-ref">*</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l4d61676d61"><span class="std std-ref">Magma</span></a></p>
+</dd>
+<dt><a class="reference internal" href="RightModule.html#l52696768744d6f64756c652e2a"><span class="std std-ref">*</span></a>: (%, R) -&gt; %</dt><dd><p>from <a class="reference internal" href="RightModule.html#l52696768744d6f64756c65"><span class="std std-ref">RightModule</span></a> R</p>
+</dd>
+<dt><a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f75702e2a"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f69642e2a"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f75702e2a"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f7570"><span class="std std-ref">AbelianSemiGroup</span></a></p>
+</dd>
+<dt><a class="reference internal" href="LeftModule.html#l4c6566744d6f64756c652e2a"><span class="std std-ref">*</span></a>: (R, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="LeftModule.html#l4c6566744d6f64756c65"><span class="std std-ref">LeftModule</span></a> R</p>
+</dd>
+<dt><a class="reference internal" href="XFreeAlgebra.html#l5846726565416c67656272612e2a"><span class="std std-ref">*</span></a>: (VarSet, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="XFreeAlgebra.html#l5846726565416c6765627261"><span class="std std-ref">XFreeAlgebra</span></a>(VarSet, R)</p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e2b">
+<dt><a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f75702e2b"><span class="std std-ref">+</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f7570"><span class="std std-ref">AbelianSemiGroup</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e2d">
+<dt><a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f75702e2d"><span class="std std-ref">-</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f75702e2d"><span class="std std-ref">-</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e3d">
+<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e5e">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e69742e5e"><span class="std std-ref">^</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Magma.html#l4d61676d612e5e"><span class="std std-ref">^</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l4d61676d61"><span class="std std-ref">Magma</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e7e3d">
+<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e7e3d"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e616e6e6968696c6174653f">
+<dt><a class="reference internal" href="Rng.html#l526e672e616e6e6968696c6174653f"><span class="std std-ref">annihilate?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Rng.html#l526e67"><span class="std std-ref">Rng</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e616e7469436f6d6d757461746f72">
+<dt><a class="reference internal" href="NonAssociativeSemiRng.html#l4e6f6e4173736f6369617469766553656d69526e672e616e7469436f6d6d757461746f72"><span class="std std-ref">antiCommutator</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeSemiRng.html#l4e6f6e4173736f6369617469766553656d69526e67"><span class="std std-ref">NonAssociativeSemiRng</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e6173736f636961746f72">
+<dt><a class="reference internal" href="NonAssociativeRng.html#l4e6f6e4173736f63696174697665526e672e6173736f636961746f72"><span class="std std-ref">associator</span></a>: (%, %, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRng.html#l4e6f6e4173736f63696174697665526e67"><span class="std std-ref">NonAssociativeRng</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e6368617261637465726973746963">
+<dt><a class="reference internal" href="NonAssociativeRing.html#l4e6f6e4173736f6369617469766552696e672e6368617261637465726973746963"><span class="std std-ref">characteristic</span></a>: () -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="NonAssociativeRing.html#l4e6f6e4173736f6369617469766552696e67"><span class="std std-ref">NonAssociativeRing</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e636f6566">
+<dt><a class="reference internal" href="XFreeAlgebra.html#l5846726565416c67656272612e636f6566"><span class="std std-ref">coef</span></a>: (%, %) -&gt; R</dt><dd><p>from <a class="reference internal" href="XFreeAlgebra.html#l5846726565416c6765627261"><span class="std std-ref">XFreeAlgebra</span></a>(VarSet, R)</p>
+</dd>
+<dt><a class="reference internal" href="XFreeAlgebra.html#l5846726565416c67656272612e636f6566"><span class="std std-ref">coef</span></a>: (%, <a class="reference internal" href="FreeMonoid.html#l467265654d6f6e6f6964"><span class="std std-ref">FreeMonoid</span></a> VarSet) -&gt; R</dt><dd><p>from <a class="reference internal" href="XFreeAlgebra.html#l5846726565416c6765627261"><span class="std std-ref">XFreeAlgebra</span></a>(VarSet, R)</p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e636f656666696369656e74">
+<dt><a class="reference internal" href="FreeModuleCategory.html#l467265654d6f64756c6543617465676f72792e636f656666696369656e74"><span class="std std-ref">coefficient</span></a>: (%, <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l506f696e636172654269726b686f6666576974744c796e646f6e4261736973"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet) -&gt; R</dt><dd><p>from <a class="reference internal" href="FreeModuleCategory.html#l467265654d6f64756c6543617465676f7279"><span class="std std-ref">FreeModuleCategory</span></a>(R, <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l506f696e636172654269726b686f6666576974744c796e646f6e4261736973"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet)</p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e636f656666696369656e7473">
+<dt><a class="reference internal" href="FreeModuleCategory.html#l467265654d6f64756c6543617465676f72792e636f656666696369656e7473"><span class="std std-ref">coefficients</span></a>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> R</dt><dd><p>from <a class="reference internal" href="FreeModuleCategory.html#l467265654d6f64756c6543617465676f7279"><span class="std std-ref">FreeModuleCategory</span></a>(R, <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l506f696e636172654269726b686f6666576974744c796e646f6e4261736973"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet)</p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e636f65726365">
+<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f2e636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="index-1">
+<dt><span class="spadfun">coerce</span>: % -&gt; <a class="reference internal" href="XDistributedPolynomial.html#l584469737472696275746564506f6c796e6f6d69616c"><span class="std std-ref">XDistributedPolynomial</span></a>(VarSet, R)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(p)</span></code> returns <code class="docutils literal notranslate"><span class="pre">p</span></code> as a distributed polynomial.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-2">
-<dt><span class="spadfun">coerce</span>: % -&gt; <a class="reference internal" href="XRecursivePolynomial.html#l-x-recursive-polynomial"><span class="std std-ref">XRecursivePolynomial</span></a>(VarSet, R)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(p)</span></code> returns <code class="docutils literal notranslate"><span class="pre">p</span></code> as a recursive polynomial.</p>
+<dt><span class="spadfun">coerce</span>: % -&gt; <a class="reference internal" href="XRecursivePolynomial.html#l58526563757273697665506f6c796e6f6d69616c"><span class="std std-ref">XRecursivePolynomial</span></a>(VarSet, R)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(p)</span></code> returns <code class="docutils literal notranslate"><span class="pre">p</span></code> as a recursive polynomial.</p>
 </dd>
-<dt><a class="reference internal" href="CoercibleFrom.html#l-coercible-from-coerce"><span class="std std-ref">coerce</span></a>: <a class="reference internal" href="FreeMonoid.html#l-free-monoid"><span class="std std-ref">FreeMonoid</span></a> VarSet -&gt; %</dt><dd><p>from <a class="reference internal" href="CoercibleFrom.html#l-coercible-from"><span class="std std-ref">CoercibleFrom</span></a> <a class="reference internal" href="FreeMonoid.html#l-free-monoid"><span class="std std-ref">FreeMonoid</span></a> VarSet</p>
+<dt><a class="reference internal" href="CoercibleFrom.html#l436f65726369626c6546726f6d2e636f65726365"><span class="std std-ref">coerce</span></a>: <a class="reference internal" href="FreeMonoid.html#l467265654d6f6e6f6964"><span class="std std-ref">FreeMonoid</span></a> VarSet -&gt; %</dt><dd><p>from <a class="reference internal" href="CoercibleFrom.html#l436f65726369626c6546726f6d"><span class="std std-ref">CoercibleFrom</span></a> <a class="reference internal" href="FreeMonoid.html#l467265654d6f6e6f6964"><span class="std std-ref">FreeMonoid</span></a> VarSet</p>
 </dd>
-<dt><a class="reference internal" href="NonAssociativeRing.html#l-non-associative-ring-coerce"><span class="std std-ref">coerce</span></a>: <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a> -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRing.html#l-non-associative-ring"><span class="std std-ref">NonAssociativeRing</span></a></p>
+<dt><a class="reference internal" href="NonAssociativeRing.html#l4e6f6e4173736f6369617469766552696e672e636f65726365"><span class="std std-ref">coerce</span></a>: <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a> -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRing.html#l4e6f6e4173736f6369617469766552696e67"><span class="std std-ref">NonAssociativeRing</span></a></p>
 </dd>
 </dl>
 <dl class="simple" id="index-3">
-<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="LiePolynomial.html#l-lie-polynomial"><span class="std std-ref">LiePolynomial</span></a>(VarSet, R) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(p)</span></code> returns <code class="docutils literal notranslate"><span class="pre">p</span></code>.</p>
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="LiePolynomial.html#l4c6965506f6c796e6f6d69616c"><span class="std std-ref">LiePolynomial</span></a>(VarSet, R) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(p)</span></code> returns <code class="docutils literal notranslate"><span class="pre">p</span></code>.</p>
 </dd>
-<dt><a class="reference internal" href="XAlgebra.html#l-x-algebra-coerce"><span class="std std-ref">coerce</span></a>: R -&gt; %</dt><dd><p>from <a class="reference internal" href="XAlgebra.html#l-x-algebra"><span class="std std-ref">XAlgebra</span></a> R</p>
+<dt><a class="reference internal" href="XAlgebra.html#l58416c67656272612e636f65726365"><span class="std std-ref">coerce</span></a>: R -&gt; %</dt><dd><p>from <a class="reference internal" href="XAlgebra.html#l58416c6765627261"><span class="std std-ref">XAlgebra</span></a> R</p>
 </dd>
-<dt><a class="reference internal" href="XFreeAlgebra.html#l-x-free-algebra-coerce"><span class="std std-ref">coerce</span></a>: VarSet -&gt; %</dt><dd><p>from <a class="reference internal" href="XFreeAlgebra.html#l-x-free-algebra"><span class="std std-ref">XFreeAlgebra</span></a>(VarSet, R)</p>
-</dd>
-<dt><a class="reference internal" href="NonAssociativeRng.html#l-non-associative-rng-commutator"><span class="std std-ref">commutator</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRng.html#l-non-associative-rng"><span class="std std-ref">NonAssociativeRng</span></a></p>
-</dd>
-<dt><a class="reference internal" href="XFreeAlgebra.html#l-x-free-algebra-constant"><span class="std std-ref">constant</span></a>: % -&gt; R</dt><dd><p>from <a class="reference internal" href="XFreeAlgebra.html#l-x-free-algebra"><span class="std std-ref">XFreeAlgebra</span></a>(VarSet, R)</p>
-</dd>
-<dt><a class="reference internal" href="XFreeAlgebra.html#id2"><span class="std std-ref">constant?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="XFreeAlgebra.html#l-x-free-algebra"><span class="std std-ref">XFreeAlgebra</span></a>(VarSet, R)</p>
-</dd>
-<dt><a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category-construct"><span class="std std-ref">construct</span></a>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(k: <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l-poincare-birkhoff-witt-lyndon-basis"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet, c: R) -&gt; %</dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category"><span class="std std-ref">IndexedProductCategory</span></a>(R, <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l-poincare-birkhoff-witt-lyndon-basis"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet)</p>
-</dd>
-<dt><a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category-construct-ordered"><span class="std std-ref">constructOrdered</span></a>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(k: <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l-poincare-birkhoff-witt-lyndon-basis"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet, c: R) -&gt; %</dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category"><span class="std std-ref">IndexedProductCategory</span></a>(R, <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l-poincare-birkhoff-witt-lyndon-basis"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet)</p>
-</dd>
-<dt><a class="reference internal" href="XPolynomialsCat.html#l-x-polynomials-cat-degree"><span class="std std-ref">degree</span></a>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="XPolynomialsCat.html#l-x-polynomials-cat"><span class="std std-ref">XPolynomialsCat</span></a>(VarSet, R)</p>
+<dt><a class="reference internal" href="XFreeAlgebra.html#l5846726565416c67656272612e636f65726365"><span class="std std-ref">coerce</span></a>: VarSet -&gt; %</dt><dd><p>from <a class="reference internal" href="XFreeAlgebra.html#l5846726565416c6765627261"><span class="std std-ref">XFreeAlgebra</span></a>(VarSet, R)</p>
 </dd>
 </dl>
-<span class="target" id="l-x-p-b-w-polynomial-exp"></span><dl class="simple" id="index-4">
-<dt><span class="spadfun">exp</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; % if R has <a class="reference internal" href="Module.html#l-module"><span class="std std-ref">Module</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">exp(p,</span> <span class="pre">n)</span></code> returns the exponential of <code class="docutils literal notranslate"><span class="pre">p</span></code> (truncated up to order <code class="docutils literal notranslate"><span class="pre">n</span></code>).</p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l-single-integer"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash-update"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-latex"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category-leading-coefficient"><span class="std std-ref">leadingCoefficient</span></a>: % -&gt; R</dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category"><span class="std std-ref">IndexedProductCategory</span></a>(R, <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l-poincare-birkhoff-witt-lyndon-basis"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet)</p>
-</dd>
-<dt><a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category-leading-monomial"><span class="std std-ref">leadingMonomial</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category"><span class="std std-ref">IndexedProductCategory</span></a>(R, <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l-poincare-birkhoff-witt-lyndon-basis"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet)</p>
-</dd>
-<dt><a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category-leading-support"><span class="std std-ref">leadingSupport</span></a>: % -&gt; <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l-poincare-birkhoff-witt-lyndon-basis"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet</dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category"><span class="std std-ref">IndexedProductCategory</span></a>(R, <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l-poincare-birkhoff-witt-lyndon-basis"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet)</p>
-</dd>
-<dt><a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category-leading-term"><span class="std std-ref">leadingTerm</span></a>: % -&gt; Record(k: <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l-poincare-birkhoff-witt-lyndon-basis"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet, c: R)</dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category"><span class="std std-ref">IndexedProductCategory</span></a>(R, <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l-poincare-birkhoff-witt-lyndon-basis"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet)</p>
-</dd>
-<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-left-power"><span class="std std-ref">leftPower</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
-</dd>
-<dt><a class="reference internal" href="Magma.html#l-magma-left-power"><span class="std std-ref">leftPower</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
-</dd>
-<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-left-recip"><span class="std std-ref">leftRecip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e636f6d6d757461746f72">
+<dt><a class="reference internal" href="NonAssociativeRng.html#l4e6f6e4173736f63696174697665526e672e636f6d6d757461746f72"><span class="std std-ref">commutator</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRng.html#l4e6f6e4173736f63696174697665526e67"><span class="std std-ref">NonAssociativeRng</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-x-p-b-w-polynomial-lie-poly-if-can"></span><dl class="simple" id="index-5">
-<dt><span class="spadfun">LiePolyIfCan</span>: % -&gt; Union(<a class="reference internal" href="LiePolynomial.html#l-lie-polynomial"><span class="std std-ref">LiePolynomial</span></a>(VarSet, R), failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">LiePolyIfCan(p)</span></code> return <code class="docutils literal notranslate"><span class="pre">p</span></code> if <code class="docutils literal notranslate"><span class="pre">p</span></code> is a Lie polynomial.</p>
-</dd>
-<dt><a class="reference internal" href="FreeModuleCategory.html#l-free-module-category-linear-extend"><span class="std std-ref">linearExtend</span></a>: (<a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l-poincare-birkhoff-witt-lyndon-basis"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet -&gt; R, %) -&gt; R</dt><dd><p>from <a class="reference internal" href="FreeModuleCategory.html#l-free-module-category"><span class="std std-ref">FreeModuleCategory</span></a>(R, <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l-poincare-birkhoff-witt-lyndon-basis"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet)</p>
-</dd>
-<dt><a class="reference internal" href="IndexedDirectProductCategory.html#l-indexed-direct-product-category-list-of-terms"><span class="std std-ref">listOfTerms</span></a>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(k: <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l-poincare-birkhoff-witt-lyndon-basis"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet, c: R)</dt><dd><p>from <a class="reference internal" href="IndexedDirectProductCategory.html#l-indexed-direct-product-category"><span class="std std-ref">IndexedDirectProductCategory</span></a>(R, <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l-poincare-birkhoff-witt-lyndon-basis"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet)</p>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e636f6e7374616e743f">
+<dt><a class="reference internal" href="XFreeAlgebra.html#l5846726565416c67656272612e636f6e7374616e743f"><span class="std std-ref">constant?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="XFreeAlgebra.html#l5846726565416c6765627261"><span class="std std-ref">XFreeAlgebra</span></a>(VarSet, R)</p>
 </dd>
 </dl>
-<span class="target" id="l-x-p-b-w-polynomial-log"></span><dl class="simple" id="index-6">
-<dt><span class="spadfun">log</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; % if R has <a class="reference internal" href="Module.html#l-module"><span class="std std-ref">Module</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">log(p,</span> <span class="pre">n)</span></code> returns the logarithm of <code class="docutils literal notranslate"><span class="pre">p</span></code> (truncated up to order <code class="docutils literal notranslate"><span class="pre">n</span></code>).</p>
-</dd>
-<dt><a class="reference internal" href="XFreeAlgebra.html#l-x-free-algebra-lquo"><span class="std std-ref">lquo</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="XFreeAlgebra.html#l-x-free-algebra"><span class="std std-ref">XFreeAlgebra</span></a>(VarSet, R)</p>
-</dd>
-<dt><a class="reference internal" href="XFreeAlgebra.html#l-x-free-algebra-lquo"><span class="std std-ref">lquo</span></a>: (%, <a class="reference internal" href="FreeMonoid.html#l-free-monoid"><span class="std std-ref">FreeMonoid</span></a> VarSet) -&gt; %</dt><dd><p>from <a class="reference internal" href="XFreeAlgebra.html#l-x-free-algebra"><span class="std std-ref">XFreeAlgebra</span></a>(VarSet, R)</p>
-</dd>
-<dt><a class="reference internal" href="XFreeAlgebra.html#l-x-free-algebra-lquo"><span class="std std-ref">lquo</span></a>: (%, VarSet) -&gt; %</dt><dd><p>from <a class="reference internal" href="XFreeAlgebra.html#l-x-free-algebra"><span class="std std-ref">XFreeAlgebra</span></a>(VarSet, R)</p>
-</dd>
-<dt><a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category-map"><span class="std std-ref">map</span></a>: (R -&gt; R, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category"><span class="std std-ref">IndexedProductCategory</span></a>(R, <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l-poincare-birkhoff-witt-lyndon-basis"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet)</p>
-</dd>
-<dt><a class="reference internal" href="XPolynomialsCat.html#l-x-polynomials-cat-maxdeg"><span class="std std-ref">maxdeg</span></a>: % -&gt; <a class="reference internal" href="FreeMonoid.html#l-free-monoid"><span class="std std-ref">FreeMonoid</span></a> VarSet</dt><dd><p>from <a class="reference internal" href="XPolynomialsCat.html#l-x-polynomials-cat"><span class="std std-ref">XPolynomialsCat</span></a>(VarSet, R)</p>
-</dd>
-<dt><a class="reference internal" href="XFreeAlgebra.html#l-x-free-algebra-mindeg"><span class="std std-ref">mindeg</span></a>: % -&gt; <a class="reference internal" href="FreeMonoid.html#l-free-monoid"><span class="std std-ref">FreeMonoid</span></a> VarSet</dt><dd><p>from <a class="reference internal" href="XFreeAlgebra.html#l-x-free-algebra"><span class="std std-ref">XFreeAlgebra</span></a>(VarSet, R)</p>
-</dd>
-<dt><a class="reference internal" href="XFreeAlgebra.html#l-x-free-algebra-mindeg-term"><span class="std std-ref">mindegTerm</span></a>: % -&gt; Record(k: <a class="reference internal" href="FreeMonoid.html#l-free-monoid"><span class="std std-ref">FreeMonoid</span></a> VarSet, c: R)</dt><dd><p>from <a class="reference internal" href="XFreeAlgebra.html#l-x-free-algebra"><span class="std std-ref">XFreeAlgebra</span></a>(VarSet, R)</p>
-</dd>
-<dt><a class="reference internal" href="XFreeAlgebra.html#l-x-free-algebra-mirror"><span class="std std-ref">mirror</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="XFreeAlgebra.html#l-x-free-algebra"><span class="std std-ref">XFreeAlgebra</span></a>(VarSet, R)</p>
-</dd>
-<dt><a class="reference internal" href="XFreeAlgebra.html#l-x-free-algebra-monom"><span class="std std-ref">monom</span></a>: (<a class="reference internal" href="FreeMonoid.html#l-free-monoid"><span class="std std-ref">FreeMonoid</span></a> VarSet, R) -&gt; %</dt><dd><p>from <a class="reference internal" href="XFreeAlgebra.html#l-x-free-algebra"><span class="std std-ref">XFreeAlgebra</span></a>(VarSet, R)</p>
-</dd>
-<dt><a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category-monomial"><span class="std std-ref">monomial</span></a>: (R, <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l-poincare-birkhoff-witt-lyndon-basis"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet) -&gt; %</dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category"><span class="std std-ref">IndexedProductCategory</span></a>(R, <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l-poincare-birkhoff-witt-lyndon-basis"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet)</p>
-</dd>
-<dt><a class="reference internal" href="IndexedProductCategory.html#id1"><span class="std std-ref">monomial?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category"><span class="std std-ref">IndexedProductCategory</span></a>(R, <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l-poincare-birkhoff-witt-lyndon-basis"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet)</p>
-</dd>
-<dt><a class="reference internal" href="FreeModuleCategory.html#l-free-module-category-monomials"><span class="std std-ref">monomials</span></a>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %</dt><dd><p>from <a class="reference internal" href="FreeModuleCategory.html#l-free-module-category"><span class="std std-ref">FreeModuleCategory</span></a>(R, <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l-poincare-birkhoff-witt-lyndon-basis"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet)</p>
-</dd>
-<dt><a class="reference internal" href="IndexedDirectProductCategory.html#l-indexed-direct-product-category-number-of-monomials"><span class="std std-ref">numberOfMonomials</span></a>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="IndexedDirectProductCategory.html#l-indexed-direct-product-category"><span class="std std-ref">IndexedDirectProductCategory</span></a>(R, <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l-poincare-birkhoff-witt-lyndon-basis"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet)</p>
-</dd>
-<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-one"><span class="std std-ref">one?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-opposite"><span class="std std-ref">opposite?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e636f6e7374616e74">
+<dt><a class="reference internal" href="XFreeAlgebra.html#l5846726565416c67656272612e636f6e7374616e74"><span class="std std-ref">constant</span></a>: % -&gt; R</dt><dd><p>from <a class="reference internal" href="XFreeAlgebra.html#l5846726565416c6765627261"><span class="std std-ref">XFreeAlgebra</span></a>(VarSet, R)</p>
 </dd>
 </dl>
-<span class="target" id="l-x-p-b-w-polynomial-product"></span><dl class="simple" id="index-7">
-<dt><span class="spadfun">product</span>: (%, %, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">product(a,</span> <span class="pre">b,</span> <span class="pre">n)</span></code> returns <code class="docutils literal notranslate"><span class="pre">a*b</span></code> (truncated up to order <code class="docutils literal notranslate"><span class="pre">n</span></code>).</p>
-</dd>
-<dt><a class="reference internal" href="XFreeAlgebra.html#l-x-free-algebra-quasi-regular"><span class="std std-ref">quasiRegular</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="XFreeAlgebra.html#l-x-free-algebra"><span class="std std-ref">XFreeAlgebra</span></a>(VarSet, R)</p>
-</dd>
-<dt><a class="reference internal" href="XFreeAlgebra.html#id3"><span class="std std-ref">quasiRegular?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="XFreeAlgebra.html#l-x-free-algebra"><span class="std std-ref">XFreeAlgebra</span></a>(VarSet, R)</p>
-</dd>
-<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-recip"><span class="std std-ref">recip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
-</dd>
-<dt><a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category-reductum"><span class="std std-ref">reductum</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category"><span class="std std-ref">IndexedProductCategory</span></a>(R, <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l-poincare-birkhoff-witt-lyndon-basis"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet)</p>
-</dd>
-<dt><a class="reference internal" href="RetractableTo.html#l-retractable-to-retract"><span class="std std-ref">retract</span></a>: % -&gt; <a class="reference internal" href="FreeMonoid.html#l-free-monoid"><span class="std std-ref">FreeMonoid</span></a> VarSet</dt><dd><p>from <a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> <a class="reference internal" href="FreeMonoid.html#l-free-monoid"><span class="std std-ref">FreeMonoid</span></a> VarSet</p>
-</dd>
-<dt><a class="reference internal" href="RetractableTo.html#l-retractable-to-retract-if-can"><span class="std std-ref">retractIfCan</span></a>: % -&gt; Union(<a class="reference internal" href="FreeMonoid.html#l-free-monoid"><span class="std std-ref">FreeMonoid</span></a> VarSet, failed)</dt><dd><p>from <a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> <a class="reference internal" href="FreeMonoid.html#l-free-monoid"><span class="std std-ref">FreeMonoid</span></a> VarSet</p>
-</dd>
-<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-right-power"><span class="std std-ref">rightPower</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
-</dd>
-<dt><a class="reference internal" href="Magma.html#l-magma-right-power"><span class="std std-ref">rightPower</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
-</dd>
-<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-right-recip"><span class="std std-ref">rightRecip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
-</dd>
-<dt><a class="reference internal" href="XFreeAlgebra.html#l-x-free-algebra-rquo"><span class="std std-ref">rquo</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="XFreeAlgebra.html#l-x-free-algebra"><span class="std std-ref">XFreeAlgebra</span></a>(VarSet, R)</p>
-</dd>
-<dt><a class="reference internal" href="XFreeAlgebra.html#l-x-free-algebra-rquo"><span class="std std-ref">rquo</span></a>: (%, <a class="reference internal" href="FreeMonoid.html#l-free-monoid"><span class="std std-ref">FreeMonoid</span></a> VarSet) -&gt; %</dt><dd><p>from <a class="reference internal" href="XFreeAlgebra.html#l-x-free-algebra"><span class="std std-ref">XFreeAlgebra</span></a>(VarSet, R)</p>
-</dd>
-<dt><a class="reference internal" href="XFreeAlgebra.html#l-x-free-algebra-rquo"><span class="std std-ref">rquo</span></a>: (%, VarSet) -&gt; %</dt><dd><p>from <a class="reference internal" href="XFreeAlgebra.html#l-x-free-algebra"><span class="std std-ref">XFreeAlgebra</span></a>(VarSet, R)</p>
-</dd>
-<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-sample"><span class="std std-ref">sample</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
-</dd>
-<dt><a class="reference internal" href="XFreeAlgebra.html#l-x-free-algebra-sh"><span class="std std-ref">sh</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="XFreeAlgebra.html#l-x-free-algebra"><span class="std std-ref">XFreeAlgebra</span></a>(VarSet, R)</p>
-</dd>
-<dt><a class="reference internal" href="XFreeAlgebra.html#l-x-free-algebra-sh"><span class="std std-ref">sh</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="XFreeAlgebra.html#l-x-free-algebra"><span class="std std-ref">XFreeAlgebra</span></a>(VarSet, R)</p>
-</dd>
-<dt><a class="reference internal" href="Comparable.html#l-comparable-smaller"><span class="std std-ref">smaller?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a> if R has <a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a></dt><dd><p>from <a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a></p>
-</dd>
-<dt><a class="reference internal" href="CancellationAbelianMonoid.html#l-cancellation-abelian-monoid-subtract-if-can"><span class="std std-ref">subtractIfCan</span></a>: (%, %) -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="CancellationAbelianMonoid.html#l-cancellation-abelian-monoid"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
-</dd>
-<dt><a class="reference internal" href="FreeModuleCategory.html#l-free-module-category-support"><span class="std std-ref">support</span></a>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l-poincare-birkhoff-witt-lyndon-basis"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet</dt><dd><p>from <a class="reference internal" href="FreeModuleCategory.html#l-free-module-category"><span class="std std-ref">FreeModuleCategory</span></a>(R, <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l-poincare-birkhoff-witt-lyndon-basis"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet)</p>
-</dd>
-<dt><a class="reference internal" href="XPolynomialsCat.html#l-x-polynomials-cat-trunc"><span class="std std-ref">trunc</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="XPolynomialsCat.html#l-x-polynomials-cat"><span class="std std-ref">XPolynomialsCat</span></a>(VarSet, R)</p>
-</dd>
-<dt><a class="reference internal" href="XFreeAlgebra.html#l-x-free-algebra-var-list"><span class="std std-ref">varList</span></a>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> VarSet</dt><dd><p>from <a class="reference internal" href="XFreeAlgebra.html#l-x-free-algebra"><span class="std std-ref">XFreeAlgebra</span></a>(VarSet, R)</p>
-</dd>
-<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-zero"><span class="std std-ref">zero?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e636f6e737472756374">
+<dt><a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f72792e636f6e737472756374"><span class="std std-ref">construct</span></a>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> Record(k: <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l506f696e636172654269726b686f6666576974744c796e646f6e4261736973"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet, c: R) -&gt; %</dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279"><span class="std std-ref">IndexedProductCategory</span></a>(R, <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l506f696e636172654269726b686f6666576974744c796e646f6e4261736973"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet)</p>
 </dd>
 </dl>
-<p><a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
-<p><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
-<p><a class="reference internal" href="AbelianProductCategory.html#l-abelian-product-category"><span class="std std-ref">AbelianProductCategory</span></a> R</p>
-<p><a class="reference internal" href="AbelianSemiGroup.html#l-abelian-semi-group"><span class="std std-ref">AbelianSemiGroup</span></a></p>
-<p><a class="reference internal" href="Algebra.html#l-algebra"><span class="std std-ref">Algebra</span></a> R</p>
-<p><a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-<p><a class="reference internal" href="BiModule.html#l-bi-module"><span class="std std-ref">BiModule</span></a>(%, %)</p>
-<p><a class="reference internal" href="BiModule.html#l-bi-module"><span class="std std-ref">BiModule</span></a>(R, R)</p>
-<p><a class="reference internal" href="CancellationAbelianMonoid.html#l-cancellation-abelian-monoid"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
-<p><a class="reference internal" href="CoercibleFrom.html#l-coercible-from"><span class="std std-ref">CoercibleFrom</span></a> <a class="reference internal" href="FreeMonoid.html#l-free-monoid"><span class="std std-ref">FreeMonoid</span></a> VarSet</p>
-<p><a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
-<p><a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a> if R has <a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a></p>
-<p><a class="reference internal" href="FreeModuleCategory.html#l-free-module-category"><span class="std std-ref">FreeModuleCategory</span></a>(R, <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l-poincare-birkhoff-witt-lyndon-basis"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet)</p>
-<p><a class="reference internal" href="IndexedDirectProductCategory.html#l-indexed-direct-product-category"><span class="std std-ref">IndexedDirectProductCategory</span></a>(R, <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l-poincare-birkhoff-witt-lyndon-basis"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet)</p>
-<p><a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category"><span class="std std-ref">IndexedProductCategory</span></a>(R, <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l-poincare-birkhoff-witt-lyndon-basis"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet)</p>
-<p><a class="reference internal" href="LeftModule.html#l-left-module"><span class="std std-ref">LeftModule</span></a> %</p>
-<p><a class="reference internal" href="LeftModule.html#l-left-module"><span class="std std-ref">LeftModule</span></a> R</p>
-<p><a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
-<p><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
-<p><a class="reference internal" href="Module.html#l-module"><span class="std std-ref">Module</span></a> R</p>
-<p><a class="reference internal" href="Monoid.html#l-monoid"><span class="std std-ref">Monoid</span></a></p>
-<p><a class="reference internal" href="NonAssociativeRing.html#l-non-associative-ring"><span class="std std-ref">NonAssociativeRing</span></a></p>
-<p><a class="reference internal" href="NonAssociativeRng.html#l-non-associative-rng"><span class="std std-ref">NonAssociativeRng</span></a></p>
-<p><a class="reference internal" href="NonAssociativeSemiRing.html#l-non-associative-semi-ring"><span class="std std-ref">NonAssociativeSemiRing</span></a></p>
-<p><a class="reference internal" href="NonAssociativeSemiRng.html#l-non-associative-semi-rng"><span class="std std-ref">NonAssociativeSemiRng</span></a></p>
-<p><a class="reference internal" href="noZeroDivisors.html#l-no-zero-divisors"><span class="std std-ref">noZeroDivisors</span></a> if R has <a class="reference internal" href="noZeroDivisors.html#l-no-zero-divisors"><span class="std std-ref">noZeroDivisors</span></a></p>
-<p><a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> <a class="reference internal" href="FreeMonoid.html#l-free-monoid"><span class="std std-ref">FreeMonoid</span></a> VarSet</p>
-<p><a class="reference internal" href="RightModule.html#l-right-module"><span class="std std-ref">RightModule</span></a> %</p>
-<p><a class="reference internal" href="RightModule.html#l-right-module"><span class="std std-ref">RightModule</span></a> R</p>
-<p><a class="reference internal" href="Ring.html#l-ring"><span class="std std-ref">Ring</span></a></p>
-<p><a class="reference internal" href="Rng.html#l-rng"><span class="std std-ref">Rng</span></a></p>
-<p><a class="reference internal" href="SemiGroup.html#l-semi-group"><span class="std std-ref">SemiGroup</span></a></p>
-<p><a class="reference internal" href="SemiRing.html#l-semi-ring"><span class="std std-ref">SemiRing</span></a></p>
-<p><a class="reference internal" href="SemiRng.html#l-semi-rng"><span class="std std-ref">SemiRng</span></a></p>
-<p><a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-<p><a class="reference internal" href="unitsKnown.html#l-units-known"><span class="std std-ref">unitsKnown</span></a></p>
-<p><a class="reference internal" href="XAlgebra.html#l-x-algebra"><span class="std std-ref">XAlgebra</span></a> R</p>
-<p><a class="reference internal" href="XFreeAlgebra.html#l-x-free-algebra"><span class="std std-ref">XFreeAlgebra</span></a>(VarSet, R)</p>
-<p><a class="reference internal" href="XPolynomialsCat.html#l-x-polynomials-cat"><span class="std std-ref">XPolynomialsCat</span></a>(VarSet, R)</p>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e636f6e7374727563744f726465726564">
+<dt><a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f72792e636f6e7374727563744f726465726564"><span class="std std-ref">constructOrdered</span></a>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> Record(k: <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l506f696e636172654269726b686f6666576974744c796e646f6e4261736973"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet, c: R) -&gt; %</dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279"><span class="std std-ref">IndexedProductCategory</span></a>(R, <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l506f696e636172654269726b686f6666576974744c796e646f6e4261736973"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet)</p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e646567726565">
+<dt><a class="reference internal" href="XPolynomialsCat.html#l58506f6c796e6f6d69616c734361742e646567726565"><span class="std std-ref">degree</span></a>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="XPolynomialsCat.html#l58506f6c796e6f6d69616c73436174"><span class="std std-ref">XPolynomialsCat</span></a>(VarSet, R)</p>
+</dd>
+</dl>
+<span class="target" id="l58504257506f6c796e6f6d69616c2e657870"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">exp</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; % if R has <a class="reference internal" href="Module.html#l4d6f64756c65"><span class="std std-ref">Module</span></a> <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">exp(p,</span> <span class="pre">n)</span></code> returns the exponential of <code class="docutils literal notranslate"><span class="pre">p</span></code> (truncated up to order <code class="docutils literal notranslate"><span class="pre">n</span></code>).</p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e68617368">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e68617368"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l53696e676c65496e7465676572"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e6861736855706461746521">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6861736855706461746521"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e6c61746578">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6c61746578"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e6c656164696e67436f656666696369656e74">
+<dt><a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f72792e6c656164696e67436f656666696369656e74"><span class="std std-ref">leadingCoefficient</span></a>: % -&gt; R</dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279"><span class="std std-ref">IndexedProductCategory</span></a>(R, <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l506f696e636172654269726b686f6666576974744c796e646f6e4261736973"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet)</p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e6c656164696e674d6f6e6f6d69616c">
+<dt><a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f72792e6c656164696e674d6f6e6f6d69616c"><span class="std std-ref">leadingMonomial</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279"><span class="std std-ref">IndexedProductCategory</span></a>(R, <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l506f696e636172654269726b686f6666576974744c796e646f6e4261736973"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet)</p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e6c656164696e67537570706f7274">
+<dt><a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f72792e6c656164696e67537570706f7274"><span class="std std-ref">leadingSupport</span></a>: % -&gt; <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l506f696e636172654269726b686f6666576974744c796e646f6e4261736973"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet</dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279"><span class="std std-ref">IndexedProductCategory</span></a>(R, <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l506f696e636172654269726b686f6666576974744c796e646f6e4261736973"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet)</p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e6c656164696e675465726d">
+<dt><a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f72792e6c656164696e675465726d"><span class="std std-ref">leadingTerm</span></a>: % -&gt; Record(k: <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l506f696e636172654269726b686f6666576974744c796e646f6e4261736973"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet, c: R)</dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279"><span class="std std-ref">IndexedProductCategory</span></a>(R, <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l506f696e636172654269726b686f6666576974744c796e646f6e4261736973"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet)</p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e6c656674506f776572">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e69742e6c656674506f776572"><span class="std std-ref">leftPower</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Magma.html#l4d61676d612e6c656674506f776572"><span class="std std-ref">leftPower</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l4d61676d61"><span class="std std-ref">Magma</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e6c6566745265636970">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e69742e6c6566745265636970"><span class="std std-ref">leftRecip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l58504257506f6c796e6f6d69616c2e4c6965506f6c79496643616e"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">LiePolyIfCan</span>: % -&gt; Union(<a class="reference internal" href="LiePolynomial.html#l4c6965506f6c796e6f6d69616c"><span class="std std-ref">LiePolynomial</span></a>(VarSet, R), failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">LiePolyIfCan(p)</span></code> return <code class="docutils literal notranslate"><span class="pre">p</span></code> if <code class="docutils literal notranslate"><span class="pre">p</span></code> is a Lie polynomial.</p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e6c696e656172457874656e64">
+<dt><a class="reference internal" href="FreeModuleCategory.html#l467265654d6f64756c6543617465676f72792e6c696e656172457874656e64"><span class="std std-ref">linearExtend</span></a>: (<a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l506f696e636172654269726b686f6666576974744c796e646f6e4261736973"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet -&gt; R, %) -&gt; R</dt><dd><p>from <a class="reference internal" href="FreeModuleCategory.html#l467265654d6f64756c6543617465676f7279"><span class="std std-ref">FreeModuleCategory</span></a>(R, <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l506f696e636172654269726b686f6666576974744c796e646f6e4261736973"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet)</p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e6c6973744f665465726d73">
+<dt><a class="reference internal" href="IndexedDirectProductCategory.html#l496e646578656444697265637450726f6475637443617465676f72792e6c6973744f665465726d73"><span class="std std-ref">listOfTerms</span></a>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> Record(k: <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l506f696e636172654269726b686f6666576974744c796e646f6e4261736973"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet, c: R)</dt><dd><p>from <a class="reference internal" href="IndexedDirectProductCategory.html#l496e646578656444697265637450726f6475637443617465676f7279"><span class="std std-ref">IndexedDirectProductCategory</span></a>(R, <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l506f696e636172654269726b686f6666576974744c796e646f6e4261736973"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet)</p>
+</dd>
+</dl>
+<span class="target" id="l58504257506f6c796e6f6d69616c2e6c6f67"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">log</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; % if R has <a class="reference internal" href="Module.html#l4d6f64756c65"><span class="std std-ref">Module</span></a> <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">log(p,</span> <span class="pre">n)</span></code> returns the logarithm of <code class="docutils literal notranslate"><span class="pre">p</span></code> (truncated up to order <code class="docutils literal notranslate"><span class="pre">n</span></code>).</p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e6c71756f">
+<dt><a class="reference internal" href="XFreeAlgebra.html#l5846726565416c67656272612e6c71756f"><span class="std std-ref">lquo</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="XFreeAlgebra.html#l5846726565416c6765627261"><span class="std std-ref">XFreeAlgebra</span></a>(VarSet, R)</p>
+</dd>
+<dt><a class="reference internal" href="XFreeAlgebra.html#l5846726565416c67656272612e6c71756f"><span class="std std-ref">lquo</span></a>: (%, <a class="reference internal" href="FreeMonoid.html#l467265654d6f6e6f6964"><span class="std std-ref">FreeMonoid</span></a> VarSet) -&gt; %</dt><dd><p>from <a class="reference internal" href="XFreeAlgebra.html#l5846726565416c6765627261"><span class="std std-ref">XFreeAlgebra</span></a>(VarSet, R)</p>
+</dd>
+<dt><a class="reference internal" href="XFreeAlgebra.html#l5846726565416c67656272612e6c71756f"><span class="std std-ref">lquo</span></a>: (%, VarSet) -&gt; %</dt><dd><p>from <a class="reference internal" href="XFreeAlgebra.html#l5846726565416c6765627261"><span class="std std-ref">XFreeAlgebra</span></a>(VarSet, R)</p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e6d6170">
+<dt><a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f72792e6d6170"><span class="std std-ref">map</span></a>: (R -&gt; R, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279"><span class="std std-ref">IndexedProductCategory</span></a>(R, <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l506f696e636172654269726b686f6666576974744c796e646f6e4261736973"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet)</p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e6d6178646567">
+<dt><a class="reference internal" href="XPolynomialsCat.html#l58506f6c796e6f6d69616c734361742e6d6178646567"><span class="std std-ref">maxdeg</span></a>: % -&gt; <a class="reference internal" href="FreeMonoid.html#l467265654d6f6e6f6964"><span class="std std-ref">FreeMonoid</span></a> VarSet</dt><dd><p>from <a class="reference internal" href="XPolynomialsCat.html#l58506f6c796e6f6d69616c73436174"><span class="std std-ref">XPolynomialsCat</span></a>(VarSet, R)</p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e6d696e646567">
+<dt><a class="reference internal" href="XFreeAlgebra.html#l5846726565416c67656272612e6d696e646567"><span class="std std-ref">mindeg</span></a>: % -&gt; <a class="reference internal" href="FreeMonoid.html#l467265654d6f6e6f6964"><span class="std std-ref">FreeMonoid</span></a> VarSet</dt><dd><p>from <a class="reference internal" href="XFreeAlgebra.html#l5846726565416c6765627261"><span class="std std-ref">XFreeAlgebra</span></a>(VarSet, R)</p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e6d696e6465675465726d">
+<dt><a class="reference internal" href="XFreeAlgebra.html#l5846726565416c67656272612e6d696e6465675465726d"><span class="std std-ref">mindegTerm</span></a>: % -&gt; Record(k: <a class="reference internal" href="FreeMonoid.html#l467265654d6f6e6f6964"><span class="std std-ref">FreeMonoid</span></a> VarSet, c: R)</dt><dd><p>from <a class="reference internal" href="XFreeAlgebra.html#l5846726565416c6765627261"><span class="std std-ref">XFreeAlgebra</span></a>(VarSet, R)</p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e6d6972726f72">
+<dt><a class="reference internal" href="XFreeAlgebra.html#l5846726565416c67656272612e6d6972726f72"><span class="std std-ref">mirror</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="XFreeAlgebra.html#l5846726565416c6765627261"><span class="std std-ref">XFreeAlgebra</span></a>(VarSet, R)</p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e6d6f6e6f6d">
+<dt><a class="reference internal" href="XFreeAlgebra.html#l5846726565416c67656272612e6d6f6e6f6d"><span class="std std-ref">monom</span></a>: (<a class="reference internal" href="FreeMonoid.html#l467265654d6f6e6f6964"><span class="std std-ref">FreeMonoid</span></a> VarSet, R) -&gt; %</dt><dd><p>from <a class="reference internal" href="XFreeAlgebra.html#l5846726565416c6765627261"><span class="std std-ref">XFreeAlgebra</span></a>(VarSet, R)</p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e6d6f6e6f6d69616c3f">
+<dt><a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f72792e6d6f6e6f6d69616c3f"><span class="std std-ref">monomial?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279"><span class="std std-ref">IndexedProductCategory</span></a>(R, <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l506f696e636172654269726b686f6666576974744c796e646f6e4261736973"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet)</p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e6d6f6e6f6d69616c">
+<dt><a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f72792e6d6f6e6f6d69616c"><span class="std std-ref">monomial</span></a>: (R, <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l506f696e636172654269726b686f6666576974744c796e646f6e4261736973"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet) -&gt; %</dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279"><span class="std std-ref">IndexedProductCategory</span></a>(R, <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l506f696e636172654269726b686f6666576974744c796e646f6e4261736973"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet)</p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e6d6f6e6f6d69616c73">
+<dt><a class="reference internal" href="FreeModuleCategory.html#l467265654d6f64756c6543617465676f72792e6d6f6e6f6d69616c73"><span class="std std-ref">monomials</span></a>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %</dt><dd><p>from <a class="reference internal" href="FreeModuleCategory.html#l467265654d6f64756c6543617465676f7279"><span class="std std-ref">FreeModuleCategory</span></a>(R, <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l506f696e636172654269726b686f6666576974744c796e646f6e4261736973"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet)</p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e6e756d6265724f664d6f6e6f6d69616c73">
+<dt><a class="reference internal" href="IndexedDirectProductCategory.html#l496e646578656444697265637450726f6475637443617465676f72792e6e756d6265724f664d6f6e6f6d69616c73"><span class="std std-ref">numberOfMonomials</span></a>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="IndexedDirectProductCategory.html#l496e646578656444697265637450726f6475637443617465676f7279"><span class="std std-ref">IndexedDirectProductCategory</span></a>(R, <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l506f696e636172654269726b686f6666576974744c796e646f6e4261736973"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet)</p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e6f6e653f">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e69742e6f6e653f"><span class="std std-ref">one?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e6f70706f736974653f">
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f69642e6f70706f736974653f"><span class="std std-ref">opposite?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l58504257506f6c796e6f6d69616c2e70726f64756374"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">product</span>: (%, %, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">product(a,</span> <span class="pre">b,</span> <span class="pre">n)</span></code> returns <code class="docutils literal notranslate"><span class="pre">a*b</span></code> (truncated up to order <code class="docutils literal notranslate"><span class="pre">n</span></code>).</p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e7175617369526567756c61723f">
+<dt><a class="reference internal" href="XFreeAlgebra.html#l5846726565416c67656272612e7175617369526567756c61723f"><span class="std std-ref">quasiRegular?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="XFreeAlgebra.html#l5846726565416c6765627261"><span class="std std-ref">XFreeAlgebra</span></a>(VarSet, R)</p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e7175617369526567756c6172">
+<dt><a class="reference internal" href="XFreeAlgebra.html#l5846726565416c67656272612e7175617369526567756c6172"><span class="std std-ref">quasiRegular</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="XFreeAlgebra.html#l5846726565416c6765627261"><span class="std std-ref">XFreeAlgebra</span></a>(VarSet, R)</p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e7265636970">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e69742e7265636970"><span class="std std-ref">recip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e726564756374756d">
+<dt><a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f72792e726564756374756d"><span class="std std-ref">reductum</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279"><span class="std std-ref">IndexedProductCategory</span></a>(R, <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l506f696e636172654269726b686f6666576974744c796e646f6e4261736973"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet)</p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e72657472616374">
+<dt><a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f2e72657472616374"><span class="std std-ref">retract</span></a>: % -&gt; <a class="reference internal" href="FreeMonoid.html#l467265654d6f6e6f6964"><span class="std std-ref">FreeMonoid</span></a> VarSet</dt><dd><p>from <a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f"><span class="std std-ref">RetractableTo</span></a> <a class="reference internal" href="FreeMonoid.html#l467265654d6f6e6f6964"><span class="std std-ref">FreeMonoid</span></a> VarSet</p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e72657472616374496643616e">
+<dt><a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f2e72657472616374496643616e"><span class="std std-ref">retractIfCan</span></a>: % -&gt; Union(<a class="reference internal" href="FreeMonoid.html#l467265654d6f6e6f6964"><span class="std std-ref">FreeMonoid</span></a> VarSet, failed)</dt><dd><p>from <a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f"><span class="std std-ref">RetractableTo</span></a> <a class="reference internal" href="FreeMonoid.html#l467265654d6f6e6f6964"><span class="std std-ref">FreeMonoid</span></a> VarSet</p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e7269676874506f776572">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e69742e7269676874506f776572"><span class="std std-ref">rightPower</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Magma.html#l4d61676d612e7269676874506f776572"><span class="std std-ref">rightPower</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l4d61676d61"><span class="std std-ref">Magma</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e72696768745265636970">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e69742e72696768745265636970"><span class="std std-ref">rightRecip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e7271756f">
+<dt><a class="reference internal" href="XFreeAlgebra.html#l5846726565416c67656272612e7271756f"><span class="std std-ref">rquo</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="XFreeAlgebra.html#l5846726565416c6765627261"><span class="std std-ref">XFreeAlgebra</span></a>(VarSet, R)</p>
+</dd>
+<dt><a class="reference internal" href="XFreeAlgebra.html#l5846726565416c67656272612e7271756f"><span class="std std-ref">rquo</span></a>: (%, <a class="reference internal" href="FreeMonoid.html#l467265654d6f6e6f6964"><span class="std std-ref">FreeMonoid</span></a> VarSet) -&gt; %</dt><dd><p>from <a class="reference internal" href="XFreeAlgebra.html#l5846726565416c6765627261"><span class="std std-ref">XFreeAlgebra</span></a>(VarSet, R)</p>
+</dd>
+<dt><a class="reference internal" href="XFreeAlgebra.html#l5846726565416c67656272612e7271756f"><span class="std std-ref">rquo</span></a>: (%, VarSet) -&gt; %</dt><dd><p>from <a class="reference internal" href="XFreeAlgebra.html#l5846726565416c6765627261"><span class="std std-ref">XFreeAlgebra</span></a>(VarSet, R)</p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e73616d706c65">
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f69642e73616d706c65"><span class="std std-ref">sample</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e7368">
+<dt><a class="reference internal" href="XFreeAlgebra.html#l5846726565416c67656272612e7368"><span class="std std-ref">sh</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="XFreeAlgebra.html#l5846726565416c6765627261"><span class="std std-ref">XFreeAlgebra</span></a>(VarSet, R)</p>
+</dd>
+<dt><a class="reference internal" href="XFreeAlgebra.html#l5846726565416c67656272612e7368"><span class="std std-ref">sh</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="XFreeAlgebra.html#l5846726565416c6765627261"><span class="std std-ref">XFreeAlgebra</span></a>(VarSet, R)</p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e736d616c6c65723f">
+<dt><a class="reference internal" href="Comparable.html#l436f6d70617261626c652e736d616c6c65723f"><span class="std std-ref">smaller?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a> if R has <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a></dt><dd><p>from <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e7375627472616374496643616e">
+<dt><a class="reference internal" href="CancellationAbelianMonoid.html#l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f69642e7375627472616374496643616e"><span class="std std-ref">subtractIfCan</span></a>: (%, %) -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="CancellationAbelianMonoid.html#l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e737570706f7274">
+<dt><a class="reference internal" href="FreeModuleCategory.html#l467265654d6f64756c6543617465676f72792e737570706f7274"><span class="std std-ref">support</span></a>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l506f696e636172654269726b686f6666576974744c796e646f6e4261736973"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet</dt><dd><p>from <a class="reference internal" href="FreeModuleCategory.html#l467265654d6f64756c6543617465676f7279"><span class="std std-ref">FreeModuleCategory</span></a>(R, <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l506f696e636172654269726b686f6666576974744c796e646f6e4261736973"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet)</p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e7472756e63">
+<dt><a class="reference internal" href="XPolynomialsCat.html#l58506f6c796e6f6d69616c734361742e7472756e63"><span class="std std-ref">trunc</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="XPolynomialsCat.html#l58506f6c796e6f6d69616c73436174"><span class="std std-ref">XPolynomialsCat</span></a>(VarSet, R)</p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e7661724c697374">
+<dt><a class="reference internal" href="XFreeAlgebra.html#l5846726565416c67656272612e7661724c697374"><span class="std std-ref">varList</span></a>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> VarSet</dt><dd><p>from <a class="reference internal" href="XFreeAlgebra.html#l5846726565416c6765627261"><span class="std std-ref">XFreeAlgebra</span></a>(VarSet, R)</p>
+</dd>
+</dl>
+<dl class="simple" id="l58504257506f6c796e6f6d69616c2e7a65726f3f">
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f69642e7a65726f3f"><span class="std std-ref">zero?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+</dl>
+<p><a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p>
+<p><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+<p><a class="reference internal" href="AbelianProductCategory.html#l4162656c69616e50726f6475637443617465676f7279"><span class="std std-ref">AbelianProductCategory</span></a> R</p>
+<p><a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f7570"><span class="std std-ref">AbelianSemiGroup</span></a></p>
+<p><a class="reference internal" href="Algebra.html#l416c6765627261"><span class="std std-ref">Algebra</span></a> R</p>
+<p><a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+<p><a class="reference internal" href="BiModule.html#l42694d6f64756c65"><span class="std std-ref">BiModule</span></a>(%, %)</p>
+<p><a class="reference internal" href="BiModule.html#l42694d6f64756c65"><span class="std std-ref">BiModule</span></a>(R, R)</p>
+<p><a class="reference internal" href="CancellationAbelianMonoid.html#l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
+<p><a class="reference internal" href="CoercibleFrom.html#l436f65726369626c6546726f6d"><span class="std std-ref">CoercibleFrom</span></a> <a class="reference internal" href="FreeMonoid.html#l467265654d6f6e6f6964"><span class="std std-ref">FreeMonoid</span></a> VarSet</p>
+<p><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+<p><a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a> if R has <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a></p>
+<p><a class="reference internal" href="FreeModuleCategory.html#l467265654d6f64756c6543617465676f7279"><span class="std std-ref">FreeModuleCategory</span></a>(R, <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l506f696e636172654269726b686f6666576974744c796e646f6e4261736973"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet)</p>
+<p><a class="reference internal" href="IndexedDirectProductCategory.html#l496e646578656444697265637450726f6475637443617465676f7279"><span class="std std-ref">IndexedDirectProductCategory</span></a>(R, <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l506f696e636172654269726b686f6666576974744c796e646f6e4261736973"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet)</p>
+<p><a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279"><span class="std std-ref">IndexedProductCategory</span></a>(R, <a class="reference internal" href="PoincareBirkhoffWittLyndonBasis.html#l506f696e636172654269726b686f6666576974744c796e646f6e4261736973"><span class="std std-ref">PoincareBirkhoffWittLyndonBasis</span></a> VarSet)</p>
+<p><a class="reference internal" href="LeftModule.html#l4c6566744d6f64756c65"><span class="std std-ref">LeftModule</span></a> %</p>
+<p><a class="reference internal" href="LeftModule.html#l4c6566744d6f64756c65"><span class="std std-ref">LeftModule</span></a> R</p>
+<p><a class="reference internal" href="Magma.html#l4d61676d61"><span class="std std-ref">Magma</span></a></p>
+<p><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+<p><a class="reference internal" href="Module.html#l4d6f64756c65"><span class="std std-ref">Module</span></a> R</p>
+<p><a class="reference internal" href="Monoid.html#l4d6f6e6f6964"><span class="std std-ref">Monoid</span></a></p>
+<p><a class="reference internal" href="NonAssociativeRing.html#l4e6f6e4173736f6369617469766552696e67"><span class="std std-ref">NonAssociativeRing</span></a></p>
+<p><a class="reference internal" href="NonAssociativeRng.html#l4e6f6e4173736f63696174697665526e67"><span class="std std-ref">NonAssociativeRng</span></a></p>
+<p><a class="reference internal" href="NonAssociativeSemiRing.html#l4e6f6e4173736f6369617469766553656d6952696e67"><span class="std std-ref">NonAssociativeSemiRing</span></a></p>
+<p><a class="reference internal" href="NonAssociativeSemiRng.html#l4e6f6e4173736f6369617469766553656d69526e67"><span class="std std-ref">NonAssociativeSemiRng</span></a></p>
+<p><a class="reference internal" href="noZeroDivisors.html#l6e6f5a65726f44697669736f7273"><span class="std std-ref">noZeroDivisors</span></a> if R has <a class="reference internal" href="noZeroDivisors.html#l6e6f5a65726f44697669736f7273"><span class="std std-ref">noZeroDivisors</span></a></p>
+<p><a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f"><span class="std std-ref">RetractableTo</span></a> <a class="reference internal" href="FreeMonoid.html#l467265654d6f6e6f6964"><span class="std std-ref">FreeMonoid</span></a> VarSet</p>
+<p><a class="reference internal" href="RightModule.html#l52696768744d6f64756c65"><span class="std std-ref">RightModule</span></a> %</p>
+<p><a class="reference internal" href="RightModule.html#l52696768744d6f64756c65"><span class="std std-ref">RightModule</span></a> R</p>
+<p><a class="reference internal" href="Ring.html#l52696e67"><span class="std std-ref">Ring</span></a></p>
+<p><a class="reference internal" href="Rng.html#l526e67"><span class="std std-ref">Rng</span></a></p>
+<p><a class="reference internal" href="SemiGroup.html#l53656d6947726f7570"><span class="std std-ref">SemiGroup</span></a></p>
+<p><a class="reference internal" href="SemiRing.html#l53656d6952696e67"><span class="std std-ref">SemiRing</span></a></p>
+<p><a class="reference internal" href="SemiRng.html#l53656d69526e67"><span class="std std-ref">SemiRng</span></a></p>
+<p><a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+<p><a class="reference internal" href="unitsKnown.html#l756e6974734b6e6f776e"><span class="std std-ref">unitsKnown</span></a></p>
+<p><a class="reference internal" href="XAlgebra.html#l58416c6765627261"><span class="std std-ref">XAlgebra</span></a> R</p>
+<p><a class="reference internal" href="XFreeAlgebra.html#l5846726565416c6765627261"><span class="std std-ref">XFreeAlgebra</span></a>(VarSet, R)</p>
+<p><a class="reference internal" href="XPolynomialsCat.html#l58506f6c796e6f6d69616c73436174"><span class="std std-ref">XPolynomialsCat</span></a>(VarSet, R)</p>
 </div>
 
 
@@ -335,7 +459,7 @@
         <li class="right" >
           <a href="XmlElement.html" title="XmlElement"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Domains.html" >Domains</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">XPBWPolynomial(VarSet, R)</a></li> 

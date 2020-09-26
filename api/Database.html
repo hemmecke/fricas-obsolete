@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Database S &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>Database S &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="CyclicGroup.html" title="CyclicGroup(n, g)"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Domains.html" accesskey="U">Domains</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Database S</a></li> 
@@ -46,65 +46,77 @@
           <div class="body" role="main">
             
   <div class="section" id="database-s">
-<span id="l-database"></span><span id="index-0"></span><h1>Database S<a class="headerlink" href="#database-s" title="Permalink to this headline">¶</a></h1>
+<span id="l4461746162617365"></span><span id="index-0"></span><h1>Database S<a class="headerlink" href="#database-s" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/alql.spad#L115">alql.spad line 115</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/alql.spad#L115">[edit on github]</a></p>
 <ul>
-<li><p>S: <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a> with</p>
+<li><p>S: <a class="reference internal" href="OrderedSet.html#l4f726465726564536574"><span class="std std-ref">OrderedSet</span></a> with</p>
 <blockquote>
-<div><p><span class="spadfun">display</span>: % -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></p>
-<p><span class="spadfun">elt</span>: (%, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>) -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></p>
-<p><span class="spadfun">fullDisplay</span>: % -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></p>
+<div><p>display: % -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></p>
+<p>elt: (%, <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>) -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></p>
+<p>fullDisplay: % -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></p>
 </div></blockquote>
 </li>
 </ul>
 <p>This domain implements a simple view of a database whose fields are indexed by symbols</p>
-<span class="target" id="id1"></span><dl class="simple" id="index-1">
+<span class="target" id="l44617461626173652e2b"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">+</span>: (%, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">db1+db2</span></code> returns the merge of databases <code class="docutils literal notranslate"><span class="pre">db1</span></code> and <code class="docutils literal notranslate"><span class="pre">db2</span></code></p>
 </dd>
 </dl>
-<span class="target" id="id2"></span><dl class="simple" id="index-2">
+<span class="target" id="l44617461626173652e2d"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">-</span>: (%, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">db1-db2</span></code> returns the difference of databases <code class="docutils literal notranslate"><span class="pre">db1</span></code> and <code class="docutils literal notranslate"><span class="pre">db2</span></code> i.e. consisting of elements in <code class="docutils literal notranslate"><span class="pre">db1</span></code> but not in <code class="docutils literal notranslate"><span class="pre">db2</span></code></p>
 </dd>
-<dt><a class="reference internal" href="BasicType.html#id1"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-</dd>
-<dt><a class="reference internal" href="BasicType.html#id2"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-</dd>
-<dt><a class="reference internal" href="CoercibleTo.html#l-coercible-to-coerce"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+</dl>
+<dl class="simple" id="l44617461626173652e3d">
+<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-database-coerce"></span><dl class="simple" id="index-3">
-<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(l)</span></code> makes a database out of a list</p>
+<dl class="simple" id="l44617461626173652e7e3d">
+<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e7e3d"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-database-display"></span><dl class="simple" id="index-4">
-<dt><span class="spadfun">display</span>: % -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">display(x)</span></code> displays <code class="docutils literal notranslate"><span class="pre">x</span></code> in some form</p>
+<dl class="simple" id="l44617461626173652e636f65726365">
+<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f2e636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-database-elt"></span><dl class="simple" id="index-5">
-<dt><span class="spadfun">elt</span>: (%, <a class="reference internal" href="QueryEquation.html#l-query-equation"><span class="std std-ref">QueryEquation</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">elt(db,</span> <span class="pre">q)</span></code> returns all elements of <code class="docutils literal notranslate"><span class="pre">db</span></code> which satisfy <code class="docutils literal notranslate"><span class="pre">q</span></code>.</p>
+<dl class="simple" id="index-3">
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> S -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(l)</span></code> makes a database out of a list</p>
+</dd>
+</dl>
+<span class="target" id="l44617461626173652e646973706c6179"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">display</span>: % -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">display(x)</span></code> displays <code class="docutils literal notranslate"><span class="pre">x</span></code> in some form</p>
+</dd>
+</dl>
+<span class="target" id="l44617461626173652e656c74"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">elt</span>: (%, <a class="reference internal" href="QueryEquation.html#l51756572794571756174696f6e"><span class="std std-ref">QueryEquation</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">elt(db,</span> <span class="pre">q)</span></code> returns all elements of <code class="docutils literal notranslate"><span class="pre">db</span></code> which satisfy <code class="docutils literal notranslate"><span class="pre">q</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-6">
-<dt><span class="spadfun">elt</span>: (%, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>) -&gt; <a class="reference internal" href="DataList.html#l-data-list"><span class="std std-ref">DataList</span></a> <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">elt(db,</span> <span class="pre">s)</span></code> returns the <code class="docutils literal notranslate"><span class="pre">s</span></code> field of each element of <code class="docutils literal notranslate"><span class="pre">db</span></code>.</p>
+<dt><span class="spadfun">elt</span>: (%, <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>) -&gt; <a class="reference internal" href="DataList.html#l446174614c697374"><span class="std std-ref">DataList</span></a> <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">elt(db,</span> <span class="pre">s)</span></code> returns the <code class="docutils literal notranslate"><span class="pre">s</span></code> field of each element of <code class="docutils literal notranslate"><span class="pre">db</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-database-full-display"></span><dl class="simple" id="index-7">
-<dt><span class="spadfun">fullDisplay</span>: % -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">fullDisplay(x)</span></code> displays <code class="docutils literal notranslate"><span class="pre">x</span></code> in detail</p>
+<span class="target" id="l44617461626173652e66756c6c446973706c6179"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">fullDisplay</span>: % -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">fullDisplay(x)</span></code> displays <code class="docutils literal notranslate"><span class="pre">x</span></code> in detail</p>
 </dd>
 </dl>
 <dl class="simple" id="index-8">
-<dt><span class="spadfun">fullDisplay</span>: (%, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">fullDisplay(db,</span> <span class="pre">start,</span> <span class="pre">end</span> <span class="pre">)</span></code> prints full details of entries in the range <code class="docutils literal notranslate"><span class="pre">start..end</span></code> in <code class="docutils literal notranslate"><span class="pre">db</span></code>.</p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l-single-integer"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash-update"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-latex"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+<dt><span class="spadfun">fullDisplay</span>: (%, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">fullDisplay(db,</span> <span class="pre">start,</span> <span class="pre">end</span> <span class="pre">)</span></code> prints full details of entries in the range <code class="docutils literal notranslate"><span class="pre">start..end</span></code> in <code class="docutils literal notranslate"><span class="pre">db</span></code>.</p>
 </dd>
 </dl>
-<p><a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-<p><a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
-<p><a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+<dl class="simple" id="l44617461626173652e68617368">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e68617368"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l53696e676c65496e7465676572"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l44617461626173652e6861736855706461746521">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6861736855706461746521"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l44617461626173652e6c61746578">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6c61746578"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<p><a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+<p><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+<p><a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </div>
 
 
@@ -152,7 +164,7 @@
         <li class="right" >
           <a href="CyclicGroup.html" title="CyclicGroup(n, g)"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Domains.html" >Domains</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Database S</a></li> 

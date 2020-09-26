@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PolynomialFactorizationExplicit &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>PolynomialFactorizationExplicit &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="PolynomialCategory.html" title="PolynomialCategory(R, E, VarSet)"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Categories.html" accesskey="U">Categories</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">PolynomialFactorizationExplicit</a></li> 
@@ -46,173 +46,249 @@
           <div class="body" role="main">
             
   <div class="section" id="polynomialfactorizationexplicit">
-<span id="l-polynomial-factorization-explicit"></span><span id="index-0"></span><h1>PolynomialFactorizationExplicit<a class="headerlink" href="#polynomialfactorizationexplicit" title="Permalink to this headline">¶</a></h1>
+<span id="l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974"></span><span id="index-0"></span><h1>PolynomialFactorizationExplicit<a class="headerlink" href="#polynomialfactorizationexplicit" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/catdef.spad#L1219">catdef.spad line 1219</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/catdef.spad#L1219">[edit on github]</a></p>
 <p>This is the category of domains that know “enough” about themselves in order to factor univariate polynomials over themselves.</p>
-<dl class="simple">
-<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-0"><span class="std std-ref">0</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
-</dd>
-<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-1"><span class="std std-ref">1</span></a>: %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
-</dd>
-<dt><a class="reference internal" href="Magma.html#id1"><span class="std std-ref">*</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianGroup.html#id1"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianMonoid.html#id1"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianSemiGroup.html#id1"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l-abelian-semi-group"><span class="std std-ref">AbelianSemiGroup</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianSemiGroup.html#id2"><span class="std std-ref">+</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l-abelian-semi-group"><span class="std std-ref">AbelianSemiGroup</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianGroup.html#id2"><span class="std std-ref">-</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianGroup.html#id2"><span class="std std-ref">-</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
-</dd>
-<dt><a class="reference internal" href="BasicType.html#id1"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-</dd>
-<dt><a class="reference internal" href="MagmaWithUnit.html#id1"><span class="std std-ref">^</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
-</dd>
-<dt><a class="reference internal" href="Magma.html#id2"><span class="std std-ref">^</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
-</dd>
-<dt><a class="reference internal" href="BasicType.html#id2"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-</dd>
-<dt><a class="reference internal" href="Rng.html#l-rng-annihilate"><span class="std std-ref">annihilate?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Rng.html#l-rng"><span class="std std-ref">Rng</span></a></p>
-</dd>
-<dt><a class="reference internal" href="NonAssociativeSemiRng.html#l-non-associative-semi-rng-anti-commutator"><span class="std std-ref">antiCommutator</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeSemiRng.html#l-non-associative-semi-rng"><span class="std std-ref">NonAssociativeSemiRng</span></a></p>
-</dd>
-<dt><a class="reference internal" href="EntireRing.html#l-entire-ring-associates"><span class="std std-ref">associates?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="EntireRing.html#l-entire-ring"><span class="std std-ref">EntireRing</span></a></p>
-</dd>
-<dt><a class="reference internal" href="NonAssociativeRng.html#l-non-associative-rng-associator"><span class="std std-ref">associator</span></a>: (%, %, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRng.html#l-non-associative-rng"><span class="std std-ref">NonAssociativeRng</span></a></p>
-</dd>
-<dt><a class="reference internal" href="NonAssociativeRing.html#l-non-associative-ring-characteristic"><span class="std std-ref">characteristic</span></a>: () -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="NonAssociativeRing.html#l-non-associative-ring"><span class="std std-ref">NonAssociativeRing</span></a></p>
+<dl class="simple" id="l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c696369742e30">
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f69642e30"><span class="std std-ref">0</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-polynomial-factorization-explicit-charth-root"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">charthRoot</span>: % -&gt; Union(%, failed) if % has <a class="reference internal" href="CharacteristicNonZero.html#l-characteristic-non-zero"><span class="std std-ref">CharacteristicNonZero</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">charthRoot(r)</span></code> returns the <code class="docutils literal notranslate"><span class="pre">p</span></code><code class="docutils literal notranslate"><span class="pre">-</span></code>th root of <code class="docutils literal notranslate"><span class="pre">r</span></code>, or “failed” if none exists in the domain.</p>
-</dd>
-<dt><a class="reference internal" href="Algebra.html#l-algebra-coerce"><span class="std std-ref">coerce</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="Algebra.html#l-algebra"><span class="std std-ref">Algebra</span></a> %</p>
-</dd>
-<dt><a class="reference internal" href="CoercibleTo.html#l-coercible-to-coerce"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
-</dd>
-<dt><a class="reference internal" href="NonAssociativeRing.html#l-non-associative-ring-coerce"><span class="std std-ref">coerce</span></a>: <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a> -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRing.html#l-non-associative-ring"><span class="std std-ref">NonAssociativeRing</span></a></p>
-</dd>
-<dt><a class="reference internal" href="NonAssociativeRng.html#l-non-associative-rng-commutator"><span class="std std-ref">commutator</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRng.html#l-non-associative-rng"><span class="std std-ref">NonAssociativeRng</span></a></p>
+<dl class="simple" id="l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c696369742e31">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e69742e31"><span class="std std-ref">1</span></a>: %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-polynomial-factorization-explicit-condition-p"></span><dl class="simple" id="index-2">
-<dt><span class="spadfun">conditionP</span>: <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> % -&gt; Union(<a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> %, failed) if % has <a class="reference internal" href="CharacteristicNonZero.html#l-characteristic-non-zero"><span class="std std-ref">CharacteristicNonZero</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">conditionP(m)</span></code> returns a vector of elements, not all zero, whose <code class="docutils literal notranslate"><span class="pre">p</span></code><code class="docutils literal notranslate"><span class="pre">-</span></code>th powers (<code class="docutils literal notranslate"><span class="pre">p</span></code> is the characteristic of the domain) are a solution of the homogenous linear system represented by <code class="docutils literal notranslate"><span class="pre">m</span></code>, or “failed” is there is no such vector.</p>
+<dl class="simple" id="l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c696369742e2a">
+<dt><a class="reference internal" href="Magma.html#l4d61676d612e2a"><span class="std std-ref">*</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l4d61676d61"><span class="std std-ref">Magma</span></a></p>
 </dd>
-<dt><a class="reference internal" href="EntireRing.html#l-entire-ring-exquo"><span class="std std-ref">exquo</span></a>: (%, %) -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="EntireRing.html#l-entire-ring"><span class="std std-ref">EntireRing</span></a></p>
+<dt><a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f75702e2a"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p>
 </dd>
-<dt><a class="reference internal" href="UniqueFactorizationDomain.html#l-unique-factorization-domain-factor"><span class="std std-ref">factor</span></a>: % -&gt; <a class="reference internal" href="Factored.html#l-factored"><span class="std std-ref">Factored</span></a> %</dt><dd><p>from <a class="reference internal" href="UniqueFactorizationDomain.html#l-unique-factorization-domain"><span class="std std-ref">UniqueFactorizationDomain</span></a></p>
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f69642e2a"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
 </dd>
-</dl>
-<span class="target" id="l-polynomial-factorization-explicit-factor-polynomial"></span><dl class="simple" id="index-3">
-<dt><span class="spadfun">factorPolynomial</span>: <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> % -&gt; <a class="reference internal" href="Factored.html#l-factored"><span class="std std-ref">Factored</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">factorPolynomial(p)</span></code> returns the factorization into irreducibles of the univariate polynomial <code class="docutils literal notranslate"><span class="pre">p</span></code>.</p>
+<dt><a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f75702e2a"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f7570"><span class="std std-ref">AbelianSemiGroup</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-polynomial-factorization-explicit-factor-square-free-polynomial"></span><dl class="simple" id="index-4">
-<dt><span class="spadfun">factorSquareFreePolynomial</span>: <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> % -&gt; <a class="reference internal" href="Factored.html#l-factored"><span class="std std-ref">Factored</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">factorSquareFreePolynomial(p)</span></code> factors the univariate polynomial <code class="docutils literal notranslate"><span class="pre">p</span></code> into irreducibles where <code class="docutils literal notranslate"><span class="pre">p</span></code> is known to be square free and primitive with respect to its main variable.</p>
-</dd>
-<dt><a class="reference internal" href="GcdDomain.html#l-gcd-domain-gcd"><span class="std std-ref">gcd</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="GcdDomain.html#l-gcd-domain"><span class="std std-ref">GcdDomain</span></a></p>
-</dd>
-<dt><a class="reference internal" href="GcdDomain.html#l-gcd-domain-gcd"><span class="std std-ref">gcd</span></a>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> % -&gt; %</dt><dd><p>from <a class="reference internal" href="GcdDomain.html#l-gcd-domain"><span class="std std-ref">GcdDomain</span></a></p>
+<dl class="simple" id="l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c696369742e2b">
+<dt><a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f75702e2b"><span class="std std-ref">+</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f7570"><span class="std std-ref">AbelianSemiGroup</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-polynomial-factorization-explicit-gcd-polynomial"></span><dl class="simple" id="index-5">
-<dt><span class="spadfun">gcdPolynomial</span>: (<a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %, <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %) -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">gcdPolynomial(p,</span> <span class="pre">q)</span></code> returns the <code class="docutils literal notranslate"><span class="pre">gcd</span></code> of the univariate polynomials <code class="docutils literal notranslate"><span class="pre">p</span></code> <code class="docutils literal notranslate"><span class="pre">qnd</span></code> <code class="docutils literal notranslate"><span class="pre">q</span></code>.</p>
+<dl class="simple" id="l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c696369742e2d">
+<dt><a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f75702e2d"><span class="std std-ref">-</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p>
 </dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l-single-integer"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash-update"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-latex"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="GcdDomain.html#l-gcd-domain-lcm"><span class="std std-ref">lcm</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="GcdDomain.html#l-gcd-domain"><span class="std std-ref">GcdDomain</span></a></p>
-</dd>
-<dt><a class="reference internal" href="GcdDomain.html#l-gcd-domain-lcm"><span class="std std-ref">lcm</span></a>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> % -&gt; %</dt><dd><p>from <a class="reference internal" href="GcdDomain.html#l-gcd-domain"><span class="std std-ref">GcdDomain</span></a></p>
-</dd>
-<dt><a class="reference internal" href="LeftOreRing.html#l-left-ore-ring-lcm-coef"><span class="std std-ref">lcmCoef</span></a>: (%, %) -&gt; Record(llcm_res: %, coeff1: %, coeff2: %)</dt><dd><p>from <a class="reference internal" href="LeftOreRing.html#l-left-ore-ring"><span class="std std-ref">LeftOreRing</span></a></p>
-</dd>
-<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-left-power"><span class="std std-ref">leftPower</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
-</dd>
-<dt><a class="reference internal" href="Magma.html#l-magma-left-power"><span class="std std-ref">leftPower</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
-</dd>
-<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-left-recip"><span class="std std-ref">leftRecip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
-</dd>
-<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-one"><span class="std std-ref">one?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-opposite"><span class="std std-ref">opposite?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
-</dd>
-<dt><a class="reference internal" href="UniqueFactorizationDomain.html#l-unique-factorization-domain-prime"><span class="std std-ref">prime?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="UniqueFactorizationDomain.html#l-unique-factorization-domain"><span class="std std-ref">UniqueFactorizationDomain</span></a></p>
-</dd>
-<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-recip"><span class="std std-ref">recip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
-</dd>
-<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-right-power"><span class="std std-ref">rightPower</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
-</dd>
-<dt><a class="reference internal" href="Magma.html#l-magma-right-power"><span class="std std-ref">rightPower</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
-</dd>
-<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-right-recip"><span class="std std-ref">rightRecip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-sample"><span class="std std-ref">sample</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+<dt><a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f75702e2d"><span class="std std-ref">-</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-polynomial-factorization-explicit-solve-linear-polynomial-equation"></span><dl class="simple" id="index-6">
-<dt><span class="spadfun">solveLinearPolynomialEquation</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %, <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %) -&gt; Union(<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">solveLinearPolynomialEquation([f1,</span> <span class="pre">...,</span> <span class="pre">fn],</span> <span class="pre">g)</span></code> (where the <code class="docutils literal notranslate"><span class="pre">fi</span></code> are relatively prime to each other) returns a list of <code class="docutils literal notranslate"><span class="pre">ai</span></code> such that <code class="docutils literal notranslate"><span class="pre">g/prod</span> <span class="pre">fi</span> <span class="pre">=</span> <span class="pre">sum</span> <span class="pre">ai/fi</span></code> or returns “failed” if no such list of <code class="docutils literal notranslate"><span class="pre">ai</span></code><code class="docutils literal notranslate"><span class="pre">'s</span></code> exists.</p>
-</dd>
-<dt><a class="reference internal" href="UniqueFactorizationDomain.html#l-unique-factorization-domain-square-free"><span class="std std-ref">squareFree</span></a>: % -&gt; <a class="reference internal" href="Factored.html#l-factored"><span class="std std-ref">Factored</span></a> %</dt><dd><p>from <a class="reference internal" href="UniqueFactorizationDomain.html#l-unique-factorization-domain"><span class="std std-ref">UniqueFactorizationDomain</span></a></p>
-</dd>
-<dt><a class="reference internal" href="UniqueFactorizationDomain.html#l-unique-factorization-domain-square-free-part"><span class="std std-ref">squareFreePart</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="UniqueFactorizationDomain.html#l-unique-factorization-domain"><span class="std std-ref">UniqueFactorizationDomain</span></a></p>
+<dl class="simple" id="l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c696369742e3d">
+<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-polynomial-factorization-explicit-square-free-polynomial"></span><dl class="simple" id="index-7">
-<dt><span class="spadfun">squareFreePolynomial</span>: <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> % -&gt; <a class="reference internal" href="Factored.html#l-factored"><span class="std std-ref">Factored</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">squareFreePolynomial(p)</span></code> returns the square-free factorization of the univariate polynomial <code class="docutils literal notranslate"><span class="pre">p</span></code>.</p>
+<dl class="simple" id="l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c696369742e5e">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e69742e5e"><span class="std std-ref">^</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
 </dd>
-<dt><a class="reference internal" href="CancellationAbelianMonoid.html#l-cancellation-abelian-monoid-subtract-if-can"><span class="std std-ref">subtractIfCan</span></a>: (%, %) -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="CancellationAbelianMonoid.html#l-cancellation-abelian-monoid"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
-</dd>
-<dt><a class="reference internal" href="EntireRing.html#l-entire-ring-unit"><span class="std std-ref">unit?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="EntireRing.html#l-entire-ring"><span class="std std-ref">EntireRing</span></a></p>
-</dd>
-<dt><a class="reference internal" href="EntireRing.html#l-entire-ring-unit-canonical"><span class="std std-ref">unitCanonical</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="EntireRing.html#l-entire-ring"><span class="std std-ref">EntireRing</span></a></p>
-</dd>
-<dt><a class="reference internal" href="EntireRing.html#l-entire-ring-unit-normal"><span class="std std-ref">unitNormal</span></a>: % -&gt; Record(unit: %, canonical: %, associate: %)</dt><dd><p>from <a class="reference internal" href="EntireRing.html#l-entire-ring"><span class="std std-ref">EntireRing</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-zero"><span class="std std-ref">zero?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+<dt><a class="reference internal" href="Magma.html#l4d61676d612e5e"><span class="std std-ref">^</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l4d61676d61"><span class="std std-ref">Magma</span></a></p>
 </dd>
 </dl>
-<p><a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
-<p><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
-<p><a class="reference internal" href="AbelianSemiGroup.html#l-abelian-semi-group"><span class="std std-ref">AbelianSemiGroup</span></a></p>
-<p><a class="reference internal" href="Algebra.html#l-algebra"><span class="std std-ref">Algebra</span></a> %</p>
-<p><a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-<p><a class="reference internal" href="BiModule.html#l-bi-module"><span class="std std-ref">BiModule</span></a>(%, %)</p>
-<p><a class="reference internal" href="CancellationAbelianMonoid.html#l-cancellation-abelian-monoid"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
-<p><a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
-<p><a class="reference internal" href="CommutativeRing.html#l-commutative-ring"><span class="std std-ref">CommutativeRing</span></a></p>
-<p><a class="reference internal" href="CommutativeStar.html#l-commutative-star"><span class="std std-ref">CommutativeStar</span></a></p>
-<p><a class="reference internal" href="EntireRing.html#l-entire-ring"><span class="std std-ref">EntireRing</span></a></p>
-<p><a class="reference internal" href="GcdDomain.html#l-gcd-domain"><span class="std std-ref">GcdDomain</span></a></p>
-<p><a class="reference internal" href="IntegralDomain.html#l-integral-domain"><span class="std std-ref">IntegralDomain</span></a></p>
-<p><a class="reference internal" href="LeftModule.html#l-left-module"><span class="std std-ref">LeftModule</span></a> %</p>
-<p><a class="reference internal" href="LeftOreRing.html#l-left-ore-ring"><span class="std std-ref">LeftOreRing</span></a></p>
-<p><a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
-<p><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
-<p><a class="reference internal" href="Module.html#l-module"><span class="std std-ref">Module</span></a> %</p>
-<p><a class="reference internal" href="Monoid.html#l-monoid"><span class="std std-ref">Monoid</span></a></p>
-<p><a class="reference internal" href="NonAssociativeRing.html#l-non-associative-ring"><span class="std std-ref">NonAssociativeRing</span></a></p>
-<p><a class="reference internal" href="NonAssociativeRng.html#l-non-associative-rng"><span class="std std-ref">NonAssociativeRng</span></a></p>
-<p><a class="reference internal" href="NonAssociativeSemiRing.html#l-non-associative-semi-ring"><span class="std std-ref">NonAssociativeSemiRing</span></a></p>
-<p><a class="reference internal" href="NonAssociativeSemiRng.html#l-non-associative-semi-rng"><span class="std std-ref">NonAssociativeSemiRng</span></a></p>
-<p><a class="reference internal" href="noZeroDivisors.html#l-no-zero-divisors"><span class="std std-ref">noZeroDivisors</span></a></p>
-<p><a class="reference internal" href="RightModule.html#l-right-module"><span class="std std-ref">RightModule</span></a> %</p>
-<p><a class="reference internal" href="Ring.html#l-ring"><span class="std std-ref">Ring</span></a></p>
-<p><a class="reference internal" href="Rng.html#l-rng"><span class="std std-ref">Rng</span></a></p>
-<p><a class="reference internal" href="SemiGroup.html#l-semi-group"><span class="std std-ref">SemiGroup</span></a></p>
-<p><a class="reference internal" href="SemiRing.html#l-semi-ring"><span class="std std-ref">SemiRing</span></a></p>
-<p><a class="reference internal" href="SemiRng.html#l-semi-rng"><span class="std std-ref">SemiRng</span></a></p>
-<p><a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-<p><a class="reference internal" href="TwoSidedRecip.html#l-two-sided-recip"><span class="std std-ref">TwoSidedRecip</span></a></p>
-<p><a class="reference internal" href="UniqueFactorizationDomain.html#l-unique-factorization-domain"><span class="std std-ref">UniqueFactorizationDomain</span></a></p>
-<p><a class="reference internal" href="unitsKnown.html#l-units-known"><span class="std std-ref">unitsKnown</span></a></p>
+<dl class="simple" id="l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c696369742e7e3d">
+<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e7e3d"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c696369742e616e6e6968696c6174653f">
+<dt><a class="reference internal" href="Rng.html#l526e672e616e6e6968696c6174653f"><span class="std std-ref">annihilate?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Rng.html#l526e67"><span class="std std-ref">Rng</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c696369742e616e7469436f6d6d757461746f72">
+<dt><a class="reference internal" href="NonAssociativeSemiRng.html#l4e6f6e4173736f6369617469766553656d69526e672e616e7469436f6d6d757461746f72"><span class="std std-ref">antiCommutator</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeSemiRng.html#l4e6f6e4173736f6369617469766553656d69526e67"><span class="std std-ref">NonAssociativeSemiRng</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c696369742e6173736f6369617465733f">
+<dt><a class="reference internal" href="EntireRing.html#l456e7469726552696e672e6173736f6369617465733f"><span class="std std-ref">associates?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="EntireRing.html#l456e7469726552696e67"><span class="std std-ref">EntireRing</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c696369742e6173736f636961746f72">
+<dt><a class="reference internal" href="NonAssociativeRng.html#l4e6f6e4173736f63696174697665526e672e6173736f636961746f72"><span class="std std-ref">associator</span></a>: (%, %, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRng.html#l4e6f6e4173736f63696174697665526e67"><span class="std std-ref">NonAssociativeRng</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c696369742e6368617261637465726973746963">
+<dt><a class="reference internal" href="NonAssociativeRing.html#l4e6f6e4173736f6369617469766552696e672e6368617261637465726973746963"><span class="std std-ref">characteristic</span></a>: () -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="NonAssociativeRing.html#l4e6f6e4173736f6369617469766552696e67"><span class="std std-ref">NonAssociativeRing</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c696369742e636861727468526f6f74"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">charthRoot</span>: % -&gt; Union(%, failed) if % has <a class="reference internal" href="CharacteristicNonZero.html#l43686172616374657269737469634e6f6e5a65726f"><span class="std std-ref">CharacteristicNonZero</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">charthRoot(r)</span></code> returns the <code class="docutils literal notranslate"><span class="pre">p</span></code><code class="docutils literal notranslate"><span class="pre">-</span></code>th root of <code class="docutils literal notranslate"><span class="pre">r</span></code>, or “failed” if none exists in the domain.</p>
+</dd>
+</dl>
+<dl class="simple" id="l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c696369742e636f65726365">
+<dt><a class="reference internal" href="Algebra.html#l416c67656272612e636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="Algebra.html#l416c6765627261"><span class="std std-ref">Algebra</span></a> %</p>
+</dd>
+<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f2e636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+</dd>
+<dt><a class="reference internal" href="NonAssociativeRing.html#l4e6f6e4173736f6369617469766552696e672e636f65726365"><span class="std std-ref">coerce</span></a>: <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a> -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRing.html#l4e6f6e4173736f6369617469766552696e67"><span class="std std-ref">NonAssociativeRing</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c696369742e636f6d6d757461746f72">
+<dt><a class="reference internal" href="NonAssociativeRng.html#l4e6f6e4173736f63696174697665526e672e636f6d6d757461746f72"><span class="std std-ref">commutator</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRng.html#l4e6f6e4173736f63696174697665526e67"><span class="std std-ref">NonAssociativeRng</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c696369742e636f6e646974696f6e50"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">conditionP</span>: <a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> % -&gt; Union(<a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> %, failed) if % has <a class="reference internal" href="CharacteristicNonZero.html#l43686172616374657269737469634e6f6e5a65726f"><span class="std std-ref">CharacteristicNonZero</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">conditionP(m)</span></code> returns a vector of elements, not all zero, whose <code class="docutils literal notranslate"><span class="pre">p</span></code><code class="docutils literal notranslate"><span class="pre">-</span></code>th powers (<code class="docutils literal notranslate"><span class="pre">p</span></code> is the characteristic of the domain) are a solution of the homogenous linear system represented by <code class="docutils literal notranslate"><span class="pre">m</span></code>, or “failed” is there is no such vector.</p>
+</dd>
+</dl>
+<dl class="simple" id="l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c696369742e657871756f">
+<dt><a class="reference internal" href="EntireRing.html#l456e7469726552696e672e657871756f"><span class="std std-ref">exquo</span></a>: (%, %) -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="EntireRing.html#l456e7469726552696e67"><span class="std std-ref">EntireRing</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c696369742e666163746f72">
+<dt><a class="reference internal" href="UniqueFactorizationDomain.html#l556e69717565466163746f72697a6174696f6e446f6d61696e2e666163746f72"><span class="std std-ref">factor</span></a>: % -&gt; <a class="reference internal" href="Factored.html#l466163746f726564"><span class="std std-ref">Factored</span></a> %</dt><dd><p>from <a class="reference internal" href="UniqueFactorizationDomain.html#l556e69717565466163746f72697a6174696f6e446f6d61696e"><span class="std std-ref">UniqueFactorizationDomain</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c696369742e666163746f72506f6c796e6f6d69616c"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">factorPolynomial</span>: <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> % -&gt; <a class="reference internal" href="Factored.html#l466163746f726564"><span class="std std-ref">Factored</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">factorPolynomial(p)</span></code> returns the factorization into irreducibles of the univariate polynomial <code class="docutils literal notranslate"><span class="pre">p</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c696369742e666163746f7253717561726546726565506f6c796e6f6d69616c"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">factorSquareFreePolynomial</span>: <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> % -&gt; <a class="reference internal" href="Factored.html#l466163746f726564"><span class="std std-ref">Factored</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">factorSquareFreePolynomial(p)</span></code> factors the univariate polynomial <code class="docutils literal notranslate"><span class="pre">p</span></code> into irreducibles where <code class="docutils literal notranslate"><span class="pre">p</span></code> is known to be square free and primitive with respect to its main variable.</p>
+</dd>
+</dl>
+<dl class="simple" id="l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c696369742e676364">
+<dt><a class="reference internal" href="GcdDomain.html#l476364446f6d61696e2e676364"><span class="std std-ref">gcd</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="GcdDomain.html#l476364446f6d61696e"><span class="std std-ref">GcdDomain</span></a></p>
+</dd>
+<dt><a class="reference internal" href="GcdDomain.html#l476364446f6d61696e2e676364"><span class="std std-ref">gcd</span></a>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> % -&gt; %</dt><dd><p>from <a class="reference internal" href="GcdDomain.html#l476364446f6d61696e"><span class="std std-ref">GcdDomain</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c696369742e676364506f6c796e6f6d69616c"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">gcdPolynomial</span>: (<a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %, <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %) -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">gcdPolynomial(p,</span> <span class="pre">q)</span></code> returns the <code class="docutils literal notranslate"><span class="pre">gcd</span></code> of the univariate polynomials <code class="docutils literal notranslate"><span class="pre">p</span></code> <code class="docutils literal notranslate"><span class="pre">qnd</span></code> <code class="docutils literal notranslate"><span class="pre">q</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c696369742e68617368">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e68617368"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l53696e676c65496e7465676572"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c696369742e6861736855706461746521">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6861736855706461746521"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c696369742e6c61746578">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6c61746578"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c696369742e6c636d">
+<dt><a class="reference internal" href="GcdDomain.html#l476364446f6d61696e2e6c636d"><span class="std std-ref">lcm</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="GcdDomain.html#l476364446f6d61696e"><span class="std std-ref">GcdDomain</span></a></p>
+</dd>
+<dt><a class="reference internal" href="GcdDomain.html#l476364446f6d61696e2e6c636d"><span class="std std-ref">lcm</span></a>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> % -&gt; %</dt><dd><p>from <a class="reference internal" href="GcdDomain.html#l476364446f6d61696e"><span class="std std-ref">GcdDomain</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c696369742e6c636d436f6566">
+<dt><a class="reference internal" href="LeftOreRing.html#l4c6566744f726552696e672e6c636d436f6566"><span class="std std-ref">lcmCoef</span></a>: (%, %) -&gt; Record(llcm_res: %, coeff1: %, coeff2: %)</dt><dd><p>from <a class="reference internal" href="LeftOreRing.html#l4c6566744f726552696e67"><span class="std std-ref">LeftOreRing</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c696369742e6c656674506f776572">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e69742e6c656674506f776572"><span class="std std-ref">leftPower</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Magma.html#l4d61676d612e6c656674506f776572"><span class="std std-ref">leftPower</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l4d61676d61"><span class="std std-ref">Magma</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c696369742e6c6566745265636970">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e69742e6c6566745265636970"><span class="std std-ref">leftRecip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c696369742e6f6e653f">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e69742e6f6e653f"><span class="std std-ref">one?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c696369742e6f70706f736974653f">
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f69642e6f70706f736974653f"><span class="std std-ref">opposite?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c696369742e7072696d653f">
+<dt><a class="reference internal" href="UniqueFactorizationDomain.html#l556e69717565466163746f72697a6174696f6e446f6d61696e2e7072696d653f"><span class="std std-ref">prime?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="UniqueFactorizationDomain.html#l556e69717565466163746f72697a6174696f6e446f6d61696e"><span class="std std-ref">UniqueFactorizationDomain</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c696369742e7265636970">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e69742e7265636970"><span class="std std-ref">recip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c696369742e7269676874506f776572">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e69742e7269676874506f776572"><span class="std std-ref">rightPower</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Magma.html#l4d61676d612e7269676874506f776572"><span class="std std-ref">rightPower</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l4d61676d61"><span class="std std-ref">Magma</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c696369742e72696768745265636970">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e69742e72696768745265636970"><span class="std std-ref">rightRecip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c696369742e73616d706c65">
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f69642e73616d706c65"><span class="std std-ref">sample</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c696369742e736f6c76654c696e656172506f6c796e6f6d69616c4571756174696f6e"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">solveLinearPolynomialEquation</span>: (<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %, <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %) -&gt; Union(<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">solveLinearPolynomialEquation([f1,</span> <span class="pre">...,</span> <span class="pre">fn],</span> <span class="pre">g)</span></code> (where the <code class="docutils literal notranslate"><span class="pre">fi</span></code> are relatively prime to each other) returns a list of <code class="docutils literal notranslate"><span class="pre">ai</span></code> such that <code class="docutils literal notranslate"><span class="pre">g/prod</span> <span class="pre">fi</span> <span class="pre">=</span> <span class="pre">sum</span> <span class="pre">ai/fi</span></code> or returns “failed” if no such list of <code class="docutils literal notranslate"><span class="pre">ai</span></code><code class="docutils literal notranslate"><span class="pre">'s</span></code> exists.</p>
+</dd>
+</dl>
+<dl class="simple" id="l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c696369742e73717561726546726565">
+<dt><a class="reference internal" href="UniqueFactorizationDomain.html#l556e69717565466163746f72697a6174696f6e446f6d61696e2e73717561726546726565"><span class="std std-ref">squareFree</span></a>: % -&gt; <a class="reference internal" href="Factored.html#l466163746f726564"><span class="std std-ref">Factored</span></a> %</dt><dd><p>from <a class="reference internal" href="UniqueFactorizationDomain.html#l556e69717565466163746f72697a6174696f6e446f6d61696e"><span class="std std-ref">UniqueFactorizationDomain</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c696369742e7371756172654672656550617274">
+<dt><a class="reference internal" href="UniqueFactorizationDomain.html#l556e69717565466163746f72697a6174696f6e446f6d61696e2e7371756172654672656550617274"><span class="std std-ref">squareFreePart</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="UniqueFactorizationDomain.html#l556e69717565466163746f72697a6174696f6e446f6d61696e"><span class="std std-ref">UniqueFactorizationDomain</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c696369742e73717561726546726565506f6c796e6f6d69616c"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">squareFreePolynomial</span>: <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> % -&gt; <a class="reference internal" href="Factored.html#l466163746f726564"><span class="std std-ref">Factored</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">squareFreePolynomial(p)</span></code> returns the square-free factorization of the univariate polynomial <code class="docutils literal notranslate"><span class="pre">p</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c696369742e7375627472616374496643616e">
+<dt><a class="reference internal" href="CancellationAbelianMonoid.html#l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f69642e7375627472616374496643616e"><span class="std std-ref">subtractIfCan</span></a>: (%, %) -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="CancellationAbelianMonoid.html#l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c696369742e756e69743f">
+<dt><a class="reference internal" href="EntireRing.html#l456e7469726552696e672e756e69743f"><span class="std std-ref">unit?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="EntireRing.html#l456e7469726552696e67"><span class="std std-ref">EntireRing</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c696369742e756e697443616e6f6e6963616c">
+<dt><a class="reference internal" href="EntireRing.html#l456e7469726552696e672e756e697443616e6f6e6963616c"><span class="std std-ref">unitCanonical</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="EntireRing.html#l456e7469726552696e67"><span class="std std-ref">EntireRing</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c696369742e756e69744e6f726d616c">
+<dt><a class="reference internal" href="EntireRing.html#l456e7469726552696e672e756e69744e6f726d616c"><span class="std std-ref">unitNormal</span></a>: % -&gt; Record(unit: %, canonical: %, associate: %)</dt><dd><p>from <a class="reference internal" href="EntireRing.html#l456e7469726552696e67"><span class="std std-ref">EntireRing</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c696369742e7a65726f3f">
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f69642e7a65726f3f"><span class="std std-ref">zero?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+</dl>
+<p><a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p>
+<p><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+<p><a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f7570"><span class="std std-ref">AbelianSemiGroup</span></a></p>
+<p><a class="reference internal" href="Algebra.html#l416c6765627261"><span class="std std-ref">Algebra</span></a> %</p>
+<p><a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+<p><a class="reference internal" href="BiModule.html#l42694d6f64756c65"><span class="std std-ref">BiModule</span></a>(%, %)</p>
+<p><a class="reference internal" href="CancellationAbelianMonoid.html#l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
+<p><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+<p><a class="reference internal" href="CommutativeRing.html#l436f6d6d7574617469766552696e67"><span class="std std-ref">CommutativeRing</span></a></p>
+<p><a class="reference internal" href="CommutativeStar.html#l436f6d6d7574617469766553746172"><span class="std std-ref">CommutativeStar</span></a></p>
+<p><a class="reference internal" href="EntireRing.html#l456e7469726552696e67"><span class="std std-ref">EntireRing</span></a></p>
+<p><a class="reference internal" href="GcdDomain.html#l476364446f6d61696e"><span class="std std-ref">GcdDomain</span></a></p>
+<p><a class="reference internal" href="IntegralDomain.html#l496e74656772616c446f6d61696e"><span class="std std-ref">IntegralDomain</span></a></p>
+<p><a class="reference internal" href="LeftModule.html#l4c6566744d6f64756c65"><span class="std std-ref">LeftModule</span></a> %</p>
+<p><a class="reference internal" href="LeftOreRing.html#l4c6566744f726552696e67"><span class="std std-ref">LeftOreRing</span></a></p>
+<p><a class="reference internal" href="Magma.html#l4d61676d61"><span class="std std-ref">Magma</span></a></p>
+<p><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+<p><a class="reference internal" href="Module.html#l4d6f64756c65"><span class="std std-ref">Module</span></a> %</p>
+<p><a class="reference internal" href="Monoid.html#l4d6f6e6f6964"><span class="std std-ref">Monoid</span></a></p>
+<p><a class="reference internal" href="NonAssociativeRing.html#l4e6f6e4173736f6369617469766552696e67"><span class="std std-ref">NonAssociativeRing</span></a></p>
+<p><a class="reference internal" href="NonAssociativeRng.html#l4e6f6e4173736f63696174697665526e67"><span class="std std-ref">NonAssociativeRng</span></a></p>
+<p><a class="reference internal" href="NonAssociativeSemiRing.html#l4e6f6e4173736f6369617469766553656d6952696e67"><span class="std std-ref">NonAssociativeSemiRing</span></a></p>
+<p><a class="reference internal" href="NonAssociativeSemiRng.html#l4e6f6e4173736f6369617469766553656d69526e67"><span class="std std-ref">NonAssociativeSemiRng</span></a></p>
+<p><a class="reference internal" href="noZeroDivisors.html#l6e6f5a65726f44697669736f7273"><span class="std std-ref">noZeroDivisors</span></a></p>
+<p><a class="reference internal" href="RightModule.html#l52696768744d6f64756c65"><span class="std std-ref">RightModule</span></a> %</p>
+<p><a class="reference internal" href="Ring.html#l52696e67"><span class="std std-ref">Ring</span></a></p>
+<p><a class="reference internal" href="Rng.html#l526e67"><span class="std std-ref">Rng</span></a></p>
+<p><a class="reference internal" href="SemiGroup.html#l53656d6947726f7570"><span class="std std-ref">SemiGroup</span></a></p>
+<p><a class="reference internal" href="SemiRing.html#l53656d6952696e67"><span class="std std-ref">SemiRing</span></a></p>
+<p><a class="reference internal" href="SemiRng.html#l53656d69526e67"><span class="std std-ref">SemiRng</span></a></p>
+<p><a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+<p><a class="reference internal" href="TwoSidedRecip.html#l54776f53696465645265636970"><span class="std std-ref">TwoSidedRecip</span></a></p>
+<p><a class="reference internal" href="UniqueFactorizationDomain.html#l556e69717565466163746f72697a6174696f6e446f6d61696e"><span class="std std-ref">UniqueFactorizationDomain</span></a></p>
+<p><a class="reference internal" href="unitsKnown.html#l756e6974734b6e6f776e"><span class="std std-ref">unitsKnown</span></a></p>
 </div>
 
 
@@ -260,7 +336,7 @@
         <li class="right" >
           <a href="PolynomialCategory.html" title="PolynomialCategory(R, E, VarSet)"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Categories.html" >Categories</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">PolynomialFactorizationExplicit</a></li> 

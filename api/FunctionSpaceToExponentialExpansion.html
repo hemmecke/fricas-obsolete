@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FunctionSpaceToExponentialExpansion(R, FE, x, cen) &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>FunctionSpaceToExponentialExpansion(R, FE, x, cen) &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="FunctionSpaceSum.html" title="FunctionSpaceSum(R, F)"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">FunctionSpaceToExponentialExpansion(R, FE, x, cen)</a></li> 
@@ -46,20 +46,20 @@
           <div class="body" role="main">
             
   <div class="section" id="functionspacetoexponentialexpansion-r-fe-x-cen">
-<span id="l-function-space-to-exponential-expansion"></span><span id="index-0"></span><h1>FunctionSpaceToExponentialExpansion(R, FE, x, cen)<a class="headerlink" href="#functionspacetoexponentialexpansion-r-fe-x-cen" title="Permalink to this headline">¶</a></h1>
+<span id="l46756e6374696f6e5370616365546f4578706f6e656e7469616c457870616e73696f6e"></span><span id="index-0"></span><h1>FunctionSpaceToExponentialExpansion(R, FE, x, cen)<a class="headerlink" href="#functionspacetoexponentialexpansion-r-fe-x-cen" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/fs2expxp.spad#L1">fs2expxp.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/fs2expxp.spad#L1">[edit on github]</a></p>
 <ul class="simple">
-<li><p>R: Join(<a class="reference internal" href="GcdDomain.html#l-gcd-domain"><span class="std std-ref">GcdDomain</span></a>, <a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a>, <a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="LinearlyExplicitOver.html#l-linearly-explicit-over"><span class="std std-ref">LinearlyExplicitOver</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>)</p></li>
-<li><p>FE: Join(<a class="reference internal" href="AlgebraicallyClosedField.html#l-algebraically-closed-field"><span class="std std-ref">AlgebraicallyClosedField</span></a>, <a class="reference internal" href="TranscendentalFunctionCategory.html#l-transcendental-function-category"><span class="std std-ref">TranscendentalFunctionCategory</span></a>, <a class="reference internal" href="FunctionSpace.html#l-function-space"><span class="std std-ref">FunctionSpace</span></a> R)</p></li>
-<li><p>x: <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a></p></li>
+<li><p>R: Join(<a class="reference internal" href="GcdDomain.html#l476364446f6d61696e"><span class="std std-ref">GcdDomain</span></a>, <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a>, <a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f"><span class="std std-ref">RetractableTo</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="LinearlyExplicitOver.html#l4c696e6561726c794578706c696369744f766572"><span class="std std-ref">LinearlyExplicitOver</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>)</p></li>
+<li><p>FE: Join(<a class="reference internal" href="AlgebraicallyClosedField.html#l416c67656272616963616c6c79436c6f7365644669656c64"><span class="std std-ref">AlgebraicallyClosedField</span></a>, <a class="reference internal" href="TranscendentalFunctionCategory.html#l5472616e7363656e64656e74616c46756e6374696f6e43617465676f7279"><span class="std std-ref">TranscendentalFunctionCategory</span></a>, <a class="reference internal" href="FunctionSpace.html#l46756e6374696f6e5370616365"><span class="std std-ref">FunctionSpace</span></a> R)</p></li>
+<li><p>x: <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a></p></li>
 <li><p>cen: FE</p></li>
 </ul>
 <p>This package converts expressions in some function space to exponential expansions.</p>
-<span class="target" id="l-function-space-to-exponential-expansion-expr-to-x-x-p"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">exprToXXP</span>: (FE, <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>) -&gt; Union(%expansion: <a class="reference internal" href="ExponentialExpansion.html#l-exponential-expansion"><span class="std std-ref">ExponentialExpansion</span></a>(R, FE, x, cen), %problem: Record(func: <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, prob: <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>))</dt><dd><p><code class="docutils literal notranslate"><span class="pre">exprToXXP(fcn,</span> <span class="pre">posCheck?)</span></code> converts the expression <code class="docutils literal notranslate"><span class="pre">fcn</span></code> to an exponential expansion. If <code class="docutils literal notranslate"><span class="pre">posCheck?</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>, log<code class="docutils literal notranslate"><span class="pre">'s</span></code> of negative numbers are not allowed nor are <code class="docutils literal notranslate"><span class="pre">n</span></code>th roots of negative numbers with <code class="docutils literal notranslate"><span class="pre">n</span></code> even. If <code class="docutils literal notranslate"><span class="pre">posCheck?</span></code> is <code class="docutils literal notranslate"><span class="pre">false</span></code>, these are allowed.</p>
+<span class="target" id="l46756e6374696f6e5370616365546f4578706f6e656e7469616c457870616e73696f6e2e65787072546f585850"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">exprToXXP</span>: (FE, <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a>) -&gt; Union(%expansion: <a class="reference internal" href="ExponentialExpansion.html#l4578706f6e656e7469616c457870616e73696f6e"><span class="std std-ref">ExponentialExpansion</span></a>(R, FE, x, cen), %problem: Record(func: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, prob: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>))</dt><dd><p><code class="docutils literal notranslate"><span class="pre">exprToXXP(fcn,</span> <span class="pre">posCheck?)</span></code> converts the expression <code class="docutils literal notranslate"><span class="pre">fcn</span></code> to an exponential expansion. If <code class="docutils literal notranslate"><span class="pre">posCheck?</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>, log<code class="docutils literal notranslate"><span class="pre">'s</span></code> of negative numbers are not allowed nor are <code class="docutils literal notranslate"><span class="pre">n</span></code>th roots of negative numbers with <code class="docutils literal notranslate"><span class="pre">n</span></code> even. If <code class="docutils literal notranslate"><span class="pre">posCheck?</span></code> is <code class="docutils literal notranslate"><span class="pre">false</span></code>, these are allowed.</p>
 </dd>
 </dl>
-<span class="target" id="l-function-space-to-exponential-expansion-local-abs"></span><dl class="simple" id="index-2">
+<span class="target" id="l46756e6374696f6e5370616365546f4578706f6e656e7469616c457870616e73696f6e2e6c6f63616c416273"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">localAbs</span>: FE -&gt; FE</dt><dd><p><code class="docutils literal notranslate"><span class="pre">localAbs(fcn)</span></code> = <code class="docutils literal notranslate"><span class="pre">abs(fcn)</span></code> or <code class="docutils literal notranslate"><span class="pre">sqrt(fcn^2)</span></code> depending on whether or not FE has a function <code class="docutils literal notranslate"><span class="pre">abs</span></code>. This should be a local function, but the compiler won<code class="docutils literal notranslate"><span class="pre">'t</span></code> allow it.</p>
 </dd>
 </dl>
@@ -110,7 +110,7 @@
         <li class="right" >
           <a href="FunctionSpaceSum.html" title="FunctionSpaceSum(R, F)"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">FunctionSpaceToExponentialExpansion(R, FE, x, cen)</a></li> 

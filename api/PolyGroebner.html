@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PolyGroebner F &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>PolyGroebner F &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="PolToPol.html" title="PolToPol(lv, R)"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">PolyGroebner F</a></li> 
@@ -46,18 +46,18 @@
           <div class="body" role="main">
             
   <div class="section" id="polygroebner-f">
-<span id="l-poly-groebner"></span><span id="index-0"></span><h1>PolyGroebner F<a class="headerlink" href="#polygroebner-f" title="Permalink to this headline">¶</a></h1>
+<span id="l506f6c7947726f65626e6572"></span><span id="index-0"></span><h1>PolyGroebner F<a class="headerlink" href="#polygroebner-f" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/pgrobner.spad#L1">pgrobner.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/pgrobner.spad#L1">[edit on github]</a></p>
 <ul class="simple">
-<li><p>F: <a class="reference internal" href="GcdDomain.html#l-gcd-domain"><span class="std std-ref">GcdDomain</span></a></p></li>
+<li><p>F: <a class="reference internal" href="GcdDomain.html#l476364446f6d61696e"><span class="std std-ref">GcdDomain</span></a></p></li>
 </ul>
 <p>Groebner functions for <code class="docutils literal notranslate"><span class="pre">P</span></code> <code class="docutils literal notranslate"><span class="pre">F</span></code> This package is an interface package to the groebner basis package which allows you to compute groebner bases for polynomials in either lexicographic ordering or total degree ordering refined by reverse lex. The input is the ordinary polynomial type which is internally converted to a type with the required ordering. The resulting grobner basis is converted back to ordinary polynomials. The ordering among the variables is controlled by an explicit list of variables which is passed as a second argument. The coefficient domain is allowed to be any <code class="docutils literal notranslate"><span class="pre">gcd</span></code> domain, but the groebner basis is computed as if the polynomials were over a field.</p>
-<span class="target" id="l-poly-groebner-lex-groebner"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">lexGroebner</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> F, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">lexGroebner(lp,</span> <span class="pre">lv)</span></code> computes Groebner basis for the list of polynomials <code class="docutils literal notranslate"><span class="pre">lp</span></code> in lexicographic order. The variables are ordered by their position in the list <code class="docutils literal notranslate"><span class="pre">lv</span></code>.</p>
+<span class="target" id="l506f6c7947726f65626e65722e6c657847726f65626e6572"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">lexGroebner</span>: (<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Polynomial.html#l506f6c796e6f6d69616c"><span class="std std-ref">Polynomial</span></a> F, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>) -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Polynomial.html#l506f6c796e6f6d69616c"><span class="std std-ref">Polynomial</span></a> F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">lexGroebner(lp,</span> <span class="pre">lv)</span></code> computes Groebner basis for the list of polynomials <code class="docutils literal notranslate"><span class="pre">lp</span></code> in lexicographic order. The variables are ordered by their position in the list <code class="docutils literal notranslate"><span class="pre">lv</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-poly-groebner-total-groebner"></span><dl class="simple" id="index-2">
-<dt><span class="spadfun">totalGroebner</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> F, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">totalGroebner(lp,</span> <span class="pre">lv)</span></code> computes Groebner basis for the list of polynomials <code class="docutils literal notranslate"><span class="pre">lp</span></code> with the terms ordered first by total degree and then refined by reverse lexicographic ordering. The variables are ordered by their position in the list <code class="docutils literal notranslate"><span class="pre">lv</span></code>.</p>
+<span class="target" id="l506f6c7947726f65626e65722e746f74616c47726f65626e6572"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">totalGroebner</span>: (<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Polynomial.html#l506f6c796e6f6d69616c"><span class="std std-ref">Polynomial</span></a> F, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>) -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Polynomial.html#l506f6c796e6f6d69616c"><span class="std std-ref">Polynomial</span></a> F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">totalGroebner(lp,</span> <span class="pre">lv)</span></code> computes Groebner basis for the list of polynomials <code class="docutils literal notranslate"><span class="pre">lp</span></code> with the terms ordered first by total degree and then refined by reverse lexicographic ordering. The variables are ordered by their position in the list <code class="docutils literal notranslate"><span class="pre">lv</span></code>.</p>
 </dd>
 </dl>
 </div>
@@ -107,7 +107,7 @@
         <li class="right" >
           <a href="PolToPol.html" title="PolToPol(lv, R)"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">PolyGroebner F</a></li> 

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UnivariateTaylorSeriesODESolver(Coef, UTS) &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>UnivariateTaylorSeriesODESolver(Coef, UTS) &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="UnivariateTaylorSeriesFunctions2.html" title="UnivariateTaylorSeriesFunctions2(Coef1, Coef2, UTS1, UTS2)"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">UnivariateTaylorSeriesODESolver(Coef, UTS)</a></li> 
@@ -46,43 +46,43 @@
           <div class="body" role="main">
             
   <div class="section" id="univariatetaylorseriesodesolver-coef-uts">
-<span id="l-univariate-taylor-series-o-d-e-solver"></span><span id="index-0"></span><h1>UnivariateTaylorSeriesODESolver(Coef, UTS)<a class="headerlink" href="#univariatetaylorseriesodesolver-coef-uts" title="Permalink to this headline">¶</a></h1>
+<span id="l556e69766172696174655461796c6f725365726965734f4445536f6c766572"></span><span id="index-0"></span><h1>UnivariateTaylorSeriesODESolver(Coef, UTS)<a class="headerlink" href="#univariatetaylorseriesodesolver-coef-uts" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/utsode.spad#L1">utsode.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/utsode.spad#L1">[edit on github]</a></p>
 <ul class="simple">
-<li><p>Coef: <a class="reference internal" href="Algebra.html#l-algebra"><span class="std std-ref">Algebra</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></p></li>
-<li><p>UTS: <a class="reference internal" href="UnivariateTaylorSeriesCategory.html#l-univariate-taylor-series-category"><span class="std std-ref">UnivariateTaylorSeriesCategory</span></a> Coef</p></li>
+<li><p>Coef: <a class="reference internal" href="Algebra.html#l416c6765627261"><span class="std std-ref">Algebra</span></a> <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></p></li>
+<li><p>UTS: <a class="reference internal" href="UnivariateTaylorSeriesCategory.html#l556e69766172696174655461796c6f7253657269657343617465676f7279"><span class="std std-ref">UnivariateTaylorSeriesCategory</span></a> Coef</p></li>
 </ul>
 <p>This package provides Taylor series solutions to regular linear or non-linear ordinary differential equations of arbitrary order.</p>
-<span class="target" id="l-univariate-taylor-series-o-d-e-solver-fixed-point-exquo"></span><dl class="simple" id="index-1">
+<span class="target" id="l556e69766172696174655461796c6f725365726965734f4445536f6c7665722e6669786564506f696e74457871756f"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">fixedPointExquo</span>: (UTS, UTS) -&gt; UTS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">fixedPointExquo(f,</span> <span class="pre">g)</span></code> computes the exact quotient of <code class="docutils literal notranslate"><span class="pre">f</span></code> and <code class="docutils literal notranslate"><span class="pre">g</span></code> using a fixed point computation.</p>
 </dd>
 </dl>
-<span class="target" id="l-univariate-taylor-series-o-d-e-solver-mpsode"></span><dl class="simple" id="index-2">
-<dt><span class="spadfun">mpsode</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Coef, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a>(<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> UTS -&gt; UTS)) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> UTS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">mpsode(r,</span> <span class="pre">f)</span></code> solves the system of differential equations <code class="docutils literal notranslate"><span class="pre">dy[i]/dx</span> <span class="pre">=f[i]</span> <span class="pre">[x,</span> <span class="pre">y[1],</span> <span class="pre">y[2],</span> <span class="pre">...,</span> <span class="pre">y[n]]</span></code>, <code class="docutils literal notranslate"><span class="pre">y[i](a)</span> <span class="pre">=</span> <span class="pre">r[i]</span></code> for <code class="docutils literal notranslate"><span class="pre">i</span></code> in 1..<code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
+<span class="target" id="l556e69766172696174655461796c6f725365726965734f4445536f6c7665722e6d70736f6465"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">mpsode</span>: (<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> Coef, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a>(<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> UTS -&gt; UTS)) -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> UTS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">mpsode(r,</span> <span class="pre">f)</span></code> solves the system of differential equations <code class="docutils literal notranslate"><span class="pre">dy[i]/dx</span> <span class="pre">=f[i]</span> <span class="pre">[x,</span> <span class="pre">y[1],</span> <span class="pre">y[2],</span> <span class="pre">...,</span> <span class="pre">y[n]]</span></code>, <code class="docutils literal notranslate"><span class="pre">y[i](a)</span> <span class="pre">=</span> <span class="pre">r[i]</span></code> for <code class="docutils literal notranslate"><span class="pre">i</span></code> in 1..<code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-univariate-taylor-series-o-d-e-solver-ode1"></span><dl class="simple" id="index-3">
+<span class="target" id="l556e69766172696174655461796c6f725365726965734f4445536f6c7665722e6f646531"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">ode1</span>: (UTS -&gt; UTS, Coef) -&gt; UTS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">ode1(f,</span> <span class="pre">c)</span></code> is the solution to <code class="docutils literal notranslate"><span class="pre">y'</span> <span class="pre">=</span> <span class="pre">f(y)</span></code> such that <code class="docutils literal notranslate"><span class="pre">y(a)</span> <span class="pre">=</span> <span class="pre">c</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-univariate-taylor-series-o-d-e-solver-ode2"></span><dl class="simple" id="index-4">
+<span class="target" id="l556e69766172696174655461796c6f725365726965734f4445536f6c7665722e6f646532"></span><dl class="simple" id="index-4">
 <dt><span class="spadfun">ode2</span>: ((UTS, UTS) -&gt; UTS, Coef, Coef) -&gt; UTS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">ode2(f,</span> <span class="pre">c0,</span> <span class="pre">c1)</span></code> is the solution to <code class="docutils literal notranslate"><span class="pre">y''</span> <span class="pre">=</span> <span class="pre">f(y,</span> <span class="pre">y')</span></code> such that <code class="docutils literal notranslate"><span class="pre">y(a)</span> <span class="pre">=</span> <span class="pre">c0</span></code> and <code class="docutils literal notranslate"><span class="pre">y'(a)</span> <span class="pre">=</span> <span class="pre">c1</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-univariate-taylor-series-o-d-e-solver-ode"></span><dl class="simple" id="index-5">
-<dt><span class="spadfun">ode</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> UTS -&gt; UTS, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Coef) -&gt; UTS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">ode(f,</span> <span class="pre">cl)</span></code> is the solution to <code class="docutils literal notranslate"><span class="pre">y&lt;n&gt;=f(y,</span> <span class="pre">y',</span> <span class="pre">..,</span> <span class="pre">y&lt;n-1&gt;)</span></code> such that <code class="docutils literal notranslate"><span class="pre">y&lt;i&gt;(a)</span> <span class="pre">=</span> <span class="pre">cl.(i+1)</span></code> for <code class="docutils literal notranslate"><span class="pre">i</span></code> in 0..(<code class="docutils literal notranslate"><span class="pre">n</span></code> - 1).</p>
+<span class="target" id="l556e69766172696174655461796c6f725365726965734f4445536f6c7665722e6f6465"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">ode</span>: (<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> UTS -&gt; UTS, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> Coef) -&gt; UTS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">ode(f,</span> <span class="pre">cl)</span></code> is the solution to <code class="docutils literal notranslate"><span class="pre">y&lt;n&gt;=f(y,</span> <span class="pre">y',</span> <span class="pre">..,</span> <span class="pre">y&lt;n-1&gt;)</span></code> such that <code class="docutils literal notranslate"><span class="pre">y&lt;i&gt;(a)</span> <span class="pre">=</span> <span class="pre">cl.(i+1)</span></code> for <code class="docutils literal notranslate"><span class="pre">i</span></code> in 0..(<code class="docutils literal notranslate"><span class="pre">n</span></code> - 1).</p>
 </dd>
 </dl>
-<span class="target" id="l-univariate-taylor-series-o-d-e-solver-st-func1"></span><dl class="simple" id="index-6">
-<dt><span class="spadfun">stFunc1</span>: (UTS -&gt; UTS) -&gt; <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef -&gt; <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef</dt><dd><p><code class="docutils literal notranslate"><span class="pre">stFunc1(f)</span></code> is a local function exported due to compiler problem. This function is of no interest to the top-level user.</p>
+<span class="target" id="l556e69766172696174655461796c6f725365726965734f4445536f6c7665722e737446756e6331"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">stFunc1</span>: (UTS -&gt; UTS) -&gt; <a class="reference internal" href="Stream.html#l53747265616d"><span class="std std-ref">Stream</span></a> Coef -&gt; <a class="reference internal" href="Stream.html#l53747265616d"><span class="std std-ref">Stream</span></a> Coef</dt><dd><p><code class="docutils literal notranslate"><span class="pre">stFunc1(f)</span></code> is a local function exported due to compiler problem. This function is of no interest to the top-level user.</p>
 </dd>
 </dl>
-<span class="target" id="l-univariate-taylor-series-o-d-e-solver-st-func2"></span><dl class="simple" id="index-7">
-<dt><span class="spadfun">stFunc2</span>: ((UTS, UTS) -&gt; UTS) -&gt; (<a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef, <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef) -&gt; <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef</dt><dd><p><code class="docutils literal notranslate"><span class="pre">stFunc2(f)</span></code> is a local function exported due to compiler problem. This function is of no interest to the top-level user.</p>
+<span class="target" id="l556e69766172696174655461796c6f725365726965734f4445536f6c7665722e737446756e6332"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">stFunc2</span>: ((UTS, UTS) -&gt; UTS) -&gt; (<a class="reference internal" href="Stream.html#l53747265616d"><span class="std std-ref">Stream</span></a> Coef, <a class="reference internal" href="Stream.html#l53747265616d"><span class="std std-ref">Stream</span></a> Coef) -&gt; <a class="reference internal" href="Stream.html#l53747265616d"><span class="std std-ref">Stream</span></a> Coef</dt><dd><p><code class="docutils literal notranslate"><span class="pre">stFunc2(f)</span></code> is a local function exported due to compiler problem. This function is of no interest to the top-level user.</p>
 </dd>
 </dl>
-<span class="target" id="l-univariate-taylor-series-o-d-e-solver-st-func-n"></span><dl class="simple" id="index-8">
-<dt><span class="spadfun">stFuncN</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> UTS -&gt; UTS) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef -&gt; <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef</dt><dd><p><code class="docutils literal notranslate"><span class="pre">stFuncN(f)</span></code> is a local function xported due to compiler problem. This function is of no interest to the top-level user.</p>
+<span class="target" id="l556e69766172696174655461796c6f725365726965734f4445536f6c7665722e737446756e634e"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">stFuncN</span>: (<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> UTS -&gt; UTS) -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Stream.html#l53747265616d"><span class="std std-ref">Stream</span></a> Coef -&gt; <a class="reference internal" href="Stream.html#l53747265616d"><span class="std std-ref">Stream</span></a> Coef</dt><dd><p><code class="docutils literal notranslate"><span class="pre">stFuncN(f)</span></code> is a local function xported due to compiler problem. This function is of no interest to the top-level user.</p>
 </dd>
 </dl>
 </div>
@@ -132,7 +132,7 @@
         <li class="right" >
           <a href="UnivariateTaylorSeriesFunctions2.html" title="UnivariateTaylorSeriesFunctions2(Coef1, Coef2, UTS1, UTS2)"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">UnivariateTaylorSeriesODESolver(Coef, UTS)</a></li> 

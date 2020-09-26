@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GradedAlgebra(R, E) &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>GradedAlgebra(R, E) &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="GcdDomain.html" title="GcdDomain"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Categories.html" accesskey="U">Categories</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">GradedAlgebra(R, E)</a></li> 
@@ -46,61 +46,85 @@
           <div class="body" role="main">
             
   <div class="section" id="gradedalgebra-r-e">
-<span id="l-graded-algebra"></span><span id="index-0"></span><h1>GradedAlgebra(R, E)<a class="headerlink" href="#gradedalgebra-r-e" title="Permalink to this headline">¶</a></h1>
+<span id="l477261646564416c6765627261"></span><span id="index-0"></span><h1>GradedAlgebra(R, E)<a class="headerlink" href="#gradedalgebra-r-e" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/carten.spad#L48">carten.spad line 48</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/carten.spad#L48">[edit on github]</a></p>
 <ul class="simple">
-<li><p>R: <a class="reference internal" href="CommutativeRing.html#l-commutative-ring"><span class="std std-ref">CommutativeRing</span></a></p></li>
-<li><p>E: <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p></li>
+<li><p>R: <a class="reference internal" href="CommutativeRing.html#l436f6d6d7574617469766552696e67"><span class="std std-ref">CommutativeRing</span></a></p></li>
+<li><p>E: <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p></li>
 </ul>
 <p>GradedAlgebra(<code class="docutils literal notranslate"><span class="pre">R</span></code>, <code class="docutils literal notranslate"><span class="pre">E</span></code>) denotes <code class="docutils literal notranslate"><span class="pre">E-graded</span> <span class="pre">\</span> <span class="pre">``R</span></code>-algebra<code class="docutils literal notranslate"><span class="pre">''</span></code>. A graded algebra is a graded module together with a degree preserving <code class="docutils literal notranslate"><span class="pre">R</span></code>-linear map, called the <em>product</em>.   The name <code class="docutils literal notranslate"><span class="pre">product\</span> <span class="pre">``''</span></code> is written out in full so inner and outer products with the same mapping type can be distinguished by name.</p>
-<dl class="simple">
-<dt><a class="reference internal" href="GradedModule.html#l-graded-module-0"><span class="std std-ref">0</span></a>: %</dt><dd><p>from <a class="reference internal" href="GradedModule.html#l-graded-module"><span class="std std-ref">GradedModule</span></a>(R, E)</p>
+<dl class="simple" id="l477261646564416c67656272612e30">
+<dt><a class="reference internal" href="GradedModule.html#l4772616465644d6f64756c652e30"><span class="std std-ref">0</span></a>: %</dt><dd><p>from <a class="reference internal" href="GradedModule.html#l4772616465644d6f64756c65"><span class="std std-ref">GradedModule</span></a>(R, E)</p>
 </dd>
 </dl>
-<span class="target" id="l-graded-algebra-1"></span><dl class="simple" id="index-1">
+<span class="target" id="l477261646564416c67656272612e31"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">1</span>: %</dt><dd><p>1 is the identity for <code class="docutils literal notranslate"><span class="pre">product</span></code>.</p>
 </dd>
-<dt><a class="reference internal" href="GradedModule.html#id1"><span class="std std-ref">*</span></a>: (%, R) -&gt; %</dt><dd><p>from <a class="reference internal" href="GradedModule.html#l-graded-module"><span class="std std-ref">GradedModule</span></a>(R, E)</p>
+</dl>
+<dl class="simple" id="l477261646564416c67656272612e2a">
+<dt><a class="reference internal" href="GradedModule.html#l4772616465644d6f64756c652e2a"><span class="std std-ref">*</span></a>: (%, R) -&gt; %</dt><dd><p>from <a class="reference internal" href="GradedModule.html#l4772616465644d6f64756c65"><span class="std std-ref">GradedModule</span></a>(R, E)</p>
 </dd>
-<dt><a class="reference internal" href="GradedModule.html#id1"><span class="std std-ref">*</span></a>: (R, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="GradedModule.html#l-graded-module"><span class="std std-ref">GradedModule</span></a>(R, E)</p>
-</dd>
-<dt><a class="reference internal" href="GradedModule.html#id2"><span class="std std-ref">+</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="GradedModule.html#l-graded-module"><span class="std std-ref">GradedModule</span></a>(R, E)</p>
-</dd>
-<dt><a class="reference internal" href="GradedModule.html#id3"><span class="std std-ref">-</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="GradedModule.html#l-graded-module"><span class="std std-ref">GradedModule</span></a>(R, E)</p>
-</dd>
-<dt><a class="reference internal" href="GradedModule.html#id3"><span class="std std-ref">-</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="GradedModule.html#l-graded-module"><span class="std std-ref">GradedModule</span></a>(R, E)</p>
-</dd>
-<dt><a class="reference internal" href="BasicType.html#id1"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-</dd>
-<dt><a class="reference internal" href="BasicType.html#id2"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-</dd>
-<dt><a class="reference internal" href="CoercibleTo.html#l-coercible-to-coerce"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
-</dd>
-<dt><a class="reference internal" href="CoercibleFrom.html#l-coercible-from-coerce"><span class="std std-ref">coerce</span></a>: R -&gt; %</dt><dd><p>from <a class="reference internal" href="CoercibleFrom.html#l-coercible-from"><span class="std std-ref">CoercibleFrom</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="GradedModule.html#l-graded-module-degree"><span class="std std-ref">degree</span></a>: % -&gt; E</dt><dd><p>from <a class="reference internal" href="GradedModule.html#l-graded-module"><span class="std std-ref">GradedModule</span></a>(R, E)</p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l-single-integer"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash-update"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-latex"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+<dt><a class="reference internal" href="GradedModule.html#l4772616465644d6f64756c652e2a"><span class="std std-ref">*</span></a>: (R, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="GradedModule.html#l4772616465644d6f64756c65"><span class="std std-ref">GradedModule</span></a>(R, E)</p>
 </dd>
 </dl>
-<span class="target" id="l-graded-algebra-product"></span><dl class="simple" id="index-2">
+<dl class="simple" id="l477261646564416c67656272612e2b">
+<dt><a class="reference internal" href="GradedModule.html#l4772616465644d6f64756c652e2b"><span class="std std-ref">+</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="GradedModule.html#l4772616465644d6f64756c65"><span class="std std-ref">GradedModule</span></a>(R, E)</p>
+</dd>
+</dl>
+<dl class="simple" id="l477261646564416c67656272612e2d">
+<dt><a class="reference internal" href="GradedModule.html#l4772616465644d6f64756c652e2d"><span class="std std-ref">-</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="GradedModule.html#l4772616465644d6f64756c65"><span class="std std-ref">GradedModule</span></a>(R, E)</p>
+</dd>
+<dt><a class="reference internal" href="GradedModule.html#l4772616465644d6f64756c652e2d"><span class="std std-ref">-</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="GradedModule.html#l4772616465644d6f64756c65"><span class="std std-ref">GradedModule</span></a>(R, E)</p>
+</dd>
+</dl>
+<dl class="simple" id="l477261646564416c67656272612e3d">
+<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l477261646564416c67656272612e7e3d">
+<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e7e3d"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l477261646564416c67656272612e636f65726365">
+<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f2e636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+</dd>
+<dt><a class="reference internal" href="CoercibleFrom.html#l436f65726369626c6546726f6d2e636f65726365"><span class="std std-ref">coerce</span></a>: R -&gt; %</dt><dd><p>from <a class="reference internal" href="CoercibleFrom.html#l436f65726369626c6546726f6d"><span class="std std-ref">CoercibleFrom</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l477261646564416c67656272612e646567726565">
+<dt><a class="reference internal" href="GradedModule.html#l4772616465644d6f64756c652e646567726565"><span class="std std-ref">degree</span></a>: % -&gt; E</dt><dd><p>from <a class="reference internal" href="GradedModule.html#l4772616465644d6f64756c65"><span class="std std-ref">GradedModule</span></a>(R, E)</p>
+</dd>
+</dl>
+<dl class="simple" id="l477261646564416c67656272612e68617368">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e68617368"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l53696e676c65496e7465676572"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l477261646564416c67656272612e6861736855706461746521">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6861736855706461746521"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l477261646564416c67656272612e6c61746578">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6c61746578"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l477261646564416c67656272612e70726f64756374"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">product</span>: (%, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">product(a,</span> <span class="pre">b)</span></code> is the degree-preserving <code class="docutils literal notranslate"><span class="pre">R</span></code>-linear product:   <code class="docutils literal notranslate"><span class="pre">degree</span> <span class="pre">product(a,</span> <span class="pre">b)</span> <span class="pre">=</span> <span class="pre">degree</span> <span class="pre">a</span> <span class="pre">+</span> <span class="pre">degree</span> <span class="pre">b</span></code> <code class="docutils literal notranslate"><span class="pre">product(a1+a2,</span> <span class="pre">b)</span> <span class="pre">=</span> <span class="pre">product(a1,</span> <span class="pre">b)</span> <span class="pre">+</span> <span class="pre">product(a2,</span> <span class="pre">b)</span></code> <code class="docutils literal notranslate"><span class="pre">product(a,</span> <span class="pre">b1+b2)</span> <span class="pre">=</span> <span class="pre">product(a,</span> <span class="pre">b1)</span> <span class="pre">+</span> <span class="pre">product(a,</span> <span class="pre">b2)</span></code> <code class="docutils literal notranslate"><span class="pre">product(r*a,</span> <span class="pre">b)</span> <span class="pre">=</span> <span class="pre">product(a,</span> <span class="pre">r*b)</span> <span class="pre">=</span> <span class="pre">r*product(a,</span> <span class="pre">b)</span></code> <code class="docutils literal notranslate"><span class="pre">product(a,</span> <span class="pre">product(b,</span> <span class="pre">c))</span> <span class="pre">=</span> <span class="pre">product(product(a,</span> <span class="pre">b),</span> <span class="pre">c)</span></code></p>
 </dd>
-<dt><a class="reference internal" href="RetractableTo.html#l-retractable-to-retract"><span class="std std-ref">retract</span></a>: % -&gt; R</dt><dd><p>from <a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="RetractableTo.html#l-retractable-to-retract-if-can"><span class="std std-ref">retractIfCan</span></a>: % -&gt; Union(R, failed)</dt><dd><p>from <a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> R</p>
+</dl>
+<dl class="simple" id="l477261646564416c67656272612e72657472616374">
+<dt><a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f2e72657472616374"><span class="std std-ref">retract</span></a>: % -&gt; R</dt><dd><p>from <a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f"><span class="std std-ref">RetractableTo</span></a> R</p>
 </dd>
 </dl>
-<p><a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-<p><a class="reference internal" href="CoercibleFrom.html#l-coercible-from"><span class="std std-ref">CoercibleFrom</span></a> R</p>
-<p><a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
-<p><a class="reference internal" href="GradedModule.html#l-graded-module"><span class="std std-ref">GradedModule</span></a>(R, E)</p>
-<p><a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> R</p>
-<p><a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+<dl class="simple" id="l477261646564416c67656272612e72657472616374496643616e">
+<dt><a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f2e72657472616374496643616e"><span class="std std-ref">retractIfCan</span></a>: % -&gt; Union(R, failed)</dt><dd><p>from <a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f"><span class="std std-ref">RetractableTo</span></a> R</p>
+</dd>
+</dl>
+<p><a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+<p><a class="reference internal" href="CoercibleFrom.html#l436f65726369626c6546726f6d"><span class="std std-ref">CoercibleFrom</span></a> R</p>
+<p><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+<p><a class="reference internal" href="GradedModule.html#l4772616465644d6f64756c65"><span class="std std-ref">GradedModule</span></a>(R, E)</p>
+<p><a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f"><span class="std std-ref">RetractableTo</span></a> R</p>
+<p><a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </div>
 
 
@@ -148,7 +172,7 @@
         <li class="right" >
           <a href="GcdDomain.html" title="GcdDomain"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Categories.html" >Categories</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">GradedAlgebra(R, E)</a></li> 

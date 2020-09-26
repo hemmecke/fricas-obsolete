@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FullPartialFractionExpansion(F, UP) &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>FullPartialFractionExpansion(F, UP) &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="FreeNilpotentLie.html" title="FreeNilpotentLie(n, class, R)"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Domains.html" accesskey="U">Domains</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">FullPartialFractionExpansion(F, UP)</a></li> 
@@ -46,67 +46,81 @@
           <div class="body" role="main">
             
   <div class="section" id="fullpartialfractionexpansion-f-up">
-<span id="l-full-partial-fraction-expansion"></span><span id="index-0"></span><h1>FullPartialFractionExpansion(F, UP)<a class="headerlink" href="#fullpartialfractionexpansion-f-up" title="Permalink to this headline">¶</a></h1>
+<span id="l46756c6c5061727469616c4672616374696f6e457870616e73696f6e"></span><span id="index-0"></span><h1>FullPartialFractionExpansion(F, UP)<a class="headerlink" href="#fullpartialfractionexpansion-f-up" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/fparfrac.spad#L1">fparfrac.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/fparfrac.spad#L1">[edit on github]</a></p>
 <ul class="simple">
-<li><p>F: Join(<a class="reference internal" href="Field.html#l-field"><span class="std std-ref">Field</span></a>, <a class="reference internal" href="CharacteristicZero.html#l-characteristic-zero"><span class="std std-ref">CharacteristicZero</span></a>)</p></li>
-<li><p>UP: <a class="reference internal" href="UnivariatePolynomialCategory.html#l-univariate-polynomial-category"><span class="std std-ref">UnivariatePolynomialCategory</span></a> F</p></li>
+<li><p>F: Join(<a class="reference internal" href="Field.html#l4669656c64"><span class="std std-ref">Field</span></a>, <a class="reference internal" href="CharacteristicZero.html#l43686172616374657269737469635a65726f"><span class="std std-ref">CharacteristicZero</span></a>)</p></li>
+<li><p>UP: <a class="reference internal" href="UnivariatePolynomialCategory.html#l556e6976617269617465506f6c796e6f6d69616c43617465676f7279"><span class="std std-ref">UnivariatePolynomialCategory</span></a> F</p></li>
 </ul>
 <p>Full partial fraction expansion of rational functions Author: Manuel Bronstein Date Created: 9 December 1992 References: <code class="docutils literal notranslate"><span class="pre">M</span></code>.Bronstein &amp; <code class="docutils literal notranslate"><span class="pre">B</span></code>.Salvy, Full Partial Fraction Decomposition of Rational Functions, in Proceedings of <code class="docutils literal notranslate"><span class="pre">ISSAC'93</span></code>, Kiev, ACM Press.</p>
-<span class="target" id="id1"></span><dl class="simple" id="index-1">
+<span class="target" id="l46756c6c5061727469616c4672616374696f6e457870616e73696f6e2e2b"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">+</span>: (UP, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">p</span> <span class="pre">+</span> <span class="pre">x</span></code> returns the sum of <code class="docutils literal notranslate"><span class="pre">p</span></code> and <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
 </dd>
-<dt><a class="reference internal" href="BasicType.html#id1"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-</dd>
-<dt><a class="reference internal" href="BasicType.html#id2"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-</dd>
-<dt><a class="reference internal" href="CoercibleTo.html#l-coercible-to-coerce"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+</dl>
+<dl class="simple" id="l46756c6c5061727469616c4672616374696f6e457870616e73696f6e2e3d">
+<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-full-partial-fraction-expansion-construct"></span><dl class="simple" id="index-2">
-<dt><span class="spadfun">construct</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(exponent: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, center: UP, num: UP) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">construct(l)</span></code> is the inverse of fracPart.</p>
-</dd>
-<dt><a class="reference internal" href="ConvertibleTo.html#l-convertible-to-convert"><span class="std std-ref">convert</span></a>: % -&gt; <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP</dt><dd><p>from <a class="reference internal" href="ConvertibleTo.html#l-convertible-to"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP</p>
+<dl class="simple" id="l46756c6c5061727469616c4672616374696f6e457870616e73696f6e2e7e3d">
+<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e7e3d"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-full-partial-fraction-expansion-d"></span><dl class="simple" id="index-3">
+<dl class="simple" id="l46756c6c5061727469616c4672616374696f6e457870616e73696f6e2e636f65726365">
+<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f2e636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l46756c6c5061727469616c4672616374696f6e457870616e73696f6e2e636f6e737472756374"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">construct</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> Record(exponent: <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, center: UP, num: UP) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">construct(l)</span></code> is the inverse of fracPart.</p>
+</dd>
+</dl>
+<dl class="simple" id="l46756c6c5061727469616c4672616374696f6e457870616e73696f6e2e636f6e76657274">
+<dt><a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f2e636f6e76657274"><span class="std std-ref">convert</span></a>: % -&gt; <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> UP</dt><dd><p>from <a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> UP</p>
+</dd>
+</dl>
+<span class="target" id="l46756c6c5061727469616c4672616374696f6e457870616e73696f6e2e44"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">D</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">D(f)</span></code> returns the derivative of <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-4">
-<dt><span class="spadfun">D</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">D(f,</span> <span class="pre">n)</span></code> returns the <code class="docutils literal notranslate"><span class="pre">n</span></code>-th derivative of <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+<dt><span class="spadfun">D</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">D(f,</span> <span class="pre">n)</span></code> returns the <code class="docutils literal notranslate"><span class="pre">n</span></code>-th derivative of <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-full-partial-fraction-expansion-differentiate"></span><dl class="simple" id="index-5">
+<span class="target" id="l46756c6c5061727469616c4672616374696f6e457870616e73696f6e2e646966666572656e7469617465"></span><dl class="simple" id="index-5">
 <dt><span class="spadfun">differentiate</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">differentiate(f)</span></code> returns the derivative of <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-6">
-<dt><span class="spadfun">differentiate</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">differentiate(f,</span> <span class="pre">n)</span></code> returns the <code class="docutils literal notranslate"><span class="pre">n</span></code>-th derivative of <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+<dt><span class="spadfun">differentiate</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">differentiate(f,</span> <span class="pre">n)</span></code> returns the <code class="docutils literal notranslate"><span class="pre">n</span></code>-th derivative of <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-full-partial-fraction-expansion-frac-part"></span><dl class="simple" id="index-7">
-<dt><span class="spadfun">fracPart</span>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(exponent: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, center: UP, num: UP)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">fracPart(f)</span></code> returns the list of summands of the fractional part of <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+<span class="target" id="l46756c6c5061727469616c4672616374696f6e457870616e73696f6e2e6672616350617274"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">fracPart</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> Record(exponent: <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, center: UP, num: UP)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">fracPart(f)</span></code> returns the list of summands of the fractional part of <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-full-partial-fraction-expansion-full-partial-fraction"></span><dl class="simple" id="index-8">
-<dt><span class="spadfun">fullPartialFraction</span>: <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">fullPartialFraction(f)</span></code> returns <code class="docutils literal notranslate"><span class="pre">[p,</span> <span class="pre">[[j,</span> <span class="pre">Dj,</span> <span class="pre">Hj]...]]</span></code> such that <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">=</span> <span class="pre">p(x)</span> <span class="pre">+</span> <span class="pre">\sum_{[j,</span> <span class="pre">Dj,</span> <span class="pre">Hj]</span> <span class="pre">in</span> <span class="pre">l}</span> <span class="pre">\sum_{Dj(a)=0}</span> <span class="pre">Hj(a)/(x</span> <span class="pre">-</span> <span class="pre">a)\^j</span></code>.</p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l-single-integer"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash-update"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-latex"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+<span class="target" id="l46756c6c5061727469616c4672616374696f6e457870616e73696f6e2e66756c6c5061727469616c4672616374696f6e"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">fullPartialFraction</span>: <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> UP -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">fullPartialFraction(f)</span></code> returns <code class="docutils literal notranslate"><span class="pre">[p,</span> <span class="pre">[[j,</span> <span class="pre">Dj,</span> <span class="pre">Hj]...]]</span></code> such that <code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">=</span> <span class="pre">p(x)</span> <span class="pre">+</span> <span class="pre">\sum_{[j,</span> <span class="pre">Dj,</span> <span class="pre">Hj]</span> <span class="pre">in</span> <span class="pre">l}</span> <span class="pre">\sum_{Dj(a)=0}</span> <span class="pre">Hj(a)/(x</span> <span class="pre">-</span> <span class="pre">a)\^j</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-full-partial-fraction-expansion-poly-part"></span><dl class="simple" id="index-9">
+<dl class="simple" id="l46756c6c5061727469616c4672616374696f6e457870616e73696f6e2e68617368">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e68617368"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l53696e676c65496e7465676572"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l46756c6c5061727469616c4672616374696f6e457870616e73696f6e2e6861736855706461746521">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6861736855706461746521"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l46756c6c5061727469616c4672616374696f6e457870616e73696f6e2e6c61746578">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6c61746578"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l46756c6c5061727469616c4672616374696f6e457870616e73696f6e2e706f6c7950617274"></span><dl class="simple" id="index-9">
 <dt><span class="spadfun">polyPart</span>: % -&gt; UP</dt><dd><p><code class="docutils literal notranslate"><span class="pre">polyPart(f)</span></code> returns the polynomial part of <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
 </dd>
 </dl>
-<p><a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-<p><a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
-<p><a class="reference internal" href="ConvertibleTo.html#l-convertible-to"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP</p>
-<p><a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+<p><a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+<p><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+<p><a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> UP</p>
+<p><a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </div>
 
 
@@ -154,7 +168,7 @@
         <li class="right" >
           <a href="FreeNilpotentLie.html" title="FreeNilpotentLie(n, class, R)"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Domains.html" >Domains</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">FullPartialFractionExpansion(F, UP)</a></li> 

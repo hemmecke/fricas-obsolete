@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PlottablePlaneCurveCategory &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>PlottablePlaneCurveCategory &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="PermutationCategory.html" title="PermutationCategory S"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Categories.html" accesskey="U">Categories</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">PlottablePlaneCurveCategory</a></li> 
@@ -46,26 +46,26 @@
           <div class="body" role="main">
             
   <div class="section" id="plottableplanecurvecategory">
-<span id="l-plottable-plane-curve-category"></span><span id="index-0"></span><h1>PlottablePlaneCurveCategory<a class="headerlink" href="#plottableplanecurvecategory" title="Permalink to this headline">¶</a></h1>
+<span id="l506c6f747461626c65506c616e65437572766543617465676f7279"></span><span id="index-0"></span><h1>PlottablePlaneCurveCategory<a class="headerlink" href="#plottableplanecurvecategory" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/pcurve.spad#L1">pcurve.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/pcurve.spad#L1">[edit on github]</a></p>
 <p>PlottablePlaneCurveCategory is the category of curves in the plane which may be plotted via the graphics facilities. Functions are provided for obtaining lists of lists of points, representing the branches of the curve, and for determining the ranges of the <code class="docutils literal notranslate"><span class="pre">x</span></code>-coordinates and <code class="docutils literal notranslate"><span class="pre">y</span></code>-coordinates of the points on the curve.</p>
-<dl class="simple">
-<dt><a class="reference internal" href="CoercibleTo.html#l-coercible-to-coerce"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+<dl class="simple" id="l506c6f747461626c65506c616e65437572766543617465676f72792e636f65726365">
+<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f2e636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-plottable-plane-curve-category-list-branches"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">listBranches</span>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Point.html#l-point"><span class="std std-ref">Point</span></a> <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">listBranches(c)</span></code> returns a list of lists of points, representing the branches of the curve <code class="docutils literal notranslate"><span class="pre">c</span></code>.</p>
+<span class="target" id="l506c6f747461626c65506c616e65437572766543617465676f72792e6c6973744272616e63686573"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">listBranches</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Point.html#l506f696e74"><span class="std std-ref">Point</span></a> <a class="reference internal" href="DoubleFloat.html#l446f75626c65466c6f6174"><span class="std std-ref">DoubleFloat</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">listBranches(c)</span></code> returns a list of lists of points, representing the branches of the curve <code class="docutils literal notranslate"><span class="pre">c</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-plottable-plane-curve-category-x-range"></span><dl class="simple" id="index-2">
-<dt><span class="spadfun">xRange</span>: % -&gt; <a class="reference internal" href="Segment.html#l-segment"><span class="std std-ref">Segment</span></a> <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">xRange(c)</span></code> returns the range of the <code class="docutils literal notranslate"><span class="pre">x</span></code>-coordinates of the points on the curve <code class="docutils literal notranslate"><span class="pre">c</span></code>.</p>
+<span class="target" id="l506c6f747461626c65506c616e65437572766543617465676f72792e7852616e6765"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">xRange</span>: % -&gt; <a class="reference internal" href="Segment.html#l5365676d656e74"><span class="std std-ref">Segment</span></a> <a class="reference internal" href="DoubleFloat.html#l446f75626c65466c6f6174"><span class="std std-ref">DoubleFloat</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">xRange(c)</span></code> returns the range of the <code class="docutils literal notranslate"><span class="pre">x</span></code>-coordinates of the points on the curve <code class="docutils literal notranslate"><span class="pre">c</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-plottable-plane-curve-category-y-range"></span><dl class="simple" id="index-3">
-<dt><span class="spadfun">yRange</span>: % -&gt; <a class="reference internal" href="Segment.html#l-segment"><span class="std std-ref">Segment</span></a> <a class="reference internal" href="DoubleFloat.html#l-double-float"><span class="std std-ref">DoubleFloat</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">yRange(c)</span></code> returns the range of the <code class="docutils literal notranslate"><span class="pre">y</span></code>-coordinates of the points on the curve <code class="docutils literal notranslate"><span class="pre">c</span></code>.</p>
+<span class="target" id="l506c6f747461626c65506c616e65437572766543617465676f72792e7952616e6765"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">yRange</span>: % -&gt; <a class="reference internal" href="Segment.html#l5365676d656e74"><span class="std std-ref">Segment</span></a> <a class="reference internal" href="DoubleFloat.html#l446f75626c65466c6f6174"><span class="std std-ref">DoubleFloat</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">yRange(c)</span></code> returns the range of the <code class="docutils literal notranslate"><span class="pre">y</span></code>-coordinates of the points on the curve <code class="docutils literal notranslate"><span class="pre">c</span></code>.</p>
 </dd>
 </dl>
-<p><a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+<p><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
 </div>
 
 
@@ -113,7 +113,7 @@
         <li class="right" >
           <a href="PermutationCategory.html" title="PermutationCategory S"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Categories.html" >Categories</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">PlottablePlaneCurveCategory</a></li> 

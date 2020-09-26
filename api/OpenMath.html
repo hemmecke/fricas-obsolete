@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpenMath &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>OpenMath &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="OneDimensionalArrayAggregate.html" title="OneDimensionalArrayAggregate S"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Categories.html" accesskey="U">Categories</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">OpenMath</a></li> 
@@ -46,23 +46,23 @@
           <div class="body" role="main">
             
   <div class="section" id="openmath">
-<span id="l-open-math"></span><span id="index-0"></span><h1>OpenMath<a class="headerlink" href="#openmath" title="Permalink to this headline">¶</a></h1>
+<span id="l4f70656e4d617468"></span><span id="index-0"></span><h1>OpenMath<a class="headerlink" href="#openmath" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/omcat.spad#L1">omcat.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/omcat.spad#L1">[edit on github]</a></p>
-<p><a class="reference internal" href="#l-open-math"><span class="std std-ref">OpenMath</span></a> provides operations for exporting an object in OpenMath format.</p>
-<span class="target" id="l-open-math-o-mwrite"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">OMwrite</span>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMwrite(u)</span></code> returns the OpenMath <code class="docutils literal notranslate"><span class="pre">XML</span></code> encoding of <code class="docutils literal notranslate"><span class="pre">u</span></code> as a complete OpenMath object.</p>
+<p><a class="reference internal" href="#l4f70656e4d617468"><span class="std std-ref">OpenMath</span></a> provides operations for exporting an object in OpenMath format.</p>
+<span class="target" id="l4f70656e4d6174682e4f4d7772697465"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">OMwrite</span>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMwrite(u)</span></code> returns the OpenMath <code class="docutils literal notranslate"><span class="pre">XML</span></code> encoding of <code class="docutils literal notranslate"><span class="pre">u</span></code> as a complete OpenMath object.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-2">
-<dt><span class="spadfun">OMwrite</span>: (%, <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>) -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMwrite(u,</span> <span class="pre">true)</span></code> returns the OpenMath <code class="docutils literal notranslate"><span class="pre">XML</span></code> encoding of <code class="docutils literal notranslate"><span class="pre">u</span></code> as a complete OpenMath object; OMwrite(<code class="docutils literal notranslate"><span class="pre">u</span></code>, <code class="docutils literal notranslate"><span class="pre">false</span></code>) returns the OpenMath <code class="docutils literal notranslate"><span class="pre">XML</span></code> encoding of <code class="docutils literal notranslate"><span class="pre">u</span></code> as an OpenMath fragment.</p>
+<dt><span class="spadfun">OMwrite</span>: (%, <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a>) -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMwrite(u,</span> <span class="pre">true)</span></code> returns the OpenMath <code class="docutils literal notranslate"><span class="pre">XML</span></code> encoding of <code class="docutils literal notranslate"><span class="pre">u</span></code> as a complete OpenMath object; OMwrite(<code class="docutils literal notranslate"><span class="pre">u</span></code>, <code class="docutils literal notranslate"><span class="pre">false</span></code>) returns the OpenMath <code class="docutils literal notranslate"><span class="pre">XML</span></code> encoding of <code class="docutils literal notranslate"><span class="pre">u</span></code> as an OpenMath fragment.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-3">
-<dt><span class="spadfun">OMwrite</span>: (<a class="reference internal" href="OpenMathDevice.html#l-open-math-device"><span class="std std-ref">OpenMathDevice</span></a>, %) -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMwrite(dev,</span> <span class="pre">u)</span></code> writes the OpenMath form of <code class="docutils literal notranslate"><span class="pre">u</span></code> to the OpenMath device <code class="docutils literal notranslate"><span class="pre">dev</span></code> as a complete OpenMath object.</p>
+<dt><span class="spadfun">OMwrite</span>: (<a class="reference internal" href="OpenMathDevice.html#l4f70656e4d617468446576696365"><span class="std std-ref">OpenMathDevice</span></a>, %) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMwrite(dev,</span> <span class="pre">u)</span></code> writes the OpenMath form of <code class="docutils literal notranslate"><span class="pre">u</span></code> to the OpenMath device <code class="docutils literal notranslate"><span class="pre">dev</span></code> as a complete OpenMath object.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-4">
-<dt><span class="spadfun">OMwrite</span>: (<a class="reference internal" href="OpenMathDevice.html#l-open-math-device"><span class="std std-ref">OpenMathDevice</span></a>, %, <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>) -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMwrite(dev,</span> <span class="pre">u,</span> <span class="pre">true)</span></code> writes the OpenMath form of <code class="docutils literal notranslate"><span class="pre">u</span></code> to the OpenMath device <code class="docutils literal notranslate"><span class="pre">dev</span></code> as a complete OpenMath object; OMwrite(<code class="docutils literal notranslate"><span class="pre">dev</span></code>, <code class="docutils literal notranslate"><span class="pre">u</span></code>, <code class="docutils literal notranslate"><span class="pre">false</span></code>) writes the object as an OpenMath fragment.</p>
+<dt><span class="spadfun">OMwrite</span>: (<a class="reference internal" href="OpenMathDevice.html#l4f70656e4d617468446576696365"><span class="std std-ref">OpenMathDevice</span></a>, %, <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMwrite(dev,</span> <span class="pre">u,</span> <span class="pre">true)</span></code> writes the OpenMath form of <code class="docutils literal notranslate"><span class="pre">u</span></code> to the OpenMath device <code class="docutils literal notranslate"><span class="pre">dev</span></code> as a complete OpenMath object; OMwrite(<code class="docutils literal notranslate"><span class="pre">dev</span></code>, <code class="docutils literal notranslate"><span class="pre">u</span></code>, <code class="docutils literal notranslate"><span class="pre">false</span></code>) writes the object as an OpenMath fragment.</p>
 </dd>
 </dl>
 </div>
@@ -112,7 +112,7 @@
         <li class="right" >
           <a href="OneDimensionalArrayAggregate.html" title="OneDimensionalArrayAggregate S"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Categories.html" >Categories</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">OpenMath</a></li> 

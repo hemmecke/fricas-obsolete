@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ExtendedPolynomialReduction(C, E, R) &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>ExtendedPolynomialReduction(C, E, R) &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="ExpressionTubePlot.html" title="ExpressionTubePlot"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">ExtendedPolynomialReduction(C, E, R)</a></li> 
@@ -46,16 +46,16 @@
           <div class="body" role="main">
             
   <div class="section" id="extendedpolynomialreduction-c-e-r">
-<span id="l-extended-polynomial-reduction"></span><span id="index-0"></span><h1>ExtendedPolynomialReduction(C, E, R)<a class="headerlink" href="#extendedpolynomialreduction-c-e-r" title="Permalink to this headline">¶</a></h1>
+<span id="l457874656e646564506f6c796e6f6d69616c526564756374696f6e"></span><span id="index-0"></span><h1>ExtendedPolynomialReduction(C, E, R)<a class="headerlink" href="#extendedpolynomialreduction-c-e-r" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/extred.spad#L1">extred.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/extred.spad#L1">[edit on github]</a></p>
 <ul class="simple">
-<li><p>C: <a class="reference internal" href="GcdDomain.html#l-gcd-domain"><span class="std std-ref">GcdDomain</span></a></p></li>
-<li><p>E: <a class="reference internal" href="OrderedAbelianMonoidSup.html#l-ordered-abelian-monoid-sup"><span class="std std-ref">OrderedAbelianMonoidSup</span></a></p></li>
-<li><p>R: Join(<a class="reference internal" href="FiniteAbelianMonoidRing.html#l-finite-abelian-monoid-ring"><span class="std std-ref">FiniteAbelianMonoidRing</span></a>(C, E), <a class="reference internal" href="VariablesCommuteWithCoefficients.html#l-variables-commute-with-coefficients"><span class="std std-ref">VariablesCommuteWithCoefficients</span></a>)</p></li>
+<li><p>C: <a class="reference internal" href="GcdDomain.html#l476364446f6d61696e"><span class="std std-ref">GcdDomain</span></a></p></li>
+<li><p>E: <a class="reference internal" href="OrderedAbelianMonoidSup.html#l4f7264657265644162656c69616e4d6f6e6f6964537570"><span class="std std-ref">OrderedAbelianMonoidSup</span></a></p></li>
+<li><p>R: Join(<a class="reference internal" href="FiniteAbelianMonoidRing.html#l46696e6974654162656c69616e4d6f6e6f696452696e67"><span class="std std-ref">FiniteAbelianMonoidRing</span></a>(C, E), <a class="reference internal" href="VariablesCommuteWithCoefficients.html#l5661726961626c6573436f6d6d75746557697468436f656666696369656e7473"><span class="std std-ref">VariablesCommuteWithCoefficients</span></a>)</p></li>
 </ul>
 <p>ExtendedPolynomialReduction(<code class="docutils literal notranslate"><span class="pre">C</span></code>, <code class="docutils literal notranslate"><span class="pre">E</span></code>, <code class="docutils literal notranslate"><span class="pre">R</span></code>) is a package that allows denominatorFree reductions of a polynomial <code class="docutils literal notranslate"><span class="pre">r</span></code> from <code class="docutils literal notranslate"><span class="pre">R</span></code> <code class="docutils literal notranslate"><span class="pre">wrt</span></code> a list of polynomials from <code class="docutils literal notranslate"><span class="pre">R</span></code> (usually such a list is a Groebner basis <code class="docutils literal notranslate"><span class="pre">wrt</span></code> the order given via <code class="docutils literal notranslate"><span class="pre">E</span></code>). Additionally, the reduction steps are recorded and provided in the output.</p>
-<span class="target" id="l-extended-polynomial-reduction-reduce"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">reduce</span>: (R, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> R) -&gt; Record(poly: R, repr: <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> R, mult: C)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">reduce(r,</span> <span class="pre">bas)</span></code> returns a triple (<code class="docutils literal notranslate"><span class="pre">p</span></code>, <code class="docutils literal notranslate"><span class="pre">v</span></code>, <code class="docutils literal notranslate"><span class="pre">m</span></code>) such that <code class="docutils literal notranslate"><span class="pre">m*r</span></code> = sum(bas.<code class="docutils literal notranslate"><span class="pre">i</span></code> * <code class="docutils literal notranslate"><span class="pre">v</span></code>.<code class="docutils literal notranslate"><span class="pre">i</span></code>, <code class="docutils literal notranslate"><span class="pre">i=1</span></code>..#bas) + <code class="docutils literal notranslate"><span class="pre">p</span></code></p>
+<span class="target" id="l457874656e646564506f6c796e6f6d69616c526564756374696f6e2e726564756365"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">reduce</span>: (R, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> R) -&gt; Record(poly: R, repr: <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> R, mult: C)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">reduce(r,</span> <span class="pre">bas)</span></code> returns a triple (<code class="docutils literal notranslate"><span class="pre">p</span></code>, <code class="docutils literal notranslate"><span class="pre">v</span></code>, <code class="docutils literal notranslate"><span class="pre">m</span></code>) such that <code class="docutils literal notranslate"><span class="pre">m*r</span></code> = sum(bas.<code class="docutils literal notranslate"><span class="pre">i</span></code> * <code class="docutils literal notranslate"><span class="pre">v</span></code>.<code class="docutils literal notranslate"><span class="pre">i</span></code>, <code class="docutils literal notranslate"><span class="pre">i=1</span></code>..#bas) + <code class="docutils literal notranslate"><span class="pre">p</span></code></p>
 </dd>
 </dl>
 </div>
@@ -105,7 +105,7 @@
         <li class="right" >
           <a href="ExpressionTubePlot.html" title="ExpressionTubePlot"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">ExtendedPolynomialReduction(C, E, R)</a></li> 

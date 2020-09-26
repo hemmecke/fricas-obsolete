@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UTSodetools(F, UP, L, UTS) &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>UTSodetools(F, UP, L, UTS) &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="UserDefinedVariableOrdering.html" title="UserDefinedVariableOrdering"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">UTSodetools(F, UP, L, UTS)</a></li> 
@@ -46,29 +46,29 @@
           <div class="body" role="main">
             
   <div class="section" id="utsodetools-f-up-l-uts">
-<span id="l-u-t-sodetools"></span><span id="index-0"></span><h1>UTSodetools(F, UP, L, UTS)<a class="headerlink" href="#utsodetools-f-up-l-uts" title="Permalink to this headline">¶</a></h1>
+<span id="l5554536f6465746f6f6c73"></span><span id="index-0"></span><h1>UTSodetools(F, UP, L, UTS)<a class="headerlink" href="#utsodetools-f-up-l-uts" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/oderf.spad#L247">oderf.spad line 247</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/oderf.spad#L247">[edit on github]</a></p>
 <ul class="simple">
-<li><p>F: <a class="reference internal" href="Ring.html#l-ring"><span class="std std-ref">Ring</span></a></p></li>
-<li><p>UP: <a class="reference internal" href="UnivariatePolynomialCategory.html#l-univariate-polynomial-category"><span class="std std-ref">UnivariatePolynomialCategory</span></a> F</p></li>
-<li><p>L: <a class="reference internal" href="LinearOrdinaryDifferentialOperatorCategory.html#l-linear-ordinary-differential-operator-category"><span class="std std-ref">LinearOrdinaryDifferentialOperatorCategory</span></a> UP</p></li>
-<li><p>UTS: <a class="reference internal" href="UnivariateTaylorSeriesCategory.html#l-univariate-taylor-series-category"><span class="std std-ref">UnivariateTaylorSeriesCategory</span></a> F</p></li>
+<li><p>F: <a class="reference internal" href="Ring.html#l52696e67"><span class="std std-ref">Ring</span></a></p></li>
+<li><p>UP: <a class="reference internal" href="UnivariatePolynomialCategory.html#l556e6976617269617465506f6c796e6f6d69616c43617465676f7279"><span class="std std-ref">UnivariatePolynomialCategory</span></a> F</p></li>
+<li><p>L: <a class="reference internal" href="LinearOrdinaryDifferentialOperatorCategory.html#l4c696e6561724f7264696e617279446966666572656e7469616c4f70657261746f7243617465676f7279"><span class="std std-ref">LinearOrdinaryDifferentialOperatorCategory</span></a> UP</p></li>
+<li><p>UTS: <a class="reference internal" href="UnivariateTaylorSeriesCategory.html#l556e69766172696174655461796c6f7253657269657343617465676f7279"><span class="std std-ref">UnivariateTaylorSeriesCategory</span></a> F</p></li>
 </ul>
 <p><code class="docutils literal notranslate"><span class="pre">RUTSodetools</span></code> provides tools to interface with the series ODE solver when presented with linear ODEs.</p>
-<span class="target" id="l-u-t-sodetools-l-o-d-o2-f-u-n"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">LODO2FUN</span>: L -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> UTS -&gt; UTS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">LODO2FUN(op)</span></code> returns the function to pass to the series ODE solver in order to solve <code class="docutils literal notranslate"><span class="pre">op</span> <span class="pre">y</span> <span class="pre">=</span> <span class="pre">0</span></code>.</p>
+<span class="target" id="l5554536f6465746f6f6c732e4c4f444f3246554e"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">LODO2FUN</span>: L -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> UTS -&gt; UTS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">LODO2FUN(op)</span></code> returns the function to pass to the series ODE solver in order to solve <code class="docutils literal notranslate"><span class="pre">op</span> <span class="pre">y</span> <span class="pre">=</span> <span class="pre">0</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-u-t-sodetools-r-f2-u-t-s"></span><dl class="simple" id="index-2">
-<dt><span class="spadfun">RF2UTS</span>: <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP -&gt; UTS if F has <a class="reference internal" href="IntegralDomain.html#l-integral-domain"><span class="std std-ref">IntegralDomain</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">RF2UTS(f)</span></code> converts <code class="docutils literal notranslate"><span class="pre">f</span></code> to a Taylor series.</p>
+<span class="target" id="l5554536f6465746f6f6c732e524632555453"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">RF2UTS</span>: <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> UP -&gt; UTS if F has <a class="reference internal" href="IntegralDomain.html#l496e74656772616c446f6d61696e"><span class="std std-ref">IntegralDomain</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">RF2UTS(f)</span></code> converts <code class="docutils literal notranslate"><span class="pre">f</span></code> to a Taylor series.</p>
 </dd>
 </dl>
-<span class="target" id="l-u-t-sodetools-u-p2-u-t-s"></span><dl class="simple" id="index-3">
+<span class="target" id="l5554536f6465746f6f6c732e555032555453"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">UP2UTS</span>: UP -&gt; UTS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">UP2UTS(p)</span></code> converts <code class="docutils literal notranslate"><span class="pre">p</span></code> to a Taylor series.</p>
 </dd>
 </dl>
-<span class="target" id="l-u-t-sodetools-u-t-s2-u-p"></span><dl class="simple" id="index-4">
-<dt><span class="spadfun">UTS2UP</span>: (UTS, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; UP</dt><dd><p><code class="docutils literal notranslate"><span class="pre">UTS2UP(s,</span> <span class="pre">n)</span></code> converts the first <code class="docutils literal notranslate"><span class="pre">n</span></code> terms of <code class="docutils literal notranslate"><span class="pre">s</span></code> to a univariate polynomial.</p>
+<span class="target" id="l5554536f6465746f6f6c732e555453325550"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">UTS2UP</span>: (UTS, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; UP</dt><dd><p><code class="docutils literal notranslate"><span class="pre">UTS2UP(s,</span> <span class="pre">n)</span></code> converts the first <code class="docutils literal notranslate"><span class="pre">n</span></code> terms of <code class="docutils literal notranslate"><span class="pre">s</span></code> to a univariate polynomial.</p>
 </dd>
 </dl>
 </div>
@@ -118,7 +118,7 @@
         <li class="right" >
           <a href="UserDefinedVariableOrdering.html" title="UserDefinedVariableOrdering"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">UTSodetools(F, UP, L, UTS)</a></li> 

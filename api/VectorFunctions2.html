@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VectorFunctions2(A, B) &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>VectorFunctions2(A, B) &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="UTSodetools.html" title="UTSodetools(F, UP, L, UTS)"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">VectorFunctions2(A, B)</a></li> 
@@ -46,27 +46,27 @@
           <div class="body" role="main">
             
   <div class="section" id="vectorfunctions2-a-b">
-<span id="l-vector-functions2"></span><span id="index-0"></span><h1>VectorFunctions2(A, B)<a class="headerlink" href="#vectorfunctions2-a-b" title="Permalink to this headline">¶</a></h1>
+<span id="l566563746f7246756e6374696f6e7332"></span><span id="index-0"></span><h1>VectorFunctions2(A, B)<a class="headerlink" href="#vectorfunctions2-a-b" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/vector.spad#L192">vector.spad line 192</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/vector.spad#L192">[edit on github]</a></p>
 <ul class="simple">
-<li><p>A: <a class="reference internal" href="Type.html#l-type"><span class="std std-ref">Type</span></a></p></li>
-<li><p>B: <a class="reference internal" href="Type.html#l-type"><span class="std std-ref">Type</span></a></p></li>
+<li><p>A: <a class="reference internal" href="Type.html#l54797065"><span class="std std-ref">Type</span></a></p></li>
+<li><p>B: <a class="reference internal" href="Type.html#l54797065"><span class="std std-ref">Type</span></a></p></li>
 </ul>
 <p>This package provides operations which all take as arguments vectors of elements of some type <code class="docutils literal notranslate"><span class="pre">A</span></code> and functions from <code class="docutils literal notranslate"><span class="pre">A</span></code> to another of type <code class="docutils literal notranslate"><span class="pre">B</span></code>. The operations all iterate over their vector argument and either return a value of type <code class="docutils literal notranslate"><span class="pre">B</span></code> or a vector over <code class="docutils literal notranslate"><span class="pre">B</span></code>.</p>
-<span class="target" id="l-vector-functions2-map"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">map</span>: (A -&gt; B, <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> A) -&gt; <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> B</dt><dd><p><code class="docutils literal notranslate"><span class="pre">map(f,</span> <span class="pre">v)</span></code> applies the function <code class="docutils literal notranslate"><span class="pre">f</span></code> to every element of the vector <code class="docutils literal notranslate"><span class="pre">v</span></code> producing a new vector containing the values.</p>
+<span class="target" id="l566563746f7246756e6374696f6e73322e6d6170"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">map</span>: (A -&gt; B, <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> A) -&gt; <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> B</dt><dd><p><code class="docutils literal notranslate"><span class="pre">map(f,</span> <span class="pre">v)</span></code> applies the function <code class="docutils literal notranslate"><span class="pre">f</span></code> to every element of the vector <code class="docutils literal notranslate"><span class="pre">v</span></code> producing a new vector containing the values.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-2">
-<dt><span class="spadfun">map</span>: (A -&gt; Union(B, failed), <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> A) -&gt; Union(<a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> B, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">map(f,</span> <span class="pre">v)</span></code> applies the function <code class="docutils literal notranslate"><span class="pre">f</span></code> to every element of the vector <code class="docutils literal notranslate"><span class="pre">v</span></code> producing a new vector containing the values or <code class="docutils literal notranslate"><span class="pre">&quot;failed&quot;</span></code>.</p>
+<dt><span class="spadfun">map</span>: (A -&gt; Union(B, failed), <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> A) -&gt; Union(<a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> B, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">map(f,</span> <span class="pre">v)</span></code> applies the function <code class="docutils literal notranslate"><span class="pre">f</span></code> to every element of the vector <code class="docutils literal notranslate"><span class="pre">v</span></code> producing a new vector containing the values or <code class="docutils literal notranslate"><span class="pre">&quot;failed&quot;</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-vector-functions2-reduce"></span><dl class="simple" id="index-3">
-<dt><span class="spadfun">reduce</span>: ((A, B) -&gt; B, <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> A, B) -&gt; B</dt><dd><p><code class="docutils literal notranslate"><span class="pre">reduce(func,</span> <span class="pre">vec,</span> <span class="pre">ident)</span></code> combines the elements in <code class="docutils literal notranslate"><span class="pre">vec</span></code> using the binary function <code class="docutils literal notranslate"><span class="pre">func</span></code>. Argument ident is returned if <code class="docutils literal notranslate"><span class="pre">vec</span></code> is empty.</p>
+<span class="target" id="l566563746f7246756e6374696f6e73322e726564756365"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">reduce</span>: ((A, B) -&gt; B, <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> A, B) -&gt; B</dt><dd><p><code class="docutils literal notranslate"><span class="pre">reduce(func,</span> <span class="pre">vec,</span> <span class="pre">ident)</span></code> combines the elements in <code class="docutils literal notranslate"><span class="pre">vec</span></code> using the binary function <code class="docutils literal notranslate"><span class="pre">func</span></code>. Argument ident is returned if <code class="docutils literal notranslate"><span class="pre">vec</span></code> is empty.</p>
 </dd>
 </dl>
-<span class="target" id="l-vector-functions2-scan"></span><dl class="simple" id="index-4">
-<dt><span class="spadfun">scan</span>: ((A, B) -&gt; B, <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> A, B) -&gt; <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> B</dt><dd><p><code class="docutils literal notranslate"><span class="pre">scan(func,</span> <span class="pre">vec,</span> <span class="pre">ident)</span></code> creates a new vector whose elements are the result of applying reduce to the binary function <code class="docutils literal notranslate"><span class="pre">func</span></code>, increasing initial subsequences of the vector <code class="docutils literal notranslate"><span class="pre">vec</span></code>, and the element ident.</p>
+<span class="target" id="l566563746f7246756e6374696f6e73322e7363616e"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">scan</span>: ((A, B) -&gt; B, <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> A, B) -&gt; <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> B</dt><dd><p><code class="docutils literal notranslate"><span class="pre">scan(func,</span> <span class="pre">vec,</span> <span class="pre">ident)</span></code> creates a new vector whose elements are the result of applying reduce to the binary function <code class="docutils literal notranslate"><span class="pre">func</span></code>, increasing initial subsequences of the vector <code class="docutils literal notranslate"><span class="pre">vec</span></code>, and the element ident.</p>
 </dd>
 </dl>
 </div>
@@ -116,7 +116,7 @@
         <li class="right" >
           <a href="UTSodetools.html" title="UTSodetools(F, UP, L, UTS)"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">VectorFunctions2(A, B)</a></li> 

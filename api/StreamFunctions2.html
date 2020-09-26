@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StreamFunctions2(A, B) &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>StreamFunctions2(A, B) &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="StreamFunctions1.html" title="StreamFunctions1 S"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">StreamFunctions2(A, B)</a></li> 
@@ -46,23 +46,23 @@
           <div class="body" role="main">
             
   <div class="section" id="streamfunctions2-a-b">
-<span id="l-stream-functions2"></span><span id="index-0"></span><h1>StreamFunctions2(A, B)<a class="headerlink" href="#streamfunctions2-a-b" title="Permalink to this headline">¶</a></h1>
+<span id="l53747265616d46756e6374696f6e7332"></span><span id="index-0"></span><h1>StreamFunctions2(A, B)<a class="headerlink" href="#streamfunctions2-a-b" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/stream.spad#L1138">stream.spad line 1138</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/stream.spad#L1138">[edit on github]</a></p>
 <ul class="simple">
-<li><p>A: <a class="reference internal" href="Type.html#l-type"><span class="std std-ref">Type</span></a></p></li>
-<li><p>B: <a class="reference internal" href="Type.html#l-type"><span class="std std-ref">Type</span></a></p></li>
+<li><p>A: <a class="reference internal" href="Type.html#l54797065"><span class="std std-ref">Type</span></a></p></li>
+<li><p>B: <a class="reference internal" href="Type.html#l54797065"><span class="std std-ref">Type</span></a></p></li>
 </ul>
 <p>Functions defined on streams with entries in two sets.</p>
-<span class="target" id="l-stream-functions2-map"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">map</span>: (A -&gt; B, <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> A) -&gt; <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> B</dt><dd><p><code class="docutils literal notranslate"><span class="pre">map(f,</span> <span class="pre">s)</span></code> returns a stream whose elements are the function <code class="docutils literal notranslate"><span class="pre">f</span></code> applied to the corresponding elements of <code class="docutils literal notranslate"><span class="pre">s</span></code>. Note: <code class="docutils literal notranslate"><span class="pre">map(f,</span> <span class="pre">[x0,</span> <span class="pre">x1,</span> <span class="pre">x2,</span> <span class="pre">...])</span> <span class="pre">=</span> <span class="pre">[f(x0),</span> <span class="pre">f(x1),</span> <span class="pre">f(x2),</span> <span class="pre">..]</span></code>.</p>
+<span class="target" id="l53747265616d46756e6374696f6e73322e6d6170"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">map</span>: (A -&gt; B, <a class="reference internal" href="Stream.html#l53747265616d"><span class="std std-ref">Stream</span></a> A) -&gt; <a class="reference internal" href="Stream.html#l53747265616d"><span class="std std-ref">Stream</span></a> B</dt><dd><p><code class="docutils literal notranslate"><span class="pre">map(f,</span> <span class="pre">s)</span></code> returns a stream whose elements are the function <code class="docutils literal notranslate"><span class="pre">f</span></code> applied to the corresponding elements of <code class="docutils literal notranslate"><span class="pre">s</span></code>. Note: <code class="docutils literal notranslate"><span class="pre">map(f,</span> <span class="pre">[x0,</span> <span class="pre">x1,</span> <span class="pre">x2,</span> <span class="pre">...])</span> <span class="pre">=</span> <span class="pre">[f(x0),</span> <span class="pre">f(x1),</span> <span class="pre">f(x2),</span> <span class="pre">..]</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-stream-functions2-reduce"></span><dl class="simple" id="index-2">
-<dt><span class="spadfun">reduce</span>: (B, (A, B) -&gt; B, <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> A) -&gt; B</dt><dd><p><code class="docutils literal notranslate"><span class="pre">reduce(b,</span> <span class="pre">f,</span> <span class="pre">u)</span></code>, where <code class="docutils literal notranslate"><span class="pre">u</span></code> is a finite stream <code class="docutils literal notranslate"><span class="pre">[x0,</span> <span class="pre">x1,</span> <span class="pre">...,</span> <span class="pre">xn]</span></code>, returns the value <code class="docutils literal notranslate"><span class="pre">r(n)</span></code> computed as follows: <code class="docutils literal notranslate"><span class="pre">r0</span> <span class="pre">=</span> <span class="pre">f(x0,</span> <span class="pre">b),</span> <span class="pre">r1</span> <span class="pre">=</span> <span class="pre">f(x1,</span> <span class="pre">r0),</span> <span class="pre">...,</span> <span class="pre">r(n)</span> <span class="pre">=</span> <span class="pre">f(xn,</span> <span class="pre">r(n-1))</span></code>.</p>
+<span class="target" id="l53747265616d46756e6374696f6e73322e726564756365"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">reduce</span>: (B, (A, B) -&gt; B, <a class="reference internal" href="Stream.html#l53747265616d"><span class="std std-ref">Stream</span></a> A) -&gt; B</dt><dd><p><code class="docutils literal notranslate"><span class="pre">reduce(b,</span> <span class="pre">f,</span> <span class="pre">u)</span></code>, where <code class="docutils literal notranslate"><span class="pre">u</span></code> is a finite stream <code class="docutils literal notranslate"><span class="pre">[x0,</span> <span class="pre">x1,</span> <span class="pre">...,</span> <span class="pre">xn]</span></code>, returns the value <code class="docutils literal notranslate"><span class="pre">r(n)</span></code> computed as follows: <code class="docutils literal notranslate"><span class="pre">r0</span> <span class="pre">=</span> <span class="pre">f(x0,</span> <span class="pre">b),</span> <span class="pre">r1</span> <span class="pre">=</span> <span class="pre">f(x1,</span> <span class="pre">r0),</span> <span class="pre">...,</span> <span class="pre">r(n)</span> <span class="pre">=</span> <span class="pre">f(xn,</span> <span class="pre">r(n-1))</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-stream-functions2-scan"></span><dl class="simple" id="index-3">
-<dt><span class="spadfun">scan</span>: (B, (A, B) -&gt; B, <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> A) -&gt; <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> B</dt><dd><p><code class="docutils literal notranslate"><span class="pre">scan(b,</span> <span class="pre">h,</span> <span class="pre">[x0,</span> <span class="pre">x1,</span> <span class="pre">x2,</span> <span class="pre">...])</span></code> returns <code class="docutils literal notranslate"><span class="pre">[y0,</span> <span class="pre">y1,</span> <span class="pre">y2,</span> <span class="pre">...]</span></code>, where <code class="docutils literal notranslate"><span class="pre">y0</span> <span class="pre">=</span> <span class="pre">h(x0,</span> <span class="pre">b)</span></code>, <code class="docutils literal notranslate"><span class="pre">y1</span> <span class="pre">=</span> <span class="pre">h(x1,</span> <span class="pre">y0)</span></code>, <code class="docutils literal notranslate"><span class="pre">...</span></code> <code class="docutils literal notranslate"><span class="pre">yn</span> <span class="pre">=</span> <span class="pre">h(xn,</span> <span class="pre">y(n-1))</span></code>.</p>
+<span class="target" id="l53747265616d46756e6374696f6e73322e7363616e"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">scan</span>: (B, (A, B) -&gt; B, <a class="reference internal" href="Stream.html#l53747265616d"><span class="std std-ref">Stream</span></a> A) -&gt; <a class="reference internal" href="Stream.html#l53747265616d"><span class="std std-ref">Stream</span></a> B</dt><dd><p><code class="docutils literal notranslate"><span class="pre">scan(b,</span> <span class="pre">h,</span> <span class="pre">[x0,</span> <span class="pre">x1,</span> <span class="pre">x2,</span> <span class="pre">...])</span></code> returns <code class="docutils literal notranslate"><span class="pre">[y0,</span> <span class="pre">y1,</span> <span class="pre">y2,</span> <span class="pre">...]</span></code>, where <code class="docutils literal notranslate"><span class="pre">y0</span> <span class="pre">=</span> <span class="pre">h(x0,</span> <span class="pre">b)</span></code>, <code class="docutils literal notranslate"><span class="pre">y1</span> <span class="pre">=</span> <span class="pre">h(x1,</span> <span class="pre">y0)</span></code>, <code class="docutils literal notranslate"><span class="pre">...</span></code> <code class="docutils literal notranslate"><span class="pre">yn</span> <span class="pre">=</span> <span class="pre">h(xn,</span> <span class="pre">y(n-1))</span></code>.</p>
 </dd>
 </dl>
 </div>
@@ -112,7 +112,7 @@
         <li class="right" >
           <a href="StreamFunctions1.html" title="StreamFunctions1 S"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">StreamFunctions2(A, B)</a></li> 

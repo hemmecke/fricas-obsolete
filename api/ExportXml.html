@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ExportXml &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>ExportXml &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="Export3D.html" title="Export3D"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">ExportXml</a></li> 
@@ -46,15 +46,15 @@
           <div class="body" role="main">
             
   <div class="section" id="exportxml">
-<span id="l-export-xml"></span><span id="index-0"></span><h1>ExportXml<a class="headerlink" href="#exportxml" title="Permalink to this headline">¶</a></h1>
+<span id="l4578706f7274586d6c"></span><span id="index-0"></span><h1>ExportXml<a class="headerlink" href="#exportxml" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/scene.spad#L3904">scene.spad line 3904</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/scene.spad#L3904">[edit on github]</a></p>
 <p>This package provides support for <code class="docutils literal notranslate"><span class="pre">XML</span></code> files</p>
-<span class="target" id="l-export-xml-write-v-r-m-l"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">writeVRML</span>: (<a class="reference internal" href="XmlElement.html#l-xml-element"><span class="std std-ref">XmlElement</span></a>, <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>) -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">writeVRML(content,</span> <span class="pre">filename)</span></code> writes the element as <code class="docutils literal notranslate"><span class="pre">VRML2</span></code>. <code class="docutils literal notranslate"><span class="pre">VRML2</span></code> is not <code class="docutils literal notranslate"><span class="pre">xml</span></code> but it has the same semantics and node names as <code class="docutils literal notranslate"><span class="pre">X3D</span></code> but a different syntax so it makes sense to create an <code class="docutils literal notranslate"><span class="pre">XML</span></code> structure and then format the output differently.</p>
+<span class="target" id="l4578706f7274586d6c2e777269746556524d4c"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">writeVRML</span>: (<a class="reference internal" href="XmlElement.html#l586d6c456c656d656e74"><span class="std std-ref">XmlElement</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">writeVRML(content,</span> <span class="pre">filename)</span></code> writes the element as <code class="docutils literal notranslate"><span class="pre">VRML2</span></code>. <code class="docutils literal notranslate"><span class="pre">VRML2</span></code> is not <code class="docutils literal notranslate"><span class="pre">xml</span></code> but it has the same semantics and node names as <code class="docutils literal notranslate"><span class="pre">X3D</span></code> but a different syntax so it makes sense to create an <code class="docutils literal notranslate"><span class="pre">XML</span></code> structure and then format the output differently.</p>
 </dd>
 </dl>
-<span class="target" id="l-export-xml-write-xml"></span><dl class="simple" id="index-2">
-<dt><span class="spadfun">writeXml</span>: (<a class="reference internal" href="XmlElement.html#l-xml-element"><span class="std std-ref">XmlElement</span></a>, <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>) -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">writeXml(content,</span> <span class="pre">filename)</span></code> writes an <code class="docutils literal notranslate"><span class="pre">xml</span></code> element and all the elements below it to an <code class="docutils literal notranslate"><span class="pre">xml</span></code> file. This assumes that all elements, in a file, have a single root which is usually the case.</p>
+<span class="target" id="l4578706f7274586d6c2e7772697465586d6c"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">writeXml</span>: (<a class="reference internal" href="XmlElement.html#l586d6c456c656d656e74"><span class="std std-ref">XmlElement</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">writeXml(content,</span> <span class="pre">filename)</span></code> writes an <code class="docutils literal notranslate"><span class="pre">xml</span></code> element and all the elements below it to an <code class="docutils literal notranslate"><span class="pre">xml</span></code> file. This assumes that all elements, in a file, have a single root which is usually the case.</p>
 </dd>
 </dl>
 </div>
@@ -104,7 +104,7 @@
         <li class="right" >
           <a href="Export3D.html" title="Export3D"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">ExportXml</a></li> 

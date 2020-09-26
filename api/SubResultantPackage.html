@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SubResultantPackage(R, UP) &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>SubResultantPackage(R, UP) &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="SturmHabichtPackage.html" title="SturmHabichtPackage(R, UP)"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">SubResultantPackage(R, UP)</a></li> 
@@ -46,19 +46,19 @@
           <div class="body" role="main">
             
   <div class="section" id="subresultantpackage-r-up">
-<span id="l-sub-resultant-package"></span><span id="index-0"></span><h1>SubResultantPackage(R, UP)<a class="headerlink" href="#subresultantpackage-r-up" title="Permalink to this headline">¶</a></h1>
+<span id="l537562526573756c74616e745061636b616765"></span><span id="index-0"></span><h1>SubResultantPackage(R, UP)<a class="headerlink" href="#subresultantpackage-r-up" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/intrf.spad#L1">intrf.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/intrf.spad#L1">[edit on github]</a></p>
 <ul class="simple">
-<li><p>R: <a class="reference internal" href="IntegralDomain.html#l-integral-domain"><span class="std std-ref">IntegralDomain</span></a></p></li>
-<li><p>UP: <a class="reference internal" href="UnivariatePolynomialCategory.html#l-univariate-polynomial-category"><span class="std std-ref">UnivariatePolynomialCategory</span></a> R</p></li>
+<li><p>R: <a class="reference internal" href="IntegralDomain.html#l496e74656772616c446f6d61696e"><span class="std std-ref">IntegralDomain</span></a></p></li>
+<li><p>UP: <a class="reference internal" href="UnivariatePolynomialCategory.html#l556e6976617269617465506f6c796e6f6d69616c43617465676f7279"><span class="std std-ref">UnivariatePolynomialCategory</span></a> R</p></li>
 </ul>
 <p>This package computes the subresultants of two polynomials which is needed for the <a href="#id1"><span class="problematic" id="id2">`</span></a>Lazard Rioboo’ enhancement to Tragers integrations formula. For efficiency reasons this has been rewritten to call Lionel Ducos package which is currently the best one.</p>
-<span class="target" id="l-sub-resultant-package-primitive-part"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">primitivePart</span>: (UP, R) -&gt; UP if R has <a class="reference internal" href="EuclideanDomain.html#l-euclidean-domain"><span class="std std-ref">EuclideanDomain</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">primitivePart(p,</span> <span class="pre">q)</span></code> reduces the coefficient of <code class="docutils literal notranslate"><span class="pre">p</span></code> modulo <code class="docutils literal notranslate"><span class="pre">q</span></code>, takes the primitive part of the result, and ensures that the leading coefficient of that result is monic.</p>
+<span class="target" id="l537562526573756c74616e745061636b6167652e7072696d697469766550617274"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">primitivePart</span>: (UP, R) -&gt; UP if R has <a class="reference internal" href="EuclideanDomain.html#l4575636c696465616e446f6d61696e"><span class="std std-ref">EuclideanDomain</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">primitivePart(p,</span> <span class="pre">q)</span></code> reduces the coefficient of <code class="docutils literal notranslate"><span class="pre">p</span></code> modulo <code class="docutils literal notranslate"><span class="pre">q</span></code>, takes the primitive part of the result, and ensures that the leading coefficient of that result is monic.</p>
 </dd>
 </dl>
-<span class="target" id="l-sub-resultant-package-subresultant-vector"></span><dl class="simple" id="index-2">
-<dt><span class="spadfun">subresultantVector</span>: (UP, UP) -&gt; <a class="reference internal" href="PrimitiveArray.html#l-primitive-array"><span class="std std-ref">PrimitiveArray</span></a> UP</dt><dd><p><code class="docutils literal notranslate"><span class="pre">subresultantVector(p,</span> <span class="pre">q)</span></code> returns <code class="docutils literal notranslate"><span class="pre">[p0,</span> <span class="pre">...,</span> <span class="pre">pn]</span></code> where <code class="docutils literal notranslate"><span class="pre">pi</span></code> is the <code class="docutils literal notranslate"><span class="pre">i</span></code>-th subresultant of <code class="docutils literal notranslate"><span class="pre">p</span></code> and <code class="docutils literal notranslate"><span class="pre">q</span></code>. In particular, <code class="docutils literal notranslate"><span class="pre">p0</span> <span class="pre">=</span> <span class="pre">resultant(p,</span> <span class="pre">q)</span></code>.</p>
+<span class="target" id="l537562526573756c74616e745061636b6167652e737562726573756c74616e74566563746f72"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">subresultantVector</span>: (UP, UP) -&gt; <a class="reference internal" href="PrimitiveArray.html#l5072696d69746976654172726179"><span class="std std-ref">PrimitiveArray</span></a> UP</dt><dd><p><code class="docutils literal notranslate"><span class="pre">subresultantVector(p,</span> <span class="pre">q)</span></code> returns <code class="docutils literal notranslate"><span class="pre">[p0,</span> <span class="pre">...,</span> <span class="pre">pn]</span></code> where <code class="docutils literal notranslate"><span class="pre">pi</span></code> is the <code class="docutils literal notranslate"><span class="pre">i</span></code>-th subresultant of <code class="docutils literal notranslate"><span class="pre">p</span></code> and <code class="docutils literal notranslate"><span class="pre">q</span></code>. In particular, <code class="docutils literal notranslate"><span class="pre">p0</span> <span class="pre">=</span> <span class="pre">resultant(p,</span> <span class="pre">q)</span></code>.</p>
 </dd>
 </dl>
 </div>
@@ -108,7 +108,7 @@
         <li class="right" >
           <a href="SturmHabichtPackage.html" title="SturmHabichtPackage(R, UP)"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">SubResultantPackage(R, UP)</a></li> 

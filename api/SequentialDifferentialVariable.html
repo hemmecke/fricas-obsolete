@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SequentialDifferentialVariable S &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>SequentialDifferentialVariable S &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="SequentialDifferentialPolynomial.html" title="SequentialDifferentialPolynomial R"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Domains.html" accesskey="U">Domains</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">SequentialDifferentialVariable S</a></li> 
@@ -46,67 +46,105 @@
           <div class="body" role="main">
             
   <div class="section" id="sequentialdifferentialvariable-s">
-<span id="l-sequential-differential-variable"></span><span id="index-0"></span><h1>SequentialDifferentialVariable S<a class="headerlink" href="#sequentialdifferentialvariable-s" title="Permalink to this headline">¶</a></h1>
+<span id="l53657175656e7469616c446966666572656e7469616c5661726961626c65"></span><span id="index-0"></span><h1>SequentialDifferentialVariable S<a class="headerlink" href="#sequentialdifferentialvariable-s" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/dpolcat.spad#L142">dpolcat.spad line 142</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/dpolcat.spad#L142">[edit on github]</a></p>
 <ul class="simple">
-<li><p>S: <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a></p></li>
+<li><p>S: <a class="reference internal" href="OrderedSet.html#l4f726465726564536574"><span class="std std-ref">OrderedSet</span></a></p></li>
 </ul>
-<p><a class="reference internal" href="OrderlyDifferentialVariable.html#l-orderly-differential-variable"><span class="std std-ref">OrderlyDifferentialVariable</span></a> adds a commonly used sequential ranking to the set of derivatives of an ordered list of differential indeterminates. A sequential ranking is a ranking <span class="spadfun">&lt;</span> of the derivatives with the property that for any derivative <code class="docutils literal notranslate"><span class="pre">v</span></code>, there are only a finite number of derivatives <code class="docutils literal notranslate"><span class="pre">u</span></code> with <code class="docutils literal notranslate"><span class="pre">u</span></code> <span class="spadfun">&lt;</span> <code class="docutils literal notranslate"><span class="pre">v</span></code>. This domain belongs to <a class="reference internal" href="DifferentialVariableCategory.html#l-differential-variable-category"><span class="std std-ref">DifferentialVariableCategory</span></a>. It defines <span class="spadfun">weight</span> to be just <span class="spadfun">order</span>, and it defines a sequential ranking <span class="spadfun">&lt;</span> on derivatives <code class="docutils literal notranslate"><span class="pre">u</span></code> by the lexicographic order on the pair (<span class="spadfun">variable</span>(<code class="docutils literal notranslate"><span class="pre">u</span></code>), <span class="spadfun">order</span>(<code class="docutils literal notranslate"><span class="pre">u</span></code>)).</p>
-<dl class="simple">
-<dt><a class="reference internal" href="PartialOrder.html#id1"><span class="std std-ref">&lt;</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l-partial-order"><span class="std std-ref">PartialOrder</span></a></p>
-</dd>
-<dt><a class="reference internal" href="PartialOrder.html#id2"><span class="std std-ref">&lt;=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l-partial-order"><span class="std std-ref">PartialOrder</span></a></p>
-</dd>
-<dt><a class="reference internal" href="BasicType.html#id1"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-</dd>
-<dt><a class="reference internal" href="PartialOrder.html#id3"><span class="std std-ref">&gt;</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l-partial-order"><span class="std std-ref">PartialOrder</span></a></p>
-</dd>
-<dt><a class="reference internal" href="PartialOrder.html#id4"><span class="std std-ref">&gt;=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l-partial-order"><span class="std std-ref">PartialOrder</span></a></p>
-</dd>
-<dt><a class="reference internal" href="BasicType.html#id2"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-</dd>
-<dt><a class="reference internal" href="CoercibleTo.html#l-coercible-to-coerce"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
-</dd>
-<dt><a class="reference internal" href="DifferentialVariableCategory.html#l-differential-variable-category-coerce"><span class="std std-ref">coerce</span></a>: S -&gt; %</dt><dd><p>from <a class="reference internal" href="DifferentialVariableCategory.html#l-differential-variable-category"><span class="std std-ref">DifferentialVariableCategory</span></a> S</p>
-</dd>
-<dt><a class="reference internal" href="DifferentialVariableCategory.html#l-differential-variable-category-differentiate"><span class="std std-ref">differentiate</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="DifferentialVariableCategory.html#l-differential-variable-category"><span class="std std-ref">DifferentialVariableCategory</span></a> S</p>
-</dd>
-<dt><a class="reference internal" href="DifferentialVariableCategory.html#l-differential-variable-category-differentiate"><span class="std std-ref">differentiate</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="DifferentialVariableCategory.html#l-differential-variable-category"><span class="std std-ref">DifferentialVariableCategory</span></a> S</p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l-single-integer"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash-update"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-latex"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="DifferentialVariableCategory.html#l-differential-variable-category-make-variable"><span class="std std-ref">makeVariable</span></a>: (S, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="DifferentialVariableCategory.html#l-differential-variable-category"><span class="std std-ref">DifferentialVariableCategory</span></a> S</p>
-</dd>
-<dt><a class="reference internal" href="OrderedSet.html#l-ordered-set-max"><span class="std std-ref">max</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a></p>
-</dd>
-<dt><a class="reference internal" href="OrderedSet.html#l-ordered-set-min"><span class="std std-ref">min</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a></p>
-</dd>
-<dt><a class="reference internal" href="DifferentialVariableCategory.html#l-differential-variable-category-order"><span class="std std-ref">order</span></a>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="DifferentialVariableCategory.html#l-differential-variable-category"><span class="std std-ref">DifferentialVariableCategory</span></a> S</p>
-</dd>
-<dt><a class="reference internal" href="RetractableTo.html#l-retractable-to-retract"><span class="std std-ref">retract</span></a>: % -&gt; S</dt><dd><p>from <a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> S</p>
-</dd>
-<dt><a class="reference internal" href="RetractableTo.html#l-retractable-to-retract-if-can"><span class="std std-ref">retractIfCan</span></a>: % -&gt; Union(S, failed)</dt><dd><p>from <a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> S</p>
-</dd>
-<dt><a class="reference internal" href="Comparable.html#l-comparable-smaller"><span class="std std-ref">smaller?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a></p>
-</dd>
-<dt><a class="reference internal" href="DifferentialVariableCategory.html#l-differential-variable-category-variable"><span class="std std-ref">variable</span></a>: % -&gt; S</dt><dd><p>from <a class="reference internal" href="DifferentialVariableCategory.html#l-differential-variable-category"><span class="std std-ref">DifferentialVariableCategory</span></a> S</p>
-</dd>
-<dt><a class="reference internal" href="DifferentialVariableCategory.html#l-differential-variable-category-weight"><span class="std std-ref">weight</span></a>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="DifferentialVariableCategory.html#l-differential-variable-category"><span class="std std-ref">DifferentialVariableCategory</span></a> S</p>
+<p><a class="reference internal" href="OrderlyDifferentialVariable.html#l4f726465726c79446966666572656e7469616c5661726961626c65"><span class="std std-ref">OrderlyDifferentialVariable</span></a> adds a commonly used sequential ranking to the set of derivatives of an ordered list of differential indeterminates. A sequential ranking is a ranking <span class="spadfun">&lt;</span> of the derivatives with the property that for any derivative <code class="docutils literal notranslate"><span class="pre">v</span></code>, there are only a finite number of derivatives <code class="docutils literal notranslate"><span class="pre">u</span></code> with <code class="docutils literal notranslate"><span class="pre">u</span></code> <span class="spadfun">&lt;</span> <code class="docutils literal notranslate"><span class="pre">v</span></code>. This domain belongs to <a class="reference internal" href="DifferentialVariableCategory.html#l446966666572656e7469616c5661726961626c6543617465676f7279"><span class="std std-ref">DifferentialVariableCategory</span></a>. It defines <span class="spadfun">weight</span> to be just <span class="spadfun">order</span>, and it defines a sequential ranking <span class="spadfun">&lt;</span> on derivatives <code class="docutils literal notranslate"><span class="pre">u</span></code> by the lexicographic order on the pair (<span class="spadfun">variable</span>(<code class="docutils literal notranslate"><span class="pre">u</span></code>), <span class="spadfun">order</span>(<code class="docutils literal notranslate"><span class="pre">u</span></code>)).</p>
+<dl class="simple" id="l53657175656e7469616c446966666572656e7469616c5661726961626c652e3c3d">
+<dt><a class="reference internal" href="PartialOrder.html#l5061727469616c4f726465722e3c3d"><span class="std std-ref">&lt;=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l5061727469616c4f72646572"><span class="std std-ref">PartialOrder</span></a></p>
 </dd>
 </dl>
-<p><a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-<p><a class="reference internal" href="CoercibleFrom.html#l-coercible-from"><span class="std std-ref">CoercibleFrom</span></a> S</p>
-<p><a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
-<p><a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a></p>
-<p><a class="reference internal" href="DifferentialVariableCategory.html#l-differential-variable-category"><span class="std std-ref">DifferentialVariableCategory</span></a> S</p>
-<p><a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a></p>
-<p><a class="reference internal" href="PartialOrder.html#l-partial-order"><span class="std std-ref">PartialOrder</span></a></p>
-<p><a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> S</p>
-<p><a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+<dl class="simple" id="l53657175656e7469616c446966666572656e7469616c5661726961626c652e3c">
+<dt><a class="reference internal" href="PartialOrder.html#l5061727469616c4f726465722e3c"><span class="std std-ref">&lt;</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l5061727469616c4f72646572"><span class="std std-ref">PartialOrder</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l53657175656e7469616c446966666572656e7469616c5661726961626c652e3d">
+<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l53657175656e7469616c446966666572656e7469616c5661726961626c652e3e3d">
+<dt><a class="reference internal" href="PartialOrder.html#l5061727469616c4f726465722e3e3d"><span class="std std-ref">&gt;=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l5061727469616c4f72646572"><span class="std std-ref">PartialOrder</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l53657175656e7469616c446966666572656e7469616c5661726961626c652e3e">
+<dt><a class="reference internal" href="PartialOrder.html#l5061727469616c4f726465722e3e"><span class="std std-ref">&gt;</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l5061727469616c4f72646572"><span class="std std-ref">PartialOrder</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l53657175656e7469616c446966666572656e7469616c5661726961626c652e7e3d">
+<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e7e3d"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l53657175656e7469616c446966666572656e7469616c5661726961626c652e636f65726365">
+<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f2e636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+</dd>
+<dt><a class="reference internal" href="DifferentialVariableCategory.html#l446966666572656e7469616c5661726961626c6543617465676f72792e636f65726365"><span class="std std-ref">coerce</span></a>: S -&gt; %</dt><dd><p>from <a class="reference internal" href="DifferentialVariableCategory.html#l446966666572656e7469616c5661726961626c6543617465676f7279"><span class="std std-ref">DifferentialVariableCategory</span></a> S</p>
+</dd>
+</dl>
+<dl class="simple" id="l53657175656e7469616c446966666572656e7469616c5661726961626c652e646966666572656e7469617465">
+<dt><a class="reference internal" href="DifferentialVariableCategory.html#l446966666572656e7469616c5661726961626c6543617465676f72792e646966666572656e7469617465"><span class="std std-ref">differentiate</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="DifferentialVariableCategory.html#l446966666572656e7469616c5661726961626c6543617465676f7279"><span class="std std-ref">DifferentialVariableCategory</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="DifferentialVariableCategory.html#l446966666572656e7469616c5661726961626c6543617465676f72792e646966666572656e7469617465"><span class="std std-ref">differentiate</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="DifferentialVariableCategory.html#l446966666572656e7469616c5661726961626c6543617465676f7279"><span class="std std-ref">DifferentialVariableCategory</span></a> S</p>
+</dd>
+</dl>
+<dl class="simple" id="l53657175656e7469616c446966666572656e7469616c5661726961626c652e68617368">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e68617368"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l53696e676c65496e7465676572"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l53657175656e7469616c446966666572656e7469616c5661726961626c652e6861736855706461746521">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6861736855706461746521"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l53657175656e7469616c446966666572656e7469616c5661726961626c652e6c61746578">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6c61746578"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l53657175656e7469616c446966666572656e7469616c5661726961626c652e6d616b655661726961626c65">
+<dt><a class="reference internal" href="DifferentialVariableCategory.html#l446966666572656e7469616c5661726961626c6543617465676f72792e6d616b655661726961626c65"><span class="std std-ref">makeVariable</span></a>: (S, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="DifferentialVariableCategory.html#l446966666572656e7469616c5661726961626c6543617465676f7279"><span class="std std-ref">DifferentialVariableCategory</span></a> S</p>
+</dd>
+</dl>
+<dl class="simple" id="l53657175656e7469616c446966666572656e7469616c5661726961626c652e6d6178">
+<dt><a class="reference internal" href="OrderedSet.html#l4f7264657265645365742e6d6178"><span class="std std-ref">max</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="OrderedSet.html#l4f726465726564536574"><span class="std std-ref">OrderedSet</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l53657175656e7469616c446966666572656e7469616c5661726961626c652e6d696e">
+<dt><a class="reference internal" href="OrderedSet.html#l4f7264657265645365742e6d696e"><span class="std std-ref">min</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="OrderedSet.html#l4f726465726564536574"><span class="std std-ref">OrderedSet</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l53657175656e7469616c446966666572656e7469616c5661726961626c652e6f72646572">
+<dt><a class="reference internal" href="DifferentialVariableCategory.html#l446966666572656e7469616c5661726961626c6543617465676f72792e6f72646572"><span class="std std-ref">order</span></a>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="DifferentialVariableCategory.html#l446966666572656e7469616c5661726961626c6543617465676f7279"><span class="std std-ref">DifferentialVariableCategory</span></a> S</p>
+</dd>
+</dl>
+<dl class="simple" id="l53657175656e7469616c446966666572656e7469616c5661726961626c652e72657472616374">
+<dt><a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f2e72657472616374"><span class="std std-ref">retract</span></a>: % -&gt; S</dt><dd><p>from <a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f"><span class="std std-ref">RetractableTo</span></a> S</p>
+</dd>
+</dl>
+<dl class="simple" id="l53657175656e7469616c446966666572656e7469616c5661726961626c652e72657472616374496643616e">
+<dt><a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f2e72657472616374496643616e"><span class="std std-ref">retractIfCan</span></a>: % -&gt; Union(S, failed)</dt><dd><p>from <a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f"><span class="std std-ref">RetractableTo</span></a> S</p>
+</dd>
+</dl>
+<dl class="simple" id="l53657175656e7469616c446966666572656e7469616c5661726961626c652e736d616c6c65723f">
+<dt><a class="reference internal" href="Comparable.html#l436f6d70617261626c652e736d616c6c65723f"><span class="std std-ref">smaller?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l53657175656e7469616c446966666572656e7469616c5661726961626c652e7661726961626c65">
+<dt><a class="reference internal" href="DifferentialVariableCategory.html#l446966666572656e7469616c5661726961626c6543617465676f72792e7661726961626c65"><span class="std std-ref">variable</span></a>: % -&gt; S</dt><dd><p>from <a class="reference internal" href="DifferentialVariableCategory.html#l446966666572656e7469616c5661726961626c6543617465676f7279"><span class="std std-ref">DifferentialVariableCategory</span></a> S</p>
+</dd>
+</dl>
+<dl class="simple" id="l53657175656e7469616c446966666572656e7469616c5661726961626c652e776569676874">
+<dt><a class="reference internal" href="DifferentialVariableCategory.html#l446966666572656e7469616c5661726961626c6543617465676f72792e776569676874"><span class="std std-ref">weight</span></a>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="DifferentialVariableCategory.html#l446966666572656e7469616c5661726961626c6543617465676f7279"><span class="std std-ref">DifferentialVariableCategory</span></a> S</p>
+</dd>
+</dl>
+<p><a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+<p><a class="reference internal" href="CoercibleFrom.html#l436f65726369626c6546726f6d"><span class="std std-ref">CoercibleFrom</span></a> S</p>
+<p><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+<p><a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a></p>
+<p><a class="reference internal" href="DifferentialVariableCategory.html#l446966666572656e7469616c5661726961626c6543617465676f7279"><span class="std std-ref">DifferentialVariableCategory</span></a> S</p>
+<p><a class="reference internal" href="OrderedSet.html#l4f726465726564536574"><span class="std std-ref">OrderedSet</span></a></p>
+<p><a class="reference internal" href="PartialOrder.html#l5061727469616c4f72646572"><span class="std std-ref">PartialOrder</span></a></p>
+<p><a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f"><span class="std std-ref">RetractableTo</span></a> S</p>
+<p><a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </div>
 
 
@@ -154,7 +192,7 @@
         <li class="right" >
           <a href="SequentialDifferentialPolynomial.html" title="SequentialDifferentialPolynomial R"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Domains.html" >Domains</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">SequentialDifferentialVariable S</a></li> 

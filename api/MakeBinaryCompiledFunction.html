@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MakeBinaryCompiledFunction(S, D1, D2, I) &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>MakeBinaryCompiledFunction(S, D1, D2, I) &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="LUDecomposition.html" title="LUDecomposition D"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">MakeBinaryCompiledFunction(S, D1, D2, I)</a></li> 
@@ -46,21 +46,21 @@
           <div class="body" role="main">
             
   <div class="section" id="makebinarycompiledfunction-s-d1-d2-i">
-<span id="l-make-binary-compiled-function"></span><span id="index-0"></span><h1>MakeBinaryCompiledFunction(S, D1, D2, I)<a class="headerlink" href="#makebinarycompiledfunction-s-d1-d2-i" title="Permalink to this headline">¶</a></h1>
+<span id="l4d616b6542696e617279436f6d70696c656446756e6374696f6e"></span><span id="index-0"></span><h1>MakeBinaryCompiledFunction(S, D1, D2, I)<a class="headerlink" href="#makebinarycompiledfunction-s-d1-d2-i" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/mkfunc.spad#L290">mkfunc.spad line 290</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/mkfunc.spad#L290">[edit on github]</a></p>
 <ul class="simple">
-<li><p>S: <a class="reference internal" href="ConvertibleTo.html#l-convertible-to"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="InputForm.html#l-input-form"><span class="std std-ref">InputForm</span></a></p></li>
-<li><p>D1: <a class="reference internal" href="Type.html#l-type"><span class="std std-ref">Type</span></a></p></li>
-<li><p>D2: <a class="reference internal" href="Type.html#l-type"><span class="std std-ref">Type</span></a></p></li>
-<li><p>I: <a class="reference internal" href="Type.html#l-type"><span class="std std-ref">Type</span></a></p></li>
+<li><p>S: <a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="InputForm.html#l496e707574466f726d"><span class="std std-ref">InputForm</span></a></p></li>
+<li><p>D1: <a class="reference internal" href="Type.html#l54797065"><span class="std std-ref">Type</span></a></p></li>
+<li><p>D2: <a class="reference internal" href="Type.html#l54797065"><span class="std std-ref">Type</span></a></p></li>
+<li><p>I: <a class="reference internal" href="Type.html#l54797065"><span class="std std-ref">Type</span></a></p></li>
 </ul>
 <p>transforms top-level objects into compiled functions.</p>
-<span class="target" id="l-make-binary-compiled-function-binary-function"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">binaryFunction</span>: <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a> -&gt; (D1, D2) -&gt; I</dt><dd><p><code class="docutils literal notranslate"><span class="pre">binaryFunction(s)</span></code> is a local function</p>
+<span class="target" id="l4d616b6542696e617279436f6d70696c656446756e6374696f6e2e62696e61727946756e6374696f6e"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">binaryFunction</span>: <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a> -&gt; (D1, D2) -&gt; I</dt><dd><p><code class="docutils literal notranslate"><span class="pre">binaryFunction(s)</span></code> is a local function</p>
 </dd>
 </dl>
-<span class="target" id="l-make-binary-compiled-function-compiled-function"></span><dl class="simple" id="index-2">
-<dt><span class="spadfun">compiledFunction</span>: (S, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>) -&gt; (D1, D2) -&gt; I</dt><dd><p><code class="docutils literal notranslate"><span class="pre">compiledFunction(expr,</span> <span class="pre">x,</span> <span class="pre">y)</span></code> returns a function <code class="docutils literal notranslate"><span class="pre">f:</span> <span class="pre">(D1,</span> <span class="pre">D2)</span> <span class="pre">-&gt;</span> <span class="pre">I</span></code> defined by <code class="docutils literal notranslate"><span class="pre">f(x,</span> <span class="pre">y)</span> <span class="pre">==</span> <span class="pre">expr</span></code>. Function <code class="docutils literal notranslate"><span class="pre">f</span></code> is compiled and directly applicable to objects of type <code class="docutils literal notranslate"><span class="pre">(D1,</span> <span class="pre">D2)</span></code></p>
+<span class="target" id="l4d616b6542696e617279436f6d70696c656446756e6374696f6e2e636f6d70696c656446756e6374696f6e"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">compiledFunction</span>: (S, <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>) -&gt; (D1, D2) -&gt; I</dt><dd><p><code class="docutils literal notranslate"><span class="pre">compiledFunction(expr,</span> <span class="pre">x,</span> <span class="pre">y)</span></code> returns a function <code class="docutils literal notranslate"><span class="pre">f:</span> <span class="pre">(D1,</span> <span class="pre">D2)</span> <span class="pre">-&gt;</span> <span class="pre">I</span></code> defined by <code class="docutils literal notranslate"><span class="pre">f(x,</span> <span class="pre">y)</span> <span class="pre">==</span> <span class="pre">expr</span></code>. Function <code class="docutils literal notranslate"><span class="pre">f</span></code> is compiled and directly applicable to objects of type <code class="docutils literal notranslate"><span class="pre">(D1,</span> <span class="pre">D2)</span></code></p>
 </dd>
 </dl>
 </div>
@@ -110,7 +110,7 @@
         <li class="right" >
           <a href="LUDecomposition.html" title="LUDecomposition D"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">MakeBinaryCompiledFunction(S, D1, D2, I)</a></li> 

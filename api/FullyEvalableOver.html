@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FullyEvalableOver R &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>FullyEvalableOver R &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="FreeModuleCategory.html" title="FreeModuleCategory(R, S)"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Categories.html" accesskey="U">Categories</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">FullyEvalableOver R</a></li> 
@@ -46,36 +46,38 @@
           <div class="body" role="main">
             
   <div class="section" id="fullyevalableover-r">
-<span id="l-fully-evalable-over"></span><span id="index-0"></span><h1>FullyEvalableOver R<a class="headerlink" href="#fullyevalableover-r" title="Permalink to this headline">¶</a></h1>
+<span id="l46756c6c794576616c61626c654f766572"></span><span id="index-0"></span><h1>FullyEvalableOver R<a class="headerlink" href="#fullyevalableover-r" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/equation1.spad#L273">equation1.spad line 273</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/equation1.spad#L273">[edit on github]</a></p>
 <ul class="simple">
-<li><p>R: <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p></li>
+<li><p>R: <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p></li>
 </ul>
 <p>This category provides a selection of evaluation operations depending on what the argument type <code class="docutils literal notranslate"><span class="pre">R</span></code> provides.</p>
-<dl class="simple">
-<dt><a class="reference internal" href="Eltable.html#l-eltable-elt"><span class="std std-ref">elt</span></a>: (%, R) -&gt; % if R has <a class="reference internal" href="Eltable.html#l-eltable"><span class="std std-ref">Eltable</span></a>(R, R)</dt><dd><p>from <a class="reference internal" href="Eltable.html#l-eltable"><span class="std std-ref">Eltable</span></a>(R, %)</p>
-</dd>
-<dt><a class="reference internal" href="Evalable.html#l-evalable-eval"><span class="std std-ref">eval</span></a>: (%, <a class="reference internal" href="Equation.html#l-equation"><span class="std std-ref">Equation</span></a> R) -&gt; % if R has <a class="reference internal" href="Evalable.html#l-evalable"><span class="std std-ref">Evalable</span></a> R</dt><dd><p>from <a class="reference internal" href="Evalable.html#l-evalable"><span class="std std-ref">Evalable</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="Evalable.html#l-evalable-eval"><span class="std std-ref">eval</span></a>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Equation.html#l-equation"><span class="std std-ref">Equation</span></a> R) -&gt; % if R has <a class="reference internal" href="Evalable.html#l-evalable"><span class="std std-ref">Evalable</span></a> R</dt><dd><p>from <a class="reference internal" href="Evalable.html#l-evalable"><span class="std std-ref">Evalable</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="InnerEvalable.html#l-inner-evalable-eval"><span class="std std-ref">eval</span></a>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> R, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> R) -&gt; % if R has <a class="reference internal" href="Evalable.html#l-evalable"><span class="std std-ref">Evalable</span></a> R</dt><dd><p>from <a class="reference internal" href="InnerEvalable.html#l-inner-evalable"><span class="std std-ref">InnerEvalable</span></a>(R, R)</p>
-</dd>
-<dt><a class="reference internal" href="InnerEvalable.html#l-inner-evalable-eval"><span class="std std-ref">eval</span></a>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> R) -&gt; % if R has <a class="reference internal" href="InnerEvalable.html#l-inner-evalable"><span class="std std-ref">InnerEvalable</span></a>(<a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, R)</dt><dd><p>from <a class="reference internal" href="InnerEvalable.html#l-inner-evalable"><span class="std std-ref">InnerEvalable</span></a>(<a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, R)</p>
-</dd>
-<dt><a class="reference internal" href="InnerEvalable.html#l-inner-evalable-eval"><span class="std std-ref">eval</span></a>: (%, R, R) -&gt; % if R has <a class="reference internal" href="Evalable.html#l-evalable"><span class="std std-ref">Evalable</span></a> R</dt><dd><p>from <a class="reference internal" href="InnerEvalable.html#l-inner-evalable"><span class="std std-ref">InnerEvalable</span></a>(R, R)</p>
-</dd>
-<dt><a class="reference internal" href="InnerEvalable.html#l-inner-evalable-eval"><span class="std std-ref">eval</span></a>: (%, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, R) -&gt; % if R has <a class="reference internal" href="InnerEvalable.html#l-inner-evalable"><span class="std std-ref">InnerEvalable</span></a>(<a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, R)</dt><dd><p>from <a class="reference internal" href="InnerEvalable.html#l-inner-evalable"><span class="std std-ref">InnerEvalable</span></a>(<a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, R)</p>
+<dl class="simple" id="l46756c6c794576616c61626c654f7665722e656c74">
+<dt><a class="reference internal" href="Eltable.html#l456c7461626c652e656c74"><span class="std std-ref">elt</span></a>: (%, R) -&gt; % if R has <a class="reference internal" href="Eltable.html#l456c7461626c65"><span class="std std-ref">Eltable</span></a>(R, R)</dt><dd><p>from <a class="reference internal" href="Eltable.html#l456c7461626c65"><span class="std std-ref">Eltable</span></a>(R, %)</p>
 </dd>
 </dl>
-<span class="target" id="l-fully-evalable-over-map"></span><dl class="simple" id="index-1">
+<dl class="simple" id="l46756c6c794576616c61626c654f7665722e6576616c">
+<dt><a class="reference internal" href="Evalable.html#l4576616c61626c652e6576616c"><span class="std std-ref">eval</span></a>: (%, <a class="reference internal" href="Equation.html#l4571756174696f6e"><span class="std std-ref">Equation</span></a> R) -&gt; % if R has <a class="reference internal" href="Evalable.html#l4576616c61626c65"><span class="std std-ref">Evalable</span></a> R</dt><dd><p>from <a class="reference internal" href="Evalable.html#l4576616c61626c65"><span class="std std-ref">Evalable</span></a> R</p>
+</dd>
+<dt><a class="reference internal" href="Evalable.html#l4576616c61626c652e6576616c"><span class="std std-ref">eval</span></a>: (%, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Equation.html#l4571756174696f6e"><span class="std std-ref">Equation</span></a> R) -&gt; % if R has <a class="reference internal" href="Evalable.html#l4576616c61626c65"><span class="std std-ref">Evalable</span></a> R</dt><dd><p>from <a class="reference internal" href="Evalable.html#l4576616c61626c65"><span class="std std-ref">Evalable</span></a> R</p>
+</dd>
+<dt><a class="reference internal" href="InnerEvalable.html#l496e6e65724576616c61626c652e6576616c"><span class="std std-ref">eval</span></a>: (%, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> R, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> R) -&gt; % if R has <a class="reference internal" href="Evalable.html#l4576616c61626c65"><span class="std std-ref">Evalable</span></a> R</dt><dd><p>from <a class="reference internal" href="InnerEvalable.html#l496e6e65724576616c61626c65"><span class="std std-ref">InnerEvalable</span></a>(R, R)</p>
+</dd>
+<dt><a class="reference internal" href="InnerEvalable.html#l496e6e65724576616c61626c652e6576616c"><span class="std std-ref">eval</span></a>: (%, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> R) -&gt; % if R has <a class="reference internal" href="InnerEvalable.html#l496e6e65724576616c61626c65"><span class="std std-ref">InnerEvalable</span></a>(<a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>, R)</dt><dd><p>from <a class="reference internal" href="InnerEvalable.html#l496e6e65724576616c61626c65"><span class="std std-ref">InnerEvalable</span></a>(<a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>, R)</p>
+</dd>
+<dt><a class="reference internal" href="InnerEvalable.html#l496e6e65724576616c61626c652e6576616c"><span class="std std-ref">eval</span></a>: (%, R, R) -&gt; % if R has <a class="reference internal" href="Evalable.html#l4576616c61626c65"><span class="std std-ref">Evalable</span></a> R</dt><dd><p>from <a class="reference internal" href="InnerEvalable.html#l496e6e65724576616c61626c65"><span class="std std-ref">InnerEvalable</span></a>(R, R)</p>
+</dd>
+<dt><a class="reference internal" href="InnerEvalable.html#l496e6e65724576616c61626c652e6576616c"><span class="std std-ref">eval</span></a>: (%, <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>, R) -&gt; % if R has <a class="reference internal" href="InnerEvalable.html#l496e6e65724576616c61626c65"><span class="std std-ref">InnerEvalable</span></a>(<a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>, R)</dt><dd><p>from <a class="reference internal" href="InnerEvalable.html#l496e6e65724576616c61626c65"><span class="std std-ref">InnerEvalable</span></a>(<a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>, R)</p>
+</dd>
+</dl>
+<span class="target" id="l46756c6c794576616c61626c654f7665722e6d6170"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">map</span>: (R -&gt; R, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">map(f,</span> <span class="pre">ex)</span></code> evaluates ex, applying <code class="docutils literal notranslate"><span class="pre">f</span></code> to values of type <code class="docutils literal notranslate"><span class="pre">R</span></code> in ex.</p>
 </dd>
 </dl>
-<p><a class="reference internal" href="Eltable.html#l-eltable"><span class="std std-ref">Eltable</span></a>(R, %) if R has <a class="reference internal" href="Eltable.html#l-eltable"><span class="std std-ref">Eltable</span></a>(R, R)</p>
-<p><a class="reference internal" href="Evalable.html#l-evalable"><span class="std std-ref">Evalable</span></a> R if R has <a class="reference internal" href="Evalable.html#l-evalable"><span class="std std-ref">Evalable</span></a> R</p>
-<p><a class="reference internal" href="InnerEvalable.html#l-inner-evalable"><span class="std std-ref">InnerEvalable</span></a>(R, R) if R has <a class="reference internal" href="Evalable.html#l-evalable"><span class="std std-ref">Evalable</span></a> R</p>
-<p><a class="reference internal" href="InnerEvalable.html#l-inner-evalable"><span class="std std-ref">InnerEvalable</span></a>(<a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, R) if R has <a class="reference internal" href="InnerEvalable.html#l-inner-evalable"><span class="std std-ref">InnerEvalable</span></a>(<a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, R)</p>
+<p><a class="reference internal" href="Eltable.html#l456c7461626c65"><span class="std std-ref">Eltable</span></a>(R, %) if R has <a class="reference internal" href="Eltable.html#l456c7461626c65"><span class="std std-ref">Eltable</span></a>(R, R)</p>
+<p><a class="reference internal" href="Evalable.html#l4576616c61626c65"><span class="std std-ref">Evalable</span></a> R if R has <a class="reference internal" href="Evalable.html#l4576616c61626c65"><span class="std std-ref">Evalable</span></a> R</p>
+<p><a class="reference internal" href="InnerEvalable.html#l496e6e65724576616c61626c65"><span class="std std-ref">InnerEvalable</span></a>(R, R) if R has <a class="reference internal" href="Evalable.html#l4576616c61626c65"><span class="std std-ref">Evalable</span></a> R</p>
+<p><a class="reference internal" href="InnerEvalable.html#l496e6e65724576616c61626c65"><span class="std std-ref">InnerEvalable</span></a>(<a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>, R) if R has <a class="reference internal" href="InnerEvalable.html#l496e6e65724576616c61626c65"><span class="std std-ref">InnerEvalable</span></a>(<a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>, R)</p>
 </div>
 
 
@@ -123,7 +125,7 @@
         <li class="right" >
           <a href="FreeModuleCategory.html" title="FreeModuleCategory(R, S)"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Categories.html" >Categories</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">FullyEvalableOver R</a></li> 

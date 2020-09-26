@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ElementaryIntegration(R, F) &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>ElementaryIntegration(R, F) &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="ElementaryFunctionsUnivariatePuiseuxSeries.html" title="ElementaryFunctionsUnivariatePuiseuxSeries(Coef, ULS, UPXS, EFULS)"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">ElementaryIntegration(R, F)</a></li> 
@@ -46,19 +46,19 @@
           <div class="body" role="main">
             
   <div class="section" id="elementaryintegration-r-f">
-<span id="l-elementary-integration"></span><span id="index-0"></span><h1>ElementaryIntegration(R, F)<a class="headerlink" href="#elementaryintegration-r-f" title="Permalink to this headline">¶</a></h1>
+<span id="l456c656d656e74617279496e746567726174696f6e"></span><span id="index-0"></span><h1>ElementaryIntegration(R, F)<a class="headerlink" href="#elementaryintegration-r-f" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/intef.spad#L1">intef.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/intef.spad#L1">[edit on github]</a></p>
 <ul class="simple">
-<li><p>R: Join(<a class="reference internal" href="GcdDomain.html#l-gcd-domain"><span class="std std-ref">GcdDomain</span></a>, <a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a>, <a class="reference internal" href="CharacteristicZero.html#l-characteristic-zero"><span class="std std-ref">CharacteristicZero</span></a>, <a class="reference internal" href="PolynomialFactorizationExplicit.html#l-polynomial-factorization-explicit"><span class="std std-ref">PolynomialFactorizationExplicit</span></a>, <a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="LinearlyExplicitOver.html#l-linearly-explicit-over"><span class="std std-ref">LinearlyExplicitOver</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>)</p></li>
-<li><p>F: Join(<a class="reference internal" href="AlgebraicallyClosedField.html#l-algebraically-closed-field"><span class="std std-ref">AlgebraicallyClosedField</span></a>, <a class="reference internal" href="TranscendentalFunctionCategory.html#l-transcendental-function-category"><span class="std std-ref">TranscendentalFunctionCategory</span></a>, <a class="reference internal" href="FunctionSpace.html#l-function-space"><span class="std std-ref">FunctionSpace</span></a> R)</p></li>
+<li><p>R: Join(<a class="reference internal" href="GcdDomain.html#l476364446f6d61696e"><span class="std std-ref">GcdDomain</span></a>, <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a>, <a class="reference internal" href="CharacteristicZero.html#l43686172616374657269737469635a65726f"><span class="std std-ref">CharacteristicZero</span></a>, <a class="reference internal" href="PolynomialFactorizationExplicit.html#l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974"><span class="std std-ref">PolynomialFactorizationExplicit</span></a>, <a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f"><span class="std std-ref">RetractableTo</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="LinearlyExplicitOver.html#l4c696e6561726c794578706c696369744f766572"><span class="std std-ref">LinearlyExplicitOver</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>)</p></li>
+<li><p>F: Join(<a class="reference internal" href="AlgebraicallyClosedField.html#l416c67656272616963616c6c79436c6f7365644669656c64"><span class="std std-ref">AlgebraicallyClosedField</span></a>, <a class="reference internal" href="TranscendentalFunctionCategory.html#l5472616e7363656e64656e74616c46756e6374696f6e43617465676f7279"><span class="std std-ref">TranscendentalFunctionCategory</span></a>, <a class="reference internal" href="FunctionSpace.html#l46756e6374696f6e5370616365"><span class="std std-ref">FunctionSpace</span></a> R)</p></li>
 </ul>
 <p>This package provides functions for integration, limited integration, extended integration and the risch differential equation for elemntary functions.</p>
-<span class="target" id="l-elementary-integration-lfextendedint"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">lfextendedint</span>: (F, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, F) -&gt; Union(Record(ratpart: F, coeff: F), failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">lfextendedint(f,</span> <span class="pre">x,</span> <span class="pre">g)</span></code> returns functions <code class="docutils literal notranslate"><span class="pre">[h,</span> <span class="pre">c]</span></code> such that <code class="docutils literal notranslate"><span class="pre">dh/dx</span> <span class="pre">=</span> <span class="pre">f</span> <span class="pre">-</span> <span class="pre">cg</span></code>, if (<code class="docutils literal notranslate"><span class="pre">h</span></code>, <code class="docutils literal notranslate"><span class="pre">c</span></code>) exist, “failed” otherwise.</p>
+<span class="target" id="l456c656d656e74617279496e746567726174696f6e2e6c66657874656e646564696e74"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">lfextendedint</span>: (F, <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>, F) -&gt; Union(Record(ratpart: F, coeff: F), failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">lfextendedint(f,</span> <span class="pre">x,</span> <span class="pre">g)</span></code> returns functions <code class="docutils literal notranslate"><span class="pre">[h,</span> <span class="pre">c]</span></code> such that <code class="docutils literal notranslate"><span class="pre">dh/dx</span> <span class="pre">=</span> <span class="pre">f</span> <span class="pre">-</span> <span class="pre">cg</span></code>, if (<code class="docutils literal notranslate"><span class="pre">h</span></code>, <code class="docutils literal notranslate"><span class="pre">c</span></code>) exist, “failed” otherwise.</p>
 </dd>
 </dl>
-<span class="target" id="l-elementary-integration-lfintegrate"></span><dl class="simple" id="index-2">
-<dt><span class="spadfun">lfintegrate</span>: (F, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>) -&gt; <a class="reference internal" href="IntegrationResult.html#l-integration-result"><span class="std std-ref">IntegrationResult</span></a> F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">lfintegrate(f,</span> <span class="pre">x)</span></code> = <code class="docutils literal notranslate"><span class="pre">g</span></code> such that <code class="docutils literal notranslate"><span class="pre">dg/dx</span> <span class="pre">=</span> <span class="pre">f</span></code>.</p>
+<span class="target" id="l456c656d656e74617279496e746567726174696f6e2e6c66696e74656772617465"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">lfintegrate</span>: (F, <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>) -&gt; <a class="reference internal" href="IntegrationResult.html#l496e746567726174696f6e526573756c74"><span class="std std-ref">IntegrationResult</span></a> F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">lfintegrate(f,</span> <span class="pre">x)</span></code> = <code class="docutils literal notranslate"><span class="pre">g</span></code> such that <code class="docutils literal notranslate"><span class="pre">dg/dx</span> <span class="pre">=</span> <span class="pre">f</span></code>.</p>
 </dd>
 </dl>
 </div>
@@ -108,7 +108,7 @@
         <li class="right" >
           <a href="ElementaryFunctionsUnivariatePuiseuxSeries.html" title="ElementaryFunctionsUnivariatePuiseuxSeries(Coef, ULS, UPXS, EFULS)"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">ElementaryIntegration(R, F)</a></li> 

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TexFormat &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>TexFormat &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="TensorProduct.html" title="TensorProduct(R, B1, B2, M1, M2)"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Domains.html" accesskey="U">Domains</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">TexFormat</a></li> 
@@ -46,74 +46,84 @@
           <div class="body" role="main">
             
   <div class="section" id="texformat">
-<span id="l-tex-format"></span><span id="index-0"></span><h1>TexFormat<a class="headerlink" href="#texformat" title="Permalink to this headline">¶</a></h1>
+<span id="l546578466f726d6174"></span><span id="index-0"></span><h1>TexFormat<a class="headerlink" href="#texformat" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/tex.spad#L1">tex.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/tex.spad#L1">[edit on github]</a></p>
-<p><a class="reference internal" href="#l-tex-format"><span class="std std-ref">TexFormat</span></a> provides a coercion from <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a> to TeX format. The particular dialect of TeX used is LaTeX. The basic object consists of three parts: a prologue, a tex part and an epilogue. The functions <span class="spadfun">prologue</span>, <span class="spadfun">tex</span> and <span class="spadfun">epilogue</span> extract these parts, respectively. The main guts of the expression go into the tex part. The other parts can be set (<span class="spadfun">setPrologue!</span>, <span class="spadfun">setEpilogue!</span>) so that contain the appropriate tags for printing. For example, the prologue and epilogue might simply contain <code class="docutils literal notranslate"><span class="pre">``</span></code>verb+<code class="docutils literal notranslate"><span class="pre">\[</span></code>+<code class="docutils literal notranslate"><span class="pre">''</span></code> and <code class="docutils literal notranslate"><span class="pre">``</span></code>verb+<code class="docutils literal notranslate"><span class="pre">\]</span></code>+<code class="docutils literal notranslate"><span class="pre">''</span></code>, respectively, so that the TeX section will be printed in LaTeX display math mode.</p>
-<dl class="simple">
-<dt><a class="reference internal" href="BasicType.html#id1"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-</dd>
-<dt><a class="reference internal" href="BasicType.html#id2"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-</dd>
-<dt><a class="reference internal" href="CoercibleTo.html#l-coercible-to-coerce"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+<p><a class="reference internal" href="#l546578466f726d6174"><span class="std std-ref">TexFormat</span></a> provides a coercion from <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a> to TeX format. The particular dialect of TeX used is LaTeX. The basic object consists of three parts: a prologue, a tex part and an epilogue. The functions <span class="spadfun">prologue</span>, <span class="spadfun">tex</span> and <span class="spadfun">epilogue</span> extract these parts, respectively. The main guts of the expression go into the tex part. The other parts can be set (<span class="spadfun">setPrologue!</span>, <span class="spadfun">setEpilogue!</span>) so that contain the appropriate tags for printing. For example, the prologue and epilogue might simply contain <code class="docutils literal notranslate"><span class="pre">``</span></code>verb+<code class="docutils literal notranslate"><span class="pre">\[</span></code>+<code class="docutils literal notranslate"><span class="pre">''</span></code> and <code class="docutils literal notranslate"><span class="pre">``</span></code>verb+<code class="docutils literal notranslate"><span class="pre">\]</span></code>+<code class="docutils literal notranslate"><span class="pre">''</span></code>, respectively, so that the TeX section will be printed in LaTeX display math mode.</p>
+<dl class="simple" id="l546578466f726d61742e3d">
+<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-tex-format-coerce"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(o)</span></code> changes <code class="docutils literal notranslate"><span class="pre">o</span></code> in the standard output format to TeX format.</p>
+<dl class="simple" id="l546578466f726d61742e7e3d">
+<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e7e3d"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-tex-format-convert"></span><dl class="simple" id="index-2">
-<dt><span class="spadfun">convert</span>: (<a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">convert(o,</span> <span class="pre">step)</span></code> changes <code class="docutils literal notranslate"><span class="pre">o</span></code> in standard output format to TeX format and also adds the given step number. This is useful if you want to create equations with given numbers or have the equation numbers correspond to the interpreter step numbers.</p>
+<dl class="simple" id="l546578466f726d61742e636f65726365">
+<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f2e636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="index-1">
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(o)</span></code> changes <code class="docutils literal notranslate"><span class="pre">o</span></code> in the standard output format to TeX format.</p>
+</dd>
+</dl>
+<span class="target" id="l546578466f726d61742e636f6e76657274"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">convert</span>: (<a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a>, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">convert(o,</span> <span class="pre">step)</span></code> changes <code class="docutils literal notranslate"><span class="pre">o</span></code> in standard output format to TeX format and also adds the given step number. This is useful if you want to create equations with given numbers or have the equation numbers correspond to the interpreter step numbers.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-3">
-<dt><span class="spadfun">convert</span>: (<a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a>, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">convert(o,</span> <span class="pre">step,</span> <span class="pre">type)</span></code> changes <code class="docutils literal notranslate"><span class="pre">o</span></code> in standard output format to TeX format and also adds the given <code class="docutils literal notranslate"><span class="pre">step</span></code> number and type. This is useful if you want to create equations with given numbers or have the equation numbers correspond to the interpreter <code class="docutils literal notranslate"><span class="pre">step</span></code> numbers.</p>
+<dt><span class="spadfun">convert</span>: (<a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a>, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">convert(o,</span> <span class="pre">step,</span> <span class="pre">type)</span></code> changes <code class="docutils literal notranslate"><span class="pre">o</span></code> in standard output format to TeX format and also adds the given <code class="docutils literal notranslate"><span class="pre">step</span></code> number and type. This is useful if you want to create equations with given numbers or have the equation numbers correspond to the interpreter <code class="docutils literal notranslate"><span class="pre">step</span></code> numbers.</p>
 </dd>
 </dl>
-<span class="target" id="l-tex-format-display"></span><dl class="simple" id="index-4">
-<dt><span class="spadfun">display</span>: % -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">display(t)</span></code> outputs the TeX formatted code <code class="docutils literal notranslate"><span class="pre">t</span></code> so that each line has length less than or equal to the value set by the system command spadsyscom{set output length}.</p>
+<span class="target" id="l546578466f726d61742e646973706c6179"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">display</span>: % -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">display(t)</span></code> outputs the TeX formatted code <code class="docutils literal notranslate"><span class="pre">t</span></code> so that each line has length less than or equal to the value set by the system command spadsyscom{set output length}.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-5">
-<dt><span class="spadfun">display</span>: (%, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">display(t,</span> <span class="pre">width)</span></code> outputs the TeX formatted code <code class="docutils literal notranslate"><span class="pre">t</span></code> so that each line has length less than or equal to spadvar{width}.</p>
+<dt><span class="spadfun">display</span>: (%, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">display(t,</span> <span class="pre">width)</span></code> outputs the TeX formatted code <code class="docutils literal notranslate"><span class="pre">t</span></code> so that each line has length less than or equal to spadvar{width}.</p>
 </dd>
 </dl>
-<span class="target" id="l-tex-format-epilogue"></span><dl class="simple" id="index-6">
-<dt><span class="spadfun">epilogue</span>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">epilogue(t)</span></code> extracts the epilogue section of a TeX form <code class="docutils literal notranslate"><span class="pre">t</span></code>.</p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l-single-integer"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash-update"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-latex"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+<span class="target" id="l546578466f726d61742e6570696c6f677565"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">epilogue</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">epilogue(t)</span></code> extracts the epilogue section of a TeX form <code class="docutils literal notranslate"><span class="pre">t</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-tex-format-new"></span><dl class="simple" id="index-7">
+<dl class="simple" id="l546578466f726d61742e68617368">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e68617368"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l53696e676c65496e7465676572"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l546578466f726d61742e6861736855706461746521">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6861736855706461746521"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l546578466f726d61742e6c61746578">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6c61746578"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l546578466f726d61742e6e6577"></span><dl class="simple" id="index-7">
 <dt><span class="spadfun">new</span>: () -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">new()</span></code> create a new, empty object. Use <span class="spadfun">setPrologue!</span>, <span class="spadfun">setTex!</span> and <span class="spadfun">setEpilogue!</span> to set the various components of this object.</p>
 </dd>
 </dl>
-<span class="target" id="l-tex-format-prologue"></span><dl class="simple" id="index-8">
-<dt><span class="spadfun">prologue</span>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">prologue(t)</span></code> extracts the prologue section of a TeX form <code class="docutils literal notranslate"><span class="pre">t</span></code>.</p>
+<span class="target" id="l546578466f726d61742e70726f6c6f677565"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">prologue</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">prologue(t)</span></code> extracts the prologue section of a TeX form <code class="docutils literal notranslate"><span class="pre">t</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-tex-format-set-epilogue"></span><dl class="simple" id="index-9">
-<dt><span class="spadfun">setEpilogue!</span>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">setEpilogue!(t,</span> <span class="pre">strings)</span></code> sets the epilogue section of a TeX form <code class="docutils literal notranslate"><span class="pre">t</span></code> to strings.</p>
+<span class="target" id="l546578466f726d61742e7365744570696c6f67756521"></span><dl class="simple" id="index-9">
+<dt><span class="spadfun">setEpilogue!</span>: (%, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>) -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">setEpilogue!(t,</span> <span class="pre">strings)</span></code> sets the epilogue section of a TeX form <code class="docutils literal notranslate"><span class="pre">t</span></code> to strings.</p>
 </dd>
 </dl>
-<span class="target" id="l-tex-format-set-prologue"></span><dl class="simple" id="index-10">
-<dt><span class="spadfun">setPrologue!</span>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">setPrologue!(t,</span> <span class="pre">strings)</span></code> sets the prologue section of a TeX form <code class="docutils literal notranslate"><span class="pre">t</span></code> to strings.</p>
+<span class="target" id="l546578466f726d61742e73657450726f6c6f67756521"></span><dl class="simple" id="index-10">
+<dt><span class="spadfun">setPrologue!</span>: (%, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>) -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">setPrologue!(t,</span> <span class="pre">strings)</span></code> sets the prologue section of a TeX form <code class="docutils literal notranslate"><span class="pre">t</span></code> to strings.</p>
 </dd>
 </dl>
-<span class="target" id="l-tex-format-set-tex"></span><dl class="simple" id="index-11">
-<dt><span class="spadfun">setTex!</span>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">setTex!(t,</span> <span class="pre">strings)</span></code> sets the TeX section of a TeX form <code class="docutils literal notranslate"><span class="pre">t</span></code> to strings.</p>
+<span class="target" id="l546578466f726d61742e73657454657821"></span><dl class="simple" id="index-11">
+<dt><span class="spadfun">setTex!</span>: (%, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>) -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">setTex!(t,</span> <span class="pre">strings)</span></code> sets the TeX section of a TeX form <code class="docutils literal notranslate"><span class="pre">t</span></code> to strings.</p>
 </dd>
 </dl>
-<span class="target" id="l-tex-format-tex"></span><dl class="simple" id="index-12">
-<dt><span class="spadfun">tex</span>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">tex(t)</span></code> extracts the TeX section of a TeX form <code class="docutils literal notranslate"><span class="pre">t</span></code>.</p>
+<span class="target" id="l546578466f726d61742e746578"></span><dl class="simple" id="index-12">
+<dt><span class="spadfun">tex</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">tex(t)</span></code> extracts the TeX section of a TeX form <code class="docutils literal notranslate"><span class="pre">t</span></code>.</p>
 </dd>
 </dl>
-<p><a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-<p><a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
-<p><a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+<p><a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+<p><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+<p><a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </div>
 
 
@@ -161,7 +171,7 @@
         <li class="right" >
           <a href="TensorProduct.html" title="TensorProduct(R, B1, B2, M1, M2)"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Domains.html" >Domains</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">TexFormat</a></li> 

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FactoredFunctions M &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>FactoredFunctions M &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="ExtendedPolynomialReduction.html" title="ExtendedPolynomialReduction(C, E, R)"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">FactoredFunctions M</a></li> 
@@ -46,18 +46,18 @@
           <div class="body" role="main">
             
   <div class="section" id="factoredfunctions-m">
-<span id="l-factored-functions"></span><span id="index-0"></span><h1>FactoredFunctions M<a class="headerlink" href="#factoredfunctions-m" title="Permalink to this headline">¶</a></h1>
+<span id="l466163746f72656446756e6374696f6e73"></span><span id="index-0"></span><h1>FactoredFunctions M<a class="headerlink" href="#factoredfunctions-m" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/manip.spad#L1">manip.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/manip.spad#L1">[edit on github]</a></p>
 <ul class="simple">
-<li><p>M: <a class="reference internal" href="IntegralDomain.html#l-integral-domain"><span class="std std-ref">IntegralDomain</span></a></p></li>
+<li><p>M: <a class="reference internal" href="IntegralDomain.html#l496e74656772616c446f6d61696e"><span class="std std-ref">IntegralDomain</span></a></p></li>
 </ul>
 <p>computes various functions on factored arguments.</p>
-<span class="target" id="l-factored-functions-log"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">log</span>: <a class="reference internal" href="Factored.html#l-factored"><span class="std std-ref">Factored</span></a> M -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(coef: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, logand: M)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">log(f)</span></code> returns <code class="docutils literal notranslate"><span class="pre">[(a1,</span> <span class="pre">b1),</span> <span class="pre">...,</span> <span class="pre">(am,</span> <span class="pre">bm)]</span></code> such that the logarithm of <code class="docutils literal notranslate"><span class="pre">f</span></code> is equal to <code class="docutils literal notranslate"><span class="pre">a1*log(b1)</span> <span class="pre">+</span> <span class="pre">...</span> <span class="pre">+</span> <span class="pre">am*log(bm)</span></code>.</p>
+<span class="target" id="l466163746f72656446756e6374696f6e732e6c6f67"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">log</span>: <a class="reference internal" href="Factored.html#l466163746f726564"><span class="std std-ref">Factored</span></a> M -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> Record(coef: <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, logand: M)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">log(f)</span></code> returns <code class="docutils literal notranslate"><span class="pre">[(a1,</span> <span class="pre">b1),</span> <span class="pre">...,</span> <span class="pre">(am,</span> <span class="pre">bm)]</span></code> such that the logarithm of <code class="docutils literal notranslate"><span class="pre">f</span></code> is equal to <code class="docutils literal notranslate"><span class="pre">a1*log(b1)</span> <span class="pre">+</span> <span class="pre">...</span> <span class="pre">+</span> <span class="pre">am*log(bm)</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-factored-functions-nth-root"></span><dl class="simple" id="index-2">
-<dt><span class="spadfun">nthRoot</span>: (<a class="reference internal" href="Factored.html#l-factored"><span class="std std-ref">Factored</span></a> M, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; Record(exponent: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, coef: M, radicand: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> M)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">nthRoot(f,</span> <span class="pre">n)</span></code> returns <code class="docutils literal notranslate"><span class="pre">(p,</span> <span class="pre">r,</span> <span class="pre">[r1,</span> <span class="pre">...,</span> <span class="pre">rm])</span></code> such that the <code class="docutils literal notranslate"><span class="pre">n</span></code>th-root of <code class="docutils literal notranslate"><span class="pre">f</span></code> is equal to <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">*</span> <span class="pre">pth-root(r1</span> <span class="pre">*</span> <span class="pre">...</span> <span class="pre">*</span> <span class="pre">rm)</span></code>, where <code class="docutils literal notranslate"><span class="pre">r1</span></code>, …, <code class="docutils literal notranslate"><span class="pre">rm</span></code> are distinct factors of <code class="docutils literal notranslate"><span class="pre">f</span></code>, each of which has an exponent smaller than <code class="docutils literal notranslate"><span class="pre">p</span></code> in <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+<span class="target" id="l466163746f72656446756e6374696f6e732e6e7468526f6f74"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">nthRoot</span>: (<a class="reference internal" href="Factored.html#l466163746f726564"><span class="std std-ref">Factored</span></a> M, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; Record(exponent: <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, coef: M, radicand: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> M)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">nthRoot(f,</span> <span class="pre">n)</span></code> returns <code class="docutils literal notranslate"><span class="pre">(p,</span> <span class="pre">r,</span> <span class="pre">[r1,</span> <span class="pre">...,</span> <span class="pre">rm])</span></code> such that the <code class="docutils literal notranslate"><span class="pre">n</span></code>th-root of <code class="docutils literal notranslate"><span class="pre">f</span></code> is equal to <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">*</span> <span class="pre">pth-root(r1</span> <span class="pre">*</span> <span class="pre">...</span> <span class="pre">*</span> <span class="pre">rm)</span></code>, where <code class="docutils literal notranslate"><span class="pre">r1</span></code>, …, <code class="docutils literal notranslate"><span class="pre">rm</span></code> are distinct factors of <code class="docutils literal notranslate"><span class="pre">f</span></code>, each of which has an exponent smaller than <code class="docutils literal notranslate"><span class="pre">p</span></code> in <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
 </dd>
 </dl>
 </div>
@@ -107,7 +107,7 @@
         <li class="right" >
           <a href="ExtendedPolynomialReduction.html" title="ExtendedPolynomialReduction(C, E, R)"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">FactoredFunctions M</a></li> 

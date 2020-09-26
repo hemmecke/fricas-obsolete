@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InnerTrigonometricManipulations(R, F, FG) &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>InnerTrigonometricManipulations(R, F, FG) &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="InnerPolySum.html" title="InnerPolySum(E, V, R, P)"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">InnerTrigonometricManipulations(R, F, FG)</a></li> 
@@ -46,36 +46,36 @@
           <div class="body" role="main">
             
   <div class="section" id="innertrigonometricmanipulations-r-f-fg">
-<span id="l-inner-trigonometric-manipulations"></span><span id="index-0"></span><h1>InnerTrigonometricManipulations(R, F, FG)<a class="headerlink" href="#innertrigonometricmanipulations-r-f-fg" title="Permalink to this headline">¶</a></h1>
+<span id="l496e6e6572547269676f6e6f6d65747269634d616e6970756c6174696f6e73"></span><span id="index-0"></span><h1>InnerTrigonometricManipulations(R, F, FG)<a class="headerlink" href="#innertrigonometricmanipulations-r-f-fg" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/efstruc.spad#L813">efstruc.spad line 813</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/efstruc.spad#L813">[edit on github]</a></p>
 <ul class="simple">
-<li><p>R: Join(<a class="reference internal" href="IntegralDomain.html#l-integral-domain"><span class="std std-ref">IntegralDomain</span></a>, <a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a>)</p></li>
-<li><p>F: Join(<a class="reference internal" href="FunctionSpace.html#l-function-space"><span class="std std-ref">FunctionSpace</span></a> R, <a class="reference internal" href="RadicalCategory.html#l-radical-category"><span class="std std-ref">RadicalCategory</span></a>, <a class="reference internal" href="TranscendentalFunctionCategory.html#l-transcendental-function-category"><span class="std std-ref">TranscendentalFunctionCategory</span></a>)</p></li>
-<li><p>FG: Join(<a class="reference internal" href="FunctionSpace.html#l-function-space"><span class="std std-ref">FunctionSpace</span></a> <a class="reference internal" href="Complex.html#l-complex"><span class="std std-ref">Complex</span></a> R, <a class="reference internal" href="RadicalCategory.html#l-radical-category"><span class="std std-ref">RadicalCategory</span></a>, <a class="reference internal" href="TranscendentalFunctionCategory.html#l-transcendental-function-category"><span class="std std-ref">TranscendentalFunctionCategory</span></a>)</p></li>
+<li><p>R: Join(<a class="reference internal" href="IntegralDomain.html#l496e74656772616c446f6d61696e"><span class="std std-ref">IntegralDomain</span></a>, <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a>)</p></li>
+<li><p>F: Join(<a class="reference internal" href="FunctionSpace.html#l46756e6374696f6e5370616365"><span class="std std-ref">FunctionSpace</span></a> R, <a class="reference internal" href="RadicalCategory.html#l5261646963616c43617465676f7279"><span class="std std-ref">RadicalCategory</span></a>, <a class="reference internal" href="TranscendentalFunctionCategory.html#l5472616e7363656e64656e74616c46756e6374696f6e43617465676f7279"><span class="std std-ref">TranscendentalFunctionCategory</span></a>)</p></li>
+<li><p>FG: Join(<a class="reference internal" href="FunctionSpace.html#l46756e6374696f6e5370616365"><span class="std std-ref">FunctionSpace</span></a> <a class="reference internal" href="Complex.html#l436f6d706c6578"><span class="std std-ref">Complex</span></a> R, <a class="reference internal" href="RadicalCategory.html#l5261646963616c43617465676f7279"><span class="std std-ref">RadicalCategory</span></a>, <a class="reference internal" href="TranscendentalFunctionCategory.html#l5472616e7363656e64656e74616c46756e6374696f6e43617465676f7279"><span class="std std-ref">TranscendentalFunctionCategory</span></a>)</p></li>
 </ul>
 <p>This package provides transformations from trigonometric functions to exponentials and logarithms, and back. <code class="docutils literal notranslate"><span class="pre">F</span></code> and <code class="docutils literal notranslate"><span class="pre">FG</span></code> should be the same type of function space.</p>
-<span class="target" id="l-inner-trigonometric-manipulations-do-liou"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">do_liou</span>: (<a class="reference internal" href="BasicOperator.html#l-basic-operator"><span class="std std-ref">BasicOperator</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Complex.html#l-complex"><span class="std std-ref">Complex</span></a> F) -&gt; <a class="reference internal" href="Complex.html#l-complex"><span class="std std-ref">Complex</span></a> F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">do_liou(op,</span> <span class="pre">lf)</span></code> should be local but conditional.</p>
+<span class="target" id="l496e6e6572547269676f6e6f6d65747269634d616e6970756c6174696f6e732e646f5f6c696f75"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">do_liou</span>: (<a class="reference internal" href="BasicOperator.html#l42617369634f70657261746f72"><span class="std std-ref">BasicOperator</span></a>, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Complex.html#l436f6d706c6578"><span class="std std-ref">Complex</span></a> F) -&gt; <a class="reference internal" href="Complex.html#l436f6d706c6578"><span class="std std-ref">Complex</span></a> F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">do_liou(op,</span> <span class="pre">lf)</span></code> should be local but conditional.</p>
 </dd>
 </dl>
-<span class="target" id="l-inner-trigonometric-manipulations-explogs2trigs"></span><dl class="simple" id="index-2">
-<dt><span class="spadfun">explogs2trigs</span>: FG -&gt; <a class="reference internal" href="Complex.html#l-complex"><span class="std std-ref">Complex</span></a> F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">explogs2trigs(f)</span></code> rewrites all the complex logs and exponentials appearing in <code class="docutils literal notranslate"><span class="pre">f</span></code> in terms of trigonometric functions.</p>
+<span class="target" id="l496e6e6572547269676f6e6f6d65747269634d616e6970756c6174696f6e732e6578706c6f6773327472696773"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">explogs2trigs</span>: FG -&gt; <a class="reference internal" href="Complex.html#l436f6d706c6578"><span class="std std-ref">Complex</span></a> F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">explogs2trigs(f)</span></code> rewrites all the complex logs and exponentials appearing in <code class="docutils literal notranslate"><span class="pre">f</span></code> in terms of trigonometric functions.</p>
 </dd>
 </dl>
-<span class="target" id="l-inner-trigonometric-manipulations-f2-f-g"></span><dl class="simple" id="index-3">
+<span class="target" id="l496e6e6572547269676f6e6f6d65747269634d616e6970756c6174696f6e732e46324647"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">F2FG</span>: F -&gt; FG</dt><dd><p><code class="docutils literal notranslate"><span class="pre">F2FG(a</span> <span class="pre">+</span> <span class="pre">sqrt(-1)</span> <span class="pre">b)</span></code> returns <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">+</span> <span class="pre">i</span> <span class="pre">b</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-inner-trigonometric-manipulations-f-g2-f"></span><dl class="simple" id="index-4">
+<span class="target" id="l496e6e6572547269676f6e6f6d65747269634d616e6970756c6174696f6e732e46473246"></span><dl class="simple" id="index-4">
 <dt><span class="spadfun">FG2F</span>: FG -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">FG2F(a</span> <span class="pre">+</span> <span class="pre">i</span> <span class="pre">b)</span></code> returns <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">+</span> <span class="pre">sqrt(-1)</span> <span class="pre">b</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-inner-trigonometric-manipulations-g-f2-f-g"></span><dl class="simple" id="index-5">
-<dt><span class="spadfun">GF2FG</span>: <a class="reference internal" href="Complex.html#l-complex"><span class="std std-ref">Complex</span></a> F -&gt; FG</dt><dd><p><code class="docutils literal notranslate"><span class="pre">GF2FG(a</span> <span class="pre">+</span> <span class="pre">i</span> <span class="pre">b)</span></code> returns <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">+</span> <span class="pre">i</span> <span class="pre">b</span></code> viewed as a function with the <code class="docutils literal notranslate"><span class="pre">i</span></code> pushed down into the coefficient domain.</p>
+<span class="target" id="l496e6e6572547269676f6e6f6d65747269634d616e6970756c6174696f6e732e4746324647"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">GF2FG</span>: <a class="reference internal" href="Complex.html#l436f6d706c6578"><span class="std std-ref">Complex</span></a> F -&gt; FG</dt><dd><p><code class="docutils literal notranslate"><span class="pre">GF2FG(a</span> <span class="pre">+</span> <span class="pre">i</span> <span class="pre">b)</span></code> returns <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">+</span> <span class="pre">i</span> <span class="pre">b</span></code> viewed as a function with the <code class="docutils literal notranslate"><span class="pre">i</span></code> pushed down into the coefficient domain.</p>
 </dd>
 </dl>
-<span class="target" id="l-inner-trigonometric-manipulations-trigs2explogs"></span><dl class="simple" id="index-6">
-<dt><span class="spadfun">trigs2explogs</span>: (FG, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Kernel.html#l-kernel"><span class="std std-ref">Kernel</span></a> FG) -&gt; FG</dt><dd><p><code class="docutils literal notranslate"><span class="pre">trigs2explogs(f,</span> <span class="pre">[k1,</span> <span class="pre">...,</span> <span class="pre">kn])</span></code> rewrites all the trigonometric functions appearing in <code class="docutils literal notranslate"><span class="pre">f</span></code> in terms of complex logarithms and exponentials. A kernel of the form <code class="docutils literal notranslate"><span class="pre">tan(u)</span></code> is expressed using <code class="docutils literal notranslate"><span class="pre">exp(u)^2</span></code> if it is one of the <code class="docutils literal notranslate"><span class="pre">ki's</span></code>, in terms of <code class="docutils literal notranslate"><span class="pre">exp(2*u)</span></code> otherwise.</p>
+<span class="target" id="l496e6e6572547269676f6e6f6d65747269634d616e6970756c6174696f6e732e7472696773326578706c6f6773"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">trigs2explogs</span>: (FG, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Kernel.html#l4b65726e656c"><span class="std std-ref">Kernel</span></a> FG) -&gt; FG</dt><dd><p><code class="docutils literal notranslate"><span class="pre">trigs2explogs(f,</span> <span class="pre">[k1,</span> <span class="pre">...,</span> <span class="pre">kn])</span></code> rewrites all the trigonometric functions appearing in <code class="docutils literal notranslate"><span class="pre">f</span></code> in terms of complex logarithms and exponentials. A kernel of the form <code class="docutils literal notranslate"><span class="pre">tan(u)</span></code> is expressed using <code class="docutils literal notranslate"><span class="pre">exp(u)^2</span></code> if it is one of the <code class="docutils literal notranslate"><span class="pre">ki's</span></code>, in terms of <code class="docutils literal notranslate"><span class="pre">exp(2*u)</span></code> otherwise.</p>
 </dd>
 </dl>
 </div>
@@ -125,7 +125,7 @@
         <li class="right" >
           <a href="InnerPolySum.html" title="InnerPolySum(E, V, R, P)"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">InnerTrigonometricManipulations(R, F, FG)</a></li> 

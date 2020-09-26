@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SExpressionCategory(Str, Sym, Int, Flt) &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>SExpressionCategory(Str, Sym, Int, Flt) &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="SetCategory.html" title="SetCategory"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Categories.html" accesskey="U">Categories</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">SExpressionCategory(Str, Sym, Int, Flt)</a></li> 
@@ -46,38 +46,44 @@
           <div class="body" role="main">
             
   <div class="section" id="sexpressioncategory-str-sym-int-flt">
-<span id="l-s-expression-category"></span><span id="index-0"></span><h1>SExpressionCategory(Str, Sym, Int, Flt)<a class="headerlink" href="#sexpressioncategory-str-sym-int-flt" title="Permalink to this headline">¶</a></h1>
+<span id="l5345787072657373696f6e43617465676f7279"></span><span id="index-0"></span><h1>SExpressionCategory(Str, Sym, Int, Flt)<a class="headerlink" href="#sexpressioncategory-str-sym-int-flt" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/sex.spad#L1">sex.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/sex.spad#L1">[edit on github]</a></p>
 <ul class="simple">
-<li><p>Str: <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p></li>
-<li><p>Sym: <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p></li>
-<li><p>Int: <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p></li>
-<li><p>Flt: <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p></li>
+<li><p>Str: <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p></li>
+<li><p>Sym: <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p></li>
+<li><p>Int: <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p></li>
+<li><p>Flt: <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p></li>
 </ul>
 <p>This category allows the manipulation of Lisp values while keeping the grunge fairly localized.</p>
-<span class="target" id="id1"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">#</span>: % -&gt; <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">\#((a1,</span> <span class="pre">...,</span> <span class="pre">an))</span></code> returns <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
-</dd>
-<dt><a class="reference internal" href="BasicType.html#id1"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-</dd>
-<dt><a class="reference internal" href="BasicType.html#id2"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+<span class="target" id="l5345787072657373696f6e43617465676f72792e23"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">#</span>: % -&gt; <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">\#((a1,</span> <span class="pre">...,</span> <span class="pre">an))</span></code> returns <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-s-expression-category-atom"></span><dl class="simple" id="index-2">
-<dt><span class="spadfun">atom?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">atom?(s)</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code> if <code class="docutils literal notranslate"><span class="pre">s</span></code> is a Lisp atom.</p>
+<dl class="simple" id="l5345787072657373696f6e43617465676f72792e3d">
+<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-s-expression-category-car"></span><dl class="simple" id="index-3">
+<dl class="simple" id="l5345787072657373696f6e43617465676f72792e7e3d">
+<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e7e3d"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l5345787072657373696f6e43617465676f72792e61746f6d3f"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">atom?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">atom?(s)</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code> if <code class="docutils literal notranslate"><span class="pre">s</span></code> is a Lisp atom.</p>
+</dd>
+</dl>
+<span class="target" id="l5345787072657373696f6e43617465676f72792e636172"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">car</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">car((a1,</span> <span class="pre">...,</span> <span class="pre">an))</span></code> returns <code class="docutils literal notranslate"><span class="pre">a1</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-s-expression-category-cdr"></span><dl class="simple" id="index-4">
+<span class="target" id="l5345787072657373696f6e43617465676f72792e636472"></span><dl class="simple" id="index-4">
 <dt><span class="spadfun">cdr</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">cdr((a1,</span> <span class="pre">...,</span> <span class="pre">an))</span></code> returns <code class="docutils literal notranslate"><span class="pre">(a2,</span> <span class="pre">...,</span> <span class="pre">an)</span></code>.</p>
 </dd>
-<dt><a class="reference internal" href="CoercibleTo.html#l-coercible-to-coerce"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+</dl>
+<dl class="simple" id="l5345787072657373696f6e43617465676f72792e636f65726365">
+<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f2e636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-s-expression-category-convert"></span><dl class="simple" id="index-5">
+<span class="target" id="l5345787072657373696f6e43617465676f72792e636f6e76657274"></span><dl class="simple" id="index-5">
 <dt><span class="spadfun">convert</span>: Flt -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">convert(x)</span></code> returns the Lisp atom <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
 </dd>
 </dl>
@@ -86,7 +92,7 @@
 </dd>
 </dl>
 <dl class="simple" id="index-7">
-<dt><span class="spadfun">convert</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">convert([a1,</span> <span class="pre">...,</span> <span class="pre">an])</span></code> returns the <code class="docutils literal notranslate"><span class="pre">S</span></code>-expression <code class="docutils literal notranslate"><span class="pre">(a1,</span> <span class="pre">...,</span> <span class="pre">an)</span></code>.</p>
+<dt><span class="spadfun">convert</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">convert([a1,</span> <span class="pre">...,</span> <span class="pre">an])</span></code> returns the <code class="docutils literal notranslate"><span class="pre">S</span></code>-expression <code class="docutils literal notranslate"><span class="pre">(a1,</span> <span class="pre">...,</span> <span class="pre">an)</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-8">
@@ -97,75 +103,81 @@
 <dt><span class="spadfun">convert</span>: Sym -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">convert(x)</span></code> returns the Lisp atom <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-s-expression-category-destruct"></span><dl class="simple" id="index-10">
-<dt><span class="spadfun">destruct</span>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">destruct((a1,</span> <span class="pre">...,</span> <span class="pre">an))</span></code> returns the list [<code class="docutils literal notranslate"><span class="pre">a1</span></code>, …, an].</p>
+<span class="target" id="l5345787072657373696f6e43617465676f72792e6465737472756374"></span><dl class="simple" id="index-10">
+<dt><span class="spadfun">destruct</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">destruct((a1,</span> <span class="pre">...,</span> <span class="pre">an))</span></code> returns the list [<code class="docutils literal notranslate"><span class="pre">a1</span></code>, …, an].</p>
 </dd>
 </dl>
-<span class="target" id="l-s-expression-category-elt"></span><dl class="simple" id="index-11">
-<dt><span class="spadfun">elt</span>: (%, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">elt((a1,</span> <span class="pre">...,</span> <span class="pre">an),</span> <span class="pre">i)</span></code> returns <code class="docutils literal notranslate"><span class="pre">ai</span></code>.</p>
+<span class="target" id="l5345787072657373696f6e43617465676f72792e656c74"></span><dl class="simple" id="index-11">
+<dt><span class="spadfun">elt</span>: (%, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">elt((a1,</span> <span class="pre">...,</span> <span class="pre">an),</span> <span class="pre">i)</span></code> returns <code class="docutils literal notranslate"><span class="pre">ai</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-12">
-<dt><span class="spadfun">elt</span>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">elt((a1,</span> <span class="pre">...,</span> <span class="pre">an),</span> <span class="pre">[i1,</span> <span class="pre">...,</span> <span class="pre">im])</span></code> returns <code class="docutils literal notranslate"><span class="pre">(a_i1,</span> <span class="pre">...,</span> <span class="pre">a_im)</span></code>.</p>
+<dt><span class="spadfun">elt</span>: (%, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">elt((a1,</span> <span class="pre">...,</span> <span class="pre">an),</span> <span class="pre">[i1,</span> <span class="pre">...,</span> <span class="pre">im])</span></code> returns <code class="docutils literal notranslate"><span class="pre">(a_i1,</span> <span class="pre">...,</span> <span class="pre">a_im)</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-s-expression-category-eq"></span><dl class="simple" id="index-13">
-<dt><span class="spadfun">eq</span>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">eq(s,</span> <span class="pre">t)</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code> if EQ(<code class="docutils literal notranslate"><span class="pre">s</span></code>, <code class="docutils literal notranslate"><span class="pre">t</span></code>) is <code class="docutils literal notranslate"><span class="pre">true</span></code> in Lisp.</p>
+<span class="target" id="l5345787072657373696f6e43617465676f72792e6571"></span><dl class="simple" id="index-13">
+<dt><span class="spadfun">eq</span>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">eq(s,</span> <span class="pre">t)</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code> if EQ(<code class="docutils literal notranslate"><span class="pre">s</span></code>, <code class="docutils literal notranslate"><span class="pre">t</span></code>) is <code class="docutils literal notranslate"><span class="pre">true</span></code> in Lisp.</p>
 </dd>
 </dl>
-<span class="target" id="l-s-expression-category-float"></span><dl class="simple" id="index-14">
+<span class="target" id="l5345787072657373696f6e43617465676f72792e666c6f61743f"></span><dl class="simple" id="index-14">
+<dt><span class="spadfun">float?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">float?(s)</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code> if <code class="docutils literal notranslate"><span class="pre">s</span></code> is an atom and belong to <code class="docutils literal notranslate"><span class="pre">Flt</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l5345787072657373696f6e43617465676f72792e666c6f6174"></span><dl class="simple" id="index-15">
 <dt><span class="spadfun">float</span>: % -&gt; Flt</dt><dd><p><code class="docutils literal notranslate"><span class="pre">float(s)</span></code> returns <code class="docutils literal notranslate"><span class="pre">s</span></code> as an element of <code class="docutils literal notranslate"><span class="pre">Flt</span></code>; Error: if <code class="docutils literal notranslate"><span class="pre">s</span></code> is not an atom that also belongs to <code class="docutils literal notranslate"><span class="pre">Flt</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="id2"></span><dl class="simple" id="index-15">
-<dt><span class="spadfun">float?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">float?(s)</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code> if <code class="docutils literal notranslate"><span class="pre">s</span></code> is an atom and belong to <code class="docutils literal notranslate"><span class="pre">Flt</span></code>.</p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l-single-integer"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash-update"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+<dl class="simple" id="l5345787072657373696f6e43617465676f72792e68617368">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e68617368"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l53696e676c65496e7465676572"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-s-expression-category-integer"></span><dl class="simple" id="index-16">
+<dl class="simple" id="l5345787072657373696f6e43617465676f72792e6861736855706461746521">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6861736855706461746521"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l5345787072657373696f6e43617465676f72792e696e74656765723f"></span><dl class="simple" id="index-16">
+<dt><span class="spadfun">integer?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">integer?(s)</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code> if <code class="docutils literal notranslate"><span class="pre">s</span></code> is an atom and belong to Int.</p>
+</dd>
+</dl>
+<span class="target" id="l5345787072657373696f6e43617465676f72792e696e7465676572"></span><dl class="simple" id="index-17">
 <dt><span class="spadfun">integer</span>: % -&gt; Int</dt><dd><p><code class="docutils literal notranslate"><span class="pre">integer(s)</span></code> returns <code class="docutils literal notranslate"><span class="pre">s</span></code> as an element of Int. Error: if <code class="docutils literal notranslate"><span class="pre">s</span></code> is not an atom that also belongs to Int.</p>
 </dd>
 </dl>
-<span class="target" id="id3"></span><dl class="simple" id="index-17">
-<dt><span class="spadfun">integer?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">integer?(s)</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code> if <code class="docutils literal notranslate"><span class="pre">s</span></code> is an atom and belong to Int.</p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-latex"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+<dl class="simple" id="l5345787072657373696f6e43617465676f72792e6c61746578">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6c61746578"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-s-expression-category-list"></span><dl class="simple" id="index-18">
-<dt><span class="spadfun">list?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">list?(s)</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code> if <code class="docutils literal notranslate"><span class="pre">s</span></code> is a Lisp list, possibly ().</p>
+<span class="target" id="l5345787072657373696f6e43617465676f72792e6c6973743f"></span><dl class="simple" id="index-18">
+<dt><span class="spadfun">list?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">list?(s)</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code> if <code class="docutils literal notranslate"><span class="pre">s</span></code> is a Lisp list, possibly ().</p>
 </dd>
 </dl>
-<span class="target" id="l-s-expression-category-null"></span><dl class="simple" id="index-19">
-<dt><span class="spadfun">null?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">null?(s)</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code> if <code class="docutils literal notranslate"><span class="pre">s</span></code> is the <code class="docutils literal notranslate"><span class="pre">S</span></code>-expression ().</p>
+<span class="target" id="l5345787072657373696f6e43617465676f72792e6e756c6c3f"></span><dl class="simple" id="index-19">
+<dt><span class="spadfun">null?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">null?(s)</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code> if <code class="docutils literal notranslate"><span class="pre">s</span></code> is the <code class="docutils literal notranslate"><span class="pre">S</span></code>-expression ().</p>
 </dd>
 </dl>
-<span class="target" id="l-s-expression-category-pair"></span><dl class="simple" id="index-20">
-<dt><span class="spadfun">pair?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">pair?(s)</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code> if <code class="docutils literal notranslate"><span class="pre">s</span></code> has is a non-null Lisp list.</p>
+<span class="target" id="l5345787072657373696f6e43617465676f72792e706169723f"></span><dl class="simple" id="index-20">
+<dt><span class="spadfun">pair?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">pair?(s)</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code> if <code class="docutils literal notranslate"><span class="pre">s</span></code> has is a non-null Lisp list.</p>
 </dd>
 </dl>
-<span class="target" id="l-s-expression-category-string"></span><dl class="simple" id="index-21">
+<span class="target" id="l5345787072657373696f6e43617465676f72792e737472696e673f"></span><dl class="simple" id="index-21">
+<dt><span class="spadfun">string?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">string?(s)</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code> if <code class="docutils literal notranslate"><span class="pre">s</span></code> is an atom and belong to <code class="docutils literal notranslate"><span class="pre">Str</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l5345787072657373696f6e43617465676f72792e737472696e67"></span><dl class="simple" id="index-22">
 <dt><span class="spadfun">string</span>: % -&gt; Str</dt><dd><p><code class="docutils literal notranslate"><span class="pre">string(s)</span></code> returns <code class="docutils literal notranslate"><span class="pre">s</span></code> as an element of <code class="docutils literal notranslate"><span class="pre">Str</span></code>. Error: if <code class="docutils literal notranslate"><span class="pre">s</span></code> is not an atom that also belongs to <code class="docutils literal notranslate"><span class="pre">Str</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="id4"></span><dl class="simple" id="index-22">
-<dt><span class="spadfun">string?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">string?(s)</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code> if <code class="docutils literal notranslate"><span class="pre">s</span></code> is an atom and belong to <code class="docutils literal notranslate"><span class="pre">Str</span></code>.</p>
+<span class="target" id="l5345787072657373696f6e43617465676f72792e73796d626f6c3f"></span><dl class="simple" id="index-23">
+<dt><span class="spadfun">symbol?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">symbol?(s)</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code> if <code class="docutils literal notranslate"><span class="pre">s</span></code> is an atom and belong to <code class="docutils literal notranslate"><span class="pre">Sym</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-s-expression-category-symbol"></span><dl class="simple" id="index-23">
+<span class="target" id="l5345787072657373696f6e43617465676f72792e73796d626f6c"></span><dl class="simple" id="index-24">
 <dt><span class="spadfun">symbol</span>: % -&gt; Sym</dt><dd><p><code class="docutils literal notranslate"><span class="pre">symbol(s)</span></code> returns <code class="docutils literal notranslate"><span class="pre">s</span></code> as an element of <code class="docutils literal notranslate"><span class="pre">Sym</span></code>. Error: if <code class="docutils literal notranslate"><span class="pre">s</span></code> is not an atom that also belongs to <code class="docutils literal notranslate"><span class="pre">Sym</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="id5"></span><dl class="simple" id="index-24">
-<dt><span class="spadfun">symbol?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">symbol?(s)</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code> if <code class="docutils literal notranslate"><span class="pre">s</span></code> is an atom and belong to <code class="docutils literal notranslate"><span class="pre">Sym</span></code>.</p>
-</dd>
-</dl>
-<p><a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-<p><a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
-<p><a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+<p><a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+<p><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+<p><a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </div>
 
 
@@ -213,7 +225,7 @@
         <li class="right" >
           <a href="SetCategory.html" title="SetCategory"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Categories.html" >Categories</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">SExpressionCategory(Str, Sym, Int, Flt)</a></li> 

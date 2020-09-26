@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PatternMatchAssertions &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>PatternMatchAssertions &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="PatternMatch.html" title="PatternMatch(Base, Subject, Pat)"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">PatternMatchAssertions</a></li> 
@@ -46,19 +46,19 @@
           <div class="body" role="main">
             
   <div class="section" id="patternmatchassertions">
-<span id="l-pattern-match-assertions"></span><span id="index-0"></span><h1>PatternMatchAssertions<a class="headerlink" href="#patternmatchassertions" title="Permalink to this headline">¶</a></h1>
+<span id="l5061747465726e4d61746368417373657274696f6e73"></span><span id="index-0"></span><h1>PatternMatchAssertions<a class="headerlink" href="#patternmatchassertions" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/expr.spad#L1033">expr.spad line 1033</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/expr.spad#L1033">[edit on github]</a></p>
 <p>Attaching assertions to symbols for pattern matching. Date Created: 21 Mar 1989</p>
-<span class="target" id="l-pattern-match-assertions-constant"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">constant</span>: <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a> -&gt; <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">constant(x)</span></code> tells the pattern matcher that <code class="docutils literal notranslate"><span class="pre">x</span></code> should match only the symbol <code class="docutils literal notranslate"><span class="pre">'x</span></code> and no other quantity.</p>
+<span class="target" id="l5061747465726e4d61746368417373657274696f6e732e636f6e7374616e74"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">constant</span>: <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a> -&gt; <a class="reference internal" href="Expression.html#l45787072657373696f6e"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">constant(x)</span></code> tells the pattern matcher that <code class="docutils literal notranslate"><span class="pre">x</span></code> should match only the symbol <code class="docutils literal notranslate"><span class="pre">'x</span></code> and no other quantity.</p>
 </dd>
 </dl>
-<span class="target" id="l-pattern-match-assertions-multiple"></span><dl class="simple" id="index-2">
-<dt><span class="spadfun">multiple</span>: <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a> -&gt; <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">multiple(x)</span></code> tells the pattern matcher that <code class="docutils literal notranslate"><span class="pre">x</span></code> should preferably match a multi-term quantity in a sum or product. For matching on lists, multiple(<code class="docutils literal notranslate"><span class="pre">x</span></code>) tells the pattern matcher that <code class="docutils literal notranslate"><span class="pre">x</span></code> should match a list instead of an element of a list.</p>
+<span class="target" id="l5061747465726e4d61746368417373657274696f6e732e6d756c7469706c65"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">multiple</span>: <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a> -&gt; <a class="reference internal" href="Expression.html#l45787072657373696f6e"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">multiple(x)</span></code> tells the pattern matcher that <code class="docutils literal notranslate"><span class="pre">x</span></code> should preferably match a multi-term quantity in a sum or product. For matching on lists, multiple(<code class="docutils literal notranslate"><span class="pre">x</span></code>) tells the pattern matcher that <code class="docutils literal notranslate"><span class="pre">x</span></code> should match a list instead of an element of a list.</p>
 </dd>
 </dl>
-<span class="target" id="l-pattern-match-assertions-optional"></span><dl class="simple" id="index-3">
-<dt><span class="spadfun">optional</span>: <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a> -&gt; <a class="reference internal" href="Expression.html#l-expression"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">optional(x)</span></code> tells the pattern matcher that <code class="docutils literal notranslate"><span class="pre">x</span></code> can match an identity (0 in a sum, 1 in a product or exponentiation).</p>
+<span class="target" id="l5061747465726e4d61746368417373657274696f6e732e6f7074696f6e616c"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">optional</span>: <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a> -&gt; <a class="reference internal" href="Expression.html#l45787072657373696f6e"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">optional(x)</span></code> tells the pattern matcher that <code class="docutils literal notranslate"><span class="pre">x</span></code> can match an identity (0 in a sum, 1 in a product or exponentiation).</p>
 </dd>
 </dl>
 </div>
@@ -108,7 +108,7 @@
         <li class="right" >
           <a href="PatternMatch.html" title="PatternMatch(Base, Subject, Pat)"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">PatternMatchAssertions</a></li> 

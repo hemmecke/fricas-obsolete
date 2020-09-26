@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AlgebraGivenByStructuralConstants(R, n, ls, gamma) &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>AlgebraGivenByStructuralConstants(R, n, ls, gamma) &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="Domains.html" title="Domains"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Domains.html" accesskey="U">Domains</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">AlgebraGivenByStructuralConstants(R, n, ls, gamma)</a></li> 
@@ -46,240 +46,392 @@
           <div class="body" role="main">
             
   <div class="section" id="algebragivenbystructuralconstants-r-n-ls-gamma">
-<span id="l-algebra-given-by-structural-constants"></span><span id="index-0"></span><h1>AlgebraGivenByStructuralConstants(R, n, ls, gamma)<a class="headerlink" href="#algebragivenbystructuralconstants-r-n-ls-gamma" title="Permalink to this headline">¶</a></h1>
+<span id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e7473"></span><span id="index-0"></span><h1>AlgebraGivenByStructuralConstants(R, n, ls, gamma)<a class="headerlink" href="#algebragivenbystructuralconstants-r-n-ls-gamma" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/naalg.spad#L1">naalg.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/naalg.spad#L1">[edit on github]</a></p>
 <ul class="simple">
-<li><p>R: <a class="reference internal" href="Field.html#l-field"><span class="std std-ref">Field</span></a></p></li>
-<li><p>n: <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a></p></li>
-<li><p>ls: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a></p></li>
-<li><p>gamma: <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R</p></li>
+<li><p>R: <a class="reference internal" href="Field.html#l4669656c64"><span class="std std-ref">Field</span></a></p></li>
+<li><p>n: <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a></p></li>
+<li><p>ls: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a></p></li>
+<li><p>gamma: <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> R</p></li>
 </ul>
 <p>AlgebraGivenByStructuralConstants implements finite rank algebras over a commutative ring, given by the structural constants <code class="docutils literal notranslate"><span class="pre">gamma</span></code> with respect to a fixed basis <code class="docutils literal notranslate"><span class="pre">[a1,</span> <span class="pre">..,</span> <span class="pre">an]</span></code>, where <code class="docutils literal notranslate"><span class="pre">gamma</span></code> is an <code class="docutils literal notranslate"><span class="pre">n</span></code>-vector of <code class="docutils literal notranslate"><span class="pre">n</span></code> by <code class="docutils literal notranslate"><span class="pre">n</span></code> matrices <code class="docutils literal notranslate"><span class="pre">[(gammaijk)</span> <span class="pre">for</span> <span class="pre">k</span> <span class="pre">in</span> <span class="pre">1..rank()]</span></code> defined by <code class="docutils literal notranslate"><span class="pre">ai</span> <span class="pre">*</span> <span class="pre">aj</span> <span class="pre">=</span> <span class="pre">gammaij1</span> <span class="pre">*</span> <span class="pre">a1</span> <span class="pre">+</span> <span class="pre">...</span> <span class="pre">+</span> <span class="pre">gammaijn</span> <span class="pre">*</span> <span class="pre">an</span></code>. The symbols for the fixed basis have to be given as a list of symbols.</p>
-<dl class="simple">
-<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-0"><span class="std std-ref">0</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
-</dd>
-<dt><a class="reference internal" href="Magma.html#id1"><span class="std std-ref">*</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
-</dd>
-<dt><a class="reference internal" href="RightModule.html#id1"><span class="std std-ref">*</span></a>: (%, R) -&gt; %</dt><dd><p>from <a class="reference internal" href="RightModule.html#l-right-module"><span class="std std-ref">RightModule</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="AbelianGroup.html#id1"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianMonoid.html#id1"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianSemiGroup.html#id1"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l-abelian-semi-group"><span class="std std-ref">AbelianSemiGroup</span></a></p>
-</dd>
-<dt><a class="reference internal" href="LeftModule.html#id1"><span class="std std-ref">*</span></a>: (R, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="LeftModule.html#l-left-module"><span class="std std-ref">LeftModule</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="LeftModule.html#id1"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="SquareMatrix.html#l-square-matrix"><span class="std std-ref">SquareMatrix</span></a>(n, R), %) -&gt; %</dt><dd><p>from <a class="reference internal" href="LeftModule.html#l-left-module"><span class="std std-ref">LeftModule</span></a> <a class="reference internal" href="SquareMatrix.html#l-square-matrix"><span class="std std-ref">SquareMatrix</span></a>(n, R)</p>
-</dd>
-<dt><a class="reference internal" href="AbelianSemiGroup.html#id2"><span class="std std-ref">+</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l-abelian-semi-group"><span class="std std-ref">AbelianSemiGroup</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianGroup.html#id2"><span class="std std-ref">-</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianGroup.html#id2"><span class="std std-ref">-</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
-</dd>
-<dt><a class="reference internal" href="BasicType.html#id1"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-</dd>
-<dt><a class="reference internal" href="Magma.html#id2"><span class="std std-ref">^</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
-</dd>
-<dt><a class="reference internal" href="BasicType.html#id2"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-</dd>
-<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra-alternative"><span class="std std-ref">alternative?</span></a>: () -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra-anti-associative"><span class="std std-ref">antiAssociative?</span></a>: () -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra-anti-commutative"><span class="std std-ref">antiCommutative?</span></a>: () -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="NonAssociativeSemiRng.html#l-non-associative-semi-rng-anti-commutator"><span class="std std-ref">antiCommutator</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeSemiRng.html#l-non-associative-semi-rng"><span class="std std-ref">NonAssociativeSemiRng</span></a></p>
-</dd>
-<dt><a class="reference internal" href="FramedNonAssociativeAlgebra.html#l-framed-non-associative-algebra-apply"><span class="std std-ref">apply</span></a>: (<a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="FramedNonAssociativeAlgebra.html#l-framed-non-associative-algebra"><span class="std std-ref">FramedNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra-associative"><span class="std std-ref">associative?</span></a>: () -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="NonAssociativeRng.html#l-non-associative-rng-associator"><span class="std std-ref">associator</span></a>: (%, %, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRng.html#l-non-associative-rng"><span class="std std-ref">NonAssociativeRng</span></a></p>
-</dd>
-<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra-associator-dependence"><span class="std std-ref">associatorDependence</span></a>: () -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> R</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="FramedModule.html#l-framed-module-basis"><span class="std std-ref">basis</span></a>: () -&gt; <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> %</dt><dd><p>from <a class="reference internal" href="FramedModule.html#l-framed-module"><span class="std std-ref">FramedModule</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="CoercibleTo.html#l-coercible-to-coerce"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e30">
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f69642e30"><span class="std std-ref">0</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-algebra-given-by-structural-constants-coerce"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> R -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(v)</span></code> converts a vector to a member of the algebra by forming a linear combination with the basis element. Note: the vector is assumed to have length equal to the dimension of the algebra.</p>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e2a">
+<dt><a class="reference internal" href="Magma.html#l4d61676d612e2a"><span class="std std-ref">*</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l4d61676d61"><span class="std std-ref">Magma</span></a></p>
 </dd>
-<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra-commutative"><span class="std std-ref">commutative?</span></a>: () -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
+<dt><a class="reference internal" href="RightModule.html#l52696768744d6f64756c652e2a"><span class="std std-ref">*</span></a>: (%, R) -&gt; %</dt><dd><p>from <a class="reference internal" href="RightModule.html#l52696768744d6f64756c65"><span class="std std-ref">RightModule</span></a> R</p>
 </dd>
-<dt><a class="reference internal" href="NonAssociativeRng.html#l-non-associative-rng-commutator"><span class="std std-ref">commutator</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRng.html#l-non-associative-rng"><span class="std std-ref">NonAssociativeRng</span></a></p>
+<dt><a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f75702e2a"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p>
 </dd>
-<dt><a class="reference internal" href="FramedNonAssociativeAlgebra.html#l-framed-non-associative-algebra-conditions-for-idempotents"><span class="std std-ref">conditionsForIdempotents</span></a>: () -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R</dt><dd><p>from <a class="reference internal" href="FramedNonAssociativeAlgebra.html#l-framed-non-associative-algebra"><span class="std std-ref">FramedNonAssociativeAlgebra</span></a> R</p>
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f69642e2a"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
 </dd>
-<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra-conditions-for-idempotents"><span class="std std-ref">conditionsForIdempotents</span></a>: <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
+<dt><a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f75702e2a"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f7570"><span class="std std-ref">AbelianSemiGroup</span></a></p>
 </dd>
-<dt><a class="reference internal" href="ConvertibleTo.html#l-convertible-to-convert"><span class="std std-ref">convert</span></a>: % -&gt; <a class="reference internal" href="InputForm.html#l-input-form"><span class="std std-ref">InputForm</span></a> if R has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="ConvertibleTo.html#l-convertible-to"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="InputForm.html#l-input-form"><span class="std std-ref">InputForm</span></a></p>
+<dt><a class="reference internal" href="LeftModule.html#l4c6566744d6f64756c652e2a"><span class="std std-ref">*</span></a>: (R, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="LeftModule.html#l4c6566744d6f64756c65"><span class="std std-ref">LeftModule</span></a> R</p>
 </dd>
-<dt><a class="reference internal" href="FramedModule.html#l-framed-module-convert"><span class="std std-ref">convert</span></a>: % -&gt; <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> R</dt><dd><p>from <a class="reference internal" href="FramedModule.html#l-framed-module"><span class="std std-ref">FramedModule</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="FramedModule.html#l-framed-module-convert"><span class="std std-ref">convert</span></a>: <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> R -&gt; %</dt><dd><p>from <a class="reference internal" href="FramedModule.html#l-framed-module"><span class="std std-ref">FramedModule</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="FramedModule.html#l-framed-module-coordinates"><span class="std std-ref">coordinates</span></a>: % -&gt; <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> R</dt><dd><p>from <a class="reference internal" href="FramedModule.html#l-framed-module"><span class="std std-ref">FramedModule</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra-coordinates"><span class="std std-ref">coordinates</span></a>: (%, <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> %) -&gt; <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> R</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra-coordinates"><span class="std std-ref">coordinates</span></a>: (<a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> %, <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> %) -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="FramedModule.html#l-framed-module-coordinates"><span class="std std-ref">coordinates</span></a>: <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> % -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R</dt><dd><p>from <a class="reference internal" href="FramedModule.html#l-framed-module"><span class="std std-ref">FramedModule</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="FramedNonAssociativeAlgebra.html#l-framed-non-associative-algebra-elt"><span class="std std-ref">elt</span></a>: (%, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; R</dt><dd><p>from <a class="reference internal" href="FramedNonAssociativeAlgebra.html#l-framed-non-associative-algebra"><span class="std std-ref">FramedNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="Finite.html#l-finite-enumerate"><span class="std std-ref">enumerate</span></a>: () -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> % if R has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></p>
-</dd>
-<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra-flexible"><span class="std std-ref">flexible?</span></a>: () -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l-single-integer"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash-update"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="Finite.html#l-finite-index"><span class="std std-ref">index</span></a>: <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a> -&gt; % if R has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></p>
-</dd>
-<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra-jacobi-identity"><span class="std std-ref">jacobiIdentity?</span></a>: () -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra-jordan-admissible"><span class="std std-ref">jordanAdmissible?</span></a>: () -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra-jordan-algebra"><span class="std std-ref">jordanAlgebra?</span></a>: () -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-latex"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra-left-alternative"><span class="std std-ref">leftAlternative?</span></a>: () -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra-left-characteristic-polynomial"><span class="std std-ref">leftCharacteristicPolynomial</span></a>: % -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> R</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="FramedNonAssociativeAlgebra.html#l-framed-non-associative-algebra-left-discriminant"><span class="std std-ref">leftDiscriminant</span></a>: () -&gt; R</dt><dd><p>from <a class="reference internal" href="FramedNonAssociativeAlgebra.html#l-framed-non-associative-algebra"><span class="std std-ref">FramedNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra-left-discriminant"><span class="std std-ref">leftDiscriminant</span></a>: <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> % -&gt; R</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra-left-minimal-polynomial"><span class="std std-ref">leftMinimalPolynomial</span></a>: % -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> R</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra-left-norm"><span class="std std-ref">leftNorm</span></a>: % -&gt; R</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="Magma.html#l-magma-left-power"><span class="std std-ref">leftPower</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
-</dd>
-<dt><a class="reference internal" href="FramedNonAssociativeAlgebra.html#l-framed-non-associative-algebra-left-rank-polynomial"><span class="std std-ref">leftRankPolynomial</span></a>: () -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R</dt><dd><p>from <a class="reference internal" href="FramedNonAssociativeAlgebra.html#l-framed-non-associative-algebra"><span class="std std-ref">FramedNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra-left-recip"><span class="std std-ref">leftRecip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="FramedNonAssociativeAlgebra.html#l-framed-non-associative-algebra-left-regular-representation"><span class="std std-ref">leftRegularRepresentation</span></a>: % -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R</dt><dd><p>from <a class="reference internal" href="FramedNonAssociativeAlgebra.html#l-framed-non-associative-algebra"><span class="std std-ref">FramedNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra-left-regular-representation"><span class="std std-ref">leftRegularRepresentation</span></a>: (%, <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> %) -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra-left-trace"><span class="std std-ref">leftTrace</span></a>: % -&gt; R</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="FramedNonAssociativeAlgebra.html#l-framed-non-associative-algebra-left-trace-matrix"><span class="std std-ref">leftTraceMatrix</span></a>: () -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R</dt><dd><p>from <a class="reference internal" href="FramedNonAssociativeAlgebra.html#l-framed-non-associative-algebra"><span class="std std-ref">FramedNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra-left-trace-matrix"><span class="std std-ref">leftTraceMatrix</span></a>: <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> % -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra-left-unit"><span class="std std-ref">leftUnit</span></a>: () -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra-left-units"><span class="std std-ref">leftUnits</span></a>: () -&gt; Union(Record(particular: %, basis: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %), failed)</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra-lie-admissible"><span class="std std-ref">lieAdmissible?</span></a>: () -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra-lie-algebra"><span class="std std-ref">lieAlgebra?</span></a>: () -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="Finite.html#l-finite-lookup"><span class="std std-ref">lookup</span></a>: % -&gt; <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a> if R has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></p>
-</dd>
-<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra-noncommutative-jordan-algebra"><span class="std std-ref">noncommutativeJordanAlgebra?</span></a>: () -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-opposite"><span class="std std-ref">opposite?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
-</dd>
-<dt><a class="reference internal" href="NonAssociativeAlgebra.html#l-non-associative-algebra-plenary-power"><span class="std std-ref">plenaryPower</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeAlgebra.html#l-non-associative-algebra"><span class="std std-ref">NonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra-power-associative"><span class="std std-ref">powerAssociative?</span></a>: () -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="Finite.html#l-finite-random"><span class="std std-ref">random</span></a>: () -&gt; % if R has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></p>
-</dd>
-<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra-rank"><span class="std std-ref">rank</span></a>: () -&gt; <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a></dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra-recip"><span class="std std-ref">recip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra-represents"><span class="std std-ref">represents</span></a>: (<a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> R, <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> %) -&gt; %</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="FramedModule.html#l-framed-module-represents"><span class="std std-ref">represents</span></a>: <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> R -&gt; %</dt><dd><p>from <a class="reference internal" href="FramedModule.html#l-framed-module"><span class="std std-ref">FramedModule</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra-right-alternative"><span class="std std-ref">rightAlternative?</span></a>: () -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra-right-characteristic-polynomial"><span class="std std-ref">rightCharacteristicPolynomial</span></a>: % -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> R</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="FramedNonAssociativeAlgebra.html#l-framed-non-associative-algebra-right-discriminant"><span class="std std-ref">rightDiscriminant</span></a>: () -&gt; R</dt><dd><p>from <a class="reference internal" href="FramedNonAssociativeAlgebra.html#l-framed-non-associative-algebra"><span class="std std-ref">FramedNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra-right-discriminant"><span class="std std-ref">rightDiscriminant</span></a>: <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> % -&gt; R</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra-right-minimal-polynomial"><span class="std std-ref">rightMinimalPolynomial</span></a>: % -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> R</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra-right-norm"><span class="std std-ref">rightNorm</span></a>: % -&gt; R</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="Magma.html#l-magma-right-power"><span class="std std-ref">rightPower</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
-</dd>
-<dt><a class="reference internal" href="FramedNonAssociativeAlgebra.html#l-framed-non-associative-algebra-right-rank-polynomial"><span class="std std-ref">rightRankPolynomial</span></a>: () -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> R</dt><dd><p>from <a class="reference internal" href="FramedNonAssociativeAlgebra.html#l-framed-non-associative-algebra"><span class="std std-ref">FramedNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra-right-recip"><span class="std std-ref">rightRecip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="FramedNonAssociativeAlgebra.html#l-framed-non-associative-algebra-right-regular-representation"><span class="std std-ref">rightRegularRepresentation</span></a>: % -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R</dt><dd><p>from <a class="reference internal" href="FramedNonAssociativeAlgebra.html#l-framed-non-associative-algebra"><span class="std std-ref">FramedNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra-right-regular-representation"><span class="std std-ref">rightRegularRepresentation</span></a>: (%, <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> %) -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra-right-trace"><span class="std std-ref">rightTrace</span></a>: % -&gt; R</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="FramedNonAssociativeAlgebra.html#l-framed-non-associative-algebra-right-trace-matrix"><span class="std std-ref">rightTraceMatrix</span></a>: () -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R</dt><dd><p>from <a class="reference internal" href="FramedNonAssociativeAlgebra.html#l-framed-non-associative-algebra"><span class="std std-ref">FramedNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra-right-trace-matrix"><span class="std std-ref">rightTraceMatrix</span></a>: <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> % -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra-right-unit"><span class="std std-ref">rightUnit</span></a>: () -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra-right-units"><span class="std std-ref">rightUnits</span></a>: () -&gt; Union(Record(particular: %, basis: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %), failed)</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-sample"><span class="std std-ref">sample</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
-</dd>
-<dt><a class="reference internal" href="Finite.html#l-finite-size"><span class="std std-ref">size</span></a>: () -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a> if R has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></p>
-</dd>
-<dt><a class="reference internal" href="Comparable.html#l-comparable-smaller"><span class="std std-ref">smaller?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a> if R has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a></p>
-</dd>
-<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra-some-basis"><span class="std std-ref">someBasis</span></a>: () -&gt; <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> %</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="FramedNonAssociativeAlgebra.html#l-framed-non-associative-algebra-structural-constants"><span class="std std-ref">structuralConstants</span></a>: () -&gt; <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R</dt><dd><p>from <a class="reference internal" href="FramedNonAssociativeAlgebra.html#l-framed-non-associative-algebra"><span class="std std-ref">FramedNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra-structural-constants"><span class="std std-ref">structuralConstants</span></a>: <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> % -&gt; <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="CancellationAbelianMonoid.html#l-cancellation-abelian-monoid-subtract-if-can"><span class="std std-ref">subtractIfCan</span></a>: (%, %) -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="CancellationAbelianMonoid.html#l-cancellation-abelian-monoid"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
-</dd>
-<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra-unit"><span class="std std-ref">unit</span></a>: () -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-zero"><span class="std std-ref">zero?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+<dt><a class="reference internal" href="LeftModule.html#l4c6566744d6f64756c652e2a"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="SquareMatrix.html#l5371756172654d6174726978"><span class="std std-ref">SquareMatrix</span></a>(n, R), %) -&gt; %</dt><dd><p>from <a class="reference internal" href="LeftModule.html#l4c6566744d6f64756c65"><span class="std std-ref">LeftModule</span></a> <a class="reference internal" href="SquareMatrix.html#l5371756172654d6174726978"><span class="std std-ref">SquareMatrix</span></a>(n, R)</p>
 </dd>
 </dl>
-<p><a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
-<p><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
-<p><a class="reference internal" href="AbelianSemiGroup.html#l-abelian-semi-group"><span class="std std-ref">AbelianSemiGroup</span></a></p>
-<p><a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-<p><a class="reference internal" href="BiModule.html#l-bi-module"><span class="std std-ref">BiModule</span></a>(R, R)</p>
-<p><a class="reference internal" href="CancellationAbelianMonoid.html#l-cancellation-abelian-monoid"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
-<p><a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
-<p><a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a> if R has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></p>
-<p><a class="reference internal" href="ConvertibleTo.html#l-convertible-to"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="InputForm.html#l-input-form"><span class="std std-ref">InputForm</span></a> if R has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></p>
-<p><a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a> if R has <a class="reference internal" href="Finite.html#l-finite"><span class="std std-ref">Finite</span></a></p>
-<p><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l-finite-rank-non-associative-algebra"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
-<p><a class="reference internal" href="FramedModule.html#l-framed-module"><span class="std std-ref">FramedModule</span></a> R</p>
-<p><a class="reference internal" href="FramedNonAssociativeAlgebra.html#l-framed-non-associative-algebra"><span class="std std-ref">FramedNonAssociativeAlgebra</span></a> R</p>
-<p><a class="reference internal" href="LeftModule.html#l-left-module"><span class="std std-ref">LeftModule</span></a> R</p>
-<p><a class="reference internal" href="LeftModule.html#l-left-module"><span class="std std-ref">LeftModule</span></a> <a class="reference internal" href="SquareMatrix.html#l-square-matrix"><span class="std std-ref">SquareMatrix</span></a>(n, R)</p>
-<p><a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
-<p><a class="reference internal" href="Module.html#l-module"><span class="std std-ref">Module</span></a> R</p>
-<p><a class="reference internal" href="NonAssociativeAlgebra.html#l-non-associative-algebra"><span class="std std-ref">NonAssociativeAlgebra</span></a> R</p>
-<p><a class="reference internal" href="NonAssociativeRng.html#l-non-associative-rng"><span class="std std-ref">NonAssociativeRng</span></a></p>
-<p><a class="reference internal" href="NonAssociativeSemiRng.html#l-non-associative-semi-rng"><span class="std std-ref">NonAssociativeSemiRng</span></a></p>
-<p><a class="reference internal" href="RightModule.html#l-right-module"><span class="std std-ref">RightModule</span></a> R</p>
-<p><a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-<p><a class="reference internal" href="unitsKnown.html#l-units-known"><span class="std std-ref">unitsKnown</span></a></p>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e2b">
+<dt><a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f75702e2b"><span class="std std-ref">+</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f7570"><span class="std std-ref">AbelianSemiGroup</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e2d">
+<dt><a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f75702e2d"><span class="std std-ref">-</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f75702e2d"><span class="std std-ref">-</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e3d">
+<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e5e">
+<dt><a class="reference internal" href="Magma.html#l4d61676d612e5e"><span class="std std-ref">^</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l4d61676d61"><span class="std std-ref">Magma</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e7e3d">
+<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e7e3d"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e616c7465726e61746976653f">
+<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c67656272612e616c7465726e61746976653f"><span class="std std-ref">alternative?</span></a>: () -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e616e74694173736f636961746976653f">
+<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c67656272612e616e74694173736f636961746976653f"><span class="std std-ref">antiAssociative?</span></a>: () -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e616e7469436f6d6d757461746976653f">
+<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c67656272612e616e7469436f6d6d757461746976653f"><span class="std std-ref">antiCommutative?</span></a>: () -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e616e7469436f6d6d757461746f72">
+<dt><a class="reference internal" href="NonAssociativeSemiRng.html#l4e6f6e4173736f6369617469766553656d69526e672e616e7469436f6d6d757461746f72"><span class="std std-ref">antiCommutator</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeSemiRng.html#l4e6f6e4173736f6369617469766553656d69526e67"><span class="std std-ref">NonAssociativeSemiRng</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e6170706c79">
+<dt><a class="reference internal" href="FramedNonAssociativeAlgebra.html#l4672616d65644e6f6e4173736f63696174697665416c67656272612e6170706c79"><span class="std std-ref">apply</span></a>: (<a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> R, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="FramedNonAssociativeAlgebra.html#l4672616d65644e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FramedNonAssociativeAlgebra</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e6173736f636961746976653f">
+<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c67656272612e6173736f636961746976653f"><span class="std std-ref">associative?</span></a>: () -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e6173736f636961746f72">
+<dt><a class="reference internal" href="NonAssociativeRng.html#l4e6f6e4173736f63696174697665526e672e6173736f636961746f72"><span class="std std-ref">associator</span></a>: (%, %, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRng.html#l4e6f6e4173736f63696174697665526e67"><span class="std std-ref">NonAssociativeRng</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e6173736f636961746f72446570656e64656e6365">
+<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c67656272612e6173736f636961746f72446570656e64656e6365"><span class="std std-ref">associatorDependence</span></a>: () -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> R</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e6261736973">
+<dt><a class="reference internal" href="FramedModule.html#l4672616d65644d6f64756c652e6261736973"><span class="std std-ref">basis</span></a>: () -&gt; <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> %</dt><dd><p>from <a class="reference internal" href="FramedModule.html#l4672616d65644d6f64756c65"><span class="std std-ref">FramedModule</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e636f65726365">
+<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f2e636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="index-1">
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> R -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(v)</span></code> converts a vector to a member of the algebra by forming a linear combination with the basis element. Note: the vector is assumed to have length equal to the dimension of the algebra.</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e636f6d6d757461746976653f">
+<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c67656272612e636f6d6d757461746976653f"><span class="std std-ref">commutative?</span></a>: () -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e636f6d6d757461746f72">
+<dt><a class="reference internal" href="NonAssociativeRng.html#l4e6f6e4173736f63696174697665526e672e636f6d6d757461746f72"><span class="std std-ref">commutator</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRng.html#l4e6f6e4173736f63696174697665526e67"><span class="std std-ref">NonAssociativeRng</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e636f6e646974696f6e73466f724964656d706f74656e7473">
+<dt><a class="reference internal" href="FramedNonAssociativeAlgebra.html#l4672616d65644e6f6e4173736f63696174697665416c67656272612e636f6e646974696f6e73466f724964656d706f74656e7473"><span class="std std-ref">conditionsForIdempotents</span></a>: () -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Polynomial.html#l506f6c796e6f6d69616c"><span class="std std-ref">Polynomial</span></a> R</dt><dd><p>from <a class="reference internal" href="FramedNonAssociativeAlgebra.html#l4672616d65644e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FramedNonAssociativeAlgebra</span></a> R</p>
+</dd>
+<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c67656272612e636f6e646974696f6e73466f724964656d706f74656e7473"><span class="std std-ref">conditionsForIdempotents</span></a>: <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Polynomial.html#l506f6c796e6f6d69616c"><span class="std std-ref">Polynomial</span></a> R</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e636f6e76657274">
+<dt><a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f2e636f6e76657274"><span class="std std-ref">convert</span></a>: % -&gt; <a class="reference internal" href="InputForm.html#l496e707574466f726d"><span class="std std-ref">InputForm</span></a> if R has <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="InputForm.html#l496e707574466f726d"><span class="std std-ref">InputForm</span></a></p>
+</dd>
+<dt><a class="reference internal" href="FramedModule.html#l4672616d65644d6f64756c652e636f6e76657274"><span class="std std-ref">convert</span></a>: % -&gt; <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> R</dt><dd><p>from <a class="reference internal" href="FramedModule.html#l4672616d65644d6f64756c65"><span class="std std-ref">FramedModule</span></a> R</p>
+</dd>
+<dt><a class="reference internal" href="FramedModule.html#l4672616d65644d6f64756c652e636f6e76657274"><span class="std std-ref">convert</span></a>: <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> R -&gt; %</dt><dd><p>from <a class="reference internal" href="FramedModule.html#l4672616d65644d6f64756c65"><span class="std std-ref">FramedModule</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e636f6f7264696e61746573">
+<dt><a class="reference internal" href="FramedModule.html#l4672616d65644d6f64756c652e636f6f7264696e61746573"><span class="std std-ref">coordinates</span></a>: % -&gt; <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> R</dt><dd><p>from <a class="reference internal" href="FramedModule.html#l4672616d65644d6f64756c65"><span class="std std-ref">FramedModule</span></a> R</p>
+</dd>
+<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c67656272612e636f6f7264696e61746573"><span class="std std-ref">coordinates</span></a>: (%, <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> %) -&gt; <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> R</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
+</dd>
+<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c67656272612e636f6f7264696e61746573"><span class="std std-ref">coordinates</span></a>: (<a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> %, <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> %) -&gt; <a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> R</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
+</dd>
+<dt><a class="reference internal" href="FramedModule.html#l4672616d65644d6f64756c652e636f6f7264696e61746573"><span class="std std-ref">coordinates</span></a>: <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> % -&gt; <a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> R</dt><dd><p>from <a class="reference internal" href="FramedModule.html#l4672616d65644d6f64756c65"><span class="std std-ref">FramedModule</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e656c74">
+<dt><a class="reference internal" href="FramedNonAssociativeAlgebra.html#l4672616d65644e6f6e4173736f63696174697665416c67656272612e656c74"><span class="std std-ref">elt</span></a>: (%, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; R</dt><dd><p>from <a class="reference internal" href="FramedNonAssociativeAlgebra.html#l4672616d65644e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FramedNonAssociativeAlgebra</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e656e756d6572617465">
+<dt><a class="reference internal" href="Finite.html#l46696e6974652e656e756d6572617465"><span class="std std-ref">enumerate</span></a>: () -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> % if R has <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e666c657869626c653f">
+<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c67656272612e666c657869626c653f"><span class="std std-ref">flexible?</span></a>: () -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e68617368">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e68617368"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l53696e676c65496e7465676572"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e6861736855706461746521">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6861736855706461746521"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e696e646578">
+<dt><a class="reference internal" href="Finite.html#l46696e6974652e696e646578"><span class="std std-ref">index</span></a>: <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a> -&gt; % if R has <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e6a61636f62694964656e746974793f">
+<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c67656272612e6a61636f62694964656e746974793f"><span class="std std-ref">jacobiIdentity?</span></a>: () -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e6a6f7264616e41646d69737369626c653f">
+<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c67656272612e6a6f7264616e41646d69737369626c653f"><span class="std std-ref">jordanAdmissible?</span></a>: () -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e6a6f7264616e416c67656272613f">
+<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c67656272612e6a6f7264616e416c67656272613f"><span class="std std-ref">jordanAlgebra?</span></a>: () -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e6c61746578">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6c61746578"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e6c656674416c7465726e61746976653f">
+<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c67656272612e6c656674416c7465726e61746976653f"><span class="std std-ref">leftAlternative?</span></a>: () -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e6c6566744368617261637465726973746963506f6c796e6f6d69616c">
+<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c67656272612e6c6566744368617261637465726973746963506f6c796e6f6d69616c"><span class="std std-ref">leftCharacteristicPolynomial</span></a>: % -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> R</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e6c6566744469736372696d696e616e74">
+<dt><a class="reference internal" href="FramedNonAssociativeAlgebra.html#l4672616d65644e6f6e4173736f63696174697665416c67656272612e6c6566744469736372696d696e616e74"><span class="std std-ref">leftDiscriminant</span></a>: () -&gt; R</dt><dd><p>from <a class="reference internal" href="FramedNonAssociativeAlgebra.html#l4672616d65644e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FramedNonAssociativeAlgebra</span></a> R</p>
+</dd>
+<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c67656272612e6c6566744469736372696d696e616e74"><span class="std std-ref">leftDiscriminant</span></a>: <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> % -&gt; R</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e6c6566744d696e696d616c506f6c796e6f6d69616c">
+<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c67656272612e6c6566744d696e696d616c506f6c796e6f6d69616c"><span class="std std-ref">leftMinimalPolynomial</span></a>: % -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> R</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e6c6566744e6f726d">
+<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c67656272612e6c6566744e6f726d"><span class="std std-ref">leftNorm</span></a>: % -&gt; R</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e6c656674506f776572">
+<dt><a class="reference internal" href="Magma.html#l4d61676d612e6c656674506f776572"><span class="std std-ref">leftPower</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l4d61676d61"><span class="std std-ref">Magma</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e6c65667452616e6b506f6c796e6f6d69616c">
+<dt><a class="reference internal" href="FramedNonAssociativeAlgebra.html#l4672616d65644e6f6e4173736f63696174697665416c67656272612e6c65667452616e6b506f6c796e6f6d69616c"><span class="std std-ref">leftRankPolynomial</span></a>: () -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> <a class="reference internal" href="Polynomial.html#l506f6c796e6f6d69616c"><span class="std std-ref">Polynomial</span></a> R</dt><dd><p>from <a class="reference internal" href="FramedNonAssociativeAlgebra.html#l4672616d65644e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FramedNonAssociativeAlgebra</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e6c6566745265636970">
+<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c67656272612e6c6566745265636970"><span class="std std-ref">leftRecip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e6c656674526567756c6172526570726573656e746174696f6e">
+<dt><a class="reference internal" href="FramedNonAssociativeAlgebra.html#l4672616d65644e6f6e4173736f63696174697665416c67656272612e6c656674526567756c6172526570726573656e746174696f6e"><span class="std std-ref">leftRegularRepresentation</span></a>: % -&gt; <a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> R</dt><dd><p>from <a class="reference internal" href="FramedNonAssociativeAlgebra.html#l4672616d65644e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FramedNonAssociativeAlgebra</span></a> R</p>
+</dd>
+<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c67656272612e6c656674526567756c6172526570726573656e746174696f6e"><span class="std std-ref">leftRegularRepresentation</span></a>: (%, <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> %) -&gt; <a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> R</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e6c6566745472616365">
+<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c67656272612e6c6566745472616365"><span class="std std-ref">leftTrace</span></a>: % -&gt; R</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e6c65667454726163654d6174726978">
+<dt><a class="reference internal" href="FramedNonAssociativeAlgebra.html#l4672616d65644e6f6e4173736f63696174697665416c67656272612e6c65667454726163654d6174726978"><span class="std std-ref">leftTraceMatrix</span></a>: () -&gt; <a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> R</dt><dd><p>from <a class="reference internal" href="FramedNonAssociativeAlgebra.html#l4672616d65644e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FramedNonAssociativeAlgebra</span></a> R</p>
+</dd>
+<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c67656272612e6c65667454726163654d6174726978"><span class="std std-ref">leftTraceMatrix</span></a>: <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> % -&gt; <a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> R</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e6c656674556e6974">
+<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c67656272612e6c656674556e6974"><span class="std std-ref">leftUnit</span></a>: () -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e6c656674556e697473">
+<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c67656272612e6c656674556e697473"><span class="std std-ref">leftUnits</span></a>: () -&gt; Union(Record(particular: %, basis: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %), failed)</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e6c696541646d69737369626c653f">
+<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c67656272612e6c696541646d69737369626c653f"><span class="std std-ref">lieAdmissible?</span></a>: () -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e6c6965416c67656272613f">
+<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c67656272612e6c6965416c67656272613f"><span class="std std-ref">lieAlgebra?</span></a>: () -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e6c6f6f6b7570">
+<dt><a class="reference internal" href="Finite.html#l46696e6974652e6c6f6f6b7570"><span class="std std-ref">lookup</span></a>: % -&gt; <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a> if R has <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e6e6f6e636f6d6d757461746976654a6f7264616e416c67656272613f">
+<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c67656272612e6e6f6e636f6d6d757461746976654a6f7264616e416c67656272613f"><span class="std std-ref">noncommutativeJordanAlgebra?</span></a>: () -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e6f70706f736974653f">
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f69642e6f70706f736974653f"><span class="std std-ref">opposite?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e706c656e617279506f776572">
+<dt><a class="reference internal" href="NonAssociativeAlgebra.html#l4e6f6e4173736f63696174697665416c67656272612e706c656e617279506f776572"><span class="std std-ref">plenaryPower</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeAlgebra.html#l4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">NonAssociativeAlgebra</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e706f7765724173736f636961746976653f">
+<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c67656272612e706f7765724173736f636961746976653f"><span class="std std-ref">powerAssociative?</span></a>: () -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e72616e646f6d">
+<dt><a class="reference internal" href="Finite.html#l46696e6974652e72616e646f6d"><span class="std std-ref">random</span></a>: () -&gt; % if R has <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e72616e6b">
+<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c67656272612e72616e6b"><span class="std std-ref">rank</span></a>: () -&gt; <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a></dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e7265636970">
+<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c67656272612e7265636970"><span class="std std-ref">recip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e726570726573656e7473">
+<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c67656272612e726570726573656e7473"><span class="std std-ref">represents</span></a>: (<a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> R, <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> %) -&gt; %</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
+</dd>
+<dt><a class="reference internal" href="FramedModule.html#l4672616d65644d6f64756c652e726570726573656e7473"><span class="std std-ref">represents</span></a>: <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> R -&gt; %</dt><dd><p>from <a class="reference internal" href="FramedModule.html#l4672616d65644d6f64756c65"><span class="std std-ref">FramedModule</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e7269676874416c7465726e61746976653f">
+<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c67656272612e7269676874416c7465726e61746976653f"><span class="std std-ref">rightAlternative?</span></a>: () -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e72696768744368617261637465726973746963506f6c796e6f6d69616c">
+<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c67656272612e72696768744368617261637465726973746963506f6c796e6f6d69616c"><span class="std std-ref">rightCharacteristicPolynomial</span></a>: % -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> R</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e72696768744469736372696d696e616e74">
+<dt><a class="reference internal" href="FramedNonAssociativeAlgebra.html#l4672616d65644e6f6e4173736f63696174697665416c67656272612e72696768744469736372696d696e616e74"><span class="std std-ref">rightDiscriminant</span></a>: () -&gt; R</dt><dd><p>from <a class="reference internal" href="FramedNonAssociativeAlgebra.html#l4672616d65644e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FramedNonAssociativeAlgebra</span></a> R</p>
+</dd>
+<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c67656272612e72696768744469736372696d696e616e74"><span class="std std-ref">rightDiscriminant</span></a>: <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> % -&gt; R</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e72696768744d696e696d616c506f6c796e6f6d69616c">
+<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c67656272612e72696768744d696e696d616c506f6c796e6f6d69616c"><span class="std std-ref">rightMinimalPolynomial</span></a>: % -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> R</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e72696768744e6f726d">
+<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c67656272612e72696768744e6f726d"><span class="std std-ref">rightNorm</span></a>: % -&gt; R</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e7269676874506f776572">
+<dt><a class="reference internal" href="Magma.html#l4d61676d612e7269676874506f776572"><span class="std std-ref">rightPower</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l4d61676d61"><span class="std std-ref">Magma</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e726967687452616e6b506f6c796e6f6d69616c">
+<dt><a class="reference internal" href="FramedNonAssociativeAlgebra.html#l4672616d65644e6f6e4173736f63696174697665416c67656272612e726967687452616e6b506f6c796e6f6d69616c"><span class="std std-ref">rightRankPolynomial</span></a>: () -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> <a class="reference internal" href="Polynomial.html#l506f6c796e6f6d69616c"><span class="std std-ref">Polynomial</span></a> R</dt><dd><p>from <a class="reference internal" href="FramedNonAssociativeAlgebra.html#l4672616d65644e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FramedNonAssociativeAlgebra</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e72696768745265636970">
+<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c67656272612e72696768745265636970"><span class="std std-ref">rightRecip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e7269676874526567756c6172526570726573656e746174696f6e">
+<dt><a class="reference internal" href="FramedNonAssociativeAlgebra.html#l4672616d65644e6f6e4173736f63696174697665416c67656272612e7269676874526567756c6172526570726573656e746174696f6e"><span class="std std-ref">rightRegularRepresentation</span></a>: % -&gt; <a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> R</dt><dd><p>from <a class="reference internal" href="FramedNonAssociativeAlgebra.html#l4672616d65644e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FramedNonAssociativeAlgebra</span></a> R</p>
+</dd>
+<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c67656272612e7269676874526567756c6172526570726573656e746174696f6e"><span class="std std-ref">rightRegularRepresentation</span></a>: (%, <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> %) -&gt; <a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> R</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e72696768745472616365">
+<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c67656272612e72696768745472616365"><span class="std std-ref">rightTrace</span></a>: % -&gt; R</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e726967687454726163654d6174726978">
+<dt><a class="reference internal" href="FramedNonAssociativeAlgebra.html#l4672616d65644e6f6e4173736f63696174697665416c67656272612e726967687454726163654d6174726978"><span class="std std-ref">rightTraceMatrix</span></a>: () -&gt; <a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> R</dt><dd><p>from <a class="reference internal" href="FramedNonAssociativeAlgebra.html#l4672616d65644e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FramedNonAssociativeAlgebra</span></a> R</p>
+</dd>
+<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c67656272612e726967687454726163654d6174726978"><span class="std std-ref">rightTraceMatrix</span></a>: <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> % -&gt; <a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> R</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e7269676874556e6974">
+<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c67656272612e7269676874556e6974"><span class="std std-ref">rightUnit</span></a>: () -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e7269676874556e697473">
+<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c67656272612e7269676874556e697473"><span class="std std-ref">rightUnits</span></a>: () -&gt; Union(Record(particular: %, basis: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %), failed)</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e73616d706c65">
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f69642e73616d706c65"><span class="std std-ref">sample</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e73697a65">
+<dt><a class="reference internal" href="Finite.html#l46696e6974652e73697a65"><span class="std std-ref">size</span></a>: () -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a> if R has <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e736d616c6c65723f">
+<dt><a class="reference internal" href="Comparable.html#l436f6d70617261626c652e736d616c6c65723f"><span class="std std-ref">smaller?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a> if R has <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e736f6d654261736973">
+<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c67656272612e736f6d654261736973"><span class="std std-ref">someBasis</span></a>: () -&gt; <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> %</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e7374727563747572616c436f6e7374616e7473">
+<dt><a class="reference internal" href="FramedNonAssociativeAlgebra.html#l4672616d65644e6f6e4173736f63696174697665416c67656272612e7374727563747572616c436f6e7374616e7473"><span class="std std-ref">structuralConstants</span></a>: () -&gt; <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> R</dt><dd><p>from <a class="reference internal" href="FramedNonAssociativeAlgebra.html#l4672616d65644e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FramedNonAssociativeAlgebra</span></a> R</p>
+</dd>
+<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c67656272612e7374727563747572616c436f6e7374616e7473"><span class="std std-ref">structuralConstants</span></a>: <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> % -&gt; <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> R</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e7375627472616374496643616e">
+<dt><a class="reference internal" href="CancellationAbelianMonoid.html#l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f69642e7375627472616374496643616e"><span class="std std-ref">subtractIfCan</span></a>: (%, %) -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="CancellationAbelianMonoid.html#l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e756e6974">
+<dt><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c67656272612e756e6974"><span class="std std-ref">unit</span></a>: () -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l416c6765627261476976656e42795374727563747572616c436f6e7374616e74732e7a65726f3f">
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f69642e7a65726f3f"><span class="std std-ref">zero?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+</dl>
+<p><a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p>
+<p><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+<p><a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f7570"><span class="std std-ref">AbelianSemiGroup</span></a></p>
+<p><a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+<p><a class="reference internal" href="BiModule.html#l42694d6f64756c65"><span class="std std-ref">BiModule</span></a>(R, R)</p>
+<p><a class="reference internal" href="CancellationAbelianMonoid.html#l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
+<p><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+<p><a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a> if R has <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></p>
+<p><a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="InputForm.html#l496e707574466f726d"><span class="std std-ref">InputForm</span></a> if R has <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></p>
+<p><a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a> if R has <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></p>
+<p><a class="reference internal" href="FiniteRankNonAssociativeAlgebra.html#l46696e69746552616e6b4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FiniteRankNonAssociativeAlgebra</span></a> R</p>
+<p><a class="reference internal" href="FramedModule.html#l4672616d65644d6f64756c65"><span class="std std-ref">FramedModule</span></a> R</p>
+<p><a class="reference internal" href="FramedNonAssociativeAlgebra.html#l4672616d65644e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">FramedNonAssociativeAlgebra</span></a> R</p>
+<p><a class="reference internal" href="LeftModule.html#l4c6566744d6f64756c65"><span class="std std-ref">LeftModule</span></a> R</p>
+<p><a class="reference internal" href="LeftModule.html#l4c6566744d6f64756c65"><span class="std std-ref">LeftModule</span></a> <a class="reference internal" href="SquareMatrix.html#l5371756172654d6174726978"><span class="std std-ref">SquareMatrix</span></a>(n, R)</p>
+<p><a class="reference internal" href="Magma.html#l4d61676d61"><span class="std std-ref">Magma</span></a></p>
+<p><a class="reference internal" href="Module.html#l4d6f64756c65"><span class="std std-ref">Module</span></a> R</p>
+<p><a class="reference internal" href="NonAssociativeAlgebra.html#l4e6f6e4173736f63696174697665416c6765627261"><span class="std std-ref">NonAssociativeAlgebra</span></a> R</p>
+<p><a class="reference internal" href="NonAssociativeRng.html#l4e6f6e4173736f63696174697665526e67"><span class="std std-ref">NonAssociativeRng</span></a></p>
+<p><a class="reference internal" href="NonAssociativeSemiRng.html#l4e6f6e4173736f6369617469766553656d69526e67"><span class="std std-ref">NonAssociativeSemiRng</span></a></p>
+<p><a class="reference internal" href="RightModule.html#l52696768744d6f64756c65"><span class="std std-ref">RightModule</span></a> R</p>
+<p><a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+<p><a class="reference internal" href="unitsKnown.html#l756e6974734b6e6f776e"><span class="std std-ref">unitsKnown</span></a></p>
 </div>
 
 
@@ -327,7 +479,7 @@
         <li class="right" >
           <a href="Domains.html" title="Domains"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Domains.html" >Domains</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">AlgebraGivenByStructuralConstants(R, n, ls, gamma)</a></li> 

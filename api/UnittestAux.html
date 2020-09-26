@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UnittestAux R &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>UnittestAux R &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="Unittest.html" title="Unittest"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">UnittestAux R</a></li> 
@@ -46,70 +46,70 @@
           <div class="body" role="main">
             
   <div class="section" id="unittestaux-r">
-<span id="l-unittest-aux"></span><span id="index-0"></span><h1>UnittestAux R<a class="headerlink" href="#unittestaux-r" title="Permalink to this headline">¶</a></h1>
+<span id="l556e697474657374417578"></span><span id="index-0"></span><h1>UnittestAux R<a class="headerlink" href="#unittestaux-r" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/unittest.spad#L422">unittest.spad line 422</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/unittest.spad#L422">[edit on github]</a></p>
 <ul class="simple">
-<li><p>R: <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p></li>
+<li><p>R: <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p></li>
 </ul>
 <p>UnittestAux is an auxiliary package to Unittest, that performs checking of tests, dealing also with fatal errors.</p>
-<span class="target" id="l-unittest-aux-test-absolute-precision"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">testAbsolutePrecision</span>: R -&gt; R if R has <a class="reference internal" href="RealNumberSystem.html#l-real-number-system"><span class="std std-ref">RealNumberSystem</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">testAbsolutePrecision(eps)</span></code> returns the current absolute precision used for floating point comparison, and then sets it to <code class="docutils literal notranslate"><span class="pre">eps</span></code>. The default value is 1.0e-15.</p>
+<span class="target" id="l556e6974746573744175782e746573744162736f6c757465507265636973696f6e"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">testAbsolutePrecision</span>: R -&gt; R if R has <a class="reference internal" href="RealNumberSystem.html#l5265616c4e756d62657253797374656d"><span class="std std-ref">RealNumberSystem</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">testAbsolutePrecision(eps)</span></code> returns the current absolute precision used for floating point comparison, and then sets it to <code class="docutils literal notranslate"><span class="pre">eps</span></code>. The default value is 1.0e-15.</p>
 </dd>
 </dl>
-<span class="target" id="l-unittest-aux-test-complex-equals-aux"></span><dl class="simple" id="index-2">
-<dt><span class="spadfun">testComplexEqualsAux</span>: (<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, <a class="reference internal" href="Complex.html#l-complex"><span class="std std-ref">Complex</span></a> R, <a class="reference internal" href="Complex.html#l-complex"><span class="std std-ref">Complex</span></a> R) -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a> if R has <a class="reference internal" href="RealNumberSystem.html#l-real-number-system"><span class="std std-ref">RealNumberSystem</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">testComplexEqualsAux(inp</span> <span class="pre">ex1,</span> <span class="pre">ex2)</span></code> states that <code class="docutils literal notranslate"><span class="pre">ex1</span></code> and <code class="docutils literal notranslate"><span class="pre">ex2</span></code> should be approximately equal as complex numbers, taking into acount <span class="spadfun">testAbsolutePrecision</span> and <span class="spadfun">testRelativePrecision</span>.</p>
+<span class="target" id="l556e6974746573744175782e74657374436f6d706c6578457175616c73417578"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">testComplexEqualsAux</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="Complex.html#l436f6d706c6578"><span class="std std-ref">Complex</span></a> R, <a class="reference internal" href="Complex.html#l436f6d706c6578"><span class="std std-ref">Complex</span></a> R) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a> if R has <a class="reference internal" href="RealNumberSystem.html#l5265616c4e756d62657253797374656d"><span class="std std-ref">RealNumberSystem</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">testComplexEqualsAux(inp</span> <span class="pre">ex1,</span> <span class="pre">ex2)</span></code> states that <code class="docutils literal notranslate"><span class="pre">ex1</span></code> and <code class="docutils literal notranslate"><span class="pre">ex2</span></code> should be approximately equal as complex numbers, taking into acount <span class="spadfun">testAbsolutePrecision</span> and <span class="spadfun">testRelativePrecision</span>.</p>
 </dd>
 </dl>
-<span class="target" id="l-unittest-aux-test-equals-aux"></span><dl class="simple" id="index-3">
-<dt><span class="spadfun">testEqualsAux</span>: (<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, R, R) -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p>testEquals(inp, <code class="docutils literal notranslate"><span class="pre">ex1</span></code>, <code class="docutils literal notranslate"><span class="pre">ex2</span></code>) states that <code class="docutils literal notranslate"><span class="pre">ex1</span></code> and <code class="docutils literal notranslate"><span class="pre">ex2</span></code> should be equal. To sidestep the possibility that the equality function of the domain <code class="docutils literal notranslate"><span class="pre">R</span></code> performs some simplifications, we convert <code class="docutils literal notranslate"><span class="pre">ex1</span></code> and <code class="docutils literal notranslate"><span class="pre">ex2</span></code> to <code class="docutils literal notranslate"><span class="pre">InputForm</span></code>, if possible.</p>
+<span class="target" id="l556e6974746573744175782e74657374457175616c73417578"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">testEqualsAux</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, R, R) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>testEquals(inp, <code class="docutils literal notranslate"><span class="pre">ex1</span></code>, <code class="docutils literal notranslate"><span class="pre">ex2</span></code>) states that <code class="docutils literal notranslate"><span class="pre">ex1</span></code> and <code class="docutils literal notranslate"><span class="pre">ex2</span></code> should be equal. To sidestep the possibility that the equality function of the domain <code class="docutils literal notranslate"><span class="pre">R</span></code> performs some simplifications, we convert <code class="docutils literal notranslate"><span class="pre">ex1</span></code> and <code class="docutils literal notranslate"><span class="pre">ex2</span></code> to <code class="docutils literal notranslate"><span class="pre">InputForm</span></code>, if possible.</p>
 </dd>
 </dl>
-<span class="target" id="l-unittest-aux-test-equals-aux-cmp"></span><dl class="simple" id="index-4">
-<dt><span class="spadfun">testEqualsAuxCmp</span>: (R, R) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">testEqualsAuxCmp</span> <span class="pre">should</span></code> be local but is conditional</p>
+<span class="target" id="l556e6974746573744175782e74657374457175616c73417578436d70"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">testEqualsAuxCmp</span>: (R, R) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">testEqualsAuxCmp</span> <span class="pre">should</span></code> be local but is conditional</p>
 </dd>
 </dl>
-<span class="target" id="l-unittest-aux-test-library-error-aux"></span><dl class="simple" id="index-5">
-<dt><span class="spadfun">testLibraryErrorAux</span>: (<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, R) -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">testLibraryErrorAux(inp,</span> <span class="pre">ex)</span></code> states that ex should throw an error. Such a test will never count as a fatal error.</p>
+<span class="target" id="l556e6974746573744175782e746573744c6962726172794572726f72417578"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">testLibraryErrorAux</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, R) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">testLibraryErrorAux(inp,</span> <span class="pre">ex)</span></code> states that ex should throw an error. Such a test will never count as a fatal error.</p>
 </dd>
 </dl>
-<span class="target" id="l-unittest-aux-test-not-equals-aux"></span><dl class="simple" id="index-6">
-<dt><span class="spadfun">testNotEqualsAux</span>: (<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, R, R) -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p>testNotEquals(inp, <code class="docutils literal notranslate"><span class="pre">ex1</span></code>, <code class="docutils literal notranslate"><span class="pre">ex2</span></code>) states that <code class="docutils literal notranslate"><span class="pre">ex1</span></code> and <code class="docutils literal notranslate"><span class="pre">ex2</span></code> should be different.</p>
+<span class="target" id="l556e6974746573744175782e746573744e6f74457175616c73417578"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">testNotEqualsAux</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, R, R) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>testNotEquals(inp, <code class="docutils literal notranslate"><span class="pre">ex1</span></code>, <code class="docutils literal notranslate"><span class="pre">ex2</span></code>) states that <code class="docutils literal notranslate"><span class="pre">ex1</span></code> and <code class="docutils literal notranslate"><span class="pre">ex2</span></code> should be different.</p>
 </dd>
 </dl>
-<span class="target" id="l-unittest-aux-test-real-equals-aux"></span><dl class="simple" id="index-7">
-<dt><span class="spadfun">testRealEqualsAux</span>: (<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, R, R) -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a> if R has <a class="reference internal" href="RealNumberSystem.html#l-real-number-system"><span class="std std-ref">RealNumberSystem</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">testRealEqualsAux(inp,</span> <span class="pre">ex1,</span> <span class="pre">ex2)</span></code> states that <code class="docutils literal notranslate"><span class="pre">ex1</span></code> and <code class="docutils literal notranslate"><span class="pre">ex2</span></code> should be approximately equal as real numbers, taking into acount <span class="spadfun">testAbsolutePrecision</span> and <span class="spadfun">testRelativePrecision</span>.</p>
+<span class="target" id="l556e6974746573744175782e746573745265616c457175616c73417578"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">testRealEqualsAux</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, R, R) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a> if R has <a class="reference internal" href="RealNumberSystem.html#l5265616c4e756d62657253797374656d"><span class="std std-ref">RealNumberSystem</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">testRealEqualsAux(inp,</span> <span class="pre">ex1,</span> <span class="pre">ex2)</span></code> states that <code class="docutils literal notranslate"><span class="pre">ex1</span></code> and <code class="docutils literal notranslate"><span class="pre">ex2</span></code> should be approximately equal as real numbers, taking into acount <span class="spadfun">testAbsolutePrecision</span> and <span class="spadfun">testRelativePrecision</span>.</p>
 </dd>
 </dl>
-<span class="target" id="l-unittest-aux-test-relative-precision"></span><dl class="simple" id="index-8">
-<dt><span class="spadfun">testRelativePrecision</span>: R -&gt; R if R has <a class="reference internal" href="RealNumberSystem.html#l-real-number-system"><span class="std std-ref">RealNumberSystem</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">testRelativePrecision(eps)</span></code> returns the current absolute precision used for floating point comparison, and then sets it to <code class="docutils literal notranslate"><span class="pre">eps</span></code>. The default value is 1.0e-15.</p>
+<span class="target" id="l556e6974746573744175782e7465737452656c6174697665507265636973696f6e"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">testRelativePrecision</span>: R -&gt; R if R has <a class="reference internal" href="RealNumberSystem.html#l5265616c4e756d62657253797374656d"><span class="std std-ref">RealNumberSystem</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">testRelativePrecision(eps)</span></code> returns the current absolute precision used for floating point comparison, and then sets it to <code class="docutils literal notranslate"><span class="pre">eps</span></code>. The default value is 1.0e-15.</p>
 </dd>
 </dl>
-<span class="target" id="l-unittest-aux-test-true-aux"></span><dl class="simple" id="index-9">
-<dt><span class="spadfun">testTrueAux</span>: (<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, R) -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">testTrueAux(inp,</span> <span class="pre">ex)</span></code> states that ex should be <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+<span class="target" id="l556e6974746573744175782e7465737454727565417578"></span><dl class="simple" id="index-9">
+<dt><span class="spadfun">testTrueAux</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, R) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">testTrueAux(inp,</span> <span class="pre">ex)</span></code> states that ex should be <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-unittest-aux-xftest-complex-equals-aux"></span><dl class="simple" id="index-10">
-<dt><span class="spadfun">xftestComplexEqualsAux</span>: (<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, <a class="reference internal" href="Complex.html#l-complex"><span class="std std-ref">Complex</span></a> R, <a class="reference internal" href="Complex.html#l-complex"><span class="std std-ref">Complex</span></a> R) -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a> if R has <a class="reference internal" href="RealNumberSystem.html#l-real-number-system"><span class="std std-ref">RealNumberSystem</span></a></dt><dd><p>like testEquals, but expects failure.</p>
+<span class="target" id="l556e6974746573744175782e786674657374436f6d706c6578457175616c73417578"></span><dl class="simple" id="index-10">
+<dt><span class="spadfun">xftestComplexEqualsAux</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="Complex.html#l436f6d706c6578"><span class="std std-ref">Complex</span></a> R, <a class="reference internal" href="Complex.html#l436f6d706c6578"><span class="std std-ref">Complex</span></a> R) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a> if R has <a class="reference internal" href="RealNumberSystem.html#l5265616c4e756d62657253797374656d"><span class="std std-ref">RealNumberSystem</span></a></dt><dd><p>like testEquals, but expects failure.</p>
 </dd>
 </dl>
-<span class="target" id="l-unittest-aux-xftest-equals-aux"></span><dl class="simple" id="index-11">
-<dt><span class="spadfun">xftestEqualsAux</span>: (<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, R, R) -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p>like testEquals, but expects failure.</p>
+<span class="target" id="l556e6974746573744175782e786674657374457175616c73417578"></span><dl class="simple" id="index-11">
+<dt><span class="spadfun">xftestEqualsAux</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, R, R) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>like testEquals, but expects failure.</p>
 </dd>
 </dl>
-<span class="target" id="l-unittest-aux-xftest-library-error-aux"></span><dl class="simple" id="index-12">
-<dt><span class="spadfun">xftestLibraryErrorAux</span>: (<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, R) -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p>like testEquals, but expects failure.</p>
+<span class="target" id="l556e6974746573744175782e7866746573744c6962726172794572726f72417578"></span><dl class="simple" id="index-12">
+<dt><span class="spadfun">xftestLibraryErrorAux</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, R) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>like testEquals, but expects failure.</p>
 </dd>
 </dl>
-<span class="target" id="l-unittest-aux-xftest-not-equals-aux"></span><dl class="simple" id="index-13">
-<dt><span class="spadfun">xftestNotEqualsAux</span>: (<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, R, R) -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p>like testEquals, but expects failure.</p>
+<span class="target" id="l556e6974746573744175782e7866746573744e6f74457175616c73417578"></span><dl class="simple" id="index-13">
+<dt><span class="spadfun">xftestNotEqualsAux</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, R, R) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>like testEquals, but expects failure.</p>
 </dd>
 </dl>
-<span class="target" id="l-unittest-aux-xftest-real-equals-aux"></span><dl class="simple" id="index-14">
-<dt><span class="spadfun">xftestRealEqualsAux</span>: (<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, R, R) -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a> if R has <a class="reference internal" href="RealNumberSystem.html#l-real-number-system"><span class="std std-ref">RealNumberSystem</span></a></dt><dd><p>like testEquals, but expects failure.</p>
+<span class="target" id="l556e6974746573744175782e7866746573745265616c457175616c73417578"></span><dl class="simple" id="index-14">
+<dt><span class="spadfun">xftestRealEqualsAux</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, R, R) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a> if R has <a class="reference internal" href="RealNumberSystem.html#l5265616c4e756d62657253797374656d"><span class="std std-ref">RealNumberSystem</span></a></dt><dd><p>like testEquals, but expects failure.</p>
 </dd>
 </dl>
-<span class="target" id="l-unittest-aux-xftest-true-aux"></span><dl class="simple" id="index-15">
-<dt><span class="spadfun">xftestTrueAux</span>: (<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, R) -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p>like testEquals, but expects failure.</p>
+<span class="target" id="l556e6974746573744175782e78667465737454727565417578"></span><dl class="simple" id="index-15">
+<dt><span class="spadfun">xftestTrueAux</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, R) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>like testEquals, but expects failure.</p>
 </dd>
 </dl>
 </div>
@@ -159,7 +159,7 @@
         <li class="right" >
           <a href="Unittest.html" title="Unittest"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">UnittestAux R</a></li> 

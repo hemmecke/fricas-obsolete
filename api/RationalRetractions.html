@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RationalRetractions S &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>RationalRetractions S &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="RationalLODE.html" title="RationalLODE(F, UP)"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">RationalRetractions S</a></li> 
@@ -46,22 +46,22 @@
           <div class="body" role="main">
             
   <div class="section" id="rationalretractions-s">
-<span id="l-rational-retractions"></span><span id="index-0"></span><h1>RationalRetractions S<a class="headerlink" href="#rationalretractions-s" title="Permalink to this headline">¶</a></h1>
+<span id="l526174696f6e616c52657472616374696f6e73"></span><span id="index-0"></span><h1>RationalRetractions S<a class="headerlink" href="#rationalretractions-s" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/retract.spad#L51">retract.spad line 51</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/retract.spad#L51">[edit on github]</a></p>
 <ul class="simple">
-<li><p>S: <a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></p></li>
+<li><p>S: <a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f"><span class="std std-ref">RetractableTo</span></a> <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></p></li>
 </ul>
 <p>rational number testing and retraction functions. Date Created: March 1990</p>
-<span class="target" id="l-rational-retractions-rational"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">rational</span>: S -&gt; <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">rational(x)</span></code> returns <code class="docutils literal notranslate"><span class="pre">x</span></code> as a rational number; error if <code class="docutils literal notranslate"><span class="pre">x</span></code> is not a rational number.</p>
+<span class="target" id="l526174696f6e616c52657472616374696f6e732e726174696f6e616c3f"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">rational?</span>: S -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">rational?(x)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if <code class="docutils literal notranslate"><span class="pre">x</span></code> is a rational number, <code class="docutils literal notranslate"><span class="pre">false</span></code> otherwise.</p>
 </dd>
 </dl>
-<span class="target" id="id1"></span><dl class="simple" id="index-2">
-<dt><span class="spadfun">rational?</span>: S -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">rational?(x)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if <code class="docutils literal notranslate"><span class="pre">x</span></code> is a rational number, <code class="docutils literal notranslate"><span class="pre">false</span></code> otherwise.</p>
+<span class="target" id="l526174696f6e616c52657472616374696f6e732e726174696f6e616c"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">rational</span>: S -&gt; <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">rational(x)</span></code> returns <code class="docutils literal notranslate"><span class="pre">x</span></code> as a rational number; error if <code class="docutils literal notranslate"><span class="pre">x</span></code> is not a rational number.</p>
 </dd>
 </dl>
-<span class="target" id="l-rational-retractions-rational-if-can"></span><dl class="simple" id="index-3">
-<dt><span class="spadfun">rationalIfCan</span>: S -&gt; Union(<a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">rationalIfCan(x)</span></code> returns <code class="docutils literal notranslate"><span class="pre">x</span></code> as a rational number, “failed” if <code class="docutils literal notranslate"><span class="pre">x</span></code> is not a rational number.</p>
+<span class="target" id="l526174696f6e616c52657472616374696f6e732e726174696f6e616c496643616e"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">rationalIfCan</span>: S -&gt; Union(<a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">rationalIfCan(x)</span></code> returns <code class="docutils literal notranslate"><span class="pre">x</span></code> as a rational number, “failed” if <code class="docutils literal notranslate"><span class="pre">x</span></code> is not a rational number.</p>
 </dd>
 </dl>
 </div>
@@ -111,7 +111,7 @@
         <li class="right" >
           <a href="RationalLODE.html" title="RationalLODE(F, UP)"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">RationalRetractions S</a></li> 

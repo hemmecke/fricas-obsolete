@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PrecomputedAssociatedEquations(R, L) &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>PrecomputedAssociatedEquations(R, L) &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="PowerSeriesLimitPackage.html" title="PowerSeriesLimitPackage(R, FE)"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">PrecomputedAssociatedEquations(R, L)</a></li> 
@@ -46,15 +46,15 @@
           <div class="body" role="main">
             
   <div class="section" id="precomputedassociatedequations-r-l">
-<span id="l-precomputed-associated-equations"></span><span id="index-0"></span><h1>PrecomputedAssociatedEquations(R, L)<a class="headerlink" href="#precomputedassociatedequations-r-l" title="Permalink to this headline">¶</a></h1>
+<span id="l507265636f6d70757465644173736f6369617465644571756174696f6e73"></span><span id="index-0"></span><h1>PrecomputedAssociatedEquations(R, L)<a class="headerlink" href="#precomputedassociatedequations-r-l" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/lodof.spad#L143">lodof.spad line 143</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/lodof.spad#L143">[edit on github]</a></p>
 <ul class="simple">
-<li><p>R: <a class="reference internal" href="IntegralDomain.html#l-integral-domain"><span class="std std-ref">IntegralDomain</span></a></p></li>
-<li><p>L: <a class="reference internal" href="LinearOrdinaryDifferentialOperatorCategory.html#l-linear-ordinary-differential-operator-category"><span class="std std-ref">LinearOrdinaryDifferentialOperatorCategory</span></a> R</p></li>
+<li><p>R: <a class="reference internal" href="IntegralDomain.html#l496e74656772616c446f6d61696e"><span class="std std-ref">IntegralDomain</span></a></p></li>
+<li><p>L: <a class="reference internal" href="LinearOrdinaryDifferentialOperatorCategory.html#l4c696e6561724f7264696e617279446966666572656e7469616c4f70657261746f7243617465676f7279"><span class="std std-ref">LinearOrdinaryDifferentialOperatorCategory</span></a> R</p></li>
 </ul>
-<p><a class="reference internal" href="#l-precomputed-associated-equations"><span class="std std-ref">PrecomputedAssociatedEquations</span></a> stores some generic precomputations which speed up the computations of the associated equations needed for factoring operators.</p>
-<span class="target" id="l-precomputed-associated-equations-first-uncoupling-matrix"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">firstUncouplingMatrix</span>: (L, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; Union(<a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">firstUncouplingMatrix(op,</span> <span class="pre">m)</span></code> returns the matrix A such that <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">w</span> <span class="pre">=</span> <span class="pre">(W',</span> <span class="pre">W'',</span> <span class="pre">...,</span> <span class="pre">W^N)</span></code> in the corresponding associated equations for right-factors of order <code class="docutils literal notranslate"><span class="pre">m</span></code> of <code class="docutils literal notranslate"><span class="pre">op</span></code>. Returns “failed” if the matrix A has not been precomputed for the particular combination <code class="docutils literal notranslate"><span class="pre">degree(L),</span> <span class="pre">m</span></code>.</p>
+<p><a class="reference internal" href="#l507265636f6d70757465644173736f6369617465644571756174696f6e73"><span class="std std-ref">PrecomputedAssociatedEquations</span></a> stores some generic precomputations which speed up the computations of the associated equations needed for factoring operators.</p>
+<span class="target" id="l507265636f6d70757465644173736f6369617465644571756174696f6e732e6669727374556e636f75706c696e674d6174726978"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">firstUncouplingMatrix</span>: (L, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; Union(<a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> R, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">firstUncouplingMatrix(op,</span> <span class="pre">m)</span></code> returns the matrix A such that <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">w</span> <span class="pre">=</span> <span class="pre">(W',</span> <span class="pre">W'',</span> <span class="pre">...,</span> <span class="pre">W^N)</span></code> in the corresponding associated equations for right-factors of order <code class="docutils literal notranslate"><span class="pre">m</span></code> of <code class="docutils literal notranslate"><span class="pre">op</span></code>. Returns “failed” if the matrix A has not been precomputed for the particular combination <code class="docutils literal notranslate"><span class="pre">degree(L),</span> <span class="pre">m</span></code>.</p>
 </dd>
 </dl>
 </div>
@@ -104,7 +104,7 @@
         <li class="right" >
           <a href="PowerSeriesLimitPackage.html" title="PowerSeriesLimitPackage(R, FE)"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">PrecomputedAssociatedEquations(R, L)</a></li> 

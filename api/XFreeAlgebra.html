@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XFreeAlgebra(vl, R) &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>XFreeAlgebra(vl, R) &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="XAlgebra.html" title="XAlgebra R"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Categories.html" accesskey="U">Categories</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">XFreeAlgebra(vl, R)</a></li> 
@@ -46,223 +46,279 @@
           <div class="body" role="main">
             
   <div class="section" id="xfreealgebra-vl-r">
-<span id="l-x-free-algebra"></span><span id="index-0"></span><h1>XFreeAlgebra(vl, R)<a class="headerlink" href="#xfreealgebra-vl-r" title="Permalink to this headline">¶</a></h1>
+<span id="l5846726565416c6765627261"></span><span id="index-0"></span><h1>XFreeAlgebra(vl, R)<a class="headerlink" href="#xfreealgebra-vl-r" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/xpoly.spad#L28">xpoly.spad line 28</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/xpoly.spad#L28">[edit on github]</a></p>
 <ul class="simple">
-<li><p>vl: <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a></p></li>
-<li><p>R: <a class="reference internal" href="Ring.html#l-ring"><span class="std std-ref">Ring</span></a></p></li>
+<li><p>vl: <a class="reference internal" href="OrderedSet.html#l4f726465726564536574"><span class="std std-ref">OrderedSet</span></a></p></li>
+<li><p>R: <a class="reference internal" href="Ring.html#l52696e67"><span class="std std-ref">Ring</span></a></p></li>
 </ul>
 <p>This category specifies operations for polynomials and formal series with non-commutative variables.</p>
-<dl class="simple">
-<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-0"><span class="std std-ref">0</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
-</dd>
-<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-1"><span class="std std-ref">1</span></a>: %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
-</dd>
-<dt><a class="reference internal" href="Magma.html#id1"><span class="std std-ref">*</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
+<dl class="simple" id="l5846726565416c67656272612e30">
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f69642e30"><span class="std std-ref">0</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
 </dd>
 </dl>
-<span class="target" id="id1"></span><dl class="simple" id="index-1">
+<dl class="simple" id="l5846726565416c67656272612e31">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e69742e31"><span class="std std-ref">1</span></a>: %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l5846726565416c67656272612e2a">
+<dt><a class="reference internal" href="Magma.html#l4d61676d612e2a"><span class="std std-ref">*</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l4d61676d61"><span class="std std-ref">Magma</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="index-1">
 <dt><span class="spadfun">*</span>: (%, R) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">*</span> <span class="pre">r</span></code> returns the product of <code class="docutils literal notranslate"><span class="pre">x</span></code> by <code class="docutils literal notranslate"><span class="pre">r</span></code>. Usefull if <code class="docutils literal notranslate"><span class="pre">R</span></code> is a non-commutative Ring.</p>
 </dd>
-<dt><a class="reference internal" href="AbelianGroup.html#id1"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
+<dt><a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f75702e2a"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p>
 </dd>
-<dt><a class="reference internal" href="AbelianMonoid.html#id1"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f69642e2a"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
 </dd>
-<dt><a class="reference internal" href="AbelianSemiGroup.html#id1"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l-abelian-semi-group"><span class="std std-ref">AbelianSemiGroup</span></a></p>
+<dt><a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f75702e2a"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f7570"><span class="std std-ref">AbelianSemiGroup</span></a></p>
 </dd>
-<dt><a class="reference internal" href="LeftModule.html#id1"><span class="std std-ref">*</span></a>: (R, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="LeftModule.html#l-left-module"><span class="std std-ref">LeftModule</span></a> R</p>
+<dt><a class="reference internal" href="LeftModule.html#l4c6566744d6f64756c652e2a"><span class="std std-ref">*</span></a>: (R, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="LeftModule.html#l4c6566744d6f64756c65"><span class="std std-ref">LeftModule</span></a> R</p>
 </dd>
 </dl>
 <dl class="simple" id="index-2">
 <dt><span class="spadfun">*</span>: (vl, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">v</span> <span class="pre">*</span> <span class="pre">x</span></code> returns the product of a variable <code class="docutils literal notranslate"><span class="pre">x</span></code> by <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
 </dd>
-<dt><a class="reference internal" href="AbelianSemiGroup.html#id2"><span class="std std-ref">+</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l-abelian-semi-group"><span class="std std-ref">AbelianSemiGroup</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianGroup.html#id2"><span class="std std-ref">-</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianGroup.html#id2"><span class="std std-ref">-</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
-</dd>
-<dt><a class="reference internal" href="BasicType.html#id1"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-</dd>
-<dt><a class="reference internal" href="MagmaWithUnit.html#id1"><span class="std std-ref">^</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
-</dd>
-<dt><a class="reference internal" href="Magma.html#id2"><span class="std std-ref">^</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
-</dd>
-<dt><a class="reference internal" href="BasicType.html#id2"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-</dd>
-<dt><a class="reference internal" href="Rng.html#l-rng-annihilate"><span class="std std-ref">annihilate?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Rng.html#l-rng"><span class="std std-ref">Rng</span></a></p>
-</dd>
-<dt><a class="reference internal" href="NonAssociativeSemiRng.html#l-non-associative-semi-rng-anti-commutator"><span class="std std-ref">antiCommutator</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeSemiRng.html#l-non-associative-semi-rng"><span class="std std-ref">NonAssociativeSemiRng</span></a></p>
-</dd>
-<dt><a class="reference internal" href="NonAssociativeRng.html#l-non-associative-rng-associator"><span class="std std-ref">associator</span></a>: (%, %, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRng.html#l-non-associative-rng"><span class="std std-ref">NonAssociativeRng</span></a></p>
-</dd>
-<dt><a class="reference internal" href="NonAssociativeRing.html#l-non-associative-ring-characteristic"><span class="std std-ref">characteristic</span></a>: () -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="NonAssociativeRing.html#l-non-associative-ring"><span class="std std-ref">NonAssociativeRing</span></a></p>
+</dl>
+<dl class="simple" id="l5846726565416c67656272612e2b">
+<dt><a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f75702e2b"><span class="std std-ref">+</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f7570"><span class="std std-ref">AbelianSemiGroup</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-x-free-algebra-coef"></span><dl class="simple" id="index-3">
+<dl class="simple" id="l5846726565416c67656272612e2d">
+<dt><a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f75702e2d"><span class="std std-ref">-</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f75702e2d"><span class="std std-ref">-</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l5846726565416c67656272612e3d">
+<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l5846726565416c67656272612e5e">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e69742e5e"><span class="std std-ref">^</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Magma.html#l4d61676d612e5e"><span class="std std-ref">^</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l4d61676d61"><span class="std std-ref">Magma</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l5846726565416c67656272612e7e3d">
+<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e7e3d"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l5846726565416c67656272612e616e6e6968696c6174653f">
+<dt><a class="reference internal" href="Rng.html#l526e672e616e6e6968696c6174653f"><span class="std std-ref">annihilate?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Rng.html#l526e67"><span class="std std-ref">Rng</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l5846726565416c67656272612e616e7469436f6d6d757461746f72">
+<dt><a class="reference internal" href="NonAssociativeSemiRng.html#l4e6f6e4173736f6369617469766553656d69526e672e616e7469436f6d6d757461746f72"><span class="std std-ref">antiCommutator</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeSemiRng.html#l4e6f6e4173736f6369617469766553656d69526e67"><span class="std std-ref">NonAssociativeSemiRng</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l5846726565416c67656272612e6173736f636961746f72">
+<dt><a class="reference internal" href="NonAssociativeRng.html#l4e6f6e4173736f63696174697665526e672e6173736f636961746f72"><span class="std std-ref">associator</span></a>: (%, %, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRng.html#l4e6f6e4173736f63696174697665526e67"><span class="std std-ref">NonAssociativeRng</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l5846726565416c67656272612e6368617261637465726973746963">
+<dt><a class="reference internal" href="NonAssociativeRing.html#l4e6f6e4173736f6369617469766552696e672e6368617261637465726973746963"><span class="std std-ref">characteristic</span></a>: () -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="NonAssociativeRing.html#l4e6f6e4173736f6369617469766552696e67"><span class="std std-ref">NonAssociativeRing</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l5846726565416c67656272612e636f6566"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">coef</span>: (%, %) -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coef(x,</span> <span class="pre">y)</span></code> returns scalar product of <code class="docutils literal notranslate"><span class="pre">x</span></code> by <code class="docutils literal notranslate"><span class="pre">y</span></code>, the set of words being regarded as an orthogonal basis.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-4">
-<dt><span class="spadfun">coef</span>: (%, <a class="reference internal" href="FreeMonoid.html#l-free-monoid"><span class="std std-ref">FreeMonoid</span></a> vl) -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coef(x,</span> <span class="pre">w)</span></code> returns the coefficient of the word <code class="docutils literal notranslate"><span class="pre">w</span></code> in <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
-</dd>
-<dt><a class="reference internal" href="CoercibleTo.html#l-coercible-to-coerce"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
-</dd>
-<dt><a class="reference internal" href="CoercibleFrom.html#l-coercible-from-coerce"><span class="std std-ref">coerce</span></a>: <a class="reference internal" href="FreeMonoid.html#l-free-monoid"><span class="std std-ref">FreeMonoid</span></a> vl -&gt; %</dt><dd><p>from <a class="reference internal" href="CoercibleFrom.html#l-coercible-from"><span class="std std-ref">CoercibleFrom</span></a> <a class="reference internal" href="FreeMonoid.html#l-free-monoid"><span class="std std-ref">FreeMonoid</span></a> vl</p>
-</dd>
-<dt><a class="reference internal" href="NonAssociativeRing.html#l-non-associative-ring-coerce"><span class="std std-ref">coerce</span></a>: <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a> -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRing.html#l-non-associative-ring"><span class="std std-ref">NonAssociativeRing</span></a></p>
-</dd>
-<dt><a class="reference internal" href="XAlgebra.html#l-x-algebra-coerce"><span class="std std-ref">coerce</span></a>: R -&gt; %</dt><dd><p>from <a class="reference internal" href="XAlgebra.html#l-x-algebra"><span class="std std-ref">XAlgebra</span></a> R</p>
+<dt><span class="spadfun">coef</span>: (%, <a class="reference internal" href="FreeMonoid.html#l467265654d6f6e6f6964"><span class="std std-ref">FreeMonoid</span></a> vl) -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coef(x,</span> <span class="pre">w)</span></code> returns the coefficient of the word <code class="docutils literal notranslate"><span class="pre">w</span></code> in <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-x-free-algebra-coerce"></span><dl class="simple" id="index-5">
+<dl class="simple" id="l5846726565416c67656272612e636f65726365">
+<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f2e636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+</dd>
+<dt><a class="reference internal" href="CoercibleFrom.html#l436f65726369626c6546726f6d2e636f65726365"><span class="std std-ref">coerce</span></a>: <a class="reference internal" href="FreeMonoid.html#l467265654d6f6e6f6964"><span class="std std-ref">FreeMonoid</span></a> vl -&gt; %</dt><dd><p>from <a class="reference internal" href="CoercibleFrom.html#l436f65726369626c6546726f6d"><span class="std std-ref">CoercibleFrom</span></a> <a class="reference internal" href="FreeMonoid.html#l467265654d6f6e6f6964"><span class="std std-ref">FreeMonoid</span></a> vl</p>
+</dd>
+<dt><a class="reference internal" href="NonAssociativeRing.html#l4e6f6e4173736f6369617469766552696e672e636f65726365"><span class="std std-ref">coerce</span></a>: <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a> -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRing.html#l4e6f6e4173736f6369617469766552696e67"><span class="std std-ref">NonAssociativeRing</span></a></p>
+</dd>
+<dt><a class="reference internal" href="XAlgebra.html#l58416c67656272612e636f65726365"><span class="std std-ref">coerce</span></a>: R -&gt; %</dt><dd><p>from <a class="reference internal" href="XAlgebra.html#l58416c6765627261"><span class="std std-ref">XAlgebra</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="index-5">
 <dt><span class="spadfun">coerce</span>: vl -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(v)</span></code> returns <code class="docutils literal notranslate"><span class="pre">v</span></code>.</p>
 </dd>
-<dt><a class="reference internal" href="NonAssociativeRng.html#l-non-associative-rng-commutator"><span class="std std-ref">commutator</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRng.html#l-non-associative-rng"><span class="std std-ref">NonAssociativeRng</span></a></p>
+</dl>
+<dl class="simple" id="l5846726565416c67656272612e636f6d6d757461746f72">
+<dt><a class="reference internal" href="NonAssociativeRng.html#l4e6f6e4173736f63696174697665526e672e636f6d6d757461746f72"><span class="std std-ref">commutator</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRng.html#l4e6f6e4173736f63696174697665526e67"><span class="std std-ref">NonAssociativeRng</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-x-free-algebra-constant"></span><dl class="simple" id="index-6">
+<span class="target" id="l5846726565416c67656272612e636f6e7374616e743f"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">constant?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">constant?(x)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if <code class="docutils literal notranslate"><span class="pre">x</span></code> is constant.</p>
+</dd>
+</dl>
+<span class="target" id="l5846726565416c67656272612e636f6e7374616e74"></span><dl class="simple" id="index-7">
 <dt><span class="spadfun">constant</span>: % -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">constant(x)</span></code> returns the constant term of <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="id2"></span><dl class="simple" id="index-7">
-<dt><span class="spadfun">constant?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">constant?(x)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if <code class="docutils literal notranslate"><span class="pre">x</span></code> is constant.</p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l-single-integer"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash-update"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-latex"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-left-power"><span class="std std-ref">leftPower</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
-</dd>
-<dt><a class="reference internal" href="Magma.html#l-magma-left-power"><span class="std std-ref">leftPower</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
-</dd>
-<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-left-recip"><span class="std std-ref">leftRecip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
+<dl class="simple" id="l5846726565416c67656272612e68617368">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e68617368"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l53696e676c65496e7465676572"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-x-free-algebra-lquo"></span><dl class="simple" id="index-8">
+<dl class="simple" id="l5846726565416c67656272612e6861736855706461746521">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6861736855706461746521"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l5846726565416c67656272612e6c61746578">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6c61746578"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l5846726565416c67656272612e6c656674506f776572">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e69742e6c656674506f776572"><span class="std std-ref">leftPower</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Magma.html#l4d61676d612e6c656674506f776572"><span class="std std-ref">leftPower</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l4d61676d61"><span class="std std-ref">Magma</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l5846726565416c67656272612e6c6566745265636970">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e69742e6c6566745265636970"><span class="std std-ref">leftRecip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l5846726565416c67656272612e6c71756f"></span><dl class="simple" id="index-8">
 <dt><span class="spadfun">lquo</span>: (%, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">lquo(x,</span> <span class="pre">y)</span></code> returns the left simplification of <code class="docutils literal notranslate"><span class="pre">x</span></code> by <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-9">
-<dt><span class="spadfun">lquo</span>: (%, <a class="reference internal" href="FreeMonoid.html#l-free-monoid"><span class="std std-ref">FreeMonoid</span></a> vl) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">lquo(x,</span> <span class="pre">w)</span></code> returns the left simplification of <code class="docutils literal notranslate"><span class="pre">x</span></code> by the word <code class="docutils literal notranslate"><span class="pre">w</span></code>.</p>
+<dt><span class="spadfun">lquo</span>: (%, <a class="reference internal" href="FreeMonoid.html#l467265654d6f6e6f6964"><span class="std std-ref">FreeMonoid</span></a> vl) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">lquo(x,</span> <span class="pre">w)</span></code> returns the left simplification of <code class="docutils literal notranslate"><span class="pre">x</span></code> by the word <code class="docutils literal notranslate"><span class="pre">w</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-10">
 <dt><span class="spadfun">lquo</span>: (%, vl) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">lquo(x,</span> <span class="pre">v)</span></code> returns the left simplification of <code class="docutils literal notranslate"><span class="pre">x</span></code> by the variable <code class="docutils literal notranslate"><span class="pre">v</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-x-free-algebra-map"></span><dl class="simple" id="index-11">
+<span class="target" id="l5846726565416c67656272612e6d6170"></span><dl class="simple" id="index-11">
 <dt><span class="spadfun">map</span>: (R -&gt; R, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">map(fn,</span> <span class="pre">x)</span></code> returns <code class="docutils literal notranslate"><span class="pre">Sum(fn(r_i)</span> <span class="pre">w_i)</span></code> if <code class="docutils literal notranslate"><span class="pre">x</span></code> writes <code class="docutils literal notranslate"><span class="pre">Sum(r_i</span> <span class="pre">w_i)</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-x-free-algebra-mindeg"></span><dl class="simple" id="index-12">
-<dt><span class="spadfun">mindeg</span>: % -&gt; <a class="reference internal" href="FreeMonoid.html#l-free-monoid"><span class="std std-ref">FreeMonoid</span></a> vl</dt><dd><p><code class="docutils literal notranslate"><span class="pre">mindeg(x)</span></code> returns the little word which appears in <code class="docutils literal notranslate"><span class="pre">x</span></code>. Error if <code class="docutils literal notranslate"><span class="pre">x=0</span></code>.</p>
+<span class="target" id="l5846726565416c67656272612e6d696e646567"></span><dl class="simple" id="index-12">
+<dt><span class="spadfun">mindeg</span>: % -&gt; <a class="reference internal" href="FreeMonoid.html#l467265654d6f6e6f6964"><span class="std std-ref">FreeMonoid</span></a> vl</dt><dd><p><code class="docutils literal notranslate"><span class="pre">mindeg(x)</span></code> returns the little word which appears in <code class="docutils literal notranslate"><span class="pre">x</span></code>. Error if <code class="docutils literal notranslate"><span class="pre">x=0</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-x-free-algebra-mindeg-term"></span><dl class="simple" id="index-13">
-<dt><span class="spadfun">mindegTerm</span>: % -&gt; Record(k: <a class="reference internal" href="FreeMonoid.html#l-free-monoid"><span class="std std-ref">FreeMonoid</span></a> vl, c: R)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">mindegTerm(x)</span></code> returns the term whose word is <code class="docutils literal notranslate"><span class="pre">mindeg(x)</span></code>.</p>
+<span class="target" id="l5846726565416c67656272612e6d696e6465675465726d"></span><dl class="simple" id="index-13">
+<dt><span class="spadfun">mindegTerm</span>: % -&gt; Record(k: <a class="reference internal" href="FreeMonoid.html#l467265654d6f6e6f6964"><span class="std std-ref">FreeMonoid</span></a> vl, c: R)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">mindegTerm(x)</span></code> returns the term whose word is <code class="docutils literal notranslate"><span class="pre">mindeg(x)</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-x-free-algebra-mirror"></span><dl class="simple" id="index-14">
+<span class="target" id="l5846726565416c67656272612e6d6972726f72"></span><dl class="simple" id="index-14">
 <dt><span class="spadfun">mirror</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">mirror(x)</span></code> returns <code class="docutils literal notranslate"><span class="pre">Sum(r_i</span> <span class="pre">mirror(w_i))</span></code> if <code class="docutils literal notranslate"><span class="pre">x</span></code> writes <code class="docutils literal notranslate"><span class="pre">Sum(r_i</span> <span class="pre">w_i)</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-x-free-algebra-monom"></span><dl class="simple" id="index-15">
-<dt><span class="spadfun">monom</span>: (<a class="reference internal" href="FreeMonoid.html#l-free-monoid"><span class="std std-ref">FreeMonoid</span></a> vl, R) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">monom(w,</span> <span class="pre">r)</span></code> returns the product of the word <code class="docutils literal notranslate"><span class="pre">w</span></code> by the coefficient <code class="docutils literal notranslate"><span class="pre">r</span></code>.</p>
+<span class="target" id="l5846726565416c67656272612e6d6f6e6f6d"></span><dl class="simple" id="index-15">
+<dt><span class="spadfun">monom</span>: (<a class="reference internal" href="FreeMonoid.html#l467265654d6f6e6f6964"><span class="std std-ref">FreeMonoid</span></a> vl, R) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">monom(w,</span> <span class="pre">r)</span></code> returns the product of the word <code class="docutils literal notranslate"><span class="pre">w</span></code> by the coefficient <code class="docutils literal notranslate"><span class="pre">r</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-x-free-algebra-monomial"></span><dl class="simple" id="index-16">
-<dt><span class="spadfun">monomial?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">monomial?(x)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if <code class="docutils literal notranslate"><span class="pre">x</span></code> is a monomial</p>
-</dd>
-<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-one"><span class="std std-ref">one?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-opposite"><span class="std std-ref">opposite?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+<span class="target" id="l5846726565416c67656272612e6d6f6e6f6d69616c3f"></span><dl class="simple" id="index-16">
+<dt><span class="spadfun">monomial?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">monomial?(x)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if <code class="docutils literal notranslate"><span class="pre">x</span></code> is a monomial</p>
 </dd>
 </dl>
-<span class="target" id="l-x-free-algebra-quasi-regular"></span><dl class="simple" id="index-17">
+<dl class="simple" id="l5846726565416c67656272612e6f6e653f">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e69742e6f6e653f"><span class="std std-ref">one?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l5846726565416c67656272612e6f70706f736974653f">
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f69642e6f70706f736974653f"><span class="std std-ref">opposite?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l5846726565416c67656272612e7175617369526567756c61723f"></span><dl class="simple" id="index-17">
+<dt><span class="spadfun">quasiRegular?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">quasiRegular?(x)</span></code> return <code class="docutils literal notranslate"><span class="pre">true</span></code> if <code class="docutils literal notranslate"><span class="pre">constant(x)</span></code> is zero.</p>
+</dd>
+</dl>
+<span class="target" id="l5846726565416c67656272612e7175617369526567756c6172"></span><dl class="simple" id="index-18">
 <dt><span class="spadfun">quasiRegular</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">quasiRegular(x)</span></code> return <code class="docutils literal notranslate"><span class="pre">x</span></code> minus its constant term.</p>
 </dd>
 </dl>
-<span class="target" id="id3"></span><dl class="simple" id="index-18">
-<dt><span class="spadfun">quasiRegular?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">quasiRegular?(x)</span></code> return <code class="docutils literal notranslate"><span class="pre">true</span></code> if <code class="docutils literal notranslate"><span class="pre">constant(x)</span></code> is zero.</p>
-</dd>
-<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-recip"><span class="std std-ref">recip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
-</dd>
-<dt><a class="reference internal" href="RetractableTo.html#l-retractable-to-retract"><span class="std std-ref">retract</span></a>: % -&gt; <a class="reference internal" href="FreeMonoid.html#l-free-monoid"><span class="std std-ref">FreeMonoid</span></a> vl</dt><dd><p>from <a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> <a class="reference internal" href="FreeMonoid.html#l-free-monoid"><span class="std std-ref">FreeMonoid</span></a> vl</p>
-</dd>
-<dt><a class="reference internal" href="RetractableTo.html#l-retractable-to-retract-if-can"><span class="std std-ref">retractIfCan</span></a>: % -&gt; Union(<a class="reference internal" href="FreeMonoid.html#l-free-monoid"><span class="std std-ref">FreeMonoid</span></a> vl, failed)</dt><dd><p>from <a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> <a class="reference internal" href="FreeMonoid.html#l-free-monoid"><span class="std std-ref">FreeMonoid</span></a> vl</p>
-</dd>
-<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-right-power"><span class="std std-ref">rightPower</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
-</dd>
-<dt><a class="reference internal" href="Magma.html#l-magma-right-power"><span class="std std-ref">rightPower</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
-</dd>
-<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-right-recip"><span class="std std-ref">rightRecip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
+<dl class="simple" id="l5846726565416c67656272612e7265636970">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e69742e7265636970"><span class="std std-ref">recip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-x-free-algebra-rquo"></span><dl class="simple" id="index-19">
+<dl class="simple" id="l5846726565416c67656272612e72657472616374">
+<dt><a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f2e72657472616374"><span class="std std-ref">retract</span></a>: % -&gt; <a class="reference internal" href="FreeMonoid.html#l467265654d6f6e6f6964"><span class="std std-ref">FreeMonoid</span></a> vl</dt><dd><p>from <a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f"><span class="std std-ref">RetractableTo</span></a> <a class="reference internal" href="FreeMonoid.html#l467265654d6f6e6f6964"><span class="std std-ref">FreeMonoid</span></a> vl</p>
+</dd>
+</dl>
+<dl class="simple" id="l5846726565416c67656272612e72657472616374496643616e">
+<dt><a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f2e72657472616374496643616e"><span class="std std-ref">retractIfCan</span></a>: % -&gt; Union(<a class="reference internal" href="FreeMonoid.html#l467265654d6f6e6f6964"><span class="std std-ref">FreeMonoid</span></a> vl, failed)</dt><dd><p>from <a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f"><span class="std std-ref">RetractableTo</span></a> <a class="reference internal" href="FreeMonoid.html#l467265654d6f6e6f6964"><span class="std std-ref">FreeMonoid</span></a> vl</p>
+</dd>
+</dl>
+<dl class="simple" id="l5846726565416c67656272612e7269676874506f776572">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e69742e7269676874506f776572"><span class="std std-ref">rightPower</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Magma.html#l4d61676d612e7269676874506f776572"><span class="std std-ref">rightPower</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l4d61676d61"><span class="std std-ref">Magma</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l5846726565416c67656272612e72696768745265636970">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e69742e72696768745265636970"><span class="std std-ref">rightRecip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l5846726565416c67656272612e7271756f"></span><dl class="simple" id="index-19">
 <dt><span class="spadfun">rquo</span>: (%, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">rquo(x,</span> <span class="pre">y)</span></code> returns the right simplification of <code class="docutils literal notranslate"><span class="pre">x</span></code> by <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-20">
-<dt><span class="spadfun">rquo</span>: (%, <a class="reference internal" href="FreeMonoid.html#l-free-monoid"><span class="std std-ref">FreeMonoid</span></a> vl) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">rquo(x,</span> <span class="pre">w)</span></code> returns the right simplification of <code class="docutils literal notranslate"><span class="pre">x</span></code> by <code class="docutils literal notranslate"><span class="pre">w</span></code>.</p>
+<dt><span class="spadfun">rquo</span>: (%, <a class="reference internal" href="FreeMonoid.html#l467265654d6f6e6f6964"><span class="std std-ref">FreeMonoid</span></a> vl) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">rquo(x,</span> <span class="pre">w)</span></code> returns the right simplification of <code class="docutils literal notranslate"><span class="pre">x</span></code> by <code class="docutils literal notranslate"><span class="pre">w</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-21">
 <dt><span class="spadfun">rquo</span>: (%, vl) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">rquo(x,</span> <span class="pre">v)</span></code> returns the right simplification of <code class="docutils literal notranslate"><span class="pre">x</span></code> by the variable <code class="docutils literal notranslate"><span class="pre">v</span></code>.</p>
 </dd>
-<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-sample"><span class="std std-ref">sample</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dl>
+<dl class="simple" id="l5846726565416c67656272612e73616d706c65">
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f69642e73616d706c65"><span class="std std-ref">sample</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-x-free-algebra-sh"></span><dl class="simple" id="index-22">
-<dt><span class="spadfun">sh</span>: (%, %) -&gt; % if R has <a class="reference internal" href="CommutativeRing.html#l-commutative-ring"><span class="std std-ref">CommutativeRing</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">sh(x,</span> <span class="pre">y)</span></code> returns the shuffle-product of <code class="docutils literal notranslate"><span class="pre">x</span></code> by <code class="docutils literal notranslate"><span class="pre">y</span></code>. This multiplication is associative and commutative.</p>
+<span class="target" id="l5846726565416c67656272612e7368"></span><dl class="simple" id="index-22">
+<dt><span class="spadfun">sh</span>: (%, %) -&gt; % if R has <a class="reference internal" href="CommutativeRing.html#l436f6d6d7574617469766552696e67"><span class="std std-ref">CommutativeRing</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">sh(x,</span> <span class="pre">y)</span></code> returns the shuffle-product of <code class="docutils literal notranslate"><span class="pre">x</span></code> by <code class="docutils literal notranslate"><span class="pre">y</span></code>. This multiplication is associative and commutative.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-23">
-<dt><span class="spadfun">sh</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; % if R has <a class="reference internal" href="CommutativeRing.html#l-commutative-ring"><span class="std std-ref">CommutativeRing</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">sh(x,</span> <span class="pre">n)</span></code> returns the shuffle power of <code class="docutils literal notranslate"><span class="pre">x</span></code> to the <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
-</dd>
-<dt><a class="reference internal" href="CancellationAbelianMonoid.html#l-cancellation-abelian-monoid-subtract-if-can"><span class="std std-ref">subtractIfCan</span></a>: (%, %) -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="CancellationAbelianMonoid.html#l-cancellation-abelian-monoid"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
+<dt><span class="spadfun">sh</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; % if R has <a class="reference internal" href="CommutativeRing.html#l436f6d6d7574617469766552696e67"><span class="std std-ref">CommutativeRing</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">sh(x,</span> <span class="pre">n)</span></code> returns the shuffle power of <code class="docutils literal notranslate"><span class="pre">x</span></code> to the <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-x-free-algebra-var-list"></span><dl class="simple" id="index-24">
-<dt><span class="spadfun">varList</span>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> vl</dt><dd><p><code class="docutils literal notranslate"><span class="pre">varList(x)</span></code> returns the list of variables which appear in <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
-</dd>
-<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-zero"><span class="std std-ref">zero?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+<dl class="simple" id="l5846726565416c67656272612e7375627472616374496643616e">
+<dt><a class="reference internal" href="CancellationAbelianMonoid.html#l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f69642e7375627472616374496643616e"><span class="std std-ref">subtractIfCan</span></a>: (%, %) -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="CancellationAbelianMonoid.html#l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
 </dd>
 </dl>
-<p><a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
-<p><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
-<p><a class="reference internal" href="AbelianSemiGroup.html#l-abelian-semi-group"><span class="std std-ref">AbelianSemiGroup</span></a></p>
-<p><a class="reference internal" href="Algebra.html#l-algebra"><span class="std std-ref">Algebra</span></a> R if R has <a class="reference internal" href="CommutativeRing.html#l-commutative-ring"><span class="std std-ref">CommutativeRing</span></a></p>
-<p><a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-<p><a class="reference internal" href="BiModule.html#l-bi-module"><span class="std std-ref">BiModule</span></a>(%, %)</p>
-<p><a class="reference internal" href="BiModule.html#l-bi-module"><span class="std std-ref">BiModule</span></a>(R, R)</p>
-<p><a class="reference internal" href="CancellationAbelianMonoid.html#l-cancellation-abelian-monoid"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
-<p><a class="reference internal" href="CoercibleFrom.html#l-coercible-from"><span class="std std-ref">CoercibleFrom</span></a> <a class="reference internal" href="FreeMonoid.html#l-free-monoid"><span class="std std-ref">FreeMonoid</span></a> vl</p>
-<p><a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
-<p><a class="reference internal" href="LeftModule.html#l-left-module"><span class="std std-ref">LeftModule</span></a> %</p>
-<p><a class="reference internal" href="LeftModule.html#l-left-module"><span class="std std-ref">LeftModule</span></a> R</p>
-<p><a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
-<p><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
-<p><a class="reference internal" href="Module.html#l-module"><span class="std std-ref">Module</span></a> R if R has <a class="reference internal" href="CommutativeRing.html#l-commutative-ring"><span class="std std-ref">CommutativeRing</span></a></p>
-<p><a class="reference internal" href="Monoid.html#l-monoid"><span class="std std-ref">Monoid</span></a></p>
-<p><a class="reference internal" href="NonAssociativeRing.html#l-non-associative-ring"><span class="std std-ref">NonAssociativeRing</span></a></p>
-<p><a class="reference internal" href="NonAssociativeRng.html#l-non-associative-rng"><span class="std std-ref">NonAssociativeRng</span></a></p>
-<p><a class="reference internal" href="NonAssociativeSemiRing.html#l-non-associative-semi-ring"><span class="std std-ref">NonAssociativeSemiRing</span></a></p>
-<p><a class="reference internal" href="NonAssociativeSemiRng.html#l-non-associative-semi-rng"><span class="std std-ref">NonAssociativeSemiRng</span></a></p>
-<p><a class="reference internal" href="noZeroDivisors.html#l-no-zero-divisors"><span class="std std-ref">noZeroDivisors</span></a> if R has <a class="reference internal" href="noZeroDivisors.html#l-no-zero-divisors"><span class="std std-ref">noZeroDivisors</span></a></p>
-<p><a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> <a class="reference internal" href="FreeMonoid.html#l-free-monoid"><span class="std std-ref">FreeMonoid</span></a> vl</p>
-<p><a class="reference internal" href="RightModule.html#l-right-module"><span class="std std-ref">RightModule</span></a> %</p>
-<p><a class="reference internal" href="RightModule.html#l-right-module"><span class="std std-ref">RightModule</span></a> R</p>
-<p><a class="reference internal" href="Ring.html#l-ring"><span class="std std-ref">Ring</span></a></p>
-<p><a class="reference internal" href="Rng.html#l-rng"><span class="std std-ref">Rng</span></a></p>
-<p><a class="reference internal" href="SemiGroup.html#l-semi-group"><span class="std std-ref">SemiGroup</span></a></p>
-<p><a class="reference internal" href="SemiRing.html#l-semi-ring"><span class="std std-ref">SemiRing</span></a></p>
-<p><a class="reference internal" href="SemiRng.html#l-semi-rng"><span class="std std-ref">SemiRng</span></a></p>
-<p><a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-<p><a class="reference internal" href="unitsKnown.html#l-units-known"><span class="std std-ref">unitsKnown</span></a></p>
-<p><a class="reference internal" href="XAlgebra.html#l-x-algebra"><span class="std std-ref">XAlgebra</span></a> R</p>
+<span class="target" id="l5846726565416c67656272612e7661724c697374"></span><dl class="simple" id="index-24">
+<dt><span class="spadfun">varList</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> vl</dt><dd><p><code class="docutils literal notranslate"><span class="pre">varList(x)</span></code> returns the list of variables which appear in <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="l5846726565416c67656272612e7a65726f3f">
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f69642e7a65726f3f"><span class="std std-ref">zero?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+</dl>
+<p><a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p>
+<p><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+<p><a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f7570"><span class="std std-ref">AbelianSemiGroup</span></a></p>
+<p><a class="reference internal" href="Algebra.html#l416c6765627261"><span class="std std-ref">Algebra</span></a> R if R has <a class="reference internal" href="CommutativeRing.html#l436f6d6d7574617469766552696e67"><span class="std std-ref">CommutativeRing</span></a></p>
+<p><a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+<p><a class="reference internal" href="BiModule.html#l42694d6f64756c65"><span class="std std-ref">BiModule</span></a>(%, %)</p>
+<p><a class="reference internal" href="BiModule.html#l42694d6f64756c65"><span class="std std-ref">BiModule</span></a>(R, R)</p>
+<p><a class="reference internal" href="CancellationAbelianMonoid.html#l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
+<p><a class="reference internal" href="CoercibleFrom.html#l436f65726369626c6546726f6d"><span class="std std-ref">CoercibleFrom</span></a> <a class="reference internal" href="FreeMonoid.html#l467265654d6f6e6f6964"><span class="std std-ref">FreeMonoid</span></a> vl</p>
+<p><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+<p><a class="reference internal" href="LeftModule.html#l4c6566744d6f64756c65"><span class="std std-ref">LeftModule</span></a> %</p>
+<p><a class="reference internal" href="LeftModule.html#l4c6566744d6f64756c65"><span class="std std-ref">LeftModule</span></a> R</p>
+<p><a class="reference internal" href="Magma.html#l4d61676d61"><span class="std std-ref">Magma</span></a></p>
+<p><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+<p><a class="reference internal" href="Module.html#l4d6f64756c65"><span class="std std-ref">Module</span></a> R if R has <a class="reference internal" href="CommutativeRing.html#l436f6d6d7574617469766552696e67"><span class="std std-ref">CommutativeRing</span></a></p>
+<p><a class="reference internal" href="Monoid.html#l4d6f6e6f6964"><span class="std std-ref">Monoid</span></a></p>
+<p><a class="reference internal" href="NonAssociativeRing.html#l4e6f6e4173736f6369617469766552696e67"><span class="std std-ref">NonAssociativeRing</span></a></p>
+<p><a class="reference internal" href="NonAssociativeRng.html#l4e6f6e4173736f63696174697665526e67"><span class="std std-ref">NonAssociativeRng</span></a></p>
+<p><a class="reference internal" href="NonAssociativeSemiRing.html#l4e6f6e4173736f6369617469766553656d6952696e67"><span class="std std-ref">NonAssociativeSemiRing</span></a></p>
+<p><a class="reference internal" href="NonAssociativeSemiRng.html#l4e6f6e4173736f6369617469766553656d69526e67"><span class="std std-ref">NonAssociativeSemiRng</span></a></p>
+<p><a class="reference internal" href="noZeroDivisors.html#l6e6f5a65726f44697669736f7273"><span class="std std-ref">noZeroDivisors</span></a> if R has <a class="reference internal" href="noZeroDivisors.html#l6e6f5a65726f44697669736f7273"><span class="std std-ref">noZeroDivisors</span></a></p>
+<p><a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f"><span class="std std-ref">RetractableTo</span></a> <a class="reference internal" href="FreeMonoid.html#l467265654d6f6e6f6964"><span class="std std-ref">FreeMonoid</span></a> vl</p>
+<p><a class="reference internal" href="RightModule.html#l52696768744d6f64756c65"><span class="std std-ref">RightModule</span></a> %</p>
+<p><a class="reference internal" href="RightModule.html#l52696768744d6f64756c65"><span class="std std-ref">RightModule</span></a> R</p>
+<p><a class="reference internal" href="Ring.html#l52696e67"><span class="std std-ref">Ring</span></a></p>
+<p><a class="reference internal" href="Rng.html#l526e67"><span class="std std-ref">Rng</span></a></p>
+<p><a class="reference internal" href="SemiGroup.html#l53656d6947726f7570"><span class="std std-ref">SemiGroup</span></a></p>
+<p><a class="reference internal" href="SemiRing.html#l53656d6952696e67"><span class="std std-ref">SemiRing</span></a></p>
+<p><a class="reference internal" href="SemiRng.html#l53656d69526e67"><span class="std std-ref">SemiRng</span></a></p>
+<p><a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+<p><a class="reference internal" href="unitsKnown.html#l756e6974734b6e6f776e"><span class="std std-ref">unitsKnown</span></a></p>
+<p><a class="reference internal" href="XAlgebra.html#l58416c6765627261"><span class="std std-ref">XAlgebra</span></a> R</p>
 </div>
 
 
@@ -310,7 +366,7 @@
         <li class="right" >
           <a href="XAlgebra.html" title="XAlgebra R"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Categories.html" >Categories</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">XFreeAlgebra(vl, R)</a></li> 

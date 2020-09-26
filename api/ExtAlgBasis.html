@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ExtAlgBasis &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>ExtAlgBasis &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="Expression.html" title="Expression R"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Domains.html" accesskey="U">Domains</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">ExtAlgBasis</a></li> 
@@ -46,59 +46,83 @@
           <div class="body" role="main">
             
   <div class="section" id="extalgbasis">
-<span id="l-ext-alg-basis"></span><span id="index-0"></span><h1>ExtAlgBasis<a class="headerlink" href="#extalgbasis" title="Permalink to this headline">¶</a></h1>
+<span id="l457874416c674261736973"></span><span id="index-0"></span><h1>ExtAlgBasis<a class="headerlink" href="#extalgbasis" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/derham.spad#L14">derham.spad line 14</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/derham.spad#L14">[edit on github]</a></p>
 <p>A domain used in the construction of the exterior algebra on a set <code class="docutils literal notranslate"><span class="pre">X</span></code> over a ring <code class="docutils literal notranslate"><span class="pre">R</span></code>. This domain represents the set of all ordered subsets of the set <code class="docutils literal notranslate"><span class="pre">X</span></code>, assumed to be in correspondance with {1, 2, 3, …}. The ordered subsets are themselves ordered lexicographically and are in bijective correspondance with an ordered basis of the exterior algebra. In this domain we are dealing strictly with the exponents of basis elements which can only be 0 or 1.   The multiplicative identity element of the exterior algebra corresponds to the empty subset of <code class="docutils literal notranslate"><span class="pre">X</span></code>. A coerce from List Integer to an ordered basis element is provided to allow the convenient input of expressions. Another exported function forgets the ordered structure and simply returns the list corresponding to an ordered subset.</p>
-<dl class="simple">
-<dt><a class="reference internal" href="PartialOrder.html#id1"><span class="std std-ref">&lt;</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l-partial-order"><span class="std std-ref">PartialOrder</span></a></p>
-</dd>
-<dt><a class="reference internal" href="PartialOrder.html#id2"><span class="std std-ref">&lt;=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l-partial-order"><span class="std std-ref">PartialOrder</span></a></p>
-</dd>
-<dt><a class="reference internal" href="BasicType.html#id1"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-</dd>
-<dt><a class="reference internal" href="PartialOrder.html#id3"><span class="std std-ref">&gt;</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l-partial-order"><span class="std std-ref">PartialOrder</span></a></p>
-</dd>
-<dt><a class="reference internal" href="PartialOrder.html#id4"><span class="std std-ref">&gt;=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l-partial-order"><span class="std std-ref">PartialOrder</span></a></p>
-</dd>
-<dt><a class="reference internal" href="BasicType.html#id2"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-</dd>
-<dt><a class="reference internal" href="CoercibleTo.html#l-coercible-to-coerce"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+<dl class="simple" id="l457874416c6742617369732e3c3d">
+<dt><a class="reference internal" href="PartialOrder.html#l5061727469616c4f726465722e3c3d"><span class="std std-ref">&lt;=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l5061727469616c4f72646572"><span class="std std-ref">PartialOrder</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-ext-alg-basis-coerce"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(l)</span></code> converts a list of 0<code class="docutils literal notranslate"><span class="pre">'s</span></code> and 1<code class="docutils literal notranslate"><span class="pre">'s</span></code> into a basis element, where 1 (respectively 0) designates that the variable of the corresponding index of <code class="docutils literal notranslate"><span class="pre">l</span></code> is (respectively, is not) present. Error: if an element of <code class="docutils literal notranslate"><span class="pre">l</span></code> is not 0 or 1.</p>
+<dl class="simple" id="l457874416c6742617369732e3c">
+<dt><a class="reference internal" href="PartialOrder.html#l5061727469616c4f726465722e3c"><span class="std std-ref">&lt;</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l5061727469616c4f72646572"><span class="std std-ref">PartialOrder</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-ext-alg-basis-degree"></span><dl class="simple" id="index-2">
-<dt><span class="spadfun">degree</span>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">degree(x)</span></code> gives the numbers of 1<code class="docutils literal notranslate"><span class="pre">'s</span></code> in <code class="docutils literal notranslate"><span class="pre">x</span></code>, i.e. the number of non-zero exponents in the basis element that <code class="docutils literal notranslate"><span class="pre">x</span></code> represents.</p>
+<dl class="simple" id="l457874416c6742617369732e3d">
+<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-ext-alg-basis-exponents"></span><dl class="simple" id="index-3">
-<dt><span class="spadfun">exponents</span>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">exponents(x)</span></code> converts a domain element into a list of zeros and ones corresponding to the exponents in the basis element that <code class="docutils literal notranslate"><span class="pre">x</span></code> represents.</p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l-single-integer"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash-update"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-latex"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="OrderedSet.html#l-ordered-set-max"><span class="std std-ref">max</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a></p>
-</dd>
-<dt><a class="reference internal" href="OrderedSet.html#l-ordered-set-min"><span class="std std-ref">min</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a></p>
+<dl class="simple" id="l457874416c6742617369732e3e3d">
+<dt><a class="reference internal" href="PartialOrder.html#l5061727469616c4f726465722e3e3d"><span class="std std-ref">&gt;=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l5061727469616c4f72646572"><span class="std std-ref">PartialOrder</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-ext-alg-basis-nul"></span><dl class="simple" id="index-4">
-<dt><span class="spadfun">Nul</span>: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Nul()</span></code> gives the basis element 1 for the algebra generated by <code class="docutils literal notranslate"><span class="pre">n</span></code> generators.</p>
-</dd>
-<dt><a class="reference internal" href="Comparable.html#l-comparable-smaller"><span class="std std-ref">smaller?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a></p>
+<dl class="simple" id="l457874416c6742617369732e3e">
+<dt><a class="reference internal" href="PartialOrder.html#l5061727469616c4f726465722e3e"><span class="std std-ref">&gt;</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l5061727469616c4f72646572"><span class="std std-ref">PartialOrder</span></a></p>
 </dd>
 </dl>
-<p><a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-<p><a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
-<p><a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a></p>
-<p><a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a></p>
-<p><a class="reference internal" href="PartialOrder.html#l-partial-order"><span class="std std-ref">PartialOrder</span></a></p>
-<p><a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+<dl class="simple" id="l457874416c6742617369732e7e3d">
+<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e7e3d"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l457874416c6742617369732e636f65726365">
+<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f2e636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="index-1">
+<dt><span class="spadfun">coerce</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(l)</span></code> converts a list of 0<code class="docutils literal notranslate"><span class="pre">'s</span></code> and 1<code class="docutils literal notranslate"><span class="pre">'s</span></code> into a basis element, where 1 (respectively 0) designates that the variable of the corresponding index of <code class="docutils literal notranslate"><span class="pre">l</span></code> is (respectively, is not) present. Error: if an element of <code class="docutils literal notranslate"><span class="pre">l</span></code> is not 0 or 1.</p>
+</dd>
+</dl>
+<span class="target" id="l457874416c6742617369732e646567726565"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">degree</span>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">degree(x)</span></code> gives the numbers of 1<code class="docutils literal notranslate"><span class="pre">'s</span></code> in <code class="docutils literal notranslate"><span class="pre">x</span></code>, i.e. the number of non-zero exponents in the basis element that <code class="docutils literal notranslate"><span class="pre">x</span></code> represents.</p>
+</dd>
+</dl>
+<span class="target" id="l457874416c6742617369732e6578706f6e656e7473"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">exponents</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">exponents(x)</span></code> converts a domain element into a list of zeros and ones corresponding to the exponents in the basis element that <code class="docutils literal notranslate"><span class="pre">x</span></code> represents.</p>
+</dd>
+</dl>
+<dl class="simple" id="l457874416c6742617369732e68617368">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e68617368"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l53696e676c65496e7465676572"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l457874416c6742617369732e6861736855706461746521">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6861736855706461746521"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l457874416c6742617369732e6c61746578">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6c61746578"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l457874416c6742617369732e6d6178">
+<dt><a class="reference internal" href="OrderedSet.html#l4f7264657265645365742e6d6178"><span class="std std-ref">max</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="OrderedSet.html#l4f726465726564536574"><span class="std std-ref">OrderedSet</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l457874416c6742617369732e6d696e">
+<dt><a class="reference internal" href="OrderedSet.html#l4f7264657265645365742e6d696e"><span class="std std-ref">min</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="OrderedSet.html#l4f726465726564536574"><span class="std std-ref">OrderedSet</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l457874416c6742617369732e4e756c"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">Nul</span>: <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Nul()</span></code> gives the basis element 1 for the algebra generated by <code class="docutils literal notranslate"><span class="pre">n</span></code> generators.</p>
+</dd>
+</dl>
+<dl class="simple" id="l457874416c6742617369732e736d616c6c65723f">
+<dt><a class="reference internal" href="Comparable.html#l436f6d70617261626c652e736d616c6c65723f"><span class="std std-ref">smaller?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a></p>
+</dd>
+</dl>
+<p><a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+<p><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+<p><a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a></p>
+<p><a class="reference internal" href="OrderedSet.html#l4f726465726564536574"><span class="std std-ref">OrderedSet</span></a></p>
+<p><a class="reference internal" href="PartialOrder.html#l5061727469616c4f72646572"><span class="std std-ref">PartialOrder</span></a></p>
+<p><a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </div>
 
 
@@ -146,7 +170,7 @@
         <li class="right" >
           <a href="Expression.html" title="Expression R"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Domains.html" >Domains</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">ExtAlgBasis</a></li> 

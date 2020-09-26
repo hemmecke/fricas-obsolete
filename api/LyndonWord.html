@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LyndonWord VarSet &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>LyndonWord VarSet &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="Loop.html" title="Loop"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Domains.html" accesskey="U">Domains</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">LyndonWord VarSet</a></li> 
@@ -46,110 +46,136 @@
           <div class="body" role="main">
             
   <div class="section" id="lyndonword-varset">
-<span id="l-lyndon-word"></span><span id="index-0"></span><h1>LyndonWord VarSet<a class="headerlink" href="#lyndonword-varset" title="Permalink to this headline">¶</a></h1>
+<span id="l4c796e646f6e576f7264"></span><span id="index-0"></span><h1>LyndonWord VarSet<a class="headerlink" href="#lyndonword-varset" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/xlpoly.spad#L141">xlpoly.spad line 141</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/xlpoly.spad#L141">[edit on github]</a></p>
 <ul class="simple">
-<li><p>VarSet: <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a></p></li>
+<li><p>VarSet: <a class="reference internal" href="OrderedSet.html#l4f726465726564536574"><span class="std std-ref">OrderedSet</span></a></p></li>
 </ul>
-<p>Lyndon words over arbitrary (ordered) symbols: see Free Lie Algebras by <code class="docutils literal notranslate"><span class="pre">C</span></code>. Reutenauer (Oxford science publications). A Lyndon word is a word which is smaller than any of its right factors <code class="docutils literal notranslate"><span class="pre">w</span></code>.<code class="docutils literal notranslate"><span class="pre">r</span></code>.<code class="docutils literal notranslate"><span class="pre">t</span></code>. the pure lexicographical ordering. If <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code> are two Lyndon words such that <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&lt;</span> <span class="pre">b</span></code> holds <code class="docutils literal notranslate"><span class="pre">w</span></code>.<code class="docutils literal notranslate"><span class="pre">r</span></code>.<code class="docutils literal notranslate"><span class="pre">t</span></code> lexicographical ordering then <code class="docutils literal notranslate"><span class="pre">a*b</span></code> is a Lyndon word. Parenthesized Lyndon words can be generated from symbols by using the following rule: <code class="docutils literal notranslate"><span class="pre">[[a,</span> <span class="pre">b],</span> <span class="pre">c]</span></code> is a Lyndon word iff <code class="docutils literal notranslate"><span class="pre">a*b</span> <span class="pre">&lt;</span> <span class="pre">c</span> <span class="pre">&lt;=</span> <span class="pre">b</span></code> holds. Lyndon words are internally represented by binary trees using the <a class="reference internal" href="FreeMagma.html#l-free-magma"><span class="std std-ref">FreeMagma</span></a> domain constructor. Two ordering are provided: lexicographic and length-lexicographic.   Author : Michel Petitot (<a class="reference external" href="mailto:petitot&#37;&#52;&#48;lifl">petitot<span>&#64;</span>lifl</a>.<code class="docutils literal notranslate"><span class="pre">fr</span></code>).</p>
-<dl class="simple">
-<dt><a class="reference internal" href="PartialOrder.html#id1"><span class="std std-ref">&lt;</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l-partial-order"><span class="std std-ref">PartialOrder</span></a></p>
-</dd>
-<dt><a class="reference internal" href="PartialOrder.html#id2"><span class="std std-ref">&lt;=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l-partial-order"><span class="std std-ref">PartialOrder</span></a></p>
-</dd>
-<dt><a class="reference internal" href="BasicType.html#id1"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-</dd>
-<dt><a class="reference internal" href="PartialOrder.html#id3"><span class="std std-ref">&gt;</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l-partial-order"><span class="std std-ref">PartialOrder</span></a></p>
-</dd>
-<dt><a class="reference internal" href="PartialOrder.html#id4"><span class="std std-ref">&gt;=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l-partial-order"><span class="std std-ref">PartialOrder</span></a></p>
-</dd>
-<dt><a class="reference internal" href="BasicType.html#id2"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+<p>Lyndon words over arbitrary (ordered) symbols: see Free Lie Algebras by <code class="docutils literal notranslate"><span class="pre">C</span></code>. Reutenauer (Oxford science publications). A Lyndon word is a word which is smaller than any of its right factors <code class="docutils literal notranslate"><span class="pre">w</span></code>.<code class="docutils literal notranslate"><span class="pre">r</span></code>.<code class="docutils literal notranslate"><span class="pre">t</span></code>. the pure lexicographical ordering. If <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code> are two Lyndon words such that <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&lt;</span> <span class="pre">b</span></code> holds <code class="docutils literal notranslate"><span class="pre">w</span></code>.<code class="docutils literal notranslate"><span class="pre">r</span></code>.<code class="docutils literal notranslate"><span class="pre">t</span></code> lexicographical ordering then <code class="docutils literal notranslate"><span class="pre">a*b</span></code> is a Lyndon word. Parenthesized Lyndon words can be generated from symbols by using the following rule: <code class="docutils literal notranslate"><span class="pre">[[a,</span> <span class="pre">b],</span> <span class="pre">c]</span></code> is a Lyndon word iff <code class="docutils literal notranslate"><span class="pre">a*b</span> <span class="pre">&lt;</span> <span class="pre">c</span> <span class="pre">&lt;=</span> <span class="pre">b</span></code> holds. Lyndon words are internally represented by binary trees using the <a class="reference internal" href="FreeMagma.html#l467265654d61676d61"><span class="std std-ref">FreeMagma</span></a> domain constructor. Two ordering are provided: lexicographic and length-lexicographic.   Author : Michel Petitot (<a class="reference external" href="mailto:petitot&#37;&#52;&#48;lifl">petitot<span>&#64;</span>lifl</a>.<code class="docutils literal notranslate"><span class="pre">fr</span></code>).</p>
+<dl class="simple" id="l4c796e646f6e576f72642e3c3d">
+<dt><a class="reference internal" href="PartialOrder.html#l5061727469616c4f726465722e3c3d"><span class="std std-ref">&lt;=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l5061727469616c4f72646572"><span class="std std-ref">PartialOrder</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-lyndon-word-coerce"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">coerce</span>: % -&gt; <a class="reference internal" href="FreeMagma.html#l-free-magma"><span class="std std-ref">FreeMagma</span></a> VarSet</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(x)</span></code> returns the element of <a class="reference internal" href="FreeMagma.html#l-free-magma"><span class="std std-ref">FreeMagma</span></a>(VarSet) corresponding to <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+<dl class="simple" id="l4c796e646f6e576f72642e3c">
+<dt><a class="reference internal" href="PartialOrder.html#l5061727469616c4f726465722e3c"><span class="std std-ref">&lt;</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l5061727469616c4f72646572"><span class="std std-ref">PartialOrder</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4c796e646f6e576f72642e3d">
+<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4c796e646f6e576f72642e3e3d">
+<dt><a class="reference internal" href="PartialOrder.html#l5061727469616c4f726465722e3e3d"><span class="std std-ref">&gt;=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l5061727469616c4f72646572"><span class="std std-ref">PartialOrder</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4c796e646f6e576f72642e3e">
+<dt><a class="reference internal" href="PartialOrder.html#l5061727469616c4f726465722e3e"><span class="std std-ref">&gt;</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l5061727469616c4f72646572"><span class="std std-ref">PartialOrder</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4c796e646f6e576f72642e7e3d">
+<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e7e3d"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l4c796e646f6e576f72642e636f65726365"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">coerce</span>: % -&gt; <a class="reference internal" href="FreeMagma.html#l467265654d61676d61"><span class="std std-ref">FreeMagma</span></a> VarSet</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(x)</span></code> returns the element of <a class="reference internal" href="FreeMagma.html#l467265654d61676d61"><span class="std std-ref">FreeMagma</span></a>(VarSet) corresponding to <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-2">
-<dt><span class="spadfun">coerce</span>: % -&gt; <a class="reference internal" href="FreeMonoid.html#l-free-monoid"><span class="std std-ref">FreeMonoid</span></a> VarSet</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(x)</span></code> returns the element of <a class="reference internal" href="FreeMonoid.html#l-free-monoid"><span class="std std-ref">FreeMonoid</span></a>(VarSet) corresponding to <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+<dt><span class="spadfun">coerce</span>: % -&gt; <a class="reference internal" href="FreeMonoid.html#l467265654d6f6e6f6964"><span class="std std-ref">FreeMonoid</span></a> VarSet</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(x)</span></code> returns the element of <a class="reference internal" href="FreeMonoid.html#l467265654d6f6e6f6964"><span class="std std-ref">FreeMonoid</span></a>(VarSet) corresponding to <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
 </dd>
-<dt><a class="reference internal" href="CoercibleTo.html#l-coercible-to-coerce"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f2e636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
 </dd>
-<dt><a class="reference internal" href="CoercibleFrom.html#l-coercible-from-coerce"><span class="std std-ref">coerce</span></a>: VarSet -&gt; %</dt><dd><p>from <a class="reference internal" href="CoercibleFrom.html#l-coercible-from"><span class="std std-ref">CoercibleFrom</span></a> VarSet</p>
-</dd>
-</dl>
-<span class="target" id="l-lyndon-word-factor"></span><dl class="simple" id="index-3">
-<dt><span class="spadfun">factor</span>: <a class="reference internal" href="FreeMonoid.html#l-free-monoid"><span class="std std-ref">FreeMonoid</span></a> VarSet -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">factor(x)</span></code> returns the decreasing factorization into Lyndon words.</p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l-single-integer"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash-update"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-latex"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+<dt><a class="reference internal" href="CoercibleFrom.html#l436f65726369626c6546726f6d2e636f65726365"><span class="std std-ref">coerce</span></a>: VarSet -&gt; %</dt><dd><p>from <a class="reference internal" href="CoercibleFrom.html#l436f65726369626c6546726f6d"><span class="std std-ref">CoercibleFrom</span></a> VarSet</p>
 </dd>
 </dl>
-<span class="target" id="l-lyndon-word-left"></span><dl class="simple" id="index-4">
-<dt><span class="spadfun">left</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">left(x)</span></code> returns left subtree of <code class="docutils literal notranslate"><span class="pre">x</span></code> or error if <span class="xref std std-ref">retractable? &lt;l–lyndon-word_retractable?&gt;`(``x`</span>) is <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+<span class="target" id="l4c796e646f6e576f72642e666163746f72"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">factor</span>: <a class="reference internal" href="FreeMonoid.html#l467265654d6f6e6f6964"><span class="std std-ref">FreeMonoid</span></a> VarSet -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">factor(x)</span></code> returns the decreasing factorization into Lyndon words.</p>
 </dd>
 </dl>
-<span class="target" id="l-lyndon-word-length"></span><dl class="simple" id="index-5">
-<dt><span class="spadfun">length</span>: % -&gt; <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">length(x)</span></code> returns the number of entries in <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+<dl class="simple" id="l4c796e646f6e576f72642e68617368">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e68617368"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l53696e676c65496e7465676572"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-lyndon-word-lexico"></span><dl class="simple" id="index-6">
-<dt><span class="spadfun">lexico</span>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">lexico(x,</span> <span class="pre">y)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> iff <code class="docutils literal notranslate"><span class="pre">x</span></code> is smaller than <code class="docutils literal notranslate"><span class="pre">y</span></code> <code class="docutils literal notranslate"><span class="pre">w</span></code>.<code class="docutils literal notranslate"><span class="pre">r</span></code>.<code class="docutils literal notranslate"><span class="pre">t</span></code>. the lexicographical ordering induced by <code class="docutils literal notranslate"><span class="pre">VarSet</span></code>.</p>
+<dl class="simple" id="l4c796e646f6e576f72642e6861736855706461746521">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6861736855706461746521"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-lyndon-word-lyndon"></span><dl class="simple" id="index-7">
-<dt><span class="spadfun">lyndon</span>: <a class="reference internal" href="FreeMonoid.html#l-free-monoid"><span class="std std-ref">FreeMonoid</span></a> VarSet -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">lyndon(w)</span></code> convert <code class="docutils literal notranslate"><span class="pre">w</span></code> into a Lyndon word, error if <code class="docutils literal notranslate"><span class="pre">w</span></code> is not a Lyndon word.</p>
+<dl class="simple" id="l4c796e646f6e576f72642e6c61746578">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6c61746578"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </dd>
 </dl>
-<span class="target" id="id1"></span><dl class="simple" id="index-8">
-<dt><span class="spadfun">lyndon?</span>: <a class="reference internal" href="FreeMonoid.html#l-free-monoid"><span class="std std-ref">FreeMonoid</span></a> VarSet -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">lyndon?(w)</span></code> test if <code class="docutils literal notranslate"><span class="pre">w</span></code> is a Lyndon word.</p>
+<span class="target" id="l4c796e646f6e576f72642e6c656674"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">left</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">left(x)</span></code> returns left subtree of <code class="docutils literal notranslate"><span class="pre">x</span></code> or error if <a class="reference internal" href="#l4c796e646f6e576f72642e7265747261637461626c653f"><span class="std std-ref">retractable?</span></a>(<code class="docutils literal notranslate"><span class="pre">x</span></code>) is <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-lyndon-word-lyndon-if-can"></span><dl class="simple" id="index-9">
-<dt><span class="spadfun">lyndonIfCan</span>: <a class="reference internal" href="FreeMonoid.html#l-free-monoid"><span class="std std-ref">FreeMonoid</span></a> VarSet -&gt; Union(%, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">lyndonIfCan(w)</span></code> convert <code class="docutils literal notranslate"><span class="pre">w</span></code> into a Lyndon word.</p>
+<span class="target" id="l4c796e646f6e576f72642e6c656e677468"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">length</span>: % -&gt; <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">length(x)</span></code> returns the number of entries in <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-lyndon-word-lyndon-words-list1"></span><dl class="simple" id="index-10">
-<dt><span class="spadfun">LyndonWordsList1</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> VarSet, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; <a class="reference internal" href="OneDimensionalArray.html#l-one-dimensional-array"><span class="std std-ref">OneDimensionalArray</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">LyndonWordsList1(vl,</span> <span class="pre">n)</span></code> returns an array of lists of Lyndon words over the alphabet <code class="docutils literal notranslate"><span class="pre">vl</span></code>, up to order <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
+<span class="target" id="l4c796e646f6e576f72642e6c657869636f"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">lexico</span>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">lexico(x,</span> <span class="pre">y)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> iff <code class="docutils literal notranslate"><span class="pre">x</span></code> is smaller than <code class="docutils literal notranslate"><span class="pre">y</span></code> <code class="docutils literal notranslate"><span class="pre">w</span></code>.<code class="docutils literal notranslate"><span class="pre">r</span></code>.<code class="docutils literal notranslate"><span class="pre">t</span></code>. the lexicographical ordering induced by <code class="docutils literal notranslate"><span class="pre">VarSet</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-lyndon-word-lyndon-words-list"></span><dl class="simple" id="index-11">
-<dt><span class="spadfun">LyndonWordsList</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> VarSet, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">LyndonWordsList(vl,</span> <span class="pre">n)</span></code> returns the list of Lyndon words over the alphabet <code class="docutils literal notranslate"><span class="pre">vl</span></code>, up to order <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
-</dd>
-<dt><a class="reference internal" href="OrderedSet.html#l-ordered-set-max"><span class="std std-ref">max</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a></p>
-</dd>
-<dt><a class="reference internal" href="OrderedSet.html#l-ordered-set-min"><span class="std std-ref">min</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a></p>
-</dd>
-<dt><a class="reference internal" href="RetractableTo.html#l-retractable-to-retract"><span class="std std-ref">retract</span></a>: % -&gt; VarSet</dt><dd><p>from <a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> VarSet</p>
+<span class="target" id="l4c796e646f6e576f72642e6c796e646f6e3f"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">lyndon?</span>: <a class="reference internal" href="FreeMonoid.html#l467265654d6f6e6f6964"><span class="std std-ref">FreeMonoid</span></a> VarSet -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">lyndon?(w)</span></code> test if <code class="docutils literal notranslate"><span class="pre">w</span></code> is a Lyndon word.</p>
 </dd>
 </dl>
-<span class="target" id="l-lyndon-word-retractable"></span><dl class="simple" id="index-12">
-<dt><span class="spadfun">retractable?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">retractable?(x)</span></code> tests if <code class="docutils literal notranslate"><span class="pre">x</span></code> is a tree with only one entry.</p>
-</dd>
-<dt><a class="reference internal" href="RetractableTo.html#l-retractable-to-retract-if-can"><span class="std std-ref">retractIfCan</span></a>: % -&gt; Union(VarSet, failed)</dt><dd><p>from <a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> VarSet</p>
+<span class="target" id="l4c796e646f6e576f72642e6c796e646f6e"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">lyndon</span>: <a class="reference internal" href="FreeMonoid.html#l467265654d6f6e6f6964"><span class="std std-ref">FreeMonoid</span></a> VarSet -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">lyndon(w)</span></code> convert <code class="docutils literal notranslate"><span class="pre">w</span></code> into a Lyndon word, error if <code class="docutils literal notranslate"><span class="pre">w</span></code> is not a Lyndon word.</p>
 </dd>
 </dl>
-<span class="target" id="l-lyndon-word-right"></span><dl class="simple" id="index-13">
-<dt><span class="spadfun">right</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">right(x)</span></code> returns right subtree of <code class="docutils literal notranslate"><span class="pre">x</span></code> or error if <span class="xref std std-ref">retractable? &lt;l–lyndon-word_retractable?&gt;`(``x`</span>) is <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
-</dd>
-<dt><a class="reference internal" href="Comparable.html#l-comparable-smaller"><span class="std std-ref">smaller?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a></p>
+<span class="target" id="l4c796e646f6e576f72642e6c796e646f6e496643616e"></span><dl class="simple" id="index-9">
+<dt><span class="spadfun">lyndonIfCan</span>: <a class="reference internal" href="FreeMonoid.html#l467265654d6f6e6f6964"><span class="std std-ref">FreeMonoid</span></a> VarSet -&gt; Union(%, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">lyndonIfCan(w)</span></code> convert <code class="docutils literal notranslate"><span class="pre">w</span></code> into a Lyndon word.</p>
 </dd>
 </dl>
-<span class="target" id="l-lyndon-word-var-list"></span><dl class="simple" id="index-14">
-<dt><span class="spadfun">varList</span>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> VarSet</dt><dd><p><code class="docutils literal notranslate"><span class="pre">varList(x)</span></code> returns the list of distinct entries of <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+<span class="target" id="l4c796e646f6e576f72642e4c796e646f6e576f7264734c69737431"></span><dl class="simple" id="index-10">
+<dt><span class="spadfun">LyndonWordsList1</span>: (<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> VarSet, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; <a class="reference internal" href="OneDimensionalArray.html#l4f6e6544696d656e73696f6e616c4172726179"><span class="std std-ref">OneDimensionalArray</span></a> <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">LyndonWordsList1(vl,</span> <span class="pre">n)</span></code> returns an array of lists of Lyndon words over the alphabet <code class="docutils literal notranslate"><span class="pre">vl</span></code>, up to order <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
 </dd>
 </dl>
-<p><a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-<p><a class="reference internal" href="CoercibleFrom.html#l-coercible-from"><span class="std std-ref">CoercibleFrom</span></a> VarSet</p>
-<p><a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
-<p><a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a></p>
-<p><a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a></p>
-<p><a class="reference internal" href="PartialOrder.html#l-partial-order"><span class="std std-ref">PartialOrder</span></a></p>
-<p><a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> VarSet</p>
-<p><a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+<span class="target" id="l4c796e646f6e576f72642e4c796e646f6e576f7264734c697374"></span><dl class="simple" id="index-11">
+<dt><span class="spadfun">LyndonWordsList</span>: (<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> VarSet, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">LyndonWordsList(vl,</span> <span class="pre">n)</span></code> returns the list of Lyndon words over the alphabet <code class="docutils literal notranslate"><span class="pre">vl</span></code>, up to order <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="l4c796e646f6e576f72642e6d6178">
+<dt><a class="reference internal" href="OrderedSet.html#l4f7264657265645365742e6d6178"><span class="std std-ref">max</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="OrderedSet.html#l4f726465726564536574"><span class="std std-ref">OrderedSet</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4c796e646f6e576f72642e6d696e">
+<dt><a class="reference internal" href="OrderedSet.html#l4f7264657265645365742e6d696e"><span class="std std-ref">min</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="OrderedSet.html#l4f726465726564536574"><span class="std std-ref">OrderedSet</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4c796e646f6e576f72642e72657472616374">
+<dt><a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f2e72657472616374"><span class="std std-ref">retract</span></a>: % -&gt; VarSet</dt><dd><p>from <a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f"><span class="std std-ref">RetractableTo</span></a> VarSet</p>
+</dd>
+</dl>
+<span class="target" id="l4c796e646f6e576f72642e7265747261637461626c653f"></span><dl class="simple" id="index-12">
+<dt><span class="spadfun">retractable?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">retractable?(x)</span></code> tests if <code class="docutils literal notranslate"><span class="pre">x</span></code> is a tree with only one entry.</p>
+</dd>
+</dl>
+<dl class="simple" id="l4c796e646f6e576f72642e72657472616374496643616e">
+<dt><a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f2e72657472616374496643616e"><span class="std std-ref">retractIfCan</span></a>: % -&gt; Union(VarSet, failed)</dt><dd><p>from <a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f"><span class="std std-ref">RetractableTo</span></a> VarSet</p>
+</dd>
+</dl>
+<span class="target" id="l4c796e646f6e576f72642e7269676874"></span><dl class="simple" id="index-13">
+<dt><span class="spadfun">right</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">right(x)</span></code> returns right subtree of <code class="docutils literal notranslate"><span class="pre">x</span></code> or error if <a class="reference internal" href="#l4c796e646f6e576f72642e7265747261637461626c653f"><span class="std std-ref">retractable?</span></a>(<code class="docutils literal notranslate"><span class="pre">x</span></code>) is <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="l4c796e646f6e576f72642e736d616c6c65723f">
+<dt><a class="reference internal" href="Comparable.html#l436f6d70617261626c652e736d616c6c65723f"><span class="std std-ref">smaller?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l4c796e646f6e576f72642e7661724c697374"></span><dl class="simple" id="index-14">
+<dt><span class="spadfun">varList</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> VarSet</dt><dd><p><code class="docutils literal notranslate"><span class="pre">varList(x)</span></code> returns the list of distinct entries of <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+</dd>
+</dl>
+<p><a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+<p><a class="reference internal" href="CoercibleFrom.html#l436f65726369626c6546726f6d"><span class="std std-ref">CoercibleFrom</span></a> VarSet</p>
+<p><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+<p><a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a></p>
+<p><a class="reference internal" href="OrderedSet.html#l4f726465726564536574"><span class="std std-ref">OrderedSet</span></a></p>
+<p><a class="reference internal" href="PartialOrder.html#l5061727469616c4f72646572"><span class="std std-ref">PartialOrder</span></a></p>
+<p><a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f"><span class="std std-ref">RetractableTo</span></a> VarSet</p>
+<p><a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </div>
 
 
@@ -197,7 +223,7 @@
         <li class="right" >
           <a href="Loop.html" title="Loop"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Domains.html" >Domains</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">LyndonWord VarSet</a></li> 

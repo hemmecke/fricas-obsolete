@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NPCoef(BP, E, OV, R, P) &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>NPCoef(BP, E, OV, R, P) &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="NormRetractPackage.html" title="NormRetractPackage(F, ExtF, SUEx, ExtP, n)"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">NPCoef(BP, E, OV, R, P)</a></li> 
@@ -46,18 +46,18 @@
           <div class="body" role="main">
             
   <div class="section" id="npcoef-bp-e-ov-r-p">
-<span id="l-n-p-coef"></span><span id="index-0"></span><h1>NPCoef(BP, E, OV, R, P)<a class="headerlink" href="#npcoef-bp-e-ov-r-p" title="Permalink to this headline">¶</a></h1>
+<span id="l4e50436f6566"></span><span id="index-0"></span><h1>NPCoef(BP, E, OV, R, P)<a class="headerlink" href="#npcoef-bp-e-ov-r-p" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/npcoef.spad#L1">npcoef.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/npcoef.spad#L1">[edit on github]</a></p>
 <ul class="simple">
-<li><p>BP: <a class="reference internal" href="UnivariatePolynomialCategory.html#l-univariate-polynomial-category"><span class="std std-ref">UnivariatePolynomialCategory</span></a> R</p></li>
-<li><p>E: <a class="reference internal" href="OrderedAbelianMonoidSup.html#l-ordered-abelian-monoid-sup"><span class="std std-ref">OrderedAbelianMonoidSup</span></a></p></li>
-<li><p>OV: <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a></p></li>
-<li><p>R: <a class="reference internal" href="IntegralDomain.html#l-integral-domain"><span class="std std-ref">IntegralDomain</span></a></p></li>
-<li><p>P: <a class="reference internal" href="PolynomialCategory.html#l-polynomial-category"><span class="std std-ref">PolynomialCategory</span></a>(R, E, OV)</p></li>
+<li><p>BP: <a class="reference internal" href="UnivariatePolynomialCategory.html#l556e6976617269617465506f6c796e6f6d69616c43617465676f7279"><span class="std std-ref">UnivariatePolynomialCategory</span></a> R</p></li>
+<li><p>E: <a class="reference internal" href="OrderedAbelianMonoidSup.html#l4f7264657265644162656c69616e4d6f6e6f6964537570"><span class="std std-ref">OrderedAbelianMonoidSup</span></a></p></li>
+<li><p>OV: <a class="reference internal" href="OrderedSet.html#l4f726465726564536574"><span class="std std-ref">OrderedSet</span></a></p></li>
+<li><p>R: <a class="reference internal" href="IntegralDomain.html#l496e74656772616c446f6d61696e"><span class="std std-ref">IntegralDomain</span></a></p></li>
+<li><p>P: <a class="reference internal" href="PolynomialCategory.html#l506f6c796e6f6d69616c43617465676f7279"><span class="std std-ref">PolynomialCategory</span></a>(R, E, OV)</p></li>
 </ul>
-<p>Package for the determination of the coefficients in the lifting process. Used by <a class="reference internal" href="MultivariateLifting.html#l-multivariate-lifting"><span class="std std-ref">MultivariateLifting</span></a>. This package will work for every integral domain <code class="docutils literal notranslate"><span class="pre">R</span></code>. The same method is described in [1] section 2.3.4.</p>
-<span class="target" id="l-n-p-coef-npcoef"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">npcoef</span>: (<a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> P, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> BP, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P) -&gt; Record(deter: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> P, dterm: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(expt: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, pcoef: P), nfacts: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> BP, nlead: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">npcoef(p,</span> <span class="pre">lmf,</span> <span class="pre">lcf)</span></code> tries to determine some coefficients of factors of <code class="docutils literal notranslate"><span class="pre">p</span></code> assuming that <code class="docutils literal notranslate"><span class="pre">lcf</span></code> gives <code class="docutils literal notranslate"><span class="pre">true</span></code> leading coefficients of the factors and that sparsity pattern of modular factors <code class="docutils literal notranslate"><span class="pre">lmf</span></code> is the same as sparsity pattern of <code class="docutils literal notranslate"><span class="pre">true</span></code> factors. If <code class="docutils literal notranslate"><span class="pre">res</span></code> is the result, then <code class="docutils literal notranslate"><span class="pre">res.deter</span></code> gives fully determined factors, <code class="docutils literal notranslate"><span class="pre">res.dterm</span></code> gives determined terms of partially determinaed factors, <code class="docutils literal notranslate"><span class="pre">res.nfacts</span></code> and <code class="docutils literal notranslate"><span class="pre">res.nlead</span></code> give modular factors and leading coefficients corresponding to undetermined factors.</p>
+<p>Package for the determination of the coefficients in the lifting process. Used by <a class="reference internal" href="MultivariateLifting.html#l4d756c7469766172696174654c696674696e67"><span class="std std-ref">MultivariateLifting</span></a>. This package will work for every integral domain <code class="docutils literal notranslate"><span class="pre">R</span></code>. The same method is described in [1] section 2.3.4.</p>
+<span class="target" id="l4e50436f65662e6e70636f6566"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">npcoef</span>: (<a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> P, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> BP, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> P) -&gt; Record(deter: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> P, dterm: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> Record(expt: <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, pcoef: P), nfacts: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> BP, nlead: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> P)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">npcoef(p,</span> <span class="pre">lmf,</span> <span class="pre">lcf)</span></code> tries to determine some coefficients of factors of <code class="docutils literal notranslate"><span class="pre">p</span></code> assuming that <code class="docutils literal notranslate"><span class="pre">lcf</span></code> gives <code class="docutils literal notranslate"><span class="pre">true</span></code> leading coefficients of the factors and that sparsity pattern of modular factors <code class="docutils literal notranslate"><span class="pre">lmf</span></code> is the same as sparsity pattern of <code class="docutils literal notranslate"><span class="pre">true</span></code> factors. If <code class="docutils literal notranslate"><span class="pre">res</span></code> is the result, then <code class="docutils literal notranslate"><span class="pre">res.deter</span></code> gives fully determined factors, <code class="docutils literal notranslate"><span class="pre">res.dterm</span></code> gives determined terms of partially determinaed factors, <code class="docutils literal notranslate"><span class="pre">res.nfacts</span></code> and <code class="docutils literal notranslate"><span class="pre">res.nlead</span></code> give modular factors and leading coefficients corresponding to undetermined factors.</p>
 </dd>
 </dl>
 </div>
@@ -107,7 +107,7 @@
         <li class="right" >
           <a href="NormRetractPackage.html" title="NormRetractPackage(F, ExtF, SUEx, ExtP, n)"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">NPCoef(BP, E, OV, R, P)</a></li> 

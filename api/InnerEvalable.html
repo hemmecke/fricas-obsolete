@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InnerEvalable(A, B) &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>InnerEvalable(A, B) &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="IndexedProductCategory.html" title="IndexedProductCategory(A, S)"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Categories.html" accesskey="U">Categories</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">InnerEvalable(A, B)</a></li> 
@@ -46,19 +46,19 @@
           <div class="body" role="main">
             
   <div class="section" id="innerevalable-a-b">
-<span id="l-inner-evalable"></span><span id="index-0"></span><h1>InnerEvalable(A, B)<a class="headerlink" href="#innerevalable-a-b" title="Permalink to this headline">¶</a></h1>
+<span id="l496e6e65724576616c61626c65"></span><span id="index-0"></span><h1>InnerEvalable(A, B)<a class="headerlink" href="#innerevalable-a-b" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/equation1.spad#L1">equation1.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/equation1.spad#L1">[edit on github]</a></p>
 <ul class="simple">
-<li><p>A: <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p></li>
-<li><p>B: <a class="reference internal" href="Type.html#l-type"><span class="std std-ref">Type</span></a></p></li>
+<li><p>A: <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p></li>
+<li><p>B: <a class="reference internal" href="Type.html#l54797065"><span class="std std-ref">Type</span></a></p></li>
 </ul>
-<p>This category provides <span class="spadfun">eval</span> operations. A domain may belong to this category if it is possible to make <code class="docutils literal notranslate"><span class="pre">evaluation\</span> <span class="pre">``''</span></code> substitutions. The difference between this and <a class="reference internal" href="Evalable.html#l-evalable"><span class="std std-ref">Evalable</span></a> is that the operations in this category specify the substitution as a pair of arguments rather than as an equation.</p>
-<span class="target" id="l-inner-evalable-eval"></span><dl class="simple" id="index-1">
+<p>This category provides <span class="spadfun">eval</span> operations. A domain may belong to this category if it is possible to make <code class="docutils literal notranslate"><span class="pre">evaluation\</span> <span class="pre">``''</span></code> substitutions. The difference between this and <a class="reference internal" href="Evalable.html#l4576616c61626c65"><span class="std std-ref">Evalable</span></a> is that the operations in this category specify the substitution as a pair of arguments rather than as an equation.</p>
+<span class="target" id="l496e6e65724576616c61626c652e6576616c"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">eval</span>: (%, A, B) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">eval(f,</span> <span class="pre">x,</span> <span class="pre">v)</span></code> replaces <code class="docutils literal notranslate"><span class="pre">x</span></code> by <code class="docutils literal notranslate"><span class="pre">v</span></code> in <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-2">
-<dt><span class="spadfun">eval</span>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> A, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> B) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">eval(f,</span> <span class="pre">[x1,</span> <span class="pre">...,</span> <span class="pre">xn],</span> <span class="pre">[v1,</span> <span class="pre">...,</span> <span class="pre">vn])</span></code> replaces <code class="docutils literal notranslate"><span class="pre">xi</span></code> by <code class="docutils literal notranslate"><span class="pre">vi</span></code> in <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+<dt><span class="spadfun">eval</span>: (%, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> A, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> B) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">eval(f,</span> <span class="pre">[x1,</span> <span class="pre">...,</span> <span class="pre">xn],</span> <span class="pre">[v1,</span> <span class="pre">...,</span> <span class="pre">vn])</span></code> replaces <code class="docutils literal notranslate"><span class="pre">xi</span></code> by <code class="docutils literal notranslate"><span class="pre">vi</span></code> in <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
 </dd>
 </dl>
 </div>
@@ -108,7 +108,7 @@
         <li class="right" >
           <a href="IndexedProductCategory.html" title="IndexedProductCategory(A, S)"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Categories.html" >Categories</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">InnerEvalable(A, B)</a></li> 

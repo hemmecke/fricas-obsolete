@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NonLinearFirstOrderODESolver(R, F) &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>NonLinearFirstOrderODESolver(R, F) &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="NoneFunctions1.html" title="NoneFunctions1 S"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">NonLinearFirstOrderODESolver(R, F)</a></li> 
@@ -46,15 +46,15 @@
           <div class="body" role="main">
             
   <div class="section" id="nonlinearfirstorderodesolver-r-f">
-<span id="l-non-linear-first-order-o-d-e-solver"></span><span id="index-0"></span><h1>NonLinearFirstOrderODESolver(R, F)<a class="headerlink" href="#nonlinearfirstorderodesolver-r-f" title="Permalink to this headline">¶</a></h1>
+<span id="l4e6f6e4c696e65617246697273744f726465724f4445536f6c766572"></span><span id="index-0"></span><h1>NonLinearFirstOrderODESolver(R, F)<a class="headerlink" href="#nonlinearfirstorderodesolver-r-f" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/nlode.spad#L1">nlode.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/nlode.spad#L1">[edit on github]</a></p>
 <ul class="simple">
-<li><p>R: Join(<a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a>, <a class="reference internal" href="PolynomialFactorizationExplicit.html#l-polynomial-factorization-explicit"><span class="std std-ref">PolynomialFactorizationExplicit</span></a>, <a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="LinearlyExplicitOver.html#l-linearly-explicit-over"><span class="std std-ref">LinearlyExplicitOver</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="CharacteristicZero.html#l-characteristic-zero"><span class="std std-ref">CharacteristicZero</span></a>)</p></li>
-<li><p>F: Join(<a class="reference internal" href="AlgebraicallyClosedFunctionSpace.html#l-algebraically-closed-function-space"><span class="std std-ref">AlgebraicallyClosedFunctionSpace</span></a> R, <a class="reference internal" href="TranscendentalFunctionCategory.html#l-transcendental-function-category"><span class="std std-ref">TranscendentalFunctionCategory</span></a>, <a class="reference internal" href="PrimitiveFunctionCategory.html#l-primitive-function-category"><span class="std std-ref">PrimitiveFunctionCategory</span></a>)</p></li>
+<li><p>R: Join(<a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a>, <a class="reference internal" href="PolynomialFactorizationExplicit.html#l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974"><span class="std std-ref">PolynomialFactorizationExplicit</span></a>, <a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f"><span class="std std-ref">RetractableTo</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="LinearlyExplicitOver.html#l4c696e6561726c794578706c696369744f766572"><span class="std std-ref">LinearlyExplicitOver</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="CharacteristicZero.html#l43686172616374657269737469635a65726f"><span class="std std-ref">CharacteristicZero</span></a>)</p></li>
+<li><p>F: Join(<a class="reference internal" href="AlgebraicallyClosedFunctionSpace.html#l416c67656272616963616c6c79436c6f73656446756e6374696f6e5370616365"><span class="std std-ref">AlgebraicallyClosedFunctionSpace</span></a> R, <a class="reference internal" href="TranscendentalFunctionCategory.html#l5472616e7363656e64656e74616c46756e6374696f6e43617465676f7279"><span class="std std-ref">TranscendentalFunctionCategory</span></a>, <a class="reference internal" href="PrimitiveFunctionCategory.html#l5072696d697469766546756e6374696f6e43617465676f7279"><span class="std std-ref">PrimitiveFunctionCategory</span></a>)</p></li>
 </ul>
 <p>NonLinearFirstOrderODESolver provides a function for finding closed form first integrals of nonlinear ordinary differential equations of order 1.</p>
-<span class="target" id="l-non-linear-first-order-o-d-e-solver-solve"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">solve</span>: (F, F, <a class="reference internal" href="BasicOperator.html#l-basic-operator"><span class="std std-ref">BasicOperator</span></a>, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>) -&gt; Union(F, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">solve(M(x,</span> <span class="pre">y),</span> <span class="pre">N(x,</span> <span class="pre">y),</span> <span class="pre">y,</span> <span class="pre">x)</span></code> returns <code class="docutils literal notranslate"><span class="pre">F(x,</span> <span class="pre">y)</span></code> such that <code class="docutils literal notranslate"><span class="pre">F(x,</span> <span class="pre">y)</span> <span class="pre">=</span> <span class="pre">c</span></code> for a constant <code class="docutils literal notranslate"><span class="pre">c</span></code> is a first integral of the equation <code class="docutils literal notranslate"><span class="pre">M(x,</span> <span class="pre">y)</span> <span class="pre">dx</span> <span class="pre">+</span> <span class="pre">N(x,</span> <span class="pre">y)</span> <span class="pre">dy</span> <span class="pre">=</span> <span class="pre">0</span></code>, or “failed” if no first-integral can be found.</p>
+<span class="target" id="l4e6f6e4c696e65617246697273744f726465724f4445536f6c7665722e736f6c7665"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">solve</span>: (F, F, <a class="reference internal" href="BasicOperator.html#l42617369634f70657261746f72"><span class="std std-ref">BasicOperator</span></a>, <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>) -&gt; Union(F, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">solve(M(x,</span> <span class="pre">y),</span> <span class="pre">N(x,</span> <span class="pre">y),</span> <span class="pre">y,</span> <span class="pre">x)</span></code> returns <code class="docutils literal notranslate"><span class="pre">F(x,</span> <span class="pre">y)</span></code> such that <code class="docutils literal notranslate"><span class="pre">F(x,</span> <span class="pre">y)</span> <span class="pre">=</span> <span class="pre">c</span></code> for a constant <code class="docutils literal notranslate"><span class="pre">c</span></code> is a first integral of the equation <code class="docutils literal notranslate"><span class="pre">M(x,</span> <span class="pre">y)</span> <span class="pre">dx</span> <span class="pre">+</span> <span class="pre">N(x,</span> <span class="pre">y)</span> <span class="pre">dy</span> <span class="pre">=</span> <span class="pre">0</span></code>, or “failed” if no first-integral can be found.</p>
 </dd>
 </dl>
 </div>
@@ -104,7 +104,7 @@
         <li class="right" >
           <a href="NoneFunctions1.html" title="NoneFunctions1 S"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">NonLinearFirstOrderODESolver(R, F)</a></li> 

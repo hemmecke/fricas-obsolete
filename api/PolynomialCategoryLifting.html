@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PolynomialCategoryLifting(E, Vars, R, P, S) &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>PolynomialCategoryLifting(E, Vars, R, P, S) &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="PolynomialAN2Expression.html" title="PolynomialAN2Expression"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">PolynomialCategoryLifting(E, Vars, R, P, S)</a></li> 
@@ -46,23 +46,23 @@
           <div class="body" role="main">
             
   <div class="section" id="polynomialcategorylifting-e-vars-r-p-s">
-<span id="l-polynomial-category-lifting"></span><span id="index-0"></span><h1>PolynomialCategoryLifting(E, Vars, R, P, S)<a class="headerlink" href="#polynomialcategorylifting-e-vars-r-p-s" title="Permalink to this headline">¶</a></h1>
+<span id="l506f6c796e6f6d69616c43617465676f72794c696674696e67"></span><span id="index-0"></span><h1>PolynomialCategoryLifting(E, Vars, R, P, S)<a class="headerlink" href="#polynomialcategorylifting-e-vars-r-p-s" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/polycat.spad#L713">polycat.spad line 713</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/polycat.spad#L713">[edit on github]</a></p>
 <ul>
-<li><p>E: <a class="reference internal" href="OrderedAbelianMonoidSup.html#l-ordered-abelian-monoid-sup"><span class="std std-ref">OrderedAbelianMonoidSup</span></a></p></li>
-<li><p>Vars: <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a></p></li>
-<li><p>R: Join(<a class="reference internal" href="SemiRng.html#l-semi-rng"><span class="std std-ref">SemiRng</span></a>, <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a>)</p></li>
-<li><p>P: <a class="reference internal" href="PolynomialCategory.html#l-polynomial-category"><span class="std std-ref">PolynomialCategory</span></a>(R, E, Vars)</p></li>
+<li><p>E: <a class="reference internal" href="OrderedAbelianMonoidSup.html#l4f7264657265644162656c69616e4d6f6e6f6964537570"><span class="std std-ref">OrderedAbelianMonoidSup</span></a></p></li>
+<li><p>Vars: <a class="reference internal" href="OrderedSet.html#l4f726465726564536574"><span class="std std-ref">OrderedSet</span></a></p></li>
+<li><p>R: Join(<a class="reference internal" href="SemiRng.html#l53656d69526e67"><span class="std std-ref">SemiRng</span></a>, <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a>)</p></li>
+<li><p>P: <a class="reference internal" href="PolynomialCategory.html#l506f6c796e6f6d69616c43617465676f7279"><span class="std std-ref">PolynomialCategory</span></a>(R, E, Vars)</p></li>
 <li><p>S:  with</p>
 <blockquote>
-<div><p><span class="spadfun">*</span>: (%, %) -&gt; %</p>
-<p><span class="spadfun">+</span>: (%, %) -&gt; %</p>
-<p><span class="spadfun">^</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</p>
+<div><p>*: (%, %) -&gt; %</p>
+<p>+: (%, %) -&gt; %</p>
+<p>^: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</p>
 </div></blockquote>
 </li>
 </ul>
 <p>This package provides a very general map function, which given a set <code class="docutils literal notranslate"><span class="pre">S</span></code> and polynomials over <code class="docutils literal notranslate"><span class="pre">R</span></code> with maps from the variables into <code class="docutils literal notranslate"><span class="pre">S</span></code> and the coefficients into <code class="docutils literal notranslate"><span class="pre">S</span></code>, maps polynomials into <code class="docutils literal notranslate"><span class="pre">S</span></code>. <code class="docutils literal notranslate"><span class="pre">S</span></code> is assumed to support <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code> and <code class="docutils literal notranslate"><span class="pre">^</span></code>.</p>
-<span class="target" id="l-polynomial-category-lifting-map"></span><dl class="simple" id="index-1">
+<span class="target" id="l506f6c796e6f6d69616c43617465676f72794c696674696e672e6d6170"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">map</span>: (Vars -&gt; S, R -&gt; S, P) -&gt; S</dt><dd><p><code class="docutils literal notranslate"><span class="pre">map(varmap,</span> <span class="pre">coefmap,</span> <span class="pre">p)</span></code> takes a <code class="docutils literal notranslate"><span class="pre">varmap</span></code>, a mapping from the variables of polynomial <code class="docutils literal notranslate"><span class="pre">p</span></code> into <code class="docutils literal notranslate"><span class="pre">S</span></code>, <code class="docutils literal notranslate"><span class="pre">coefmap</span></code>, a mapping from coefficients of <code class="docutils literal notranslate"><span class="pre">p</span></code> into <code class="docutils literal notranslate"><span class="pre">S</span></code>, and <code class="docutils literal notranslate"><span class="pre">p</span></code>, and produces a member of <code class="docutils literal notranslate"><span class="pre">S</span></code> using the corresponding arithmetic in <code class="docutils literal notranslate"><span class="pre">S</span></code>.</p>
 </dd>
 </dl>
@@ -113,7 +113,7 @@
         <li class="right" >
           <a href="PolynomialAN2Expression.html" title="PolynomialAN2Expression"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">PolynomialCategoryLifting(E, Vars, R, P, S)</a></li> 

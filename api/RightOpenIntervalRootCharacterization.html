@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RightOpenIntervalRootCharacterization(TheField, ThePolDom) &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>RightOpenIntervalRootCharacterization(TheField, ThePolDom) &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="RewriteRule.html" title="RewriteRule(Base, R, F)"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Domains.html" accesskey="U">Domains</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">RightOpenIntervalRootCharacterization(TheField, ThePolDom)</a></li> 
@@ -46,77 +46,105 @@
           <div class="body" role="main">
             
   <div class="section" id="rightopenintervalrootcharacterization-thefield-thepoldom">
-<span id="l-right-open-interval-root-characterization"></span><span id="index-0"></span><h1>RightOpenIntervalRootCharacterization(TheField, ThePolDom)<a class="headerlink" href="#rightopenintervalrootcharacterization-thefield-thepoldom" title="Permalink to this headline">¶</a></h1>
+<span id="l52696768744f70656e496e74657276616c526f6f74436861726163746572697a6174696f6e"></span><span id="index-0"></span><h1>RightOpenIntervalRootCharacterization(TheField, ThePolDom)<a class="headerlink" href="#rightopenintervalrootcharacterization-thefield-thepoldom" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/reclos.spad#L410">reclos.spad line 410</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/reclos.spad#L410">[edit on github]</a></p>
 <ul class="simple">
-<li><p>TheField: Join(<a class="reference internal" href="OrderedRing.html#l-ordered-ring"><span class="std std-ref">OrderedRing</span></a>, <a class="reference internal" href="Field.html#l-field"><span class="std std-ref">Field</span></a>)</p></li>
-<li><p>ThePolDom: <a class="reference internal" href="UnivariatePolynomialCategory.html#l-univariate-polynomial-category"><span class="std std-ref">UnivariatePolynomialCategory</span></a> TheField</p></li>
+<li><p>TheField: Join(<a class="reference internal" href="OrderedRing.html#l4f72646572656452696e67"><span class="std std-ref">OrderedRing</span></a>, <a class="reference internal" href="Field.html#l4669656c64"><span class="std std-ref">Field</span></a>)</p></li>
+<li><p>ThePolDom: <a class="reference internal" href="UnivariatePolynomialCategory.html#l556e6976617269617465506f6c796e6f6d69616c43617465676f7279"><span class="std std-ref">UnivariatePolynomialCategory</span></a> TheField</p></li>
 </ul>
-<p><a class="reference internal" href="#l-right-open-interval-root-characterization"><span class="std std-ref">RightOpenIntervalRootCharacterization</span></a> provides work with interval root coding.</p>
-<dl class="simple">
-<dt><a class="reference internal" href="BasicType.html#id1"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-</dd>
-<dt><a class="reference internal" href="BasicType.html#id2"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-</dd>
-<dt><a class="reference internal" href="RealRootCharacterizationCategory.html#l-real-root-characterization-category-all-roots-of"><span class="std std-ref">allRootsOf</span></a>: ThePolDom -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %</dt><dd><p>from <a class="reference internal" href="RealRootCharacterizationCategory.html#l-real-root-characterization-category"><span class="std std-ref">RealRootCharacterizationCategory</span></a>(TheField, ThePolDom)</p>
-</dd>
-<dt><a class="reference internal" href="RealRootCharacterizationCategory.html#l-real-root-characterization-category-approximate"><span class="std std-ref">approximate</span></a>: (ThePolDom, %, TheField) -&gt; TheField</dt><dd><p>from <a class="reference internal" href="RealRootCharacterizationCategory.html#l-real-root-characterization-category"><span class="std std-ref">RealRootCharacterizationCategory</span></a>(TheField, ThePolDom)</p>
-</dd>
-<dt><a class="reference internal" href="CoercibleTo.html#l-coercible-to-coerce"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
-</dd>
-<dt><a class="reference internal" href="RealRootCharacterizationCategory.html#l-real-root-characterization-category-defining-polynomial"><span class="std std-ref">definingPolynomial</span></a>: % -&gt; ThePolDom</dt><dd><p>from <a class="reference internal" href="RealRootCharacterizationCategory.html#l-real-root-characterization-category"><span class="std std-ref">RealRootCharacterizationCategory</span></a>(TheField, ThePolDom)</p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l-single-integer"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash-update"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-latex"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+<p><a class="reference internal" href="#l52696768744f70656e496e74657276616c526f6f74436861726163746572697a6174696f6e"><span class="std std-ref">RightOpenIntervalRootCharacterization</span></a> provides work with interval root coding.</p>
+<dl class="simple" id="l52696768744f70656e496e74657276616c526f6f74436861726163746572697a6174696f6e2e3d">
+<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-right-open-interval-root-characterization-left"></span><dl class="simple" id="index-1">
+<dl class="simple" id="l52696768744f70656e496e74657276616c526f6f74436861726163746572697a6174696f6e2e7e3d">
+<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e7e3d"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l52696768744f70656e496e74657276616c526f6f74436861726163746572697a6174696f6e2e616c6c526f6f74734f66">
+<dt><a class="reference internal" href="RealRootCharacterizationCategory.html#l5265616c526f6f74436861726163746572697a6174696f6e43617465676f72792e616c6c526f6f74734f66"><span class="std std-ref">allRootsOf</span></a>: ThePolDom -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %</dt><dd><p>from <a class="reference internal" href="RealRootCharacterizationCategory.html#l5265616c526f6f74436861726163746572697a6174696f6e43617465676f7279"><span class="std std-ref">RealRootCharacterizationCategory</span></a>(TheField, ThePolDom)</p>
+</dd>
+</dl>
+<dl class="simple" id="l52696768744f70656e496e74657276616c526f6f74436861726163746572697a6174696f6e2e617070726f78696d617465">
+<dt><a class="reference internal" href="RealRootCharacterizationCategory.html#l5265616c526f6f74436861726163746572697a6174696f6e43617465676f72792e617070726f78696d617465"><span class="std std-ref">approximate</span></a>: (ThePolDom, %, TheField) -&gt; TheField</dt><dd><p>from <a class="reference internal" href="RealRootCharacterizationCategory.html#l5265616c526f6f74436861726163746572697a6174696f6e43617465676f7279"><span class="std std-ref">RealRootCharacterizationCategory</span></a>(TheField, ThePolDom)</p>
+</dd>
+</dl>
+<dl class="simple" id="l52696768744f70656e496e74657276616c526f6f74436861726163746572697a6174696f6e2e636f65726365">
+<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f2e636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l52696768744f70656e496e74657276616c526f6f74436861726163746572697a6174696f6e2e646566696e696e67506f6c796e6f6d69616c">
+<dt><a class="reference internal" href="RealRootCharacterizationCategory.html#l5265616c526f6f74436861726163746572697a6174696f6e43617465676f72792e646566696e696e67506f6c796e6f6d69616c"><span class="std std-ref">definingPolynomial</span></a>: % -&gt; ThePolDom</dt><dd><p>from <a class="reference internal" href="RealRootCharacterizationCategory.html#l5265616c526f6f74436861726163746572697a6174696f6e43617465676f7279"><span class="std std-ref">RealRootCharacterizationCategory</span></a>(TheField, ThePolDom)</p>
+</dd>
+</dl>
+<dl class="simple" id="l52696768744f70656e496e74657276616c526f6f74436861726163746572697a6174696f6e2e68617368">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e68617368"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l53696e676c65496e7465676572"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l52696768744f70656e496e74657276616c526f6f74436861726163746572697a6174696f6e2e6861736855706461746521">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6861736855706461746521"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l52696768744f70656e496e74657276616c526f6f74436861726163746572697a6174696f6e2e6c61746578">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6c61746578"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l52696768744f70656e496e74657276616c526f6f74436861726163746572697a6174696f6e2e6c656674"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">left</span>: % -&gt; TheField</dt><dd><p><code class="docutils literal notranslate"><span class="pre">left(rootChar)</span></code> is the left bound of the isolating interval</p>
 </dd>
 </dl>
-<span class="target" id="l-right-open-interval-root-characterization-middle"></span><dl class="simple" id="index-2">
+<span class="target" id="l52696768744f70656e496e74657276616c526f6f74436861726163746572697a6174696f6e2e6d6964646c65"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">middle</span>: % -&gt; TheField</dt><dd><p><code class="docutils literal notranslate"><span class="pre">middle(rootChar)</span></code> is the middle of the isolating interval</p>
 </dd>
 </dl>
-<span class="target" id="l-right-open-interval-root-characterization-might-have-roots"></span><dl class="simple" id="index-3">
-<dt><span class="spadfun">mightHaveRoots</span>: (ThePolDom, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">mightHaveRoots(p,</span> <span class="pre">r)</span></code> is <code class="docutils literal notranslate"><span class="pre">false</span></code> if <code class="docutils literal notranslate"><span class="pre">p.r</span></code> is not 0</p>
-</dd>
-<dt><a class="reference internal" href="RealRootCharacterizationCategory.html#l-real-root-characterization-category-negative"><span class="std std-ref">negative?</span></a>: (ThePolDom, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="RealRootCharacterizationCategory.html#l-real-root-characterization-category"><span class="std std-ref">RealRootCharacterizationCategory</span></a>(TheField, ThePolDom)</p>
-</dd>
-<dt><a class="reference internal" href="RealRootCharacterizationCategory.html#l-real-root-characterization-category-positive"><span class="std std-ref">positive?</span></a>: (ThePolDom, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="RealRootCharacterizationCategory.html#l-real-root-characterization-category"><span class="std std-ref">RealRootCharacterizationCategory</span></a>(TheField, ThePolDom)</p>
-</dd>
-<dt><a class="reference internal" href="RealRootCharacterizationCategory.html#l-real-root-characterization-category-recip"><span class="std std-ref">recip</span></a>: (ThePolDom, %) -&gt; Union(ThePolDom, failed)</dt><dd><p>from <a class="reference internal" href="RealRootCharacterizationCategory.html#l-real-root-characterization-category"><span class="std std-ref">RealRootCharacterizationCategory</span></a>(TheField, ThePolDom)</p>
+<span class="target" id="l52696768744f70656e496e74657276616c526f6f74436861726163746572697a6174696f6e2e6d6967687448617665526f6f7473"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">mightHaveRoots</span>: (ThePolDom, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">mightHaveRoots(p,</span> <span class="pre">r)</span></code> is <code class="docutils literal notranslate"><span class="pre">false</span></code> if <code class="docutils literal notranslate"><span class="pre">p.r</span></code> is not 0</p>
 </dd>
 </dl>
-<span class="target" id="l-right-open-interval-root-characterization-refine"></span><dl class="simple" id="index-4">
+<dl class="simple" id="l52696768744f70656e496e74657276616c526f6f74436861726163746572697a6174696f6e2e6e656761746976653f">
+<dt><a class="reference internal" href="RealRootCharacterizationCategory.html#l5265616c526f6f74436861726163746572697a6174696f6e43617465676f72792e6e656761746976653f"><span class="std std-ref">negative?</span></a>: (ThePolDom, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="RealRootCharacterizationCategory.html#l5265616c526f6f74436861726163746572697a6174696f6e43617465676f7279"><span class="std std-ref">RealRootCharacterizationCategory</span></a>(TheField, ThePolDom)</p>
+</dd>
+</dl>
+<dl class="simple" id="l52696768744f70656e496e74657276616c526f6f74436861726163746572697a6174696f6e2e706f7369746976653f">
+<dt><a class="reference internal" href="RealRootCharacterizationCategory.html#l5265616c526f6f74436861726163746572697a6174696f6e43617465676f72792e706f7369746976653f"><span class="std std-ref">positive?</span></a>: (ThePolDom, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="RealRootCharacterizationCategory.html#l5265616c526f6f74436861726163746572697a6174696f6e43617465676f7279"><span class="std std-ref">RealRootCharacterizationCategory</span></a>(TheField, ThePolDom)</p>
+</dd>
+</dl>
+<dl class="simple" id="l52696768744f70656e496e74657276616c526f6f74436861726163746572697a6174696f6e2e7265636970">
+<dt><a class="reference internal" href="RealRootCharacterizationCategory.html#l5265616c526f6f74436861726163746572697a6174696f6e43617465676f72792e7265636970"><span class="std std-ref">recip</span></a>: (ThePolDom, %) -&gt; Union(ThePolDom, failed)</dt><dd><p>from <a class="reference internal" href="RealRootCharacterizationCategory.html#l5265616c526f6f74436861726163746572697a6174696f6e43617465676f7279"><span class="std std-ref">RealRootCharacterizationCategory</span></a>(TheField, ThePolDom)</p>
+</dd>
+</dl>
+<span class="target" id="l52696768744f70656e496e74657276616c526f6f74436861726163746572697a6174696f6e2e726566696e65"></span><dl class="simple" id="index-4">
 <dt><span class="spadfun">refine</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">refine(rootChar)</span></code> shrinks isolating interval around <code class="docutils literal notranslate"><span class="pre">rootChar</span></code></p>
 </dd>
 </dl>
-<span class="target" id="l-right-open-interval-root-characterization-relative-approx"></span><dl class="simple" id="index-5">
+<span class="target" id="l52696768744f70656e496e74657276616c526f6f74436861726163746572697a6174696f6e2e72656c6174697665417070726f78"></span><dl class="simple" id="index-5">
 <dt><span class="spadfun">relativeApprox</span>: (ThePolDom, %, TheField) -&gt; TheField</dt><dd><p><code class="docutils literal notranslate"><span class="pre">relativeApprox(exp,</span> <span class="pre">c,</span> <span class="pre">p)</span> <span class="pre">=</span> <span class="pre">a</span></code> is relatively close to exp as a polynomial in <code class="docutils literal notranslate"><span class="pre">c</span></code> up to precision <code class="docutils literal notranslate"><span class="pre">p</span></code></p>
 </dd>
 </dl>
-<span class="target" id="l-right-open-interval-root-characterization-right"></span><dl class="simple" id="index-6">
+<span class="target" id="l52696768744f70656e496e74657276616c526f6f74436861726163746572697a6174696f6e2e7269676874"></span><dl class="simple" id="index-6">
 <dt><span class="spadfun">right</span>: % -&gt; TheField</dt><dd><p><code class="docutils literal notranslate"><span class="pre">right(rootChar)</span></code> is the right bound of the isolating interval</p>
 </dd>
-<dt><a class="reference internal" href="RealRootCharacterizationCategory.html#l-real-root-characterization-category-root-of"><span class="std std-ref">rootOf</span></a>: (ThePolDom, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="RealRootCharacterizationCategory.html#l-real-root-characterization-category"><span class="std std-ref">RealRootCharacterizationCategory</span></a>(TheField, ThePolDom)</p>
-</dd>
-<dt><a class="reference internal" href="RealRootCharacterizationCategory.html#l-real-root-characterization-category-sign"><span class="std std-ref">sign</span></a>: (ThePolDom, %) -&gt; <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p>from <a class="reference internal" href="RealRootCharacterizationCategory.html#l-real-root-characterization-category"><span class="std std-ref">RealRootCharacterizationCategory</span></a>(TheField, ThePolDom)</p>
+</dl>
+<dl class="simple" id="l52696768744f70656e496e74657276616c526f6f74436861726163746572697a6174696f6e2e726f6f744f66">
+<dt><a class="reference internal" href="RealRootCharacterizationCategory.html#l5265616c526f6f74436861726163746572697a6174696f6e43617465676f72792e726f6f744f66"><span class="std std-ref">rootOf</span></a>: (ThePolDom, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="RealRootCharacterizationCategory.html#l5265616c526f6f74436861726163746572697a6174696f6e43617465676f7279"><span class="std std-ref">RealRootCharacterizationCategory</span></a>(TheField, ThePolDom)</p>
 </dd>
 </dl>
-<span class="target" id="l-right-open-interval-root-characterization-size"></span><dl class="simple" id="index-7">
+<dl class="simple" id="l52696768744f70656e496e74657276616c526f6f74436861726163746572697a6174696f6e2e7369676e">
+<dt><a class="reference internal" href="RealRootCharacterizationCategory.html#l5265616c526f6f74436861726163746572697a6174696f6e43617465676f72792e7369676e"><span class="std std-ref">sign</span></a>: (ThePolDom, %) -&gt; <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></dt><dd><p>from <a class="reference internal" href="RealRootCharacterizationCategory.html#l5265616c526f6f74436861726163746572697a6174696f6e43617465676f7279"><span class="std std-ref">RealRootCharacterizationCategory</span></a>(TheField, ThePolDom)</p>
+</dd>
+</dl>
+<span class="target" id="l52696768744f70656e496e74657276616c526f6f74436861726163746572697a6174696f6e2e73697a65"></span><dl class="simple" id="index-7">
 <dt><span class="spadfun">size</span>: % -&gt; TheField</dt><dd><p>The size of the isolating interval</p>
 </dd>
-<dt><a class="reference internal" href="RealRootCharacterizationCategory.html#l-real-root-characterization-category-zero"><span class="std std-ref">zero?</span></a>: (ThePolDom, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="RealRootCharacterizationCategory.html#l-real-root-characterization-category"><span class="std std-ref">RealRootCharacterizationCategory</span></a>(TheField, ThePolDom)</p>
+</dl>
+<dl class="simple" id="l52696768744f70656e496e74657276616c526f6f74436861726163746572697a6174696f6e2e7a65726f3f">
+<dt><a class="reference internal" href="RealRootCharacterizationCategory.html#l5265616c526f6f74436861726163746572697a6174696f6e43617465676f72792e7a65726f3f"><span class="std std-ref">zero?</span></a>: (ThePolDom, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="RealRootCharacterizationCategory.html#l5265616c526f6f74436861726163746572697a6174696f6e43617465676f7279"><span class="std std-ref">RealRootCharacterizationCategory</span></a>(TheField, ThePolDom)</p>
 </dd>
 </dl>
-<p><a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-<p><a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
-<p><a class="reference internal" href="RealRootCharacterizationCategory.html#l-real-root-characterization-category"><span class="std std-ref">RealRootCharacterizationCategory</span></a>(TheField, ThePolDom)</p>
-<p><a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+<p><a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+<p><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+<p><a class="reference internal" href="RealRootCharacterizationCategory.html#l5265616c526f6f74436861726163746572697a6174696f6e43617465676f7279"><span class="std std-ref">RealRootCharacterizationCategory</span></a>(TheField, ThePolDom)</p>
+<p><a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </div>
 
 
@@ -164,7 +192,7 @@
         <li class="right" >
           <a href="RewriteRule.html" title="RewriteRule(Base, R, F)"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Domains.html" >Domains</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">RightOpenIntervalRootCharacterization(TheField, ThePolDom)</a></li> 

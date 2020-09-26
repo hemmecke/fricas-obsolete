@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TaylorSeriesExpansionGeneralized(Coef, Expon, UPS, UTS) &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>TaylorSeriesExpansionGeneralized(Coef, Expon, UPS, UTS) &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="TangentExpansions.html" title="TangentExpansions R"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">TaylorSeriesExpansionGeneralized(Coef, Expon, UPS, UTS)</a></li> 
@@ -46,34 +46,40 @@
           <div class="body" role="main">
             
   <div class="section" id="taylorseriesexpansiongeneralized-coef-expon-ups-uts">
-<span id="l-taylor-series-expansion-generalized"></span><span id="index-0"></span><h1>TaylorSeriesExpansionGeneralized(Coef, Expon, UPS, UTS)<a class="headerlink" href="#taylorseriesexpansiongeneralized-coef-expon-ups-uts" title="Permalink to this headline">¶</a></h1>
+<span id="l5461796c6f72536572696573457870616e73696f6e47656e6572616c697a6564"></span><span id="index-0"></span><h1>TaylorSeriesExpansionGeneralized(Coef, Expon, UPS, UTS)<a class="headerlink" href="#taylorseriesexpansiongeneralized-coef-expon-ups-uts" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/serexp.spad#L160">serexp.spad line 160</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/serexp.spad#L160">[edit on github]</a></p>
 <ul>
-<li><p>Coef: <a class="reference internal" href="Algebra.html#l-algebra"><span class="std std-ref">Algebra</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></p></li>
-<li><p>Expon: <a class="reference internal" href="OrderedAbelianMonoid.html#l-ordered-abelian-monoid"><span class="std std-ref">OrderedAbelianMonoid</span></a></p></li>
-<li><p>UPS: <a class="reference internal" href="UnivariatePowerSeriesCategory.html#l-univariate-power-series-category"><span class="std std-ref">UnivariatePowerSeriesCategory</span></a>(Coef, Expon) with</p>
+<li><p>Coef: <a class="reference internal" href="Algebra.html#l416c6765627261"><span class="std std-ref">Algebra</span></a> <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></p></li>
+<li><p>Expon: <a class="reference internal" href="OrderedAbelianMonoid.html#l4f7264657265644162656c69616e4d6f6e6f6964"><span class="std std-ref">OrderedAbelianMonoid</span></a></p></li>
+<li><p>UPS: <a class="reference internal" href="UnivariatePowerSeriesCategory.html#l556e6976617269617465506f77657253657269657343617465676f7279"><span class="std std-ref">UnivariatePowerSeriesCategory</span></a>(Coef, Expon) with</p>
 <blockquote>
-<div><p><span class="spadfun">apply_taylor</span>: (<a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> Coef, %) -&gt; %</p>
-<p><span class="spadfun">infsum</span>: <a class="reference internal" href="Stream.html#l-stream"><span class="std std-ref">Stream</span></a> % -&gt; %</p>
-<p><span class="spadfun">removeZeros</span>: (%, Expon) -&gt; %</p>
+<div><p>apply_taylor: (<a class="reference internal" href="Stream.html#l53747265616d"><span class="std std-ref">Stream</span></a> Coef, %) -&gt; %</p>
+<p>infsum: <a class="reference internal" href="Stream.html#l53747265616d"><span class="std std-ref">Stream</span></a> % -&gt; %</p>
+<p>removeZeros: (%, Expon) -&gt; %</p>
 </div></blockquote>
 </li>
-<li><p>UTS: <a class="reference internal" href="UnivariateTaylorSeriesCategory.html#l-univariate-taylor-series-category"><span class="std std-ref">UnivariateTaylorSeriesCategory</span></a> Coef</p></li>
+<li><p>UTS: <a class="reference internal" href="UnivariateTaylorSeriesCategory.html#l556e69766172696174655461796c6f7253657269657343617465676f7279"><span class="std std-ref">UnivariateTaylorSeriesCategory</span></a> Coef</p></li>
 </ul>
 <p>undocumented</p>
-<dl class="simple">
-<dt><a class="reference internal" href="TaylorSeriesExpansion.html#l-taylor-series-expansion-apply-taylor"><span class="std std-ref">apply_taylor</span></a>: (UTS, UPS) -&gt; UPS</dt><dd><p>from <a class="reference internal" href="TaylorSeriesExpansion.html#l-taylor-series-expansion"><span class="std std-ref">TaylorSeriesExpansion</span></a>(Coef, Expon, <a class="reference internal" href="SingletonAsOrderedSet.html#l-singleton-as-ordered-set"><span class="std std-ref">SingletonAsOrderedSet</span></a>, UPS, UTS)</p>
-</dd>
-<dt><a class="reference internal" href="TaylorSeriesExpansion.html#id1"><span class="std std-ref">applyTaylor</span></a>: (UTS -&gt; UTS, UPS) -&gt; UPS</dt><dd><p>from <a class="reference internal" href="TaylorSeriesExpansion.html#l-taylor-series-expansion"><span class="std std-ref">TaylorSeriesExpansion</span></a>(Coef, Expon, <a class="reference internal" href="SingletonAsOrderedSet.html#l-singleton-as-ordered-set"><span class="std std-ref">SingletonAsOrderedSet</span></a>, UPS, UTS)</p>
-</dd>
-<dt><a class="reference internal" href="TaylorSeriesExpansion.html#l-taylor-series-expansion-taylor-via-deriv"><span class="std std-ref">taylor_via_deriv</span></a>: (Coef, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> UPS, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a>(Coef -&gt; Coef)) -&gt; UPS</dt><dd><p>from <a class="reference internal" href="TaylorSeriesExpansion.html#l-taylor-series-expansion"><span class="std std-ref">TaylorSeriesExpansion</span></a>(Coef, Expon, <a class="reference internal" href="SingletonAsOrderedSet.html#l-singleton-as-ordered-set"><span class="std std-ref">SingletonAsOrderedSet</span></a>, UPS, UTS)</p>
-</dd>
-<dt><a class="reference internal" href="TaylorSeriesExpansion.html#l-taylor-series-expansion-taylor-via-deriv"><span class="std std-ref">taylor_via_deriv</span></a>: (UPS, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> UPS, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a>(Coef -&gt; Coef)) -&gt; UPS</dt><dd><p>from <a class="reference internal" href="TaylorSeriesExpansion.html#l-taylor-series-expansion"><span class="std std-ref">TaylorSeriesExpansion</span></a>(Coef, Expon, <a class="reference internal" href="SingletonAsOrderedSet.html#l-singleton-as-ordered-set"><span class="std std-ref">SingletonAsOrderedSet</span></a>, UPS, UTS)</p>
-</dd>
-<dt><a class="reference internal" href="TaylorSeriesExpansion.html#l-taylor-series-expansion-taylor-via-lode"><span class="std std-ref">taylor_via_lode</span></a>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> UTS, UPS, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Coef) -&gt; UPS</dt><dd><p>from <a class="reference internal" href="TaylorSeriesExpansion.html#l-taylor-series-expansion"><span class="std std-ref">TaylorSeriesExpansion</span></a>(Coef, Expon, <a class="reference internal" href="SingletonAsOrderedSet.html#l-singleton-as-ordered-set"><span class="std std-ref">SingletonAsOrderedSet</span></a>, UPS, UTS)</p>
+<dl class="simple" id="l5461796c6f72536572696573457870616e73696f6e47656e6572616c697a65642e6170706c795f7461796c6f72">
+<dt><a class="reference internal" href="TaylorSeriesExpansion.html#l5461796c6f72536572696573457870616e73696f6e2e6170706c795f7461796c6f72"><span class="std std-ref">apply_taylor</span></a>: (UTS, UPS) -&gt; UPS</dt><dd><p>from <a class="reference internal" href="TaylorSeriesExpansion.html#l5461796c6f72536572696573457870616e73696f6e"><span class="std std-ref">TaylorSeriesExpansion</span></a>(Coef, Expon, <a class="reference internal" href="SingletonAsOrderedSet.html#l53696e676c65746f6e41734f726465726564536574"><span class="std std-ref">SingletonAsOrderedSet</span></a>, UPS, UTS)</p>
 </dd>
 </dl>
-<p><a class="reference internal" href="TaylorSeriesExpansion.html#l-taylor-series-expansion"><span class="std std-ref">TaylorSeriesExpansion</span></a>(Coef, Expon, <a class="reference internal" href="SingletonAsOrderedSet.html#l-singleton-as-ordered-set"><span class="std std-ref">SingletonAsOrderedSet</span></a>, UPS, UTS)</p>
+<dl class="simple" id="l5461796c6f72536572696573457870616e73696f6e47656e6572616c697a65642e6170706c795461796c6f72">
+<dt><a class="reference internal" href="TaylorSeriesExpansion.html#l5461796c6f72536572696573457870616e73696f6e2e6170706c795461796c6f72"><span class="std std-ref">applyTaylor</span></a>: (UTS -&gt; UTS, UPS) -&gt; UPS</dt><dd><p>from <a class="reference internal" href="TaylorSeriesExpansion.html#l5461796c6f72536572696573457870616e73696f6e"><span class="std std-ref">TaylorSeriesExpansion</span></a>(Coef, Expon, <a class="reference internal" href="SingletonAsOrderedSet.html#l53696e676c65746f6e41734f726465726564536574"><span class="std std-ref">SingletonAsOrderedSet</span></a>, UPS, UTS)</p>
+</dd>
+</dl>
+<dl class="simple" id="l5461796c6f72536572696573457870616e73696f6e47656e6572616c697a65642e7461796c6f725f7669615f6465726976">
+<dt><a class="reference internal" href="TaylorSeriesExpansion.html#l5461796c6f72536572696573457870616e73696f6e2e7461796c6f725f7669615f6465726976"><span class="std std-ref">taylor_via_deriv</span></a>: (Coef, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> UPS, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a>(Coef -&gt; Coef)) -&gt; UPS</dt><dd><p>from <a class="reference internal" href="TaylorSeriesExpansion.html#l5461796c6f72536572696573457870616e73696f6e"><span class="std std-ref">TaylorSeriesExpansion</span></a>(Coef, Expon, <a class="reference internal" href="SingletonAsOrderedSet.html#l53696e676c65746f6e41734f726465726564536574"><span class="std std-ref">SingletonAsOrderedSet</span></a>, UPS, UTS)</p>
+</dd>
+<dt><a class="reference internal" href="TaylorSeriesExpansion.html#l5461796c6f72536572696573457870616e73696f6e2e7461796c6f725f7669615f6465726976"><span class="std std-ref">taylor_via_deriv</span></a>: (UPS, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> UPS, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a>(Coef -&gt; Coef)) -&gt; UPS</dt><dd><p>from <a class="reference internal" href="TaylorSeriesExpansion.html#l5461796c6f72536572696573457870616e73696f6e"><span class="std std-ref">TaylorSeriesExpansion</span></a>(Coef, Expon, <a class="reference internal" href="SingletonAsOrderedSet.html#l53696e676c65746f6e41734f726465726564536574"><span class="std std-ref">SingletonAsOrderedSet</span></a>, UPS, UTS)</p>
+</dd>
+</dl>
+<dl class="simple" id="l5461796c6f72536572696573457870616e73696f6e47656e6572616c697a65642e7461796c6f725f7669615f6c6f6465">
+<dt><a class="reference internal" href="TaylorSeriesExpansion.html#l5461796c6f72536572696573457870616e73696f6e2e7461796c6f725f7669615f6c6f6465"><span class="std std-ref">taylor_via_lode</span></a>: (<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> UTS, UPS, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> Coef) -&gt; UPS</dt><dd><p>from <a class="reference internal" href="TaylorSeriesExpansion.html#l5461796c6f72536572696573457870616e73696f6e"><span class="std std-ref">TaylorSeriesExpansion</span></a>(Coef, Expon, <a class="reference internal" href="SingletonAsOrderedSet.html#l53696e676c65746f6e41734f726465726564536574"><span class="std std-ref">SingletonAsOrderedSet</span></a>, UPS, UTS)</p>
+</dd>
+</dl>
+<p><a class="reference internal" href="TaylorSeriesExpansion.html#l5461796c6f72536572696573457870616e73696f6e"><span class="std std-ref">TaylorSeriesExpansion</span></a>(Coef, Expon, <a class="reference internal" href="SingletonAsOrderedSet.html#l53696e676c65746f6e41734f726465726564536574"><span class="std std-ref">SingletonAsOrderedSet</span></a>, UPS, UTS)</p>
 </div>
 
 
@@ -121,7 +127,7 @@
         <li class="right" >
           <a href="TangentExpansions.html" title="TangentExpansions R"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">TaylorSeriesExpansionGeneralized(Coef, Expon, UPS, UTS)</a></li> 

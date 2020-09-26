@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IndexedProductCategory(A, S) &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>IndexedProductCategory(A, S) &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="IndexedDirectProductCategory.html" title="IndexedDirectProductCategory(A, S)"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Categories.html" accesskey="U">Categories</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">IndexedProductCategory(A, S)</a></li> 
@@ -46,97 +46,123 @@
           <div class="body" role="main">
             
   <div class="section" id="indexedproductcategory-a-s">
-<span id="l-indexed-product-category"></span><span id="index-0"></span><h1>IndexedProductCategory(A, S)<a class="headerlink" href="#indexedproductcategory-a-s" title="Permalink to this headline">¶</a></h1>
+<span id="l496e646578656450726f6475637443617465676f7279"></span><span id="index-0"></span><h1>IndexedProductCategory(A, S)<a class="headerlink" href="#indexedproductcategory-a-s" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/indexedp.spad#L12">indexedp.spad line 12</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/indexedp.spad#L12">[edit on github]</a></p>
 <ul class="simple">
-<li><p>A: <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p></li>
-<li><p>S: <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p></li>
+<li><p>A: <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p></li>
+<li><p>S: <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p></li>
 </ul>
 <p>This category represents the product of some set with respect to an indexing set. The set <code class="docutils literal notranslate"><span class="pre">S</span></code> is considered as the <code class="docutils literal notranslate"><span class="pre">basis</span> <span class="pre">elements\</span> <span class="pre">``''</span></code> and the elements from <code class="docutils literal notranslate"><span class="pre">A</span></code> as <code class="docutils literal notranslate"><span class="pre">coefficients\</span> <span class="pre">``''</span></code>. Elements may have infinite support. For <code class="docutils literal notranslate"><span class="pre">Comparable</span></code> (ordered) <code class="docutils literal notranslate"><span class="pre">S</span></code> we assume that support of each element is well-orderd.</p>
-<dl class="simple">
-<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-0"><span class="std std-ref">0</span></a>: % if A has <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianGroup.html#id1"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, %) -&gt; % if A has <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianMonoid.html#id1"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, %) -&gt; % if A has <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianSemiGroup.html#id1"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>, %) -&gt; % if A has <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l-abelian-semi-group"><span class="std std-ref">AbelianSemiGroup</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianSemiGroup.html#id2"><span class="std std-ref">+</span></a>: (%, %) -&gt; % if A has <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l-abelian-semi-group"><span class="std std-ref">AbelianSemiGroup</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianGroup.html#id2"><span class="std std-ref">-</span></a>: % -&gt; % if A has <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianGroup.html#id2"><span class="std std-ref">-</span></a>: (%, %) -&gt; % if A has <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
-</dd>
-<dt><a class="reference internal" href="BasicType.html#id1"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a> if A has <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-</dd>
-<dt><a class="reference internal" href="BasicType.html#id2"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a> if A has <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-</dd>
-<dt><a class="reference internal" href="CoercibleTo.html#l-coercible-to-coerce"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a> if A has <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+<dl class="simple" id="l496e646578656450726f6475637443617465676f72792e30">
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f69642e30"><span class="std std-ref">0</span></a>: % if A has <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-indexed-product-category-construct"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">construct</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(k: S, c: A) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">construct(l)</span></code> takes a list of terms and creates the object with these components. First components of elements of <code class="docutils literal notranslate"><span class="pre">l</span></code> should be different.</p>
+<dl class="simple" id="l496e646578656450726f6475637443617465676f72792e2a">
+<dt><a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f75702e2a"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, %) -&gt; % if A has <a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f69642e2a"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, %) -&gt; % if A has <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f75702e2a"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>, %) -&gt; % if A has <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f7570"><span class="std std-ref">AbelianSemiGroup</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-indexed-product-category-construct-ordered"></span><dl class="simple" id="index-2">
-<dt><span class="spadfun">constructOrdered</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(k: S, c: A) -&gt; % if S has <a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">constructOrdered(l)</span></code> takes a list of terms and creates the object with these components. The list is assumed to be sorted (in reverse order) with respect to the ordering of <code class="docutils literal notranslate"><span class="pre">S</span></code>. If <code class="docutils literal notranslate"><span class="pre">R</span></code> is a monoid, then the list is assumend to contain no zero elements. Caution: No checking is performed, so this should only be used in cases where those conditions are assured. If in doubt use <code class="docutils literal notranslate"><span class="pre">construct</span></code>.</p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l-single-integer"><span class="std std-ref">SingleInteger</span></a> if A has <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash-update"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a> if A has <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-latex"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a> if A has <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+<dl class="simple" id="l496e646578656450726f6475637443617465676f72792e2b">
+<dt><a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f75702e2b"><span class="std std-ref">+</span></a>: (%, %) -&gt; % if A has <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f7570"><span class="std std-ref">AbelianSemiGroup</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-indexed-product-category-leading-coefficient"></span><dl class="simple" id="index-3">
-<dt><span class="spadfun">leadingCoefficient</span>: % -&gt; A if S has <a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">leadingCoefficient(z)</span></code> returns the coefficient of the leading (with respect to the ordering on the indexing set) monomial of <code class="docutils literal notranslate"><span class="pre">z</span></code>. Error: if <code class="docutils literal notranslate"><span class="pre">z</span></code> has no support.</p>
+<dl class="simple" id="l496e646578656450726f6475637443617465676f72792e2d">
+<dt><a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f75702e2d"><span class="std std-ref">-</span></a>: % -&gt; % if A has <a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f75702e2d"><span class="std std-ref">-</span></a>: (%, %) -&gt; % if A has <a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-indexed-product-category-leading-monomial"></span><dl class="simple" id="index-4">
-<dt><span class="spadfun">leadingMonomial</span>: % -&gt; % if S has <a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">leadingMonomial(x)</span></code> returns the monomial supported by the first element from <code class="docutils literal notranslate"><span class="pre">S</span></code>. Error: if <code class="docutils literal notranslate"><span class="pre">x</span></code> has no support.</p>
+<dl class="simple" id="l496e646578656450726f6475637443617465676f72792e3d">
+<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a> if A has <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-indexed-product-category-leading-support"></span><dl class="simple" id="index-5">
-<dt><span class="spadfun">leadingSupport</span>: % -&gt; S if S has <a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">leadingSupport(z)</span></code> returns the index of leading (with respect to the ordering on the indexing set) monomial of <code class="docutils literal notranslate"><span class="pre">z</span></code>. Error: if <code class="docutils literal notranslate"><span class="pre">z</span></code> has no support.</p>
+<dl class="simple" id="l496e646578656450726f6475637443617465676f72792e7e3d">
+<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e7e3d"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a> if A has <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-indexed-product-category-leading-term"></span><dl class="simple" id="index-6">
-<dt><span class="spadfun">leadingTerm</span>: % -&gt; Record(k: S, c: A) if S has <a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">leadingTerm(x)</span></code> returns the leading (with respect to the ordering on the indexing set) term of <code class="docutils literal notranslate"><span class="pre">z</span></code>. Error: if <code class="docutils literal notranslate"><span class="pre">z</span></code> has no support.</p>
+<dl class="simple" id="l496e646578656450726f6475637443617465676f72792e636f65726365">
+<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f2e636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a> if A has <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-indexed-product-category-map"></span><dl class="simple" id="index-7">
+<span class="target" id="l496e646578656450726f6475637443617465676f72792e636f6e737472756374"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">construct</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> Record(k: S, c: A) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">construct(l)</span></code> takes a list of terms and creates the object with these components. First components of elements of <code class="docutils literal notranslate"><span class="pre">l</span></code> should be different.</p>
+</dd>
+</dl>
+<span class="target" id="l496e646578656450726f6475637443617465676f72792e636f6e7374727563744f726465726564"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">constructOrdered</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> Record(k: S, c: A) -&gt; % if S has <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">constructOrdered(l)</span></code> takes a list of terms and creates the object with these components. The list is assumed to be sorted (in reverse order) with respect to the ordering of <code class="docutils literal notranslate"><span class="pre">S</span></code>. If <code class="docutils literal notranslate"><span class="pre">R</span></code> is a monoid, then the list is assumend to contain no zero elements. Caution: No checking is performed, so this should only be used in cases where those conditions are assured. If in doubt use <code class="docutils literal notranslate"><span class="pre">construct</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="l496e646578656450726f6475637443617465676f72792e68617368">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e68617368"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l53696e676c65496e7465676572"><span class="std std-ref">SingleInteger</span></a> if A has <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l496e646578656450726f6475637443617465676f72792e6861736855706461746521">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6861736855706461746521"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a> if A has <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l496e646578656450726f6475637443617465676f72792e6c61746578">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6c61746578"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> if A has <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l496e646578656450726f6475637443617465676f72792e6c656164696e67436f656666696369656e74"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">leadingCoefficient</span>: % -&gt; A if S has <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">leadingCoefficient(z)</span></code> returns the coefficient of the leading (with respect to the ordering on the indexing set) monomial of <code class="docutils literal notranslate"><span class="pre">z</span></code>. Error: if <code class="docutils literal notranslate"><span class="pre">z</span></code> has no support.</p>
+</dd>
+</dl>
+<span class="target" id="l496e646578656450726f6475637443617465676f72792e6c656164696e674d6f6e6f6d69616c"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">leadingMonomial</span>: % -&gt; % if S has <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">leadingMonomial(x)</span></code> returns the monomial supported by the first element from <code class="docutils literal notranslate"><span class="pre">S</span></code>. Error: if <code class="docutils literal notranslate"><span class="pre">x</span></code> has no support.</p>
+</dd>
+</dl>
+<span class="target" id="l496e646578656450726f6475637443617465676f72792e6c656164696e67537570706f7274"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">leadingSupport</span>: % -&gt; S if S has <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">leadingSupport(z)</span></code> returns the index of leading (with respect to the ordering on the indexing set) monomial of <code class="docutils literal notranslate"><span class="pre">z</span></code>. Error: if <code class="docutils literal notranslate"><span class="pre">z</span></code> has no support.</p>
+</dd>
+</dl>
+<span class="target" id="l496e646578656450726f6475637443617465676f72792e6c656164696e675465726d"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">leadingTerm</span>: % -&gt; Record(k: S, c: A) if S has <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">leadingTerm(x)</span></code> returns the leading (with respect to the ordering on the indexing set) term of <code class="docutils literal notranslate"><span class="pre">z</span></code>. Error: if <code class="docutils literal notranslate"><span class="pre">z</span></code> has no support.</p>
+</dd>
+</dl>
+<span class="target" id="l496e646578656450726f6475637443617465676f72792e6d6170"></span><dl class="simple" id="index-7">
 <dt><span class="spadfun">map</span>: (A -&gt; A, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">map(f,</span> <span class="pre">z)</span></code> returns the new element created by applying the function <code class="docutils literal notranslate"><span class="pre">f</span></code> to each component of the direct product element <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-indexed-product-category-monomial"></span><dl class="simple" id="index-8">
+<span class="target" id="l496e646578656450726f6475637443617465676f72792e6d6f6e6f6d69616c3f"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">monomial?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">monomial?(x)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if <code class="docutils literal notranslate"><span class="pre">x</span></code> is a single monomial, that is support of <code class="docutils literal notranslate"><span class="pre">x</span></code> consists of a single element.</p>
+</dd>
+</dl>
+<span class="target" id="l496e646578656450726f6475637443617465676f72792e6d6f6e6f6d69616c"></span><dl class="simple" id="index-9">
 <dt><span class="spadfun">monomial</span>: (A, S) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">monomial(a,</span> <span class="pre">s)</span></code> constructs a direct product element with the <code class="docutils literal notranslate"><span class="pre">s</span></code> component set to <code class="docutils literal notranslate"><span class="pre">a</span></code></p>
 </dd>
 </dl>
-<span class="target" id="id1"></span><dl class="simple" id="index-9">
-<dt><span class="spadfun">monomial?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">monomial?(x)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if <code class="docutils literal notranslate"><span class="pre">x</span></code> is a single monomial, that is support of <code class="docutils literal notranslate"><span class="pre">x</span></code> consists of a single element.</p>
-</dd>
-<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-opposite"><span class="std std-ref">opposite?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a> if A has <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+<dl class="simple" id="l496e646578656450726f6475637443617465676f72792e6f70706f736974653f">
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f69642e6f70706f736974653f"><span class="std std-ref">opposite?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a> if A has <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-indexed-product-category-reductum"></span><dl class="simple" id="index-10">
-<dt><span class="spadfun">reductum</span>: % -&gt; % if S has <a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">reductum(z)</span></code> returns a new element created by removing the leading coefficient/support pair from the element <code class="docutils literal notranslate"><span class="pre">z</span></code>. Error: if <code class="docutils literal notranslate"><span class="pre">z</span></code> has no support.</p>
-</dd>
-<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-sample"><span class="std std-ref">sample</span></a>: % if A has <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
-</dd>
-<dt><a class="reference internal" href="CancellationAbelianMonoid.html#l-cancellation-abelian-monoid-subtract-if-can"><span class="std std-ref">subtractIfCan</span></a>: (%, %) -&gt; Union(%, failed) if A has <a class="reference internal" href="CancellationAbelianMonoid.html#l-cancellation-abelian-monoid"><span class="std std-ref">CancellationAbelianMonoid</span></a></dt><dd><p>from <a class="reference internal" href="CancellationAbelianMonoid.html#l-cancellation-abelian-monoid"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-zero"><span class="std std-ref">zero?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a> if A has <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+<span class="target" id="l496e646578656450726f6475637443617465676f72792e726564756374756d"></span><dl class="simple" id="index-10">
+<dt><span class="spadfun">reductum</span>: % -&gt; % if S has <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">reductum(z)</span></code> returns a new element created by removing the leading coefficient/support pair from the element <code class="docutils literal notranslate"><span class="pre">z</span></code>. Error: if <code class="docutils literal notranslate"><span class="pre">z</span></code> has no support.</p>
 </dd>
 </dl>
-<p><a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a> if A has <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
-<p><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a> if A has <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
-<p><a class="reference internal" href="AbelianProductCategory.html#l-abelian-product-category"><span class="std std-ref">AbelianProductCategory</span></a> A</p>
-<p><a class="reference internal" href="AbelianSemiGroup.html#l-abelian-semi-group"><span class="std std-ref">AbelianSemiGroup</span></a> if A has <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
-<p><a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a> if A has <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
-<p><a class="reference internal" href="CancellationAbelianMonoid.html#l-cancellation-abelian-monoid"><span class="std std-ref">CancellationAbelianMonoid</span></a> if A has <a class="reference internal" href="CancellationAbelianMonoid.html#l-cancellation-abelian-monoid"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
-<p><a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a> if A has <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
-<p><a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a> if A has <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+<dl class="simple" id="l496e646578656450726f6475637443617465676f72792e73616d706c65">
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f69642e73616d706c65"><span class="std std-ref">sample</span></a>: % if A has <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l496e646578656450726f6475637443617465676f72792e7375627472616374496643616e">
+<dt><a class="reference internal" href="CancellationAbelianMonoid.html#l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f69642e7375627472616374496643616e"><span class="std std-ref">subtractIfCan</span></a>: (%, %) -&gt; Union(%, failed) if A has <a class="reference internal" href="CancellationAbelianMonoid.html#l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964"><span class="std std-ref">CancellationAbelianMonoid</span></a></dt><dd><p>from <a class="reference internal" href="CancellationAbelianMonoid.html#l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l496e646578656450726f6475637443617465676f72792e7a65726f3f">
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f69642e7a65726f3f"><span class="std std-ref">zero?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a> if A has <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+</dl>
+<p><a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a> if A has <a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p>
+<p><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a> if A has <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+<p><a class="reference internal" href="AbelianProductCategory.html#l4162656c69616e50726f6475637443617465676f7279"><span class="std std-ref">AbelianProductCategory</span></a> A</p>
+<p><a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f7570"><span class="std std-ref">AbelianSemiGroup</span></a> if A has <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+<p><a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a> if A has <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+<p><a class="reference internal" href="CancellationAbelianMonoid.html#l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964"><span class="std std-ref">CancellationAbelianMonoid</span></a> if A has <a class="reference internal" href="CancellationAbelianMonoid.html#l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
+<p><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a> if A has <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+<p><a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a> if A has <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
 </div>
 
 
@@ -184,7 +210,7 @@
         <li class="right" >
           <a href="IndexedDirectProductCategory.html" title="IndexedDirectProductCategory(A, S)"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Categories.html" >Categories</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">IndexedProductCategory(A, S)</a></li> 

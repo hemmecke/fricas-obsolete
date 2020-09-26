@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UnivariatePolynomialSquareFree(RC, P) &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>UnivariatePolynomialSquareFree(RC, P) &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="UnivariatePolynomialMultiplicationPackage.html" title="UnivariatePolynomialMultiplicationPackage(R, U)"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">UnivariatePolynomialSquareFree(RC, P)</a></li> 
@@ -46,26 +46,26 @@
           <div class="body" role="main">
             
   <div class="section" id="univariatepolynomialsquarefree-rc-p">
-<span id="l-univariate-polynomial-square-free"></span><span id="index-0"></span><h1>UnivariatePolynomialSquareFree(RC, P)<a class="headerlink" href="#univariatepolynomialsquarefree-rc-p" title="Permalink to this headline">¶</a></h1>
+<span id="l556e6976617269617465506f6c796e6f6d69616c53717561726546726565"></span><span id="index-0"></span><h1>UnivariatePolynomialSquareFree(RC, P)<a class="headerlink" href="#univariatepolynomialsquarefree-rc-p" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/poly.spad#L981">poly.spad line 981</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/poly.spad#L981">[edit on github]</a></p>
 <ul>
-<li><p>RC: <a class="reference internal" href="IntegralDomain.html#l-integral-domain"><span class="std std-ref">IntegralDomain</span></a></p></li>
-<li><p>P: Join(<a class="reference internal" href="UnivariatePolynomialCategory.html#l-univariate-polynomial-category"><span class="std std-ref">UnivariatePolynomialCategory</span></a> RC, <a class="reference internal" href="IntegralDomain.html#l-integral-domain"><span class="std std-ref">IntegralDomain</span></a>) with</p>
+<li><p>RC: <a class="reference internal" href="IntegralDomain.html#l496e74656772616c446f6d61696e"><span class="std std-ref">IntegralDomain</span></a></p></li>
+<li><p>P: Join(<a class="reference internal" href="UnivariatePolynomialCategory.html#l556e6976617269617465506f6c796e6f6d69616c43617465676f7279"><span class="std std-ref">UnivariatePolynomialCategory</span></a> RC, <a class="reference internal" href="IntegralDomain.html#l496e74656772616c446f6d61696e"><span class="std std-ref">IntegralDomain</span></a>) with</p>
 <blockquote>
-<div><p><span class="spadfun">gcd</span>: (%, %) -&gt; %</p>
+<div><p>gcd: (%, %) -&gt; %</p>
 </div></blockquote>
 </li>
 </ul>
 <p>This package provides for square-free decomposition of univariate polynomials over arbitrary rings, i.e. a partial factorization such that each factor is a product of irreducibles with multiplicity one and the factors are pairwise relatively prime. If the ring has characteristic zero, the result is guaranteed to satisfy this condition. If the ring is an infinite ring of finite characteristic, then it may not be possible to decide when polynomials contain factors which are <code class="docutils literal notranslate"><span class="pre">p</span></code>th powers. In this case, the flag associated with that polynomial is set to “nil” (meaning that that polynomials are not guaranteed to be square-free).</p>
-<span class="target" id="l-univariate-polynomial-square-free-bum-in-sep-f-f-e"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">BumInSepFFE</span>: Record(flag: Union(nil, sqfr, irred, prime), factor: P, exponent: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; Record(flag: Union(nil, sqfr, irred, prime), factor: P, exponent: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">BumInSepFFE(f)</span></code> is a local function, exported only because it has multiple conditional definitions.</p>
+<span class="target" id="l556e6976617269617465506f6c796e6f6d69616c537175617265467265652e42756d496e536570464645"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">BumInSepFFE</span>: Record(flag: Union(nil, sqfr, irred, prime), factor: P, exponent: <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; Record(flag: Union(nil, sqfr, irred, prime), factor: P, exponent: <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">BumInSepFFE(f)</span></code> is a local function, exported only because it has multiple conditional definitions.</p>
 </dd>
 </dl>
-<span class="target" id="l-univariate-polynomial-square-free-square-free"></span><dl class="simple" id="index-2">
-<dt><span class="spadfun">squareFree</span>: P -&gt; <a class="reference internal" href="Factored.html#l-factored"><span class="std std-ref">Factored</span></a> P</dt><dd><p><code class="docutils literal notranslate"><span class="pre">squareFree(p)</span></code> computes the square-free factorization of the univariate polynomial <code class="docutils literal notranslate"><span class="pre">p</span></code>. Each factor has no repeated roots, and the factors are pairwise relatively prime.</p>
+<span class="target" id="l556e6976617269617465506f6c796e6f6d69616c537175617265467265652e73717561726546726565"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">squareFree</span>: P -&gt; <a class="reference internal" href="Factored.html#l466163746f726564"><span class="std std-ref">Factored</span></a> P</dt><dd><p><code class="docutils literal notranslate"><span class="pre">squareFree(p)</span></code> computes the square-free factorization of the univariate polynomial <code class="docutils literal notranslate"><span class="pre">p</span></code>. Each factor has no repeated roots, and the factors are pairwise relatively prime.</p>
 </dd>
 </dl>
-<span class="target" id="l-univariate-polynomial-square-free-square-free-part"></span><dl class="simple" id="index-3">
+<span class="target" id="l556e6976617269617465506f6c796e6f6d69616c537175617265467265652e7371756172654672656550617274"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">squareFreePart</span>: P -&gt; P</dt><dd><p><code class="docutils literal notranslate"><span class="pre">squareFreePart(p)</span></code> returns a polynomial which has the same irreducible factors as the univariate polynomial <code class="docutils literal notranslate"><span class="pre">p</span></code>, but each factor has multiplicity one.</p>
 </dd>
 </dl>
@@ -116,7 +116,7 @@
         <li class="right" >
           <a href="UnivariatePolynomialMultiplicationPackage.html" title="UnivariatePolynomialMultiplicationPackage(R, U)"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">UnivariatePolynomialSquareFree(RC, P)</a></li> 

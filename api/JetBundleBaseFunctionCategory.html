@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JetBundleBaseFunctionCategory JB &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>JetBundleBaseFunctionCategory JB &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="IntervalCategory.html" title="IntervalCategory R"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Categories.html" accesskey="U">Categories</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">JetBundleBaseFunctionCategory JB</a></li> 
@@ -46,251 +46,391 @@
           <div class="body" role="main">
             
   <div class="section" id="jetbundlebasefunctioncategory-jb">
-<span id="l-jet-bundle-base-function-category"></span><span id="index-0"></span><h1>JetBundleBaseFunctionCategory JB<a class="headerlink" href="#jetbundlebasefunctioncategory-jb" title="Permalink to this headline">¶</a></h1>
+<span id="l4a657442756e646c654261736546756e6374696f6e43617465676f7279"></span><span id="index-0"></span><h1>JetBundleBaseFunctionCategory JB<a class="headerlink" href="#jetbundlebasefunctioncategory-jb" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/jet.spad#L1249">jet.spad line 1249</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/jet.spad#L1249">[edit on github]</a></p>
 <ul class="simple">
-<li><p>JB: <a class="reference internal" href="JetBundleCategory.html#l-jet-bundle-category"><span class="std std-ref">JetBundleCategory</span></a></p></li>
+<li><p>JB: <a class="reference internal" href="JetBundleCategory.html#l4a657442756e646c6543617465676f7279"><span class="std std-ref">JetBundleCategory</span></a></p></li>
 </ul>
-<p><a class="reference internal" href="#l-jet-bundle-base-function-category"><span class="std std-ref">JetBundleBaseFunctionCategory</span></a> defines the category of functions (local sections) of the base space of a jet bundle, i.e. functions depending only on the independent variables. Such a category is needed e.g. for the representation of solutions.</p>
-<dl class="simple">
-<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-0"><span class="std std-ref">0</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
-</dd>
-<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-1"><span class="std std-ref">1</span></a>: %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
-</dd>
-<dt><a class="reference internal" href="Magma.html#id1"><span class="std std-ref">*</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianGroup.html#id1"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianMonoid.html#id1"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianSemiGroup.html#id1"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l-abelian-semi-group"><span class="std std-ref">AbelianSemiGroup</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianSemiGroup.html#id2"><span class="std std-ref">+</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l-abelian-semi-group"><span class="std std-ref">AbelianSemiGroup</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianGroup.html#id2"><span class="std std-ref">-</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianGroup.html#id2"><span class="std std-ref">-</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
-</dd>
-<dt><a class="reference internal" href="BasicType.html#id1"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-</dd>
-<dt><a class="reference internal" href="MagmaWithUnit.html#id1"><span class="std std-ref">^</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
-</dd>
-<dt><a class="reference internal" href="Magma.html#id2"><span class="std std-ref">^</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
-</dd>
-<dt><a class="reference internal" href="BasicType.html#id2"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-</dd>
-<dt><a class="reference internal" href="Rng.html#l-rng-annihilate"><span class="std std-ref">annihilate?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Rng.html#l-rng"><span class="std std-ref">Rng</span></a></p>
-</dd>
-<dt><a class="reference internal" href="NonAssociativeSemiRng.html#l-non-associative-semi-rng-anti-commutator"><span class="std std-ref">antiCommutator</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeSemiRng.html#l-non-associative-semi-rng"><span class="std std-ref">NonAssociativeSemiRng</span></a></p>
-</dd>
-<dt><a class="reference internal" href="EntireRing.html#l-entire-ring-associates"><span class="std std-ref">associates?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="EntireRing.html#l-entire-ring"><span class="std std-ref">EntireRing</span></a></p>
-</dd>
-<dt><a class="reference internal" href="NonAssociativeRng.html#l-non-associative-rng-associator"><span class="std std-ref">associator</span></a>: (%, %, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRng.html#l-non-associative-rng"><span class="std std-ref">NonAssociativeRng</span></a></p>
-</dd>
-<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category-auto-reduce"><span class="std std-ref">autoReduce</span></a>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
-</dd>
-<dt><a class="reference internal" href="NonAssociativeRing.html#l-non-associative-ring-characteristic"><span class="std std-ref">characteristic</span></a>: () -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="NonAssociativeRing.html#l-non-associative-ring"><span class="std std-ref">NonAssociativeRing</span></a></p>
-</dd>
-<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category-class"><span class="std std-ref">class</span></a>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
-</dd>
-<dt><a class="reference internal" href="Algebra.html#l-algebra-coerce"><span class="std std-ref">coerce</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="Algebra.html#l-algebra"><span class="std std-ref">Algebra</span></a> %</p>
-</dd>
-<dt><a class="reference internal" href="CoercibleTo.html#l-coercible-to-coerce"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
-</dd>
-<dt><a class="reference internal" href="NonAssociativeRing.html#l-non-associative-ring-coerce"><span class="std std-ref">coerce</span></a>: <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a> -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRing.html#l-non-associative-ring"><span class="std std-ref">NonAssociativeRing</span></a></p>
-</dd>
-<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category-coerce"><span class="std std-ref">coerce</span></a>: JB -&gt; %</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
-</dd>
-<dt><a class="reference internal" href="NonAssociativeRng.html#l-non-associative-rng-commutator"><span class="std std-ref">commutator</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRng.html#l-non-associative-rng"><span class="std std-ref">NonAssociativeRng</span></a></p>
-</dd>
-<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category-const"><span class="std std-ref">const?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
-</dd>
-<dt><a class="reference internal" href="PartialDifferentialRing.html#l-partial-differential-ring-d"><span class="std std-ref">D</span></a>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="PartialDifferentialRing.html#l-partial-differential-ring"><span class="std std-ref">PartialDifferentialRing</span></a> <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a></p>
-</dd>
-<dt><a class="reference internal" href="PartialDifferentialRing.html#l-partial-differential-ring-d"><span class="std std-ref">D</span></a>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="PartialDifferentialRing.html#l-partial-differential-ring"><span class="std std-ref">PartialDifferentialRing</span></a> <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a></p>
-</dd>
-<dt><a class="reference internal" href="PartialDifferentialRing.html#l-partial-differential-ring-d"><span class="std std-ref">D</span></a>: (%, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="PartialDifferentialRing.html#l-partial-differential-ring"><span class="std std-ref">PartialDifferentialRing</span></a> <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a></p>
-</dd>
-<dt><a class="reference internal" href="PartialDifferentialRing.html#l-partial-differential-ring-d"><span class="std std-ref">D</span></a>: (%, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="PartialDifferentialRing.html#l-partial-differential-ring"><span class="std std-ref">PartialDifferentialRing</span></a> <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a></p>
-</dd>
-<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category-denominator"><span class="std std-ref">denominator</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
-</dd>
-<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category-differentiate"><span class="std std-ref">differentiate</span></a>: (%, JB) -&gt; %</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
-</dd>
-<dt><a class="reference internal" href="PartialDifferentialRing.html#l-partial-differential-ring-differentiate"><span class="std std-ref">differentiate</span></a>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="PartialDifferentialRing.html#l-partial-differential-ring"><span class="std std-ref">PartialDifferentialRing</span></a> <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a></p>
-</dd>
-<dt><a class="reference internal" href="PartialDifferentialRing.html#l-partial-differential-ring-differentiate"><span class="std std-ref">differentiate</span></a>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="PartialDifferentialRing.html#l-partial-differential-ring"><span class="std std-ref">PartialDifferentialRing</span></a> <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a></p>
-</dd>
-<dt><a class="reference internal" href="PartialDifferentialRing.html#l-partial-differential-ring-differentiate"><span class="std std-ref">differentiate</span></a>: (%, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="PartialDifferentialRing.html#l-partial-differential-ring"><span class="std std-ref">PartialDifferentialRing</span></a> <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a></p>
-</dd>
-<dt><a class="reference internal" href="PartialDifferentialRing.html#l-partial-differential-ring-differentiate"><span class="std std-ref">differentiate</span></a>: (%, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="PartialDifferentialRing.html#l-partial-differential-ring"><span class="std std-ref">PartialDifferentialRing</span></a> <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a></p>
-</dd>
-<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category-dimension"><span class="std std-ref">dimension</span></a>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %, <a class="reference internal" href="SparseEchelonMatrix.html#l-sparse-echelon-matrix"><span class="std std-ref">SparseEchelonMatrix</span></a>(JB, %), <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
-</dd>
-<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category-d-subst"><span class="std std-ref">dSubst</span></a>: (%, JB, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
-</dd>
-<dt><a class="reference internal" href="EntireRing.html#l-entire-ring-exquo"><span class="std std-ref">exquo</span></a>: (%, %) -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="EntireRing.html#l-entire-ring"><span class="std std-ref">EntireRing</span></a></p>
-</dd>
-<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category-extract-symbol"><span class="std std-ref">extractSymbol</span></a>: <a class="reference internal" href="SparseEchelonMatrix.html#l-sparse-echelon-matrix"><span class="std std-ref">SparseEchelonMatrix</span></a>(JB, %) -&gt; <a class="reference internal" href="SparseEchelonMatrix.html#l-sparse-echelon-matrix"><span class="std std-ref">SparseEchelonMatrix</span></a>(JB, %)</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
-</dd>
-<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category-formal-diff2"><span class="std std-ref">formalDiff2</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>, <a class="reference internal" href="SparseEchelonMatrix.html#l-sparse-echelon-matrix"><span class="std std-ref">SparseEchelonMatrix</span></a>(JB, %)) -&gt; Record(DPhi: %, JVars: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> JB)</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
-</dd>
-<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category-formal-diff2"><span class="std std-ref">formalDiff2</span></a>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>, <a class="reference internal" href="SparseEchelonMatrix.html#l-sparse-echelon-matrix"><span class="std std-ref">SparseEchelonMatrix</span></a>(JB, %)) -&gt; Record(DSys: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %, JVars: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> JB)</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
-</dd>
-<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category-formal-diff"><span class="std std-ref">formalDiff</span></a>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
-</dd>
-<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category-formal-diff"><span class="std std-ref">formalDiff</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
-</dd>
-<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category-formal-diff"><span class="std std-ref">formalDiff</span></a>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
-</dd>
-<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category-free-of"><span class="std std-ref">freeOf?</span></a>: (%, JB) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
-</dd>
-<dt><a class="reference internal" href="GcdDomain.html#l-gcd-domain-gcd"><span class="std std-ref">gcd</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="GcdDomain.html#l-gcd-domain"><span class="std std-ref">GcdDomain</span></a></p>
-</dd>
-<dt><a class="reference internal" href="GcdDomain.html#l-gcd-domain-gcd"><span class="std std-ref">gcd</span></a>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> % -&gt; %</dt><dd><p>from <a class="reference internal" href="GcdDomain.html#l-gcd-domain"><span class="std std-ref">GcdDomain</span></a></p>
-</dd>
-<dt><a class="reference internal" href="GcdDomain.html#l-gcd-domain-gcd-polynomial"><span class="std std-ref">gcdPolynomial</span></a>: (<a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %, <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %) -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l-sparse-univariate-polynomial"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %</dt><dd><p>from <a class="reference internal" href="GcdDomain.html#l-gcd-domain"><span class="std std-ref">GcdDomain</span></a></p>
-</dd>
-<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category-get-notation"><span class="std std-ref">getNotation</span></a>: () -&gt; <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a></dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l-single-integer"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash-update"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category-jacobi-matrix"><span class="std std-ref">jacobiMatrix</span></a>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> JB) -&gt; <a class="reference internal" href="SparseEchelonMatrix.html#l-sparse-echelon-matrix"><span class="std std-ref">SparseEchelonMatrix</span></a>(JB, %)</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
-</dd>
-<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category-jacobi-matrix"><span class="std std-ref">jacobiMatrix</span></a>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> % -&gt; <a class="reference internal" href="SparseEchelonMatrix.html#l-sparse-echelon-matrix"><span class="std std-ref">SparseEchelonMatrix</span></a>(JB, %)</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
-</dd>
-<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category-jet-variables"><span class="std std-ref">jetVariables</span></a>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> JB</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-latex"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="GcdDomain.html#l-gcd-domain-lcm"><span class="std std-ref">lcm</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="GcdDomain.html#l-gcd-domain"><span class="std std-ref">GcdDomain</span></a></p>
-</dd>
-<dt><a class="reference internal" href="GcdDomain.html#l-gcd-domain-lcm"><span class="std std-ref">lcm</span></a>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> % -&gt; %</dt><dd><p>from <a class="reference internal" href="GcdDomain.html#l-gcd-domain"><span class="std std-ref">GcdDomain</span></a></p>
-</dd>
-<dt><a class="reference internal" href="LeftOreRing.html#l-left-ore-ring-lcm-coef"><span class="std std-ref">lcmCoef</span></a>: (%, %) -&gt; Record(llcm_res: %, coeff1: %, coeff2: %)</dt><dd><p>from <a class="reference internal" href="LeftOreRing.html#l-left-ore-ring"><span class="std std-ref">LeftOreRing</span></a></p>
-</dd>
-<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category-leading-der"><span class="std std-ref">leadingDer</span></a>: % -&gt; JB</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
-</dd>
-<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-left-power"><span class="std std-ref">leftPower</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
-</dd>
-<dt><a class="reference internal" href="Magma.html#l-magma-left-power"><span class="std std-ref">leftPower</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
-</dd>
-<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-left-recip"><span class="std std-ref">leftRecip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
-</dd>
-<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category-num-dep-var"><span class="std std-ref">numDepVar</span></a>: () -&gt; <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a></dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
-</dd>
-<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category-numerator"><span class="std std-ref">numerator</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
-</dd>
-<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category-num-ind-var"><span class="std std-ref">numIndVar</span></a>: () -&gt; <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a></dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
-</dd>
-<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-one"><span class="std std-ref">one?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-opposite"><span class="std std-ref">opposite?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
-</dd>
-<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category-order"><span class="std std-ref">order</span></a>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
-</dd>
-<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category-order-dim"><span class="std std-ref">orderDim</span></a>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %, <a class="reference internal" href="SparseEchelonMatrix.html#l-sparse-echelon-matrix"><span class="std std-ref">SparseEchelonMatrix</span></a>(JB, %), <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
-</dd>
-<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category-p"><span class="std std-ref">P</span></a>: (<a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
-</dd>
-<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category-p"><span class="std std-ref">P</span></a>: (<a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
-</dd>
-<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category-p"><span class="std std-ref">P</span></a>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a> -&gt; %</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
-</dd>
-<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category-p"><span class="std std-ref">P</span></a>: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a> -&gt; %</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
-</dd>
-<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-recip"><span class="std std-ref">recip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
-</dd>
-<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category-reduce-mod"><span class="std std-ref">reduceMod</span></a>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
-</dd>
-<dt><a class="reference internal" href="RetractableTo.html#l-retractable-to-retract"><span class="std std-ref">retract</span></a>: % -&gt; JB</dt><dd><p>from <a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> JB</p>
-</dd>
-<dt><a class="reference internal" href="RetractableTo.html#l-retractable-to-retract-if-can"><span class="std std-ref">retractIfCan</span></a>: % -&gt; Union(JB, failed)</dt><dd><p>from <a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> JB</p>
-</dd>
-<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-right-power"><span class="std std-ref">rightPower</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
-</dd>
-<dt><a class="reference internal" href="Magma.html#l-magma-right-power"><span class="std std-ref">rightPower</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
-</dd>
-<dt><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit-right-recip"><span class="std std-ref">rightRecip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-sample"><span class="std std-ref">sample</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
-</dd>
-<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category-set-notation"><span class="std std-ref">setNotation</span></a>: <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a> -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
-</dd>
-<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category-simplify"><span class="std std-ref">simplify</span></a>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %, <a class="reference internal" href="SparseEchelonMatrix.html#l-sparse-echelon-matrix"><span class="std std-ref">SparseEchelonMatrix</span></a>(JB, %)) -&gt; Record(Sys: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %, JM: <a class="reference internal" href="SparseEchelonMatrix.html#l-sparse-echelon-matrix"><span class="std std-ref">SparseEchelonMatrix</span></a>(JB, %), Depend: Union(failed, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>))</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
-</dd>
-<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category-simp-mod"><span class="std std-ref">simpMod</span></a>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
-</dd>
-<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category-simp-mod"><span class="std std-ref">simpMod</span></a>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %, <a class="reference internal" href="SparseEchelonMatrix.html#l-sparse-echelon-matrix"><span class="std std-ref">SparseEchelonMatrix</span></a>(JB, %), <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %) -&gt; Record(Sys: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %, JM: <a class="reference internal" href="SparseEchelonMatrix.html#l-sparse-echelon-matrix"><span class="std std-ref">SparseEchelonMatrix</span></a>(JB, %), Depend: Union(failed, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>))</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
-</dd>
-<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category-simp-one"><span class="std std-ref">simpOne</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
-</dd>
-<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category-solve-for"><span class="std std-ref">solveFor</span></a>: (%, JB) -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
-</dd>
-<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category-sort-l-d"><span class="std std-ref">sortLD</span></a>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
-</dd>
-<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category-subst"><span class="std std-ref">subst</span></a>: (%, JB, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
-</dd>
-<dt><a class="reference internal" href="CancellationAbelianMonoid.html#l-cancellation-abelian-monoid-subtract-if-can"><span class="std std-ref">subtractIfCan</span></a>: (%, %) -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="CancellationAbelianMonoid.html#l-cancellation-abelian-monoid"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
-</dd>
-<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category-symbol"><span class="std std-ref">symbol</span></a>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> % -&gt; <a class="reference internal" href="SparseEchelonMatrix.html#l-sparse-echelon-matrix"><span class="std std-ref">SparseEchelonMatrix</span></a>(JB, %)</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
-</dd>
-<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category-u"><span class="std std-ref">U</span></a>: () -&gt; %</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
-</dd>
-<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category-u"><span class="std std-ref">U</span></a>: <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a> -&gt; %</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
-</dd>
-<dt><a class="reference internal" href="EntireRing.html#l-entire-ring-unit"><span class="std std-ref">unit?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="EntireRing.html#l-entire-ring"><span class="std std-ref">EntireRing</span></a></p>
-</dd>
-<dt><a class="reference internal" href="EntireRing.html#l-entire-ring-unit-canonical"><span class="std std-ref">unitCanonical</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="EntireRing.html#l-entire-ring"><span class="std std-ref">EntireRing</span></a></p>
-</dd>
-<dt><a class="reference internal" href="EntireRing.html#l-entire-ring-unit-normal"><span class="std std-ref">unitNormal</span></a>: % -&gt; Record(unit: %, canonical: %, associate: %)</dt><dd><p>from <a class="reference internal" href="EntireRing.html#l-entire-ring"><span class="std std-ref">EntireRing</span></a></p>
-</dd>
-<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category-x"><span class="std std-ref">X</span></a>: () -&gt; %</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
-</dd>
-<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category-x"><span class="std std-ref">X</span></a>: <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a> -&gt; %</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
-</dd>
-<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-zero"><span class="std std-ref">zero?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+<p><a class="reference internal" href="#l4a657442756e646c654261736546756e6374696f6e43617465676f7279"><span class="std std-ref">JetBundleBaseFunctionCategory</span></a> defines the category of functions (local sections) of the base space of a jet bundle, i.e. functions depending only on the independent variables. Such a category is needed e.g. for the representation of solutions.</p>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e30">
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f69642e30"><span class="std std-ref">0</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
 </dd>
 </dl>
-<p><a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
-<p><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
-<p><a class="reference internal" href="AbelianSemiGroup.html#l-abelian-semi-group"><span class="std std-ref">AbelianSemiGroup</span></a></p>
-<p><a class="reference internal" href="Algebra.html#l-algebra"><span class="std std-ref">Algebra</span></a> %</p>
-<p><a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-<p><a class="reference internal" href="BiModule.html#l-bi-module"><span class="std std-ref">BiModule</span></a>(%, %)</p>
-<p><a class="reference internal" href="CancellationAbelianMonoid.html#l-cancellation-abelian-monoid"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
-<p><a class="reference internal" href="CoercibleFrom.html#l-coercible-from"><span class="std std-ref">CoercibleFrom</span></a> JB</p>
-<p><a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
-<p><a class="reference internal" href="CommutativeRing.html#l-commutative-ring"><span class="std std-ref">CommutativeRing</span></a></p>
-<p><a class="reference internal" href="CommutativeStar.html#l-commutative-star"><span class="std std-ref">CommutativeStar</span></a></p>
-<p><a class="reference internal" href="EntireRing.html#l-entire-ring"><span class="std std-ref">EntireRing</span></a></p>
-<p><a class="reference internal" href="GcdDomain.html#l-gcd-domain"><span class="std std-ref">GcdDomain</span></a></p>
-<p><a class="reference internal" href="IntegralDomain.html#l-integral-domain"><span class="std std-ref">IntegralDomain</span></a></p>
-<p><a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
-<p><a class="reference internal" href="LeftModule.html#l-left-module"><span class="std std-ref">LeftModule</span></a> %</p>
-<p><a class="reference internal" href="LeftOreRing.html#l-left-ore-ring"><span class="std std-ref">LeftOreRing</span></a></p>
-<p><a class="reference internal" href="Magma.html#l-magma"><span class="std std-ref">Magma</span></a></p>
-<p><a class="reference internal" href="MagmaWithUnit.html#l-magma-with-unit"><span class="std std-ref">MagmaWithUnit</span></a></p>
-<p><a class="reference internal" href="Module.html#l-module"><span class="std std-ref">Module</span></a> %</p>
-<p><a class="reference internal" href="Monoid.html#l-monoid"><span class="std std-ref">Monoid</span></a></p>
-<p><a class="reference internal" href="NonAssociativeRing.html#l-non-associative-ring"><span class="std std-ref">NonAssociativeRing</span></a></p>
-<p><a class="reference internal" href="NonAssociativeRng.html#l-non-associative-rng"><span class="std std-ref">NonAssociativeRng</span></a></p>
-<p><a class="reference internal" href="NonAssociativeSemiRing.html#l-non-associative-semi-ring"><span class="std std-ref">NonAssociativeSemiRing</span></a></p>
-<p><a class="reference internal" href="NonAssociativeSemiRng.html#l-non-associative-semi-rng"><span class="std std-ref">NonAssociativeSemiRng</span></a></p>
-<p><a class="reference internal" href="noZeroDivisors.html#l-no-zero-divisors"><span class="std std-ref">noZeroDivisors</span></a></p>
-<p><a class="reference internal" href="PartialDifferentialRing.html#l-partial-differential-ring"><span class="std std-ref">PartialDifferentialRing</span></a> <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a></p>
-<p><a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> JB</p>
-<p><a class="reference internal" href="RightModule.html#l-right-module"><span class="std std-ref">RightModule</span></a> %</p>
-<p><a class="reference internal" href="Ring.html#l-ring"><span class="std std-ref">Ring</span></a></p>
-<p><a class="reference internal" href="Rng.html#l-rng"><span class="std std-ref">Rng</span></a></p>
-<p><a class="reference internal" href="SemiGroup.html#l-semi-group"><span class="std std-ref">SemiGroup</span></a></p>
-<p><a class="reference internal" href="SemiRing.html#l-semi-ring"><span class="std std-ref">SemiRing</span></a></p>
-<p><a class="reference internal" href="SemiRng.html#l-semi-rng"><span class="std std-ref">SemiRng</span></a></p>
-<p><a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-<p><a class="reference internal" href="TwoSidedRecip.html#l-two-sided-recip"><span class="std std-ref">TwoSidedRecip</span></a></p>
-<p><a class="reference internal" href="unitsKnown.html#l-units-known"><span class="std std-ref">unitsKnown</span></a></p>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e31">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e69742e31"><span class="std std-ref">1</span></a>: %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e2a">
+<dt><a class="reference internal" href="Magma.html#l4d61676d612e2a"><span class="std std-ref">*</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l4d61676d61"><span class="std std-ref">Magma</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f75702e2a"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f69642e2a"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f75702e2a"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f7570"><span class="std std-ref">AbelianSemiGroup</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e2b">
+<dt><a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f75702e2b"><span class="std std-ref">+</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f7570"><span class="std std-ref">AbelianSemiGroup</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e2d">
+<dt><a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f75702e2d"><span class="std std-ref">-</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f75702e2d"><span class="std std-ref">-</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e3d">
+<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e5e">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e69742e5e"><span class="std std-ref">^</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Magma.html#l4d61676d612e5e"><span class="std std-ref">^</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l4d61676d61"><span class="std std-ref">Magma</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e7e3d">
+<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e7e3d"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e616e6e6968696c6174653f">
+<dt><a class="reference internal" href="Rng.html#l526e672e616e6e6968696c6174653f"><span class="std std-ref">annihilate?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Rng.html#l526e67"><span class="std std-ref">Rng</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e616e7469436f6d6d757461746f72">
+<dt><a class="reference internal" href="NonAssociativeSemiRng.html#l4e6f6e4173736f6369617469766553656d69526e672e616e7469436f6d6d757461746f72"><span class="std std-ref">antiCommutator</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeSemiRng.html#l4e6f6e4173736f6369617469766553656d69526e67"><span class="std std-ref">NonAssociativeSemiRng</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e6173736f6369617465733f">
+<dt><a class="reference internal" href="EntireRing.html#l456e7469726552696e672e6173736f6369617465733f"><span class="std std-ref">associates?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="EntireRing.html#l456e7469726552696e67"><span class="std std-ref">EntireRing</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e6173736f636961746f72">
+<dt><a class="reference internal" href="NonAssociativeRng.html#l4e6f6e4173736f63696174697665526e672e6173736f636961746f72"><span class="std std-ref">associator</span></a>: (%, %, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRng.html#l4e6f6e4173736f63696174697665526e67"><span class="std std-ref">NonAssociativeRng</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e6175746f526564756365">
+<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f72792e6175746f526564756365"><span class="std std-ref">autoReduce</span></a>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f7279"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e6368617261637465726973746963">
+<dt><a class="reference internal" href="NonAssociativeRing.html#l4e6f6e4173736f6369617469766552696e672e6368617261637465726973746963"><span class="std std-ref">characteristic</span></a>: () -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="NonAssociativeRing.html#l4e6f6e4173736f6369617469766552696e67"><span class="std std-ref">NonAssociativeRing</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e636c617373">
+<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f72792e636c617373"><span class="std std-ref">class</span></a>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f7279"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e636f65726365">
+<dt><a class="reference internal" href="Algebra.html#l416c67656272612e636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="Algebra.html#l416c6765627261"><span class="std std-ref">Algebra</span></a> %</p>
+</dd>
+<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f2e636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+</dd>
+<dt><a class="reference internal" href="NonAssociativeRing.html#l4e6f6e4173736f6369617469766552696e672e636f65726365"><span class="std std-ref">coerce</span></a>: <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a> -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRing.html#l4e6f6e4173736f6369617469766552696e67"><span class="std std-ref">NonAssociativeRing</span></a></p>
+</dd>
+<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f72792e636f65726365"><span class="std std-ref">coerce</span></a>: JB -&gt; %</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f7279"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e636f6d6d757461746f72">
+<dt><a class="reference internal" href="NonAssociativeRng.html#l4e6f6e4173736f63696174697665526e672e636f6d6d757461746f72"><span class="std std-ref">commutator</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRng.html#l4e6f6e4173736f63696174697665526e67"><span class="std std-ref">NonAssociativeRng</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e636f6e73743f">
+<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f72792e636f6e73743f"><span class="std std-ref">const?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f7279"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e44">
+<dt><a class="reference internal" href="PartialDifferentialRing.html#l5061727469616c446966666572656e7469616c52696e672e44"><span class="std std-ref">D</span></a>: (%, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="PartialDifferentialRing.html#l5061727469616c446966666572656e7469616c52696e67"><span class="std std-ref">PartialDifferentialRing</span></a> <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a></p>
+</dd>
+<dt><a class="reference internal" href="PartialDifferentialRing.html#l5061727469616c446966666572656e7469616c52696e672e44"><span class="std std-ref">D</span></a>: (%, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="PartialDifferentialRing.html#l5061727469616c446966666572656e7469616c52696e67"><span class="std std-ref">PartialDifferentialRing</span></a> <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a></p>
+</dd>
+<dt><a class="reference internal" href="PartialDifferentialRing.html#l5061727469616c446966666572656e7469616c52696e672e44"><span class="std std-ref">D</span></a>: (%, <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="PartialDifferentialRing.html#l5061727469616c446966666572656e7469616c52696e67"><span class="std std-ref">PartialDifferentialRing</span></a> <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a></p>
+</dd>
+<dt><a class="reference internal" href="PartialDifferentialRing.html#l5061727469616c446966666572656e7469616c52696e672e44"><span class="std std-ref">D</span></a>: (%, <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="PartialDifferentialRing.html#l5061727469616c446966666572656e7469616c52696e67"><span class="std std-ref">PartialDifferentialRing</span></a> <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e64656e6f6d696e61746f72">
+<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f72792e64656e6f6d696e61746f72"><span class="std std-ref">denominator</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f7279"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e646966666572656e7469617465">
+<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f72792e646966666572656e7469617465"><span class="std std-ref">differentiate</span></a>: (%, JB) -&gt; %</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f7279"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
+</dd>
+<dt><a class="reference internal" href="PartialDifferentialRing.html#l5061727469616c446966666572656e7469616c52696e672e646966666572656e7469617465"><span class="std std-ref">differentiate</span></a>: (%, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="PartialDifferentialRing.html#l5061727469616c446966666572656e7469616c52696e67"><span class="std std-ref">PartialDifferentialRing</span></a> <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a></p>
+</dd>
+<dt><a class="reference internal" href="PartialDifferentialRing.html#l5061727469616c446966666572656e7469616c52696e672e646966666572656e7469617465"><span class="std std-ref">differentiate</span></a>: (%, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="PartialDifferentialRing.html#l5061727469616c446966666572656e7469616c52696e67"><span class="std std-ref">PartialDifferentialRing</span></a> <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a></p>
+</dd>
+<dt><a class="reference internal" href="PartialDifferentialRing.html#l5061727469616c446966666572656e7469616c52696e672e646966666572656e7469617465"><span class="std std-ref">differentiate</span></a>: (%, <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="PartialDifferentialRing.html#l5061727469616c446966666572656e7469616c52696e67"><span class="std std-ref">PartialDifferentialRing</span></a> <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a></p>
+</dd>
+<dt><a class="reference internal" href="PartialDifferentialRing.html#l5061727469616c446966666572656e7469616c52696e672e646966666572656e7469617465"><span class="std std-ref">differentiate</span></a>: (%, <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="PartialDifferentialRing.html#l5061727469616c446966666572656e7469616c52696e67"><span class="std std-ref">PartialDifferentialRing</span></a> <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e64696d656e73696f6e">
+<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f72792e64696d656e73696f6e"><span class="std std-ref">dimension</span></a>: (<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %, <a class="reference internal" href="SparseEchelonMatrix.html#l537061727365456368656c6f6e4d6174726978"><span class="std std-ref">SparseEchelonMatrix</span></a>(JB, %), <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f7279"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e645375627374">
+<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f72792e645375627374"><span class="std std-ref">dSubst</span></a>: (%, JB, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f7279"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e657871756f">
+<dt><a class="reference internal" href="EntireRing.html#l456e7469726552696e672e657871756f"><span class="std std-ref">exquo</span></a>: (%, %) -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="EntireRing.html#l456e7469726552696e67"><span class="std std-ref">EntireRing</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e6578747261637453796d626f6c">
+<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f72792e6578747261637453796d626f6c"><span class="std std-ref">extractSymbol</span></a>: <a class="reference internal" href="SparseEchelonMatrix.html#l537061727365456368656c6f6e4d6174726978"><span class="std std-ref">SparseEchelonMatrix</span></a>(JB, %) -&gt; <a class="reference internal" href="SparseEchelonMatrix.html#l537061727365456368656c6f6e4d6174726978"><span class="std std-ref">SparseEchelonMatrix</span></a>(JB, %)</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f7279"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e666f726d616c4469666632">
+<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f72792e666f726d616c4469666632"><span class="std std-ref">formalDiff2</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>, <a class="reference internal" href="SparseEchelonMatrix.html#l537061727365456368656c6f6e4d6174726978"><span class="std std-ref">SparseEchelonMatrix</span></a>(JB, %)) -&gt; Record(DPhi: %, JVars: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> JB)</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f7279"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
+</dd>
+<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f72792e666f726d616c4469666632"><span class="std std-ref">formalDiff2</span></a>: (<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>, <a class="reference internal" href="SparseEchelonMatrix.html#l537061727365456368656c6f6e4d6174726978"><span class="std std-ref">SparseEchelonMatrix</span></a>(JB, %)) -&gt; Record(DSys: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %, JVars: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> JB)</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f7279"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e666f726d616c44696666">
+<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f72792e666f726d616c44696666"><span class="std std-ref">formalDiff</span></a>: (%, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f7279"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
+</dd>
+<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f72792e666f726d616c44696666"><span class="std std-ref">formalDiff</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f7279"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
+</dd>
+<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f72792e666f726d616c44696666"><span class="std std-ref">formalDiff</span></a>: (<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f7279"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e667265654f663f">
+<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f72792e667265654f663f"><span class="std std-ref">freeOf?</span></a>: (%, JB) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f7279"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e676364">
+<dt><a class="reference internal" href="GcdDomain.html#l476364446f6d61696e2e676364"><span class="std std-ref">gcd</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="GcdDomain.html#l476364446f6d61696e"><span class="std std-ref">GcdDomain</span></a></p>
+</dd>
+<dt><a class="reference internal" href="GcdDomain.html#l476364446f6d61696e2e676364"><span class="std std-ref">gcd</span></a>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> % -&gt; %</dt><dd><p>from <a class="reference internal" href="GcdDomain.html#l476364446f6d61696e"><span class="std std-ref">GcdDomain</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e676364506f6c796e6f6d69616c">
+<dt><a class="reference internal" href="GcdDomain.html#l476364446f6d61696e2e676364506f6c796e6f6d69616c"><span class="std std-ref">gcdPolynomial</span></a>: (<a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %, <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %) -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> %</dt><dd><p>from <a class="reference internal" href="GcdDomain.html#l476364446f6d61696e"><span class="std std-ref">GcdDomain</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e6765744e6f746174696f6e">
+<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f72792e6765744e6f746174696f6e"><span class="std std-ref">getNotation</span></a>: () -&gt; <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a></dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f7279"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e68617368">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e68617368"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l53696e676c65496e7465676572"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e6861736855706461746521">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6861736855706461746521"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e6a61636f62694d6174726978">
+<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f72792e6a61636f62694d6174726978"><span class="std std-ref">jacobiMatrix</span></a>: (<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> JB) -&gt; <a class="reference internal" href="SparseEchelonMatrix.html#l537061727365456368656c6f6e4d6174726978"><span class="std std-ref">SparseEchelonMatrix</span></a>(JB, %)</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f7279"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
+</dd>
+<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f72792e6a61636f62694d6174726978"><span class="std std-ref">jacobiMatrix</span></a>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> % -&gt; <a class="reference internal" href="SparseEchelonMatrix.html#l537061727365456368656c6f6e4d6174726978"><span class="std std-ref">SparseEchelonMatrix</span></a>(JB, %)</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f7279"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e6a65745661726961626c6573">
+<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f72792e6a65745661726961626c6573"><span class="std std-ref">jetVariables</span></a>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> JB</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f7279"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e6c61746578">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6c61746578"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e6c636d">
+<dt><a class="reference internal" href="GcdDomain.html#l476364446f6d61696e2e6c636d"><span class="std std-ref">lcm</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="GcdDomain.html#l476364446f6d61696e"><span class="std std-ref">GcdDomain</span></a></p>
+</dd>
+<dt><a class="reference internal" href="GcdDomain.html#l476364446f6d61696e2e6c636d"><span class="std std-ref">lcm</span></a>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> % -&gt; %</dt><dd><p>from <a class="reference internal" href="GcdDomain.html#l476364446f6d61696e"><span class="std std-ref">GcdDomain</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e6c636d436f6566">
+<dt><a class="reference internal" href="LeftOreRing.html#l4c6566744f726552696e672e6c636d436f6566"><span class="std std-ref">lcmCoef</span></a>: (%, %) -&gt; Record(llcm_res: %, coeff1: %, coeff2: %)</dt><dd><p>from <a class="reference internal" href="LeftOreRing.html#l4c6566744f726552696e67"><span class="std std-ref">LeftOreRing</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e6c656164696e67446572">
+<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f72792e6c656164696e67446572"><span class="std std-ref">leadingDer</span></a>: % -&gt; JB</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f7279"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e6c656674506f776572">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e69742e6c656674506f776572"><span class="std std-ref">leftPower</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Magma.html#l4d61676d612e6c656674506f776572"><span class="std std-ref">leftPower</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l4d61676d61"><span class="std std-ref">Magma</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e6c6566745265636970">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e69742e6c6566745265636970"><span class="std std-ref">leftRecip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e6e756d446570566172">
+<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f72792e6e756d446570566172"><span class="std std-ref">numDepVar</span></a>: () -&gt; <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a></dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f7279"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e6e756d657261746f72">
+<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f72792e6e756d657261746f72"><span class="std std-ref">numerator</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f7279"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e6e756d496e64566172">
+<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f72792e6e756d496e64566172"><span class="std std-ref">numIndVar</span></a>: () -&gt; <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a></dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f7279"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e6f6e653f">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e69742e6f6e653f"><span class="std std-ref">one?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e6f70706f736974653f">
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f69642e6f70706f736974653f"><span class="std std-ref">opposite?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e6f72646572">
+<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f72792e6f72646572"><span class="std std-ref">order</span></a>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f7279"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e6f7264657244696d">
+<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f72792e6f7264657244696d"><span class="std std-ref">orderDim</span></a>: (<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %, <a class="reference internal" href="SparseEchelonMatrix.html#l537061727365456368656c6f6e4d6174726978"><span class="std std-ref">SparseEchelonMatrix</span></a>(JB, %), <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f7279"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e50">
+<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f72792e50"><span class="std std-ref">P</span></a>: (<a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f7279"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
+</dd>
+<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f72792e50"><span class="std std-ref">P</span></a>: (<a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f7279"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
+</dd>
+<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f72792e50"><span class="std std-ref">P</span></a>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a> -&gt; %</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f7279"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
+</dd>
+<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f72792e50"><span class="std std-ref">P</span></a>: <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a> -&gt; %</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f7279"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e7265636970">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e69742e7265636970"><span class="std std-ref">recip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e7265647563654d6f64">
+<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f72792e7265647563654d6f64"><span class="std std-ref">reduceMod</span></a>: (<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %) -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f7279"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e72657472616374">
+<dt><a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f2e72657472616374"><span class="std std-ref">retract</span></a>: % -&gt; JB</dt><dd><p>from <a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f"><span class="std std-ref">RetractableTo</span></a> JB</p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e72657472616374496643616e">
+<dt><a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f2e72657472616374496643616e"><span class="std std-ref">retractIfCan</span></a>: % -&gt; Union(JB, failed)</dt><dd><p>from <a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f"><span class="std std-ref">RetractableTo</span></a> JB</p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e7269676874506f776572">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e69742e7269676874506f776572"><span class="std std-ref">rightPower</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Magma.html#l4d61676d612e7269676874506f776572"><span class="std std-ref">rightPower</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l4d61676d61"><span class="std std-ref">Magma</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e72696768745265636970">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e69742e72696768745265636970"><span class="std std-ref">rightRecip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e73616d706c65">
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f69642e73616d706c65"><span class="std std-ref">sample</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e7365744e6f746174696f6e">
+<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f72792e7365744e6f746174696f6e"><span class="std std-ref">setNotation</span></a>: <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a> -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f7279"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e73696d706c696679">
+<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f72792e73696d706c696679"><span class="std std-ref">simplify</span></a>: (<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %, <a class="reference internal" href="SparseEchelonMatrix.html#l537061727365456368656c6f6e4d6174726978"><span class="std std-ref">SparseEchelonMatrix</span></a>(JB, %)) -&gt; Record(Sys: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %, JM: <a class="reference internal" href="SparseEchelonMatrix.html#l537061727365456368656c6f6e4d6174726978"><span class="std std-ref">SparseEchelonMatrix</span></a>(JB, %), Depend: Union(failed, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>))</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f7279"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e73696d704d6f64">
+<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f72792e73696d704d6f64"><span class="std std-ref">simpMod</span></a>: (<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %) -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f7279"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
+</dd>
+<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f72792e73696d704d6f64"><span class="std std-ref">simpMod</span></a>: (<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %, <a class="reference internal" href="SparseEchelonMatrix.html#l537061727365456368656c6f6e4d6174726978"><span class="std std-ref">SparseEchelonMatrix</span></a>(JB, %), <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %) -&gt; Record(Sys: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %, JM: <a class="reference internal" href="SparseEchelonMatrix.html#l537061727365456368656c6f6e4d6174726978"><span class="std std-ref">SparseEchelonMatrix</span></a>(JB, %), Depend: Union(failed, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>))</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f7279"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e73696d704f6e65">
+<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f72792e73696d704f6e65"><span class="std std-ref">simpOne</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f7279"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e736f6c7665466f72">
+<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f72792e736f6c7665466f72"><span class="std std-ref">solveFor</span></a>: (%, JB) -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f7279"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e736f72744c44">
+<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f72792e736f72744c44"><span class="std std-ref">sortLD</span></a>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f7279"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e7375627374">
+<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f72792e7375627374"><span class="std std-ref">subst</span></a>: (%, JB, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f7279"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e7375627472616374496643616e">
+<dt><a class="reference internal" href="CancellationAbelianMonoid.html#l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f69642e7375627472616374496643616e"><span class="std std-ref">subtractIfCan</span></a>: (%, %) -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="CancellationAbelianMonoid.html#l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e73796d626f6c">
+<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f72792e73796d626f6c"><span class="std std-ref">symbol</span></a>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> % -&gt; <a class="reference internal" href="SparseEchelonMatrix.html#l537061727365456368656c6f6e4d6174726978"><span class="std std-ref">SparseEchelonMatrix</span></a>(JB, %)</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f7279"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e55">
+<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f72792e55"><span class="std std-ref">U</span></a>: () -&gt; %</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f7279"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
+</dd>
+<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f72792e55"><span class="std std-ref">U</span></a>: <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a> -&gt; %</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f7279"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e756e69743f">
+<dt><a class="reference internal" href="EntireRing.html#l456e7469726552696e672e756e69743f"><span class="std std-ref">unit?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="EntireRing.html#l456e7469726552696e67"><span class="std std-ref">EntireRing</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e756e697443616e6f6e6963616c">
+<dt><a class="reference internal" href="EntireRing.html#l456e7469726552696e672e756e697443616e6f6e6963616c"><span class="std std-ref">unitCanonical</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="EntireRing.html#l456e7469726552696e67"><span class="std std-ref">EntireRing</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e756e69744e6f726d616c">
+<dt><a class="reference internal" href="EntireRing.html#l456e7469726552696e672e756e69744e6f726d616c"><span class="std std-ref">unitNormal</span></a>: % -&gt; Record(unit: %, canonical: %, associate: %)</dt><dd><p>from <a class="reference internal" href="EntireRing.html#l456e7469726552696e67"><span class="std std-ref">EntireRing</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e58">
+<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f72792e58"><span class="std std-ref">X</span></a>: () -&gt; %</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f7279"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
+</dd>
+<dt><a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f72792e58"><span class="std std-ref">X</span></a>: <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a> -&gt; %</dt><dd><p>from <a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f7279"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
+</dd>
+</dl>
+<dl class="simple" id="l4a657442756e646c654261736546756e6374696f6e43617465676f72792e7a65726f3f">
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f69642e7a65726f3f"><span class="std std-ref">zero?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+</dl>
+<p><a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p>
+<p><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+<p><a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f7570"><span class="std std-ref">AbelianSemiGroup</span></a></p>
+<p><a class="reference internal" href="Algebra.html#l416c6765627261"><span class="std std-ref">Algebra</span></a> %</p>
+<p><a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+<p><a class="reference internal" href="BiModule.html#l42694d6f64756c65"><span class="std std-ref">BiModule</span></a>(%, %)</p>
+<p><a class="reference internal" href="CancellationAbelianMonoid.html#l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
+<p><a class="reference internal" href="CoercibleFrom.html#l436f65726369626c6546726f6d"><span class="std std-ref">CoercibleFrom</span></a> JB</p>
+<p><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+<p><a class="reference internal" href="CommutativeRing.html#l436f6d6d7574617469766552696e67"><span class="std std-ref">CommutativeRing</span></a></p>
+<p><a class="reference internal" href="CommutativeStar.html#l436f6d6d7574617469766553746172"><span class="std std-ref">CommutativeStar</span></a></p>
+<p><a class="reference internal" href="EntireRing.html#l456e7469726552696e67"><span class="std std-ref">EntireRing</span></a></p>
+<p><a class="reference internal" href="GcdDomain.html#l476364446f6d61696e"><span class="std std-ref">GcdDomain</span></a></p>
+<p><a class="reference internal" href="IntegralDomain.html#l496e74656772616c446f6d61696e"><span class="std std-ref">IntegralDomain</span></a></p>
+<p><a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f7279"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB</p>
+<p><a class="reference internal" href="LeftModule.html#l4c6566744d6f64756c65"><span class="std std-ref">LeftModule</span></a> %</p>
+<p><a class="reference internal" href="LeftOreRing.html#l4c6566744f726552696e67"><span class="std std-ref">LeftOreRing</span></a></p>
+<p><a class="reference internal" href="Magma.html#l4d61676d61"><span class="std std-ref">Magma</span></a></p>
+<p><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+<p><a class="reference internal" href="Module.html#l4d6f64756c65"><span class="std std-ref">Module</span></a> %</p>
+<p><a class="reference internal" href="Monoid.html#l4d6f6e6f6964"><span class="std std-ref">Monoid</span></a></p>
+<p><a class="reference internal" href="NonAssociativeRing.html#l4e6f6e4173736f6369617469766552696e67"><span class="std std-ref">NonAssociativeRing</span></a></p>
+<p><a class="reference internal" href="NonAssociativeRng.html#l4e6f6e4173736f63696174697665526e67"><span class="std std-ref">NonAssociativeRng</span></a></p>
+<p><a class="reference internal" href="NonAssociativeSemiRing.html#l4e6f6e4173736f6369617469766553656d6952696e67"><span class="std std-ref">NonAssociativeSemiRing</span></a></p>
+<p><a class="reference internal" href="NonAssociativeSemiRng.html#l4e6f6e4173736f6369617469766553656d69526e67"><span class="std std-ref">NonAssociativeSemiRng</span></a></p>
+<p><a class="reference internal" href="noZeroDivisors.html#l6e6f5a65726f44697669736f7273"><span class="std std-ref">noZeroDivisors</span></a></p>
+<p><a class="reference internal" href="PartialDifferentialRing.html#l5061727469616c446966666572656e7469616c52696e67"><span class="std std-ref">PartialDifferentialRing</span></a> <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a></p>
+<p><a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f"><span class="std std-ref">RetractableTo</span></a> JB</p>
+<p><a class="reference internal" href="RightModule.html#l52696768744d6f64756c65"><span class="std std-ref">RightModule</span></a> %</p>
+<p><a class="reference internal" href="Ring.html#l52696e67"><span class="std std-ref">Ring</span></a></p>
+<p><a class="reference internal" href="Rng.html#l526e67"><span class="std std-ref">Rng</span></a></p>
+<p><a class="reference internal" href="SemiGroup.html#l53656d6947726f7570"><span class="std std-ref">SemiGroup</span></a></p>
+<p><a class="reference internal" href="SemiRing.html#l53656d6952696e67"><span class="std std-ref">SemiRing</span></a></p>
+<p><a class="reference internal" href="SemiRng.html#l53656d69526e67"><span class="std std-ref">SemiRng</span></a></p>
+<p><a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+<p><a class="reference internal" href="TwoSidedRecip.html#l54776f53696465645265636970"><span class="std std-ref">TwoSidedRecip</span></a></p>
+<p><a class="reference internal" href="unitsKnown.html#l756e6974734b6e6f776e"><span class="std std-ref">unitsKnown</span></a></p>
 </div>
 
 
@@ -338,7 +478,7 @@
         <li class="right" >
           <a href="IntervalCategory.html" title="IntervalCategory R"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Categories.html" >Categories</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">JetBundleBaseFunctionCategory JB</a></li> 

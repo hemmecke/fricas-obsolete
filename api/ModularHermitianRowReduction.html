@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ModularHermitianRowReduction R &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>ModularHermitianRowReduction R &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="ModularHermitePadeSolver.html" title="ModularHermitePadeSolver(F, S)"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">ModularHermitianRowReduction R</a></li> 
@@ -46,30 +46,30 @@
           <div class="body" role="main">
             
   <div class="section" id="modularhermitianrowreduction-r">
-<span id="l-modular-hermitian-row-reduction"></span><span id="index-0"></span><h1>ModularHermitianRowReduction R<a class="headerlink" href="#modularhermitianrowreduction-r" title="Permalink to this headline">¶</a></h1>
+<span id="l4d6f64756c61724865726d697469616e526f77526564756374696f6e"></span><span id="index-0"></span><h1>ModularHermitianRowReduction R<a class="headerlink" href="#modularhermitianrowreduction-r" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/divisor.spad#L211">divisor.spad line 211</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/divisor.spad#L211">[edit on github]</a></p>
 <ul class="simple">
-<li><p>R: <a class="reference internal" href="EuclideanDomain.html#l-euclidean-domain"><span class="std std-ref">EuclideanDomain</span></a></p></li>
+<li><p>R: <a class="reference internal" href="EuclideanDomain.html#l4575636c696465616e446f6d61696e"><span class="std std-ref">EuclideanDomain</span></a></p></li>
 </ul>
 <p>Modular hermitian row reduction. Author: Manuel Bronstein Date Created: 22 February 1989 Keywords: matrix, reduction.</p>
-<span class="target" id="l-modular-hermitian-row-reduction-normalized-divide"></span><dl class="simple" id="index-1">
+<span class="target" id="l4d6f64756c61724865726d697469616e526f77526564756374696f6e2e6e6f726d616c697a6564446976696465"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">normalizedDivide</span>: (R, R) -&gt; Record(quotient: R, remainder: R)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">normalizedDivide(n,</span> <span class="pre">d)</span></code> returns a normalized quotient and remainder such that consistently unique representatives for the residue class are chosen, e.g. positive remainders</p>
 </dd>
 </dl>
-<span class="target" id="l-modular-hermitian-row-reduction-row-ech"></span><dl class="simple" id="index-2">
-<dt><span class="spadfun">rowEch</span>: <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">rowEch(m)</span></code> computes a modular row-echelon form of <code class="docutils literal notranslate"><span class="pre">m</span></code>, finding an appropriate modulus.</p>
+<span class="target" id="l4d6f64756c61724865726d697469616e526f77526564756374696f6e2e726f77456368"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">rowEch</span>: <a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> R -&gt; <a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">rowEch(m)</span></code> computes a modular row-echelon form of <code class="docutils literal notranslate"><span class="pre">m</span></code>, finding an appropriate modulus.</p>
 </dd>
 </dl>
-<span class="target" id="l-modular-hermitian-row-reduction-row-echelon"></span><dl class="simple" id="index-3">
-<dt><span class="spadfun">rowEchelon</span>: (<a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R, R) -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">rowEchelon(m,</span> <span class="pre">d)</span></code> computes a modular row-echelon form mod <code class="docutils literal notranslate"><span class="pre">d</span></code> of [<code class="docutils literal notranslate"><span class="pre">d</span></code> ] [ <code class="docutils literal notranslate"><span class="pre">d</span></code> ] [ . ] [ <code class="docutils literal notranslate"><span class="pre">d</span></code>] [ <code class="docutils literal notranslate"><span class="pre">M</span></code> ] where <code class="docutils literal notranslate"><span class="pre">M</span> <span class="pre">=</span> <span class="pre">m</span> <span class="pre">mod</span> <span class="pre">d</span></code>.</p>
+<span class="target" id="l4d6f64756c61724865726d697469616e526f77526564756374696f6e2e726f77456368656c6f6e"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">rowEchelon</span>: (<a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> R, R) -&gt; <a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">rowEchelon(m,</span> <span class="pre">d)</span></code> computes a modular row-echelon form mod <code class="docutils literal notranslate"><span class="pre">d</span></code> of [<code class="docutils literal notranslate"><span class="pre">d</span></code> ] [ <code class="docutils literal notranslate"><span class="pre">d</span></code> ] [ . ] [ <code class="docutils literal notranslate"><span class="pre">d</span></code>] [ <code class="docutils literal notranslate"><span class="pre">M</span></code> ] where <code class="docutils literal notranslate"><span class="pre">M</span> <span class="pre">=</span> <span class="pre">m</span> <span class="pre">mod</span> <span class="pre">d</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-modular-hermitian-row-reduction-row-echelon-local"></span><dl class="simple" id="index-4">
-<dt><span class="spadfun">rowEchelonLocal</span>: (<a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R, R, R) -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">rowEchelonLocal(m,</span> <span class="pre">d,</span> <span class="pre">p)</span></code> computes the row-echelon form of <code class="docutils literal notranslate"><span class="pre">m</span></code> concatenated with <code class="docutils literal notranslate"><span class="pre">d</span></code> times the identity matrix over a local ring where <code class="docutils literal notranslate"><span class="pre">p</span></code> is the only prime.</p>
+<span class="target" id="l4d6f64756c61724865726d697469616e526f77526564756374696f6e2e726f77456368656c6f6e4c6f63616c"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">rowEchelonLocal</span>: (<a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> R, R, R) -&gt; <a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">rowEchelonLocal(m,</span> <span class="pre">d,</span> <span class="pre">p)</span></code> computes the row-echelon form of <code class="docutils literal notranslate"><span class="pre">m</span></code> concatenated with <code class="docutils literal notranslate"><span class="pre">d</span></code> times the identity matrix over a local ring where <code class="docutils literal notranslate"><span class="pre">p</span></code> is the only prime.</p>
 </dd>
 </dl>
-<span class="target" id="l-modular-hermitian-row-reduction-row-ech-local"></span><dl class="simple" id="index-5">
-<dt><span class="spadfun">rowEchLocal</span>: (<a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R, R) -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">rowEchLocal(m,</span> <span class="pre">p)</span></code> computes a modular row-echelon form of <code class="docutils literal notranslate"><span class="pre">m</span></code>, finding an appropriate modulus over a local ring where <code class="docutils literal notranslate"><span class="pre">p</span></code> is the only prime.</p>
+<span class="target" id="l4d6f64756c61724865726d697469616e526f77526564756374696f6e2e726f774563684c6f63616c"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">rowEchLocal</span>: (<a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> R, R) -&gt; <a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">rowEchLocal(m,</span> <span class="pre">p)</span></code> computes a modular row-echelon form of <code class="docutils literal notranslate"><span class="pre">m</span></code>, finding an appropriate modulus over a local ring where <code class="docutils literal notranslate"><span class="pre">p</span></code> is the only prime.</p>
 </dd>
 </dl>
 </div>
@@ -119,7 +119,7 @@
         <li class="right" >
           <a href="ModularHermitePadeSolver.html" title="ModularHermitePadeSolver(F, S)"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">ModularHermitianRowReduction R</a></li> 

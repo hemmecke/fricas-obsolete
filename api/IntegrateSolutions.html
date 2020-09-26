@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IntegrateSolutions(F, L) &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>IntegrateSolutions(F, L) &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="IntegralBasisTools.html" title="IntegralBasisTools(R, UP, F)"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">IntegrateSolutions(F, L)</a></li> 
@@ -46,19 +46,19 @@
           <div class="body" role="main">
             
   <div class="section" id="integratesolutions-f-l">
-<span id="l-integrate-solutions"></span><span id="index-0"></span><h1>IntegrateSolutions(F, L)<a class="headerlink" href="#integratesolutions-f-l" title="Permalink to this headline">¶</a></h1>
+<span id="l496e74656772617465536f6c7574696f6e73"></span><span id="index-0"></span><h1>IntegrateSolutions(F, L)<a class="headerlink" href="#integratesolutions-f-l" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/ore.spad#L532">ore.spad line 532</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/ore.spad#L532">[edit on github]</a></p>
 <ul>
-<li><p>F: Join(<a class="reference internal" href="Field.html#l-field"><span class="std std-ref">Field</span></a>, <a class="reference internal" href="CharacteristicZero.html#l-characteristic-zero"><span class="std std-ref">CharacteristicZero</span></a>, <a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>)</p></li>
-<li><p>L: <a class="reference internal" href="UnivariateSkewPolynomialCategory.html#l-univariate-skew-polynomial-category"><span class="std std-ref">UnivariateSkewPolynomialCategory</span></a> F with</p>
+<li><p>F: Join(<a class="reference internal" href="Field.html#l4669656c64"><span class="std std-ref">Field</span></a>, <a class="reference internal" href="CharacteristicZero.html#l43686172616374657269737469635a65726f"><span class="std std-ref">CharacteristicZero</span></a>, <a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f"><span class="std std-ref">RetractableTo</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f"><span class="std std-ref">RetractableTo</span></a> <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>)</p></li>
+<li><p>L: <a class="reference internal" href="UnivariateSkewPolynomialCategory.html#l556e6976617269617465536b6577506f6c796e6f6d69616c43617465676f7279"><span class="std std-ref">UnivariateSkewPolynomialCategory</span></a> F with</p>
 <blockquote>
-<div><p><span class="spadfun">adjoint</span>: % -&gt; %</p>
+<div><p>adjoint: % -&gt; %</p>
 </div></blockquote>
 </li>
 </ul>
-<p><a class="reference internal" href="#l-integrate-solutions"><span class="std std-ref">IntegrateSolutions</span></a> implements a method to compute integral of solution of differential operator.</p>
-<span class="target" id="l-integrate-solutions-integrate-sols"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">integrate_sols</span>: (L, (L, F) -&gt; Record(particular: Union(F, failed), basis: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> F)) -&gt; Record(ltilde: L, r: Union(L, failed))</dt><dd><p><code class="docutils literal notranslate"><span class="pre">integrate_sols(l,</span> <span class="pre">rat_solve)</span></code> integrates the solutions of an operator <code class="docutils literal notranslate"><span class="pre">l</span></code> given rat_solve(op, <code class="docutils literal notranslate"><span class="pre">g</span></code>) that returns <code class="docutils literal notranslate"><span class="pre">[&quot;failed&quot;,</span> <span class="pre">[]]</span></code> if the equation <code class="docutils literal notranslate"><span class="pre">op</span> <span class="pre">y</span> <span class="pre">=</span> <span class="pre">g</span></code> has no rational solution. Otherwise, the rat_solve function should return <code class="docutils literal notranslate"><span class="pre">[f,</span> <span class="pre">[y1,</span> <span class="pre">...,</span> <span class="pre">ym]]</span></code> where <code class="docutils literal notranslate"><span class="pre">f</span></code> is a particular rational solution and the <code class="docutils literal notranslate"><span class="pre">yi</span></code><code class="docutils literal notranslate"><span class="pre">'s</span></code> form a basis for the rational solutions of the homogeneous equation.</p>
+<p><a class="reference internal" href="#l496e74656772617465536f6c7574696f6e73"><span class="std std-ref">IntegrateSolutions</span></a> implements a method to compute integral of solution of differential operator.</p>
+<span class="target" id="l496e74656772617465536f6c7574696f6e732e696e746567726174655f736f6c73"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">integrate_sols</span>: (L, (L, F) -&gt; Record(particular: Union(F, failed), basis: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> F)) -&gt; Record(ltilde: L, r: Union(L, failed))</dt><dd><p><code class="docutils literal notranslate"><span class="pre">integrate_sols(l,</span> <span class="pre">rat_solve)</span></code> integrates the solutions of an operator <code class="docutils literal notranslate"><span class="pre">l</span></code> given rat_solve(op, <code class="docutils literal notranslate"><span class="pre">g</span></code>) that returns <code class="docutils literal notranslate"><span class="pre">[&quot;failed&quot;,</span> <span class="pre">[]]</span></code> if the equation <code class="docutils literal notranslate"><span class="pre">op</span> <span class="pre">y</span> <span class="pre">=</span> <span class="pre">g</span></code> has no rational solution. Otherwise, the rat_solve function should return <code class="docutils literal notranslate"><span class="pre">[f,</span> <span class="pre">[y1,</span> <span class="pre">...,</span> <span class="pre">ym]]</span></code> where <code class="docutils literal notranslate"><span class="pre">f</span></code> is a particular rational solution and the <code class="docutils literal notranslate"><span class="pre">yi</span></code><code class="docutils literal notranslate"><span class="pre">'s</span></code> form a basis for the rational solutions of the homogeneous equation.</p>
 </dd>
 </dl>
 </div>
@@ -108,7 +108,7 @@
         <li class="right" >
           <a href="IntegralBasisTools.html" title="IntegralBasisTools(R, UP, F)"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">IntegrateSolutions(F, L)</a></li> 

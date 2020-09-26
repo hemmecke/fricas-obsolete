@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IntegerPrimesPackage I &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>IntegerPrimesPackage I &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="IntegerNumberTheoryFunctions.html" title="IntegerNumberTheoryFunctions"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">IntegerPrimesPackage I</a></li> 
@@ -46,26 +46,26 @@
           <div class="body" role="main">
             
   <div class="section" id="integerprimespackage-i">
-<span id="l-integer-primes-package"></span><span id="index-0"></span><h1>IntegerPrimesPackage I<a class="headerlink" href="#integerprimespackage-i" title="Permalink to this headline">¶</a></h1>
+<span id="l496e74656765725072696d65735061636b616765"></span><span id="index-0"></span><h1>IntegerPrimesPackage I<a class="headerlink" href="#integerprimespackage-i" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/intfact.spad#L1">intfact.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/intfact.spad#L1">[edit on github]</a></p>
 <ul class="simple">
-<li><p>I: <a class="reference internal" href="IntegerNumberSystem.html#l-integer-number-system"><span class="std std-ref">IntegerNumberSystem</span></a></p></li>
+<li><p>I: <a class="reference internal" href="IntegerNumberSystem.html#l496e74656765724e756d62657253797374656d"><span class="std std-ref">IntegerNumberSystem</span></a></p></li>
 </ul>
-<p>The <a class="reference internal" href="#l-integer-primes-package"><span class="std std-ref">IntegerPrimesPackage</span></a> implements a modification of Rabin<code class="docutils literal notranslate"><span class="pre">'s</span></code> probabilistic primality test and the utility functions <span class="spadfun">nextPrime</span>, <span class="spadfun">prevPrime</span> and <span class="spadfun">primes</span>.</p>
-<span class="target" id="l-integer-primes-package-next-prime"></span><dl class="simple" id="index-1">
+<p>The <a class="reference internal" href="#l496e74656765725072696d65735061636b616765"><span class="std std-ref">IntegerPrimesPackage</span></a> implements a modification of Rabin<code class="docutils literal notranslate"><span class="pre">'s</span></code> probabilistic primality test and the utility functions <span class="spadfun">nextPrime</span>, <span class="spadfun">prevPrime</span> and <span class="spadfun">primes</span>.</p>
+<span class="target" id="l496e74656765725072696d65735061636b6167652e6e6578745072696d65"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">nextPrime</span>: I -&gt; I</dt><dd><p><code class="docutils literal notranslate"><span class="pre">nextPrime(n)</span></code> returns the smallest prime strictly larger than <code class="docutils literal notranslate"><span class="pre">n</span></code></p>
 </dd>
 </dl>
-<span class="target" id="l-integer-primes-package-prev-prime"></span><dl class="simple" id="index-2">
+<span class="target" id="l496e74656765725072696d65735061636b6167652e707265765072696d65"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">prevPrime</span>: I -&gt; I</dt><dd><p><code class="docutils literal notranslate"><span class="pre">prevPrime(n)</span></code> returns the largest prime strictly smaller than <code class="docutils literal notranslate"><span class="pre">n</span></code></p>
 </dd>
 </dl>
-<span class="target" id="l-integer-primes-package-prime"></span><dl class="simple" id="index-3">
-<dt><span class="spadfun">prime?</span>: I -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">prime?(n)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if <code class="docutils literal notranslate"><span class="pre">n</span></code> is prime and <code class="docutils literal notranslate"><span class="pre">false</span></code> if not. Note that we ignore sign of <code class="docutils literal notranslate"><span class="pre">n</span></code>, so <code class="docutils literal notranslate"><span class="pre">-5</span></code> is considered prime. The algorithm used is Rabin<code class="docutils literal notranslate"><span class="pre">'s</span></code> probabilistic primality test (reference: Knuth Volume 2 Semi Numerical Algorithms). If <code class="docutils literal notranslate"><span class="pre">prime?</span> <span class="pre">n</span></code> returns <code class="docutils literal notranslate"><span class="pre">false</span></code>, <code class="docutils literal notranslate"><span class="pre">n</span></code> is proven composite. If <code class="docutils literal notranslate"><span class="pre">prime?</span> <span class="pre">n</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code>, prime? may be in error however, the probability of error is very low. and is zero below 25*10^9 (due to a result of Pomerance et al), below 10^12 and 10^13 due to results of Pinch, and below 341550071728321 due to a result of Jaeschke. Specifically, this implementation does at least 10 pseudo prime tests and so the probability of error is <code class="docutils literal notranslate"><span class="pre">&lt;</span> <span class="pre">4^(-10)</span></code>. The running time of this method is cubic in the length of the input <code class="docutils literal notranslate"><span class="pre">n</span></code>, that is <code class="docutils literal notranslate"><span class="pre">O(</span> <span class="pre">(log</span> <span class="pre">n)^3</span> <span class="pre">)</span></code>, for <code class="docutils literal notranslate"><span class="pre">n&lt;10^20</span></code>. beyond that, the algorithm is quartic, <code class="docutils literal notranslate"><span class="pre">O(</span> <span class="pre">(log</span> <span class="pre">n)^4</span> <span class="pre">)</span></code>. Two improvements due to Davenport have been incorporated which catches some trivial strong pseudo-primes, such as [Jaeschke, 1991] 1377161253229053 * 413148375987157, which the original algorithm regards as prime</p>
+<span class="target" id="l496e74656765725072696d65735061636b6167652e7072696d653f"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">prime?</span>: I -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">prime?(n)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if <code class="docutils literal notranslate"><span class="pre">n</span></code> is prime and <code class="docutils literal notranslate"><span class="pre">false</span></code> if not. Note that we ignore sign of <code class="docutils literal notranslate"><span class="pre">n</span></code>, so <code class="docutils literal notranslate"><span class="pre">-5</span></code> is considered prime. The algorithm used is Rabin<code class="docutils literal notranslate"><span class="pre">'s</span></code> probabilistic primality test (reference: Knuth Volume 2 Semi Numerical Algorithms). If <code class="docutils literal notranslate"><span class="pre">prime?</span> <span class="pre">n</span></code> returns <code class="docutils literal notranslate"><span class="pre">false</span></code>, <code class="docutils literal notranslate"><span class="pre">n</span></code> is proven composite. If <code class="docutils literal notranslate"><span class="pre">prime?</span> <span class="pre">n</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code>, prime? may be in error however, the probability of error is very low. and is zero below 25*10^9 (due to a result of Pomerance et al), below 10^12 and 10^13 due to results of Pinch, and below 341550071728321 due to a result of Jaeschke. Specifically, this implementation does at least 10 pseudo prime tests and so the probability of error is <code class="docutils literal notranslate"><span class="pre">&lt;</span> <span class="pre">4^(-10)</span></code>. The running time of this method is cubic in the length of the input <code class="docutils literal notranslate"><span class="pre">n</span></code>, that is <code class="docutils literal notranslate"><span class="pre">O(</span> <span class="pre">(log</span> <span class="pre">n)^3</span> <span class="pre">)</span></code>, for <code class="docutils literal notranslate"><span class="pre">n&lt;10^20</span></code>. beyond that, the algorithm is quartic, <code class="docutils literal notranslate"><span class="pre">O(</span> <span class="pre">(log</span> <span class="pre">n)^4</span> <span class="pre">)</span></code>. Two improvements due to Davenport have been incorporated which catches some trivial strong pseudo-primes, such as [Jaeschke, 1991] 1377161253229053 * 413148375987157, which the original algorithm regards as prime</p>
 </dd>
 </dl>
-<span class="target" id="l-integer-primes-package-primes"></span><dl class="simple" id="index-4">
-<dt><span class="spadfun">primes</span>: (I, I) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> I</dt><dd><p><code class="docutils literal notranslate"><span class="pre">primes(a,</span> <span class="pre">b)</span></code> returns a list of all primes <code class="docutils literal notranslate"><span class="pre">p</span></code> with <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&lt;=</span> <span class="pre">p</span> <span class="pre">&lt;=</span> <span class="pre">b</span></code></p>
+<span class="target" id="l496e74656765725072696d65735061636b6167652e7072696d6573"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">primes</span>: (I, I) -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> I</dt><dd><p><code class="docutils literal notranslate"><span class="pre">primes(a,</span> <span class="pre">b)</span></code> returns a list of all primes <code class="docutils literal notranslate"><span class="pre">p</span></code> with <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&lt;=</span> <span class="pre">p</span> <span class="pre">&lt;=</span> <span class="pre">b</span></code></p>
 </dd>
 </dl>
 </div>
@@ -115,7 +115,7 @@
         <li class="right" >
           <a href="IntegerNumberTheoryFunctions.html" title="IntegerNumberTheoryFunctions"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">IntegerPrimesPackage I</a></li> 

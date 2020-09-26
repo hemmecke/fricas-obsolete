@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RationalFactorize RP &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>RationalFactorize RP &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="RandomNumberSource.html" title="RandomNumberSource"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">RationalFactorize RP</a></li> 
@@ -46,18 +46,18 @@
           <div class="body" role="main">
             
   <div class="section" id="rationalfactorize-rp">
-<span id="l-rational-factorize"></span><span id="index-0"></span><h1>RationalFactorize RP<a class="headerlink" href="#rationalfactorize-rp" title="Permalink to this headline">¶</a></h1>
+<span id="l526174696f6e616c466163746f72697a65"></span><span id="index-0"></span><h1>RationalFactorize RP<a class="headerlink" href="#rationalfactorize-rp" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/ratfact.spad#L1">ratfact.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/ratfact.spad#L1">[edit on github]</a></p>
 <ul class="simple">
-<li><p>RP: <a class="reference internal" href="UnivariatePolynomialCategory.html#l-univariate-polynomial-category"><span class="std std-ref">UnivariatePolynomialCategory</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></p></li>
+<li><p>RP: <a class="reference internal" href="UnivariatePolynomialCategory.html#l556e6976617269617465506f6c796e6f6d69616c43617465676f7279"><span class="std std-ref">UnivariatePolynomialCategory</span></a> <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></p></li>
 </ul>
-<p>Author: <code class="docutils literal notranslate"><span class="pre">P</span></code>. Gianni Factorization of extended polynomials with rational coefficients. This package implements factorization of extended polynomials whose coefficients are rational numbers. It does this by taking the <code class="docutils literal notranslate"><span class="pre">lcm</span></code> of the coefficients of the polynomial and creating a polynomial with integer coefficients. The algorithm in <a class="reference internal" href="GaloisGroupFactorizer.html#l-galois-group-factorizer"><span class="std std-ref">GaloisGroupFactorizer</span></a> is then used to factor the integer polynomial. The result is normalized with respect to the original <code class="docutils literal notranslate"><span class="pre">lcm</span></code> of the denominators. Keywords: factorization, hensel, rational number</p>
-<span class="target" id="l-rational-factorize-factor"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">factor</span>: RP -&gt; <a class="reference internal" href="Factored.html#l-factored"><span class="std std-ref">Factored</span></a> RP</dt><dd><p><code class="docutils literal notranslate"><span class="pre">factor(p)</span></code> factors an extended polynomial <code class="docutils literal notranslate"><span class="pre">p</span></code> over the rational numbers.</p>
+<p>Author: <code class="docutils literal notranslate"><span class="pre">P</span></code>. Gianni Factorization of extended polynomials with rational coefficients. This package implements factorization of extended polynomials whose coefficients are rational numbers. It does this by taking the <code class="docutils literal notranslate"><span class="pre">lcm</span></code> of the coefficients of the polynomial and creating a polynomial with integer coefficients. The algorithm in <a class="reference internal" href="GaloisGroupFactorizer.html#l47616c6f697347726f7570466163746f72697a6572"><span class="std std-ref">GaloisGroupFactorizer</span></a> is then used to factor the integer polynomial. The result is normalized with respect to the original <code class="docutils literal notranslate"><span class="pre">lcm</span></code> of the denominators. Keywords: factorization, hensel, rational number</p>
+<span class="target" id="l526174696f6e616c466163746f72697a652e666163746f72"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">factor</span>: RP -&gt; <a class="reference internal" href="Factored.html#l466163746f726564"><span class="std std-ref">Factored</span></a> RP</dt><dd><p><code class="docutils literal notranslate"><span class="pre">factor(p)</span></code> factors an extended polynomial <code class="docutils literal notranslate"><span class="pre">p</span></code> over the rational numbers.</p>
 </dd>
 </dl>
-<span class="target" id="l-rational-factorize-factor-square-free"></span><dl class="simple" id="index-2">
-<dt><span class="spadfun">factorSquareFree</span>: RP -&gt; <a class="reference internal" href="Factored.html#l-factored"><span class="std std-ref">Factored</span></a> RP</dt><dd><p><code class="docutils literal notranslate"><span class="pre">factorSquareFree(p)</span></code> factors an extended squareFree polynomial <code class="docutils literal notranslate"><span class="pre">p</span></code> over the rational numbers.</p>
+<span class="target" id="l526174696f6e616c466163746f72697a652e666163746f7253717561726546726565"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">factorSquareFree</span>: RP -&gt; <a class="reference internal" href="Factored.html#l466163746f726564"><span class="std std-ref">Factored</span></a> RP</dt><dd><p><code class="docutils literal notranslate"><span class="pre">factorSquareFree(p)</span></code> factors an extended squareFree polynomial <code class="docutils literal notranslate"><span class="pre">p</span></code> over the rational numbers.</p>
 </dd>
 </dl>
 </div>
@@ -107,7 +107,7 @@
         <li class="right" >
           <a href="RandomNumberSource.html" title="RandomNumberSource"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">RationalFactorize RP</a></li> 

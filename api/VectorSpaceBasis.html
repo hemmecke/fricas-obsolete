@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VectorSpaceBasis R &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>VectorSpaceBasis R &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="VectorModularReconstructor.html" title="VectorModularReconstructor"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Domains.html" accesskey="U">Domains</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">VectorSpaceBasis R</a></li> 
@@ -46,128 +46,132 @@
           <div class="body" role="main">
             
   <div class="section" id="vectorspacebasis-r">
-<span id="l-vector-space-basis"></span><span id="index-0"></span><h1>VectorSpaceBasis R<a class="headerlink" href="#vectorspacebasis-r" title="Permalink to this headline">¶</a></h1>
+<span id="l566563746f7253706163654261736973"></span><span id="index-0"></span><h1>VectorSpaceBasis R<a class="headerlink" href="#vectorspacebasis-r" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/vsbasis.spad#L1">vsbasis.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/vsbasis.spad#L1">[edit on github]</a></p>
 <ul class="simple">
-<li><p>R: <a class="reference internal" href="Field.html#l-field"><span class="std std-ref">Field</span></a></p></li>
+<li><p>R: <a class="reference internal" href="Field.html#l4669656c64"><span class="std std-ref">Field</span></a></p></li>
 </ul>
 <p>The domain <code class="docutils literal notranslate"><span class="pre">VectorSpaceBasis</span> <span class="pre">F</span></code> implements subspaces of finite dimensional vector spaces over a field <code class="docutils literal notranslate"><span class="pre">F</span></code>. A subspace is represented by a list of linearly independent coordinate vectors which constitute a basis. The empty list represents the space of dimension 0.</p>
-<span class="target" id="l-vector-space-basis-0"></span><dl class="simple" id="index-1">
+<span class="target" id="l566563746f72537061636542617369732e30"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">0</span>: %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">0</span></code> creates the empty basis describing the space with the zero vector. The length of this zero vector is undefined.</p>
 </dd>
 </dl>
-<span class="target" id="id1"></span><dl class="simple" id="index-2">
+<span class="target" id="l566563746f72537061636542617369732e2a"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">*</span>: (%, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">b1*b2</span></code> computes a basis of the intersection of two subspaces.</p>
 </dd>
 </dl>
-<span class="target" id="id2"></span><dl class="simple" id="index-3">
+<span class="target" id="l566563746f72537061636542617369732e2b"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">+</span>: (%, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">B1+B2</span></code> computes a basis of the sum of two subspaces.</p>
 </dd>
-<dt><a class="reference internal" href="BasicType.html#id1"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-</dd>
-<dt><a class="reference internal" href="BasicType.html#id2"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+</dl>
+<dl class="simple" id="l566563746f72537061636542617369732e3d">
+<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-vector-space-basis-basis"></span><dl class="simple" id="index-4">
-<dt><span class="spadfun">basis</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> R -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">basis</span> <span class="pre">LV</span></code> extracts a basis of the subspace spanned by the list of vectors <code class="docutils literal notranslate"><span class="pre">LV</span></code>.</p>
+<dl class="simple" id="l566563746f72537061636542617369732e7e3d">
+<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e7e3d"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-vector-space-basis-canonical-basis"></span><dl class="simple" id="index-5">
-<dt><span class="spadfun">canonicalBasis</span>: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">canonicalBasis</span> <span class="pre">n</span></code> builds the canonical basis of the vector space of dimension <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
+<span class="target" id="l566563746f72537061636542617369732e6261736973"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">basis</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> R -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">basis</span> <span class="pre">LV</span></code> extracts a basis of the subspace spanned by the list of vectors <code class="docutils literal notranslate"><span class="pre">LV</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-vector-space-basis-coerce"></span><dl class="simple" id="index-6">
-<dt><span class="spadfun">coerce</span>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce</span> <span class="pre">b</span></code> returns the basis as a list of vectors.</p>
-</dd>
-<dt><a class="reference internal" href="CoercibleTo.html#l-coercible-to-coerce"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+<span class="target" id="l566563746f72537061636542617369732e63616e6f6e6963616c4261736973"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">canonicalBasis</span>: <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">canonicalBasis</span> <span class="pre">n</span></code> builds the canonical basis of the vector space of dimension <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-vector-space-basis-column-space"></span><dl class="simple" id="index-7">
-<dt><span class="spadfun">columnSpace</span>: <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">columnSpace</span> <span class="pre">M</span></code> builds a basis of the image space of the linear transformation defined by the matrix <code class="docutils literal notranslate"><span class="pre">M</span></code>. This function calls the <code class="docutils literal notranslate"><span class="pre">columnSpace</span></code> from the <code class="docutils literal notranslate"><span class="pre">Matrix</span></code> domain. Only the signature changes.</p>
+<span class="target" id="l566563746f72537061636542617369732e636f65726365"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">coerce</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce</span> <span class="pre">b</span></code> returns the basis as a list of vectors.</p>
+</dd>
+<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f2e636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-vector-space-basis-complement-space"></span><dl class="simple" id="index-8">
+<span class="target" id="l566563746f72537061636542617369732e636f6c756d6e5370616365"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">columnSpace</span>: <a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> R -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">columnSpace</span> <span class="pre">M</span></code> builds a basis of the image space of the linear transformation defined by the matrix <code class="docutils literal notranslate"><span class="pre">M</span></code>. This function calls the <code class="docutils literal notranslate"><span class="pre">columnSpace</span></code> from the <code class="docutils literal notranslate"><span class="pre">Matrix</span></code> domain. Only the signature changes.</p>
+</dd>
+</dl>
+<span class="target" id="l566563746f72537061636542617369732e636f6d706c656d656e745370616365"></span><dl class="simple" id="index-8">
 <dt><span class="spadfun">complementSpace</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">complementSpace</span> <span class="pre">B</span></code> builds a complement space of the basis <code class="docutils literal notranslate"><span class="pre">B</span></code> from some vectors of the canonical basis. This function fails with the empty basis.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-9">
-<dt><span class="spadfun">complementSpace</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">complementSpace(B,</span> <span class="pre">n)</span></code> builds a complement space of the basis <code class="docutils literal notranslate"><span class="pre">B</span></code> from some vectors of the canonical basis <code class="docutils literal notranslate"><span class="pre">B</span></code>. The integer <code class="docutils literal notranslate"><span class="pre">n</span></code> provides the length of the vectors in the case of the empty basis.</p>
+<dt><span class="spadfun">complementSpace</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">complementSpace(B,</span> <span class="pre">n)</span></code> builds a complement space of the basis <code class="docutils literal notranslate"><span class="pre">B</span></code> from some vectors of the canonical basis <code class="docutils literal notranslate"><span class="pre">B</span></code>. The integer <code class="docutils literal notranslate"><span class="pre">n</span></code> provides the length of the vectors in the case of the empty basis.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-10">
-<dt><span class="spadfun">complementSpace</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> R, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">complementSpace(Lv,</span> <span class="pre">n)</span></code> builds a complement space of the subspace spanned by the list of vectors <code class="docutils literal notranslate"><span class="pre">LV</span></code>. The integer <code class="docutils literal notranslate"><span class="pre">n</span></code> provides the length of the vectors in the case of the empty basis.</p>
+<dt><span class="spadfun">complementSpace</span>: (<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> R, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">complementSpace(Lv,</span> <span class="pre">n)</span></code> builds a complement space of the subspace spanned by the list of vectors <code class="docutils literal notranslate"><span class="pre">LV</span></code>. The integer <code class="docutils literal notranslate"><span class="pre">n</span></code> provides the length of the vectors in the case of the empty basis.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-11">
-<dt><span class="spadfun">complementSpace</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> R -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">complementSpace</span> <span class="pre">Lv</span></code> builds a complement space of the subspace spanned by the list of vectors <code class="docutils literal notranslate"><span class="pre">LV</span></code>. This function fails with the empty basis.</p>
+<dt><span class="spadfun">complementSpace</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> R -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">complementSpace</span> <span class="pre">Lv</span></code> builds a complement space of the subspace spanned by the list of vectors <code class="docutils literal notranslate"><span class="pre">LV</span></code>. This function fails with the empty basis.</p>
 </dd>
 </dl>
-<span class="target" id="l-vector-space-basis-coordinates"></span><dl class="simple" id="index-12">
-<dt><span class="spadfun">coordinates</span>: (<a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> R, %) -&gt; <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coordinates(v,</span> <span class="pre">B)</span></code> computes the coordinates of the vector <code class="docutils literal notranslate"><span class="pre">v</span></code> in the basis <code class="docutils literal notranslate"><span class="pre">B</span></code> if possible and produces an error otherwise.</p>
+<span class="target" id="l566563746f72537061636542617369732e636f6f7264696e61746573"></span><dl class="simple" id="index-12">
+<dt><span class="spadfun">coordinates</span>: (<a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> R, %) -&gt; <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coordinates(v,</span> <span class="pre">B)</span></code> computes the coordinates of the vector <code class="docutils literal notranslate"><span class="pre">v</span></code> in the basis <code class="docutils literal notranslate"><span class="pre">B</span></code> if possible and produces an error otherwise.</p>
 </dd>
 </dl>
-<span class="target" id="l-vector-space-basis-coordinates-if-can"></span><dl class="simple" id="index-13">
-<dt><span class="spadfun">coordinatesIfCan</span>: (<a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> R, %) -&gt; Union(<a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> R, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coordinatesIfCan(v,</span> <span class="pre">B)</span></code> computes the coordinates of the vector <code class="docutils literal notranslate"><span class="pre">v</span></code> in the basis <code class="docutils literal notranslate"><span class="pre">B</span></code> if possible and returns <code class="docutils literal notranslate"><span class="pre">&quot;failed&quot;</span></code> otherwise.</p>
+<span class="target" id="l566563746f72537061636542617369732e636f6f7264696e61746573496643616e"></span><dl class="simple" id="index-13">
+<dt><span class="spadfun">coordinatesIfCan</span>: (<a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> R, %) -&gt; Union(<a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> R, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coordinatesIfCan(v,</span> <span class="pre">B)</span></code> computes the coordinates of the vector <code class="docutils literal notranslate"><span class="pre">v</span></code> in the basis <code class="docutils literal notranslate"><span class="pre">B</span></code> if possible and returns <code class="docutils literal notranslate"><span class="pre">&quot;failed&quot;</span></code> otherwise.</p>
 </dd>
 </dl>
-<span class="target" id="l-vector-space-basis-int-basis"></span><dl class="simple" id="index-14">
+<span class="target" id="l566563746f72537061636542617369732e696e744261736973"></span><dl class="simple" id="index-14">
 <dt><span class="spadfun">intBasis</span>: (%, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">intBasis(B1,</span> <span class="pre">B2)</span></code> computes a basis of the intersection of the two subspaces.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-15">
-<dt><span class="spadfun">intBasis</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> R, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> R) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">intBasis(Lv1,</span> <span class="pre">Lv2)</span></code> computes a basis of the intersection of the two subspaces spanned by the vectors of <code class="docutils literal notranslate"><span class="pre">Lv1</span></code> and <code class="docutils literal notranslate"><span class="pre">Lv2</span></code>.</p>
+<dt><span class="spadfun">intBasis</span>: (<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> R, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> R) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">intBasis(Lv1,</span> <span class="pre">Lv2)</span></code> computes a basis of the intersection of the two subspaces spanned by the vectors of <code class="docutils literal notranslate"><span class="pre">Lv1</span></code> and <code class="docutils literal notranslate"><span class="pre">Lv2</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-16">
-<dt><span class="spadfun">intBasis</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">intBasis</span> <span class="pre">Lb</span></code> computes a basis of the intersection of the list of subspaces represented by <code class="docutils literal notranslate"><span class="pre">LLv</span></code>.</p>
+<dt><span class="spadfun">intBasis</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">intBasis</span> <span class="pre">Lb</span></code> computes a basis of the intersection of the list of subspaces represented by <code class="docutils literal notranslate"><span class="pre">LLv</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-17">
-<dt><span class="spadfun">intBasis</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> R -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">intBasis</span> <span class="pre">LLv</span></code> computes a basis of the intersection of the list of subspaces represented by <code class="docutils literal notranslate"><span class="pre">LLv</span></code>.</p>
+<dt><span class="spadfun">intBasis</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> R -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">intBasis</span> <span class="pre">LLv</span></code> computes a basis of the intersection of the list of subspaces represented by <code class="docutils literal notranslate"><span class="pre">LLv</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-vector-space-basis-is-basis"></span><dl class="simple" id="index-18">
-<dt><span class="spadfun">isBasis?</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> R -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">isBasis?</span> <span class="pre">Lv</span></code> tests for linear independence of a list of vectors.</p>
+<span class="target" id="l566563746f72537061636542617369732e697342617369733f"></span><dl class="simple" id="index-18">
+<dt><span class="spadfun">isBasis?</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> R -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">isBasis?</span> <span class="pre">Lv</span></code> tests for linear independence of a list of vectors.</p>
 </dd>
 </dl>
-<span class="target" id="l-vector-space-basis-member"></span><dl class="simple" id="index-19">
-<dt><span class="spadfun">member?</span>: (<a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> R, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">member?(v,</span> <span class="pre">B)</span></code> tests if the vector <code class="docutils literal notranslate"><span class="pre">v</span></code> is in the subspace spanned by <code class="docutils literal notranslate"><span class="pre">B</span></code>.</p>
+<span class="target" id="l566563746f72537061636542617369732e6d656d6265723f"></span><dl class="simple" id="index-19">
+<dt><span class="spadfun">member?</span>: (<a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> R, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">member?(v,</span> <span class="pre">B)</span></code> tests if the vector <code class="docutils literal notranslate"><span class="pre">v</span></code> is in the subspace spanned by <code class="docutils literal notranslate"><span class="pre">B</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-vector-space-basis-null-space"></span><dl class="simple" id="index-20">
-<dt><span class="spadfun">nullSpace</span>: <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> R -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">nullSpace</span> <span class="pre">M</span></code> builds a basis of the kernel of the linear transformation defined by the matrix <code class="docutils literal notranslate"><span class="pre">M</span></code>. This function calls the function <code class="docutils literal notranslate"><span class="pre">nullSpace</span></code> from the <code class="docutils literal notranslate"><span class="pre">Matrix</span></code> domain. Only the signature changes.</p>
+<span class="target" id="l566563746f72537061636542617369732e6e756c6c5370616365"></span><dl class="simple" id="index-20">
+<dt><span class="spadfun">nullSpace</span>: <a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> R -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">nullSpace</span> <span class="pre">M</span></code> builds a basis of the kernel of the linear transformation defined by the matrix <code class="docutils literal notranslate"><span class="pre">M</span></code>. This function calls the function <code class="docutils literal notranslate"><span class="pre">nullSpace</span></code> from the <code class="docutils literal notranslate"><span class="pre">Matrix</span></code> domain. Only the signature changes.</p>
 </dd>
 </dl>
-<span class="target" id="l-vector-space-basis-rank"></span><dl class="simple" id="index-21">
-<dt><span class="spadfun">rank</span>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">rank</span> <span class="pre">b</span></code> computes the rank of a basis, i.e. the number of vectors in the basis.</p>
+<span class="target" id="l566563746f72537061636542617369732e72616e6b"></span><dl class="simple" id="index-21">
+<dt><span class="spadfun">rank</span>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">rank</span> <span class="pre">b</span></code> computes the rank of a basis, i.e. the number of vectors in the basis.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-22">
-<dt><span class="spadfun">rank</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> R -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">rank</span> <span class="pre">Lv</span></code> computes the rank of a list of vectors.</p>
+<dt><span class="spadfun">rank</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> R -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">rank</span> <span class="pre">Lv</span></code> computes the rank of a list of vectors.</p>
 </dd>
 </dl>
-<span class="target" id="l-vector-space-basis-subspace"></span><dl class="simple" id="index-23">
-<dt><span class="spadfun">subspace?</span>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">subspace?(B1,</span> <span class="pre">B2)</span></code> tests if the first space is included in the second.</p>
+<span class="target" id="l566563746f72537061636542617369732e73756273706163653f"></span><dl class="simple" id="index-23">
+<dt><span class="spadfun">subspace?</span>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">subspace?(B1,</span> <span class="pre">B2)</span></code> tests if the first space is included in the second.</p>
 </dd>
 </dl>
-<span class="target" id="l-vector-space-basis-sum-basis"></span><dl class="simple" id="index-24">
+<span class="target" id="l566563746f72537061636542617369732e73756d4261736973"></span><dl class="simple" id="index-24">
 <dt><span class="spadfun">sumBasis</span>: (%, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sumBasis(B1,</span> <span class="pre">B2)</span></code> computes a basis of the sum of the two subspaces.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-25">
-<dt><span class="spadfun">sumBasis</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> R, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> R) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sumBasis(Lv1,</span> <span class="pre">Lv2)</span></code> computes a basis of the sum of the two subspaces spanned by the vectors of <code class="docutils literal notranslate"><span class="pre">Lv1</span></code> and <code class="docutils literal notranslate"><span class="pre">Lv2</span></code>.</p>
+<dt><span class="spadfun">sumBasis</span>: (<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> R, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> R) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sumBasis(Lv1,</span> <span class="pre">Lv2)</span></code> computes a basis of the sum of the two subspaces spanned by the vectors of <code class="docutils literal notranslate"><span class="pre">Lv1</span></code> and <code class="docutils literal notranslate"><span class="pre">Lv2</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-26">
-<dt><span class="spadfun">sumBasis</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sumBasis</span> <span class="pre">Lb</span></code> computes a basis of the sum of list of subspaces. This function is slightly more efficient than <code class="docutils literal notranslate"><span class="pre">reduce(sumBasis,</span> <span class="pre">Lb)</span></code>.</p>
+<dt><span class="spadfun">sumBasis</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sumBasis</span> <span class="pre">Lb</span></code> computes a basis of the sum of list of subspaces. This function is slightly more efficient than <code class="docutils literal notranslate"><span class="pre">reduce(sumBasis,</span> <span class="pre">Lb)</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-27">
-<dt><span class="spadfun">sumBasis</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> R -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sumBasis</span> <span class="pre">LLv</span></code> computes a basis of the sum of the list of subspaces represented by <code class="docutils literal notranslate"><span class="pre">LLv</span></code>. This function is slightly more efficient than <code class="docutils literal notranslate"><span class="pre">reduce(sumBasis,</span> <span class="pre">LLv)</span></code>.</p>
+<dt><span class="spadfun">sumBasis</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> R -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sumBasis</span> <span class="pre">LLv</span></code> computes a basis of the sum of the list of subspaces represented by <code class="docutils literal notranslate"><span class="pre">LLv</span></code>. This function is slightly more efficient than <code class="docutils literal notranslate"><span class="pre">reduce(sumBasis,</span> <span class="pre">LLv)</span></code>.</p>
 </dd>
 </dl>
-<p><a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-<p><a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+<p><a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+<p><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
 </div>
 
 
@@ -215,7 +219,7 @@
         <li class="right" >
           <a href="VectorModularReconstructor.html" title="VectorModularReconstructor"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Domains.html" >Domains</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">VectorSpaceBasis R</a></li> 

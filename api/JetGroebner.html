@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JetGroebner(R, JB, LJV, P, E) &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>JetGroebner(R, JB, LJV, P, E) &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="JetCoordinateTransformation.html" title="JetCoordinateTransformation(JB1, JB2, Y, W)"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">JetGroebner(R, JB, LJV, P, E)</a></li> 
@@ -46,18 +46,18 @@
           <div class="body" role="main">
             
   <div class="section" id="jetgroebner-r-jb-ljv-p-e">
-<span id="l-jet-groebner"></span><span id="index-0"></span><h1>JetGroebner(R, JB, LJV, P, E)<a class="headerlink" href="#jetgroebner-r-jb-ljv-p-e" title="Permalink to this headline">¶</a></h1>
+<span id="l4a657447726f65626e6572"></span><span id="index-0"></span><h1>JetGroebner(R, JB, LJV, P, E)<a class="headerlink" href="#jetgroebner-r-jb-ljv-p-e" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/jet.spad#L6813">jet.spad line 6813</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/jet.spad#L6813">[edit on github]</a></p>
 <ul class="simple">
-<li><p>R: <a class="reference internal" href="GcdDomain.html#l-gcd-domain"><span class="std std-ref">GcdDomain</span></a></p></li>
-<li><p>JB: <a class="reference internal" href="JetBundleCategory.html#l-jet-bundle-category"><span class="std std-ref">JetBundleCategory</span></a></p></li>
-<li><p>LJV: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> JB</p></li>
-<li><p>P: Join(<a class="reference internal" href="JetBundleFunctionCategory.html#l-jet-bundle-function-category"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB, <a class="reference internal" href="PolynomialCategory.html#l-polynomial-category"><span class="std std-ref">PolynomialCategory</span></a>(R, <a class="reference internal" href="IndexedExponents.html#l-indexed-exponents"><span class="std std-ref">IndexedExponents</span></a> JB, JB))</p></li>
-<li><p>E: <a class="reference internal" href="DirectProductCategory.html#l-direct-product-category"><span class="std std-ref">DirectProductCategory</span></a>(# LJV, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>)</p></li>
+<li><p>R: <a class="reference internal" href="GcdDomain.html#l476364446f6d61696e"><span class="std std-ref">GcdDomain</span></a></p></li>
+<li><p>JB: <a class="reference internal" href="JetBundleCategory.html#l4a657442756e646c6543617465676f7279"><span class="std std-ref">JetBundleCategory</span></a></p></li>
+<li><p>LJV: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> JB</p></li>
+<li><p>P: Join(<a class="reference internal" href="JetBundleFunctionCategory.html#l4a657442756e646c6546756e6374696f6e43617465676f7279"><span class="std std-ref">JetBundleFunctionCategory</span></a> JB, <a class="reference internal" href="PolynomialCategory.html#l506f6c796e6f6d69616c43617465676f7279"><span class="std std-ref">PolynomialCategory</span></a>(R, <a class="reference internal" href="IndexedExponents.html#l496e64657865644578706f6e656e7473"><span class="std std-ref">IndexedExponents</span></a> JB, JB))</p></li>
+<li><p>E: <a class="reference internal" href="DirectProductCategory.html#l44697265637450726f6475637443617465676f7279"><span class="std std-ref">DirectProductCategory</span></a>(# LJV, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>)</p></li>
 </ul>
-<p><a class="reference internal" href="#l-jet-groebner"><span class="std std-ref">JetGroebner</span></a> provides a procedure to compute Groebner bases for arbitrary domains of jet polynomials. Two internal procedures transform to and from <a class="reference internal" href="DistributedJetBundlePolynomial.html#l-distributed-jet-bundle-polynomial"><span class="std std-ref">DistributedJetBundlePolynomial</span></a> where the actual computation is done. The argument <code class="docutils literal notranslate"><span class="pre">LJV</span></code> contains all jet variables effectively occurring in the polynomials. The ordering is determined by the ordering in <code class="docutils literal notranslate"><span class="pre">P</span></code>.</p>
-<span class="target" id="l-jet-groebner-groebner"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">groebner</span>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> P</dt><dd><p><code class="docutils literal notranslate"><span class="pre">groebner(lp)</span></code> computes a Groebner basis for the ideal generated by the polynomials <code class="docutils literal notranslate"><span class="pre">lp</span></code>.</p>
+<p><a class="reference internal" href="#l4a657447726f65626e6572"><span class="std std-ref">JetGroebner</span></a> provides a procedure to compute Groebner bases for arbitrary domains of jet polynomials. Two internal procedures transform to and from <a class="reference internal" href="DistributedJetBundlePolynomial.html#l44697374726962757465644a657442756e646c65506f6c796e6f6d69616c"><span class="std std-ref">DistributedJetBundlePolynomial</span></a> where the actual computation is done. The argument <code class="docutils literal notranslate"><span class="pre">LJV</span></code> contains all jet variables effectively occurring in the polynomials. The ordering is determined by the ordering in <code class="docutils literal notranslate"><span class="pre">P</span></code>.</p>
+<span class="target" id="l4a657447726f65626e65722e67726f65626e6572"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">groebner</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> P -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> P</dt><dd><p><code class="docutils literal notranslate"><span class="pre">groebner(lp)</span></code> computes a Groebner basis for the ideal generated by the polynomials <code class="docutils literal notranslate"><span class="pre">lp</span></code>.</p>
 </dd>
 </dl>
 </div>
@@ -107,7 +107,7 @@
         <li class="right" >
           <a href="JetCoordinateTransformation.html" title="JetCoordinateTransformation(JB1, JB2, Y, W)"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">JetGroebner(R, JB, LJV, P, E)</a></li> 

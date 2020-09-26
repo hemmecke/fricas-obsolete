@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GosperSummationMethod(E, V, R, P, Q) &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>GosperSummationMethod(E, V, R, P, Q) &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="GnuDraw.html" title="GnuDraw"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">GosperSummationMethod(E, V, R, P, Q)</a></li> 
@@ -46,23 +46,23 @@
           <div class="body" role="main">
             
   <div class="section" id="gospersummationmethod-e-v-r-p-q">
-<span id="l-gosper-summation-method"></span><span id="index-0"></span><h1>GosperSummationMethod(E, V, R, P, Q)<a class="headerlink" href="#gospersummationmethod-e-v-r-p-q" title="Permalink to this headline">¶</a></h1>
+<span id="l476f7370657253756d6d6174696f6e4d6574686f64"></span><span id="index-0"></span><h1>GosperSummationMethod(E, V, R, P, Q)<a class="headerlink" href="#gospersummationmethod-e-v-r-p-q" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/sum.spad#L53">sum.spad line 53</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/sum.spad#L53">[edit on github]</a></p>
 <ul>
-<li><p>E: <a class="reference internal" href="OrderedAbelianMonoidSup.html#l-ordered-abelian-monoid-sup"><span class="std std-ref">OrderedAbelianMonoidSup</span></a></p></li>
-<li><p>V: <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a></p></li>
-<li><p>R: <a class="reference internal" href="IntegralDomain.html#l-integral-domain"><span class="std std-ref">IntegralDomain</span></a></p></li>
-<li><p>P: <a class="reference internal" href="PolynomialCategory.html#l-polynomial-category"><span class="std std-ref">PolynomialCategory</span></a>(R, E, V)</p></li>
-<li><p>Q: Join(<a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Field.html#l-field"><span class="std std-ref">Field</span></a>) with</p>
+<li><p>E: <a class="reference internal" href="OrderedAbelianMonoidSup.html#l4f7264657265644162656c69616e4d6f6e6f6964537570"><span class="std std-ref">OrderedAbelianMonoidSup</span></a></p></li>
+<li><p>V: <a class="reference internal" href="OrderedSet.html#l4f726465726564536574"><span class="std std-ref">OrderedSet</span></a></p></li>
+<li><p>R: <a class="reference internal" href="IntegralDomain.html#l496e74656772616c446f6d61696e"><span class="std std-ref">IntegralDomain</span></a></p></li>
+<li><p>P: <a class="reference internal" href="PolynomialCategory.html#l506f6c796e6f6d69616c43617465676f7279"><span class="std std-ref">PolynomialCategory</span></a>(R, E, V)</p></li>
+<li><p>Q: Join(<a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f"><span class="std std-ref">RetractableTo</span></a> <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Field.html#l4669656c64"><span class="std std-ref">Field</span></a>) with</p>
 <blockquote>
-<div><p><span class="spadfun">coerce</span>: P -&gt; %</p>
-<p><span class="spadfun">denom</span>: % -&gt; P</p>
-<p><span class="spadfun">numer</span>: % -&gt; P</p>
+<div><p>coerce: P -&gt; %</p>
+<p>denom: % -&gt; P</p>
+<p>numer: % -&gt; P</p>
 </div></blockquote>
 </li>
 </ul>
 <p>Gosper<code class="docutils literal notranslate"><span class="pre">'s</span></code> summation algorithm.</p>
-<span class="target" id="l-gosper-summation-method-gospers-method"></span><dl class="simple" id="index-1">
+<span class="target" id="l476f7370657253756d6d6174696f6e4d6574686f642e476f73706572734d6574686f64"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">GospersMethod</span>: (Q, V, () -&gt; V) -&gt; Union(Q, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">GospersMethod(b,</span> <span class="pre">n,</span> <span class="pre">new)</span></code> returns a rational function <code class="docutils literal notranslate"><span class="pre">rf(n)</span></code> such that <code class="docutils literal notranslate"><span class="pre">a(n)</span> <span class="pre">*</span> <span class="pre">rf(n)</span></code> is the indefinite sum of <code class="docutils literal notranslate"><span class="pre">a(n)</span></code> with respect to upward difference on <code class="docutils literal notranslate"><span class="pre">n</span></code>, i.e. <code class="docutils literal notranslate"><span class="pre">a(n+1)</span> <span class="pre">*</span> <span class="pre">rf(n+1)</span> <span class="pre">-</span> <span class="pre">a(n)</span> <span class="pre">*</span> <span class="pre">rf(n)</span> <span class="pre">=</span> <span class="pre">a(n)</span></code>, where <code class="docutils literal notranslate"><span class="pre">b(n)</span> <span class="pre">=</span> <span class="pre">a(n)/a(n-1)</span></code> is a rational function. Returns “failed” if no such rational function <code class="docutils literal notranslate"><span class="pre">rf(n)</span></code> exists. Note: <code class="docutils literal notranslate"><span class="pre">new</span></code> is a nullary function returning a new <code class="docutils literal notranslate"><span class="pre">V</span></code> every time. The condition on <code class="docutils literal notranslate"><span class="pre">a(n)</span></code> is that <code class="docutils literal notranslate"><span class="pre">a(n)/a(n-1)</span></code> is a rational function of <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
 </dd>
 </dl>
@@ -113,7 +113,7 @@
         <li class="right" >
           <a href="GnuDraw.html" title="GnuDraw"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">GosperSummationMethod(E, V, R, P, Q)</a></li> 

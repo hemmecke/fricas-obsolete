@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DiophantineSolutionPackage &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>DiophantineSolutionPackage &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="DenominatorIntegration.html" title="DenominatorIntegration(R, F)"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">DiophantineSolutionPackage</a></li> 
@@ -46,11 +46,11 @@
           <div class="body" role="main">
             
   <div class="section" id="diophantinesolutionpackage">
-<span id="l-diophantine-solution-package"></span><span id="index-0"></span><h1>DiophantineSolutionPackage<a class="headerlink" href="#diophantinesolutionpackage" title="Permalink to this headline">¶</a></h1>
+<span id="l44696f7068616e74696e65536f6c7574696f6e5061636b616765"></span><span id="index-0"></span><h1>DiophantineSolutionPackage<a class="headerlink" href="#diophantinesolutionpackage" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/solvedio.spad#L1">solvedio.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/solvedio.spad#L1">[edit on github]</a></p>
 <p>any solution of a homogeneous linear Diophantine equation can be represented as a sum of minimal solutions, which form a “basis” (a minimal solution cannot be represented as a nontrivial sum of solutions) in the case of an inhomogeneous linear Diophantine equation, each solution is the sum of a inhomogeneous solution and any number of homogeneous solutions therefore, it suffices to compute two sets: 1. all minimal inhomogeneous solutions 2. all minimal homogeneous solutions the algorithm implemented is a completion procedure, which enumerates all solutions in a recursive depth-first-search it can be seen as finding monotone paths in a graph for more details see Reference</p>
-<span class="target" id="l-diophantine-solution-package-dio-solve"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">dioSolve</span>: <a class="reference internal" href="Equation.html#l-equation"><span class="std std-ref">Equation</span></a> <a class="reference internal" href="Polynomial.html#l-polynomial"><span class="std std-ref">Polynomial</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a> -&gt; Record(varOrder: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, inhom: Union(<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, failed), hom: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">dioSolve(u)</span></code> computes a basis of all minimal solutions for linear homogeneous Diophantine equation <code class="docutils literal notranslate"><span class="pre">u</span></code>, then all minimal solutions of inhomogeneous equation</p>
+<span class="target" id="l44696f7068616e74696e65536f6c7574696f6e5061636b6167652e64696f536f6c7665"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">dioSolve</span>: <a class="reference internal" href="Equation.html#l4571756174696f6e"><span class="std std-ref">Equation</span></a> <a class="reference internal" href="Polynomial.html#l506f6c796e6f6d69616c"><span class="std std-ref">Polynomial</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a> -&gt; Record(varOrder: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>, inhom: Union(<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, failed), hom: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">dioSolve(u)</span></code> computes a basis of all minimal solutions for linear homogeneous Diophantine equation <code class="docutils literal notranslate"><span class="pre">u</span></code>, then all minimal solutions of inhomogeneous equation</p>
 </dd>
 </dl>
 </div>
@@ -100,7 +100,7 @@
         <li class="right" >
           <a href="DenominatorIntegration.html" title="DenominatorIntegration(R, F)"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">DiophantineSolutionPackage</a></li> 

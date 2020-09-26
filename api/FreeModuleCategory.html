@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FreeModuleCategory(R, S) &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>FreeModuleCategory(R, S) &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="FreeLieAlgebra.html" title="FreeLieAlgebra(VarSet, R)"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Categories.html" accesskey="U">Categories</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">FreeModuleCategory(R, S)</a></li> 
@@ -46,114 +46,166 @@
           <div class="body" role="main">
             
   <div class="section" id="freemodulecategory-r-s">
-<span id="l-free-module-category"></span><span id="index-0"></span><h1>FreeModuleCategory(R, S)<a class="headerlink" href="#freemodulecategory-r-s" title="Permalink to this headline">¶</a></h1>
+<span id="l467265654d6f64756c6543617465676f7279"></span><span id="index-0"></span><h1>FreeModuleCategory(R, S)<a class="headerlink" href="#freemodulecategory-r-s" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/poly.spad#L16">poly.spad line 16</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/poly.spad#L16">[edit on github]</a></p>
 <ul class="simple">
-<li><p>R: Join(<a class="reference internal" href="SemiRng.html#l-semi-rng"><span class="std std-ref">SemiRng</span></a>, <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a>)</p></li>
-<li><p>S: <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p></li>
+<li><p>R: Join(<a class="reference internal" href="SemiRng.html#l53656d69526e67"><span class="std std-ref">SemiRng</span></a>, <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a>)</p></li>
+<li><p>S: <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p></li>
 </ul>
-<p>A domain of this category implements formal linear combinations of elements from a domain <code class="docutils literal notranslate"><span class="pre">Basis</span></code> with coefficients in a domain <code class="docutils literal notranslate"><span class="pre">R</span></code>. The domain <code class="docutils literal notranslate"><span class="pre">Basis</span></code> needs only to belong to the category <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a> and <code class="docutils literal notranslate"><span class="pre">R</span></code> to the category <a class="reference internal" href="Ring.html#l-ring"><span class="std std-ref">Ring</span></a>. Thus the coefficient ring may be non-commutative. See the <a class="reference internal" href="XDistributedPolynomial.html#l-x-distributed-polynomial"><span class="std std-ref">XDistributedPolynomial</span></a> constructor for examples of domains built with the <a class="reference internal" href="#l-free-module-category"><span class="std std-ref">FreeModuleCategory</span></a> category constructor. Author: Michel Petitot (<a class="reference external" href="mailto:petitot&#37;&#52;&#48;lifl">petitot<span>&#64;</span>lifl</a>.<code class="docutils literal notranslate"><span class="pre">fr</span></code>)   Note (Franz Lehner, June 2009): <code class="docutils literal notranslate"><span class="pre">FreeModule</span></code> originally was not of FreeModuleCategory. Some functions (like <code class="docutils literal notranslate"><span class="pre">support</span></code>, <code class="docutils literal notranslate"><span class="pre">coefficients</span></code>, <code class="docutils literal notranslate"><span class="pre">monomials</span></code>, …) from here could be moved to <code class="docutils literal notranslate"><span class="pre">IndexedDirectProductCategory</span></code> but at the moment there is no need for this.</p>
-<dl class="simple">
-<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-0"><span class="std std-ref">0</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
-</dd>
-<dt><a class="reference internal" href="RightModule.html#id1"><span class="std std-ref">*</span></a>: (%, R) -&gt; %</dt><dd><p>from <a class="reference internal" href="RightModule.html#l-right-module"><span class="std std-ref">RightModule</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="AbelianGroup.html#id1"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, %) -&gt; % if R has <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianMonoid.html#id1"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianSemiGroup.html#id1"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l-abelian-semi-group"><span class="std std-ref">AbelianSemiGroup</span></a></p>
-</dd>
-<dt><a class="reference internal" href="LeftModule.html#id1"><span class="std std-ref">*</span></a>: (R, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="LeftModule.html#l-left-module"><span class="std std-ref">LeftModule</span></a> R</p>
-</dd>
-<dt><a class="reference internal" href="AbelianSemiGroup.html#id2"><span class="std std-ref">+</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l-abelian-semi-group"><span class="std std-ref">AbelianSemiGroup</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianGroup.html#id2"><span class="std std-ref">-</span></a>: % -&gt; % if R has <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianGroup.html#id2"><span class="std std-ref">-</span></a>: (%, %) -&gt; % if R has <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
-</dd>
-<dt><a class="reference internal" href="BasicType.html#id1"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-</dd>
-<dt><a class="reference internal" href="BasicType.html#id2"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+<p>A domain of this category implements formal linear combinations of elements from a domain <code class="docutils literal notranslate"><span class="pre">Basis</span></code> with coefficients in a domain <code class="docutils literal notranslate"><span class="pre">R</span></code>. The domain <code class="docutils literal notranslate"><span class="pre">Basis</span></code> needs only to belong to the category <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a> and <code class="docutils literal notranslate"><span class="pre">R</span></code> to the category <a class="reference internal" href="Ring.html#l52696e67"><span class="std std-ref">Ring</span></a>. Thus the coefficient ring may be non-commutative. See the <a class="reference internal" href="XDistributedPolynomial.html#l584469737472696275746564506f6c796e6f6d69616c"><span class="std std-ref">XDistributedPolynomial</span></a> constructor for examples of domains built with the <a class="reference internal" href="#l467265654d6f64756c6543617465676f7279"><span class="std std-ref">FreeModuleCategory</span></a> category constructor. Author: Michel Petitot (<a class="reference external" href="mailto:petitot&#37;&#52;&#48;lifl">petitot<span>&#64;</span>lifl</a>.<code class="docutils literal notranslate"><span class="pre">fr</span></code>)   Note (Franz Lehner, June 2009): <code class="docutils literal notranslate"><span class="pre">FreeModule</span></code> originally was not of FreeModuleCategory. Some functions (like <code class="docutils literal notranslate"><span class="pre">support</span></code>, <code class="docutils literal notranslate"><span class="pre">coefficients</span></code>, <code class="docutils literal notranslate"><span class="pre">monomials</span></code>, …) from here could be moved to <code class="docutils literal notranslate"><span class="pre">IndexedDirectProductCategory</span></code> but at the moment there is no need for this.</p>
+<dl class="simple" id="l467265654d6f64756c6543617465676f72792e30">
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f69642e30"><span class="std std-ref">0</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-free-module-category-coefficient"></span><dl class="simple" id="index-1">
+<dl class="simple" id="l467265654d6f64756c6543617465676f72792e2a">
+<dt><a class="reference internal" href="RightModule.html#l52696768744d6f64756c652e2a"><span class="std std-ref">*</span></a>: (%, R) -&gt; %</dt><dd><p>from <a class="reference internal" href="RightModule.html#l52696768744d6f64756c65"><span class="std std-ref">RightModule</span></a> R</p>
+</dd>
+<dt><a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f75702e2a"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, %) -&gt; % if R has <a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f69642e2a"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f75702e2a"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f7570"><span class="std std-ref">AbelianSemiGroup</span></a></p>
+</dd>
+<dt><a class="reference internal" href="LeftModule.html#l4c6566744d6f64756c652e2a"><span class="std std-ref">*</span></a>: (R, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="LeftModule.html#l4c6566744d6f64756c65"><span class="std std-ref">LeftModule</span></a> R</p>
+</dd>
+</dl>
+<dl class="simple" id="l467265654d6f64756c6543617465676f72792e2b">
+<dt><a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f75702e2b"><span class="std std-ref">+</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f7570"><span class="std std-ref">AbelianSemiGroup</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l467265654d6f64756c6543617465676f72792e2d">
+<dt><a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f75702e2d"><span class="std std-ref">-</span></a>: % -&gt; % if R has <a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f75702e2d"><span class="std std-ref">-</span></a>: (%, %) -&gt; % if R has <a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l467265654d6f64756c6543617465676f72792e3d">
+<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l467265654d6f64756c6543617465676f72792e7e3d">
+<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e7e3d"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l467265654d6f64756c6543617465676f72792e636f656666696369656e74"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">coefficient</span>: (%, S) -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coefficient(x,</span> <span class="pre">s)</span></code> returns the coefficient of the basis element <code class="docutils literal notranslate"><span class="pre">s</span></code></p>
 </dd>
 </dl>
-<span class="target" id="l-free-module-category-coefficients"></span><dl class="simple" id="index-2">
-<dt><span class="spadfun">coefficients</span>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coefficients(x)</span></code> returns the list of coefficients of <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
-</dd>
-<dt><a class="reference internal" href="CoercibleTo.html#l-coercible-to-coerce"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
-</dd>
-<dt><a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category-construct"><span class="std std-ref">construct</span></a>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(k: S, c: R) -&gt; %</dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category"><span class="std std-ref">IndexedProductCategory</span></a>(R, S)</p>
-</dd>
-<dt><a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category-construct-ordered"><span class="std std-ref">constructOrdered</span></a>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(k: S, c: R) -&gt; % if S has <a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a></dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category"><span class="std std-ref">IndexedProductCategory</span></a>(R, S)</p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l-single-integer"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash-update"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-latex"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category-leading-coefficient"><span class="std std-ref">leadingCoefficient</span></a>: % -&gt; R if S has <a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a></dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category"><span class="std std-ref">IndexedProductCategory</span></a>(R, S)</p>
-</dd>
-<dt><a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category-leading-monomial"><span class="std std-ref">leadingMonomial</span></a>: % -&gt; % if S has <a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a></dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category"><span class="std std-ref">IndexedProductCategory</span></a>(R, S)</p>
-</dd>
-<dt><a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category-leading-support"><span class="std std-ref">leadingSupport</span></a>: % -&gt; S if S has <a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a></dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category"><span class="std std-ref">IndexedProductCategory</span></a>(R, S)</p>
-</dd>
-<dt><a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category-leading-term"><span class="std std-ref">leadingTerm</span></a>: % -&gt; Record(k: S, c: R) if S has <a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a></dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category"><span class="std std-ref">IndexedProductCategory</span></a>(R, S)</p>
+<span class="target" id="l467265654d6f64756c6543617465676f72792e636f656666696369656e7473"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">coefficients</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coefficients(x)</span></code> returns the list of coefficients of <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-free-module-category-linear-extend"></span><dl class="simple" id="index-3">
-<dt><span class="spadfun">linearExtend</span>: (S -&gt; R, %) -&gt; R if R has <a class="reference internal" href="CommutativeRing.html#l-commutative-ring"><span class="std std-ref">CommutativeRing</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">linearExtend:</span> <span class="pre">(f,</span> <span class="pre">x)</span></code> returns the linear extension of a map defined on the basis applied to a linear combination</p>
-</dd>
-<dt><a class="reference internal" href="IndexedDirectProductCategory.html#l-indexed-direct-product-category-list-of-terms"><span class="std std-ref">listOfTerms</span></a>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(k: S, c: R)</dt><dd><p>from <a class="reference internal" href="IndexedDirectProductCategory.html#l-indexed-direct-product-category"><span class="std std-ref">IndexedDirectProductCategory</span></a>(R, S)</p>
-</dd>
-<dt><a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category-map"><span class="std std-ref">map</span></a>: (R -&gt; R, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category"><span class="std std-ref">IndexedProductCategory</span></a>(R, S)</p>
-</dd>
-<dt><a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category-monomial"><span class="std std-ref">monomial</span></a>: (R, S) -&gt; %</dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category"><span class="std std-ref">IndexedProductCategory</span></a>(R, S)</p>
-</dd>
-<dt><a class="reference internal" href="IndexedProductCategory.html#id1"><span class="std std-ref">monomial?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category"><span class="std std-ref">IndexedProductCategory</span></a>(R, S)</p>
+<dl class="simple" id="l467265654d6f64756c6543617465676f72792e636f65726365">
+<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f2e636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-free-module-category-monomials"></span><dl class="simple" id="index-4">
-<dt><span class="spadfun">monomials</span>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">monomials(x)</span></code> returns the list of <code class="docutils literal notranslate"><span class="pre">r_i*b_i</span></code> whose sum is <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
-</dd>
-<dt><a class="reference internal" href="IndexedDirectProductCategory.html#l-indexed-direct-product-category-number-of-monomials"><span class="std std-ref">numberOfMonomials</span></a>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="IndexedDirectProductCategory.html#l-indexed-direct-product-category"><span class="std std-ref">IndexedDirectProductCategory</span></a>(R, S)</p>
-</dd>
-<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-opposite"><span class="std std-ref">opposite?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
-</dd>
-<dt><a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category-reductum"><span class="std std-ref">reductum</span></a>: % -&gt; % if S has <a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a></dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category"><span class="std std-ref">IndexedProductCategory</span></a>(R, S)</p>
-</dd>
-<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-sample"><span class="std std-ref">sample</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
-</dd>
-<dt><a class="reference internal" href="Comparable.html#l-comparable-smaller"><span class="std std-ref">smaller?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a> if R has <a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a> and S has <a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a></dt><dd><p>from <a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a></p>
-</dd>
-<dt><a class="reference internal" href="CancellationAbelianMonoid.html#l-cancellation-abelian-monoid-subtract-if-can"><span class="std std-ref">subtractIfCan</span></a>: (%, %) -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="CancellationAbelianMonoid.html#l-cancellation-abelian-monoid"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
+<dl class="simple" id="l467265654d6f64756c6543617465676f72792e636f6e737472756374">
+<dt><a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f72792e636f6e737472756374"><span class="std std-ref">construct</span></a>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> Record(k: S, c: R) -&gt; %</dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279"><span class="std std-ref">IndexedProductCategory</span></a>(R, S)</p>
 </dd>
 </dl>
-<span class="target" id="l-free-module-category-support"></span><dl class="simple" id="index-5">
-<dt><span class="spadfun">support</span>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S</dt><dd><p><code class="docutils literal notranslate"><span class="pre">support(x)</span></code> returns the list of basis elements with nonzero coefficients.</p>
-</dd>
-<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-zero"><span class="std std-ref">zero?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+<dl class="simple" id="l467265654d6f64756c6543617465676f72792e636f6e7374727563744f726465726564">
+<dt><a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f72792e636f6e7374727563744f726465726564"><span class="std std-ref">constructOrdered</span></a>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> Record(k: S, c: R) -&gt; % if S has <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a></dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279"><span class="std std-ref">IndexedProductCategory</span></a>(R, S)</p>
 </dd>
 </dl>
-<p><a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a> if R has <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
-<p><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
-<p><a class="reference internal" href="AbelianProductCategory.html#l-abelian-product-category"><span class="std std-ref">AbelianProductCategory</span></a> R</p>
-<p><a class="reference internal" href="AbelianSemiGroup.html#l-abelian-semi-group"><span class="std std-ref">AbelianSemiGroup</span></a></p>
-<p><a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-<p><a class="reference internal" href="BiModule.html#l-bi-module"><span class="std std-ref">BiModule</span></a>(R, R)</p>
-<p><a class="reference internal" href="CancellationAbelianMonoid.html#l-cancellation-abelian-monoid"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
-<p><a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
-<p><a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a> if R has <a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a> and S has <a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a></p>
-<p><a class="reference internal" href="IndexedDirectProductCategory.html#l-indexed-direct-product-category"><span class="std std-ref">IndexedDirectProductCategory</span></a>(R, S)</p>
-<p><a class="reference internal" href="IndexedProductCategory.html#l-indexed-product-category"><span class="std std-ref">IndexedProductCategory</span></a>(R, S)</p>
-<p><a class="reference internal" href="LeftModule.html#l-left-module"><span class="std std-ref">LeftModule</span></a> R</p>
-<p><a class="reference internal" href="Module.html#l-module"><span class="std std-ref">Module</span></a> R if R has <a class="reference internal" href="CommutativeRing.html#l-commutative-ring"><span class="std std-ref">CommutativeRing</span></a></p>
-<p><a class="reference internal" href="RightModule.html#l-right-module"><span class="std std-ref">RightModule</span></a> R</p>
-<p><a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+<dl class="simple" id="l467265654d6f64756c6543617465676f72792e68617368">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e68617368"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l53696e676c65496e7465676572"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l467265654d6f64756c6543617465676f72792e6861736855706461746521">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6861736855706461746521"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l467265654d6f64756c6543617465676f72792e6c61746578">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6c61746578"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l467265654d6f64756c6543617465676f72792e6c656164696e67436f656666696369656e74">
+<dt><a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f72792e6c656164696e67436f656666696369656e74"><span class="std std-ref">leadingCoefficient</span></a>: % -&gt; R if S has <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a></dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279"><span class="std std-ref">IndexedProductCategory</span></a>(R, S)</p>
+</dd>
+</dl>
+<dl class="simple" id="l467265654d6f64756c6543617465676f72792e6c656164696e674d6f6e6f6d69616c">
+<dt><a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f72792e6c656164696e674d6f6e6f6d69616c"><span class="std std-ref">leadingMonomial</span></a>: % -&gt; % if S has <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a></dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279"><span class="std std-ref">IndexedProductCategory</span></a>(R, S)</p>
+</dd>
+</dl>
+<dl class="simple" id="l467265654d6f64756c6543617465676f72792e6c656164696e67537570706f7274">
+<dt><a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f72792e6c656164696e67537570706f7274"><span class="std std-ref">leadingSupport</span></a>: % -&gt; S if S has <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a></dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279"><span class="std std-ref">IndexedProductCategory</span></a>(R, S)</p>
+</dd>
+</dl>
+<dl class="simple" id="l467265654d6f64756c6543617465676f72792e6c656164696e675465726d">
+<dt><a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f72792e6c656164696e675465726d"><span class="std std-ref">leadingTerm</span></a>: % -&gt; Record(k: S, c: R) if S has <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a></dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279"><span class="std std-ref">IndexedProductCategory</span></a>(R, S)</p>
+</dd>
+</dl>
+<span class="target" id="l467265654d6f64756c6543617465676f72792e6c696e656172457874656e64"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">linearExtend</span>: (S -&gt; R, %) -&gt; R if R has <a class="reference internal" href="CommutativeRing.html#l436f6d6d7574617469766552696e67"><span class="std std-ref">CommutativeRing</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">linearExtend:</span> <span class="pre">(f,</span> <span class="pre">x)</span></code> returns the linear extension of a map defined on the basis applied to a linear combination</p>
+</dd>
+</dl>
+<dl class="simple" id="l467265654d6f64756c6543617465676f72792e6c6973744f665465726d73">
+<dt><a class="reference internal" href="IndexedDirectProductCategory.html#l496e646578656444697265637450726f6475637443617465676f72792e6c6973744f665465726d73"><span class="std std-ref">listOfTerms</span></a>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> Record(k: S, c: R)</dt><dd><p>from <a class="reference internal" href="IndexedDirectProductCategory.html#l496e646578656444697265637450726f6475637443617465676f7279"><span class="std std-ref">IndexedDirectProductCategory</span></a>(R, S)</p>
+</dd>
+</dl>
+<dl class="simple" id="l467265654d6f64756c6543617465676f72792e6d6170">
+<dt><a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f72792e6d6170"><span class="std std-ref">map</span></a>: (R -&gt; R, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279"><span class="std std-ref">IndexedProductCategory</span></a>(R, S)</p>
+</dd>
+</dl>
+<dl class="simple" id="l467265654d6f64756c6543617465676f72792e6d6f6e6f6d69616c3f">
+<dt><a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f72792e6d6f6e6f6d69616c3f"><span class="std std-ref">monomial?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279"><span class="std std-ref">IndexedProductCategory</span></a>(R, S)</p>
+</dd>
+</dl>
+<dl class="simple" id="l467265654d6f64756c6543617465676f72792e6d6f6e6f6d69616c">
+<dt><a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f72792e6d6f6e6f6d69616c"><span class="std std-ref">monomial</span></a>: (R, S) -&gt; %</dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279"><span class="std std-ref">IndexedProductCategory</span></a>(R, S)</p>
+</dd>
+</dl>
+<span class="target" id="l467265654d6f64756c6543617465676f72792e6d6f6e6f6d69616c73"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">monomials</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">monomials(x)</span></code> returns the list of <code class="docutils literal notranslate"><span class="pre">r_i*b_i</span></code> whose sum is <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="l467265654d6f64756c6543617465676f72792e6e756d6265724f664d6f6e6f6d69616c73">
+<dt><a class="reference internal" href="IndexedDirectProductCategory.html#l496e646578656444697265637450726f6475637443617465676f72792e6e756d6265724f664d6f6e6f6d69616c73"><span class="std std-ref">numberOfMonomials</span></a>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="IndexedDirectProductCategory.html#l496e646578656444697265637450726f6475637443617465676f7279"><span class="std std-ref">IndexedDirectProductCategory</span></a>(R, S)</p>
+</dd>
+</dl>
+<dl class="simple" id="l467265654d6f64756c6543617465676f72792e6f70706f736974653f">
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f69642e6f70706f736974653f"><span class="std std-ref">opposite?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l467265654d6f64756c6543617465676f72792e726564756374756d">
+<dt><a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f72792e726564756374756d"><span class="std std-ref">reductum</span></a>: % -&gt; % if S has <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a></dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279"><span class="std std-ref">IndexedProductCategory</span></a>(R, S)</p>
+</dd>
+</dl>
+<dl class="simple" id="l467265654d6f64756c6543617465676f72792e73616d706c65">
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f69642e73616d706c65"><span class="std std-ref">sample</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l467265654d6f64756c6543617465676f72792e736d616c6c65723f">
+<dt><a class="reference internal" href="Comparable.html#l436f6d70617261626c652e736d616c6c65723f"><span class="std std-ref">smaller?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a> if R has <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a> and S has <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a></dt><dd><p>from <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l467265654d6f64756c6543617465676f72792e7375627472616374496643616e">
+<dt><a class="reference internal" href="CancellationAbelianMonoid.html#l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f69642e7375627472616374496643616e"><span class="std std-ref">subtractIfCan</span></a>: (%, %) -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="CancellationAbelianMonoid.html#l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l467265654d6f64756c6543617465676f72792e737570706f7274"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">support</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> S</dt><dd><p><code class="docutils literal notranslate"><span class="pre">support(x)</span></code> returns the list of basis elements with nonzero coefficients.</p>
+</dd>
+</dl>
+<dl class="simple" id="l467265654d6f64756c6543617465676f72792e7a65726f3f">
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f69642e7a65726f3f"><span class="std std-ref">zero?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+</dl>
+<p><a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a> if R has <a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p>
+<p><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+<p><a class="reference internal" href="AbelianProductCategory.html#l4162656c69616e50726f6475637443617465676f7279"><span class="std std-ref">AbelianProductCategory</span></a> R</p>
+<p><a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f7570"><span class="std std-ref">AbelianSemiGroup</span></a></p>
+<p><a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+<p><a class="reference internal" href="BiModule.html#l42694d6f64756c65"><span class="std std-ref">BiModule</span></a>(R, R)</p>
+<p><a class="reference internal" href="CancellationAbelianMonoid.html#l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
+<p><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+<p><a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a> if R has <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a> and S has <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a></p>
+<p><a class="reference internal" href="IndexedDirectProductCategory.html#l496e646578656444697265637450726f6475637443617465676f7279"><span class="std std-ref">IndexedDirectProductCategory</span></a>(R, S)</p>
+<p><a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279"><span class="std std-ref">IndexedProductCategory</span></a>(R, S)</p>
+<p><a class="reference internal" href="LeftModule.html#l4c6566744d6f64756c65"><span class="std std-ref">LeftModule</span></a> R</p>
+<p><a class="reference internal" href="Module.html#l4d6f64756c65"><span class="std std-ref">Module</span></a> R if R has <a class="reference internal" href="CommutativeRing.html#l436f6d6d7574617469766552696e67"><span class="std std-ref">CommutativeRing</span></a></p>
+<p><a class="reference internal" href="RightModule.html#l52696768744d6f64756c65"><span class="std std-ref">RightModule</span></a> R</p>
+<p><a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </div>
 
 
@@ -201,7 +253,7 @@
         <li class="right" >
           <a href="FreeLieAlgebra.html" title="FreeLieAlgebra(VarSet, R)"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Categories.html" >Categories</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">FreeModuleCategory(R, S)</a></li> 

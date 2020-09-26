@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VarCat &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>VarCat &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="UnivariateTaylorSeriesCategory.html" title="UnivariateTaylorSeriesCategory Coef"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Categories.html" accesskey="U">Categories</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">VarCat</a></li> 
@@ -46,44 +46,46 @@
           <div class="body" role="main">
             
   <div class="section" id="varcat">
-<span id="l-var-cat"></span><span id="index-0"></span><h1>VarCat<a class="headerlink" href="#varcat" title="Permalink to this headline">¶</a></h1>
+<span id="l566172436174"></span><span id="index-0"></span><h1>VarCat<a class="headerlink" href="#varcat" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/computation.spad#L417">computation.spad line 417</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/computation.spad#L417">[edit on github]</a></p>
 <p>VarCat represents a variable in Lambda and Ski domains. Since we are working in terms of functions then a variable will be a function (possibly a constant function) a variable has a name represented by a String. If the Lambda or Ski calculus is typed then the variable will also have a type.</p>
-<span class="target" id="id1"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">=</span>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>return <code class="docutils literal notranslate"><span class="pre">true</span></code> if equal, that is names are equal and if there is a type then they must also be equal</p>
-</dd>
-<dt><a class="reference internal" href="CoercibleTo.html#l-coercible-to-coerce"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+<span class="target" id="l5661724361742e3d"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">=</span>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>return <code class="docutils literal notranslate"><span class="pre">true</span></code> if equal, that is names are equal and if there is a type then they must also be equal</p>
 </dd>
 </dl>
-<span class="target" id="l-var-cat-get-name"></span><dl class="simple" id="index-2">
-<dt><span class="spadfun">getName</span>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p>returns the name of the variable.</p>
+<dl class="simple" id="l5661724361742e636f65726365">
+<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f2e636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-var-cat-get-type"></span><dl class="simple" id="index-3">
-<dt><span class="spadfun">getType</span>: % -&gt; <a class="reference internal" href="ILogic.html#l-i-logic"><span class="std std-ref">ILogic</span></a></dt><dd><p>returns the type of the variable. This may be a compound type, for instance [“a”,<code class="docutils literal notranslate"><span class="pre">&quot;b&quot;</span></code>] represents a-<code class="docutils literal notranslate"><span class="pre">&gt;b</span></code> a function from type a to type <code class="docutils literal notranslate"><span class="pre">b</span></code> untyped implementations return []</p>
+<span class="target" id="l5661724361742e6765744e616d65"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">getName</span>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>returns the name of the variable.</p>
 </dd>
 </dl>
-<span class="target" id="l-var-cat-parse-var"></span><dl class="simple" id="index-4">
-<dt><span class="spadfun">parseVar</span>: <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p>construct a variable by parsing a string</p>
+<span class="target" id="l5661724361742e67657454797065"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">getType</span>: % -&gt; <a class="reference internal" href="ILogic.html#l494c6f676963"><span class="std std-ref">ILogic</span></a></dt><dd><p>returns the type of the variable. This may be a compound type, for instance [“a”,<code class="docutils literal notranslate"><span class="pre">&quot;b&quot;</span></code>] represents a-<code class="docutils literal notranslate"><span class="pre">&gt;b</span></code> a function from type a to type <code class="docutils literal notranslate"><span class="pre">b</span></code> untyped implementations return []</p>
 </dd>
 </dl>
-<span class="target" id="l-var-cat-parse-var-term"></span><dl class="simple" id="index-5">
-<dt><span class="spadfun">parseVarTerm</span>: (<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; Record(rft: %, pout: <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>)</dt><dd><p>construct a variable by parsing a string pin is index to string at start of parse pout is index to string at end of parse</p>
+<span class="target" id="l5661724361742e7061727365566172"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">parseVar</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p>construct a variable by parsing a string</p>
 </dd>
 </dl>
-<span class="target" id="l-var-cat-to-string"></span><dl class="simple" id="index-6">
-<dt><span class="spadfun">toString</span>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p>returns the name and the type in string form.</p>
+<span class="target" id="l5661724361742e70617273655661725465726d"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">parseVarTerm</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; Record(rft: %, pout: <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>)</dt><dd><p>construct a variable by parsing a string pin is index to string at start of parse pout is index to string at end of parse</p>
 </dd>
 </dl>
-<span class="target" id="l-var-cat-var"></span><dl class="simple" id="index-7">
-<dt><span class="spadfun">var</span>: (<a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a>, <a class="reference internal" href="ILogic.html#l-i-logic"><span class="std std-ref">ILogic</span></a>) -&gt; %</dt><dd><p>constructs variable with a name and also a type.</p>
+<span class="target" id="l5661724361742e746f537472696e67"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">toString</span>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>returns the name and the type in string form.</p>
+</dd>
+</dl>
+<span class="target" id="l5661724361742e766172"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">var</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="ILogic.html#l494c6f676963"><span class="std std-ref">ILogic</span></a>) -&gt; %</dt><dd><p>constructs variable with a name and also a type.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-8">
-<dt><span class="spadfun">var</span>: <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p>constructs variable with a name but no type.</p>
+<dt><span class="spadfun">var</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p>constructs variable with a name but no type.</p>
 </dd>
 </dl>
-<p><a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+<p><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
 </div>
 
 
@@ -131,7 +133,7 @@
         <li class="right" >
           <a href="UnivariateTaylorSeriesCategory.html" title="UnivariateTaylorSeriesCategory Coef"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Categories.html" >Categories</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">VarCat</a></li> 

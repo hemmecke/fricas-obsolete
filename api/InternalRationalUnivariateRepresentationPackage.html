@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InternalRationalUnivariateRepresentationPackage(R, E, V, P, TS) &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>InternalRationalUnivariateRepresentationPackage(R, E, V, P, TS) &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="InternalPrintPackage.html" title="InternalPrintPackage"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">InternalRationalUnivariateRepresentationPackage(R, E, V, P, TS)</a></li> 
@@ -46,22 +46,22 @@
           <div class="body" role="main">
             
   <div class="section" id="internalrationalunivariaterepresentationpackage-r-e-v-p-ts">
-<span id="l-internal-rational-univariate-representation-package"></span><span id="index-0"></span><h1>InternalRationalUnivariateRepresentationPackage(R, E, V, P, TS)<a class="headerlink" href="#internalrationalunivariaterepresentationpackage-r-e-v-p-ts" title="Permalink to this headline">¶</a></h1>
+<span id="l496e7465726e616c526174696f6e616c556e6976617269617465526570726573656e746174696f6e5061636b616765"></span><span id="index-0"></span><h1>InternalRationalUnivariateRepresentationPackage(R, E, V, P, TS)<a class="headerlink" href="#internalrationalunivariaterepresentationpackage-r-e-v-p-ts" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/zerodim.spad#L331">zerodim.spad line 331</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/zerodim.spad#L331">[edit on github]</a></p>
 <ul class="simple">
-<li><p>R: Join(<a class="reference internal" href="PolynomialFactorizationExplicit.html#l-polynomial-factorization-explicit"><span class="std std-ref">PolynomialFactorizationExplicit</span></a>, <a class="reference internal" href="CharacteristicZero.html#l-characteristic-zero"><span class="std std-ref">CharacteristicZero</span></a>)</p></li>
-<li><p>E: <a class="reference internal" href="OrderedAbelianMonoidSup.html#l-ordered-abelian-monoid-sup"><span class="std std-ref">OrderedAbelianMonoidSup</span></a></p></li>
-<li><p>V: <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a></p></li>
-<li><p>P: <a class="reference internal" href="RecursivePolynomialCategory.html#l-recursive-polynomial-category"><span class="std std-ref">RecursivePolynomialCategory</span></a>(R, E, V)</p></li>
-<li><p>TS: <a class="reference internal" href="SquareFreeRegularTriangularSetCategory.html#l-square-free-regular-triangular-set-category"><span class="std std-ref">SquareFreeRegularTriangularSetCategory</span></a>(R, E, V, P)</p></li>
+<li><p>R: Join(<a class="reference internal" href="PolynomialFactorizationExplicit.html#l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974"><span class="std std-ref">PolynomialFactorizationExplicit</span></a>, <a class="reference internal" href="CharacteristicZero.html#l43686172616374657269737469635a65726f"><span class="std std-ref">CharacteristicZero</span></a>)</p></li>
+<li><p>E: <a class="reference internal" href="OrderedAbelianMonoidSup.html#l4f7264657265644162656c69616e4d6f6e6f6964537570"><span class="std std-ref">OrderedAbelianMonoidSup</span></a></p></li>
+<li><p>V: <a class="reference internal" href="OrderedSet.html#l4f726465726564536574"><span class="std std-ref">OrderedSet</span></a></p></li>
+<li><p>P: <a class="reference internal" href="RecursivePolynomialCategory.html#l526563757273697665506f6c796e6f6d69616c43617465676f7279"><span class="std std-ref">RecursivePolynomialCategory</span></a>(R, E, V)</p></li>
+<li><p>TS: <a class="reference internal" href="SquareFreeRegularTriangularSetCategory.html#l53717561726546726565526567756c6172547269616e67756c617253657443617465676f7279"><span class="std std-ref">SquareFreeRegularTriangularSetCategory</span></a>(R, E, V, P)</p></li>
 </ul>
-<p>An internal package for computing the rational univariate representation of a zero-dimensional algebraic variety given by a square-free triangular set. The main operation is <a class="reference internal" href="#l-internal-rational-univariate-representation-package-rur"><span class="std std-ref">rur</span></a>. It is based on the <em>generic</em> algorithm description in [1].   References: [1] <code class="docutils literal notranslate"><span class="pre">D</span></code>. LAZARD “Solving Zero-dimensional Algebraic Systems” Journal of Symbolic Computation, 1992, 13, 117-131</p>
-<span class="target" id="l-internal-rational-univariate-representation-package-check-rur"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">checkRur</span>: (TS, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> TS) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">checkRur(ts,</span> <span class="pre">lus)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if <code class="docutils literal notranslate"><span class="pre">lus</span></code> is a rational univariate representation of <code class="docutils literal notranslate"><span class="pre">ts</span></code>.</p>
+<p>An internal package for computing the rational univariate representation of a zero-dimensional algebraic variety given by a square-free triangular set. The main operation is <a class="reference internal" href="#l496e7465726e616c526174696f6e616c556e6976617269617465526570726573656e746174696f6e5061636b6167652e727572"><span class="std std-ref">rur</span></a>. It is based on the <em>generic</em> algorithm description in [1].   References: [1] <code class="docutils literal notranslate"><span class="pre">D</span></code>. LAZARD “Solving Zero-dimensional Algebraic Systems” Journal of Symbolic Computation, 1992, 13, 117-131</p>
+<span class="target" id="l496e7465726e616c526174696f6e616c556e6976617269617465526570726573656e746174696f6e5061636b6167652e636865636b527572"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">checkRur</span>: (TS, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> TS) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">checkRur(ts,</span> <span class="pre">lus)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if <code class="docutils literal notranslate"><span class="pre">lus</span></code> is a rational univariate representation of <code class="docutils literal notranslate"><span class="pre">ts</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-internal-rational-univariate-representation-package-rur"></span><dl class="simple" id="index-2">
-<dt><span class="spadfun">rur</span>: (TS, <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> TS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">rur(ts,</span> <span class="pre">univ?)</span></code> returns a rational univariate representation of <code class="docutils literal notranslate"><span class="pre">ts</span></code>. This assumes that the lowest polynomial in <code class="docutils literal notranslate"><span class="pre">ts</span></code> is a variable <code class="docutils literal notranslate"><span class="pre">v</span></code> which does not occur in the other polynomials of <code class="docutils literal notranslate"><span class="pre">ts</span></code>. This variable will be used to define the simple algebraic extension over which these other polynomials will be rewritten as univariate polynomials with degree one. If <code class="docutils literal notranslate"><span class="pre">univ?</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code> then these polynomials will have a constant initial.</p>
+<span class="target" id="l496e7465726e616c526174696f6e616c556e6976617269617465526570726573656e746174696f6e5061636b6167652e727572"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">rur</span>: (TS, <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a>) -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> TS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">rur(ts,</span> <span class="pre">univ?)</span></code> returns a rational univariate representation of <code class="docutils literal notranslate"><span class="pre">ts</span></code>. This assumes that the lowest polynomial in <code class="docutils literal notranslate"><span class="pre">ts</span></code> is a variable <code class="docutils literal notranslate"><span class="pre">v</span></code> which does not occur in the other polynomials of <code class="docutils literal notranslate"><span class="pre">ts</span></code>. This variable will be used to define the simple algebraic extension over which these other polynomials will be rewritten as univariate polynomials with degree one. If <code class="docutils literal notranslate"><span class="pre">univ?</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code> then these polynomials will have a constant initial.</p>
 </dd>
 </dl>
 </div>
@@ -111,7 +111,7 @@
         <li class="right" >
           <a href="InternalPrintPackage.html" title="InternalPrintPackage"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">InternalRationalUnivariateRepresentationPackage(R, E, V, P, TS)</a></li> 

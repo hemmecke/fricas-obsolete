@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FactoredFunctionUtilities R &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>FactoredFunctionUtilities R &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="FactoredFunctions2.html" title="FactoredFunctions2(R, S)"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">FactoredFunctionUtilities R</a></li> 
@@ -46,14 +46,14 @@
           <div class="body" role="main">
             
   <div class="section" id="factoredfunctionutilities-r">
-<span id="l-factored-function-utilities"></span><span id="index-0"></span><h1>FactoredFunctionUtilities R<a class="headerlink" href="#factoredfunctionutilities-r" title="Permalink to this headline">¶</a></h1>
+<span id="l466163746f72656446756e6374696f6e5574696c6974696573"></span><span id="index-0"></span><h1>FactoredFunctionUtilities R<a class="headerlink" href="#factoredfunctionutilities-r" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/fr.spad#L501">fr.spad line 501</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/fr.spad#L501">[edit on github]</a></p>
 <ul class="simple">
-<li><p>R: <a class="reference internal" href="IntegralDomain.html#l-integral-domain"><span class="std std-ref">IntegralDomain</span></a></p></li>
+<li><p>R: <a class="reference internal" href="IntegralDomain.html#l496e74656772616c446f6d61696e"><span class="std std-ref">IntegralDomain</span></a></p></li>
 </ul>
-<p><a class="reference internal" href="#l-factored-function-utilities"><span class="std std-ref">FactoredFunctionUtilities</span></a> implements some utility functions for manipulating factored objects.</p>
-<span class="target" id="l-factored-function-utilities-refine"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">refine</span>: (<a class="reference internal" href="Factored.html#l-factored"><span class="std std-ref">Factored</span></a> R, R -&gt; <a class="reference internal" href="Factored.html#l-factored"><span class="std std-ref">Factored</span></a> R) -&gt; <a class="reference internal" href="Factored.html#l-factored"><span class="std std-ref">Factored</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">refine(u,</span> <span class="pre">fn)</span></code> is used to apply the function userfun{<code class="docutils literal notranslate"><span class="pre">fn</span></code>} to each factor of spadvar{<code class="docutils literal notranslate"><span class="pre">u</span></code>} and then build a new factored object from the results. For example, if spadvar{<code class="docutils literal notranslate"><span class="pre">u</span></code>} were created by calling <code class="docutils literal notranslate"><span class="pre">nilFactor(10,</span> <span class="pre">2)</span></code> then <code class="docutils literal notranslate"><span class="pre">refine(u,</span> <span class="pre">factor)</span></code> would create a factored object equal to that created by <code class="docutils literal notranslate"><span class="pre">factor(100)</span></code> or <code class="docutils literal notranslate"><span class="pre">primeFactor(2,</span> <span class="pre">2)</span> <span class="pre">*</span> <span class="pre">primeFactor(5,</span> <span class="pre">2)</span></code>.</p>
+<p><a class="reference internal" href="#l466163746f72656446756e6374696f6e5574696c6974696573"><span class="std std-ref">FactoredFunctionUtilities</span></a> implements some utility functions for manipulating factored objects.</p>
+<span class="target" id="l466163746f72656446756e6374696f6e5574696c69746965732e726566696e65"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">refine</span>: (<a class="reference internal" href="Factored.html#l466163746f726564"><span class="std std-ref">Factored</span></a> R, R -&gt; <a class="reference internal" href="Factored.html#l466163746f726564"><span class="std std-ref">Factored</span></a> R) -&gt; <a class="reference internal" href="Factored.html#l466163746f726564"><span class="std std-ref">Factored</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">refine(u,</span> <span class="pre">fn)</span></code> is used to apply the function userfun{<code class="docutils literal notranslate"><span class="pre">fn</span></code>} to each factor of spadvar{<code class="docutils literal notranslate"><span class="pre">u</span></code>} and then build a new factored object from the results. For example, if spadvar{<code class="docutils literal notranslate"><span class="pre">u</span></code>} were created by calling <code class="docutils literal notranslate"><span class="pre">nilFactor(10,</span> <span class="pre">2)</span></code> then <code class="docutils literal notranslate"><span class="pre">refine(u,</span> <span class="pre">factor)</span></code> would create a factored object equal to that created by <code class="docutils literal notranslate"><span class="pre">factor(100)</span></code> or <code class="docutils literal notranslate"><span class="pre">primeFactor(2,</span> <span class="pre">2)</span> <span class="pre">*</span> <span class="pre">primeFactor(5,</span> <span class="pre">2)</span></code>.</p>
 </dd>
 </dl>
 </div>
@@ -103,7 +103,7 @@
         <li class="right" >
           <a href="FactoredFunctions2.html" title="FactoredFunctions2(R, S)"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">FactoredFunctionUtilities R</a></li> 

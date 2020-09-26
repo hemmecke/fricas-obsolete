@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UnitGaussianElimination &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>UnitGaussianElimination &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="U32VectorPolynomialOperations.html" title="U32VectorPolynomialOperations"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">UnitGaussianElimination</a></li> 
@@ -46,19 +46,19 @@
           <div class="body" role="main">
             
   <div class="section" id="unitgaussianelimination">
-<span id="l-unit-gaussian-elimination"></span><span id="index-0"></span><h1>UnitGaussianElimination<a class="headerlink" href="#unitgaussianelimination" title="Permalink to this headline">¶</a></h1>
+<span id="l556e6974476175737369616e456c696d696e6174696f6e"></span><span id="index-0"></span><h1>UnitGaussianElimination<a class="headerlink" href="#unitgaussianelimination" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/smith2.spad#L1">smith2.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/smith2.spad#L1">[edit on github]</a></p>
 <p>Gaussian elimination using only 1 or <code class="docutils literal notranslate"><span class="pre">-1</span></code> as pivots</p>
-<span class="target" id="l-unit-gaussian-elimination-pre-gauss"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">pre_gauss</span>: <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a> -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">pre_gauss(m)</span></code> performs Gaussian eliminaton on rows of <code class="docutils literal notranslate"><span class="pre">m</span></code> using only 1 and <code class="docutils literal notranslate"><span class="pre">-1</span></code> as pivots. Note: <code class="docutils literal notranslate"><span class="pre">m</span></code> is modified in place</p>
+<span class="target" id="l556e6974476175737369616e456c696d696e6174696f6e2e7072655f6761757373"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">pre_gauss</span>: <a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a> -&gt; <a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">pre_gauss(m)</span></code> performs Gaussian eliminaton on rows of <code class="docutils literal notranslate"><span class="pre">m</span></code> using only 1 and <code class="docutils literal notranslate"><span class="pre">-1</span></code> as pivots. Note: <code class="docutils literal notranslate"><span class="pre">m</span></code> is modified in place</p>
 </dd>
 </dl>
-<span class="target" id="l-unit-gaussian-elimination-pre-lr"></span><dl class="simple" id="index-2">
-<dt><span class="spadfun">pre_lr</span>: (<a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Vector.html#l-vector"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">pre_lr(m,</span> <span class="pre">pi,</span> <span class="pre">pj)</span></code> is like pre_gauss, but records positions of pivots in <code class="docutils literal notranslate"><span class="pre">pi</span></code> and <code class="docutils literal notranslate"><span class="pre">pj</span></code> and returns transformation matrix. <code class="docutils literal notranslate"><span class="pre">m</span></code>, <code class="docutils literal notranslate"><span class="pre">pi</span></code>, <code class="docutils literal notranslate"><span class="pre">pj</span></code> are modified in place</p>
+<span class="target" id="l556e6974476175737369616e456c696d696e6174696f6e2e7072655f6c72"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">pre_lr</span>: (<a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">pre_lr(m,</span> <span class="pre">pi,</span> <span class="pre">pj)</span></code> is like pre_gauss, but records positions of pivots in <code class="docutils literal notranslate"><span class="pre">pi</span></code> and <code class="docutils literal notranslate"><span class="pre">pj</span></code> and returns transformation matrix. <code class="docutils literal notranslate"><span class="pre">m</span></code>, <code class="docutils literal notranslate"><span class="pre">pi</span></code>, <code class="docutils literal notranslate"><span class="pre">pj</span></code> are modified in place</p>
 </dd>
 </dl>
-<span class="target" id="l-unit-gaussian-elimination-pre-smith"></span><dl class="simple" id="index-3">
-<dt><span class="spadfun">pre_smith</span>: <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a> -&gt; <a class="reference internal" href="Matrix.html#l-matrix"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">pre_smith(m)</span></code> first performs pre_gauss(<code class="docutils literal notranslate"><span class="pre">m</span></code>) and then drops all rows and colums of <code class="docutils literal notranslate"><span class="pre">m</span></code> contaning pivots.</p>
+<span class="target" id="l556e6974476175737369616e456c696d696e6174696f6e2e7072655f736d697468"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">pre_smith</span>: <a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a> -&gt; <a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">pre_smith(m)</span></code> first performs pre_gauss(<code class="docutils literal notranslate"><span class="pre">m</span></code>) and then drops all rows and colums of <code class="docutils literal notranslate"><span class="pre">m</span></code> contaning pivots.</p>
 </dd>
 </dl>
 </div>
@@ -108,7 +108,7 @@
         <li class="right" >
           <a href="U32VectorPolynomialOperations.html" title="U32VectorPolynomialOperations"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">UnitGaussianElimination</a></li> 

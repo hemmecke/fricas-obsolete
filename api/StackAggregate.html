@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StackAggregate S &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>StackAggregate S &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="SquareMatrixCategory.html" title="SquareMatrixCategory(ndim, R, Row, Col)"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Categories.html" accesskey="U">Categories</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">StackAggregate S</a></li> 
@@ -46,126 +46,196 @@
           <div class="body" role="main">
             
   <div class="section" id="stackaggregate-s">
-<span id="l-stack-aggregate"></span><span id="index-0"></span><h1>StackAggregate S<a class="headerlink" href="#stackaggregate-s" title="Permalink to this headline">¶</a></h1>
+<span id="l537461636b416767726567617465"></span><span id="index-0"></span><h1>StackAggregate S<a class="headerlink" href="#stackaggregate-s" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/aggcat.spad#L299">aggcat.spad line 299</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/aggcat.spad#L299">[edit on github]</a></p>
 <ul class="simple">
-<li><p>S: <a class="reference internal" href="Type.html#l-type"><span class="std std-ref">Type</span></a></p></li>
+<li><p>S: <a class="reference internal" href="Type.html#l54797065"><span class="std std-ref">Type</span></a></p></li>
 </ul>
 <p>A stack is a bag where the last item inserted is the first item extracted.</p>
-<dl class="simple">
-<dt><a class="reference internal" href="Aggregate.html#id1"><span class="std std-ref">#</span></a>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="Aggregate.html#l-aggregate"><span class="std std-ref">Aggregate</span></a></p>
-</dd>
-<dt><a class="reference internal" href="BasicType.html#id1"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a> if S has <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-</dd>
-<dt><a class="reference internal" href="BasicType.html#id2"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a> if S has <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-</dd>
-<dt><a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate-any"><span class="std std-ref">any?</span></a>: (S -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate"><span class="std std-ref">HomogeneousAggregate</span></a> S</p>
-</dd>
-<dt><a class="reference internal" href="CoercibleTo.html#l-coercible-to-coerce"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a> if S has <a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
-</dd>
-<dt><a class="reference internal" href="Collection.html#l-collection-construct"><span class="std std-ref">construct</span></a>: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S -&gt; %</dt><dd><p>from <a class="reference internal" href="Collection.html#l-collection"><span class="std std-ref">Collection</span></a> S</p>
-</dd>
-<dt><a class="reference internal" href="ConvertibleTo.html#l-convertible-to-convert"><span class="std std-ref">convert</span></a>: % -&gt; <a class="reference internal" href="InputForm.html#l-input-form"><span class="std std-ref">InputForm</span></a> if S has <a class="reference internal" href="ConvertibleTo.html#l-convertible-to"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="InputForm.html#l-input-form"><span class="std std-ref">InputForm</span></a></dt><dd><p>from <a class="reference internal" href="ConvertibleTo.html#l-convertible-to"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="InputForm.html#l-input-form"><span class="std std-ref">InputForm</span></a></p>
-</dd>
-<dt><a class="reference internal" href="Aggregate.html#l-aggregate-copy"><span class="std std-ref">copy</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="Aggregate.html#l-aggregate"><span class="std std-ref">Aggregate</span></a></p>
-</dd>
-<dt><a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate-count"><span class="std std-ref">count</span></a>: (S -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>, %) -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate"><span class="std std-ref">HomogeneousAggregate</span></a> S</p>
-</dd>
-<dt><a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate-count"><span class="std std-ref">count</span></a>: (S, %) -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a> if S has <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></dt><dd><p>from <a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate"><span class="std std-ref">HomogeneousAggregate</span></a> S</p>
-</dd>
-<dt><a class="reference internal" href="Aggregate.html#l-aggregate-empty"><span class="std std-ref">empty</span></a>: () -&gt; %</dt><dd><p>from <a class="reference internal" href="Aggregate.html#l-aggregate"><span class="std std-ref">Aggregate</span></a></p>
-</dd>
-<dt><a class="reference internal" href="Aggregate.html#id2"><span class="std std-ref">empty?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Aggregate.html#l-aggregate"><span class="std std-ref">Aggregate</span></a></p>
-</dd>
-<dt><a class="reference internal" href="Aggregate.html#l-aggregate-eq"><span class="std std-ref">eq?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Aggregate.html#l-aggregate"><span class="std std-ref">Aggregate</span></a></p>
-</dd>
-<dt><a class="reference internal" href="Evalable.html#l-evalable-eval"><span class="std std-ref">eval</span></a>: (%, <a class="reference internal" href="Equation.html#l-equation"><span class="std std-ref">Equation</span></a> S) -&gt; % if S has <a class="reference internal" href="Evalable.html#l-evalable"><span class="std std-ref">Evalable</span></a> S and S has <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></dt><dd><p>from <a class="reference internal" href="Evalable.html#l-evalable"><span class="std std-ref">Evalable</span></a> S</p>
-</dd>
-<dt><a class="reference internal" href="Evalable.html#l-evalable-eval"><span class="std std-ref">eval</span></a>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="Equation.html#l-equation"><span class="std std-ref">Equation</span></a> S) -&gt; % if S has <a class="reference internal" href="Evalable.html#l-evalable"><span class="std std-ref">Evalable</span></a> S and S has <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></dt><dd><p>from <a class="reference internal" href="Evalable.html#l-evalable"><span class="std std-ref">Evalable</span></a> S</p>
-</dd>
-<dt><a class="reference internal" href="InnerEvalable.html#l-inner-evalable-eval"><span class="std std-ref">eval</span></a>: (%, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S) -&gt; % if S has <a class="reference internal" href="Evalable.html#l-evalable"><span class="std std-ref">Evalable</span></a> S and S has <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></dt><dd><p>from <a class="reference internal" href="InnerEvalable.html#l-inner-evalable"><span class="std std-ref">InnerEvalable</span></a>(S, S)</p>
-</dd>
-<dt><a class="reference internal" href="InnerEvalable.html#l-inner-evalable-eval"><span class="std std-ref">eval</span></a>: (%, S, S) -&gt; % if S has <a class="reference internal" href="Evalable.html#l-evalable"><span class="std std-ref">Evalable</span></a> S and S has <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></dt><dd><p>from <a class="reference internal" href="InnerEvalable.html#l-inner-evalable"><span class="std std-ref">InnerEvalable</span></a>(S, S)</p>
-</dd>
-<dt><a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate-every"><span class="std std-ref">every?</span></a>: (S -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate"><span class="std std-ref">HomogeneousAggregate</span></a> S</p>
-</dd>
-<dt><a class="reference internal" href="BagAggregate.html#l-bag-aggregate-extract"><span class="std std-ref">extract!</span></a>: % -&gt; S</dt><dd><p>from <a class="reference internal" href="BagAggregate.html#l-bag-aggregate"><span class="std std-ref">BagAggregate</span></a> S</p>
-</dd>
-<dt><a class="reference internal" href="Collection.html#l-collection-find"><span class="std std-ref">find</span></a>: (S -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>, %) -&gt; Union(S, failed)</dt><dd><p>from <a class="reference internal" href="Collection.html#l-collection"><span class="std std-ref">Collection</span></a> S</p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l-single-integer"><span class="std std-ref">SingleInteger</span></a> if S has <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash-update"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a> if S has <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="BagAggregate.html#l-bag-aggregate-insert"><span class="std std-ref">insert!</span></a>: (S, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="BagAggregate.html#l-bag-aggregate"><span class="std std-ref">BagAggregate</span></a> S</p>
-</dd>
-<dt><a class="reference internal" href="BagAggregate.html#l-bag-aggregate-inspect"><span class="std std-ref">inspect</span></a>: % -&gt; S</dt><dd><p>from <a class="reference internal" href="BagAggregate.html#l-bag-aggregate"><span class="std std-ref">BagAggregate</span></a> S</p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-latex"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a> if S has <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="Aggregate.html#l-aggregate-less"><span class="std std-ref">less?</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Aggregate.html#l-aggregate"><span class="std std-ref">Aggregate</span></a></p>
-</dd>
-<dt><a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate-map"><span class="std std-ref">map!</span></a>: (S -&gt; S, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate"><span class="std std-ref">HomogeneousAggregate</span></a> S</p>
-</dd>
-<dt><a class="reference internal" href="HomogeneousAggregate.html#id1"><span class="std std-ref">map</span></a>: (S -&gt; S, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate"><span class="std std-ref">HomogeneousAggregate</span></a> S</p>
-</dd>
-<dt><a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate-max"><span class="std std-ref">max</span></a>: % -&gt; S if S has <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a></dt><dd><p>from <a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate"><span class="std std-ref">HomogeneousAggregate</span></a> S</p>
-</dd>
-<dt><a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate-max"><span class="std std-ref">max</span></a>: ((S, S) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>, %) -&gt; S</dt><dd><p>from <a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate"><span class="std std-ref">HomogeneousAggregate</span></a> S</p>
-</dd>
-<dt><a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate-member"><span class="std std-ref">member?</span></a>: (S, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a> if S has <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></dt><dd><p>from <a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate"><span class="std std-ref">HomogeneousAggregate</span></a> S</p>
-</dd>
-<dt><a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate-members"><span class="std std-ref">members</span></a>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S</dt><dd><p>from <a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate"><span class="std std-ref">HomogeneousAggregate</span></a> S</p>
-</dd>
-<dt><a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate-min"><span class="std std-ref">min</span></a>: % -&gt; S if S has <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a></dt><dd><p>from <a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate"><span class="std std-ref">HomogeneousAggregate</span></a> S</p>
-</dd>
-<dt><a class="reference internal" href="Aggregate.html#l-aggregate-more"><span class="std std-ref">more?</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Aggregate.html#l-aggregate"><span class="std std-ref">Aggregate</span></a></p>
-</dd>
-<dt><a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate-parts"><span class="std std-ref">parts</span></a>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S</dt><dd><p>from <a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate"><span class="std std-ref">HomogeneousAggregate</span></a> S</p>
+<dl class="simple" id="l537461636b4167677265676174652e23">
+<dt><a class="reference internal" href="Aggregate.html#l4167677265676174652e23"><span class="std std-ref">#</span></a>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="Aggregate.html#l416767726567617465"><span class="std std-ref">Aggregate</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-stack-aggregate-pop"></span><dl class="simple" id="index-1">
+<dl class="simple" id="l537461636b4167677265676174652e3d">
+<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a> if S has <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l537461636b4167677265676174652e7e3d">
+<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e7e3d"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a> if S has <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l537461636b4167677265676174652e616e793f">
+<dt><a class="reference internal" href="HomogeneousAggregate.html#l486f6d6f67656e656f75734167677265676174652e616e793f"><span class="std std-ref">any?</span></a>: (S -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a>, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="HomogeneousAggregate.html#l486f6d6f67656e656f7573416767726567617465"><span class="std std-ref">HomogeneousAggregate</span></a> S</p>
+</dd>
+</dl>
+<dl class="simple" id="l537461636b4167677265676174652e636f65726365">
+<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f2e636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a> if S has <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l537461636b4167677265676174652e636f6e737472756374">
+<dt><a class="reference internal" href="Collection.html#l436f6c6c656374696f6e2e636f6e737472756374"><span class="std std-ref">construct</span></a>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> S -&gt; %</dt><dd><p>from <a class="reference internal" href="Collection.html#l436f6c6c656374696f6e"><span class="std std-ref">Collection</span></a> S</p>
+</dd>
+</dl>
+<dl class="simple" id="l537461636b4167677265676174652e636f6e76657274">
+<dt><a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f2e636f6e76657274"><span class="std std-ref">convert</span></a>: % -&gt; <a class="reference internal" href="InputForm.html#l496e707574466f726d"><span class="std std-ref">InputForm</span></a> if S has <a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="InputForm.html#l496e707574466f726d"><span class="std std-ref">InputForm</span></a></dt><dd><p>from <a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="InputForm.html#l496e707574466f726d"><span class="std std-ref">InputForm</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l537461636b4167677265676174652e636f7079">
+<dt><a class="reference internal" href="Aggregate.html#l4167677265676174652e636f7079"><span class="std std-ref">copy</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="Aggregate.html#l416767726567617465"><span class="std std-ref">Aggregate</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l537461636b4167677265676174652e636f756e74">
+<dt><a class="reference internal" href="HomogeneousAggregate.html#l486f6d6f67656e656f75734167677265676174652e636f756e74"><span class="std std-ref">count</span></a>: (S -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a>, %) -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="HomogeneousAggregate.html#l486f6d6f67656e656f7573416767726567617465"><span class="std std-ref">HomogeneousAggregate</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="HomogeneousAggregate.html#l486f6d6f67656e656f75734167677265676174652e636f756e74"><span class="std std-ref">count</span></a>: (S, %) -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a> if S has <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></dt><dd><p>from <a class="reference internal" href="HomogeneousAggregate.html#l486f6d6f67656e656f7573416767726567617465"><span class="std std-ref">HomogeneousAggregate</span></a> S</p>
+</dd>
+</dl>
+<dl class="simple" id="l537461636b4167677265676174652e656d7074793f">
+<dt><a class="reference internal" href="Aggregate.html#l4167677265676174652e656d7074793f"><span class="std std-ref">empty?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Aggregate.html#l416767726567617465"><span class="std std-ref">Aggregate</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l537461636b4167677265676174652e656d707479">
+<dt><a class="reference internal" href="Aggregate.html#l4167677265676174652e656d707479"><span class="std std-ref">empty</span></a>: () -&gt; %</dt><dd><p>from <a class="reference internal" href="Aggregate.html#l416767726567617465"><span class="std std-ref">Aggregate</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l537461636b4167677265676174652e65713f">
+<dt><a class="reference internal" href="Aggregate.html#l4167677265676174652e65713f"><span class="std std-ref">eq?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Aggregate.html#l416767726567617465"><span class="std std-ref">Aggregate</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l537461636b4167677265676174652e6576616c">
+<dt><a class="reference internal" href="Evalable.html#l4576616c61626c652e6576616c"><span class="std std-ref">eval</span></a>: (%, <a class="reference internal" href="Equation.html#l4571756174696f6e"><span class="std std-ref">Equation</span></a> S) -&gt; % if S has <a class="reference internal" href="Evalable.html#l4576616c61626c65"><span class="std std-ref">Evalable</span></a> S and S has <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></dt><dd><p>from <a class="reference internal" href="Evalable.html#l4576616c61626c65"><span class="std std-ref">Evalable</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="Evalable.html#l4576616c61626c652e6576616c"><span class="std std-ref">eval</span></a>: (%, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Equation.html#l4571756174696f6e"><span class="std std-ref">Equation</span></a> S) -&gt; % if S has <a class="reference internal" href="Evalable.html#l4576616c61626c65"><span class="std std-ref">Evalable</span></a> S and S has <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></dt><dd><p>from <a class="reference internal" href="Evalable.html#l4576616c61626c65"><span class="std std-ref">Evalable</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="InnerEvalable.html#l496e6e65724576616c61626c652e6576616c"><span class="std std-ref">eval</span></a>: (%, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> S, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> S) -&gt; % if S has <a class="reference internal" href="Evalable.html#l4576616c61626c65"><span class="std std-ref">Evalable</span></a> S and S has <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></dt><dd><p>from <a class="reference internal" href="InnerEvalable.html#l496e6e65724576616c61626c65"><span class="std std-ref">InnerEvalable</span></a>(S, S)</p>
+</dd>
+<dt><a class="reference internal" href="InnerEvalable.html#l496e6e65724576616c61626c652e6576616c"><span class="std std-ref">eval</span></a>: (%, S, S) -&gt; % if S has <a class="reference internal" href="Evalable.html#l4576616c61626c65"><span class="std std-ref">Evalable</span></a> S and S has <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></dt><dd><p>from <a class="reference internal" href="InnerEvalable.html#l496e6e65724576616c61626c65"><span class="std std-ref">InnerEvalable</span></a>(S, S)</p>
+</dd>
+</dl>
+<dl class="simple" id="l537461636b4167677265676174652e65766572793f">
+<dt><a class="reference internal" href="HomogeneousAggregate.html#l486f6d6f67656e656f75734167677265676174652e65766572793f"><span class="std std-ref">every?</span></a>: (S -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a>, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="HomogeneousAggregate.html#l486f6d6f67656e656f7573416767726567617465"><span class="std std-ref">HomogeneousAggregate</span></a> S</p>
+</dd>
+</dl>
+<dl class="simple" id="l537461636b4167677265676174652e6578747261637421">
+<dt><a class="reference internal" href="BagAggregate.html#l4261674167677265676174652e6578747261637421"><span class="std std-ref">extract!</span></a>: % -&gt; S</dt><dd><p>from <a class="reference internal" href="BagAggregate.html#l426167416767726567617465"><span class="std std-ref">BagAggregate</span></a> S</p>
+</dd>
+</dl>
+<dl class="simple" id="l537461636b4167677265676174652e66696e64">
+<dt><a class="reference internal" href="Collection.html#l436f6c6c656374696f6e2e66696e64"><span class="std std-ref">find</span></a>: (S -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a>, %) -&gt; Union(S, failed)</dt><dd><p>from <a class="reference internal" href="Collection.html#l436f6c6c656374696f6e"><span class="std std-ref">Collection</span></a> S</p>
+</dd>
+</dl>
+<dl class="simple" id="l537461636b4167677265676174652e68617368">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e68617368"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l53696e676c65496e7465676572"><span class="std std-ref">SingleInteger</span></a> if S has <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l537461636b4167677265676174652e6861736855706461746521">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6861736855706461746521"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a> if S has <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l537461636b4167677265676174652e696e7365727421">
+<dt><a class="reference internal" href="BagAggregate.html#l4261674167677265676174652e696e7365727421"><span class="std std-ref">insert!</span></a>: (S, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="BagAggregate.html#l426167416767726567617465"><span class="std std-ref">BagAggregate</span></a> S</p>
+</dd>
+</dl>
+<dl class="simple" id="l537461636b4167677265676174652e696e7370656374">
+<dt><a class="reference internal" href="BagAggregate.html#l4261674167677265676174652e696e7370656374"><span class="std std-ref">inspect</span></a>: % -&gt; S</dt><dd><p>from <a class="reference internal" href="BagAggregate.html#l426167416767726567617465"><span class="std std-ref">BagAggregate</span></a> S</p>
+</dd>
+</dl>
+<dl class="simple" id="l537461636b4167677265676174652e6c61746578">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6c61746578"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> if S has <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l537461636b4167677265676174652e6c6573733f">
+<dt><a class="reference internal" href="Aggregate.html#l4167677265676174652e6c6573733f"><span class="std std-ref">less?</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Aggregate.html#l416767726567617465"><span class="std std-ref">Aggregate</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l537461636b4167677265676174652e6d617021">
+<dt><a class="reference internal" href="HomogeneousAggregate.html#l486f6d6f67656e656f75734167677265676174652e6d617021"><span class="std std-ref">map!</span></a>: (S -&gt; S, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="HomogeneousAggregate.html#l486f6d6f67656e656f7573416767726567617465"><span class="std std-ref">HomogeneousAggregate</span></a> S</p>
+</dd>
+</dl>
+<dl class="simple" id="l537461636b4167677265676174652e6d6170">
+<dt><a class="reference internal" href="HomogeneousAggregate.html#l486f6d6f67656e656f75734167677265676174652e6d6170"><span class="std std-ref">map</span></a>: (S -&gt; S, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="HomogeneousAggregate.html#l486f6d6f67656e656f7573416767726567617465"><span class="std std-ref">HomogeneousAggregate</span></a> S</p>
+</dd>
+</dl>
+<dl class="simple" id="l537461636b4167677265676174652e6d6178">
+<dt><a class="reference internal" href="HomogeneousAggregate.html#l486f6d6f67656e656f75734167677265676174652e6d6178"><span class="std std-ref">max</span></a>: % -&gt; S if S has <a class="reference internal" href="OrderedSet.html#l4f726465726564536574"><span class="std std-ref">OrderedSet</span></a></dt><dd><p>from <a class="reference internal" href="HomogeneousAggregate.html#l486f6d6f67656e656f7573416767726567617465"><span class="std std-ref">HomogeneousAggregate</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="HomogeneousAggregate.html#l486f6d6f67656e656f75734167677265676174652e6d6178"><span class="std std-ref">max</span></a>: ((S, S) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a>, %) -&gt; S</dt><dd><p>from <a class="reference internal" href="HomogeneousAggregate.html#l486f6d6f67656e656f7573416767726567617465"><span class="std std-ref">HomogeneousAggregate</span></a> S</p>
+</dd>
+</dl>
+<dl class="simple" id="l537461636b4167677265676174652e6d656d6265723f">
+<dt><a class="reference internal" href="HomogeneousAggregate.html#l486f6d6f67656e656f75734167677265676174652e6d656d6265723f"><span class="std std-ref">member?</span></a>: (S, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a> if S has <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></dt><dd><p>from <a class="reference internal" href="HomogeneousAggregate.html#l486f6d6f67656e656f7573416767726567617465"><span class="std std-ref">HomogeneousAggregate</span></a> S</p>
+</dd>
+</dl>
+<dl class="simple" id="l537461636b4167677265676174652e6d656d62657273">
+<dt><a class="reference internal" href="HomogeneousAggregate.html#l486f6d6f67656e656f75734167677265676174652e6d656d62657273"><span class="std std-ref">members</span></a>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> S</dt><dd><p>from <a class="reference internal" href="HomogeneousAggregate.html#l486f6d6f67656e656f7573416767726567617465"><span class="std std-ref">HomogeneousAggregate</span></a> S</p>
+</dd>
+</dl>
+<dl class="simple" id="l537461636b4167677265676174652e6d696e">
+<dt><a class="reference internal" href="HomogeneousAggregate.html#l486f6d6f67656e656f75734167677265676174652e6d696e"><span class="std std-ref">min</span></a>: % -&gt; S if S has <a class="reference internal" href="OrderedSet.html#l4f726465726564536574"><span class="std std-ref">OrderedSet</span></a></dt><dd><p>from <a class="reference internal" href="HomogeneousAggregate.html#l486f6d6f67656e656f7573416767726567617465"><span class="std std-ref">HomogeneousAggregate</span></a> S</p>
+</dd>
+</dl>
+<dl class="simple" id="l537461636b4167677265676174652e6d6f72653f">
+<dt><a class="reference internal" href="Aggregate.html#l4167677265676174652e6d6f72653f"><span class="std std-ref">more?</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Aggregate.html#l416767726567617465"><span class="std std-ref">Aggregate</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l537461636b4167677265676174652e7061727473">
+<dt><a class="reference internal" href="HomogeneousAggregate.html#l486f6d6f67656e656f75734167677265676174652e7061727473"><span class="std std-ref">parts</span></a>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> S</dt><dd><p>from <a class="reference internal" href="HomogeneousAggregate.html#l486f6d6f67656e656f7573416767726567617465"><span class="std std-ref">HomogeneousAggregate</span></a> S</p>
+</dd>
+</dl>
+<span class="target" id="l537461636b4167677265676174652e706f7021"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">pop!</span>: % -&gt; S</dt><dd><p><code class="docutils literal notranslate"><span class="pre">pop!(s)</span></code> returns the top element <code class="docutils literal notranslate"><span class="pre">x</span></code>, destructively removing <code class="docutils literal notranslate"><span class="pre">x</span></code> from <code class="docutils literal notranslate"><span class="pre">s</span></code>. Note: Use <code class="docutils literal notranslate"><span class="pre">top(s)</span></code> to obtain <code class="docutils literal notranslate"><span class="pre">x</span></code> without removing it from <code class="docutils literal notranslate"><span class="pre">s</span></code>. Error: if <code class="docutils literal notranslate"><span class="pre">s</span></code> is empty.</p>
 </dd>
 </dl>
-<span class="target" id="l-stack-aggregate-push"></span><dl class="simple" id="index-2">
+<span class="target" id="l537461636b4167677265676174652e7075736821"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">push!</span>: (S, %) -&gt; S</dt><dd><p><code class="docutils literal notranslate"><span class="pre">push!(x,</span> <span class="pre">s)</span></code> pushes <code class="docutils literal notranslate"><span class="pre">x</span></code> onto stack <code class="docutils literal notranslate"><span class="pre">s</span></code>, i.e. destructively changing <code class="docutils literal notranslate"><span class="pre">s</span></code> so as to have a new first (top) element <code class="docutils literal notranslate"><span class="pre">x</span></code>. Afterwards, pop!(<code class="docutils literal notranslate"><span class="pre">s</span></code>) produces <code class="docutils literal notranslate"><span class="pre">x</span></code> and pop!(<code class="docutils literal notranslate"><span class="pre">s</span></code>) produces the original <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
 </dd>
-<dt><a class="reference internal" href="Collection.html#l-collection-reduce"><span class="std std-ref">reduce</span></a>: ((S, S) -&gt; S, %) -&gt; S</dt><dd><p>from <a class="reference internal" href="Collection.html#l-collection"><span class="std std-ref">Collection</span></a> S</p>
+</dl>
+<dl class="simple" id="l537461636b4167677265676174652e726564756365">
+<dt><a class="reference internal" href="Collection.html#l436f6c6c656374696f6e2e726564756365"><span class="std std-ref">reduce</span></a>: ((S, S) -&gt; S, %) -&gt; S</dt><dd><p>from <a class="reference internal" href="Collection.html#l436f6c6c656374696f6e"><span class="std std-ref">Collection</span></a> S</p>
 </dd>
-<dt><a class="reference internal" href="Collection.html#l-collection-reduce"><span class="std std-ref">reduce</span></a>: ((S, S) -&gt; S, %, S) -&gt; S</dt><dd><p>from <a class="reference internal" href="Collection.html#l-collection"><span class="std std-ref">Collection</span></a> S</p>
+<dt><a class="reference internal" href="Collection.html#l436f6c6c656374696f6e2e726564756365"><span class="std std-ref">reduce</span></a>: ((S, S) -&gt; S, %, S) -&gt; S</dt><dd><p>from <a class="reference internal" href="Collection.html#l436f6c6c656374696f6e"><span class="std std-ref">Collection</span></a> S</p>
 </dd>
-<dt><a class="reference internal" href="Collection.html#l-collection-reduce"><span class="std std-ref">reduce</span></a>: ((S, S) -&gt; S, %, S, S) -&gt; S if S has <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></dt><dd><p>from <a class="reference internal" href="Collection.html#l-collection"><span class="std std-ref">Collection</span></a> S</p>
-</dd>
-<dt><a class="reference internal" href="Collection.html#l-collection-remove"><span class="std std-ref">remove</span></a>: (S -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="Collection.html#l-collection"><span class="std std-ref">Collection</span></a> S</p>
-</dd>
-<dt><a class="reference internal" href="Collection.html#l-collection-remove"><span class="std std-ref">remove</span></a>: (S, %) -&gt; % if S has <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></dt><dd><p>from <a class="reference internal" href="Collection.html#l-collection"><span class="std std-ref">Collection</span></a> S</p>
-</dd>
-<dt><a class="reference internal" href="Collection.html#l-collection-remove-duplicates"><span class="std std-ref">removeDuplicates</span></a>: % -&gt; % if S has <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></dt><dd><p>from <a class="reference internal" href="Collection.html#l-collection"><span class="std std-ref">Collection</span></a> S</p>
-</dd>
-<dt><a class="reference internal" href="Aggregate.html#l-aggregate-sample"><span class="std std-ref">sample</span></a>: %</dt><dd><p>from <a class="reference internal" href="Aggregate.html#l-aggregate"><span class="std std-ref">Aggregate</span></a></p>
-</dd>
-<dt><a class="reference internal" href="Collection.html#l-collection-select"><span class="std std-ref">select</span></a>: (S -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="Collection.html#l-collection"><span class="std std-ref">Collection</span></a> S</p>
-</dd>
-<dt><a class="reference internal" href="Aggregate.html#l-aggregate-size"><span class="std std-ref">size?</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Aggregate.html#l-aggregate"><span class="std std-ref">Aggregate</span></a></p>
+<dt><a class="reference internal" href="Collection.html#l436f6c6c656374696f6e2e726564756365"><span class="std std-ref">reduce</span></a>: ((S, S) -&gt; S, %, S, S) -&gt; S if S has <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></dt><dd><p>from <a class="reference internal" href="Collection.html#l436f6c6c656374696f6e"><span class="std std-ref">Collection</span></a> S</p>
 </dd>
 </dl>
-<span class="target" id="l-stack-aggregate-top"></span><dl class="simple" id="index-3">
+<dl class="simple" id="l537461636b4167677265676174652e72656d6f7665">
+<dt><a class="reference internal" href="Collection.html#l436f6c6c656374696f6e2e72656d6f7665"><span class="std std-ref">remove</span></a>: (S -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="Collection.html#l436f6c6c656374696f6e"><span class="std std-ref">Collection</span></a> S</p>
+</dd>
+<dt><a class="reference internal" href="Collection.html#l436f6c6c656374696f6e2e72656d6f7665"><span class="std std-ref">remove</span></a>: (S, %) -&gt; % if S has <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></dt><dd><p>from <a class="reference internal" href="Collection.html#l436f6c6c656374696f6e"><span class="std std-ref">Collection</span></a> S</p>
+</dd>
+</dl>
+<dl class="simple" id="l537461636b4167677265676174652e72656d6f76654475706c696361746573">
+<dt><a class="reference internal" href="Collection.html#l436f6c6c656374696f6e2e72656d6f76654475706c696361746573"><span class="std std-ref">removeDuplicates</span></a>: % -&gt; % if S has <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></dt><dd><p>from <a class="reference internal" href="Collection.html#l436f6c6c656374696f6e"><span class="std std-ref">Collection</span></a> S</p>
+</dd>
+</dl>
+<dl class="simple" id="l537461636b4167677265676174652e73616d706c65">
+<dt><a class="reference internal" href="Aggregate.html#l4167677265676174652e73616d706c65"><span class="std std-ref">sample</span></a>: %</dt><dd><p>from <a class="reference internal" href="Aggregate.html#l416767726567617465"><span class="std std-ref">Aggregate</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l537461636b4167677265676174652e73656c656374">
+<dt><a class="reference internal" href="Collection.html#l436f6c6c656374696f6e2e73656c656374"><span class="std std-ref">select</span></a>: (S -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="Collection.html#l436f6c6c656374696f6e"><span class="std std-ref">Collection</span></a> S</p>
+</dd>
+</dl>
+<dl class="simple" id="l537461636b4167677265676174652e73697a653f">
+<dt><a class="reference internal" href="Aggregate.html#l4167677265676174652e73697a653f"><span class="std std-ref">size?</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Aggregate.html#l416767726567617465"><span class="std std-ref">Aggregate</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l537461636b4167677265676174652e746f70"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">top</span>: % -&gt; S</dt><dd><p><code class="docutils literal notranslate"><span class="pre">top(s)</span></code> returns the top element <code class="docutils literal notranslate"><span class="pre">x</span></code> from <code class="docutils literal notranslate"><span class="pre">s</span></code>; <code class="docutils literal notranslate"><span class="pre">s</span></code> remains unchanged. Note: Use <code class="docutils literal notranslate"><span class="pre">pop!(s)</span></code> to obtain <code class="docutils literal notranslate"><span class="pre">x</span></code> and remove it from <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
 </dd>
 </dl>
-<p><a class="reference internal" href="Aggregate.html#l-aggregate"><span class="std std-ref">Aggregate</span></a></p>
-<p><a class="reference internal" href="BagAggregate.html#l-bag-aggregate"><span class="std std-ref">BagAggregate</span></a> S</p>
-<p><a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a> if S has <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-<p><a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a> if S has <a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
-<p><a class="reference internal" href="Collection.html#l-collection"><span class="std std-ref">Collection</span></a> S</p>
-<p><a class="reference internal" href="ConvertibleTo.html#l-convertible-to"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="InputForm.html#l-input-form"><span class="std std-ref">InputForm</span></a> if S has <a class="reference internal" href="ConvertibleTo.html#l-convertible-to"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="InputForm.html#l-input-form"><span class="std std-ref">InputForm</span></a></p>
-<p><a class="reference internal" href="Evalable.html#l-evalable"><span class="std std-ref">Evalable</span></a> S if S has <a class="reference internal" href="Evalable.html#l-evalable"><span class="std std-ref">Evalable</span></a> S and S has <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-<p><a class="reference internal" href="finiteAggregate.html#l-finite-aggregate"><span class="std std-ref">finiteAggregate</span></a></p>
-<p><a class="reference internal" href="HomogeneousAggregate.html#l-homogeneous-aggregate"><span class="std std-ref">HomogeneousAggregate</span></a> S</p>
-<p><a class="reference internal" href="InnerEvalable.html#l-inner-evalable"><span class="std std-ref">InnerEvalable</span></a>(S, S) if S has <a class="reference internal" href="Evalable.html#l-evalable"><span class="std std-ref">Evalable</span></a> S and S has <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-<p><a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a> if S has <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-<p><a class="reference internal" href="shallowlyMutable.html#l-shallowly-mutable"><span class="std std-ref">shallowlyMutable</span></a></p>
+<p><a class="reference internal" href="Aggregate.html#l416767726567617465"><span class="std std-ref">Aggregate</span></a></p>
+<p><a class="reference internal" href="BagAggregate.html#l426167416767726567617465"><span class="std std-ref">BagAggregate</span></a> S</p>
+<p><a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a> if S has <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+<p><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a> if S has <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+<p><a class="reference internal" href="Collection.html#l436f6c6c656374696f6e"><span class="std std-ref">Collection</span></a> S</p>
+<p><a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="InputForm.html#l496e707574466f726d"><span class="std std-ref">InputForm</span></a> if S has <a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="InputForm.html#l496e707574466f726d"><span class="std std-ref">InputForm</span></a></p>
+<p><a class="reference internal" href="Evalable.html#l4576616c61626c65"><span class="std std-ref">Evalable</span></a> S if S has <a class="reference internal" href="Evalable.html#l4576616c61626c65"><span class="std std-ref">Evalable</span></a> S and S has <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+<p><a class="reference internal" href="finiteAggregate.html#l66696e697465416767726567617465"><span class="std std-ref">finiteAggregate</span></a></p>
+<p><a class="reference internal" href="HomogeneousAggregate.html#l486f6d6f67656e656f7573416767726567617465"><span class="std std-ref">HomogeneousAggregate</span></a> S</p>
+<p><a class="reference internal" href="InnerEvalable.html#l496e6e65724576616c61626c65"><span class="std std-ref">InnerEvalable</span></a>(S, S) if S has <a class="reference internal" href="Evalable.html#l4576616c61626c65"><span class="std std-ref">Evalable</span></a> S and S has <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+<p><a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a> if S has <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+<p><a class="reference internal" href="shallowlyMutable.html#l7368616c6c6f776c794d757461626c65"><span class="std std-ref">shallowlyMutable</span></a></p>
 </div>
 
 
@@ -213,7 +283,7 @@
         <li class="right" >
           <a href="SquareMatrixCategory.html" title="SquareMatrixCategory(ndim, R, Row, Col)"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Categories.html" >Categories</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">StackAggregate S</a></li> 

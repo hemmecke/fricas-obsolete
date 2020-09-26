@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kernel S &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>Kernel S &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="JetVectorField.html" title="JetVectorField(JB, D)"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Domains.html" accesskey="U">Domains</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Kernel S</a></li> 
@@ -46,97 +46,127 @@
           <div class="body" role="main">
             
   <div class="section" id="kernel-s">
-<span id="l-kernel"></span><span id="index-0"></span><h1>Kernel S<a class="headerlink" href="#kernel-s" title="Permalink to this headline">¶</a></h1>
+<span id="l4b65726e656c"></span><span id="index-0"></span><h1>Kernel S<a class="headerlink" href="#kernel-s" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/kl.spad#L219">kl.spad line 219</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/kl.spad#L219">[edit on github]</a></p>
 <ul class="simple">
-<li><p>S: <a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a></p></li>
+<li><p>S: <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a></p></li>
 </ul>
 <p>A kernel over a set <code class="docutils literal notranslate"><span class="pre">S</span></code> is an operator applied to a given list of arguments from <code class="docutils literal notranslate"><span class="pre">S</span></code>.</p>
-<dl class="simple">
-<dt><a class="reference internal" href="PartialOrder.html#id1"><span class="std std-ref">&lt;</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l-partial-order"><span class="std std-ref">PartialOrder</span></a></p>
-</dd>
-<dt><a class="reference internal" href="PartialOrder.html#id2"><span class="std std-ref">&lt;=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l-partial-order"><span class="std std-ref">PartialOrder</span></a></p>
-</dd>
-<dt><a class="reference internal" href="BasicType.html#id1"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-</dd>
-<dt><a class="reference internal" href="PartialOrder.html#id3"><span class="std std-ref">&gt;</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l-partial-order"><span class="std std-ref">PartialOrder</span></a></p>
-</dd>
-<dt><a class="reference internal" href="PartialOrder.html#id4"><span class="std std-ref">&gt;=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l-partial-order"><span class="std std-ref">PartialOrder</span></a></p>
-</dd>
-<dt><a class="reference internal" href="BasicType.html#id2"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
+<dl class="simple" id="l4b65726e656c2e3c3d">
+<dt><a class="reference internal" href="PartialOrder.html#l5061727469616c4f726465722e3c3d"><span class="std std-ref">&lt;=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l5061727469616c4f72646572"><span class="std std-ref">PartialOrder</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-kernel-argument"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">argument</span>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S</dt><dd><p><code class="docutils literal notranslate"><span class="pre">argument(op(a1,</span> <span class="pre">...,</span> <span class="pre">an))</span></code> returns <code class="docutils literal notranslate"><span class="pre">[a1,</span> <span class="pre">...,</span> <span class="pre">an]</span></code>.</p>
-</dd>
-<dt><a class="reference internal" href="CoercibleTo.html#l-coercible-to-coerce"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
-</dd>
-<dt><a class="reference internal" href="ConvertibleTo.html#l-convertible-to-convert"><span class="std std-ref">convert</span></a>: % -&gt; <a class="reference internal" href="InputForm.html#l-input-form"><span class="std std-ref">InputForm</span></a> if S has <a class="reference internal" href="ConvertibleTo.html#l-convertible-to"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="InputForm.html#l-input-form"><span class="std std-ref">InputForm</span></a></dt><dd><p>from <a class="reference internal" href="ConvertibleTo.html#l-convertible-to"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="InputForm.html#l-input-form"><span class="std std-ref">InputForm</span></a></p>
-</dd>
-<dt><a class="reference internal" href="ConvertibleTo.html#l-convertible-to-convert"><span class="std std-ref">convert</span></a>: % -&gt; <a class="reference internal" href="Pattern.html#l-pattern"><span class="std std-ref">Pattern</span></a> <a class="reference internal" href="Float.html#l-float"><span class="std std-ref">Float</span></a> if S has <a class="reference internal" href="ConvertibleTo.html#l-convertible-to"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="Pattern.html#l-pattern"><span class="std std-ref">Pattern</span></a> <a class="reference internal" href="Float.html#l-float"><span class="std std-ref">Float</span></a></dt><dd><p>from <a class="reference internal" href="ConvertibleTo.html#l-convertible-to"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="Pattern.html#l-pattern"><span class="std std-ref">Pattern</span></a> <a class="reference internal" href="Float.html#l-float"><span class="std std-ref">Float</span></a></p>
-</dd>
-<dt><a class="reference internal" href="ConvertibleTo.html#l-convertible-to-convert"><span class="std std-ref">convert</span></a>: % -&gt; <a class="reference internal" href="Pattern.html#l-pattern"><span class="std std-ref">Pattern</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a> if S has <a class="reference internal" href="ConvertibleTo.html#l-convertible-to"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="Pattern.html#l-pattern"><span class="std std-ref">Pattern</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></dt><dd><p>from <a class="reference internal" href="ConvertibleTo.html#l-convertible-to"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="Pattern.html#l-pattern"><span class="std std-ref">Pattern</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l-single-integer"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash-update"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+<dl class="simple" id="l4b65726e656c2e3c">
+<dt><a class="reference internal" href="PartialOrder.html#l5061727469616c4f726465722e3c"><span class="std std-ref">&lt;</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l5061727469616c4f72646572"><span class="std std-ref">PartialOrder</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-kernel-height"></span><dl class="simple" id="index-2">
-<dt><span class="spadfun">height</span>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">height(k)</span></code> returns the nesting level of <code class="docutils literal notranslate"><span class="pre">k</span></code>.</p>
+<dl class="simple" id="l4b65726e656c2e3d">
+<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-kernel-is"></span><dl class="simple" id="index-3">
-<dt><span class="spadfun">is?</span>: (%, <a class="reference internal" href="BasicOperator.html#l-basic-operator"><span class="std std-ref">BasicOperator</span></a>) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">is?(op(a1,</span> <span class="pre">...,</span> <span class="pre">an),</span> <span class="pre">f)</span></code> tests if op = <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+<dl class="simple" id="l4b65726e656c2e3e3d">
+<dt><a class="reference internal" href="PartialOrder.html#l5061727469616c4f726465722e3e3d"><span class="std std-ref">&gt;=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l5061727469616c4f72646572"><span class="std std-ref">PartialOrder</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4b65726e656c2e3e">
+<dt><a class="reference internal" href="PartialOrder.html#l5061727469616c4f726465722e3e"><span class="std std-ref">&gt;</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l5061727469616c4f72646572"><span class="std std-ref">PartialOrder</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4b65726e656c2e7e3d">
+<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e7e3d"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l4b65726e656c2e617267756d656e74"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">argument</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> S</dt><dd><p><code class="docutils literal notranslate"><span class="pre">argument(op(a1,</span> <span class="pre">...,</span> <span class="pre">an))</span></code> returns <code class="docutils literal notranslate"><span class="pre">[a1,</span> <span class="pre">...,</span> <span class="pre">an]</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="l4b65726e656c2e636f65726365">
+<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f2e636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4b65726e656c2e636f6e76657274">
+<dt><a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f2e636f6e76657274"><span class="std std-ref">convert</span></a>: % -&gt; <a class="reference internal" href="InputForm.html#l496e707574466f726d"><span class="std std-ref">InputForm</span></a> if S has <a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="InputForm.html#l496e707574466f726d"><span class="std std-ref">InputForm</span></a></dt><dd><p>from <a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="InputForm.html#l496e707574466f726d"><span class="std std-ref">InputForm</span></a></p>
+</dd>
+<dt><a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f2e636f6e76657274"><span class="std std-ref">convert</span></a>: % -&gt; <a class="reference internal" href="Pattern.html#l5061747465726e"><span class="std std-ref">Pattern</span></a> <a class="reference internal" href="Float.html#l466c6f6174"><span class="std std-ref">Float</span></a> if S has <a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="Pattern.html#l5061747465726e"><span class="std std-ref">Pattern</span></a> <a class="reference internal" href="Float.html#l466c6f6174"><span class="std std-ref">Float</span></a></dt><dd><p>from <a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="Pattern.html#l5061747465726e"><span class="std std-ref">Pattern</span></a> <a class="reference internal" href="Float.html#l466c6f6174"><span class="std std-ref">Float</span></a></p>
+</dd>
+<dt><a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f2e636f6e76657274"><span class="std std-ref">convert</span></a>: % -&gt; <a class="reference internal" href="Pattern.html#l5061747465726e"><span class="std std-ref">Pattern</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a> if S has <a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="Pattern.html#l5061747465726e"><span class="std std-ref">Pattern</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></dt><dd><p>from <a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="Pattern.html#l5061747465726e"><span class="std std-ref">Pattern</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4b65726e656c2e68617368">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e68617368"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l53696e676c65496e7465676572"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4b65726e656c2e6861736855706461746521">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6861736855706461746521"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l4b65726e656c2e686569676874"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">height</span>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">height(k)</span></code> returns the nesting level of <code class="docutils literal notranslate"><span class="pre">k</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l4b65726e656c2e69733f"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">is?</span>: (%, <a class="reference internal" href="BasicOperator.html#l42617369634f70657261746f72"><span class="std std-ref">BasicOperator</span></a>) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">is?(op(a1,</span> <span class="pre">...,</span> <span class="pre">an),</span> <span class="pre">f)</span></code> tests if op = <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-4">
-<dt><span class="spadfun">is?</span>: (%, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">is?(op(a1,</span> <span class="pre">...,</span> <span class="pre">an),</span> <span class="pre">s)</span></code> tests if the name of op is <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
+<dt><span class="spadfun">is?</span>: (%, <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">is?(op(a1,</span> <span class="pre">...,</span> <span class="pre">an),</span> <span class="pre">s)</span></code> tests if the name of op is <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-kernel-kernel"></span><dl class="simple" id="index-5">
-<dt><span class="spadfun">kernel</span>: (<a class="reference internal" href="BasicOperator.html#l-basic-operator"><span class="std std-ref">BasicOperator</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> S, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">kernel(op,</span> <span class="pre">[a1,</span> <span class="pre">...,</span> <span class="pre">an],</span> <span class="pre">m)</span></code> returns the kernel <code class="docutils literal notranslate"><span class="pre">op(a1,</span> <span class="pre">...,</span> <span class="pre">an)</span></code> of nesting level <code class="docutils literal notranslate"><span class="pre">m</span></code>. Error: if <code class="docutils literal notranslate"><span class="pre">op</span></code> is <code class="docutils literal notranslate"><span class="pre">k</span></code>-ary for some <code class="docutils literal notranslate"><span class="pre">k</span></code> not equal to <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
+<span class="target" id="l4b65726e656c2e6b65726e656c"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">kernel</span>: (<a class="reference internal" href="BasicOperator.html#l42617369634f70657261746f72"><span class="std std-ref">BasicOperator</span></a>, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> S, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">kernel(op,</span> <span class="pre">[a1,</span> <span class="pre">...,</span> <span class="pre">an],</span> <span class="pre">m)</span></code> returns the kernel <code class="docutils literal notranslate"><span class="pre">op(a1,</span> <span class="pre">...,</span> <span class="pre">an)</span></code> of nesting level <code class="docutils literal notranslate"><span class="pre">m</span></code>. Error: if <code class="docutils literal notranslate"><span class="pre">op</span></code> is <code class="docutils literal notranslate"><span class="pre">k</span></code>-ary for some <code class="docutils literal notranslate"><span class="pre">k</span></code> not equal to <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-6">
-<dt><span class="spadfun">kernel</span>: <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">kernel(x)</span></code> returns <code class="docutils literal notranslate"><span class="pre">x</span></code> viewed as a kernel.</p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-latex"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="OrderedSet.html#l-ordered-set-max"><span class="std std-ref">max</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a></p>
-</dd>
-<dt><a class="reference internal" href="OrderedSet.html#l-ordered-set-min"><span class="std std-ref">min</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a></p>
+<dt><span class="spadfun">kernel</span>: <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">kernel(x)</span></code> returns <code class="docutils literal notranslate"><span class="pre">x</span></code> viewed as a kernel.</p>
 </dd>
 </dl>
-<span class="target" id="l-kernel-name"></span><dl class="simple" id="index-7">
-<dt><span class="spadfun">name</span>: % -&gt; <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">name(op(a1,</span> <span class="pre">...,</span> <span class="pre">an))</span></code> returns the name of op.</p>
+<dl class="simple" id="l4b65726e656c2e6c61746578">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6c61746578"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-kernel-operator"></span><dl class="simple" id="index-8">
-<dt><span class="spadfun">operator</span>: % -&gt; <a class="reference internal" href="BasicOperator.html#l-basic-operator"><span class="std std-ref">BasicOperator</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">operator(op(a1,</span> <span class="pre">...,</span> <span class="pre">an))</span></code> returns the operator op.</p>
-</dd>
-<dt><a class="reference internal" href="CachableSet.html#l-cachable-set-position"><span class="std std-ref">position</span></a>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="CachableSet.html#l-cachable-set"><span class="std std-ref">CachableSet</span></a></p>
-</dd>
-<dt><a class="reference internal" href="CachableSet.html#l-cachable-set-set-position"><span class="std std-ref">setPosition</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Void.html#l-void"><span class="std std-ref">Void</span></a></dt><dd><p>from <a class="reference internal" href="CachableSet.html#l-cachable-set"><span class="std std-ref">CachableSet</span></a></p>
-</dd>
-<dt><a class="reference internal" href="Comparable.html#l-comparable-smaller"><span class="std std-ref">smaller?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a></p>
+<dl class="simple" id="l4b65726e656c2e6d6178">
+<dt><a class="reference internal" href="OrderedSet.html#l4f7264657265645365742e6d6178"><span class="std std-ref">max</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="OrderedSet.html#l4f726465726564536574"><span class="std std-ref">OrderedSet</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-kernel-symbol-if-can"></span><dl class="simple" id="index-9">
-<dt><span class="spadfun">symbolIfCan</span>: % -&gt; Union(<a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">symbolIfCan(k)</span></code> returns <code class="docutils literal notranslate"><span class="pre">k</span></code> viewed as a symbol if <code class="docutils literal notranslate"><span class="pre">k</span></code> is a symbol, and “failed” otherwise.</p>
+<dl class="simple" id="l4b65726e656c2e6d696e">
+<dt><a class="reference internal" href="OrderedSet.html#l4f7264657265645365742e6d696e"><span class="std std-ref">min</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="OrderedSet.html#l4f726465726564536574"><span class="std std-ref">OrderedSet</span></a></p>
 </dd>
 </dl>
-<p><a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-<p><a class="reference internal" href="CachableSet.html#l-cachable-set"><span class="std std-ref">CachableSet</span></a></p>
-<p><a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
-<p><a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a></p>
-<p><a class="reference internal" href="ConvertibleTo.html#l-convertible-to"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="InputForm.html#l-input-form"><span class="std std-ref">InputForm</span></a> if S has <a class="reference internal" href="ConvertibleTo.html#l-convertible-to"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="InputForm.html#l-input-form"><span class="std std-ref">InputForm</span></a></p>
-<p><a class="reference internal" href="ConvertibleTo.html#l-convertible-to"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="Pattern.html#l-pattern"><span class="std std-ref">Pattern</span></a> <a class="reference internal" href="Float.html#l-float"><span class="std std-ref">Float</span></a> if S has <a class="reference internal" href="ConvertibleTo.html#l-convertible-to"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="Pattern.html#l-pattern"><span class="std std-ref">Pattern</span></a> <a class="reference internal" href="Float.html#l-float"><span class="std std-ref">Float</span></a></p>
-<p><a class="reference internal" href="ConvertibleTo.html#l-convertible-to"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="Pattern.html#l-pattern"><span class="std std-ref">Pattern</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a> if S has <a class="reference internal" href="ConvertibleTo.html#l-convertible-to"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="Pattern.html#l-pattern"><span class="std std-ref">Pattern</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></p>
-<p><a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a></p>
-<p><a class="reference internal" href="PartialOrder.html#l-partial-order"><span class="std std-ref">PartialOrder</span></a></p>
-<p><a class="reference internal" href="Patternable.html#l-patternable"><span class="std std-ref">Patternable</span></a> S</p>
-<p><a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+<span class="target" id="l4b65726e656c2e6e616d65"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">name</span>: % -&gt; <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">name(op(a1,</span> <span class="pre">...,</span> <span class="pre">an))</span></code> returns the name of op.</p>
+</dd>
+</dl>
+<span class="target" id="l4b65726e656c2e6f70657261746f72"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">operator</span>: % -&gt; <a class="reference internal" href="BasicOperator.html#l42617369634f70657261746f72"><span class="std std-ref">BasicOperator</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">operator(op(a1,</span> <span class="pre">...,</span> <span class="pre">an))</span></code> returns the operator op.</p>
+</dd>
+</dl>
+<dl class="simple" id="l4b65726e656c2e706f736974696f6e">
+<dt><a class="reference internal" href="CachableSet.html#l4361636861626c655365742e706f736974696f6e"><span class="std std-ref">position</span></a>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="CachableSet.html#l4361636861626c65536574"><span class="std std-ref">CachableSet</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4b65726e656c2e736574506f736974696f6e">
+<dt><a class="reference internal" href="CachableSet.html#l4361636861626c655365742e736574506f736974696f6e"><span class="std std-ref">setPosition</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>from <a class="reference internal" href="CachableSet.html#l4361636861626c65536574"><span class="std std-ref">CachableSet</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l4b65726e656c2e736d616c6c65723f">
+<dt><a class="reference internal" href="Comparable.html#l436f6d70617261626c652e736d616c6c65723f"><span class="std std-ref">smaller?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l4b65726e656c2e73796d626f6c496643616e"></span><dl class="simple" id="index-9">
+<dt><span class="spadfun">symbolIfCan</span>: % -&gt; Union(<a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">symbolIfCan(k)</span></code> returns <code class="docutils literal notranslate"><span class="pre">k</span></code> viewed as a symbol if <code class="docutils literal notranslate"><span class="pre">k</span></code> is a symbol, and “failed” otherwise.</p>
+</dd>
+</dl>
+<p><a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+<p><a class="reference internal" href="CachableSet.html#l4361636861626c65536574"><span class="std std-ref">CachableSet</span></a></p>
+<p><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+<p><a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a></p>
+<p><a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="InputForm.html#l496e707574466f726d"><span class="std std-ref">InputForm</span></a> if S has <a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="InputForm.html#l496e707574466f726d"><span class="std std-ref">InputForm</span></a></p>
+<p><a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="Pattern.html#l5061747465726e"><span class="std std-ref">Pattern</span></a> <a class="reference internal" href="Float.html#l466c6f6174"><span class="std std-ref">Float</span></a> if S has <a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="Pattern.html#l5061747465726e"><span class="std std-ref">Pattern</span></a> <a class="reference internal" href="Float.html#l466c6f6174"><span class="std std-ref">Float</span></a></p>
+<p><a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="Pattern.html#l5061747465726e"><span class="std std-ref">Pattern</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a> if S has <a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="Pattern.html#l5061747465726e"><span class="std std-ref">Pattern</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></p>
+<p><a class="reference internal" href="OrderedSet.html#l4f726465726564536574"><span class="std std-ref">OrderedSet</span></a></p>
+<p><a class="reference internal" href="PartialOrder.html#l5061727469616c4f72646572"><span class="std std-ref">PartialOrder</span></a></p>
+<p><a class="reference internal" href="Patternable.html#l5061747465726e61626c65"><span class="std std-ref">Patternable</span></a> S</p>
+<p><a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </div>
 
 
@@ -184,7 +214,7 @@
         <li class="right" >
           <a href="JetVectorField.html" title="JetVectorField(JB, D)"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Domains.html" >Domains</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Kernel S</a></li> 

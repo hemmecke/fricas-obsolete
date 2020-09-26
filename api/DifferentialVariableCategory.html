@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DifferentialVariableCategory S &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>DifferentialVariableCategory S &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="DifferentialRing.html" title="DifferentialRing"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Categories.html" accesskey="U">Categories</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">DifferentialVariableCategory S</a></li> 
@@ -46,80 +46,108 @@
           <div class="body" role="main">
             
   <div class="section" id="differentialvariablecategory-s">
-<span id="l-differential-variable-category"></span><span id="index-0"></span><h1>DifferentialVariableCategory S<a class="headerlink" href="#differentialvariablecategory-s" title="Permalink to this headline">¶</a></h1>
+<span id="l446966666572656e7469616c5661726961626c6543617465676f7279"></span><span id="index-0"></span><h1>DifferentialVariableCategory S<a class="headerlink" href="#differentialvariablecategory-s" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/dpolcat.spad#L1">dpolcat.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/dpolcat.spad#L1">[edit on github]</a></p>
 <ul class="simple">
-<li><p>S: <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a></p></li>
+<li><p>S: <a class="reference internal" href="OrderedSet.html#l4f726465726564536574"><span class="std std-ref">OrderedSet</span></a></p></li>
 </ul>
-<p><a class="reference internal" href="#l-differential-variable-category"><span class="std std-ref">DifferentialVariableCategory</span></a> constructs the set of derivatives of a given set of (ordinary) differential indeterminates. If <code class="docutils literal notranslate"><span class="pre">x</span></code>, …, <code class="docutils literal notranslate"><span class="pre">y</span></code> is an ordered set of differential indeterminates, and the prime notation is used for differentiation, then the set of derivatives (including zero-th order) of the differential indeterminates is <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">x'</span></code>, <code class="docutils literal notranslate"><span class="pre">x''</span></code>, …, <code class="docutils literal notranslate"><span class="pre">y</span></code>, <code class="docutils literal notranslate"><span class="pre">y'</span></code>, <code class="docutils literal notranslate"><span class="pre">y''</span></code>, … (Note: in the interpreter, the <code class="docutils literal notranslate"><span class="pre">n</span></code>-th derivative of <code class="docutils literal notranslate"><span class="pre">y</span></code> is displayed as <code class="docutils literal notranslate"><span class="pre">y</span></code> with a subscript <code class="docutils literal notranslate"><span class="pre">n</span></code>.) This set is viewed as a set of algebraic indeterminates, totally ordered in a way compatible with differentiation and the given order on the differential indeterminates. Such a total order is called a ranking of the differential indeterminates.   A domain in this category is needed to construct a differential polynomial domain. Differential polynomials are ordered by a ranking on the derivatives, and by an order (extending the ranking) on on the set of differential monomials. One may thus associate a domain in this category with a ranking of the differential indeterminates, just as one associates a domain in the category <a class="reference internal" href="OrderedAbelianMonoidSup.html#l-ordered-abelian-monoid-sup"><span class="std std-ref">OrderedAbelianMonoidSup</span></a> with an ordering of the set of monomials in a set of algebraic indeterminates. The ranking is specified through the binary relation <span class="spadfun">&lt;</span>. For example, one may define one derivative to be less than another by lexicographically comparing first the <span class="spadfun">order</span>, then the given order of the differential indeterminates appearing in the derivatives. This is the default implementation.   The notion of weight generalizes that of degree. A polynomial domain may be made into a graded ring if a weight function is given on the set of indeterminates, Very often, a grading is the first step in ordering the set of monomials. For differential polynomial domains, this constructor provides a function <span class="spadfun">weight</span>, which allows the assignment of a non-negative number to each derivative of a differential indeterminate. For example, one may define the weight of a derivative to be simply its <span class="spadfun">order</span> (this is the default assignment). This weight function can then be extended to the set of all differential polynomials, providing a graded ring structure.</p>
-<dl class="simple">
-<dt><a class="reference internal" href="PartialOrder.html#id1"><span class="std std-ref">&lt;</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l-partial-order"><span class="std std-ref">PartialOrder</span></a></p>
-</dd>
-<dt><a class="reference internal" href="PartialOrder.html#id2"><span class="std std-ref">&lt;=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l-partial-order"><span class="std std-ref">PartialOrder</span></a></p>
-</dd>
-<dt><a class="reference internal" href="BasicType.html#id1"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-</dd>
-<dt><a class="reference internal" href="PartialOrder.html#id3"><span class="std std-ref">&gt;</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l-partial-order"><span class="std std-ref">PartialOrder</span></a></p>
-</dd>
-<dt><a class="reference internal" href="PartialOrder.html#id4"><span class="std std-ref">&gt;=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l-partial-order"><span class="std std-ref">PartialOrder</span></a></p>
-</dd>
-<dt><a class="reference internal" href="BasicType.html#id2"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-</dd>
-<dt><a class="reference internal" href="CoercibleTo.html#l-coercible-to-coerce"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+<p><a class="reference internal" href="#l446966666572656e7469616c5661726961626c6543617465676f7279"><span class="std std-ref">DifferentialVariableCategory</span></a> constructs the set of derivatives of a given set of (ordinary) differential indeterminates. If <code class="docutils literal notranslate"><span class="pre">x</span></code>, …, <code class="docutils literal notranslate"><span class="pre">y</span></code> is an ordered set of differential indeterminates, and the prime notation is used for differentiation, then the set of derivatives (including zero-th order) of the differential indeterminates is <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">x'</span></code>, <code class="docutils literal notranslate"><span class="pre">x''</span></code>, …, <code class="docutils literal notranslate"><span class="pre">y</span></code>, <code class="docutils literal notranslate"><span class="pre">y'</span></code>, <code class="docutils literal notranslate"><span class="pre">y''</span></code>, … (Note: in the interpreter, the <code class="docutils literal notranslate"><span class="pre">n</span></code>-th derivative of <code class="docutils literal notranslate"><span class="pre">y</span></code> is displayed as <code class="docutils literal notranslate"><span class="pre">y</span></code> with a subscript <code class="docutils literal notranslate"><span class="pre">n</span></code>.) This set is viewed as a set of algebraic indeterminates, totally ordered in a way compatible with differentiation and the given order on the differential indeterminates. Such a total order is called a ranking of the differential indeterminates.   A domain in this category is needed to construct a differential polynomial domain. Differential polynomials are ordered by a ranking on the derivatives, and by an order (extending the ranking) on on the set of differential monomials. One may thus associate a domain in this category with a ranking of the differential indeterminates, just as one associates a domain in the category <a class="reference internal" href="OrderedAbelianMonoidSup.html#l4f7264657265644162656c69616e4d6f6e6f6964537570"><span class="std std-ref">OrderedAbelianMonoidSup</span></a> with an ordering of the set of monomials in a set of algebraic indeterminates. The ranking is specified through the binary relation <span class="spadfun">&lt;</span>. For example, one may define one derivative to be less than another by lexicographically comparing first the <span class="spadfun">order</span>, then the given order of the differential indeterminates appearing in the derivatives. This is the default implementation.   The notion of weight generalizes that of degree. A polynomial domain may be made into a graded ring if a weight function is given on the set of indeterminates, Very often, a grading is the first step in ordering the set of monomials. For differential polynomial domains, this constructor provides a function <span class="spadfun">weight</span>, which allows the assignment of a non-negative number to each derivative of a differential indeterminate. For example, one may define the weight of a derivative to be simply its <span class="spadfun">order</span> (this is the default assignment). This weight function can then be extended to the set of all differential polynomials, providing a graded ring structure.</p>
+<dl class="simple" id="l446966666572656e7469616c5661726961626c6543617465676f72792e3c3d">
+<dt><a class="reference internal" href="PartialOrder.html#l5061727469616c4f726465722e3c3d"><span class="std std-ref">&lt;=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l5061727469616c4f72646572"><span class="std std-ref">PartialOrder</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-differential-variable-category-coerce"></span><dl class="simple" id="index-1">
+<dl class="simple" id="l446966666572656e7469616c5661726961626c6543617465676f72792e3c">
+<dt><a class="reference internal" href="PartialOrder.html#l5061727469616c4f726465722e3c"><span class="std std-ref">&lt;</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l5061727469616c4f72646572"><span class="std std-ref">PartialOrder</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l446966666572656e7469616c5661726961626c6543617465676f72792e3d">
+<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l446966666572656e7469616c5661726961626c6543617465676f72792e3e3d">
+<dt><a class="reference internal" href="PartialOrder.html#l5061727469616c4f726465722e3e3d"><span class="std std-ref">&gt;=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l5061727469616c4f72646572"><span class="std std-ref">PartialOrder</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l446966666572656e7469616c5661726961626c6543617465676f72792e3e">
+<dt><a class="reference internal" href="PartialOrder.html#l5061727469616c4f726465722e3e"><span class="std std-ref">&gt;</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="PartialOrder.html#l5061727469616c4f72646572"><span class="std std-ref">PartialOrder</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l446966666572656e7469616c5661726961626c6543617465676f72792e7e3d">
+<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e7e3d"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l446966666572656e7469616c5661726961626c6543617465676f72792e636f65726365">
+<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f2e636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="index-1">
 <dt><span class="spadfun">coerce</span>: S -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(s)</span></code> returns <code class="docutils literal notranslate"><span class="pre">s</span></code>, viewed as the zero-th order derivative of <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-differential-variable-category-differentiate"></span><dl class="simple" id="index-2">
+<span class="target" id="l446966666572656e7469616c5661726961626c6543617465676f72792e646966666572656e7469617465"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">differentiate</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">differentiate(v)</span></code> returns the derivative of <code class="docutils literal notranslate"><span class="pre">v</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-3">
-<dt><span class="spadfun">differentiate</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">differentiate(v,</span> <span class="pre">n)</span></code> returns the <code class="docutils literal notranslate"><span class="pre">n</span></code>-th derivative of <code class="docutils literal notranslate"><span class="pre">v</span></code>.</p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l-single-integer"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash-update"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-latex"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+<dt><span class="spadfun">differentiate</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">differentiate(v,</span> <span class="pre">n)</span></code> returns the <code class="docutils literal notranslate"><span class="pre">n</span></code>-th derivative of <code class="docutils literal notranslate"><span class="pre">v</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-differential-variable-category-make-variable"></span><dl class="simple" id="index-4">
-<dt><span class="spadfun">makeVariable</span>: (S, <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">makeVariable(s,</span> <span class="pre">n)</span></code> returns the <code class="docutils literal notranslate"><span class="pre">n</span></code>-th derivative of a differential indeterminate <code class="docutils literal notranslate"><span class="pre">s</span></code> as an algebraic indeterminate.</p>
-</dd>
-<dt><a class="reference internal" href="OrderedSet.html#l-ordered-set-max"><span class="std std-ref">max</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a></p>
-</dd>
-<dt><a class="reference internal" href="OrderedSet.html#l-ordered-set-min"><span class="std std-ref">min</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a></p>
+<dl class="simple" id="l446966666572656e7469616c5661726961626c6543617465676f72792e68617368">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e68617368"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l53696e676c65496e7465676572"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-differential-variable-category-order"></span><dl class="simple" id="index-5">
-<dt><span class="spadfun">order</span>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">order(v)</span></code> returns <code class="docutils literal notranslate"><span class="pre">n</span></code> if <code class="docutils literal notranslate"><span class="pre">v</span></code> is the <code class="docutils literal notranslate"><span class="pre">n</span></code>-th derivative of any differential indeterminate.</p>
-</dd>
-<dt><a class="reference internal" href="RetractableTo.html#l-retractable-to-retract"><span class="std std-ref">retract</span></a>: % -&gt; S</dt><dd><p>from <a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> S</p>
-</dd>
-<dt><a class="reference internal" href="RetractableTo.html#l-retractable-to-retract-if-can"><span class="std std-ref">retractIfCan</span></a>: % -&gt; Union(S, failed)</dt><dd><p>from <a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> S</p>
-</dd>
-<dt><a class="reference internal" href="Comparable.html#l-comparable-smaller"><span class="std std-ref">smaller?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a></p>
+<dl class="simple" id="l446966666572656e7469616c5661726961626c6543617465676f72792e6861736855706461746521">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6861736855706461746521"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-differential-variable-category-variable"></span><dl class="simple" id="index-6">
+<dl class="simple" id="l446966666572656e7469616c5661726961626c6543617465676f72792e6c61746578">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6c61746578"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l446966666572656e7469616c5661726961626c6543617465676f72792e6d616b655661726961626c65"></span><dl class="simple" id="index-4">
+<dt><span class="spadfun">makeVariable</span>: (S, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">makeVariable(s,</span> <span class="pre">n)</span></code> returns the <code class="docutils literal notranslate"><span class="pre">n</span></code>-th derivative of a differential indeterminate <code class="docutils literal notranslate"><span class="pre">s</span></code> as an algebraic indeterminate.</p>
+</dd>
+</dl>
+<dl class="simple" id="l446966666572656e7469616c5661726961626c6543617465676f72792e6d6178">
+<dt><a class="reference internal" href="OrderedSet.html#l4f7264657265645365742e6d6178"><span class="std std-ref">max</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="OrderedSet.html#l4f726465726564536574"><span class="std std-ref">OrderedSet</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l446966666572656e7469616c5661726961626c6543617465676f72792e6d696e">
+<dt><a class="reference internal" href="OrderedSet.html#l4f7264657265645365742e6d696e"><span class="std std-ref">min</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="OrderedSet.html#l4f726465726564536574"><span class="std std-ref">OrderedSet</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l446966666572656e7469616c5661726961626c6543617465676f72792e6f72646572"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">order</span>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">order(v)</span></code> returns <code class="docutils literal notranslate"><span class="pre">n</span></code> if <code class="docutils literal notranslate"><span class="pre">v</span></code> is the <code class="docutils literal notranslate"><span class="pre">n</span></code>-th derivative of any differential indeterminate.</p>
+</dd>
+</dl>
+<dl class="simple" id="l446966666572656e7469616c5661726961626c6543617465676f72792e72657472616374">
+<dt><a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f2e72657472616374"><span class="std std-ref">retract</span></a>: % -&gt; S</dt><dd><p>from <a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f"><span class="std std-ref">RetractableTo</span></a> S</p>
+</dd>
+</dl>
+<dl class="simple" id="l446966666572656e7469616c5661726961626c6543617465676f72792e72657472616374496643616e">
+<dt><a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f2e72657472616374496643616e"><span class="std std-ref">retractIfCan</span></a>: % -&gt; Union(S, failed)</dt><dd><p>from <a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f"><span class="std std-ref">RetractableTo</span></a> S</p>
+</dd>
+</dl>
+<dl class="simple" id="l446966666572656e7469616c5661726961626c6543617465676f72792e736d616c6c65723f">
+<dt><a class="reference internal" href="Comparable.html#l436f6d70617261626c652e736d616c6c65723f"><span class="std std-ref">smaller?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l446966666572656e7469616c5661726961626c6543617465676f72792e7661726961626c65"></span><dl class="simple" id="index-6">
 <dt><span class="spadfun">variable</span>: % -&gt; S</dt><dd><p><code class="docutils literal notranslate"><span class="pre">variable(v)</span></code> returns <code class="docutils literal notranslate"><span class="pre">s</span></code> if <code class="docutils literal notranslate"><span class="pre">v</span></code> is any derivative of the differential indeterminate <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-differential-variable-category-weight"></span><dl class="simple" id="index-7">
-<dt><span class="spadfun">weight</span>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">weight(v)</span></code> returns the weight of the derivative <code class="docutils literal notranslate"><span class="pre">v</span></code>.</p>
+<span class="target" id="l446966666572656e7469616c5661726961626c6543617465676f72792e776569676874"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">weight</span>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">weight(v)</span></code> returns the weight of the derivative <code class="docutils literal notranslate"><span class="pre">v</span></code>.</p>
 </dd>
 </dl>
-<p><a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-<p><a class="reference internal" href="CoercibleFrom.html#l-coercible-from"><span class="std std-ref">CoercibleFrom</span></a> S</p>
-<p><a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
-<p><a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a></p>
-<p><a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a></p>
-<p><a class="reference internal" href="PartialOrder.html#l-partial-order"><span class="std std-ref">PartialOrder</span></a></p>
-<p><a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> S</p>
-<p><a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+<p><a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+<p><a class="reference internal" href="CoercibleFrom.html#l436f65726369626c6546726f6d"><span class="std std-ref">CoercibleFrom</span></a> S</p>
+<p><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+<p><a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a></p>
+<p><a class="reference internal" href="OrderedSet.html#l4f726465726564536574"><span class="std std-ref">OrderedSet</span></a></p>
+<p><a class="reference internal" href="PartialOrder.html#l5061727469616c4f72646572"><span class="std std-ref">PartialOrder</span></a></p>
+<p><a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f"><span class="std std-ref">RetractableTo</span></a> S</p>
+<p><a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </div>
 
 
@@ -167,7 +195,7 @@
         <li class="right" >
           <a href="DifferentialRing.html" title="DifferentialRing"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Categories.html" >Categories</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">DifferentialVariableCategory S</a></li> 

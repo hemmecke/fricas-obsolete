@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SimpleCell(TheField, ThePols) &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>SimpleCell(TheField, ThePols) &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="SimpleAlgebraicExtension.html" title="SimpleAlgebraicExtension(R, UP, M)"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Domains.html" accesskey="U">Domains</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">SimpleCell(TheField, ThePols)</a></li> 
@@ -46,36 +46,38 @@
           <div class="body" role="main">
             
   <div class="section" id="simplecell-thefield-thepols">
-<span id="l-simple-cell"></span><span id="index-0"></span><h1>SimpleCell(TheField, ThePols)<a class="headerlink" href="#simplecell-thefield-thepols" title="Permalink to this headline">¶</a></h1>
+<span id="l53696d706c6543656c6c"></span><span id="index-0"></span><h1>SimpleCell(TheField, ThePols)<a class="headerlink" href="#simplecell-thefield-thepols" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/cyldec.spad#L60">cyldec.spad line 60</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/cyldec.spad#L60">[edit on github]</a></p>
 <ul class="simple">
-<li><p>TheField: <a class="reference internal" href="RealClosedField.html#l-real-closed-field"><span class="std std-ref">RealClosedField</span></a></p></li>
-<li><p>ThePols: <a class="reference internal" href="UnivariatePolynomialCategory.html#l-univariate-polynomial-category"><span class="std std-ref">UnivariatePolynomialCategory</span></a> TheField</p></li>
+<li><p>TheField: <a class="reference internal" href="RealClosedField.html#l5265616c436c6f7365644669656c64"><span class="std std-ref">RealClosedField</span></a></p></li>
+<li><p>ThePols: <a class="reference internal" href="UnivariatePolynomialCategory.html#l556e6976617269617465506f6c796e6f6d69616c43617465676f7279"><span class="std std-ref">UnivariatePolynomialCategory</span></a> TheField</p></li>
 </ul>
 <p>undocumented</p>
-<span class="target" id="l-simple-cell-all-simple-cells"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">allSimpleCells</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> ThePols, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">allSimpleCells(lp,</span> <span class="pre">sym)</span></code> returns decomposition into cells such that each <code class="docutils literal notranslate"><span class="pre">p</span></code> in <code class="docutils literal notranslate"><span class="pre">lp</span></code> has constant sign on each member of decomposition</p>
+<span class="target" id="l53696d706c6543656c6c2e616c6c53696d706c6543656c6c73"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">allSimpleCells</span>: (<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> ThePols, <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>) -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">allSimpleCells(lp,</span> <span class="pre">sym)</span></code> returns decomposition into cells such that each <code class="docutils literal notranslate"><span class="pre">p</span></code> in <code class="docutils literal notranslate"><span class="pre">lp</span></code> has constant sign on each member of decomposition</p>
 </dd>
 </dl>
 <dl class="simple" id="index-2">
-<dt><span class="spadfun">allSimpleCells</span>: (ThePols, <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">allSimpleCells(p,</span> <span class="pre">sym)</span></code> is allSimpleCells([<code class="docutils literal notranslate"><span class="pre">p</span></code>], <code class="docutils literal notranslate"><span class="pre">sym</span></code>)</p>
-</dd>
-<dt><a class="reference internal" href="CoercibleTo.html#l-coercible-to-coerce"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+<dt><span class="spadfun">allSimpleCells</span>: (ThePols, <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>) -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">allSimpleCells(p,</span> <span class="pre">sym)</span></code> is allSimpleCells([<code class="docutils literal notranslate"><span class="pre">p</span></code>], <code class="docutils literal notranslate"><span class="pre">sym</span></code>)</p>
 </dd>
 </dl>
-<span class="target" id="l-simple-cell-has-dimension"></span><dl class="simple" id="index-3">
-<dt><span class="spadfun">hasDimension?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">hasDimension?(c)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if <code class="docutils literal notranslate"><span class="pre">c</span></code> is of positive dimension (that is one-dimensional), otherwise hasDimension?(<code class="docutils literal notranslate"><span class="pre">c</span></code>) returns <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
+<dl class="simple" id="l53696d706c6543656c6c2e636f65726365">
+<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f2e636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-simple-cell-sample-point"></span><dl class="simple" id="index-4">
+<span class="target" id="l53696d706c6543656c6c2e68617344696d656e73696f6e3f"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">hasDimension?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">hasDimension?(c)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if <code class="docutils literal notranslate"><span class="pre">c</span></code> is of positive dimension (that is one-dimensional), otherwise hasDimension?(<code class="docutils literal notranslate"><span class="pre">c</span></code>) returns <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
+</dd>
+</dl>
+<span class="target" id="l53696d706c6543656c6c2e73616d706c65506f696e74"></span><dl class="simple" id="index-4">
 <dt><span class="spadfun">samplePoint</span>: % -&gt; TheField</dt><dd><p><code class="docutils literal notranslate"><span class="pre">samplePoint(c)</span></code> returns the sample point of <code class="docutils literal notranslate"><span class="pre">c</span></code></p>
 </dd>
 </dl>
-<span class="target" id="l-simple-cell-variable-of"></span><dl class="simple" id="index-5">
-<dt><span class="spadfun">variableOf</span>: % -&gt; <a class="reference internal" href="Symbol.html#l-symbol"><span class="std std-ref">Symbol</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">variableOf(c)</span></code> returns variable of <code class="docutils literal notranslate"><span class="pre">c</span></code></p>
+<span class="target" id="l53696d706c6543656c6c2e7661726961626c654f66"></span><dl class="simple" id="index-5">
+<dt><span class="spadfun">variableOf</span>: % -&gt; <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">variableOf(c)</span></code> returns variable of <code class="docutils literal notranslate"><span class="pre">c</span></code></p>
 </dd>
 </dl>
-<p><a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+<p><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
 </div>
 
 
@@ -123,7 +125,7 @@
         <li class="right" >
           <a href="SimpleAlgebraicExtension.html" title="SimpleAlgebraicExtension(R, UP, M)"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Domains.html" >Domains</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">SimpleCell(TheField, ThePols)</a></li> 

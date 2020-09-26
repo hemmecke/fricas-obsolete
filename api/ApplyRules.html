@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ApplyRules(Base, R, F) &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>ApplyRules(Base, R, F) &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="AnyFunctions1.html" title="AnyFunctions1 S"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">ApplyRules(Base, R, F)</a></li> 
@@ -46,20 +46,20 @@
           <div class="body" role="main">
             
   <div class="section" id="applyrules-base-r-f">
-<span id="l-apply-rules"></span><span id="index-0"></span><h1>ApplyRules(Base, R, F)<a class="headerlink" href="#applyrules-base-r-f" title="Permalink to this headline">¶</a></h1>
+<span id="l4170706c7952756c6573"></span><span id="index-0"></span><h1>ApplyRules(Base, R, F)<a class="headerlink" href="#applyrules-base-r-f" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/rule.spad#L130">rule.spad line 130</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/rule.spad#L130">[edit on github]</a></p>
 <ul class="simple">
-<li><p>Base: <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p></li>
-<li><p>R: Join(<a class="reference internal" href="Ring.html#l-ring"><span class="std std-ref">Ring</span></a>, <a class="reference internal" href="PatternMatchable.html#l-pattern-matchable"><span class="std std-ref">PatternMatchable</span></a> Base, <a class="reference internal" href="Comparable.html#l-comparable"><span class="std std-ref">Comparable</span></a>, <a class="reference internal" href="ConvertibleTo.html#l-convertible-to"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="Pattern.html#l-pattern"><span class="std std-ref">Pattern</span></a> Base)</p></li>
-<li><p>F: Join(<a class="reference internal" href="FunctionSpace.html#l-function-space"><span class="std std-ref">FunctionSpace</span></a> R, <a class="reference internal" href="PatternMatchable.html#l-pattern-matchable"><span class="std std-ref">PatternMatchable</span></a> Base, <a class="reference internal" href="ConvertibleTo.html#l-convertible-to"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="Pattern.html#l-pattern"><span class="std std-ref">Pattern</span></a> Base)</p></li>
+<li><p>Base: <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p></li>
+<li><p>R: Join(<a class="reference internal" href="Ring.html#l52696e67"><span class="std std-ref">Ring</span></a>, <a class="reference internal" href="PatternMatchable.html#l5061747465726e4d6174636861626c65"><span class="std std-ref">PatternMatchable</span></a> Base, <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a>, <a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="Pattern.html#l5061747465726e"><span class="std std-ref">Pattern</span></a> Base)</p></li>
+<li><p>F: Join(<a class="reference internal" href="FunctionSpace.html#l46756e6374696f6e5370616365"><span class="std std-ref">FunctionSpace</span></a> R, <a class="reference internal" href="PatternMatchable.html#l5061747465726e4d6174636861626c65"><span class="std std-ref">PatternMatchable</span></a> Base, <a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="Pattern.html#l5061747465726e"><span class="std std-ref">Pattern</span></a> Base)</p></li>
 </ul>
 <p>This package apply rewrite rules to expressions, calling the pattern matcher.</p>
-<span class="target" id="l-apply-rules-apply-rules"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">applyRules</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="RewriteRule.html#l-rewrite-rule"><span class="std std-ref">RewriteRule</span></a>(Base, R, F), F) -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">applyRules([r1,</span> <span class="pre">...,</span> <span class="pre">rn],</span> <span class="pre">expr)</span></code> applies the rules <code class="docutils literal notranslate"><span class="pre">r1</span></code>, …, <code class="docutils literal notranslate"><span class="pre">rn</span></code> to <code class="docutils literal notranslate"><span class="pre">f</span></code> an unlimited number of times, i.e. until none of <code class="docutils literal notranslate"><span class="pre">r1</span></code>, …, <code class="docutils literal notranslate"><span class="pre">rn</span></code> is applicable to the expression.</p>
+<span class="target" id="l4170706c7952756c65732e6170706c7952756c6573"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">applyRules</span>: (<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="RewriteRule.html#l5265777269746552756c65"><span class="std std-ref">RewriteRule</span></a>(Base, R, F), F) -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">applyRules([r1,</span> <span class="pre">...,</span> <span class="pre">rn],</span> <span class="pre">expr)</span></code> applies the rules <code class="docutils literal notranslate"><span class="pre">r1</span></code>, …, <code class="docutils literal notranslate"><span class="pre">rn</span></code> to <code class="docutils literal notranslate"><span class="pre">f</span></code> an unlimited number of times, i.e. until none of <code class="docutils literal notranslate"><span class="pre">r1</span></code>, …, <code class="docutils literal notranslate"><span class="pre">rn</span></code> is applicable to the expression.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-2">
-<dt><span class="spadfun">applyRules</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> <a class="reference internal" href="RewriteRule.html#l-rewrite-rule"><span class="std std-ref">RewriteRule</span></a>(Base, R, F), F, <a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>) -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">applyRules([r1,</span> <span class="pre">...,</span> <span class="pre">rn],</span> <span class="pre">expr,</span> <span class="pre">n)</span></code> applies the rules <code class="docutils literal notranslate"><span class="pre">r1</span></code>, …, <code class="docutils literal notranslate"><span class="pre">rn</span></code> to <code class="docutils literal notranslate"><span class="pre">f</span></code> a most <code class="docutils literal notranslate"><span class="pre">n</span></code> times.</p>
+<dt><span class="spadfun">applyRules</span>: (<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="RewriteRule.html#l5265777269746552756c65"><span class="std std-ref">RewriteRule</span></a>(Base, R, F), F, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">applyRules([r1,</span> <span class="pre">...,</span> <span class="pre">rn],</span> <span class="pre">expr,</span> <span class="pre">n)</span></code> applies the rules <code class="docutils literal notranslate"><span class="pre">r1</span></code>, …, <code class="docutils literal notranslate"><span class="pre">rn</span></code> to <code class="docutils literal notranslate"><span class="pre">f</span></code> a most <code class="docutils literal notranslate"><span class="pre">n</span></code> times.</p>
 </dd>
 </dl>
 </div>
@@ -109,7 +109,7 @@
         <li class="right" >
           <a href="AnyFunctions1.html" title="AnyFunctions1 S"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">ApplyRules(Base, R, F)</a></li> 

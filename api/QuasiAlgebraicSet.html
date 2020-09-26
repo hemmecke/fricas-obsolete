@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuasiAlgebraicSet(R, Var, Expon, Dpoly) &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>QuasiAlgebraicSet(R, Var, Expon, Dpoly) &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="QuadraticForm.html" title="QuadraticForm(n, K)"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Domains.html" accesskey="U">Domains</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">QuasiAlgebraicSet(R, Var, Expon, Dpoly)</a></li> 
@@ -46,68 +46,78 @@
           <div class="body" role="main">
             
   <div class="section" id="quasialgebraicset-r-var-expon-dpoly">
-<span id="l-quasi-algebraic-set"></span><span id="index-0"></span><h1>QuasiAlgebraicSet(R, Var, Expon, Dpoly)<a class="headerlink" href="#quasialgebraicset-r-var-expon-dpoly" title="Permalink to this headline">¶</a></h1>
+<span id="l5175617369416c67656272616963536574"></span><span id="index-0"></span><h1>QuasiAlgebraicSet(R, Var, Expon, Dpoly)<a class="headerlink" href="#quasialgebraicset-r-var-expon-dpoly" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/qalgset.spad#L1">qalgset.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/qalgset.spad#L1">[edit on github]</a></p>
 <ul class="simple">
-<li><p>R: <a class="reference internal" href="GcdDomain.html#l-gcd-domain"><span class="std std-ref">GcdDomain</span></a></p></li>
-<li><p>Var: <a class="reference internal" href="OrderedSet.html#l-ordered-set"><span class="std std-ref">OrderedSet</span></a></p></li>
-<li><p>Expon: <a class="reference internal" href="OrderedAbelianMonoidSup.html#l-ordered-abelian-monoid-sup"><span class="std std-ref">OrderedAbelianMonoidSup</span></a></p></li>
-<li><p>Dpoly: <a class="reference internal" href="PolynomialCategory.html#l-polynomial-category"><span class="std std-ref">PolynomialCategory</span></a>(R, Expon, Var)</p></li>
+<li><p>R: <a class="reference internal" href="GcdDomain.html#l476364446f6d61696e"><span class="std std-ref">GcdDomain</span></a></p></li>
+<li><p>Var: <a class="reference internal" href="OrderedSet.html#l4f726465726564536574"><span class="std std-ref">OrderedSet</span></a></p></li>
+<li><p>Expon: <a class="reference internal" href="OrderedAbelianMonoidSup.html#l4f7264657265644162656c69616e4d6f6e6f6964537570"><span class="std std-ref">OrderedAbelianMonoidSup</span></a></p></li>
+<li><p>Dpoly: <a class="reference internal" href="PolynomialCategory.html#l506f6c796e6f6d69616c43617465676f7279"><span class="std std-ref">PolynomialCategory</span></a>(R, Expon, Var)</p></li>
 </ul>
-<p><a class="reference internal" href="#l-quasi-algebraic-set"><span class="std std-ref">QuasiAlgebraicSet</span></a> constructs a domain representing quasi-algebraic sets, which is the intersection of a Zariski closed set, defined as the common zeros of a given list of polynomials (the defining polynomials for equations), and a principal Zariski open set, defined as the complement of the common zeros of a polynomial <code class="docutils literal notranslate"><span class="pre">f</span></code> (the defining polynomial for the inequation). This domain provides simplification of a user-given representation using groebner basis computations. There are two simplification routines: the first function <span class="spadfun">idealSimplify</span> uses groebner basis of ideals alone, while the second, <span class="spadfun">simplify</span> uses both groebner basis and factorization. The resulting defining equations <code class="docutils literal notranslate"><span class="pre">L</span></code> always form a groebner basis, and the resulting defining inequation <code class="docutils literal notranslate"><span class="pre">f</span></code> is always reduced. The function <span class="spadfun">simplify</span> may be applied several times if desired. A third simplification routine <span class="spadfun">radicalSimplify</span> is provided in <a class="reference internal" href="QuasiAlgebraicSet2.html#l-quasi-algebraic-set2"><span class="std std-ref">QuasiAlgebraicSet2</span></a> for comparison study only, as it is inefficient compared to the other two, as well as is restricted to only certain coefficient domains. For detail analysis and a comparison of the three methods, please consult the reference cited.   A polynomial function <code class="docutils literal notranslate"><span class="pre">q</span></code> defined on the quasi-algebraic set is equivalent to its reduced form with respect to <code class="docutils literal notranslate"><span class="pre">L</span></code>. While this may be obtained using the usual normal form algorithm, there is no canonical form for <code class="docutils literal notranslate"><span class="pre">q</span></code>.   The ordering in groebner basis computation is determined by the data type of the input polynomials. If it is possible we suggest to use refinements of total degree orderings.</p>
-<dl class="simple">
-<dt><a class="reference internal" href="BasicType.html#id1"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-</dd>
-<dt><a class="reference internal" href="BasicType.html#id2"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-</dd>
-<dt><a class="reference internal" href="CoercibleTo.html#l-coercible-to-coerce"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+<p><a class="reference internal" href="#l5175617369416c67656272616963536574"><span class="std std-ref">QuasiAlgebraicSet</span></a> constructs a domain representing quasi-algebraic sets, which is the intersection of a Zariski closed set, defined as the common zeros of a given list of polynomials (the defining polynomials for equations), and a principal Zariski open set, defined as the complement of the common zeros of a polynomial <code class="docutils literal notranslate"><span class="pre">f</span></code> (the defining polynomial for the inequation). This domain provides simplification of a user-given representation using groebner basis computations. There are two simplification routines: the first function <span class="spadfun">idealSimplify</span> uses groebner basis of ideals alone, while the second, <span class="spadfun">simplify</span> uses both groebner basis and factorization. The resulting defining equations <code class="docutils literal notranslate"><span class="pre">L</span></code> always form a groebner basis, and the resulting defining inequation <code class="docutils literal notranslate"><span class="pre">f</span></code> is always reduced. The function <span class="spadfun">simplify</span> may be applied several times if desired. A third simplification routine <span class="spadfun">radicalSimplify</span> is provided in <a class="reference internal" href="QuasiAlgebraicSet2.html#l5175617369416c6765627261696353657432"><span class="std std-ref">QuasiAlgebraicSet2</span></a> for comparison study only, as it is inefficient compared to the other two, as well as is restricted to only certain coefficient domains. For detail analysis and a comparison of the three methods, please consult the reference cited.   A polynomial function <code class="docutils literal notranslate"><span class="pre">q</span></code> defined on the quasi-algebraic set is equivalent to its reduced form with respect to <code class="docutils literal notranslate"><span class="pre">L</span></code>. While this may be obtained using the usual normal form algorithm, there is no canonical form for <code class="docutils literal notranslate"><span class="pre">q</span></code>.   The ordering in groebner basis computation is determined by the data type of the input polynomials. If it is possible we suggest to use refinements of total degree orderings.</p>
+<dl class="simple" id="l5175617369416c676562726169635365742e3d">
+<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-quasi-algebraic-set-defining-equations"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">definingEquations</span>: % -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Dpoly</dt><dd><p><code class="docutils literal notranslate"><span class="pre">definingEquations(s)</span></code> returns a list of defining polynomials for equations, that is, for the Zariski closed part of <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
+<dl class="simple" id="l5175617369416c676562726169635365742e7e3d">
+<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e7e3d"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-quasi-algebraic-set-defining-inequation"></span><dl class="simple" id="index-2">
+<dl class="simple" id="l5175617369416c676562726169635365742e636f65726365">
+<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f2e636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l5175617369416c676562726169635365742e646566696e696e674571756174696f6e73"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">definingEquations</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> Dpoly</dt><dd><p><code class="docutils literal notranslate"><span class="pre">definingEquations(s)</span></code> returns a list of defining polynomials for equations, that is, for the Zariski closed part of <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l5175617369416c676562726169635365742e646566696e696e67496e6571756174696f6e"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">definingInequation</span>: % -&gt; Dpoly</dt><dd><p><code class="docutils literal notranslate"><span class="pre">definingInequation(s)</span></code> returns a single defining polynomial for the inequation, that is, the Zariski open part of <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-quasi-algebraic-set-empty"></span><dl class="simple" id="index-3">
+<span class="target" id="l5175617369416c676562726169635365742e656d7074793f"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">empty?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">empty?(s)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the quasialgebraic set <code class="docutils literal notranslate"><span class="pre">s</span></code> has no points, and <code class="docutils literal notranslate"><span class="pre">false</span></code> otherwise.</p>
+</dd>
+</dl>
+<span class="target" id="l5175617369416c676562726169635365742e656d707479"></span><dl class="simple" id="index-4">
 <dt><span class="spadfun">empty</span>: () -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">empty()</span></code> returns the empty quasi-algebraic set</p>
 </dd>
 </dl>
-<span class="target" id="id1"></span><dl class="simple" id="index-4">
-<dt><span class="spadfun">empty?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">empty?(s)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the quasialgebraic set <code class="docutils literal notranslate"><span class="pre">s</span></code> has no points, and <code class="docutils literal notranslate"><span class="pre">false</span></code> otherwise.</p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l-single-integer"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash-update"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+<dl class="simple" id="l5175617369416c676562726169635365742e68617368">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e68617368"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l53696e676c65496e7465676572"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-quasi-algebraic-set-ideal-simplify"></span><dl class="simple" id="index-5">
+<dl class="simple" id="l5175617369416c676562726169635365742e6861736855706461746521">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6861736855706461746521"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l5175617369416c676562726169635365742e696465616c53696d706c696679"></span><dl class="simple" id="index-5">
 <dt><span class="spadfun">idealSimplify</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">idealSimplify(s)</span></code> returns a different and presumably simpler representation of <code class="docutils literal notranslate"><span class="pre">s</span></code> with the defining polynomials for the equations forming a groebner basis, and the defining polynomial for the inequation reduced with respect to the basis, using Buchberger<code class="docutils literal notranslate"><span class="pre">'s</span></code> algorithm.</p>
 </dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-latex"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+</dl>
+<dl class="simple" id="l5175617369416c676562726169635365742e6c61746578">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6c61746578"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-quasi-algebraic-set-quasi-algebraic-set"></span><dl class="simple" id="index-6">
-<dt><span class="spadfun">quasiAlgebraicSet</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Dpoly, Dpoly) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">quasiAlgebraicSet(pl,</span> <span class="pre">q)</span></code> returns the quasi-algebraic set with defining equations <code class="docutils literal notranslate"><span class="pre">p</span></code> = 0 for <code class="docutils literal notranslate"><span class="pre">p</span></code> belonging to the list <code class="docutils literal notranslate"><span class="pre">pl</span></code>, and defining inequation <code class="docutils literal notranslate"><span class="pre">q</span></code> <code class="docutils literal notranslate"><span class="pre">~=</span></code> 0.</p>
+<span class="target" id="l5175617369416c676562726169635365742e7175617369416c67656272616963536574"></span><dl class="simple" id="index-6">
+<dt><span class="spadfun">quasiAlgebraicSet</span>: (<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> Dpoly, Dpoly) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">quasiAlgebraicSet(pl,</span> <span class="pre">q)</span></code> returns the quasi-algebraic set with defining equations <code class="docutils literal notranslate"><span class="pre">p</span></code> = 0 for <code class="docutils literal notranslate"><span class="pre">p</span></code> belonging to the list <code class="docutils literal notranslate"><span class="pre">pl</span></code>, and defining inequation <code class="docutils literal notranslate"><span class="pre">q</span></code> <code class="docutils literal notranslate"><span class="pre">~=</span></code> 0.</p>
 </dd>
 </dl>
-<span class="target" id="l-quasi-algebraic-set-set-status"></span><dl class="simple" id="index-7">
-<dt><span class="spadfun">setStatus</span>: (%, Union(<a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>, failed)) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">setStatus(s,</span> <span class="pre">t)</span></code> returns the same representation for <code class="docutils literal notranslate"><span class="pre">s</span></code>, but asserts the following: if <code class="docutils literal notranslate"><span class="pre">t</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>, then <code class="docutils literal notranslate"><span class="pre">s</span></code> is empty, if <code class="docutils literal notranslate"><span class="pre">t</span></code> is <code class="docutils literal notranslate"><span class="pre">false</span></code>, then <code class="docutils literal notranslate"><span class="pre">s</span></code> is non-empty, and if <code class="docutils literal notranslate"><span class="pre">t</span></code> = “failed”, then no assertion is made (that is, “don<code class="docutils literal notranslate"><span class="pre">'t</span></code> know”). Note: for internal use only, with care.</p>
+<span class="target" id="l5175617369416c676562726169635365742e736574537461747573"></span><dl class="simple" id="index-7">
+<dt><span class="spadfun">setStatus</span>: (%, Union(<a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a>, failed)) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">setStatus(s,</span> <span class="pre">t)</span></code> returns the same representation for <code class="docutils literal notranslate"><span class="pre">s</span></code>, but asserts the following: if <code class="docutils literal notranslate"><span class="pre">t</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>, then <code class="docutils literal notranslate"><span class="pre">s</span></code> is empty, if <code class="docutils literal notranslate"><span class="pre">t</span></code> is <code class="docutils literal notranslate"><span class="pre">false</span></code>, then <code class="docutils literal notranslate"><span class="pre">s</span></code> is non-empty, and if <code class="docutils literal notranslate"><span class="pre">t</span></code> = “failed”, then no assertion is made (that is, “don<code class="docutils literal notranslate"><span class="pre">'t</span></code> know”). Note: for internal use only, with care.</p>
 </dd>
 </dl>
-<span class="target" id="l-quasi-algebraic-set-simplify"></span><dl class="simple" id="index-8">
-<dt><span class="spadfun">simplify</span>: % -&gt; % if R has <a class="reference internal" href="CharacteristicZero.html#l-characteristic-zero"><span class="std std-ref">CharacteristicZero</span></a> and R has <a class="reference internal" href="PolynomialFactorizationExplicit.html#l-polynomial-factorization-explicit"><span class="std std-ref">PolynomialFactorizationExplicit</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">simplify(s)</span></code> returns a different and presumably simpler representation of <code class="docutils literal notranslate"><span class="pre">s</span></code> with the defining polynomials for the equations forming a groebner basis, and the defining polynomial for the inequation reduced with respect to the basis, using a heuristic algorithm based on factoring.</p>
+<span class="target" id="l5175617369416c676562726169635365742e73696d706c696679"></span><dl class="simple" id="index-8">
+<dt><span class="spadfun">simplify</span>: % -&gt; % if R has <a class="reference internal" href="CharacteristicZero.html#l43686172616374657269737469635a65726f"><span class="std std-ref">CharacteristicZero</span></a> and R has <a class="reference internal" href="PolynomialFactorizationExplicit.html#l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974"><span class="std std-ref">PolynomialFactorizationExplicit</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">simplify(s)</span></code> returns a different and presumably simpler representation of <code class="docutils literal notranslate"><span class="pre">s</span></code> with the defining polynomials for the equations forming a groebner basis, and the defining polynomial for the inequation reduced with respect to the basis, using a heuristic algorithm based on factoring.</p>
 </dd>
 </dl>
-<span class="target" id="l-quasi-algebraic-set-status"></span><dl class="simple" id="index-9">
-<dt><span class="spadfun">status</span>: % -&gt; Union(<a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a>, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">status(s)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the quasi-algebraic set is empty, <code class="docutils literal notranslate"><span class="pre">false</span></code> if it is not, and “failed” if not yet known</p>
+<span class="target" id="l5175617369416c676562726169635365742e737461747573"></span><dl class="simple" id="index-9">
+<dt><span class="spadfun">status</span>: % -&gt; Union(<a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a>, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">status(s)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the quasi-algebraic set is empty, <code class="docutils literal notranslate"><span class="pre">false</span></code> if it is not, and “failed” if not yet known</p>
 </dd>
 </dl>
-<p><a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-<p><a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
-<p><a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+<p><a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+<p><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+<p><a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </div>
 
 
@@ -155,7 +165,7 @@
         <li class="right" >
           <a href="QuadraticForm.html" title="QuadraticForm(n, K)"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Domains.html" >Domains</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">QuasiAlgebraicSet(R, Var, Expon, Dpoly)</a></li> 

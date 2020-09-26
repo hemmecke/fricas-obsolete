@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FiniteSetAggregateFunctions2(S, A, R, B) &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>FiniteSetAggregateFunctions2(S, A, R, B) &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="FiniteLinearAggregateSort.html" title="FiniteLinearAggregateSort(S, V)"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">FiniteSetAggregateFunctions2(S, A, R, B)</a></li> 
@@ -46,24 +46,24 @@
           <div class="body" role="main">
             
   <div class="section" id="finitesetaggregatefunctions2-s-a-r-b">
-<span id="l-finite-set-aggregate-functions2"></span><span id="index-0"></span><h1>FiniteSetAggregateFunctions2(S, A, R, B)<a class="headerlink" href="#finitesetaggregatefunctions2-s-a-r-b" title="Permalink to this headline">¶</a></h1>
+<span id="l46696e69746553657441676772656761746546756e6374696f6e7332"></span><span id="index-0"></span><h1>FiniteSetAggregateFunctions2(S, A, R, B)<a class="headerlink" href="#finitesetaggregatefunctions2-s-a-r-b" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/aggcat2.spad#L122">aggcat2.spad line 122</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/aggcat2.spad#L122">[edit on github]</a></p>
 <ul class="simple">
-<li><p>S: <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p></li>
-<li><p>A: <a class="reference internal" href="FiniteSetAggregate.html#l-finite-set-aggregate"><span class="std std-ref">FiniteSetAggregate</span></a> S</p></li>
-<li><p>R: <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p></li>
-<li><p>B: <a class="reference internal" href="FiniteSetAggregate.html#l-finite-set-aggregate"><span class="std std-ref">FiniteSetAggregate</span></a> R</p></li>
+<li><p>S: <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p></li>
+<li><p>A: <a class="reference internal" href="FiniteSetAggregate.html#l46696e697465536574416767726567617465"><span class="std std-ref">FiniteSetAggregate</span></a> S</p></li>
+<li><p>R: <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p></li>
+<li><p>B: <a class="reference internal" href="FiniteSetAggregate.html#l46696e697465536574416767726567617465"><span class="std std-ref">FiniteSetAggregate</span></a> R</p></li>
 </ul>
 <p><code class="docutils literal notranslate"><span class="pre">FiniteSetAggregateFunctions2</span></code> provides functions involving two finite set aggregates where the underlying domains might be different. An example of this is to create a set of rational numbers by mapping a function across a set of integers, where the function divides each integer by 1000.</p>
-<span class="target" id="l-finite-set-aggregate-functions2-map"></span><dl class="simple" id="index-1">
+<span class="target" id="l46696e69746553657441676772656761746546756e6374696f6e73322e6d6170"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">map</span>: (S -&gt; R, A) -&gt; B</dt><dd><p><code class="docutils literal notranslate"><span class="pre">map(f,</span> <span class="pre">a)</span></code> applies function <code class="docutils literal notranslate"><span class="pre">f</span></code> to each member of aggregate <code class="docutils literal notranslate"><span class="pre">a</span></code>, creating a new aggregate with a possibly different underlying domain.</p>
 </dd>
 </dl>
-<span class="target" id="l-finite-set-aggregate-functions2-reduce"></span><dl class="simple" id="index-2">
+<span class="target" id="l46696e69746553657441676772656761746546756e6374696f6e73322e726564756365"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">reduce</span>: ((S, R) -&gt; R, A, R) -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">reduce(f,</span> <span class="pre">a,</span> <span class="pre">r)</span></code> applies function <code class="docutils literal notranslate"><span class="pre">f</span></code> to each successive element of the aggregate <code class="docutils literal notranslate"><span class="pre">a</span></code> and an accumulant initialised to <code class="docutils literal notranslate"><span class="pre">r</span></code>. For example, <code class="docutils literal notranslate"><span class="pre">reduce(_+\$Integer,</span> <span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3],</span> <span class="pre">0)</span></code> does a <code class="docutils literal notranslate"><span class="pre">3+(2+(1+0))</span></code>. Note: third argument <code class="docutils literal notranslate"><span class="pre">r</span></code> may be regarded as an identity element for the function.</p>
 </dd>
 </dl>
-<span class="target" id="l-finite-set-aggregate-functions2-scan"></span><dl class="simple" id="index-3">
+<span class="target" id="l46696e69746553657441676772656761746546756e6374696f6e73322e7363616e"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">scan</span>: ((S, R) -&gt; R, A, R) -&gt; B</dt><dd><p><code class="docutils literal notranslate"><span class="pre">scan(f,</span> <span class="pre">a,</span> <span class="pre">r)</span></code> successively applies <code class="docutils literal notranslate"><span class="pre">reduce(f,</span> <span class="pre">x,</span> <span class="pre">r)</span></code> to more and more leading sub-aggregates <code class="docutils literal notranslate"><span class="pre">x</span></code> of aggregate <code class="docutils literal notranslate"><span class="pre">a</span></code>. More precisely, if <code class="docutils literal notranslate"><span class="pre">a</span></code> is <code class="docutils literal notranslate"><span class="pre">[a1,</span> <span class="pre">a2,</span> <span class="pre">...]</span></code>, then <code class="docutils literal notranslate"><span class="pre">scan(f,</span> <span class="pre">a,</span> <span class="pre">r)</span></code> returns spad {[reduce(f, [a1], r), reduce(f, [a1, a2], r), …]}.</p>
 </dd>
 </dl>
@@ -114,7 +114,7 @@
         <li class="right" >
           <a href="FiniteLinearAggregateSort.html" title="FiniteLinearAggregateSort(S, V)"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">FiniteSetAggregateFunctions2(S, A, R, B)</a></li> 

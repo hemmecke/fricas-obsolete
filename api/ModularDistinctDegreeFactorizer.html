@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ModularDistinctDegreeFactorizer U &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>ModularDistinctDegreeFactorizer U &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="ModularAlgebraicGcdTools4.html" title="ModularAlgebraicGcdTools4"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">ModularDistinctDegreeFactorizer U</a></li> 
@@ -46,22 +46,22 @@
           <div class="body" role="main">
             
   <div class="section" id="modulardistinctdegreefactorizer-u">
-<span id="l-modular-distinct-degree-factorizer"></span><span id="index-0"></span><h1>ModularDistinctDegreeFactorizer U<a class="headerlink" href="#modulardistinctdegreefactorizer-u" title="Permalink to this headline">¶</a></h1>
+<span id="l4d6f64756c617244697374696e6374446567726565466163746f72697a6572"></span><span id="index-0"></span><h1>ModularDistinctDegreeFactorizer U<a class="headerlink" href="#modulardistinctdegreefactorizer-u" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/moddfact.spad#L1">moddfact.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/moddfact.spad#L1">[edit on github]</a></p>
 <ul class="simple">
-<li><p>U: <a class="reference internal" href="UnivariatePolynomialCategory.html#l-univariate-polynomial-category"><span class="std std-ref">UnivariatePolynomialCategory</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a></p></li>
+<li><p>U: <a class="reference internal" href="UnivariatePolynomialCategory.html#l556e6976617269617465506f6c796e6f6d69616c43617465676f7279"><span class="std std-ref">UnivariatePolynomialCategory</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></p></li>
 </ul>
 <p>This package supports factorization and gcds of univariate polynomials over the integers modulo different primes. The inputs are given as polynomials over the integers with the prime passed explicitly as an extra argument.</p>
-<span class="target" id="l-modular-distinct-degree-factorizer-dd-fact"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">ddFact</span>: (U, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(factor: U, degree: <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">ddFact(f,</span> <span class="pre">p)</span></code> computes a distinct degree factorization of the polynomial <code class="docutils literal notranslate"><span class="pre">f</span></code> modulo the prime <code class="docutils literal notranslate"><span class="pre">p</span></code>, i.e. such that each factor is a product of irreducibles of the same degrees. The input polynomial <code class="docutils literal notranslate"><span class="pre">f</span></code> is assumed to be square-free modulo <code class="docutils literal notranslate"><span class="pre">p</span></code>.</p>
+<span class="target" id="l4d6f64756c617244697374696e6374446567726565466163746f72697a65722e646446616374"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">ddFact</span>: (U, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> Record(factor: U, degree: <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">ddFact(f,</span> <span class="pre">p)</span></code> computes a distinct degree factorization of the polynomial <code class="docutils literal notranslate"><span class="pre">f</span></code> modulo the prime <code class="docutils literal notranslate"><span class="pre">p</span></code>, i.e. such that each factor is a product of irreducibles of the same degrees. The input polynomial <code class="docutils literal notranslate"><span class="pre">f</span></code> is assumed to be square-free modulo <code class="docutils literal notranslate"><span class="pre">p</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-modular-distinct-degree-factorizer-gcd"></span><dl class="simple" id="index-2">
-<dt><span class="spadfun">gcd</span>: (U, U, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; U</dt><dd><p><code class="docutils literal notranslate"><span class="pre">gcd(f1,</span> <span class="pre">f2,</span> <span class="pre">p)</span></code> computes the <code class="docutils literal notranslate"><span class="pre">gcd</span></code> of the univariate polynomials <code class="docutils literal notranslate"><span class="pre">f1</span></code> and <code class="docutils literal notranslate"><span class="pre">f2</span></code> modulo the integer prime <code class="docutils literal notranslate"><span class="pre">p</span></code>.</p>
+<span class="target" id="l4d6f64756c617244697374696e6374446567726565466163746f72697a65722e676364"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">gcd</span>: (U, U, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; U</dt><dd><p><code class="docutils literal notranslate"><span class="pre">gcd(f1,</span> <span class="pre">f2,</span> <span class="pre">p)</span></code> computes the <code class="docutils literal notranslate"><span class="pre">gcd</span></code> of the univariate polynomials <code class="docutils literal notranslate"><span class="pre">f1</span></code> and <code class="docutils literal notranslate"><span class="pre">f2</span></code> modulo the integer prime <code class="docutils literal notranslate"><span class="pre">p</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-modular-distinct-degree-factorizer-separate-factors"></span><dl class="simple" id="index-3">
-<dt><span class="spadfun">separateFactors</span>: (<a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> Record(factor: U, degree: <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>), <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> U</dt><dd><p><code class="docutils literal notranslate"><span class="pre">separateFactors(ddl,</span> <span class="pre">p)</span></code> refines the distinct degree factorization produced by <a class="reference internal" href="#l-modular-distinct-degree-factorizer-dd-fact"><span class="std std-ref">ddFact</span></a> to give a complete list of factors.</p>
+<span class="target" id="l4d6f64756c617244697374696e6374446567726565466163746f72697a65722e7365706172617465466163746f7273"></span><dl class="simple" id="index-3">
+<dt><span class="spadfun">separateFactors</span>: (<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> Record(factor: U, degree: <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>), <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> U</dt><dd><p><code class="docutils literal notranslate"><span class="pre">separateFactors(ddl,</span> <span class="pre">p)</span></code> refines the distinct degree factorization produced by <a class="reference internal" href="#l4d6f64756c617244697374696e6374446567726565466163746f72697a65722e646446616374"><span class="std std-ref">ddFact</span></a> to give a complete list of factors.</p>
 </dd>
 </dl>
 </div>
@@ -111,7 +111,7 @@
         <li class="right" >
           <a href="ModularAlgebraicGcdTools4.html" title="ModularAlgebraicGcdTools4"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">ModularDistinctDegreeFactorizer U</a></li> 

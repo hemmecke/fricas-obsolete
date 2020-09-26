@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FiniteDivisorCategory(F, UP, UPUP, R) &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>FiniteDivisorCategory(F, UP, UPUP, R) &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="FiniteAlgebraicExtensionField.html" title="FiniteAlgebraicExtensionField F"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Categories.html" accesskey="U">Categories</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">FiniteDivisorCategory(F, UP, UPUP, R)</a></li> 
@@ -46,47 +46,59 @@
           <div class="body" role="main">
             
   <div class="section" id="finitedivisorcategory-f-up-upup-r">
-<span id="l-finite-divisor-category"></span><span id="index-0"></span><h1>FiniteDivisorCategory(F, UP, UPUP, R)<a class="headerlink" href="#finitedivisorcategory-f-up-upup-r" title="Permalink to this headline">¶</a></h1>
+<span id="l46696e69746544697669736f7243617465676f7279"></span><span id="index-0"></span><h1>FiniteDivisorCategory(F, UP, UPUP, R)<a class="headerlink" href="#finitedivisorcategory-f-up-upup-r" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/divisor.spad#L565">divisor.spad line 565</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/divisor.spad#L565">[edit on github]</a></p>
 <ul class="simple">
-<li><p>F: <a class="reference internal" href="Field.html#l-field"><span class="std std-ref">Field</span></a></p></li>
-<li><p>UP: <a class="reference internal" href="UnivariatePolynomialCategory.html#l-univariate-polynomial-category"><span class="std std-ref">UnivariatePolynomialCategory</span></a> F</p></li>
-<li><p>UPUP: <a class="reference internal" href="UnivariatePolynomialCategory.html#l-univariate-polynomial-category"><span class="std std-ref">UnivariatePolynomialCategory</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP</p></li>
-<li><p>R: <a class="reference internal" href="FunctionFieldCategory.html#l-function-field-category"><span class="std std-ref">FunctionFieldCategory</span></a>(F, UP, UPUP)</p></li>
+<li><p>F: <a class="reference internal" href="Field.html#l4669656c64"><span class="std std-ref">Field</span></a></p></li>
+<li><p>UP: <a class="reference internal" href="UnivariatePolynomialCategory.html#l556e6976617269617465506f6c796e6f6d69616c43617465676f7279"><span class="std std-ref">UnivariatePolynomialCategory</span></a> F</p></li>
+<li><p>UPUP: <a class="reference internal" href="UnivariatePolynomialCategory.html#l556e6976617269617465506f6c796e6f6d69616c43617465676f7279"><span class="std std-ref">UnivariatePolynomialCategory</span></a> <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> UP</p></li>
+<li><p>R: <a class="reference internal" href="FunctionFieldCategory.html#l46756e6374696f6e4669656c6443617465676f7279"><span class="std std-ref">FunctionFieldCategory</span></a>(F, UP, UPUP)</p></li>
 </ul>
 <p>This category describes finite rational divisors on a curve, that is finite formal sums SUM(<code class="docutils literal notranslate"><span class="pre">n</span></code> * <code class="docutils literal notranslate"><span class="pre">P</span></code>) where the <code class="docutils literal notranslate"><span class="pre">n</span></code><code class="docutils literal notranslate"><span class="pre">'s</span></code> are integers and the <code class="docutils literal notranslate"><span class="pre">P</span></code><code class="docutils literal notranslate"><span class="pre">'s</span></code> are finite rational points on the curve.</p>
-<dl class="simple">
-<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-0"><span class="std std-ref">0</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianGroup.html#id1"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianMonoid.html#id1"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="NonNegativeInteger.html#l-non-negative-integer"><span class="std std-ref">NonNegativeInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianSemiGroup.html#id1"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="PositiveInteger.html#l-positive-integer"><span class="std std-ref">PositiveInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l-abelian-semi-group"><span class="std std-ref">AbelianSemiGroup</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianSemiGroup.html#id2"><span class="std std-ref">+</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l-abelian-semi-group"><span class="std std-ref">AbelianSemiGroup</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianGroup.html#id2"><span class="std std-ref">-</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianGroup.html#id2"><span class="std std-ref">-</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
-</dd>
-<dt><a class="reference internal" href="BasicType.html#id1"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-</dd>
-<dt><a class="reference internal" href="BasicType.html#id2"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-</dd>
-<dt><a class="reference internal" href="CoercibleTo.html#l-coercible-to-coerce"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
+<dl class="simple" id="l46696e69746544697669736f7243617465676f72792e30">
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f69642e30"><span class="std std-ref">0</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-finite-divisor-category-decompose"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">decompose</span>: % -&gt; Record(id: <a class="reference internal" href="FractionalIdeal.html#l-fractional-ideal"><span class="std std-ref">FractionalIdeal</span></a>(UP, <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP, UPUP, R), principalPart: R)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">decompose(d)</span></code> returns <code class="docutils literal notranslate"><span class="pre">[id,</span> <span class="pre">f]</span></code> where <code class="docutils literal notranslate"><span class="pre">d</span> <span class="pre">=</span> <span class="pre">(id)</span> <span class="pre">+</span> <span class="pre">div(f)</span></code>.</p>
+<dl class="simple" id="l46696e69746544697669736f7243617465676f72792e2a">
+<dt><a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f75702e2a"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f69642e2a"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f75702e2a"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f7570"><span class="std std-ref">AbelianSemiGroup</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-finite-divisor-category-divisor"></span><dl class="simple" id="index-2">
+<dl class="simple" id="l46696e69746544697669736f7243617465676f72792e2b">
+<dt><a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f75702e2b"><span class="std std-ref">+</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f7570"><span class="std std-ref">AbelianSemiGroup</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l46696e69746544697669736f7243617465676f72792e2d">
+<dt><a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f75702e2d"><span class="std std-ref">-</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f75702e2d"><span class="std std-ref">-</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l46696e69746544697669736f7243617465676f72792e3d">
+<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l46696e69746544697669736f7243617465676f72792e7e3d">
+<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e7e3d"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l46696e69746544697669736f7243617465676f72792e636f65726365">
+<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f2e636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l46696e69746544697669736f7243617465676f72792e6465636f6d706f7365"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">decompose</span>: % -&gt; Record(id: <a class="reference internal" href="FractionalIdeal.html#l4672616374696f6e616c496465616c"><span class="std std-ref">FractionalIdeal</span></a>(UP, <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> UP, UPUP, R), principalPart: R)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">decompose(d)</span></code> returns <code class="docutils literal notranslate"><span class="pre">[id,</span> <span class="pre">f]</span></code> where <code class="docutils literal notranslate"><span class="pre">d</span> <span class="pre">=</span> <span class="pre">(id)</span> <span class="pre">+</span> <span class="pre">div(f)</span></code>.</p>
+</dd>
+</dl>
+<span class="target" id="l46696e69746544697669736f7243617465676f72792e64697669736f72"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">divisor</span>: (F, F) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">divisor(a,</span> <span class="pre">b)</span></code> makes the divisor <code class="docutils literal notranslate"><span class="pre">P:</span></code> <code class="docutils literal notranslate"><span class="pre">(x</span> <span class="pre">=</span> <span class="pre">a,</span> <span class="pre">y</span> <span class="pre">=</span> <span class="pre">b)</span></code>. Error: if <code class="docutils literal notranslate"><span class="pre">P</span></code> is singular.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-3">
-<dt><span class="spadfun">divisor</span>: (F, F, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">divisor(a,</span> <span class="pre">b,</span> <span class="pre">n)</span></code> makes the divisor <code class="docutils literal notranslate"><span class="pre">nP</span></code> where <code class="docutils literal notranslate"><span class="pre">P:</span></code> <code class="docutils literal notranslate"><span class="pre">(x</span> <span class="pre">=</span> <span class="pre">a,</span> <span class="pre">y</span> <span class="pre">=</span> <span class="pre">b)</span></code>. <code class="docutils literal notranslate"><span class="pre">P</span></code> is allowed to be singular if <code class="docutils literal notranslate"><span class="pre">n</span></code> is a multiple of the rank.</p>
+<dt><span class="spadfun">divisor</span>: (F, F, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">divisor(a,</span> <span class="pre">b,</span> <span class="pre">n)</span></code> makes the divisor <code class="docutils literal notranslate"><span class="pre">nP</span></code> where <code class="docutils literal notranslate"><span class="pre">P:</span></code> <code class="docutils literal notranslate"><span class="pre">(x</span> <span class="pre">=</span> <span class="pre">a,</span> <span class="pre">y</span> <span class="pre">=</span> <span class="pre">b)</span></code>. <code class="docutils literal notranslate"><span class="pre">P</span></code> is allowed to be singular if <code class="docutils literal notranslate"><span class="pre">n</span></code> is a multiple of the rank.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-4">
@@ -98,54 +110,68 @@
 </dd>
 </dl>
 <dl class="simple" id="index-6">
-<dt><span class="spadfun">divisor</span>: <a class="reference internal" href="FractionalIdeal.html#l-fractional-ideal"><span class="std std-ref">FractionalIdeal</span></a>(UP, <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP, UPUP, R) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">divisor(I)</span></code> makes a divisor <code class="docutils literal notranslate"><span class="pre">D</span></code> from an ideal <code class="docutils literal notranslate"><span class="pre">I</span></code>.</p>
+<dt><span class="spadfun">divisor</span>: <a class="reference internal" href="FractionalIdeal.html#l4672616374696f6e616c496465616c"><span class="std std-ref">FractionalIdeal</span></a>(UP, <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> UP, UPUP, R) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">divisor(I)</span></code> makes a divisor <code class="docutils literal notranslate"><span class="pre">D</span></code> from an ideal <code class="docutils literal notranslate"><span class="pre">I</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-7">
 <dt><span class="spadfun">divisor</span>: R -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">divisor(g)</span></code> returns the divisor of the function <code class="docutils literal notranslate"><span class="pre">g</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-finite-divisor-category-generator"></span><dl class="simple" id="index-8">
+<span class="target" id="l46696e69746544697669736f7243617465676f72792e67656e657261746f72"></span><dl class="simple" id="index-8">
 <dt><span class="spadfun">generator</span>: % -&gt; Union(R, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">generator(d)</span></code> returns <code class="docutils literal notranslate"><span class="pre">f</span></code> if <code class="docutils literal notranslate"><span class="pre">(f)</span> <span class="pre">=</span> <span class="pre">d</span></code>, “failed” if <code class="docutils literal notranslate"><span class="pre">d</span></code> is not principal. <code class="docutils literal notranslate"><span class="pre">d</span></code> is assumed to be of degree 0.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-9">
-<dt><span class="spadfun">generator</span>: (%, <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> UP) -&gt; Union(R, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">generator(d,</span> <span class="pre">k,</span> <span class="pre">lp)</span></code> returns <code class="docutils literal notranslate"><span class="pre">f</span></code> if <code class="docutils literal notranslate"><span class="pre">(f)</span> <span class="pre">=</span> <span class="pre">d</span></code>, “failed” if <code class="docutils literal notranslate"><span class="pre">d</span></code> is not principal. <code class="docutils literal notranslate"><span class="pre">k</span></code> is sum of orders of <code class="docutils literal notranslate"><span class="pre">d</span></code> at special places. Special places are places over infinity and over zeros of polynomials in <code class="docutils literal notranslate"><span class="pre">lp</span></code>. Elements of <code class="docutils literal notranslate"><span class="pre">lp</span></code> are assumed to be relatively prime.</p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l-single-integer"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-hash-update"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l-hash-state"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+<dt><span class="spadfun">generator</span>: (%, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> UP) -&gt; Union(R, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">generator(d,</span> <span class="pre">k,</span> <span class="pre">lp)</span></code> returns <code class="docutils literal notranslate"><span class="pre">f</span></code> if <code class="docutils literal notranslate"><span class="pre">(f)</span> <span class="pre">=</span> <span class="pre">d</span></code>, “failed” if <code class="docutils literal notranslate"><span class="pre">d</span></code> is not principal. <code class="docutils literal notranslate"><span class="pre">k</span></code> is sum of orders of <code class="docutils literal notranslate"><span class="pre">d</span></code> at special places. Special places are places over infinity and over zeros of polynomials in <code class="docutils literal notranslate"><span class="pre">lp</span></code>. Elements of <code class="docutils literal notranslate"><span class="pre">lp</span></code> are assumed to be relatively prime.</p>
 </dd>
 </dl>
-<span class="target" id="l-finite-divisor-category-ideal"></span><dl class="simple" id="index-10">
-<dt><span class="spadfun">ideal</span>: % -&gt; <a class="reference internal" href="FractionalIdeal.html#l-fractional-ideal"><span class="std std-ref">FractionalIdeal</span></a>(UP, <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP, UPUP, R)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">ideal(D)</span></code> returns the ideal corresponding to a divisor <code class="docutils literal notranslate"><span class="pre">D</span></code>.</p>
-</dd>
-<dt><a class="reference internal" href="SetCategory.html#l-set-category-latex"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l-string"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-opposite"><span class="std std-ref">opposite?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+<dl class="simple" id="l46696e69746544697669736f7243617465676f72792e68617368">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e68617368"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l53696e676c65496e7465676572"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-finite-divisor-category-principal"></span><dl class="simple" id="index-11">
-<dt><span class="spadfun">principal?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">principal?(D)</span></code> tests if the argument is the divisor of a function.</p>
+<dl class="simple" id="l46696e69746544697669736f7243617465676f72792e6861736855706461746521">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6861736855706461746521"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l-finite-divisor-category-reduce"></span><dl class="simple" id="index-12">
+<span class="target" id="l46696e69746544697669736f7243617465676f72792e696465616c"></span><dl class="simple" id="index-10">
+<dt><span class="spadfun">ideal</span>: % -&gt; <a class="reference internal" href="FractionalIdeal.html#l4672616374696f6e616c496465616c"><span class="std std-ref">FractionalIdeal</span></a>(UP, <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> UP, UPUP, R)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">ideal(D)</span></code> returns the ideal corresponding to a divisor <code class="docutils literal notranslate"><span class="pre">D</span></code>.</p>
+</dd>
+</dl>
+<dl class="simple" id="l46696e69746544697669736f7243617465676f72792e6c61746578">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6c61746578"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l46696e69746544697669736f7243617465676f72792e6f70706f736974653f">
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f69642e6f70706f736974653f"><span class="std std-ref">opposite?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+</dl>
+<span class="target" id="l46696e69746544697669736f7243617465676f72792e7072696e636970616c3f"></span><dl class="simple" id="index-11">
+<dt><span class="spadfun">principal?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">principal?(D)</span></code> tests if the argument is the divisor of a function.</p>
+</dd>
+</dl>
+<span class="target" id="l46696e69746544697669736f7243617465676f72792e726564756365"></span><dl class="simple" id="index-12">
 <dt><span class="spadfun">reduce</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">reduce(D)</span></code> converts <code class="docutils literal notranslate"><span class="pre">D</span></code> to some reduced form (the reduced forms can be differents in different implementations).</p>
 </dd>
-<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-sample"><span class="std std-ref">sample</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
-</dd>
-<dt><a class="reference internal" href="CancellationAbelianMonoid.html#l-cancellation-abelian-monoid-subtract-if-can"><span class="std std-ref">subtractIfCan</span></a>: (%, %) -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="CancellationAbelianMonoid.html#l-cancellation-abelian-monoid"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid-zero"><span class="std std-ref">zero?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l-boolean"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dl>
+<dl class="simple" id="l46696e69746544697669736f7243617465676f72792e73616d706c65">
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f69642e73616d706c65"><span class="std std-ref">sample</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
 </dd>
 </dl>
-<p><a class="reference internal" href="AbelianGroup.html#l-abelian-group"><span class="std std-ref">AbelianGroup</span></a></p>
-<p><a class="reference internal" href="AbelianMonoid.html#l-abelian-monoid"><span class="std std-ref">AbelianMonoid</span></a></p>
-<p><a class="reference internal" href="AbelianSemiGroup.html#l-abelian-semi-group"><span class="std std-ref">AbelianSemiGroup</span></a></p>
-<p><a class="reference internal" href="BasicType.html#l-basic-type"><span class="std std-ref">BasicType</span></a></p>
-<p><a class="reference internal" href="CancellationAbelianMonoid.html#l-cancellation-abelian-monoid"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
-<p><a class="reference internal" href="CoercibleTo.html#l-coercible-to"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l-output-form"><span class="std std-ref">OutputForm</span></a></p>
-<p><a class="reference internal" href="SetCategory.html#l-set-category"><span class="std std-ref">SetCategory</span></a></p>
+<dl class="simple" id="l46696e69746544697669736f7243617465676f72792e7375627472616374496643616e">
+<dt><a class="reference internal" href="CancellationAbelianMonoid.html#l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f69642e7375627472616374496643616e"><span class="std std-ref">subtractIfCan</span></a>: (%, %) -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="CancellationAbelianMonoid.html#l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
+</dd>
+</dl>
+<dl class="simple" id="l46696e69746544697669736f7243617465676f72792e7a65726f3f">
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f69642e7a65726f3f"><span class="std std-ref">zero?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+</dd>
+</dl>
+<p><a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p>
+<p><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+<p><a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f7570"><span class="std std-ref">AbelianSemiGroup</span></a></p>
+<p><a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+<p><a class="reference internal" href="CancellationAbelianMonoid.html#l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
+<p><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+<p><a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </div>
 
 
@@ -193,7 +219,7 @@
         <li class="right" >
           <a href="FiniteAlgebraicExtensionField.html" title="FiniteAlgebraicExtensionField F"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Categories.html" >Categories</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">FiniteDivisorCategory(F, UP, UPUP, R)</a></li> 

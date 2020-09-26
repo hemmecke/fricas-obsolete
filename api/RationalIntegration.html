@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RationalIntegration(F, UP) &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>RationalIntegration(F, UP) &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="RationalFunctionSum.html" title="RationalFunctionSum R"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">RationalIntegration(F, UP)</a></li> 
@@ -46,19 +46,19 @@
           <div class="body" role="main">
             
   <div class="section" id="rationalintegration-f-up">
-<span id="l-rational-integration"></span><span id="index-0"></span><h1>RationalIntegration(F, UP)<a class="headerlink" href="#rationalintegration-f-up" title="Permalink to this headline">¶</a></h1>
+<span id="l526174696f6e616c496e746567726174696f6e"></span><span id="index-0"></span><h1>RationalIntegration(F, UP)<a class="headerlink" href="#rationalintegration-f-up" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/intrf.spad#L554">intrf.spad line 554</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/intrf.spad#L554">[edit on github]</a></p>
 <ul class="simple">
-<li><p>F: Join(<a class="reference internal" href="Field.html#l-field"><span class="std std-ref">Field</span></a>, <a class="reference internal" href="CharacteristicZero.html#l-characteristic-zero"><span class="std std-ref">CharacteristicZero</span></a>, <a class="reference internal" href="RetractableTo.html#l-retractable-to"><span class="std std-ref">RetractableTo</span></a> <a class="reference internal" href="Integer.html#l-integer"><span class="std std-ref">Integer</span></a>)</p></li>
-<li><p>UP: <a class="reference internal" href="UnivariatePolynomialCategory.html#l-univariate-polynomial-category"><span class="std std-ref">UnivariatePolynomialCategory</span></a> F</p></li>
+<li><p>F: Join(<a class="reference internal" href="Field.html#l4669656c64"><span class="std std-ref">Field</span></a>, <a class="reference internal" href="CharacteristicZero.html#l43686172616374657269737469635a65726f"><span class="std std-ref">CharacteristicZero</span></a>, <a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f"><span class="std std-ref">RetractableTo</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>)</p></li>
+<li><p>UP: <a class="reference internal" href="UnivariatePolynomialCategory.html#l556e6976617269617465506f6c796e6f6d69616c43617465676f7279"><span class="std std-ref">UnivariatePolynomialCategory</span></a> F</p></li>
 </ul>
 <p>This package provides functions for the base case of the Risch algorithm.</p>
-<span class="target" id="l-rational-integration-infieldint"></span><dl class="simple" id="index-1">
-<dt><span class="spadfun">infieldint</span>: <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP -&gt; Union(<a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">infieldint(f)</span></code> returns <code class="docutils literal notranslate"><span class="pre">g</span></code> such that <code class="docutils literal notranslate"><span class="pre">g'</span> <span class="pre">=</span> <span class="pre">f</span></code> or “failed” if the integral of <code class="docutils literal notranslate"><span class="pre">f</span></code> is not a rational function.</p>
+<span class="target" id="l526174696f6e616c496e746567726174696f6e2e696e6669656c64696e74"></span><dl class="simple" id="index-1">
+<dt><span class="spadfun">infieldint</span>: <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> UP -&gt; Union(<a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> UP, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">infieldint(f)</span></code> returns <code class="docutils literal notranslate"><span class="pre">g</span></code> such that <code class="docutils literal notranslate"><span class="pre">g'</span> <span class="pre">=</span> <span class="pre">f</span></code> or “failed” if the integral of <code class="docutils literal notranslate"><span class="pre">f</span></code> is not a rational function.</p>
 </dd>
 </dl>
-<span class="target" id="l-rational-integration-integrate"></span><dl class="simple" id="index-2">
-<dt><span class="spadfun">integrate</span>: <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP -&gt; <a class="reference internal" href="IntegrationResult.html#l-integration-result"><span class="std std-ref">IntegrationResult</span></a> <a class="reference internal" href="Fraction.html#l-fraction"><span class="std std-ref">Fraction</span></a> UP</dt><dd><p><code class="docutils literal notranslate"><span class="pre">integrate(f)</span></code> returns <code class="docutils literal notranslate"><span class="pre">g</span></code> such that <code class="docutils literal notranslate"><span class="pre">g'</span> <span class="pre">=</span> <span class="pre">f</span></code>.</p>
+<span class="target" id="l526174696f6e616c496e746567726174696f6e2e696e74656772617465"></span><dl class="simple" id="index-2">
+<dt><span class="spadfun">integrate</span>: <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> UP -&gt; <a class="reference internal" href="IntegrationResult.html#l496e746567726174696f6e526573756c74"><span class="std std-ref">IntegrationResult</span></a> <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> UP</dt><dd><p><code class="docutils literal notranslate"><span class="pre">integrate(f)</span></code> returns <code class="docutils literal notranslate"><span class="pre">g</span></code> such that <code class="docutils literal notranslate"><span class="pre">g'</span> <span class="pre">=</span> <span class="pre">f</span></code>.</p>
 </dd>
 </dl>
 </div>
@@ -108,7 +108,7 @@
         <li class="right" >
           <a href="RationalFunctionSum.html" title="RationalFunctionSum R"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">RationalIntegration(F, UP)</a></li> 

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TriangularMatrixOperations(R, Row, Col, M) &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>TriangularMatrixOperations(R, Row, Col, M) &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="TransSolvePackageService.html" title="TransSolvePackageService R"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">TriangularMatrixOperations(R, Row, Col, M)</a></li> 
@@ -46,20 +46,20 @@
           <div class="body" role="main">
             
   <div class="section" id="triangularmatrixoperations-r-row-col-m">
-<span id="l-triangular-matrix-operations"></span><span id="index-0"></span><h1>TriangularMatrixOperations(R, Row, Col, M)<a class="headerlink" href="#triangularmatrixoperations-r-row-col-m" title="Permalink to this headline">¶</a></h1>
+<span id="l547269616e67756c61724d61747269784f7065726174696f6e73"></span><span id="index-0"></span><h1>TriangularMatrixOperations(R, Row, Col, M)<a class="headerlink" href="#triangularmatrixoperations-r-row-col-m" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/intclos.spad#L1">intclos.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/intclos.spad#L1">[edit on github]</a></p>
 <ul class="simple">
-<li><p>R: <a class="reference internal" href="IntegralDomain.html#l-integral-domain"><span class="std std-ref">IntegralDomain</span></a></p></li>
-<li><p>Row: <a class="reference internal" href="FiniteLinearAggregate.html#l-finite-linear-aggregate"><span class="std std-ref">FiniteLinearAggregate</span></a> R</p></li>
-<li><p>Col: <a class="reference internal" href="FiniteLinearAggregate.html#l-finite-linear-aggregate"><span class="std std-ref">FiniteLinearAggregate</span></a> R</p></li>
-<li><p>M: <a class="reference internal" href="MatrixCategory.html#l-matrix-category"><span class="std std-ref">MatrixCategory</span></a>(R, Row, Col)</p></li>
+<li><p>R: <a class="reference internal" href="IntegralDomain.html#l496e74656772616c446f6d61696e"><span class="std std-ref">IntegralDomain</span></a></p></li>
+<li><p>Row: <a class="reference internal" href="FiniteLinearAggregate.html#l46696e6974654c696e656172416767726567617465"><span class="std std-ref">FiniteLinearAggregate</span></a> R</p></li>
+<li><p>Col: <a class="reference internal" href="FiniteLinearAggregate.html#l46696e6974654c696e656172416767726567617465"><span class="std std-ref">FiniteLinearAggregate</span></a> R</p></li>
+<li><p>M: <a class="reference internal" href="MatrixCategory.html#l4d617472697843617465676f7279"><span class="std std-ref">MatrixCategory</span></a>(R, Row, Col)</p></li>
 </ul>
 <p>This package provides functions that compute “fraction-free” inverses of upper and lower triangular matrices over a integral domain. By “fraction-free inverses” we mean the following: given a matrix <code class="docutils literal notranslate"><span class="pre">B</span></code> with entries in <code class="docutils literal notranslate"><span class="pre">R</span></code> and an element <code class="docutils literal notranslate"><span class="pre">d</span></code> of <code class="docutils literal notranslate"><span class="pre">R</span></code> such that <code class="docutils literal notranslate"><span class="pre">d</span></code> * inv(<code class="docutils literal notranslate"><span class="pre">B</span></code>) also has entries in <code class="docutils literal notranslate"><span class="pre">R</span></code>, we return <code class="docutils literal notranslate"><span class="pre">d</span></code> * inv(<code class="docutils literal notranslate"><span class="pre">B</span></code>). Thus, it is not necessary to pass to the quotient field in any of our computations.</p>
-<span class="target" id="l-triangular-matrix-operations-low-tri-bdd-denom-inv"></span><dl class="simple" id="index-1">
+<span class="target" id="l547269616e67756c61724d61747269784f7065726174696f6e732e4c6f7754726942646444656e6f6d496e76"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">LowTriBddDenomInv</span>: (M, R) -&gt; M</dt><dd><p><code class="docutils literal notranslate"><span class="pre">LowTriBddDenomInv(B,</span> <span class="pre">d)</span></code> returns <code class="docutils literal notranslate"><span class="pre">M</span></code>, where <code class="docutils literal notranslate"><span class="pre">B</span></code> is a non-singular lower triangular matrix and <code class="docutils literal notranslate"><span class="pre">d</span></code> is an element of <code class="docutils literal notranslate"><span class="pre">R</span></code> such that <code class="docutils literal notranslate"><span class="pre">M</span> <span class="pre">=</span> <span class="pre">d</span> <span class="pre">*</span> <span class="pre">inv(B)</span></code> has entries in <code class="docutils literal notranslate"><span class="pre">R</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l-triangular-matrix-operations-up-tri-bdd-denom-inv"></span><dl class="simple" id="index-2">
+<span class="target" id="l547269616e67756c61724d61747269784f7065726174696f6e732e557054726942646444656e6f6d496e76"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">UpTriBddDenomInv</span>: (M, R) -&gt; M</dt><dd><p><code class="docutils literal notranslate"><span class="pre">UpTriBddDenomInv(B,</span> <span class="pre">d)</span></code> returns <code class="docutils literal notranslate"><span class="pre">M</span></code>, where <code class="docutils literal notranslate"><span class="pre">B</span></code> is a non-singular upper triangular matrix and <code class="docutils literal notranslate"><span class="pre">d</span></code> is an element of <code class="docutils literal notranslate"><span class="pre">R</span></code> such that <code class="docutils literal notranslate"><span class="pre">M</span> <span class="pre">=</span> <span class="pre">d</span> <span class="pre">*</span> <span class="pre">inv(B)</span></code> has entries in <code class="docutils literal notranslate"><span class="pre">R</span></code>.</p>
 </dd>
 </dl>
@@ -110,7 +110,7 @@
         <li class="right" >
           <a href="TransSolvePackageService.html" title="TransSolvePackageService R"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">TriangularMatrixOperations(R, Row, Col, M)</a></li> 

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReductionOfOrder(F, L) &#8212; FriCAS aa91296d1b29f0b6c4319724491983731d046f26</title>
+    <title>ReductionOfOrder(F, L) &#8212; FriCAS</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="ReduceLODE.html" title="ReduceLODE(F, L, UP, A, LO)"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" accesskey="U">Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">ReductionOfOrder(F, L)</a></li> 
@@ -46,19 +46,19 @@
           <div class="body" role="main">
             
   <div class="section" id="reductionoforder-f-l">
-<span id="l-reduction-of-order"></span><span id="index-0"></span><h1>ReductionOfOrder(F, L)<a class="headerlink" href="#reductionoforder-f-l" title="Permalink to this headline">¶</a></h1>
+<span id="l526564756374696f6e4f664f72646572"></span><span id="index-0"></span><h1>ReductionOfOrder(F, L)<a class="headerlink" href="#reductionoforder-f-l" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/odeef.spad#L1">odeef.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/odeef.spad#L1">[edit on github]</a></p>
 <ul class="simple">
-<li><p>F: <a class="reference internal" href="Field.html#l-field"><span class="std std-ref">Field</span></a></p></li>
-<li><p>L: <a class="reference internal" href="LinearOrdinaryDifferentialOperatorCategory.html#l-linear-ordinary-differential-operator-category"><span class="std std-ref">LinearOrdinaryDifferentialOperatorCategory</span></a> F</p></li>
+<li><p>F: <a class="reference internal" href="Field.html#l4669656c64"><span class="std std-ref">Field</span></a></p></li>
+<li><p>L: <a class="reference internal" href="LinearOrdinaryDifferentialOperatorCategory.html#l4c696e6561724f7264696e617279446966666572656e7469616c4f70657261746f7243617465676f7279"><span class="std std-ref">LinearOrdinaryDifferentialOperatorCategory</span></a> F</p></li>
 </ul>
-<p><a class="reference internal" href="#l-reduction-of-order"><span class="std std-ref">ReductionOfOrder</span></a> provides functions for reducing the order of linear ordinary differential equations once some solutions are known.</p>
-<span class="target" id="l-reduction-of-order-reduce-order"></span><dl class="simple" id="index-1">
+<p><a class="reference internal" href="#l526564756374696f6e4f664f72646572"><span class="std std-ref">ReductionOfOrder</span></a> provides functions for reducing the order of linear ordinary differential equations once some solutions are known.</p>
+<span class="target" id="l526564756374696f6e4f664f726465722e5265647563654f72646572"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">ReduceOrder</span>: (L, F) -&gt; L</dt><dd><p><code class="docutils literal notranslate"><span class="pre">ReduceOrder(op,</span> <span class="pre">s)</span></code> returns <code class="docutils literal notranslate"><span class="pre">op1</span></code> such that for any solution <code class="docutils literal notranslate"><span class="pre">z</span></code> of <code class="docutils literal notranslate"><span class="pre">op1</span> <span class="pre">z</span> <span class="pre">=</span> <span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">s</span> <span class="pre">\int</span> <span class="pre">z</span></code> is a solution of <code class="docutils literal notranslate"><span class="pre">op</span> <span class="pre">y</span> <span class="pre">=</span> <span class="pre">0</span></code>. <code class="docutils literal notranslate"><span class="pre">s</span></code> must satisfy <code class="docutils literal notranslate"><span class="pre">op</span> <span class="pre">s</span> <span class="pre">=</span> <span class="pre">0</span></code>.</p>
 </dd>
 </dl>
 <dl class="simple" id="index-2">
-<dt><span class="spadfun">ReduceOrder</span>: (L, <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> F) -&gt; Record(eq: L, op: <a class="reference internal" href="List.html#l-list"><span class="std std-ref">List</span></a> F)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">ReduceOrder(op,</span> <span class="pre">[f1,</span> <span class="pre">...,</span> <span class="pre">fk])</span></code> returns <code class="docutils literal notranslate"><span class="pre">[op1,</span> <span class="pre">[g1,</span> <span class="pre">...,</span> <span class="pre">gk]]</span></code> such that for any solution <code class="docutils literal notranslate"><span class="pre">z</span></code> of <code class="docutils literal notranslate"><span class="pre">op1</span> <span class="pre">z</span> <span class="pre">=</span> <span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">gk</span> <span class="pre">\int(g_{k-1}</span> <span class="pre">\int(...</span> <span class="pre">\int(g1</span> <span class="pre">\int</span> <span class="pre">z)...))</span></code> is a solution of <code class="docutils literal notranslate"><span class="pre">op</span> <span class="pre">y</span> <span class="pre">=</span> <span class="pre">0</span></code>. Each <code class="docutils literal notranslate"><span class="pre">fi</span></code> must satisfy <code class="docutils literal notranslate"><span class="pre">op</span> <span class="pre">fi</span> <span class="pre">=</span> <span class="pre">0</span></code>.</p>
+<dt><span class="spadfun">ReduceOrder</span>: (L, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> F) -&gt; Record(eq: L, op: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> F)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">ReduceOrder(op,</span> <span class="pre">[f1,</span> <span class="pre">...,</span> <span class="pre">fk])</span></code> returns <code class="docutils literal notranslate"><span class="pre">[op1,</span> <span class="pre">[g1,</span> <span class="pre">...,</span> <span class="pre">gk]]</span></code> such that for any solution <code class="docutils literal notranslate"><span class="pre">z</span></code> of <code class="docutils literal notranslate"><span class="pre">op1</span> <span class="pre">z</span> <span class="pre">=</span> <span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">gk</span> <span class="pre">\int(g_{k-1}</span> <span class="pre">\int(...</span> <span class="pre">\int(g1</span> <span class="pre">\int</span> <span class="pre">z)...))</span></code> is a solution of <code class="docutils literal notranslate"><span class="pre">op</span> <span class="pre">y</span> <span class="pre">=</span> <span class="pre">0</span></code>. Each <code class="docutils literal notranslate"><span class="pre">fi</span></code> must satisfy <code class="docutils literal notranslate"><span class="pre">op</span> <span class="pre">fi</span> <span class="pre">=</span> <span class="pre">0</span></code>.</p>
 </dd>
 </dl>
 </div>
@@ -108,7 +108,7 @@
         <li class="right" >
           <a href="ReduceLODE.html" title="ReduceLODE(F, L, UP, A, LO)"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS aa91296d1b29f0b6c4319724491983731d046f26</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">FriCAS</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >FriCAS API</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="Packages.html" >Packages</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">ReductionOfOrder(F, L)</a></li> 
