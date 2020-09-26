@@ -47,28 +47,28 @@
             
   <div class="section" id="threespacecategory-r">
 <span id="l5468726565537061636543617465676f7279"></span><span id="index-0"></span><h1>ThreeSpaceCategory R<a class="headerlink" href="#threespacecategory-r" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/space.spad#L1">space.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/space.spad#L1">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/space.spad#L1">space.spad line 1</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/space.spad#L1">[edit on github]</a></p>
 <ul class="simple">
 <li><p>R: <a class="reference internal" href="Ring.html#l52696e67"><span class="std std-ref">Ring</span></a></p></li>
 </ul>
 <p>The category ThreeSpaceCategory is used for creating three dimensional objects using functions for defining points, curves, polygons, constructs and the subspaces containing them.</p>
-<dl class="simple" id="l5468726565537061636543617465676f72792e3d">
-<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+<dl class="simple" id="l5468726565537061636543617465676f7279-3d">
+<dt><a class="reference internal" href="BasicType.html#l426173696354797065-3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l5468726565537061636543617465676f72792e7e3d">
-<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e7e3d"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+<dl class="simple" id="l5468726565537061636543617465676f7279-7e3d">
+<dt><a class="reference internal" href="BasicType.html#l426173696354797065-7e3d"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l5468726565537061636543617465676f72792e636865636b"></span><dl class="simple" id="index-1">
+<span class="target" id="l5468726565537061636543617465676f7279-636865636b"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">check</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">check(s)</span></code> returns lllpt, list of lists of lists of point information about the <a class="reference internal" href="ThreeSpace.html#l54687265655370616365"><span class="std std-ref">ThreeSpace</span></a> <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l5468726565537061636543617465676f72792e636c6f73656443757276653f"></span><dl class="simple" id="index-2">
+<span class="target" id="l5468726565537061636543617465676f7279-636c6f73656443757276653f"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">closedCurve?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">closedCurve?(s)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the <a class="reference internal" href="ThreeSpace.html#l54687265655370616365"><span class="std std-ref">ThreeSpace</span></a> <code class="docutils literal notranslate"><span class="pre">s</span></code> contains a single closed curve component, i.e. the first element of the curve is also the last element, or <code class="docutils literal notranslate"><span class="pre">false</span></code> otherwise.</p>
 </dd>
 </dl>
-<span class="target" id="l5468726565537061636543617465676f72792e636c6f7365644375727665"></span><dl class="simple" id="index-3">
+<span class="target" id="l5468726565537061636543617465676f7279-636c6f7365644375727665"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">closedCurve</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Point.html#l506f696e74"><span class="std std-ref">Point</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">closedCurve(s)</span></code> checks to see if the <a class="reference internal" href="ThreeSpace.html#l54687265655370616365"><span class="std std-ref">ThreeSpace</span></a>, <code class="docutils literal notranslate"><span class="pre">s</span></code>, is composed of a single closed curve component defined by a list of points in which the first point is also the last point, all of which are from the domain <code class="docutils literal notranslate"><span class="pre">PointDomain(m,</span> <span class="pre">R)</span></code> and if so, returns the list of points. An error is signaled otherwise.</p>
 </dd>
 </dl>
@@ -84,27 +84,27 @@
 <dt><span class="spadfun">closedCurve</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Point.html#l506f696e74"><span class="std std-ref">Point</span></a> R -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">closedCurve(lp)</span></code> sets a list of points defined by the first element of <code class="docutils literal notranslate"><span class="pre">lp</span></code> through the last element of <code class="docutils literal notranslate"><span class="pre">lp</span></code> and back to the first elelment again and returns a <a class="reference internal" href="ThreeSpace.html#l54687265655370616365"><span class="std std-ref">ThreeSpace</span></a> whose component is the closed curve defined by <code class="docutils literal notranslate"><span class="pre">lp</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l5468726565537061636543617465676f72792e636f65726365"></span><dl class="simple" id="index-7">
+<span class="target" id="l5468726565537061636543617465676f7279-636f65726365"></span><dl class="simple" id="index-7">
 <dt><span class="spadfun">coerce</span>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(s)</span></code> returns the <a class="reference internal" href="ThreeSpace.html#l54687265655370616365"><span class="std std-ref">ThreeSpace</span></a> <code class="docutils literal notranslate"><span class="pre">s</span></code> to Output format.</p>
 </dd>
 </dl>
-<span class="target" id="l5468726565537061636543617465676f72792e636f6d706f6e656e7473"></span><dl class="simple" id="index-8">
+<span class="target" id="l5468726565537061636543617465676f7279-636f6d706f6e656e7473"></span><dl class="simple" id="index-8">
 <dt><span class="spadfun">components</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">components(s)</span></code> takes the <a class="reference internal" href="ThreeSpace.html#l54687265655370616365"><span class="std std-ref">ThreeSpace</span></a> <code class="docutils literal notranslate"><span class="pre">s</span></code>, and creates a list containing a unique <a class="reference internal" href="ThreeSpace.html#l54687265655370616365"><span class="std std-ref">ThreeSpace</span></a> for each single component of <code class="docutils literal notranslate"><span class="pre">s</span></code>. If <code class="docutils literal notranslate"><span class="pre">s</span></code> has no components defined, the list returned is empty.</p>
 </dd>
 </dl>
-<span class="target" id="l5468726565537061636543617465676f72792e636f6d706f73697465"></span><dl class="simple" id="index-9">
+<span class="target" id="l5468726565537061636543617465676f7279-636f6d706f73697465"></span><dl class="simple" id="index-9">
 <dt><span class="spadfun">composite</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">composite([s1,</span> <span class="pre">s2,</span> <span class="pre">...,</span> <span class="pre">sn])</span></code> will create a new <a class="reference internal" href="ThreeSpace.html#l54687265655370616365"><span class="std std-ref">ThreeSpace</span></a> that is a union of all the components from each <a class="reference internal" href="ThreeSpace.html#l54687265655370616365"><span class="std std-ref">ThreeSpace</span></a> in the parameter list, grouped as a composite.</p>
 </dd>
 </dl>
-<span class="target" id="l5468726565537061636543617465676f72792e636f6d706f7369746573"></span><dl class="simple" id="index-10">
+<span class="target" id="l5468726565537061636543617465676f7279-636f6d706f7369746573"></span><dl class="simple" id="index-10">
 <dt><span class="spadfun">composites</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">composites(s)</span></code> takes the <a class="reference internal" href="ThreeSpace.html#l54687265655370616365"><span class="std std-ref">ThreeSpace</span></a> <code class="docutils literal notranslate"><span class="pre">s</span></code>, and creates a list containing a unique <a class="reference internal" href="ThreeSpace.html#l54687265655370616365"><span class="std std-ref">ThreeSpace</span></a> for each single composite of <code class="docutils literal notranslate"><span class="pre">s</span></code>. If <code class="docutils literal notranslate"><span class="pre">s</span></code> has no composites defined (composites need to be explicitly created), the list returned is empty. Note that not all the components need to be part of a composite.</p>
 </dd>
 </dl>
-<span class="target" id="l5468726565537061636543617465676f72792e636f7079"></span><dl class="simple" id="index-11">
+<span class="target" id="l5468726565537061636543617465676f7279-636f7079"></span><dl class="simple" id="index-11">
 <dt><span class="spadfun">copy</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">copy(s)</span></code> returns a new <a class="reference internal" href="ThreeSpace.html#l54687265655370616365"><span class="std std-ref">ThreeSpace</span></a> that is an exact copy of <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l5468726565537061636543617465676f72792e637265617465335370616365"></span><dl class="simple" id="index-12">
+<span class="target" id="l5468726565537061636543617465676f7279-637265617465335370616365"></span><dl class="simple" id="index-12">
 <dt><span class="spadfun">create3Space</span>: () -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">create3Space()</span></code> creates a <a class="reference internal" href="ThreeSpace.html#l54687265655370616365"><span class="std std-ref">ThreeSpace</span></a> object capable of holding point, curve, mesh components and any combination.</p>
 </dd>
 </dl>
@@ -112,11 +112,11 @@
 <dt><span class="spadfun">create3Space</span>: <a class="reference internal" href="SubSpace.html#l5375625370616365"><span class="std std-ref">SubSpace</span></a>(3, R) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">create3Space(s)</span></code> creates a <a class="reference internal" href="ThreeSpace.html#l54687265655370616365"><span class="std std-ref">ThreeSpace</span></a> object containing objects pre-defined within some <a class="reference internal" href="SubSpace.html#l5375625370616365"><span class="std std-ref">SubSpace</span></a> <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l5468726565537061636543617465676f72792e63757276653f"></span><dl class="simple" id="index-14">
+<span class="target" id="l5468726565537061636543617465676f7279-63757276653f"></span><dl class="simple" id="index-14">
 <dt><span class="spadfun">curve?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">curve?(s)</span></code> queries whether the <a class="reference internal" href="ThreeSpace.html#l54687265655370616365"><span class="std std-ref">ThreeSpace</span></a>, <code class="docutils literal notranslate"><span class="pre">s</span></code>, is a curve, i.e. has one component, a list of list of points, and returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if it is, or <code class="docutils literal notranslate"><span class="pre">false</span></code> otherwise.</p>
 </dd>
 </dl>
-<span class="target" id="l5468726565537061636543617465676f72792e6375727665"></span><dl class="simple" id="index-15">
+<span class="target" id="l5468726565537061636543617465676f7279-6375727665"></span><dl class="simple" id="index-15">
 <dt><span class="spadfun">curve</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Point.html#l506f696e74"><span class="std std-ref">Point</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">curve(s)</span></code> checks to see if the <a class="reference internal" href="ThreeSpace.html#l54687265655370616365"><span class="std std-ref">ThreeSpace</span></a>, <code class="docutils literal notranslate"><span class="pre">s</span></code>, is composed of a single curve defined by a list of points and if so, returns the curve, i.e. list of points. An error is signaled otherwise.</p>
 </dd>
 </dl>
@@ -132,43 +132,43 @@
 <dt><span class="spadfun">curve</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Point.html#l506f696e74"><span class="std std-ref">Point</span></a> R -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">curve([p0,</span> <span class="pre">p1,</span> <span class="pre">p2,</span> <span class="pre">...,</span> <span class="pre">pn])</span></code> creates a space curve defined by the list of points <code class="docutils literal notranslate"><span class="pre">p0</span></code> through <code class="docutils literal notranslate"><span class="pre">pn</span></code>, and returns the <a class="reference internal" href="ThreeSpace.html#l54687265655370616365"><span class="std std-ref">ThreeSpace</span></a> whose component is the curve.</p>
 </dd>
 </dl>
-<span class="target" id="l5468726565537061636543617465676f72792e656e746572506f696e7444617461"></span><dl class="simple" id="index-19">
+<span class="target" id="l5468726565537061636543617465676f7279-656e746572506f696e7444617461"></span><dl class="simple" id="index-19">
 <dt><span class="spadfun">enterPointData</span>: (%, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Point.html#l506f696e74"><span class="std std-ref">Point</span></a> R) -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">enterPointData(s,</span> <span class="pre">[p0,</span> <span class="pre">p1,</span> <span class="pre">...,</span> <span class="pre">pn])</span></code> adds a list of points from <code class="docutils literal notranslate"><span class="pre">p0</span></code> through <code class="docutils literal notranslate"><span class="pre">pn</span></code> to the <a class="reference internal" href="ThreeSpace.html#l54687265655370616365"><span class="std std-ref">ThreeSpace</span></a>, <code class="docutils literal notranslate"><span class="pre">s</span></code>, and returns the index, to the starting point of the list.</p>
 </dd>
 </dl>
-<dl class="simple" id="l5468726565537061636543617465676f72792e68617368">
-<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e68617368"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l53696e676c65496e7465676572"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+<dl class="simple" id="l5468726565537061636543617465676f7279-68617368">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f7279-68617368"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l53696e676c65496e7465676572"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l5468726565537061636543617465676f72792e6861736855706461746521">
-<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6861736855706461746521"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+<dl class="simple" id="l5468726565537061636543617465676f7279-6861736855706461746521">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f7279-6861736855706461746521"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l5468726565537061636543617465676f72792e6c61746578">
-<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6c61746578"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+<dl class="simple" id="l5468726565537061636543617465676f7279-6c61746578">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f7279-6c61746578"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l5468726565537061636543617465676f72792e6c6c6c6970"></span><dl class="simple" id="index-20">
+<span class="target" id="l5468726565537061636543617465676f7279-6c6c6c6970"></span><dl class="simple" id="index-20">
 <dt><span class="spadfun">lllip</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">lllip(s)</span></code> checks to see if the <a class="reference internal" href="ThreeSpace.html#l54687265655370616365"><span class="std std-ref">ThreeSpace</span></a>, <code class="docutils literal notranslate"><span class="pre">s</span></code>, is composed of a list of components, which are lists of curves, which are lists of indices to points, and if so, returns the list of lists of lists; An error is signaled otherwise.</p>
 </dd>
 </dl>
-<span class="target" id="l5468726565537061636543617465676f72792e6c6c6c70"></span><dl class="simple" id="index-21">
+<span class="target" id="l5468726565537061636543617465676f7279-6c6c6c70"></span><dl class="simple" id="index-21">
 <dt><span class="spadfun">lllp</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Point.html#l506f696e74"><span class="std std-ref">Point</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">lllp(s)</span></code> checks to see if the <a class="reference internal" href="ThreeSpace.html#l54687265655370616365"><span class="std std-ref">ThreeSpace</span></a>, <code class="docutils literal notranslate"><span class="pre">s</span></code>, is composed of a list of components, which are lists of curves, which are lists of points, and if so, returns the list of lists of lists; An error is signaled otherwise.</p>
 </dd>
 </dl>
-<span class="target" id="l5468726565537061636543617465676f72792e6c6c70726f70"></span><dl class="simple" id="index-22">
+<span class="target" id="l5468726565537061636543617465676f7279-6c6c70726f70"></span><dl class="simple" id="index-22">
 <dt><span class="spadfun">llprop</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="SubSpaceComponentProperty.html#l5375625370616365436f6d706f6e656e7450726f7065727479"><span class="std std-ref">SubSpaceComponentProperty</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">llprop(s)</span></code> checks to see if the <a class="reference internal" href="ThreeSpace.html#l54687265655370616365"><span class="std std-ref">ThreeSpace</span></a>, <code class="docutils literal notranslate"><span class="pre">s</span></code>, is composed of a list of curves which are lists of the subspace component properties of the curves, and if so, returns the list of lists; An error is signaled otherwise.</p>
 </dd>
 </dl>
-<span class="target" id="l5468726565537061636543617465676f72792e6c70"></span><dl class="simple" id="index-23">
+<span class="target" id="l5468726565537061636543617465676f7279-6c70"></span><dl class="simple" id="index-23">
 <dt><span class="spadfun">lp</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Point.html#l506f696e74"><span class="std std-ref">Point</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">lp(s)</span></code> returns the list of points component which the <a class="reference internal" href="ThreeSpace.html#l54687265655370616365"><span class="std std-ref">ThreeSpace</span></a>, <code class="docutils literal notranslate"><span class="pre">s</span></code>, contains; these points are used by reference, i.e. the component holds indices referring to the points rather than the points themselves. This allows for sharing of the points.</p>
 </dd>
 </dl>
-<span class="target" id="l5468726565537061636543617465676f72792e6c70726f70"></span><dl class="simple" id="index-24">
+<span class="target" id="l5468726565537061636543617465676f7279-6c70726f70"></span><dl class="simple" id="index-24">
 <dt><span class="spadfun">lprop</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="SubSpaceComponentProperty.html#l5375625370616365436f6d706f6e656e7450726f7065727479"><span class="std std-ref">SubSpaceComponentProperty</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">lprop(s)</span></code> checks to see if the <a class="reference internal" href="ThreeSpace.html#l54687265655370616365"><span class="std std-ref">ThreeSpace</span></a>, <code class="docutils literal notranslate"><span class="pre">s</span></code>, is composed of a list of subspace component properties, and if so, returns the list; An error is signaled otherwise.</p>
 </dd>
 </dl>
-<span class="target" id="l5468726565537061636543617465676f72792e6d65726765"></span><dl class="simple" id="index-25">
+<span class="target" id="l5468726565537061636543617465676f7279-6d65726765"></span><dl class="simple" id="index-25">
 <dt><span class="spadfun">merge</span>: (%, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">merge(s1,</span> <span class="pre">s2)</span></code> will create a new <a class="reference internal" href="ThreeSpace.html#l54687265655370616365"><span class="std std-ref">ThreeSpace</span></a> that has the components of <code class="docutils literal notranslate"><span class="pre">s1</span></code> and <code class="docutils literal notranslate"><span class="pre">s2</span></code>; Groupings of components into composites are maintained.</p>
 </dd>
 </dl>
@@ -176,11 +176,11 @@
 <dt><span class="spadfun">merge</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">merge([s1,</span> <span class="pre">s2,</span> <span class="pre">...,</span> <span class="pre">sn])</span></code> will create a new <a class="reference internal" href="ThreeSpace.html#l54687265655370616365"><span class="std std-ref">ThreeSpace</span></a> that has the components of all the ones in the list; Groupings of components into composites are maintained.</p>
 </dd>
 </dl>
-<span class="target" id="l5468726565537061636543617465676f72792e6d6573683f"></span><dl class="simple" id="index-27">
+<span class="target" id="l5468726565537061636543617465676f7279-6d6573683f"></span><dl class="simple" id="index-27">
 <dt><span class="spadfun">mesh?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">mesh?(s)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the <a class="reference internal" href="ThreeSpace.html#l54687265655370616365"><span class="std std-ref">ThreeSpace</span></a> <code class="docutils literal notranslate"><span class="pre">s</span></code> is composed of one component, a mesh comprising a list of curves which are lists of points, or returns <code class="docutils literal notranslate"><span class="pre">false</span></code> if otherwise</p>
 </dd>
 </dl>
-<span class="target" id="l5468726565537061636543617465676f72792e6d657368"></span><dl class="simple" id="index-28">
+<span class="target" id="l5468726565537061636543617465676f7279-6d657368"></span><dl class="simple" id="index-28">
 <dt><span class="spadfun">mesh</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Point.html#l506f696e74"><span class="std std-ref">Point</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">mesh(s)</span></code> checks to see if the <a class="reference internal" href="ThreeSpace.html#l54687265655370616365"><span class="std std-ref">ThreeSpace</span></a>, <code class="docutils literal notranslate"><span class="pre">s</span></code>, is composed of a single surface component defined by a list curves which contain lists of points, and if so, returns the list of lists of points; An error is signaled otherwise.</p>
 </dd>
 </dl>
@@ -208,27 +208,27 @@
 <dt><span class="spadfun">mesh</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Point.html#l506f696e74"><span class="std std-ref">Point</span></a> R -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">mesh([[p0],</span> <span class="pre">[p1],</span> <span class="pre">...,</span> <span class="pre">[pn]])</span></code> creates a surface defined by a list of curves which are lists, <code class="docutils literal notranslate"><span class="pre">p0</span></code> through <code class="docutils literal notranslate"><span class="pre">pn</span></code>, of points, and returns a <a class="reference internal" href="ThreeSpace.html#l54687265655370616365"><span class="std std-ref">ThreeSpace</span></a> whose component is the surface.</p>
 </dd>
 </dl>
-<span class="target" id="l5468726565537061636543617465676f72792e6d6f64696679506f696e7444617461"></span><dl class="simple" id="index-35">
+<span class="target" id="l5468726565537061636543617465676f7279-6d6f64696679506f696e7444617461"></span><dl class="simple" id="index-35">
 <dt><span class="spadfun">modifyPointData</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="Point.html#l506f696e74"><span class="std std-ref">Point</span></a> R) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">modifyPointData(s,</span> <span class="pre">i,</span> <span class="pre">p)</span></code> changes the point at the indexed location <code class="docutils literal notranslate"><span class="pre">i</span></code> in the <a class="reference internal" href="ThreeSpace.html#l54687265655370616365"><span class="std std-ref">ThreeSpace</span></a>, <code class="docutils literal notranslate"><span class="pre">s</span></code>, to that of point <code class="docutils literal notranslate"><span class="pre">p</span></code>. This is useful for making changes to a point which has been transformed.</p>
 </dd>
 </dl>
-<span class="target" id="l5468726565537061636543617465676f72792e6e756d6265724f66436f6d706f6e656e7473"></span><dl class="simple" id="index-36">
+<span class="target" id="l5468726565537061636543617465676f7279-6e756d6265724f66436f6d706f6e656e7473"></span><dl class="simple" id="index-36">
 <dt><span class="spadfun">numberOfComponents</span>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">numberOfComponents(s)</span></code> returns the number of distinct object components in the indicated <a class="reference internal" href="ThreeSpace.html#l54687265655370616365"><span class="std std-ref">ThreeSpace</span></a>, <code class="docutils literal notranslate"><span class="pre">s</span></code>, such as points, curves, polygons, and constructs.</p>
 </dd>
 </dl>
-<span class="target" id="l5468726565537061636543617465676f72792e6e756d6265724f66436f6d706f7369746573"></span><dl class="simple" id="index-37">
+<span class="target" id="l5468726565537061636543617465676f7279-6e756d6265724f66436f6d706f7369746573"></span><dl class="simple" id="index-37">
 <dt><span class="spadfun">numberOfComposites</span>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">numberOfComposites(s)</span></code> returns the number of supercomponents, or composites, in the <a class="reference internal" href="ThreeSpace.html#l54687265655370616365"><span class="std std-ref">ThreeSpace</span></a>, <code class="docutils literal notranslate"><span class="pre">s</span></code>; Composites are arbitrary groupings of otherwise distinct and unrelated components; A <a class="reference internal" href="ThreeSpace.html#l54687265655370616365"><span class="std std-ref">ThreeSpace</span></a> need not have any composites defined at all and, outside of the requirement that no component can belong to more than one composite at a time, the definition and interpretation of composites are unrestricted.</p>
 </dd>
 </dl>
-<span class="target" id="l5468726565537061636543617465676f72792e6f626a65637473"></span><dl class="simple" id="index-38">
+<span class="target" id="l5468726565537061636543617465676f7279-6f626a65637473"></span><dl class="simple" id="index-38">
 <dt><span class="spadfun">objects</span>: % -&gt; Record(points: <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, curves: <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, polygons: <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, constructs: <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">objects(s)</span></code> returns the <a class="reference internal" href="ThreeSpace.html#l54687265655370616365"><span class="std std-ref">ThreeSpace</span></a>, <code class="docutils literal notranslate"><span class="pre">s</span></code>, in the form of a 3D object record containing information on the number of points, curves, polygons and constructs comprising the <a class="reference internal" href="ThreeSpace.html#l54687265655370616365"><span class="std std-ref">ThreeSpace</span></a>..</p>
 </dd>
 </dl>
-<span class="target" id="l5468726565537061636543617465676f72792e706f696e743f"></span><dl class="simple" id="index-39">
+<span class="target" id="l5468726565537061636543617465676f7279-706f696e743f"></span><dl class="simple" id="index-39">
 <dt><span class="spadfun">point?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">point?(s)</span></code> queries whether the <a class="reference internal" href="ThreeSpace.html#l54687265655370616365"><span class="std std-ref">ThreeSpace</span></a>, <code class="docutils literal notranslate"><span class="pre">s</span></code>, is composed of a single component which is a point and returns the boolean result.</p>
 </dd>
 </dl>
-<span class="target" id="l5468726565537061636543617465676f72792e706f696e74"></span><dl class="simple" id="index-40">
+<span class="target" id="l5468726565537061636543617465676f7279-706f696e74"></span><dl class="simple" id="index-40">
 <dt><span class="spadfun">point</span>: % -&gt; <a class="reference internal" href="Point.html#l506f696e74"><span class="std std-ref">Point</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">point(s)</span></code> checks to see if the <a class="reference internal" href="ThreeSpace.html#l54687265655370616365"><span class="std std-ref">ThreeSpace</span></a>, <code class="docutils literal notranslate"><span class="pre">s</span></code>, is composed of only a single point and if so, returns the point. An error is signaled otherwise.</p>
 </dd>
 </dl>
@@ -248,11 +248,11 @@
 <dt><span class="spadfun">point</span>: <a class="reference internal" href="Point.html#l506f696e74"><span class="std std-ref">Point</span></a> R -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">point(p)</span></code> returns a <a class="reference internal" href="ThreeSpace.html#l54687265655370616365"><span class="std std-ref">ThreeSpace</span></a> object which is composed of one component, the point <code class="docutils literal notranslate"><span class="pre">p</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l5468726565537061636543617465676f72792e706f6c79676f6e3f"></span><dl class="simple" id="index-45">
+<span class="target" id="l5468726565537061636543617465676f7279-706f6c79676f6e3f"></span><dl class="simple" id="index-45">
 <dt><span class="spadfun">polygon?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">polygon?(s)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the <a class="reference internal" href="ThreeSpace.html#l54687265655370616365"><span class="std std-ref">ThreeSpace</span></a> <code class="docutils literal notranslate"><span class="pre">s</span></code> contains a single polygon component, or <code class="docutils literal notranslate"><span class="pre">false</span></code> otherwise.</p>
 </dd>
 </dl>
-<span class="target" id="l5468726565537061636543617465676f72792e706f6c79676f6e"></span><dl class="simple" id="index-46">
+<span class="target" id="l5468726565537061636543617465676f7279-706f6c79676f6e"></span><dl class="simple" id="index-46">
 <dt><span class="spadfun">polygon</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Point.html#l506f696e74"><span class="std std-ref">Point</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">polygon(s)</span></code> checks to see if the <a class="reference internal" href="ThreeSpace.html#l54687265655370616365"><span class="std std-ref">ThreeSpace</span></a>, <code class="docutils literal notranslate"><span class="pre">s</span></code>, is composed of a single polygon component defined by a list of points, and if so, returns the list of points; An error is signaled otherwise.</p>
 </dd>
 </dl>
@@ -268,7 +268,7 @@
 <dt><span class="spadfun">polygon</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Point.html#l506f696e74"><span class="std std-ref">Point</span></a> R -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">polygon([p0,</span> <span class="pre">p1,</span> <span class="pre">...,</span> <span class="pre">pn])</span></code> creates a polygon defined by a list of points, <code class="docutils literal notranslate"><span class="pre">p0</span></code> through <code class="docutils literal notranslate"><span class="pre">pn</span></code>, and returns a <a class="reference internal" href="ThreeSpace.html#l54687265655370616365"><span class="std std-ref">ThreeSpace</span></a> whose component is the polygon.</p>
 </dd>
 </dl>
-<span class="target" id="l5468726565537061636543617465676f72792e7375627370616365"></span><dl class="simple" id="index-50">
+<span class="target" id="l5468726565537061636543617465676f7279-7375627370616365"></span><dl class="simple" id="index-50">
 <dt><span class="spadfun">subspace</span>: % -&gt; <a class="reference internal" href="SubSpace.html#l5375625370616365"><span class="std std-ref">SubSpace</span></a>(3, R)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">subspace(s)</span></code> returns the <a class="reference internal" href="SubSpace.html#l5375625370616365"><span class="std std-ref">SubSpace</span></a> which holds all the point information in the <a class="reference internal" href="ThreeSpace.html#l54687265655370616365"><span class="std std-ref">ThreeSpace</span></a>, <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
 </dd>
 </dl>

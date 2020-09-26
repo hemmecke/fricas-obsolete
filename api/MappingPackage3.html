@@ -47,34 +47,34 @@
             
   <div class="section" id="mappingpackage3-a-b-c">
 <span id="l4d617070696e675061636b61676533"></span><span id="index-0"></span><h1>MappingPackage3(A, B, C)<a class="headerlink" href="#mappingpackage3-a-b-c" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/mappkg.spad#L146">mappkg.spad line 146</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/mappkg.spad#L146">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/mappkg.spad#L146">mappkg.spad line 146</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/mappkg.spad#L146">[edit on github]</a></p>
 <ul class="simple">
 <li><p>A: <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p></li>
 <li><p>B: <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p></li>
 <li><p>C: <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p></li>
 </ul>
 <p>various Currying operations.</p>
-<span class="target" id="l4d617070696e675061636b616765332e2a"></span><dl class="simple" id="index-1">
+<span class="target" id="l4d617070696e675061636b61676533-2a"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">*</span>: (B -&gt; C, A -&gt; B) -&gt; A -&gt; C</dt><dd><p><code class="docutils literal notranslate"><span class="pre">f*g</span></code> is the function <code class="docutils literal notranslate"><span class="pre">h</span></code> such that <code class="docutils literal notranslate"><span class="pre">h</span> <span class="pre">x=</span> <span class="pre">f(g</span> <span class="pre">x)</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l4d617070696e675061636b616765332e636f6e7374616e744c656674"></span><dl class="simple" id="index-2">
+<span class="target" id="l4d617070696e675061636b61676533-636f6e7374616e744c656674"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">constantLeft</span>: (B -&gt; C) -&gt; (A, B) -&gt; C</dt><dd><p><code class="docutils literal notranslate"><span class="pre">constantLeft(f)</span></code> is the function <code class="docutils literal notranslate"><span class="pre">g</span></code> such that <code class="docutils literal notranslate"><span class="pre">g</span> <span class="pre">(a,</span> <span class="pre">b)=</span> <span class="pre">f</span> <span class="pre">b</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l4d617070696e675061636b616765332e636f6e7374616e745269676874"></span><dl class="simple" id="index-3">
+<span class="target" id="l4d617070696e675061636b61676533-636f6e7374616e745269676874"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">constantRight</span>: (A -&gt; C) -&gt; (A, B) -&gt; C</dt><dd><p><code class="docutils literal notranslate"><span class="pre">constantRight(f)</span></code> is the function <code class="docutils literal notranslate"><span class="pre">g</span></code> such that <code class="docutils literal notranslate"><span class="pre">g</span> <span class="pre">(a,</span> <span class="pre">b)=</span> <span class="pre">f</span> <span class="pre">a</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l4d617070696e675061636b616765332e63757272794c656674"></span><dl class="simple" id="index-4">
+<span class="target" id="l4d617070696e675061636b61676533-63757272794c656674"></span><dl class="simple" id="index-4">
 <dt><span class="spadfun">curryLeft</span>: ((A, B) -&gt; C, A) -&gt; B -&gt; C</dt><dd><p><code class="docutils literal notranslate"><span class="pre">curryLeft(f,</span> <span class="pre">a)</span></code> is the function <code class="docutils literal notranslate"><span class="pre">g</span></code> such that <code class="docutils literal notranslate"><span class="pre">g</span> <span class="pre">b</span> <span class="pre">=</span> <span class="pre">f(a,</span> <span class="pre">b)</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l4d617070696e675061636b616765332e63757272795269676874"></span><dl class="simple" id="index-5">
+<span class="target" id="l4d617070696e675061636b61676533-63757272795269676874"></span><dl class="simple" id="index-5">
 <dt><span class="spadfun">curryRight</span>: ((A, B) -&gt; C, B) -&gt; A -&gt; C</dt><dd><p><code class="docutils literal notranslate"><span class="pre">curryRight(f,</span> <span class="pre">b)</span></code> is the function <code class="docutils literal notranslate"><span class="pre">g</span></code> such that <code class="docutils literal notranslate"><span class="pre">g</span> <span class="pre">a</span> <span class="pre">=</span> <span class="pre">f(a,</span> <span class="pre">b)</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l4d617070696e675061636b616765332e7477697374"></span><dl class="simple" id="index-6">
+<span class="target" id="l4d617070696e675061636b61676533-7477697374"></span><dl class="simple" id="index-6">
 <dt><span class="spadfun">twist</span>: ((A, B) -&gt; C) -&gt; (B, A) -&gt; C</dt><dd><p><code class="docutils literal notranslate"><span class="pre">twist(f)</span></code> is the function <code class="docutils literal notranslate"><span class="pre">g</span></code> such that <code class="docutils literal notranslate"><span class="pre">g</span> <span class="pre">(a,</span> <span class="pre">b)=</span> <span class="pre">f(b,</span> <span class="pre">a)</span></code>.</p>
 </dd>
 </dl>

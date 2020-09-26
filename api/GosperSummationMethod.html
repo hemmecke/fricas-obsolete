@@ -47,7 +47,7 @@
             
   <div class="section" id="gospersummationmethod-e-v-r-p-q">
 <span id="l476f7370657253756d6d6174696f6e4d6574686f64"></span><span id="index-0"></span><h1>GosperSummationMethod(E, V, R, P, Q)<a class="headerlink" href="#gospersummationmethod-e-v-r-p-q" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/sum.spad#L53">sum.spad line 53</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/sum.spad#L53">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/sum.spad#L53">sum.spad line 53</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/sum.spad#L53">[edit on github]</a></p>
 <ul>
 <li><p>E: <a class="reference internal" href="OrderedAbelianMonoidSup.html#l4f7264657265644162656c69616e4d6f6e6f6964537570"><span class="std std-ref">OrderedAbelianMonoidSup</span></a></p></li>
 <li><p>V: <a class="reference internal" href="OrderedSet.html#l4f726465726564536574"><span class="std std-ref">OrderedSet</span></a></p></li>
@@ -62,7 +62,7 @@
 </li>
 </ul>
 <p>Gosper<code class="docutils literal notranslate"><span class="pre">'s</span></code> summation algorithm.</p>
-<span class="target" id="l476f7370657253756d6d6174696f6e4d6574686f642e476f73706572734d6574686f64"></span><dl class="simple" id="index-1">
+<span class="target" id="l476f7370657253756d6d6174696f6e4d6574686f64-476f73706572734d6574686f64"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">GospersMethod</span>: (Q, V, () -&gt; V) -&gt; Union(Q, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">GospersMethod(b,</span> <span class="pre">n,</span> <span class="pre">new)</span></code> returns a rational function <code class="docutils literal notranslate"><span class="pre">rf(n)</span></code> such that <code class="docutils literal notranslate"><span class="pre">a(n)</span> <span class="pre">*</span> <span class="pre">rf(n)</span></code> is the indefinite sum of <code class="docutils literal notranslate"><span class="pre">a(n)</span></code> with respect to upward difference on <code class="docutils literal notranslate"><span class="pre">n</span></code>, i.e. <code class="docutils literal notranslate"><span class="pre">a(n+1)</span> <span class="pre">*</span> <span class="pre">rf(n+1)</span> <span class="pre">-</span> <span class="pre">a(n)</span> <span class="pre">*</span> <span class="pre">rf(n)</span> <span class="pre">=</span> <span class="pre">a(n)</span></code>, where <code class="docutils literal notranslate"><span class="pre">b(n)</span> <span class="pre">=</span> <span class="pre">a(n)/a(n-1)</span></code> is a rational function. Returns “failed” if no such rational function <code class="docutils literal notranslate"><span class="pre">rf(n)</span></code> exists. Note: <code class="docutils literal notranslate"><span class="pre">new</span></code> is a nullary function returning a new <code class="docutils literal notranslate"><span class="pre">V</span></code> every time. The condition on <code class="docutils literal notranslate"><span class="pre">a(n)</span></code> is that <code class="docutils literal notranslate"><span class="pre">a(n)/a(n-1)</span></code> is a rational function of <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
 </dd>
 </dl>

@@ -47,21 +47,21 @@
             
   <div class="section" id="xmlelement">
 <span id="l586d6c456c656d656e74"></span><span id="index-0"></span><h1>XmlElement<a class="headerlink" href="#xmlelement" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/scene.spad#L3788">scene.spad line 3788</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/scene.spad#L3788">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/scene.spad#L3788">scene.spad line 3788</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/scene.spad#L3788">[edit on github]</a></p>
 <p>This package provides support for <code class="docutils literal notranslate"><span class="pre">XML</span></code> files an <code class="docutils literal notranslate"><span class="pre">XML</span></code> element is something which either has the form: &lt;tagname attributes&gt; content &lt;/tagname&gt; or &lt;tagname attributes/&gt; where content may be a sequence of sub-elements or unstructured text</p>
-<span class="target" id="l586d6c456c656d656e742e636f65726365"></span><dl class="simple" id="index-1">
+<span class="target" id="l586d6c456c656d656e74-636f65726365"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">coerce</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(x)</span></code> outputs <code class="docutils literal notranslate"><span class="pre">x</span></code> as a list of strings. Each element in the list represents a new line. This is an alternative to creating a long single string with ‘newline’ embedded in it.</p>
 </dd>
 </dl>
-<span class="target" id="l586d6c456c656d656e742e656d7074793f"></span><dl class="simple" id="index-2">
+<span class="target" id="l586d6c456c656d656e74-656d7074793f"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">empty?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">empty?(el)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> is this element does not contain anything</p>
 </dd>
 </dl>
-<span class="target" id="l586d6c456c656d656e742e6f757470757456524d4c"></span><dl class="simple" id="index-3">
+<span class="target" id="l586d6c456c656d656e74-6f757470757456524d4c"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">outputVRML</span>: (%, <a class="reference internal" href="TextFile.html#l5465787446696c65"><span class="std std-ref">TextFile</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">outputVRML(rp,</span> <span class="pre">f1)</span></code> writes the element as <code class="docutils literal notranslate"><span class="pre">VRML2</span></code>. <code class="docutils literal notranslate"><span class="pre">VRML2</span></code> is not <code class="docutils literal notranslate"><span class="pre">xml</span></code> but it has the same semantics and node names as <code class="docutils literal notranslate"><span class="pre">X3D</span></code> but a different syntax so it makes sense to create an <code class="docutils literal notranslate"><span class="pre">XML</span></code> structure and then format the output differently.</p>
 </dd>
 </dl>
-<span class="target" id="l586d6c456c656d656e742e786d6c456c656d656e74"></span><dl class="simple" id="index-4">
+<span class="target" id="l586d6c456c656d656e74-786d6c456c656d656e74"></span><dl class="simple" id="index-4">
 <dt><span class="spadfun">xmlElement</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="XmlAttribute.html#l586d6c417474726962757465"><span class="std std-ref">XmlAttribute</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">xmlElement(name,</span> <span class="pre">elements,</span> <span class="pre">attributes)</span></code> construct an element with structured <code class="docutils literal notranslate"><span class="pre">elements</span></code></p>
 </dd>
 </dl>

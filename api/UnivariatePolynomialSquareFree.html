@@ -47,7 +47,7 @@
             
   <div class="section" id="univariatepolynomialsquarefree-rc-p">
 <span id="l556e6976617269617465506f6c796e6f6d69616c53717561726546726565"></span><span id="index-0"></span><h1>UnivariatePolynomialSquareFree(RC, P)<a class="headerlink" href="#univariatepolynomialsquarefree-rc-p" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/poly.spad#L981">poly.spad line 981</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/poly.spad#L981">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/poly.spad#L981">poly.spad line 981</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/poly.spad#L981">[edit on github]</a></p>
 <ul>
 <li><p>RC: <a class="reference internal" href="IntegralDomain.html#l496e74656772616c446f6d61696e"><span class="std std-ref">IntegralDomain</span></a></p></li>
 <li><p>P: Join(<a class="reference internal" href="UnivariatePolynomialCategory.html#l556e6976617269617465506f6c796e6f6d69616c43617465676f7279"><span class="std std-ref">UnivariatePolynomialCategory</span></a> RC, <a class="reference internal" href="IntegralDomain.html#l496e74656772616c446f6d61696e"><span class="std std-ref">IntegralDomain</span></a>) with</p>
@@ -57,15 +57,15 @@
 </li>
 </ul>
 <p>This package provides for square-free decomposition of univariate polynomials over arbitrary rings, i.e. a partial factorization such that each factor is a product of irreducibles with multiplicity one and the factors are pairwise relatively prime. If the ring has characteristic zero, the result is guaranteed to satisfy this condition. If the ring is an infinite ring of finite characteristic, then it may not be possible to decide when polynomials contain factors which are <code class="docutils literal notranslate"><span class="pre">p</span></code>th powers. In this case, the flag associated with that polynomial is set to “nil” (meaning that that polynomials are not guaranteed to be square-free).</p>
-<span class="target" id="l556e6976617269617465506f6c796e6f6d69616c537175617265467265652e42756d496e536570464645"></span><dl class="simple" id="index-1">
+<span class="target" id="l556e6976617269617465506f6c796e6f6d69616c53717561726546726565-42756d496e536570464645"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">BumInSepFFE</span>: Record(flag: Union(nil, sqfr, irred, prime), factor: P, exponent: <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; Record(flag: Union(nil, sqfr, irred, prime), factor: P, exponent: <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">BumInSepFFE(f)</span></code> is a local function, exported only because it has multiple conditional definitions.</p>
 </dd>
 </dl>
-<span class="target" id="l556e6976617269617465506f6c796e6f6d69616c537175617265467265652e73717561726546726565"></span><dl class="simple" id="index-2">
+<span class="target" id="l556e6976617269617465506f6c796e6f6d69616c53717561726546726565-73717561726546726565"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">squareFree</span>: P -&gt; <a class="reference internal" href="Factored.html#l466163746f726564"><span class="std std-ref">Factored</span></a> P</dt><dd><p><code class="docutils literal notranslate"><span class="pre">squareFree(p)</span></code> computes the square-free factorization of the univariate polynomial <code class="docutils literal notranslate"><span class="pre">p</span></code>. Each factor has no repeated roots, and the factors are pairwise relatively prime.</p>
 </dd>
 </dl>
-<span class="target" id="l556e6976617269617465506f6c796e6f6d69616c537175617265467265652e7371756172654672656550617274"></span><dl class="simple" id="index-3">
+<span class="target" id="l556e6976617269617465506f6c796e6f6d69616c53717561726546726565-7371756172654672656550617274"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">squareFreePart</span>: P -&gt; P</dt><dd><p><code class="docutils literal notranslate"><span class="pre">squareFreePart(p)</span></code> returns a polynomial which has the same irreducible factors as the univariate polynomial <code class="docutils literal notranslate"><span class="pre">p</span></code>, but each factor has multiplicity one.</p>
 </dd>
 </dl>

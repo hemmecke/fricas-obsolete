@@ -47,76 +47,76 @@
             
   <div class="section" id="sboundary-pt">
 <span id="l53426f756e64617279"></span><span id="index-0"></span><h1>SBoundary PT<a class="headerlink" href="#sboundary-pt" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/scene.spad#L3329">scene.spad line 3329</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/scene.spad#L3329">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/scene.spad#L3329">scene.spad line 3329</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/scene.spad#L3329">[edit on github]</a></p>
 <ul class="simple">
 <li><p>PT: <a class="reference internal" href="SPointCategory.html#l53506f696e7443617465676f7279"><span class="std std-ref">SPointCategory</span></a></p></li>
 </ul>
 <p>SBoundary implements boundaries for use in scene graph This defines the outer extent of the scene, or of an element in the scene, or of some branch in the scene. The difference between this boundary and an <code class="docutils literal notranslate"><span class="pre">n</span></code>-dimensional surface, such as IFS, is that boundary must always have a well defined inside and an outside. SBoundary does not necessarily follow the exact outer contours of the shape but just constructs a simple boundary shape where all points of the shape are guaranteed to be inside the boundary. Currently there are the following boundary forms: Simple types: “box”::Symbol which is a <code class="docutils literal notranslate"><span class="pre">n</span></code>-dimensional axis-aligned rectangle. “ellipoid”::Symbol which is a <code class="docutils literal notranslate"><span class="pre">n</span></code>-dimensional axis-aligned ellipse. Compound types: This is a combination of simple and other compound types such as union or intersection. “union”::Symbol represents union of supplied list “intersection”::Symbol represents intersection of supplied list Null types: “none” is used for a node which does not have a boundary in space, for example, when the boundary of a material node is requested. The uses of SBoundary are: 1) So we know how much to scale a given scene to fit in a given size. 2) So that we know where to terminate arrows going in out out of of the shape. 3) To detect if objects intersect (collision detect), or if one object is contained completely inside another.</p>
-<span class="target" id="l53426f756e646172792e626f78426f756e64617279"></span><dl class="simple" id="index-1">
+<span class="target" id="l53426f756e64617279-626f78426f756e64617279"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">boxBoundary</span>: (PT, PT) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">boxBoundary(c1,</span> <span class="pre">c2)</span></code> constructs a box boundary (<code class="docutils literal notranslate"><span class="pre">n</span></code>-dimensional axis-aligned rectangle) with given parameters <code class="docutils literal notranslate"><span class="pre">c1:</span></code> <code class="docutils literal notranslate"><span class="pre">PT</span></code> holds minimum coordinates <code class="docutils literal notranslate"><span class="pre">c2:</span></code> <code class="docutils literal notranslate"><span class="pre">PT</span></code> holds maximum coordinates</p>
 </dd>
 </dl>
-<span class="target" id="l53426f756e646172792e636f65726365"></span><dl class="simple" id="index-2">
+<span class="target" id="l53426f756e64617279-636f65726365"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">coerce</span>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(bd)</span></code> outputs description of <code class="docutils literal notranslate"><span class="pre">bd</span></code> as formatted text</p>
 </dd>
 </dl>
-<span class="target" id="l53426f756e646172792e636f6e7461696e73506f696e743f"></span><dl class="simple" id="index-3">
+<span class="target" id="l53426f756e64617279-636f6e7461696e73506f696e743f"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">containsPoint?</span>: (%, PT) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">containsPoint?(n,</span> <span class="pre">p)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the point is inside the boundary. <code class="docutils literal notranslate"><span class="pre">n</span></code> is the boundary <code class="docutils literal notranslate"><span class="pre">p</span></code> is the point</p>
 </dd>
 </dl>
-<span class="target" id="l53426f756e646172792e656c6c69707365426f756e64617279"></span><dl class="simple" id="index-4">
+<span class="target" id="l53426f756e64617279-656c6c69707365426f756e64617279"></span><dl class="simple" id="index-4">
 <dt><span class="spadfun">ellipseBoundary</span>: (PT, PT) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">ellipseBoundary(c1,</span> <span class="pre">c2)</span></code> constructs an ellipse boundary <code class="docutils literal notranslate"><span class="pre">n</span></code>-dimensional axis-aligned ellipoid with given parameters <code class="docutils literal notranslate"><span class="pre">c1:</span></code> <code class="docutils literal notranslate"><span class="pre">PT</span></code> holds centre point <code class="docutils literal notranslate"><span class="pre">c2:</span></code> <code class="docutils literal notranslate"><span class="pre">PT</span></code> holds extent (radius for each coordinate)</p>
 </dd>
 </dl>
-<span class="target" id="l53426f756e646172792e657874656e64546f506f696e74"></span><dl class="simple" id="index-5">
+<span class="target" id="l53426f756e64617279-657874656e64546f506f696e74"></span><dl class="simple" id="index-5">
 <dt><span class="spadfun">extendToPoint</span>: (%, PT) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">extendToPoint(n,</span> <span class="pre">p)</span></code> creates a boundary that is the union of a boundary and a point. <code class="docutils literal notranslate"><span class="pre">n</span></code> is the boundary <code class="docutils literal notranslate"><span class="pre">p</span></code> is the point</p>
 </dd>
 </dl>
-<span class="target" id="l53426f756e646172792e67657443656e747265"></span><dl class="simple" id="index-6">
+<span class="target" id="l53426f756e64617279-67657443656e747265"></span><dl class="simple" id="index-6">
 <dt><span class="spadfun">getCentre</span>: % -&gt; PT</dt><dd><p><code class="docutils literal notranslate"><span class="pre">getCentre(n)</span></code> returns centre coordinate of the boundary. <code class="docutils literal notranslate"><span class="pre">n:</span></code> % is the boundary</p>
 </dd>
 </dl>
-<span class="target" id="l53426f756e646172792e6765744d6178"></span><dl class="simple" id="index-7">
+<span class="target" id="l53426f756e64617279-6765744d6178"></span><dl class="simple" id="index-7">
 <dt><span class="spadfun">getMax</span>: % -&gt; PT</dt><dd><p><code class="docutils literal notranslate"><span class="pre">getMax(n)</span></code> returns maximum coordinate of the boundary. <code class="docutils literal notranslate"><span class="pre">n</span></code> is the boundary</p>
 </dd>
 </dl>
-<span class="target" id="l53426f756e646172792e6765744d696e"></span><dl class="simple" id="index-8">
+<span class="target" id="l53426f756e64617279-6765744d696e"></span><dl class="simple" id="index-8">
 <dt><span class="spadfun">getMin</span>: % -&gt; PT</dt><dd><p><code class="docutils literal notranslate"><span class="pre">getMin(n)</span></code> returns minimum coordinate of the boundary. <code class="docutils literal notranslate"><span class="pre">n</span></code> is the boundary</p>
 </dd>
 </dl>
-<span class="target" id="l53426f756e646172792e696e74657273656374696f6e"></span><dl class="simple" id="index-9">
+<span class="target" id="l53426f756e64617279-696e74657273656374696f6e"></span><dl class="simple" id="index-9">
 <dt><span class="spadfun">intersection</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">intersection(x)</span></code> constructs a compound boundary from the intersection of <code class="docutils literal notranslate"><span class="pre">x</span></code> <code class="docutils literal notranslate"><span class="pre">x:</span></code> List % is supplied list of boundaries to form intersection.</p>
 </dd>
 </dl>
-<span class="target" id="l53426f756e646172792e6973426f783f"></span><dl class="simple" id="index-10">
+<span class="target" id="l53426f756e64617279-6973426f783f"></span><dl class="simple" id="index-10">
 <dt><span class="spadfun">isBox?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">isBox?(n)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if this is a rectangular boundary.</p>
 </dd>
 </dl>
-<span class="target" id="l53426f756e646172792e6973456c6c697073653f"></span><dl class="simple" id="index-11">
+<span class="target" id="l53426f756e64617279-6973456c6c697073653f"></span><dl class="simple" id="index-11">
 <dt><span class="spadfun">isEllipse?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">isEllipse?(n)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if this is a ellipsoid boundary.</p>
 </dd>
 </dl>
-<span class="target" id="l53426f756e646172792e69734e756c6c3f"></span><dl class="simple" id="index-12">
+<span class="target" id="l53426f756e64617279-69734e756c6c3f"></span><dl class="simple" id="index-12">
 <dt><span class="spadfun">isNull?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">isNull?(n)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if this is a null boundary, that is no boundary</p>
 </dd>
 </dl>
-<span class="target" id="l53426f756e646172792e6c696e65496e74657273656374"></span><dl class="simple" id="index-13">
+<span class="target" id="l53426f756e64617279-6c696e65496e74657273656374"></span><dl class="simple" id="index-13">
 <dt><span class="spadfun">lineIntersect</span>: (%, PT) -&gt; PT</dt><dd><p><code class="docutils literal notranslate"><span class="pre">lineIntersect(n,</span> <span class="pre">p)</span></code> returns the point where a line, from the centre of the boundary to the point <code class="docutils literal notranslate"><span class="pre">p</span></code>, intersects with the boundary. <code class="docutils literal notranslate"><span class="pre">n:</span></code> % is the boundary <code class="docutils literal notranslate"><span class="pre">p:</span></code> <code class="docutils literal notranslate"><span class="pre">PT</span></code> is the point at the end of the line (outside boundary)</p>
 </dd>
 </dl>
-<span class="target" id="l53426f756e646172792e6c696e6b"></span><dl class="simple" id="index-14">
+<span class="target" id="l53426f756e64617279-6c696e6b"></span><dl class="simple" id="index-14">
 <dt><span class="spadfun">link</span>: (%, %) -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> PT</dt><dd><p><code class="docutils literal notranslate"><span class="pre">link(m,</span> <span class="pre">n)</span></code> returns a line which is the shortest distance between the two boundaries. The line is represented by its two endpoints. <code class="docutils literal notranslate"><span class="pre">m:</span></code> % is the first boundary to be linked <code class="docutils literal notranslate"><span class="pre">n:</span></code> % is the second boundary to be linked</p>
 </dd>
 </dl>
-<span class="target" id="l53426f756e646172792e6e756c6c426f756e64617279"></span><dl class="simple" id="index-15">
+<span class="target" id="l53426f756e64617279-6e756c6c426f756e64617279"></span><dl class="simple" id="index-15">
 <dt><span class="spadfun">nullBoundary</span>: () -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">nullBoundary()</span></code> constructs a null boundary, for example, when the boundary of a material node is requested.</p>
 </dd>
 </dl>
-<span class="target" id="l53426f756e646172792e73756e696f6e"></span><dl class="simple" id="index-16">
+<span class="target" id="l53426f756e64617279-73756e696f6e"></span><dl class="simple" id="index-16">
 <dt><span class="spadfun">sunion</span>: (%, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sunion(x,</span> <span class="pre">y)</span></code> gives the union of two boundaries as a box, that is it gives a box that is external to both. <code class="docutils literal notranslate"><span class="pre">x:</span></code> % is first boundary to be combined <code class="docutils literal notranslate"><span class="pre">y:</span></code> % is second boundary to be combined</p>
 </dd>
 </dl>
-<span class="target" id="l53426f756e646172792e756e696f6e"></span><dl class="simple" id="index-17">
+<span class="target" id="l53426f756e64617279-756e696f6e"></span><dl class="simple" id="index-17">
 <dt><span class="spadfun">union</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">union(x)</span></code> constructs a compound boundary from the union of <code class="docutils literal notranslate"><span class="pre">x</span></code> <code class="docutils literal notranslate"><span class="pre">x:</span></code> List % is supplied list of boundaries to form union</p>
 </dd>
 </dl>

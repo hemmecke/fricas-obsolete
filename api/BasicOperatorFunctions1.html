@@ -47,20 +47,20 @@
             
   <div class="section" id="basicoperatorfunctions1-a">
 <span id="l42617369634f70657261746f7246756e6374696f6e7331"></span><span id="index-0"></span><h1>BasicOperatorFunctions1 A<a class="headerlink" href="#basicoperatorfunctions1-a" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/op.spad#L183">op.spad line 183</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/op.spad#L183">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/op.spad#L183">op.spad line 183</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/op.spad#L183">[edit on github]</a></p>
 <ul class="simple">
 <li><p>A: <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p></li>
 </ul>
 <p>This package exports functions to set some commonly used properties of operators, including properties which contain functions.</p>
-<span class="target" id="l42617369634f70657261746f7246756e6374696f6e73312e636f6e7374616e744f70657261746f72"></span><dl class="simple" id="index-1">
+<span class="target" id="l42617369634f70657261746f7246756e6374696f6e7331-636f6e7374616e744f70657261746f72"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">constantOperator</span>: A -&gt; <a class="reference internal" href="BasicOperator.html#l42617369634f70657261746f72"><span class="std std-ref">BasicOperator</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">constantOperator(a)</span></code> returns a nullary operator op such that <code class="docutils literal notranslate"><span class="pre">op()</span></code> always evaluate to <code class="docutils literal notranslate"><span class="pre">a</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l42617369634f70657261746f7246756e6374696f6e73312e636f6e7374616e744f70496643616e"></span><dl class="simple" id="index-2">
+<span class="target" id="l42617369634f70657261746f7246756e6374696f6e7331-636f6e7374616e744f70496643616e"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">constantOpIfCan</span>: <a class="reference internal" href="BasicOperator.html#l42617369634f70657261746f72"><span class="std std-ref">BasicOperator</span></a> -&gt; Union(A, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">constantOpIfCan(op)</span></code> returns <code class="docutils literal notranslate"><span class="pre">a</span></code> if <code class="docutils literal notranslate"><span class="pre">op</span></code> is the constant nullary operator always returning <code class="docutils literal notranslate"><span class="pre">a</span></code>, “failed” otherwise.</p>
 </dd>
 </dl>
-<span class="target" id="l42617369634f70657261746f7246756e6374696f6e73312e64657269766174697665"></span><dl class="simple" id="index-3">
+<span class="target" id="l42617369634f70657261746f7246756e6374696f6e7331-64657269766174697665"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">derivative</span>: (<a class="reference internal" href="BasicOperator.html#l42617369634f70657261746f72"><span class="std std-ref">BasicOperator</span></a>, A -&gt; A) -&gt; <a class="reference internal" href="BasicOperator.html#l42617369634f70657261746f72"><span class="std std-ref">BasicOperator</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">derivative(op,</span> <span class="pre">foo)</span></code> attaches foo as the “%diff” property of <code class="docutils literal notranslate"><span class="pre">op</span></code>. If <code class="docutils literal notranslate"><span class="pre">op</span></code> has an “%diff” property <code class="docutils literal notranslate"><span class="pre">f</span></code>, then applying a derivation <code class="docutils literal notranslate"><span class="pre">D</span></code> to <code class="docutils literal notranslate"><span class="pre">op</span></code>(a) returns <code class="docutils literal notranslate"><span class="pre">f(a)</span> <span class="pre">*</span> <span class="pre">D(a)</span></code>. Argument <code class="docutils literal notranslate"><span class="pre">op</span></code> must be unary.</p>
 </dd>
 </dl>
@@ -72,7 +72,7 @@
 <dt><span class="spadfun">derivative</span>: <a class="reference internal" href="BasicOperator.html#l42617369634f70657261746f72"><span class="std std-ref">BasicOperator</span></a> -&gt; Union(<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a>(<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> A -&gt; A), failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">derivative(op)</span></code> returns the value of the “%diff” property of <code class="docutils literal notranslate"><span class="pre">op</span></code> if it has one, and “failed” otherwise.</p>
 </dd>
 </dl>
-<span class="target" id="l42617369634f70657261746f7246756e6374696f6e73312e6576616c75617465"></span><dl class="simple" id="index-6">
+<span class="target" id="l42617369634f70657261746f7246756e6374696f6e7331-6576616c75617465"></span><dl class="simple" id="index-6">
 <dt><span class="spadfun">evaluate</span>: (<a class="reference internal" href="BasicOperator.html#l42617369634f70657261746f72"><span class="std std-ref">BasicOperator</span></a>, A -&gt; A) -&gt; <a class="reference internal" href="BasicOperator.html#l42617369634f70657261746f72"><span class="std std-ref">BasicOperator</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">evaluate(op,</span> <span class="pre">foo)</span></code> attaches foo as the “%eval” property of <code class="docutils literal notranslate"><span class="pre">op</span></code>. If <code class="docutils literal notranslate"><span class="pre">op</span></code> has an “%eval” property <code class="docutils literal notranslate"><span class="pre">f</span></code>, then applying <code class="docutils literal notranslate"><span class="pre">op</span></code> to a returns the result of <code class="docutils literal notranslate"><span class="pre">f(a)</span></code>. Argument <code class="docutils literal notranslate"><span class="pre">op</span></code> must be unary.</p>
 </dd>
 </dl>

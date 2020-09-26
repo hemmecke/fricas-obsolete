@@ -47,20 +47,20 @@
             
   <div class="section" id="retractablefrom-s">
 <span id="l5265747261637461626c6546726f6d"></span><span id="index-0"></span><h1>RetractableFrom S<a class="headerlink" href="#retractablefrom-s" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/coerce.spad#L73">coerce.spad line 73</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/coerce.spad#L73">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/coerce.spad#L73">coerce.spad line 73</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/coerce.spad#L73">[edit on github]</a></p>
 <ul class="simple">
 <li><p>S: <a class="reference internal" href="Type.html#l54797065"><span class="std std-ref">Type</span></a></p></li>
 </ul>
 <p><code class="docutils literal notranslate"><span class="pre">B</span></code> is retractable from A means that some elements in A can be converted into elements of <code class="docutils literal notranslate"><span class="pre">B</span></code> and any element of <code class="docutils literal notranslate"><span class="pre">B</span></code> can be converted into an element of A.</p>
-<dl class="simple" id="l5265747261637461626c6546726f6d2e636f65726365">
-<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f2e636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; S</dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> S</p>
+<dl class="simple" id="l5265747261637461626c6546726f6d-636f65726365">
+<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f-636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; S</dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> S</p>
 </dd>
 </dl>
-<span class="target" id="l5265747261637461626c6546726f6d2e72657472616374"></span><dl class="simple" id="index-1">
+<span class="target" id="l5265747261637461626c6546726f6d-72657472616374"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">retract</span>: S -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">retract(a)</span></code> transforms a into an element of % if possible. Error: if a cannot be made into an element of %.</p>
 </dd>
 </dl>
-<span class="target" id="l5265747261637461626c6546726f6d2e72657472616374496643616e"></span><dl class="simple" id="index-2">
+<span class="target" id="l5265747261637461626c6546726f6d-72657472616374496643616e"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">retractIfCan</span>: S -&gt; Union(%, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">retractIfCan(a)</span></code> transforms a into an element of % if possible. Returns “failed” if a cannot be made into an element of %.</p>
 </dd>
 </dl>

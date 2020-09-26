@@ -47,7 +47,7 @@
             
   <div class="section" id="matrixmanipulation-r-row-col-m">
 <span id="l4d61747269784d616e6970756c6174696f6e"></span><span id="index-0"></span><h1>MatrixManipulation(R, Row, Col, M)<a class="headerlink" href="#matrixmanipulation-r-row-col-m" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/mama.spad#L1">mama.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/mama.spad#L1">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/mama.spad#L1">mama.spad line 1</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/mama.spad#L1">[edit on github]</a></p>
 <ul class="simple">
 <li><p>R: <a class="reference internal" href="Type.html#l54797065"><span class="std std-ref">Type</span></a></p></li>
 <li><p>Row: <a class="reference internal" href="FiniteLinearAggregate.html#l46696e6974654c696e656172416767726567617465"><span class="std std-ref">FiniteLinearAggregate</span></a> R</p></li>
@@ -55,7 +55,7 @@
 <li><p>M: <a class="reference internal" href="TwoDimensionalArrayCategory.html#l54776f44696d656e73696f6e616c417272617943617465676f7279"><span class="std std-ref">TwoDimensionalArrayCategory</span></a>(R, Row, Col)</p></li>
 </ul>
 <p>Some functions for manipulating (dense) matrices. Supported are various kinds of slicing, splitting and stacking of matrices. The functions resemble operations often used in numerical linear algebra algorithms.</p>
-<span class="target" id="l4d61747269784d616e6970756c6174696f6e2e62616e644d6174726978"></span><dl class="simple" id="index-1">
+<span class="target" id="l4d61747269784d616e6970756c6174696f6e-62616e644d6174726978"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">bandMatrix</span>: (M, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; M if R has <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">bandMatrix</span></code> returns multiple diagonals out of a matrix. The diagonals are put into a matrix of same shape as the original one. Positive integer arguments select upper off-diagonals, negative ones lower off-diagonals.</p>
 </dd>
 </dl>
@@ -63,7 +63,7 @@
 <dt><span class="spadfun">bandMatrix</span>: (M, <a class="reference internal" href="Segment.html#l5365676d656e74"><span class="std std-ref">Segment</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; M if R has <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">bandMatrix</span></code> returns multiple diagonals out of a matrix. The diagonals are put into a matrix of same shape as the original one. Positive integer arguments select upper off-diagonals, negative ones lower off-diagonals.</p>
 </dd>
 </dl>
-<span class="target" id="l4d61747269784d616e6970756c6174696f6e2e626c6f636b53706c6974"></span><dl class="simple" id="index-3">
+<span class="target" id="l4d61747269784d616e6970756c6174696f6e-626c6f636b53706c6974"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">blockSplit</span>: (M, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> M</dt><dd><p><code class="docutils literal notranslate"><span class="pre">blockSplit</span></code> splits a matrix into multiple submatrices row and column wise, dividing a matrix into blocks.</p>
 </dd>
 </dl>
@@ -71,11 +71,11 @@
 <dt><span class="spadfun">blockSplit</span>: (M, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> M</dt><dd><p><code class="docutils literal notranslate"><span class="pre">blockSplit</span></code> splits a matrix into multiple submatrices row and column wise, dividing a matrix into blocks.</p>
 </dd>
 </dl>
-<span class="target" id="l4d61747269784d616e6970756c6174696f6e2e636f6c756d6e4d6174726978"></span><dl class="simple" id="index-5">
+<span class="target" id="l4d61747269784d616e6970756c6174696f6e-636f6c756d6e4d6174726978"></span><dl class="simple" id="index-5">
 <dt><span class="spadfun">columnMatrix</span>: (M, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; M</dt><dd><p><code class="docutils literal notranslate"><span class="pre">columnMatrix</span></code> returns a single column out of a matrix. The column is put into a one by <code class="docutils literal notranslate"><span class="pre">N</span></code> matrix.</p>
 </dd>
 </dl>
-<span class="target" id="l4d61747269784d616e6970756c6174696f6e2e636f6c756d6e73"></span><dl class="simple" id="index-6">
+<span class="target" id="l4d61747269784d616e6970756c6174696f6e-636f6c756d6e73"></span><dl class="simple" id="index-6">
 <dt><span class="spadfun">columns</span>: (M, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; M</dt><dd><p><code class="docutils literal notranslate"><span class="pre">columns</span></code> returns several columns out of a matrix. The columns are stacked into a matrix.</p>
 </dd>
 </dl>
@@ -83,7 +83,7 @@
 <dt><span class="spadfun">columns</span>: (M, <a class="reference internal" href="Segment.html#l5365676d656e74"><span class="std std-ref">Segment</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; M</dt><dd><p><code class="docutils literal notranslate"><span class="pre">columns</span></code> returns several columns out of a matrix. The columns are stacked into a matrix.</p>
 </dd>
 </dl>
-<span class="target" id="l4d61747269784d616e6970756c6174696f6e2e646961676f6e616c4d6174726978"></span><dl class="simple" id="index-8">
+<span class="target" id="l4d61747269784d616e6970756c6174696f6e-646961676f6e616c4d6174726978"></span><dl class="simple" id="index-8">
 <dt><span class="spadfun">diagonalMatrix</span>: (M, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; M if R has <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">diagonalMatrix</span></code> returns a diagonal out of a matrix. The diagonal is put into a matrix of same shape as the original one. Positive integer arguments select upper off-diagonals, negative ones lower off-diagonals.</p>
 </dd>
 </dl>
@@ -91,15 +91,15 @@
 <dt><span class="spadfun">diagonalMatrix</span>: M -&gt; M if R has <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">diagonalMatrix</span></code> returns the main diagonal out of a matrix. The diagonal is put into a matrix of same shape as the original one.</p>
 </dd>
 </dl>
-<span class="target" id="l4d61747269784d616e6970756c6174696f6e2e656c656d656e74"></span><dl class="simple" id="index-10">
+<span class="target" id="l4d61747269784d616e6970756c6174696f6e-656c656d656e74"></span><dl class="simple" id="index-10">
 <dt><span class="spadfun">element</span>: (M, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; M</dt><dd><p><code class="docutils literal notranslate"><span class="pre">element</span></code> returns a single element out of a matrix. The element is put into a one by one matrix.</p>
 </dd>
 </dl>
-<span class="target" id="l4d61747269784d616e6970756c6174696f6e2e726f774d6174726978"></span><dl class="simple" id="index-11">
+<span class="target" id="l4d61747269784d616e6970756c6174696f6e-726f774d6174726978"></span><dl class="simple" id="index-11">
 <dt><span class="spadfun">rowMatrix</span>: (M, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; M</dt><dd><p><code class="docutils literal notranslate"><span class="pre">rowMatrix</span></code> returns a single row out of a matrix. The row is put into a one by <code class="docutils literal notranslate"><span class="pre">N</span></code> matrix.</p>
 </dd>
 </dl>
-<span class="target" id="l4d61747269784d616e6970756c6174696f6e2e726f7773"></span><dl class="simple" id="index-12">
+<span class="target" id="l4d61747269784d616e6970756c6174696f6e-726f7773"></span><dl class="simple" id="index-12">
 <dt><span class="spadfun">rows</span>: (M, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; M</dt><dd><p><code class="docutils literal notranslate"><span class="pre">rows</span></code> returns several rows out of a matrix. The rows are stacked into a matrix.</p>
 </dd>
 </dl>
@@ -107,7 +107,7 @@
 <dt><span class="spadfun">rows</span>: (M, <a class="reference internal" href="Segment.html#l5365676d656e74"><span class="std std-ref">Segment</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; M</dt><dd><p><code class="docutils literal notranslate"><span class="pre">rows</span></code> returns several rows out of a matrix. The rows are stacked into a matrix.</p>
 </dd>
 </dl>
-<span class="target" id="l4d61747269784d616e6970756c6174696f6e2e7375624d6174726978"></span><dl class="simple" id="index-14">
+<span class="target" id="l4d61747269784d616e6970756c6174696f6e-7375624d6174726978"></span><dl class="simple" id="index-14">
 <dt><span class="spadfun">subMatrix</span>: (M, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; M</dt><dd><p><code class="docutils literal notranslate"><span class="pre">subMatrix</span></code> returns several elements out of a matrix. The elements are stacked into a submatrix.</p>
 </dd>
 </dl>

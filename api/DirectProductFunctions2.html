@@ -47,22 +47,22 @@
             
   <div class="section" id="directproductfunctions2-dim-a-b">
 <span id="l44697265637450726f6475637446756e6374696f6e7332"></span><span id="index-0"></span><h1>DirectProductFunctions2(dim, A, B)<a class="headerlink" href="#directproductfunctions2-dim-a-b" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/vector.spad#L491">vector.spad line 491</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/vector.spad#L491">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/vector.spad#L491">vector.spad line 491</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/vector.spad#L491">[edit on github]</a></p>
 <ul class="simple">
 <li><p>dim: <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></p></li>
 <li><p>A: <a class="reference internal" href="Type.html#l54797065"><span class="std std-ref">Type</span></a></p></li>
 <li><p>B: <a class="reference internal" href="Type.html#l54797065"><span class="std std-ref">Type</span></a></p></li>
 </ul>
 <p>This package provides operations which all take as arguments direct products of elements of some type <code class="docutils literal notranslate"><span class="pre">A</span></code> and functions from <code class="docutils literal notranslate"><span class="pre">A</span></code> to another type <code class="docutils literal notranslate"><span class="pre">B</span></code>. The operations all iterate over their vector argument and either return a value of type <code class="docutils literal notranslate"><span class="pre">B</span></code> or a direct product over <code class="docutils literal notranslate"><span class="pre">B</span></code>.</p>
-<span class="target" id="l44697265637450726f6475637446756e6374696f6e73322e6d6170"></span><dl class="simple" id="index-1">
+<span class="target" id="l44697265637450726f6475637446756e6374696f6e7332-6d6170"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">map</span>: (A -&gt; B, <a class="reference internal" href="DirectProduct.html#l44697265637450726f64756374"><span class="std std-ref">DirectProduct</span></a>(dim, A)) -&gt; <a class="reference internal" href="DirectProduct.html#l44697265637450726f64756374"><span class="std std-ref">DirectProduct</span></a>(dim, B)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">map(f,</span> <span class="pre">v)</span></code> applies the function <code class="docutils literal notranslate"><span class="pre">f</span></code> to every element of the vector <code class="docutils literal notranslate"><span class="pre">v</span></code> producing a new vector containing the values.</p>
 </dd>
 </dl>
-<span class="target" id="l44697265637450726f6475637446756e6374696f6e73322e726564756365"></span><dl class="simple" id="index-2">
+<span class="target" id="l44697265637450726f6475637446756e6374696f6e7332-726564756365"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">reduce</span>: ((A, B) -&gt; B, <a class="reference internal" href="DirectProduct.html#l44697265637450726f64756374"><span class="std std-ref">DirectProduct</span></a>(dim, A), B) -&gt; B</dt><dd><p><code class="docutils literal notranslate"><span class="pre">reduce(func,</span> <span class="pre">vec,</span> <span class="pre">ident)</span></code> combines the elements in <code class="docutils literal notranslate"><span class="pre">vec</span></code> using the binary function <code class="docutils literal notranslate"><span class="pre">func</span></code>. Argument ident is returned if the vector is empty.</p>
 </dd>
 </dl>
-<span class="target" id="l44697265637450726f6475637446756e6374696f6e73322e7363616e"></span><dl class="simple" id="index-3">
+<span class="target" id="l44697265637450726f6475637446756e6374696f6e7332-7363616e"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">scan</span>: ((A, B) -&gt; B, <a class="reference internal" href="DirectProduct.html#l44697265637450726f64756374"><span class="std std-ref">DirectProduct</span></a>(dim, A), B) -&gt; <a class="reference internal" href="DirectProduct.html#l44697265637450726f64756374"><span class="std std-ref">DirectProduct</span></a>(dim, B)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">scan(func,</span> <span class="pre">vec,</span> <span class="pre">ident)</span></code> creates a new vector whose elements are the result of applying reduce to the binary function <code class="docutils literal notranslate"><span class="pre">func</span></code>, increasing initial subsequences of the vector <code class="docutils literal notranslate"><span class="pre">vec</span></code>, and the element ident.</p>
 </dd>
 </dl>

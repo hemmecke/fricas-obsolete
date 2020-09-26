@@ -47,17 +47,17 @@
             
   <div class="section" id="symboltable">
 <span id="l53796d626f6c5461626c65"></span><span id="index-0"></span><h1>SymbolTable<a class="headerlink" href="#symboltable" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/forttyp.spad#L250">forttyp.spad line 250</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/forttyp.spad#L250">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/forttyp.spad#L250">forttyp.spad line 250</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/forttyp.spad#L250">[edit on github]</a></p>
 <p>Create and manipulate a symbol table for generated FORTRAN code</p>
-<dl class="simple" id="l53796d626f6c5461626c652e636f65726365">
-<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f2e636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+<dl class="simple" id="l53796d626f6c5461626c65-636f65726365">
+<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f-636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
 </dd>
 </dl>
 <dl class="simple" id="index-1">
 <dt><span class="spadfun">coerce</span>: % -&gt; <a class="reference internal" href="Table.html#l5461626c65"><span class="std std-ref">Table</span></a>(<a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="FortranType.html#l466f727472616e54797065"><span class="std std-ref">FortranType</span></a>)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(x)</span></code> returns a table view of <code class="docutils literal notranslate"><span class="pre">x</span></code></p>
 </dd>
 </dl>
-<span class="target" id="l53796d626f6c5461626c652e6465636c61726521"></span><dl class="simple" id="index-2">
+<span class="target" id="l53796d626f6c5461626c65-6465636c61726521"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">declare!</span>: (<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="FortranType.html#l466f727472616e54797065"><span class="std std-ref">FortranType</span></a>, %) -&gt; <a class="reference internal" href="FortranType.html#l466f727472616e54797065"><span class="std std-ref">FortranType</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">declare!(l,</span> <span class="pre">t,</span> <span class="pre">tab)</span></code> creates new entrys in tab, declaring each of <code class="docutils literal notranslate"><span class="pre">l</span></code> to be of type <code class="docutils literal notranslate"><span class="pre">t</span></code></p>
 </dd>
 </dl>
@@ -65,39 +65,39 @@
 <dt><span class="spadfun">declare!</span>: (<a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>, <a class="reference internal" href="FortranType.html#l466f727472616e54797065"><span class="std std-ref">FortranType</span></a>, %) -&gt; <a class="reference internal" href="FortranType.html#l466f727472616e54797065"><span class="std std-ref">FortranType</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">declare!(u,</span> <span class="pre">t,</span> <span class="pre">tab)</span></code> creates a new entry in tab, declaring <code class="docutils literal notranslate"><span class="pre">u</span></code> to be of type <code class="docutils literal notranslate"><span class="pre">t</span></code></p>
 </dd>
 </dl>
-<span class="target" id="l53796d626f6c5461626c652e656d707479"></span><dl class="simple" id="index-4">
+<span class="target" id="l53796d626f6c5461626c65-656d707479"></span><dl class="simple" id="index-4">
 <dt><span class="spadfun">empty</span>: () -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">empty()</span></code> returns a new, empty symbol table</p>
 </dd>
 </dl>
-<span class="target" id="l53796d626f6c5461626c652e65787465726e616c4c697374"></span><dl class="simple" id="index-5">
+<span class="target" id="l53796d626f6c5461626c65-65787465726e616c4c697374"></span><dl class="simple" id="index-5">
 <dt><span class="spadfun">externalList</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">externalList(tab)</span></code> returns a list of all the external symbols in <code class="docutils literal notranslate"><span class="pre">tab</span></code></p>
 </dd>
 </dl>
-<span class="target" id="l53796d626f6c5461626c652e666f727472616e547970654f66"></span><dl class="simple" id="index-6">
+<span class="target" id="l53796d626f6c5461626c65-666f727472616e547970654f66"></span><dl class="simple" id="index-6">
 <dt><span class="spadfun">fortranTypeOf</span>: (<a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>, %) -&gt; <a class="reference internal" href="FortranType.html#l466f727472616e54797065"><span class="std std-ref">FortranType</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">fortranTypeOf(u,</span> <span class="pre">tab)</span></code> returns the type of <code class="docutils literal notranslate"><span class="pre">u</span></code> in tab</p>
 </dd>
 </dl>
-<span class="target" id="l53796d626f6c5461626c652e6e6577547970654c69737473"></span><dl class="simple" id="index-7">
+<span class="target" id="l53796d626f6c5461626c65-6e6577547970654c69737473"></span><dl class="simple" id="index-7">
 <dt><span class="spadfun">newTypeLists</span>: % -&gt; <a class="reference internal" href="SExpression.html#l5345787072657373696f6e"><span class="std std-ref">SExpression</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">newTypeLists(x)</span></code> undocumented</p>
 </dd>
 </dl>
-<span class="target" id="l53796d626f6c5461626c652e706172616d65746572734f66"></span><dl class="simple" id="index-8">
+<span class="target" id="l53796d626f6c5461626c65-706172616d65746572734f66"></span><dl class="simple" id="index-8">
 <dt><span class="spadfun">parametersOf</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">parametersOf(tab)</span></code> returns a list of all the symbols declared in <code class="docutils literal notranslate"><span class="pre">tab</span></code></p>
 </dd>
 </dl>
-<span class="target" id="l53796d626f6c5461626c652e7072696e745479706573"></span><dl class="simple" id="index-9">
+<span class="target" id="l53796d626f6c5461626c65-7072696e745479706573"></span><dl class="simple" id="index-9">
 <dt><span class="spadfun">printTypes</span>: % -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">printTypes(tab)</span></code> produces FORTRAN type declarations from <code class="docutils literal notranslate"><span class="pre">tab</span></code>, on the current FORTRAN output stream</p>
 </dd>
 </dl>
-<span class="target" id="l53796d626f6c5461626c652e73796d626f6c5461626c65"></span><dl class="simple" id="index-10">
+<span class="target" id="l53796d626f6c5461626c65-73796d626f6c5461626c65"></span><dl class="simple" id="index-10">
 <dt><span class="spadfun">symbolTable</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> Record(key: <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>, entry: <a class="reference internal" href="FortranType.html#l466f727472616e54797065"><span class="std std-ref">FortranType</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">symbolTable(l)</span></code> creates a symbol table from the elements of <code class="docutils literal notranslate"><span class="pre">l</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l53796d626f6c5461626c652e747970654c697374"></span><dl class="simple" id="index-11">
+<span class="target" id="l53796d626f6c5461626c65-747970654c697374"></span><dl class="simple" id="index-11">
 <dt><span class="spadfun">typeList</span>: (<a class="reference internal" href="FortranScalarType.html#l466f727472616e5363616c617254797065"><span class="std std-ref">FortranScalarType</span></a>, %) -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> Union(name: <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>, bounds: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> Union(S: <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>, P: <a class="reference internal" href="Polynomial.html#l506f6c796e6f6d69616c"><span class="std std-ref">Polynomial</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>))</dt><dd><p><code class="docutils literal notranslate"><span class="pre">typeList(t,</span> <span class="pre">tab)</span></code> returns a list of all the objects of type <code class="docutils literal notranslate"><span class="pre">t</span></code> in tab</p>
 </dd>
 </dl>
-<span class="target" id="l53796d626f6c5461626c652e747970654c69737473"></span><dl class="simple" id="index-12">
+<span class="target" id="l53796d626f6c5461626c65-747970654c69737473"></span><dl class="simple" id="index-12">
 <dt><span class="spadfun">typeLists</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> Union(name: <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>, bounds: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> Union(S: <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>, P: <a class="reference internal" href="Polynomial.html#l506f6c796e6f6d69616c"><span class="std std-ref">Polynomial</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>))</dt><dd><p><code class="docutils literal notranslate"><span class="pre">typeLists(tab)</span></code> returns a list of lists of types of objects in <code class="docutils literal notranslate"><span class="pre">tab</span></code></p>
 </dd>
 </dl>

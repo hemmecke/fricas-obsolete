@@ -47,41 +47,41 @@
             
   <div class="section" id="aggregate">
 <span id="l416767726567617465"></span><span id="index-0"></span><h1>Aggregate<a class="headerlink" href="#aggregate" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/aggcat.spad#L1">aggcat.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/aggcat.spad#L1">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/aggcat.spad#L1">aggcat.spad line 1</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/aggcat.spad#L1">[edit on github]</a></p>
 <p>The notion of aggregate serves to model any data structure aggregate, designating any collection of objects, with heterogeneous or homogeneous members, with a finite or infinite number of members, explicitly or implicitly represented. An aggregate can in principle represent everything from a string of characters to abstract sets such as “the set of <code class="docutils literal notranslate"><span class="pre">x</span></code> satisfying relation <em>r(x)</em>“. An attribute <a class="reference internal" href="finiteAggregate.html#l66696e697465416767726567617465"><span class="std std-ref">finiteAggregate</span></a> is used to assert that a domain has a finite number of elements.</p>
-<span class="target" id="l4167677265676174652e23"></span><dl class="simple" id="index-1">
+<span class="target" id="l416767726567617465-23"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">#</span>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a> if % has <a class="reference internal" href="finiteAggregate.html#l66696e697465416767726567617465"><span class="std std-ref">finiteAggregate</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">\#(u)</span></code> returns the number of elements in <code class="docutils literal notranslate"><span class="pre">u</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l4167677265676174652e636f7079"></span><dl class="simple" id="index-2">
+<span class="target" id="l416767726567617465-636f7079"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">copy</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">copy(u)</span></code> returns a top-level (non-recursive) copy of <code class="docutils literal notranslate"><span class="pre">u</span></code>. Note: for collections, <code class="docutils literal notranslate"><span class="pre">copy(u)</span> <span class="pre">=</span> <span class="pre">[x</span> <span class="pre">for</span> <span class="pre">x</span> <span class="pre">in</span> <span class="pre">u]</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l4167677265676174652e656d7074793f"></span><dl class="simple" id="index-3">
+<span class="target" id="l416767726567617465-656d7074793f"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">empty?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">empty?(u)</span></code> tests if <code class="docutils literal notranslate"><span class="pre">u</span></code> has 0 elements.</p>
 </dd>
 </dl>
-<span class="target" id="l4167677265676174652e656d707479"></span><dl class="simple" id="index-4">
+<span class="target" id="l416767726567617465-656d707479"></span><dl class="simple" id="index-4">
 <dt><span class="spadfun">empty</span>: () -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">empty()</span></code>$<code class="docutils literal notranslate"><span class="pre">D</span></code> creates an aggregate of type <code class="docutils literal notranslate"><span class="pre">D</span></code> with 0 elements. Note: The <em>$D</em> can be dropped if understood by context, e.g. <code class="docutils literal notranslate"><span class="pre">u:</span> <span class="pre">D</span> <span class="pre">:=</span> <span class="pre">empty()</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l4167677265676174652e65713f"></span><dl class="simple" id="index-5">
+<span class="target" id="l416767726567617465-65713f"></span><dl class="simple" id="index-5">
 <dt><span class="spadfun">eq?</span>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">eq?(u,</span> <span class="pre">v)</span></code> tests if <code class="docutils literal notranslate"><span class="pre">u</span></code> and <code class="docutils literal notranslate"><span class="pre">v</span></code> are same objects.</p>
 </dd>
 </dl>
-<span class="target" id="l4167677265676174652e6c6573733f"></span><dl class="simple" id="index-6">
+<span class="target" id="l416767726567617465-6c6573733f"></span><dl class="simple" id="index-6">
 <dt><span class="spadfun">less?</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">less?(u,</span> <span class="pre">n)</span></code> tests if <code class="docutils literal notranslate"><span class="pre">u</span></code> has less than <code class="docutils literal notranslate"><span class="pre">n</span></code> elements.</p>
 </dd>
 </dl>
-<span class="target" id="l4167677265676174652e6d6f72653f"></span><dl class="simple" id="index-7">
+<span class="target" id="l416767726567617465-6d6f72653f"></span><dl class="simple" id="index-7">
 <dt><span class="spadfun">more?</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">more?(u,</span> <span class="pre">n)</span></code> tests if <code class="docutils literal notranslate"><span class="pre">u</span></code> has more than <code class="docutils literal notranslate"><span class="pre">n</span></code> elements.</p>
 </dd>
 </dl>
-<span class="target" id="l4167677265676174652e73616d706c65"></span><dl class="simple" id="index-8">
+<span class="target" id="l416767726567617465-73616d706c65"></span><dl class="simple" id="index-8">
 <dt><span class="spadfun">sample</span>: %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sample</span> <span class="pre">yields</span></code> a value of type %</p>
 </dd>
 </dl>
-<span class="target" id="l4167677265676174652e73697a653f"></span><dl class="simple" id="index-9">
+<span class="target" id="l416767726567617465-73697a653f"></span><dl class="simple" id="index-9">
 <dt><span class="spadfun">size?</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">size?(u,</span> <span class="pre">n)</span></code> tests if <code class="docutils literal notranslate"><span class="pre">u</span></code> has exactly <code class="docutils literal notranslate"><span class="pre">n</span></code> elements.</p>
 </dd>
 </dl>

@@ -47,44 +47,44 @@
             
   <div class="section" id="sceneifs-pt">
 <span id="l5363656e65494653"></span><span id="index-0"></span><h1>SceneIFS PT<a class="headerlink" href="#sceneifs-pt" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/scene.spad#L1837">scene.spad line 1837</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/scene.spad#L1837">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/scene.spad#L1837">scene.spad line 1837</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/scene.spad#L1837">[edit on github]</a></p>
 <ul class="simple">
 <li><p>PT: <a class="reference internal" href="SPointCategory.html#l53506f696e7443617465676f7279"><span class="std std-ref">SPointCategory</span></a></p></li>
 </ul>
 <p>Generates various surfaces (2 dimensional subsets of 3D space). When 1 dimensional subspace (a line) needs to be represented in a 3D editor then we convert the line into a tube. Many of the functions here are from NumericTubePlot and related packages. However <code class="docutils literal notranslate"><span class="pre">I</span></code> needed them to be defined over SPointCategory so <code class="docutils literal notranslate"><span class="pre">I</span></code> adapted them here.</p>
-<span class="target" id="l5363656e654946532e636f65726365"></span><dl class="simple" id="index-1">
+<span class="target" id="l5363656e65494653-636f65726365"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">coerce</span>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(me)</span></code> list this instance to the command line</p>
 </dd>
 </dl>
-<span class="target" id="l5363656e654946532e63757276654c6f6f7073"></span><dl class="simple" id="index-2">
+<span class="target" id="l5363656e65494653-63757276654c6f6f7073"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">curveLoops</span>: (<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> PT, <a class="reference internal" href="DoubleFloat.html#l446f75626c65466c6f6174"><span class="std std-ref">DoubleFloat</span></a>, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> PT</dt><dd><p><code class="docutils literal notranslate"><span class="pre">curveLoops(pts1,</span> <span class="pre">r,</span> <span class="pre">nn)</span></code> generates ifs from line given by <code class="docutils literal notranslate"><span class="pre">pts1</span></code></p>
 </dd>
 </dl>
-<span class="target" id="l5363656e654946532e696e6465786573"></span><dl class="simple" id="index-3">
+<span class="target" id="l5363656e65494653-696e6465786573"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">indexes</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">indexes(me)</span></code> returns indexes into pointList(<code class="docutils literal notranslate"><span class="pre">me</span></code>)</p>
 </dd>
 </dl>
-<span class="target" id="l5363656e654946532e706f696e744c697374"></span><dl class="simple" id="index-4">
+<span class="target" id="l5363656e65494653-706f696e744c697374"></span><dl class="simple" id="index-4">
 <dt><span class="spadfun">pointList</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> PT</dt><dd><p><code class="docutils literal notranslate"><span class="pre">pointList(me)</span></code> returns points at vertices of this mesh.</p>
 </dd>
 </dl>
-<span class="target" id="l5363656e654946532e7369657270696e736b69446976696465"></span><dl class="simple" id="index-5">
+<span class="target" id="l5363656e65494653-7369657270696e736b69446976696465"></span><dl class="simple" id="index-5">
 <dt><span class="spadfun">sierpinskiDivide</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sierpinskiDivide(me,</span> <span class="pre">level)</span></code> for each edge of each face calculate a new point in the centre of the edge, then build a new set of faces which include the new points.</p>
 </dd>
 </dl>
-<span class="target" id="l5363656e654946532e73696e676c6546616365"></span><dl class="simple" id="index-6">
+<span class="target" id="l5363656e65494653-73696e676c6546616365"></span><dl class="simple" id="index-6">
 <dt><span class="spadfun">singleFace</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> PT -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">singleFace(ptin)</span></code> constructs a ifs representation of a face from an array of points</p>
 </dd>
 </dl>
-<span class="target" id="l5363656e654946532e736d657368"></span><dl class="simple" id="index-7">
+<span class="target" id="l5363656e65494653-736d657368"></span><dl class="simple" id="index-7">
 <dt><span class="spadfun">smesh</span>: (<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> PT, <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">smesh(ptin,</span> <span class="pre">clos)</span></code> constructs a ifs representation of a mesh from a 2 dimensional array of points</p>
 </dd>
 </dl>
-<span class="target" id="l5363656e654946532e7374756265"></span><dl class="simple" id="index-8">
+<span class="target" id="l5363656e65494653-7374756265"></span><dl class="simple" id="index-8">
 <dt><span class="spadfun">stube</span>: (<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> Record(source: <a class="reference internal" href="DoubleFloat.html#l446f75626c65466c6f6174"><span class="std std-ref">DoubleFloat</span></a> -&gt; PT, ranges: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Segment.html#l5365676d656e74"><span class="std std-ref">Segment</span></a> <a class="reference internal" href="DoubleFloat.html#l446f75626c65466c6f6174"><span class="std std-ref">DoubleFloat</span></a>, knots: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="DoubleFloat.html#l446f75626c65466c6f6174"><span class="std std-ref">DoubleFloat</span></a>, points: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> PT), <a class="reference internal" href="DoubleFloat.html#l446f75626c65466c6f6174"><span class="std std-ref">DoubleFloat</span></a>, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">stube(functions:</span> <span class="pre">List</span> <span class="pre">Clipd,</span> <span class="pre">r,</span> <span class="pre">n)</span></code> creates a tube of radius <code class="docutils literal notranslate"><span class="pre">r</span></code> around the curve functions.</p>
 </dd>
 </dl>
-<span class="target" id="l5363656e654946532e737562646976696465"></span><dl class="simple" id="index-9">
+<span class="target" id="l5363656e65494653-737562646976696465"></span><dl class="simple" id="index-9">
 <dt><span class="spadfun">subdivide</span>: % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">subdivide(me)</span></code> for each face calculate a new point in the centre of the face, then build a new set of faces which include the new point.</p>
 </dd>
 </dl>

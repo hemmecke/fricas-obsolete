@@ -47,40 +47,40 @@
             
   <div class="section" id="untyped">
 <span id="l556e7479706564"></span><span id="index-0"></span><h1>Untyped<a class="headerlink" href="#untyped" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/computation.spad#L465">computation.spad line 465</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/computation.spad#L465">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/computation.spad#L465">computation.spad line 465</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/computation.spad#L465">[edit on github]</a></p>
 <p>At the moment an untyped variable is represented by a string representing the name of the variable. So why wrap it in a Record structure. The main reason is because <code class="docutils literal notranslate"><span class="pre">I</span></code> am planning to expand this as explained in the text part of this pamphlet. Also it seems like a good idea to keep a similar structure to typed variables. Also <code class="docutils literal notranslate"><span class="pre">I</span></code> could not get it to work unwrapped. <code class="docutils literal notranslate"><span class="pre">I</span></code> vaguely recall that <code class="docutils literal notranslate"><span class="pre">I</span></code> couldn<code class="docutils literal notranslate"><span class="pre">'t</span></code> get the constructor to return an unwrapped value, but it may have been some other issue and that<code class="docutils literal notranslate"><span class="pre">'s</span></code> not the main reason.</p>
-<dl class="simple" id="l556e74797065642e3d">
-<dt><a class="reference internal" href="VarCat.html#l5661724361742e3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="VarCat.html#l566172436174"><span class="std std-ref">VarCat</span></a></p>
+<dl class="simple" id="l556e7479706564-3d">
+<dt><a class="reference internal" href="VarCat.html#l566172436174-3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="VarCat.html#l566172436174"><span class="std std-ref">VarCat</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l556e74797065642e636f65726365">
-<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f2e636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+<dl class="simple" id="l556e7479706564-636f65726365">
+<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f-636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l556e74797065642e6765744e616d65">
-<dt><a class="reference internal" href="VarCat.html#l5661724361742e6765744e616d65"><span class="std std-ref">getName</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="VarCat.html#l566172436174"><span class="std std-ref">VarCat</span></a></p>
+<dl class="simple" id="l556e7479706564-6765744e616d65">
+<dt><a class="reference internal" href="VarCat.html#l566172436174-6765744e616d65"><span class="std std-ref">getName</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="VarCat.html#l566172436174"><span class="std std-ref">VarCat</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l556e74797065642e67657454797065">
-<dt><a class="reference internal" href="VarCat.html#l5661724361742e67657454797065"><span class="std std-ref">getType</span></a>: % -&gt; <a class="reference internal" href="ILogic.html#l494c6f676963"><span class="std std-ref">ILogic</span></a></dt><dd><p>from <a class="reference internal" href="VarCat.html#l566172436174"><span class="std std-ref">VarCat</span></a></p>
+<dl class="simple" id="l556e7479706564-67657454797065">
+<dt><a class="reference internal" href="VarCat.html#l566172436174-67657454797065"><span class="std std-ref">getType</span></a>: % -&gt; <a class="reference internal" href="ILogic.html#l494c6f676963"><span class="std std-ref">ILogic</span></a></dt><dd><p>from <a class="reference internal" href="VarCat.html#l566172436174"><span class="std std-ref">VarCat</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l556e74797065642e7061727365566172">
-<dt><a class="reference internal" href="VarCat.html#l5661724361742e7061727365566172"><span class="std std-ref">parseVar</span></a>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p>from <a class="reference internal" href="VarCat.html#l566172436174"><span class="std std-ref">VarCat</span></a></p>
+<dl class="simple" id="l556e7479706564-7061727365566172">
+<dt><a class="reference internal" href="VarCat.html#l566172436174-7061727365566172"><span class="std std-ref">parseVar</span></a>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p>from <a class="reference internal" href="VarCat.html#l566172436174"><span class="std std-ref">VarCat</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l556e74797065642e70617273655661725465726d">
-<dt><a class="reference internal" href="VarCat.html#l5661724361742e70617273655661725465726d"><span class="std std-ref">parseVarTerm</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; Record(rft: %, pout: <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>)</dt><dd><p>from <a class="reference internal" href="VarCat.html#l566172436174"><span class="std std-ref">VarCat</span></a></p>
+<dl class="simple" id="l556e7479706564-70617273655661725465726d">
+<dt><a class="reference internal" href="VarCat.html#l566172436174-70617273655661725465726d"><span class="std std-ref">parseVarTerm</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; Record(rft: %, pout: <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>)</dt><dd><p>from <a class="reference internal" href="VarCat.html#l566172436174"><span class="std std-ref">VarCat</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l556e74797065642e746f537472696e67">
-<dt><a class="reference internal" href="VarCat.html#l5661724361742e746f537472696e67"><span class="std std-ref">toString</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="VarCat.html#l566172436174"><span class="std std-ref">VarCat</span></a></p>
+<dl class="simple" id="l556e7479706564-746f537472696e67">
+<dt><a class="reference internal" href="VarCat.html#l566172436174-746f537472696e67"><span class="std std-ref">toString</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="VarCat.html#l566172436174"><span class="std std-ref">VarCat</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l556e74797065642e766172">
-<dt><a class="reference internal" href="VarCat.html#l5661724361742e766172"><span class="std std-ref">var</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="ILogic.html#l494c6f676963"><span class="std std-ref">ILogic</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="VarCat.html#l566172436174"><span class="std std-ref">VarCat</span></a></p>
+<dl class="simple" id="l556e7479706564-766172">
+<dt><a class="reference internal" href="VarCat.html#l566172436174-766172"><span class="std std-ref">var</span></a>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="ILogic.html#l494c6f676963"><span class="std std-ref">ILogic</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="VarCat.html#l566172436174"><span class="std std-ref">VarCat</span></a></p>
 </dd>
-<dt><a class="reference internal" href="VarCat.html#l5661724361742e766172"><span class="std std-ref">var</span></a>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p>from <a class="reference internal" href="VarCat.html#l566172436174"><span class="std std-ref">VarCat</span></a></p>
+<dt><a class="reference internal" href="VarCat.html#l566172436174-766172"><span class="std std-ref">var</span></a>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p>from <a class="reference internal" href="VarCat.html#l566172436174"><span class="std std-ref">VarCat</span></a></p>
 </dd>
 </dl>
 <p><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>

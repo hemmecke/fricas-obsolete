@@ -47,20 +47,20 @@
             
   <div class="section" id="tangentexpansions-r">
 <span id="l54616e67656e74457870616e73696f6e73"></span><span id="index-0"></span><h1>TangentExpansions R<a class="headerlink" href="#tangentexpansions-r" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/efstruc.spad#L28">efstruc.spad line 28</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/efstruc.spad#L28">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/efstruc.spad#L28">efstruc.spad line 28</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/efstruc.spad#L28">[edit on github]</a></p>
 <ul class="simple">
 <li><p>R: <a class="reference internal" href="Field.html#l4669656c64"><span class="std std-ref">Field</span></a></p></li>
 </ul>
 <p>Expands tangents of sums and scalar products.</p>
-<span class="target" id="l54616e67656e74457870616e73696f6e732e74616e416e"></span><dl class="simple" id="index-1">
+<span class="target" id="l54616e67656e74457870616e73696f6e73-74616e416e"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">tanAn</span>: (R, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">tanAn(a,</span> <span class="pre">n)</span></code> returns <code class="docutils literal notranslate"><span class="pre">P(x)</span></code> such that if <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">tan(u)</span></code> then <code class="docutils literal notranslate"><span class="pre">P(tan(u/n))</span> <span class="pre">=</span> <span class="pre">0</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l54616e67656e74457870616e73696f6e732e74616e4e61"></span><dl class="simple" id="index-2">
+<span class="target" id="l54616e67656e74457870616e73696f6e73-74616e4e61"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">tanNa</span>: (R, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">tanNa(a,</span> <span class="pre">n)</span></code> returns <code class="docutils literal notranslate"><span class="pre">f(a)</span></code> such that if <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">tan(u)</span></code> then <code class="docutils literal notranslate"><span class="pre">f(a)</span> <span class="pre">=</span> <span class="pre">tan(n</span> <span class="pre">*</span> <span class="pre">u)</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l54616e67656e74457870616e73696f6e732e74616e53756d"></span><dl class="simple" id="index-3">
+<span class="target" id="l54616e67656e74457870616e73696f6e73-74616e53756d"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">tanSum</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> R -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">tanSum([a1,</span> <span class="pre">...,</span> <span class="pre">an])</span></code> returns <code class="docutils literal notranslate"><span class="pre">f(a1,</span> <span class="pre">...,</span> <span class="pre">an)</span></code> such that if <code class="docutils literal notranslate"><span class="pre">ai</span> <span class="pre">=</span> <span class="pre">tan(ui)</span></code> then <code class="docutils literal notranslate"><span class="pre">f(a1,</span> <span class="pre">...,</span> <span class="pre">an)</span> <span class="pre">=</span> <span class="pre">tan(u1</span> <span class="pre">+</span> <span class="pre">...</span> <span class="pre">+</span> <span class="pre">un)</span></code>.</p>
 </dd>
 </dl>

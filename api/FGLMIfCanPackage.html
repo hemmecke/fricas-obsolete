@@ -47,21 +47,21 @@
             
   <div class="section" id="fglmifcanpackage-r-ls">
 <span id="l46474c4d496643616e5061636b616765"></span><span id="index-0"></span><h1>FGLMIfCanPackage(R, ls)<a class="headerlink" href="#fglmifcanpackage-r-ls" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/zerodim.spad#L1">zerodim.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/zerodim.spad#L1">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/zerodim.spad#L1">zerodim.spad line 1</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/zerodim.spad#L1">[edit on github]</a></p>
 <ul class="simple">
 <li><p>R: <a class="reference internal" href="GcdDomain.html#l476364446f6d61696e"><span class="std std-ref">GcdDomain</span></a></p></li>
 <li><p>ls: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a></p></li>
 </ul>
 <p>This is just an interface between several packages and domains. The goal is to compute lexicographical Groebner bases of sets of polynomial with type Polynomial R by the <em>FGLM</em> algorithm if this is possible (i.e. if the input system generates a zero-dimensional ideal).</p>
-<span class="target" id="l46474c4d496643616e5061636b6167652e66676c6d496643616e"></span><dl class="simple" id="index-1">
+<span class="target" id="l46474c4d496643616e5061636b616765-66676c6d496643616e"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">fglmIfCan</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Polynomial.html#l506f6c796e6f6d69616c"><span class="std std-ref">Polynomial</span></a> R -&gt; Union(<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Polynomial.html#l506f6c796e6f6d69616c"><span class="std std-ref">Polynomial</span></a> R, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">fglmIfCan(lq1)</span></code> returns the lexicographical Groebner basis of <code class="docutils literal notranslate"><span class="pre">lq1</span></code> by using the <em>FGLM</em> strategy, if <code class="docutils literal notranslate"><span class="pre">zeroDimensional?(lq1)</span></code> holds.</p>
 </dd>
 </dl>
-<span class="target" id="l46474c4d496643616e5061636b6167652e67726f65626e6572"></span><dl class="simple" id="index-2">
+<span class="target" id="l46474c4d496643616e5061636b616765-67726f65626e6572"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">groebner</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Polynomial.html#l506f6c796e6f6d69616c"><span class="std std-ref">Polynomial</span></a> R -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Polynomial.html#l506f6c796e6f6d69616c"><span class="std std-ref">Polynomial</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">groebner(lq1)</span></code> returns the lexicographical Groebner basis of <code class="docutils literal notranslate"><span class="pre">lq1</span></code>. If <code class="docutils literal notranslate"><span class="pre">lq1</span></code> generates a zero-dimensional ideal then the <em>FGLM</em> strategy is used, otherwise the <em>Sugar</em> strategy is used.</p>
 </dd>
 </dl>
-<span class="target" id="l46474c4d496643616e5061636b6167652e7a65726f44696d656e73696f6e616c3f"></span><dl class="simple" id="index-3">
+<span class="target" id="l46474c4d496643616e5061636b616765-7a65726f44696d656e73696f6e616c3f"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">zeroDimensional?</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Polynomial.html#l506f6c796e6f6d69616c"><span class="std std-ref">Polynomial</span></a> R -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">zeroDimensional?(lq1)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> iff <code class="docutils literal notranslate"><span class="pre">lq1</span></code> generates a zero-dimensional ideal <code class="docutils literal notranslate"><span class="pre">w</span></code>.<code class="docutils literal notranslate"><span class="pre">r</span></code>.<code class="docutils literal notranslate"><span class="pre">t</span></code>. the variables of <code class="docutils literal notranslate"><span class="pre">ls</span></code>.</p>
 </dd>
 </dl>

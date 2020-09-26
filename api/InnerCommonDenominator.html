@@ -47,7 +47,7 @@
             
   <div class="section" id="innercommondenominator-r-q-a-b">
 <span id="l496e6e6572436f6d6d6f6e44656e6f6d696e61746f72"></span><span id="index-0"></span><h1>InnerCommonDenominator(R, Q, A, B)<a class="headerlink" href="#innercommondenominator-r-q-a-b" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/cden.spad#L1">cden.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/cden.spad#L1">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/cden.spad#L1">cden.spad line 1</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/cden.spad#L1">[edit on github]</a></p>
 <ul class="simple">
 <li><p>R: <a class="reference internal" href="IntegralDomain.html#l496e74656772616c446f6d61696e"><span class="std std-ref">IntegralDomain</span></a></p></li>
 <li><p>Q: <a class="reference internal" href="QuotientFieldCategory.html#l51756f7469656e744669656c6443617465676f7279"><span class="std std-ref">QuotientFieldCategory</span></a> R</p></li>
@@ -55,15 +55,15 @@
 <li><p>B: Join(<a class="reference internal" href="LinearAggregate.html#l4c696e656172416767726567617465"><span class="std std-ref">LinearAggregate</span></a> Q, <a class="reference internal" href="finiteAggregate.html#l66696e697465416767726567617465"><span class="std std-ref">finiteAggregate</span></a>)</p></li>
 </ul>
 <p>InnerCommonDenominator provides functions to compute the common denominator of a finite linear aggregate of elements of the quotient field of an integral domain.</p>
-<span class="target" id="l496e6e6572436f6d6d6f6e44656e6f6d696e61746f722e636c65617244656e6f6d696e61746f72"></span><dl class="simple" id="index-1">
+<span class="target" id="l496e6e6572436f6d6d6f6e44656e6f6d696e61746f72-636c65617244656e6f6d696e61746f72"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">clearDenominator</span>: B -&gt; A</dt><dd><p><code class="docutils literal notranslate"><span class="pre">clearDenominator([q1,</span> <span class="pre">...,</span> <span class="pre">qn])</span></code> returns <code class="docutils literal notranslate"><span class="pre">[p1,</span> <span class="pre">...,</span> <span class="pre">pn]</span></code> such that <code class="docutils literal notranslate"><span class="pre">qi</span> <span class="pre">=</span> <span class="pre">pi/d</span></code> where <code class="docutils literal notranslate"><span class="pre">d</span></code> is a common denominator for the <code class="docutils literal notranslate"><span class="pre">qi</span></code><code class="docutils literal notranslate"><span class="pre">'s</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l496e6e6572436f6d6d6f6e44656e6f6d696e61746f722e636f6d6d6f6e44656e6f6d696e61746f72"></span><dl class="simple" id="index-2">
+<span class="target" id="l496e6e6572436f6d6d6f6e44656e6f6d696e61746f72-636f6d6d6f6e44656e6f6d696e61746f72"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">commonDenominator</span>: B -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">commonDenominator([q1,</span> <span class="pre">...,</span> <span class="pre">qn])</span></code> returns a common denominator <code class="docutils literal notranslate"><span class="pre">d</span></code> for <code class="docutils literal notranslate"><span class="pre">q1</span></code>, …, <code class="docutils literal notranslate"><span class="pre">qn</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l496e6e6572436f6d6d6f6e44656e6f6d696e61746f722e73706c697444656e6f6d696e61746f72"></span><dl class="simple" id="index-3">
+<span class="target" id="l496e6e6572436f6d6d6f6e44656e6f6d696e61746f72-73706c697444656e6f6d696e61746f72"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">splitDenominator</span>: B -&gt; Record(num: A, den: R)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">splitDenominator([q1,</span> <span class="pre">...,</span> <span class="pre">qn])</span></code> returns <code class="docutils literal notranslate"><span class="pre">[[p1,</span> <span class="pre">...,</span> <span class="pre">pn],</span> <span class="pre">d]</span></code> such that <code class="docutils literal notranslate"><span class="pre">qi</span> <span class="pre">=</span> <span class="pre">pi/d</span></code> and <code class="docutils literal notranslate"><span class="pre">d</span></code> is a common denominator for the <code class="docutils literal notranslate"><span class="pre">qi</span></code><code class="docutils literal notranslate"><span class="pre">'s</span></code>.</p>
 </dd>
 </dl>

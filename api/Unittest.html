@@ -47,53 +47,53 @@
             
   <div class="section" id="unittest">
 <span id="l556e697474657374"></span><span id="index-0"></span><h1>Unittest<a class="headerlink" href="#unittest" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/unittest.spad#L659">unittest.spad line 659</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/unittest.spad#L659">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/unittest.spad#L659">unittest.spad line 659</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/unittest.spad#L659">[edit on github]</a></p>
 <p>Unittest is a package that provides functions for regression testing. Note that it calls the interpreter, thus, all functions require that their arguments be passed as strings.</p>
-<span class="target" id="l556e6974746573742e74657374436f6d706c6578457175616c73"></span><dl class="simple" id="index-1">
+<span class="target" id="l556e697474657374-74657374436f6d706c6578457175616c73"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">testComplexEquals</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">testComplexEquals(ex1,</span> <span class="pre">ex2)</span></code> states that <code class="docutils literal notranslate"><span class="pre">ex1</span></code> and <code class="docutils literal notranslate"><span class="pre">ex2</span></code> should be approximately equal as complex numbers, taking into acount <span class="spadfun">testAbsolutePrecision</span> and <span class="spadfun">testRelativePrecision</span>.</p>
 </dd>
 </dl>
-<span class="target" id="l556e6974746573742e74657374457175616c73"></span><dl class="simple" id="index-2">
+<span class="target" id="l556e697474657374-74657374457175616c73"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">testEquals</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">testEquals(ex1,</span> <span class="pre">ex2)</span></code> states that <code class="docutils literal notranslate"><span class="pre">ex1</span></code> and <code class="docutils literal notranslate"><span class="pre">ex2</span></code> should be equal. To sidestep the possibility that the equality function of the domain <code class="docutils literal notranslate"><span class="pre">R</span></code> performs some simplifications, we convert <code class="docutils literal notranslate"><span class="pre">ex1</span></code> and <code class="docutils literal notranslate"><span class="pre">ex2</span></code> to <code class="docutils literal notranslate"><span class="pre">InputForm</span></code>, if possible.</p>
 </dd>
 </dl>
-<span class="target" id="l556e6974746573742e746573744c6962726172794572726f72"></span><dl class="simple" id="index-3">
+<span class="target" id="l556e697474657374-746573744c6962726172794572726f72"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">testLibraryError</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">testLibraryError</span> <span class="pre">ex</span></code> states that ex should throw an error. Such a test will never count as a fatal error.</p>
 </dd>
 </dl>
-<span class="target" id="l556e6974746573742e746573744e6f74457175616c73"></span><dl class="simple" id="index-4">
+<span class="target" id="l556e697474657374-746573744e6f74457175616c73"></span><dl class="simple" id="index-4">
 <dt><span class="spadfun">testNotEquals</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">testNotEquals(ex1,</span> <span class="pre">ex2)</span></code> states that <code class="docutils literal notranslate"><span class="pre">ex1</span></code> and <code class="docutils literal notranslate"><span class="pre">ex2</span></code> should be different.</p>
 </dd>
 </dl>
-<span class="target" id="l556e6974746573742e746573745265616c457175616c73"></span><dl class="simple" id="index-5">
+<span class="target" id="l556e697474657374-746573745265616c457175616c73"></span><dl class="simple" id="index-5">
 <dt><span class="spadfun">testRealEquals</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">testRealEquals(ex1,</span> <span class="pre">ex2)</span></code> states that <code class="docutils literal notranslate"><span class="pre">ex1</span></code> and <code class="docutils literal notranslate"><span class="pre">ex2</span></code> should be approximately equal as real numbers, taking into acount <span class="spadfun">testAbsolutePrecision</span> and <span class="spadfun">testRelativePrecision</span>.</p>
 </dd>
 </dl>
-<span class="target" id="l556e6974746573742e7465737454727565"></span><dl class="simple" id="index-6">
+<span class="target" id="l556e697474657374-7465737454727565"></span><dl class="simple" id="index-6">
 <dt><span class="spadfun">testTrue</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">testTrue</span> <span class="pre">ex</span></code> states that ex should be <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l556e6974746573742e786674657374436f6d706c6578457175616c73"></span><dl class="simple" id="index-7">
+<span class="target" id="l556e697474657374-786674657374436f6d706c6578457175616c73"></span><dl class="simple" id="index-7">
 <dt><span class="spadfun">xftestComplexEquals</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>like testComplexEquals, but expects failure.</p>
 </dd>
 </dl>
-<span class="target" id="l556e6974746573742e786674657374457175616c73"></span><dl class="simple" id="index-8">
+<span class="target" id="l556e697474657374-786674657374457175616c73"></span><dl class="simple" id="index-8">
 <dt><span class="spadfun">xftestEquals</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>like testEquals, but expects failure.</p>
 </dd>
 </dl>
-<span class="target" id="l556e6974746573742e7866746573744c6962726172794572726f72"></span><dl class="simple" id="index-9">
+<span class="target" id="l556e697474657374-7866746573744c6962726172794572726f72"></span><dl class="simple" id="index-9">
 <dt><span class="spadfun">xftestLibraryError</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>like testLibraryError, but expects failure.</p>
 </dd>
 </dl>
-<span class="target" id="l556e6974746573742e7866746573744e6f74457175616c73"></span><dl class="simple" id="index-10">
+<span class="target" id="l556e697474657374-7866746573744e6f74457175616c73"></span><dl class="simple" id="index-10">
 <dt><span class="spadfun">xftestNotEquals</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>like testNotEquals, but expects failure.</p>
 </dd>
 </dl>
-<span class="target" id="l556e6974746573742e7866746573745265616c457175616c73"></span><dl class="simple" id="index-11">
+<span class="target" id="l556e697474657374-7866746573745265616c457175616c73"></span><dl class="simple" id="index-11">
 <dt><span class="spadfun">xftestRealEquals</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>like testRealEquals, but expects failure.</p>
 </dd>
 </dl>
-<span class="target" id="l556e6974746573742e78667465737454727565"></span><dl class="simple" id="index-12">
+<span class="target" id="l556e697474657374-78667465737454727565"></span><dl class="simple" id="index-12">
 <dt><span class="spadfun">xftestTrue</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>like testTrue, but expects failure.</p>
 </dd>
 </dl>

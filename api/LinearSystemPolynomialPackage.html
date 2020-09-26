@@ -47,7 +47,7 @@
             
   <div class="section" id="linearsystempolynomialpackage-r-e-ov-p">
 <span id="l4c696e65617253797374656d506f6c796e6f6d69616c5061636b616765"></span><span id="index-0"></span><h1>LinearSystemPolynomialPackage(R, E, OV, P)<a class="headerlink" href="#linearsystempolynomialpackage-r-e-ov-p" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/solvelin.spad#L154">solvelin.spad line 154</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/solvelin.spad#L154">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/solvelin.spad#L154">solvelin.spad line 154</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/solvelin.spad#L154">[edit on github]</a></p>
 <ul class="simple">
 <li><p>R: <a class="reference internal" href="IntegralDomain.html#l496e74656772616c446f6d61696e"><span class="std std-ref">IntegralDomain</span></a></p></li>
 <li><p>E: <a class="reference internal" href="OrderedAbelianMonoidSup.html#l4f7264657265644162656c69616e4d6f6e6f6964537570"><span class="std std-ref">OrderedAbelianMonoidSup</span></a></p></li>
@@ -55,11 +55,11 @@
 <li><p>P: <a class="reference internal" href="PolynomialCategory.html#l506f6c796e6f6d69616c43617465676f7279"><span class="std std-ref">PolynomialCategory</span></a>(R, E, OV)</p></li>
 </ul>
 <p>this package finds the solutions of linear systems presented as a list of polynomials.</p>
-<span class="target" id="l4c696e65617253797374656d506f6c796e6f6d69616c5061636b6167652e696e746f4d6174726978"></span><dl class="simple" id="index-1">
+<span class="target" id="l4c696e65617253797374656d506f6c796e6f6d69616c5061636b616765-696e746f4d6174726978"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">intoMatrix</span>: (<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> P, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> OV) -&gt; Record(mat: <a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> P, vec: <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> P)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">intoMatrix(lp,</span> <span class="pre">lvar)</span></code> converts linear in symbols lvar system of polynomials <code class="docutils literal notranslate"><span class="pre">lp</span></code> = 0 into matrix form</p>
 </dd>
 </dl>
-<span class="target" id="l4c696e65617253797374656d506f6c796e6f6d69616c5061636b6167652e6c696e536f6c7665"></span><dl class="simple" id="index-2">
+<span class="target" id="l4c696e65617253797374656d506f6c796e6f6d69616c5061636b616765-6c696e536f6c7665"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">linSolve</span>: (<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> P, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> OV) -&gt; Record(particular: Union(<a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> P, failed), basis: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> P)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">linSolve(lp,</span> <span class="pre">lvar)</span></code> finds the solutions of the linear system of polynomials <code class="docutils literal notranslate"><span class="pre">lp</span></code> = 0 with respect to the list of symbols lvar.</p>
 </dd>
 </dl>

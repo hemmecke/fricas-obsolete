@@ -47,10 +47,10 @@
             
   <div class="section" id="fortranmatrixfunctioncategory">
 <span id="l466f727472616e4d617472697846756e6374696f6e43617465676f7279"></span><span id="index-0"></span><h1>FortranMatrixFunctionCategory<a class="headerlink" href="#fortranmatrixfunctioncategory" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/fortcat.spad#L139">fortcat.spad line 139</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/fortcat.spad#L139">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/fortcat.spad#L139">fortcat.spad line 139</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/fortcat.spad#L139">[edit on github]</a></p>
 <p><a class="reference internal" href="#l466f727472616e4d617472697846756e6374696f6e43617465676f7279"><span class="std std-ref">FortranMatrixFunctionCategory</span></a> provides support for producing Functions and Subroutines representing matrices of expressions.</p>
-<dl class="simple" id="l466f727472616e4d617472697846756e6374696f6e43617465676f72792e636f65726365">
-<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f2e636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+<dl class="simple" id="l466f727472616e4d617472697846756e6374696f6e43617465676f7279-636f65726365">
+<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f-636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
 </dd>
 </dl>
 <dl class="simple" id="index-1">
@@ -65,11 +65,11 @@
 <dt><span class="spadfun">coerce</span>: Record(localSymbols: <a class="reference internal" href="SymbolTable.html#l53796d626f6c5461626c65"><span class="std std-ref">SymbolTable</span></a>, code: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="FortranCode.html#l466f727472616e436f6465"><span class="std std-ref">FortranCode</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(e)</span></code> takes the component of <code class="docutils literal notranslate"><span class="pre">e</span></code> from List FortranCode and uses it as the body of the ASP, making the declarations in the <a class="reference internal" href="SymbolTable.html#l53796d626f6c5461626c65"><span class="std std-ref">SymbolTable</span></a> component.</p>
 </dd>
 </dl>
-<dl class="simple" id="l466f727472616e4d617472697846756e6374696f6e43617465676f72792e6f75747075744173466f727472616e">
-<dt><a class="reference internal" href="FortranProgramCategory.html#l466f727472616e50726f6772616d43617465676f72792e6f75747075744173466f727472616e"><span class="std std-ref">outputAsFortran</span></a>: % -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>from <a class="reference internal" href="FortranProgramCategory.html#l466f727472616e50726f6772616d43617465676f7279"><span class="std std-ref">FortranProgramCategory</span></a></p>
+<dl class="simple" id="l466f727472616e4d617472697846756e6374696f6e43617465676f7279-6f75747075744173466f727472616e">
+<dt><a class="reference internal" href="FortranProgramCategory.html#l466f727472616e50726f6772616d43617465676f7279-6f75747075744173466f727472616e"><span class="std std-ref">outputAsFortran</span></a>: % -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>from <a class="reference internal" href="FortranProgramCategory.html#l466f727472616e50726f6772616d43617465676f7279"><span class="std std-ref">FortranProgramCategory</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l466f727472616e4d617472697846756e6374696f6e43617465676f72792e72657472616374"></span><dl class="simple" id="index-4">
+<span class="target" id="l466f727472616e4d617472697846756e6374696f6e43617465676f7279-72657472616374"></span><dl class="simple" id="index-4">
 <dt><span class="spadfun">retract</span>: <a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="Expression.html#l45787072657373696f6e"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Float.html#l466c6f6174"><span class="std std-ref">Float</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">retract(e)</span></code> tries to convert <code class="docutils literal notranslate"><span class="pre">e</span></code> into an ASP, checking that legal Fortran-77 is produced.</p>
 </dd>
 </dl>
@@ -93,7 +93,7 @@
 <dt><span class="spadfun">retract</span>: <a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="Polynomial.html#l506f6c796e6f6d69616c"><span class="std std-ref">Polynomial</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">retract(e)</span></code> tries to convert <code class="docutils literal notranslate"><span class="pre">e</span></code> into an ASP, checking that legal Fortran-77 is produced.</p>
 </dd>
 </dl>
-<span class="target" id="l466f727472616e4d617472697846756e6374696f6e43617465676f72792e72657472616374496643616e"></span><dl class="simple" id="index-10">
+<span class="target" id="l466f727472616e4d617472697846756e6374696f6e43617465676f7279-72657472616374496643616e"></span><dl class="simple" id="index-10">
 <dt><span class="spadfun">retractIfCan</span>: <a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> <a class="reference internal" href="Expression.html#l45787072657373696f6e"><span class="std std-ref">Expression</span></a> <a class="reference internal" href="Float.html#l466c6f6174"><span class="std std-ref">Float</span></a> -&gt; Union(%, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">retractIfCan(e)</span></code> tries to convert <code class="docutils literal notranslate"><span class="pre">e</span></code> into an ASP, checking that legal Fortran-77 is produced.</p>
 </dd>
 </dl>

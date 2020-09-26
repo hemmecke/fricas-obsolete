@@ -47,25 +47,25 @@
             
   <div class="section" id="mappingpackage2-a-c">
 <span id="l4d617070696e675061636b61676532"></span><span id="index-0"></span><h1>MappingPackage2(A, C)<a class="headerlink" href="#mappingpackage2-a-c" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/mappkg.spad#L108">mappkg.spad line 108</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/mappkg.spad#L108">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/mappkg.spad#L108">mappkg.spad line 108</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/mappkg.spad#L108">[edit on github]</a></p>
 <ul class="simple">
 <li><p>A: <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p></li>
 <li><p>C: <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p></li>
 </ul>
 <p>various Currying operations.</p>
-<span class="target" id="l4d617070696e675061636b616765322e636f6e7374"></span><dl class="simple" id="index-1">
+<span class="target" id="l4d617070696e675061636b61676532-636f6e7374"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">const</span>: C -&gt; A -&gt; C</dt><dd><p><code class="docutils literal notranslate"><span class="pre">const</span> <span class="pre">c</span></code> is a function which produces <code class="docutils literal notranslate"><span class="pre">c</span></code> when applied to its argument.</p>
 </dd>
 </dl>
-<span class="target" id="l4d617070696e675061636b616765322e636f6e7374616e74"></span><dl class="simple" id="index-2">
+<span class="target" id="l4d617070696e675061636b61676532-636f6e7374616e74"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">constant</span>: (() -&gt; C) -&gt; A -&gt; C</dt><dd><p><code class="docutils literal notranslate"><span class="pre">constant(f)</span></code> is the function <code class="docutils literal notranslate"><span class="pre">g</span></code> such that <code class="docutils literal notranslate"><span class="pre">g</span> <span class="pre">a=</span> <span class="pre">f</span> <span class="pre">()</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l4d617070696e675061636b616765322e6375727279"></span><dl class="simple" id="index-3">
+<span class="target" id="l4d617070696e675061636b61676532-6375727279"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">curry</span>: (A -&gt; C, A) -&gt; () -&gt; C</dt><dd><p><code class="docutils literal notranslate"><span class="pre">curry(f,</span> <span class="pre">a)</span></code> is the function <code class="docutils literal notranslate"><span class="pre">g</span></code> such that <code class="docutils literal notranslate"><span class="pre">g</span> <span class="pre">()=</span> <span class="pre">f</span> <span class="pre">a</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l4d617070696e675061636b616765322e64696167"></span><dl class="simple" id="index-4">
+<span class="target" id="l4d617070696e675061636b61676532-64696167"></span><dl class="simple" id="index-4">
 <dt><span class="spadfun">diag</span>: ((A, A) -&gt; C) -&gt; A -&gt; C</dt><dd><p><code class="docutils literal notranslate"><span class="pre">diag(f)</span></code> is the function <code class="docutils literal notranslate"><span class="pre">g</span></code> such that <code class="docutils literal notranslate"><span class="pre">g</span> <span class="pre">a</span> <span class="pre">=</span> <span class="pre">f(a,</span> <span class="pre">a)</span></code>.</p>
 </dd>
 </dl>

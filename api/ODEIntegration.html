@@ -47,21 +47,21 @@
             
   <div class="section" id="odeintegration-r-f">
 <span id="l4f4445496e746567726174696f6e"></span><span id="index-0"></span><h1>ODEIntegration(R, F)<a class="headerlink" href="#odeintegration-r-f" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/oderf.spad#L599">oderf.spad line 599</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/oderf.spad#L599">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/oderf.spad#L599">oderf.spad line 599</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/oderf.spad#L599">[edit on github]</a></p>
 <ul class="simple">
 <li><p>R: Join(<a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a>, <a class="reference internal" href="PolynomialFactorizationExplicit.html#l506f6c796e6f6d69616c466163746f72697a6174696f6e4578706c69636974"><span class="std std-ref">PolynomialFactorizationExplicit</span></a>, <a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f"><span class="std std-ref">RetractableTo</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="LinearlyExplicitOver.html#l4c696e6561726c794578706c696369744f766572"><span class="std std-ref">LinearlyExplicitOver</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="CharacteristicZero.html#l43686172616374657269737469635a65726f"><span class="std std-ref">CharacteristicZero</span></a>)</p></li>
 <li><p>F: Join(<a class="reference internal" href="AlgebraicallyClosedFunctionSpace.html#l416c67656272616963616c6c79436c6f73656446756e6374696f6e5370616365"><span class="std std-ref">AlgebraicallyClosedFunctionSpace</span></a> R, <a class="reference internal" href="TranscendentalFunctionCategory.html#l5472616e7363656e64656e74616c46756e6374696f6e43617465676f7279"><span class="std std-ref">TranscendentalFunctionCategory</span></a>, <a class="reference internal" href="PrimitiveFunctionCategory.html#l5072696d697469766546756e6374696f6e43617465676f7279"><span class="std std-ref">PrimitiveFunctionCategory</span></a>)</p></li>
 </ul>
 <p><a class="reference internal" href="#l4f4445496e746567726174696f6e"><span class="std std-ref">ODEIntegration</span></a> provides an interface to the integrator. This package is intended for use by the differential equations solver but not at top-level.</p>
-<span class="target" id="l4f4445496e746567726174696f6e2e64696666"></span><dl class="simple" id="index-1">
+<span class="target" id="l4f4445496e746567726174696f6e-64696666"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">diff</span>: <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a> -&gt; F -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">diff(x)</span></code> returns the derivation with respect to <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l4f4445496e746567726174696f6e2e657870696e74"></span><dl class="simple" id="index-2">
+<span class="target" id="l4f4445496e746567726174696f6e-657870696e74"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">expint</span>: (F, <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>) -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">expint(f,</span> <span class="pre">x)</span></code> returns e^{the integral of <code class="docutils literal notranslate"><span class="pre">f</span></code> with respect to <code class="docutils literal notranslate"><span class="pre">x</span></code>}.</p>
 </dd>
 </dl>
-<span class="target" id="l4f4445496e746567726174696f6e2e696e74"></span><dl class="simple" id="index-3">
+<span class="target" id="l4f4445496e746567726174696f6e-696e74"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">int</span>: (F, <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>) -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">int(f,</span> <span class="pre">x)</span></code> returns the integral of <code class="docutils literal notranslate"><span class="pre">f</span></code> with respect to <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
 </dd>
 </dl>

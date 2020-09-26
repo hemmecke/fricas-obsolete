@@ -47,24 +47,24 @@
             
   <div class="section" id="anyfunctions1-s">
 <span id="l416e7946756e6374696f6e7331"></span><span id="index-0"></span><h1>AnyFunctions1 S<a class="headerlink" href="#anyfunctions1-s" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/any.spad#L125">any.spad line 125</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/any.spad#L125">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/any.spad#L125">any.spad line 125</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/any.spad#L125">[edit on github]</a></p>
 <ul class="simple">
 <li><p>S: <a class="reference internal" href="Type.html#l54797065"><span class="std std-ref">Type</span></a></p></li>
 </ul>
 <p><a class="reference internal" href="#l416e7946756e6374696f6e7331"><span class="std std-ref">AnyFunctions1</span></a> implements several utility functions for working with <a class="reference internal" href="Any.html#l416e79"><span class="std std-ref">Any</span></a>. These functions are used to go back and forth between objects of <a class="reference internal" href="Any.html#l416e79"><span class="std std-ref">Any</span></a> and objects of other types.</p>
-<span class="target" id="l416e7946756e6374696f6e73312e636f65726365"></span><dl class="simple" id="index-1">
+<span class="target" id="l416e7946756e6374696f6e7331-636f65726365"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">coerce</span>: S -&gt; <a class="reference internal" href="Any.html#l416e79"><span class="std std-ref">Any</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(s)</span></code> creates an object of <a class="reference internal" href="Any.html#l416e79"><span class="std std-ref">Any</span></a> from the object <code class="docutils literal notranslate"><span class="pre">s</span></code> of type <code class="docutils literal notranslate"><span class="pre">S</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l416e7946756e6374696f6e73312e72657472616374"></span><dl class="simple" id="index-2">
+<span class="target" id="l416e7946756e6374696f6e7331-72657472616374"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">retract</span>: <a class="reference internal" href="Any.html#l416e79"><span class="std std-ref">Any</span></a> -&gt; S</dt><dd><p><code class="docutils literal notranslate"><span class="pre">retract(a)</span></code> tries to convert <code class="docutils literal notranslate"><span class="pre">a</span></code> into an object of type <code class="docutils literal notranslate"><span class="pre">S</span></code>. If possible, it returns the object. Error: if no such retraction is possible.</p>
 </dd>
 </dl>
-<span class="target" id="l416e7946756e6374696f6e73312e7265747261637461626c653f"></span><dl class="simple" id="index-3">
+<span class="target" id="l416e7946756e6374696f6e7331-7265747261637461626c653f"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">retractable?</span>: <a class="reference internal" href="Any.html#l416e79"><span class="std std-ref">Any</span></a> -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">retractable?(a)</span></code> tests if <code class="docutils literal notranslate"><span class="pre">a</span></code> can be converted into an object of type <code class="docutils literal notranslate"><span class="pre">S</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l416e7946756e6374696f6e73312e72657472616374496643616e"></span><dl class="simple" id="index-4">
+<span class="target" id="l416e7946756e6374696f6e7331-72657472616374496643616e"></span><dl class="simple" id="index-4">
 <dt><span class="spadfun">retractIfCan</span>: <a class="reference internal" href="Any.html#l416e79"><span class="std std-ref">Any</span></a> -&gt; Union(S, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">retractIfCan(a)</span></code> tries change <code class="docutils literal notranslate"><span class="pre">a</span></code> into an object of type <code class="docutils literal notranslate"><span class="pre">S</span></code>. If it can, then such an object is returned. Otherwise, “failed” is returned.</p>
 </dd>
 </dl>

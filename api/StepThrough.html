@@ -47,37 +47,37 @@
             
   <div class="section" id="stepthrough">
 <span id="l537465705468726f756768"></span><span id="index-0"></span><h1>StepThrough<a class="headerlink" href="#stepthrough" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/catdef.spad#L1456">catdef.spad line 1456</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/catdef.spad#L1456">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/catdef.spad#L1456">catdef.spad line 1456</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/catdef.spad#L1456">[edit on github]</a></p>
 <p>A class of objects which can be ‘stepped through’. Repeated applications of <span class="spadfun">nextItem</span> is guaranteed never to return duplicate items and only return “failed” after exhausting all elements of the domain. This assumes that the sequence starts with <code class="docutils literal notranslate"><span class="pre">init()</span></code>. For infinite domains, repeated application of <span class="spadfun">nextItem</span> is not required to reach all possible domain elements starting from any initial element.   Conditional attributes: infinite repeated <code class="docutils literal notranslate"><span class="pre">nextItem</span></code><code class="docutils literal notranslate"><span class="pre">'s</span></code> are never “failed”.</p>
-<dl class="simple" id="l537465705468726f7567682e3d">
-<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+<dl class="simple" id="l537465705468726f756768-3d">
+<dt><a class="reference internal" href="BasicType.html#l426173696354797065-3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l537465705468726f7567682e7e3d">
-<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e7e3d"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+<dl class="simple" id="l537465705468726f756768-7e3d">
+<dt><a class="reference internal" href="BasicType.html#l426173696354797065-7e3d"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l537465705468726f7567682e636f65726365">
-<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f2e636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+<dl class="simple" id="l537465705468726f756768-636f65726365">
+<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f-636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l537465705468726f7567682e68617368">
-<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e68617368"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l53696e676c65496e7465676572"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+<dl class="simple" id="l537465705468726f756768-68617368">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f7279-68617368"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l53696e676c65496e7465676572"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l537465705468726f7567682e6861736855706461746521">
-<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6861736855706461746521"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+<dl class="simple" id="l537465705468726f756768-6861736855706461746521">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f7279-6861736855706461746521"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l537465705468726f7567682e696e6974"></span><dl class="simple" id="index-1">
+<span class="target" id="l537465705468726f756768-696e6974"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">init</span>: %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">init()</span></code> chooses an initial object for stepping.</p>
 </dd>
 </dl>
-<dl class="simple" id="l537465705468726f7567682e6c61746578">
-<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6c61746578"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+<dl class="simple" id="l537465705468726f756768-6c61746578">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f7279-6c61746578"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l537465705468726f7567682e6e6578744974656d"></span><dl class="simple" id="index-2">
+<span class="target" id="l537465705468726f756768-6e6578744974656d"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">nextItem</span>: % -&gt; Union(%, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">nextItem(x)</span></code> returns the next item, or “failed” if domain is exhausted.</p>
 </dd>
 </dl>

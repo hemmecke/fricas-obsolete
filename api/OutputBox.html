@@ -47,49 +47,49 @@
             
   <div class="section" id="outputbox">
 <span id="l4f7574707574426f78"></span><span id="index-0"></span><h1>OutputBox<a class="headerlink" href="#outputbox" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/fmt.spad#L180">fmt.spad line 180</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/fmt.spad#L180">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/fmt.spad#L180">fmt.spad line 180</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/fmt.spad#L180">[edit on github]</a></p>
 <p>The domain <code class="docutils literal notranslate"><span class="pre">OutputBox</span></code> represents the two-dimensional form of an expresssion by a number of strings (lines). Such a box has a baseline (at which such boxes will be horizontally aligned, a height (size above and including the baseline), a depth (size below the baseline), and a width (horizontal size).</p>
-<span class="target" id="l4f7574707574426f782e626f78"></span><dl class="simple" id="index-1">
+<span class="target" id="l4f7574707574426f78-626f78"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">box</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">box(s)</span></code> creates a box that contains the string <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
 </dd>
 </dl>
-<dl class="simple" id="l4f7574707574426f782e636f65726365">
-<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f2e636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+<dl class="simple" id="l4f7574707574426f78-636f65726365">
+<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f-636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l4f7574707574426f782e6465707468"></span><dl class="simple" id="index-2">
+<span class="target" id="l4f7574707574426f78-6465707468"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">depth</span>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">depth(box)</span></code> returns the height of the <code class="docutils literal notranslate"><span class="pre">box</span></code> below the baseline.</p>
 </dd>
 </dl>
-<span class="target" id="l4f7574707574426f782e656d7074793f"></span><dl class="simple" id="index-3">
+<span class="target" id="l4f7574707574426f78-656d7074793f"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">empty?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">empty?(b)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> of the box has height and depth equal to 0.</p>
 </dd>
 </dl>
-<span class="target" id="l4f7574707574426f782e656d707479"></span><dl class="simple" id="index-4">
+<span class="target" id="l4f7574707574426f78-656d707479"></span><dl class="simple" id="index-4">
 <dt><span class="spadfun">empty</span>: () -&gt; %</dt><dd><p>Create an empty box of size 0.</p>
 </dd>
 </dl>
-<span class="target" id="l4f7574707574426f782e6863656e746572"></span><dl class="simple" id="index-5">
+<span class="target" id="l4f7574707574426f78-6863656e746572"></span><dl class="simple" id="index-5">
 <dt><span class="spadfun">hcenter</span>: <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a> -&gt; % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">hcenter(w)(box)</span></code> centers the box horizontally inside a box of width <code class="docutils literal notranslate"><span class="pre">w</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l4f7574707574426f782e68636f6e636174"></span><dl class="simple" id="index-6">
+<span class="target" id="l4f7574707574426f78-68636f6e636174"></span><dl class="simple" id="index-6">
 <dt><span class="spadfun">hconcat</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">hconcat(lbox)</span></code> aligns the boxes at their baseline and concats those boxes horizontally from left to right.</p>
 </dd>
 </dl>
-<span class="target" id="l4f7574707574426f782e686569676874"></span><dl class="simple" id="index-7">
+<span class="target" id="l4f7574707574426f78-686569676874"></span><dl class="simple" id="index-7">
 <dt><span class="spadfun">height</span>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">height(box)</span></code> returns the height of the <code class="docutils literal notranslate"><span class="pre">box</span></code> (above the baseline) including the baseline.</p>
 </dd>
 </dl>
-<span class="target" id="l4f7574707574426f782e6c696e6573"></span><dl class="simple" id="index-8">
+<span class="target" id="l4f7574707574426f78-6c696e6573"></span><dl class="simple" id="index-8">
 <dt><span class="spadfun">lines</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">lines(box)</span></code> returns the contents of the <code class="docutils literal notranslate"><span class="pre">box</span></code> as strings (all of the same length (width(<code class="docutils literal notranslate"><span class="pre">box</span></code>)).</p>
 </dd>
 </dl>
-<span class="target" id="l4f7574707574426f782e706164"></span><dl class="simple" id="index-9">
+<span class="target" id="l4f7574707574426f78-706164"></span><dl class="simple" id="index-9">
 <dt><span class="spadfun">pad</span>: (<a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; % -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">pad(t,</span> <span class="pre">b,</span> <span class="pre">l,</span> <span class="pre">r)(box)</span></code> returns a new box that is padded by <code class="docutils literal notranslate"><span class="pre">t</span></code> empty lines at the top, <code class="docutils literal notranslate"><span class="pre">b</span></code> empty lines at the bottom, <code class="docutils literal notranslate"><span class="pre">l</span></code> space characters at the left, <code class="docutils literal notranslate"><span class="pre">r</span></code> space characters at the right. If <code class="docutils literal notranslate"><span class="pre">w</span></code>, <code class="docutils literal notranslate"><span class="pre">h</span></code>, <code class="docutils literal notranslate"><span class="pre">d</span></code> are the widht, heigth and depth of box then the resulting box will have width l+w+r and height <code class="docutils literal notranslate"><span class="pre">t+h</span></code> and depth <code class="docutils literal notranslate"><span class="pre">d+b</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l4f7574707574426f782e76636f6e636174"></span><dl class="simple" id="index-10">
+<span class="target" id="l4f7574707574426f78-76636f6e636174"></span><dl class="simple" id="index-10">
 <dt><span class="spadfun">vconcat</span>: (<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">vconcat(lbox,</span> <span class="pre">h)</span></code> returns <code class="docutils literal notranslate"><span class="pre">vconcat(lbox,h,</span> <span class="pre">0)</span></code>,</p>
 </dd>
 </dl>
@@ -97,7 +97,7 @@
 <dt><span class="spadfun">vconcat</span>: (<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">vconcat(lbox,</span> <span class="pre">h,</span> <span class="pre">adjust)</span></code> computes the maximal width of the boxes in the list <code class="docutils literal notranslate"><span class="pre">lbox</span></code>; then if <code class="docutils literal notranslate"><span class="pre">adjust&lt;0</span></code>, left adjusts, if <code class="docutils literal notranslate"><span class="pre">adjust&gt;0</span></code>, right adjusts, and otherwise centers each smaller box in a new box of this maximal width and returns a box by putting all the boxes vertically on top of each other. The height of the new box is given by <code class="docutils literal notranslate"><span class="pre">h</span></code>, the depth results from the difference of the number of lines and <code class="docutils literal notranslate"><span class="pre">h</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l4f7574707574426f782e7769647468"></span><dl class="simple" id="index-12">
+<span class="target" id="l4f7574707574426f78-7769647468"></span><dl class="simple" id="index-12">
 <dt><span class="spadfun">width</span>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">width(box)</span></code> returns the width of the <code class="docutils literal notranslate"><span class="pre">box</span></code>.</p>
 </dd>
 </dl>

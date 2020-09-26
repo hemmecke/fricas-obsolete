@@ -47,77 +47,77 @@
             
   <div class="section" id="patternmatchresult-r-s">
 <span id="l5061747465726e4d61746368526573756c74"></span><span id="index-0"></span><h1>PatternMatchResult(R, S)<a class="headerlink" href="#patternmatchresult-r-s" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/patmatch1.spad#L1">patmatch1.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/patmatch1.spad#L1">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/patmatch1.spad#L1">patmatch1.spad line 1</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/patmatch1.spad#L1">[edit on github]</a></p>
 <ul class="simple">
 <li><p>R: <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p></li>
 <li><p>S: <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p></li>
 </ul>
 <p>A PatternMatchResult is an object internally returned by the pattern matcher; It is either a failed match, or a list of matches of the form (var, expr) meaning that the variable var matches the expression expr.</p>
-<dl class="simple" id="l5061747465726e4d61746368526573756c742e3d">
-<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+<dl class="simple" id="l5061747465726e4d61746368526573756c74-3d">
+<dt><a class="reference internal" href="BasicType.html#l426173696354797065-3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l5061747465726e4d61746368526573756c742e7e3d">
-<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e7e3d"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+<dl class="simple" id="l5061747465726e4d61746368526573756c74-7e3d">
+<dt><a class="reference internal" href="BasicType.html#l426173696354797065-7e3d"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l5061747465726e4d61746368526573756c742e6164644d61746368"></span><dl class="simple" id="index-1">
+<span class="target" id="l5061747465726e4d61746368526573756c74-6164644d61746368"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">addMatch</span>: (<a class="reference internal" href="Pattern.html#l5061747465726e"><span class="std std-ref">Pattern</span></a> R, S, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">addMatch(var,</span> <span class="pre">expr,</span> <span class="pre">r)</span></code> adds the match (<code class="docutils literal notranslate"><span class="pre">var</span></code>, <code class="docutils literal notranslate"><span class="pre">expr</span></code>) in <code class="docutils literal notranslate"><span class="pre">r</span></code>, provided that <code class="docutils literal notranslate"><span class="pre">expr</span></code> satisfies the predicates attached to <code class="docutils literal notranslate"><span class="pre">var</span></code>, and that <code class="docutils literal notranslate"><span class="pre">var</span></code> is not matched to another expression already.</p>
 </dd>
 </dl>
-<span class="target" id="l5061747465726e4d61746368526573756c742e6164644d6174636852657374726963746564"></span><dl class="simple" id="index-2">
+<span class="target" id="l5061747465726e4d61746368526573756c74-6164644d6174636852657374726963746564"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">addMatchRestricted</span>: (<a class="reference internal" href="Pattern.html#l5061747465726e"><span class="std std-ref">Pattern</span></a> R, S, %, S) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">addMatchRestricted(var,</span> <span class="pre">expr,</span> <span class="pre">r,</span> <span class="pre">val)</span></code> adds the match (<code class="docutils literal notranslate"><span class="pre">var</span></code>, <code class="docutils literal notranslate"><span class="pre">expr</span></code>) in <code class="docutils literal notranslate"><span class="pre">r</span></code>, provided that <code class="docutils literal notranslate"><span class="pre">expr</span></code> satisfies the predicates attached to <code class="docutils literal notranslate"><span class="pre">var</span></code>, that <code class="docutils literal notranslate"><span class="pre">var</span></code> is not matched to another expression already, and that either <code class="docutils literal notranslate"><span class="pre">var</span></code> is an optional pattern variable or that <code class="docutils literal notranslate"><span class="pre">expr</span></code> is not equal to val (usually an identity).</p>
 </dd>
 </dl>
-<dl class="simple" id="l5061747465726e4d61746368526573756c742e636f65726365">
-<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f2e636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+<dl class="simple" id="l5061747465726e4d61746368526573756c74-636f65726365">
+<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f-636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l5061747465726e4d61746368526573756c742e636f6e737472756374"></span><dl class="simple" id="index-3">
+<span class="target" id="l5061747465726e4d61746368526573756c74-636f6e737472756374"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">construct</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> Record(key: <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>, entry: S) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">construct([v1,</span> <span class="pre">e1],</span> <span class="pre">...,</span> <span class="pre">[vn,</span> <span class="pre">en])</span></code> returns the match result containing the matches (<code class="docutils literal notranslate"><span class="pre">v1</span></code>, <code class="docutils literal notranslate"><span class="pre">e1</span></code>), …, (<code class="docutils literal notranslate"><span class="pre">vn</span></code>, en).</p>
 </dd>
 </dl>
-<span class="target" id="l5061747465726e4d61746368526573756c742e6465737472756374"></span><dl class="simple" id="index-4">
+<span class="target" id="l5061747465726e4d61746368526573756c74-6465737472756374"></span><dl class="simple" id="index-4">
 <dt><span class="spadfun">destruct</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> Record(key: <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>, entry: S)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">destruct(r)</span></code> returns the list of matches (var, expr) in <code class="docutils literal notranslate"><span class="pre">r</span></code>. Error: if <code class="docutils literal notranslate"><span class="pre">r</span></code> is a failed match.</p>
 </dd>
 </dl>
-<span class="target" id="l5061747465726e4d61746368526573756c742e6661696c65643f"></span><dl class="simple" id="index-5">
+<span class="target" id="l5061747465726e4d61746368526573756c74-6661696c65643f"></span><dl class="simple" id="index-5">
 <dt><span class="spadfun">failed?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">failed?(r)</span></code> tests if <code class="docutils literal notranslate"><span class="pre">r</span></code> is a failed match.</p>
 </dd>
 </dl>
-<span class="target" id="l5061747465726e4d61746368526573756c742e6661696c6564"></span><dl class="simple" id="index-6">
+<span class="target" id="l5061747465726e4d61746368526573756c74-6661696c6564"></span><dl class="simple" id="index-6">
 <dt><span class="spadfun">failed</span>: () -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">failed()</span></code> returns a failed match.</p>
 </dd>
 </dl>
-<span class="target" id="l5061747465726e4d61746368526573756c742e6765744d61746368"></span><dl class="simple" id="index-7">
+<span class="target" id="l5061747465726e4d61746368526573756c74-6765744d61746368"></span><dl class="simple" id="index-7">
 <dt><span class="spadfun">getMatch</span>: (<a class="reference internal" href="Pattern.html#l5061747465726e"><span class="std std-ref">Pattern</span></a> R, %) -&gt; Union(S, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">getMatch(var,</span> <span class="pre">r)</span></code> returns the expression that <code class="docutils literal notranslate"><span class="pre">var</span></code> matches in the result <code class="docutils literal notranslate"><span class="pre">r</span></code>, and “failed” if <code class="docutils literal notranslate"><span class="pre">var</span></code> is not matched in <code class="docutils literal notranslate"><span class="pre">r</span></code>.</p>
 </dd>
 </dl>
-<dl class="simple" id="l5061747465726e4d61746368526573756c742e68617368">
-<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e68617368"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l53696e676c65496e7465676572"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+<dl class="simple" id="l5061747465726e4d61746368526573756c74-68617368">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f7279-68617368"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l53696e676c65496e7465676572"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l5061747465726e4d61746368526573756c742e6861736855706461746521">
-<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6861736855706461746521"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+<dl class="simple" id="l5061747465726e4d61746368526573756c74-6861736855706461746521">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f7279-6861736855706461746521"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l5061747465726e4d61746368526573756c742e696e736572744d61746368"></span><dl class="simple" id="index-8">
+<span class="target" id="l5061747465726e4d61746368526573756c74-696e736572744d61746368"></span><dl class="simple" id="index-8">
 <dt><span class="spadfun">insertMatch</span>: (<a class="reference internal" href="Pattern.html#l5061747465726e"><span class="std std-ref">Pattern</span></a> R, S, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">insertMatch(var,</span> <span class="pre">expr,</span> <span class="pre">r)</span></code> adds the match (<code class="docutils literal notranslate"><span class="pre">var</span></code>, <code class="docutils literal notranslate"><span class="pre">expr</span></code>) in <code class="docutils literal notranslate"><span class="pre">r</span></code>, without checking predicates or previous matches for <code class="docutils literal notranslate"><span class="pre">var</span></code>.</p>
 </dd>
 </dl>
-<dl class="simple" id="l5061747465726e4d61746368526573756c742e6c61746578">
-<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6c61746578"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+<dl class="simple" id="l5061747465726e4d61746368526573756c74-6c61746578">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f7279-6c61746578"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l5061747465726e4d61746368526573756c742e6e6577"></span><dl class="simple" id="index-9">
+<span class="target" id="l5061747465726e4d61746368526573756c74-6e6577"></span><dl class="simple" id="index-9">
 <dt><span class="spadfun">new</span>: () -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">new()</span></code> returns a new empty match result.</p>
 </dd>
 </dl>
-<span class="target" id="l5061747465726e4d61746368526573756c742e736174697366793f"></span><dl class="simple" id="index-10">
+<span class="target" id="l5061747465726e4d61746368526573756c74-736174697366793f"></span><dl class="simple" id="index-10">
 <dt><span class="spadfun">satisfy?</span>: (%, <a class="reference internal" href="Pattern.html#l5061747465726e"><span class="std std-ref">Pattern</span></a> R) -&gt; Union(<a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a>, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">satisfy?(r,</span> <span class="pre">p)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the matches satisfy the top-level predicate of <code class="docutils literal notranslate"><span class="pre">p</span></code>, <code class="docutils literal notranslate"><span class="pre">false</span></code> if they don<code class="docutils literal notranslate"><span class="pre">'t</span></code>, and “failed” if not enough variables of <code class="docutils literal notranslate"><span class="pre">p</span></code> are matched in <code class="docutils literal notranslate"><span class="pre">r</span></code> to decide.</p>
 </dd>
 </dl>
-<span class="target" id="l5061747465726e4d61746368526573756c742e756e696f6e"></span><dl class="simple" id="index-11">
+<span class="target" id="l5061747465726e4d61746368526573756c74-756e696f6e"></span><dl class="simple" id="index-11">
 <dt><span class="spadfun">union</span>: (%, %) -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">union(a,</span> <span class="pre">b)</span></code> makes the set-union of two match results.</p>
 </dd>
 </dl>

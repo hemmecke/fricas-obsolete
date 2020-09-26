@@ -47,17 +47,17 @@
             
   <div class="section" id="factoredfunctions2-r-s">
 <span id="l466163746f72656446756e6374696f6e7332"></span><span id="index-0"></span><h1>FactoredFunctions2(R, S)<a class="headerlink" href="#factoredfunctions2-r-s" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/fr.spad#L542">fr.spad line 542</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/fr.spad#L542">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/fr.spad#L542">fr.spad line 542</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/fr.spad#L542">[edit on github]</a></p>
 <ul class="simple">
 <li><p>R: <a class="reference internal" href="IntegralDomain.html#l496e74656772616c446f6d61696e"><span class="std std-ref">IntegralDomain</span></a></p></li>
 <li><p>S: <a class="reference internal" href="IntegralDomain.html#l496e74656772616c446f6d61696e"><span class="std std-ref">IntegralDomain</span></a></p></li>
 </ul>
 <p><a class="reference internal" href="#l466163746f72656446756e6374696f6e7332"><span class="std std-ref">FactoredFunctions2</span></a> contains functions that involve factored objects whose underlying domains may not be the same. For example, <span class="spadfun">map</span> might be used to coerce an object of type Factored(Integer) to Factored(Complex(Integer)).</p>
-<span class="target" id="l466163746f72656446756e6374696f6e73322e6d6170"></span><dl class="simple" id="index-1">
+<span class="target" id="l466163746f72656446756e6374696f6e7332-6d6170"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">map</span>: (R -&gt; S, <a class="reference internal" href="Factored.html#l466163746f726564"><span class="std std-ref">Factored</span></a> R) -&gt; <a class="reference internal" href="Factored.html#l466163746f726564"><span class="std std-ref">Factored</span></a> S</dt><dd><p><code class="docutils literal notranslate"><span class="pre">map(fn,</span> <span class="pre">u)</span></code> is used to apply the function userfun{<code class="docutils literal notranslate"><span class="pre">fn</span></code>} to every factor of spadvar{<code class="docutils literal notranslate"><span class="pre">u</span></code>}. The new factored object will have all its information flags set to “nil”. This function is used, for example, to coerce every factor base to another type.</p>
 </dd>
 </dl>
-<span class="target" id="l466163746f72656446756e6374696f6e73322e6d61705f70726573657276696e67"></span><dl class="simple" id="index-2">
+<span class="target" id="l466163746f72656446756e6374696f6e7332-6d61705f70726573657276696e67"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">map_preserving</span>: (R -&gt; S, <a class="reference internal" href="Factored.html#l466163746f726564"><span class="std std-ref">Factored</span></a> R) -&gt; <a class="reference internal" href="Factored.html#l466163746f726564"><span class="std std-ref">Factored</span></a> S</dt><dd><p><code class="docutils literal notranslate"><span class="pre">map_preserving(fn,</span> <span class="pre">u)</span></code> is used to apply the function userfun{<code class="docutils literal notranslate"><span class="pre">fn</span></code>} to every factor of spadvar{<code class="docutils literal notranslate"><span class="pre">u</span></code>}. The new factored object will have the same flags as original.</p>
 </dd>
 </dl>

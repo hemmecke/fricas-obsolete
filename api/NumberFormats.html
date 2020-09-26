@@ -47,33 +47,33 @@
             
   <div class="section" id="numberformats">
 <span id="l4e756d626572466f726d617473"></span><span id="index-0"></span><h1>NumberFormats<a class="headerlink" href="#numberformats" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/outform.spad#L2">outform.spad line 2</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/outform.spad#L2">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/outform.spad#L2">outform.spad line 2</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/outform.spad#L2">[edit on github]</a></p>
 <p>NumberFormats provides function to format and read arabic and roman numbers, to convert numbers to strings and to read floating-point numbers.</p>
-<span class="target" id="l4e756d626572466f726d6174732e466f726d6174417261626963"></span><dl class="simple" id="index-1">
+<span class="target" id="l4e756d626572466f726d617473-466f726d6174417261626963"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">FormatArabic</span>: <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a> -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">FormatArabic(n)</span></code> forms an Arabic numeral string from an integer <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l4e756d626572466f726d6174732e466f726d61745261646978"></span><dl class="simple" id="index-2">
+<span class="target" id="l4e756d626572466f726d617473-466f726d61745261646978"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">FormatRadix</span>: (<a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">FormatRadix(n,</span> <span class="pre">r)</span></code> forms a string from an integer <code class="docutils literal notranslate"><span class="pre">n</span></code> in radix <code class="docutils literal notranslate"><span class="pre">r</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l4e756d626572466f726d6174732e466f726d6174526f6d616e"></span><dl class="simple" id="index-3">
+<span class="target" id="l4e756d626572466f726d617473-466f726d6174526f6d616e"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">FormatRoman</span>: <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a> -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">FormatRoman(n)</span></code> forms a Roman numeral string from an integer <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l4e756d626572466f726d6174732e5363616e417261626963"></span><dl class="simple" id="index-4">
+<span class="target" id="l4e756d626572466f726d617473-5363616e417261626963"></span><dl class="simple" id="index-4">
 <dt><span class="spadfun">ScanArabic</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">ScanArabic(s)</span></code> forms an integer from an Arabic numeral string <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l4e756d626572466f726d6174732e5363616e466c6f617449676e6f7265537061636573"></span><dl class="simple" id="index-5">
+<span class="target" id="l4e756d626572466f726d617473-5363616e466c6f617449676e6f7265537061636573"></span><dl class="simple" id="index-5">
 <dt><span class="spadfun">ScanFloatIgnoreSpaces</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; <a class="reference internal" href="Float.html#l466c6f6174"><span class="std std-ref">Float</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">ScanFloatIgnoreSpaces(s)</span></code> forms a floating point number from the string <code class="docutils literal notranslate"><span class="pre">s</span></code> ignoring any spaces. Error is generated if the string is not recognised as a floating point number.</p>
 </dd>
 </dl>
-<span class="target" id="l4e756d626572466f726d6174732e5363616e466c6f617449676e6f7265537061636573496643616e"></span><dl class="simple" id="index-6">
+<span class="target" id="l4e756d626572466f726d617473-5363616e466c6f617449676e6f7265537061636573496643616e"></span><dl class="simple" id="index-6">
 <dt><span class="spadfun">ScanFloatIgnoreSpacesIfCan</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; Union(<a class="reference internal" href="Float.html#l466c6f6174"><span class="std std-ref">Float</span></a>, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">ScanFloatIgnoreSpacesIfCan(s)</span></code> tries to form a floating point number from the string <code class="docutils literal notranslate"><span class="pre">s</span></code> ignoring any spaces.</p>
 </dd>
 </dl>
-<span class="target" id="l4e756d626572466f726d6174732e5363616e526f6d616e"></span><dl class="simple" id="index-7">
+<span class="target" id="l4e756d626572466f726d617473-5363616e526f6d616e"></span><dl class="simple" id="index-7">
 <dt><span class="spadfun">ScanRoman</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">ScanRoman(s)</span></code> forms an integer from a Roman numeral string <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
 </dd>
 </dl>

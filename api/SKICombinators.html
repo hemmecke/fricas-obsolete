@@ -47,88 +47,88 @@
             
   <div class="section" id="skicombinators-ut">
 <span id="l534b49436f6d62696e61746f7273"></span><span id="index-0"></span><h1>SKICombinators UT<a class="headerlink" href="#skicombinators-ut" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/computation.spad#L1632">computation.spad line 1632</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/computation.spad#L1632">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/computation.spad#L1632">computation.spad line 1632</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/computation.spad#L1632">[edit on github]</a></p>
 <ul class="simple">
 <li><p>UT: <a class="reference internal" href="VarCat.html#l566172436174"><span class="std std-ref">VarCat</span></a></p></li>
 </ul>
 <p>parse result includes term returned and new index</p>
-<span class="target" id="l534b49436f6d62696e61746f72732e3d"></span><dl class="simple" id="index-1">
+<span class="target" id="l534b49436f6d62696e61746f7273-3d"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">=</span>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>return <code class="docutils literal notranslate"><span class="pre">true</span></code> if equal (deep search) that is: all terms at all levels in tree must be equal to return <code class="docutils literal notranslate"><span class="pre">true</span></code> all terms must be exactly equal, not just equivalent, that is SKK=I will return <code class="docutils literal notranslate"><span class="pre">false</span></code> even though ‘SKK’ and ‘I’ have the same effect</p>
 </dd>
 </dl>
-<dl class="simple" id="l534b49436f6d62696e61746f72732e7e3d">
-<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e7e3d"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+<dl class="simple" id="l534b49436f6d62696e61746f7273-7e3d">
+<dt><a class="reference internal" href="BasicType.html#l426173696354797065-7e3d"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l534b49436f6d62696e61746f72732e61746f6d3f"></span><dl class="simple" id="index-2">
+<span class="target" id="l534b49436f6d62696e61746f7273-61746f6d3f"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">atom?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if this is an atom, that is a leaf node otherwise return <code class="docutils literal notranslate"><span class="pre">false</span></code> if this is a compound term</p>
 </dd>
 </dl>
-<dl class="simple" id="l534b49436f6d62696e61746f72732e636f65726365">
-<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f2e636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+<dl class="simple" id="l534b49436f6d62696e61746f7273-636f65726365">
+<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f-636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l534b49436f6d62696e61746f72732e667265655661726961626c653f"></span><dl class="simple" id="index-3">
+<span class="target" id="l534b49436f6d62696e61746f7273-667265655661726961626c653f"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">freeVariable?</span>: (%, UT) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>the variable indicated by <code class="docutils literal notranslate"><span class="pre">'s'</span></code> is free if it does not appear in node <code class="docutils literal notranslate"><span class="pre">'n'</span></code> or any of its subnodes.</p>
 </dd>
 </dl>
-<span class="target" id="l534b49436f6d62696e61746f72732e6765744368696c6472656e"></span><dl class="simple" id="index-4">
+<span class="target" id="l534b49436f6d62696e61746f7273-6765744368696c6472656e"></span><dl class="simple" id="index-4">
 <dt><span class="spadfun">getChildren</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %</dt><dd><p>returns child nodes if this is a compound term otherwise returns []</p>
 </dd>
 </dl>
-<span class="target" id="l534b49436f6d62696e61746f72732e6765745661726961626c65"></span><dl class="simple" id="index-5">
+<span class="target" id="l534b49436f6d62696e61746f7273-6765745661726961626c65"></span><dl class="simple" id="index-5">
 <dt><span class="spadfun">getVariable</span>: % -&gt; UT</dt><dd><p>returns the variable, if this is not a variable then return <code class="docutils literal notranslate"><span class="pre">I</span></code></p>
 </dd>
 </dl>
-<dl class="simple" id="l534b49436f6d62696e61746f72732e68617368">
-<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e68617368"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l53696e676c65496e7465676572"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+<dl class="simple" id="l534b49436f6d62696e61746f7273-68617368">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f7279-68617368"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l53696e676c65496e7465676572"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l534b49436f6d62696e61746f72732e6861736855706461746521">
-<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6861736855706461746521"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+<dl class="simple" id="l534b49436f6d62696e61746f7273-6861736855706461746521">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f7279-6861736855706461746521"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l534b49436f6d62696e61746f72732e49"></span><dl class="simple" id="index-6">
+<span class="target" id="l534b49436f6d62696e61746f7273-49"></span><dl class="simple" id="index-6">
 <dt><span class="spadfun">I</span>: () -&gt; %</dt><dd><p>Constructs a <code class="docutils literal notranslate"><span class="pre">I</span></code> combinator</p>
 </dd>
 </dl>
-<span class="target" id="l534b49436f6d62696e61746f72732e6973493f"></span><dl class="simple" id="index-7">
+<span class="target" id="l534b49436f6d62696e61746f7273-6973493f"></span><dl class="simple" id="index-7">
 <dt><span class="spadfun">isI?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if this is an <code class="docutils literal notranslate"><span class="pre">I</span></code> combinator node</p>
 </dd>
 </dl>
-<span class="target" id="l534b49436f6d62696e61746f72732e69734b3f"></span><dl class="simple" id="index-8">
+<span class="target" id="l534b49436f6d62696e61746f7273-69734b3f"></span><dl class="simple" id="index-8">
 <dt><span class="spadfun">isK?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if this is a <code class="docutils literal notranslate"><span class="pre">K</span></code> combinator node</p>
 </dd>
 </dl>
-<span class="target" id="l534b49436f6d62696e61746f72732e6973533f"></span><dl class="simple" id="index-9">
+<span class="target" id="l534b49436f6d62696e61746f7273-6973533f"></span><dl class="simple" id="index-9">
 <dt><span class="spadfun">isS?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if this is a <code class="docutils literal notranslate"><span class="pre">S</span></code> combinator node</p>
 </dd>
 </dl>
-<span class="target" id="l534b49436f6d62696e61746f72732e4b"></span><dl class="simple" id="index-10">
+<span class="target" id="l534b49436f6d62696e61746f7273-4b"></span><dl class="simple" id="index-10">
 <dt><span class="spadfun">K</span>: () -&gt; %</dt><dd><p>Constructs a <code class="docutils literal notranslate"><span class="pre">K</span></code> combinator</p>
 </dd>
 </dl>
-<dl class="simple" id="l534b49436f6d62696e61746f72732e6c61746578">
-<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6c61746578"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+<dl class="simple" id="l534b49436f6d62696e61746f7273-6c61746578">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f7279-6c61746578"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l534b49436f6d62696e61746f72732e7061727365536b69"></span><dl class="simple" id="index-11">
+<span class="target" id="l534b49436f6d62696e61746f7273-7061727365536b69"></span><dl class="simple" id="index-11">
 <dt><span class="spadfun">parseSki</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; %</dt><dd><p>Constructs combinators from a string</p>
 </dd>
 </dl>
-<span class="target" id="l534b49436f6d62696e61746f72732e70617273655465726d"></span><dl class="simple" id="index-12">
+<span class="target" id="l534b49436f6d62696e61746f7273-70617273655465726d"></span><dl class="simple" id="index-12">
 <dt><span class="spadfun">parseTerm</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; Record(rft: %, pout: <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>)</dt><dd><p>parseTerm is used by parseSki. It would rarely be called externally but it is here to allow it to call parseSki that is to allow circular calls</p>
 </dd>
 </dl>
-<span class="target" id="l534b49436f6d62696e61746f72732e7265647578"></span><dl class="simple" id="index-13">
+<span class="target" id="l534b49436f6d62696e61746f7273-7265647578"></span><dl class="simple" id="index-13">
 <dt><span class="spadfun">redux</span>: % -&gt; %</dt><dd><p>weak reduction - apply this combinator to rearrange its subnodes then apply recursively to its subnodes.</p>
 </dd>
 </dl>
-<span class="target" id="l534b49436f6d62696e61746f72732e53"></span><dl class="simple" id="index-14">
+<span class="target" id="l534b49436f6d62696e61746f7273-53"></span><dl class="simple" id="index-14">
 <dt><span class="spadfun">S</span>: () -&gt; %</dt><dd><p>Constructs a <code class="docutils literal notranslate"><span class="pre">S</span></code> combinator</p>
 </dd>
 </dl>
-<span class="target" id="l534b49436f6d62696e61746f72732e736b69"></span><dl class="simple" id="index-15">
+<span class="target" id="l534b49436f6d62696e61746f7273-736b69"></span><dl class="simple" id="index-15">
 <dt><span class="spadfun">ski</span>: (%, %) -&gt; %</dt><dd><p>Constructs a node combinator over combinators</p>
 </dd>
 </dl>
@@ -136,11 +136,11 @@
 <dt><span class="spadfun">ski</span>: UT -&gt; %</dt><dd><p>Constructs variable combinator</p>
 </dd>
 </dl>
-<span class="target" id="l534b49436f6d62696e61746f72732e746f537472696e67"></span><dl class="simple" id="index-17">
+<span class="target" id="l534b49436f6d62696e61746f7273-746f537472696e67"></span><dl class="simple" id="index-17">
 <dt><span class="spadfun">toString</span>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>output</p>
 </dd>
 </dl>
-<span class="target" id="l534b49436f6d62696e61746f72732e7661726961626c653f"></span><dl class="simple" id="index-18">
+<span class="target" id="l534b49436f6d62696e61746f7273-7661726961626c653f"></span><dl class="simple" id="index-18">
 <dt><span class="spadfun">variable?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if this is an variable</p>
 </dd>
 </dl>

@@ -47,13 +47,13 @@
             
   <div class="section" id="functionspacereduce-r-f">
 <span id="l46756e6374696f6e5370616365526564756365"></span><span id="index-0"></span><h1>FunctionSpaceReduce(R, F)<a class="headerlink" href="#functionspacereduce-r-f" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/pfo.spad#L195">pfo.spad line 195</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/pfo.spad#L195">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/pfo.spad#L195">pfo.spad line 195</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/pfo.spad#L195">[edit on github]</a></p>
 <ul class="simple">
 <li><p>R: Join(<a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a>, <a class="reference internal" href="IntegralDomain.html#l496e74656772616c446f6d61696e"><span class="std std-ref">IntegralDomain</span></a>, <a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f"><span class="std std-ref">RetractableTo</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>)</p></li>
 <li><p>F: <a class="reference internal" href="FunctionSpace.html#l46756e6374696f6e5370616365"><span class="std std-ref">FunctionSpace</span></a> R</p></li>
 </ul>
 <p>This package provides function which replaces transcendental kernels in a function space by random integers. The correspondence between the kernels and the integers is fixed between calls to newReduc().</p>
-<span class="target" id="l46756e6374696f6e53706163655265647563652e6272696e67446f776e"></span><dl class="simple" id="index-1">
+<span class="target" id="l46756e6374696f6e5370616365526564756365-6272696e67446f776e"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">bringDown</span>: (F, <a class="reference internal" href="Kernel.html#l4b65726e656c"><span class="std std-ref">Kernel</span></a> F) -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">bringDown(f,</span> <span class="pre">k)</span></code> is like bringDown(<code class="docutils literal notranslate"><span class="pre">f</span></code>) but <code class="docutils literal notranslate"><span class="pre">k</span></code> is algebraic kernel and the result is reduced modulo minimal polynomial of <code class="docutils literal notranslate"><span class="pre">k</span></code>.</p>
 </dd>
 </dl>
@@ -61,7 +61,7 @@
 <dt><span class="spadfun">bringDown</span>: F -&gt; <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">bringDown(f)</span></code> replaces transcendental kernels in <code class="docutils literal notranslate"><span class="pre">f</span></code> by random integers. Error if <code class="docutils literal notranslate"><span class="pre">f</span></code> contains algebraic kernel.</p>
 </dd>
 </dl>
-<span class="target" id="l46756e6374696f6e53706163655265647563652e6e65775265647563"></span><dl class="simple" id="index-3">
+<span class="target" id="l46756e6374696f6e5370616365526564756365-6e65775265647563"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">newReduc</span>: <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a> -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">newReduc(n)</span></code> empties reduction state. <code class="docutils literal notranslate"><span class="pre">n</span></code> is size of random integers to use during next reduction.</p>
 </dd>
 </dl>

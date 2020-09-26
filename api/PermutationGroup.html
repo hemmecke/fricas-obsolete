@@ -47,62 +47,62 @@
             
   <div class="section" id="permutationgroup-s">
 <span id="l5065726d75746174696f6e47726f7570"></span><span id="index-0"></span><h1>PermutationGroup S<a class="headerlink" href="#permutationgroup-s" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/permgrps.spad#L1">permgrps.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/permgrps.spad#L1">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/permgrps.spad#L1">permgrps.spad line 1</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/permgrps.spad#L1">[edit on github]</a></p>
 <ul class="simple">
 <li><p>S: <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p></li>
 </ul>
 <p>PermutationGroup implements permutation groups acting on a set <code class="docutils literal notranslate"><span class="pre">S</span></code>, i.e. all subgroups of the symmetric group of <code class="docutils literal notranslate"><span class="pre">S</span></code>, represented as a list of permutations (generators). Note that therefore the objects are not members of the Language category <a class="reference internal" href="Group.html#l47726f7570"><span class="std std-ref">Group</span></a>. Using the idea of base and strong generators by Sims, basic routines and algorithms are implemented so that the word problem for permutation groups can be solved.</p>
-<span class="target" id="l5065726d75746174696f6e47726f75702e3c3d"></span><dl class="simple" id="index-1">
+<span class="target" id="l5065726d75746174696f6e47726f7570-3c3d"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">&lt;=</span>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">gp1</span> <span class="pre">&lt;=</span> <span class="pre">gp2</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if and only if <em>gp1</em> is a subgroup of <em>gp2</em>. Note: because of a bug in the parser you have to call this function explicitly by <em>gp1 &lt;=$(PERMGRP S) gp2</em>.</p>
 </dd>
 </dl>
-<span class="target" id="l5065726d75746174696f6e47726f75702e3c"></span><dl class="simple" id="index-2">
+<span class="target" id="l5065726d75746174696f6e47726f7570-3c"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">&lt;</span>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">gp1</span> <span class="pre">&lt;</span> <span class="pre">gp2</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if and only if <em>gp1</em> is a proper subgroup of <em>gp2</em>.</p>
 </dd>
 </dl>
-<dl class="simple" id="l5065726d75746174696f6e47726f75702e3d">
-<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+<dl class="simple" id="l5065726d75746174696f6e47726f7570-3d">
+<dt><a class="reference internal" href="BasicType.html#l426173696354797065-3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l5065726d75746174696f6e47726f75702e7e3d">
-<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e7e3d"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+<dl class="simple" id="l5065726d75746174696f6e47726f7570-7e3d">
+<dt><a class="reference internal" href="BasicType.html#l426173696354797065-7e3d"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l5065726d75746174696f6e47726f75702e62617365"></span><dl class="simple" id="index-3">
+<span class="target" id="l5065726d75746174696f6e47726f7570-62617365"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">base</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> S</dt><dd><p><code class="docutils literal notranslate"><span class="pre">base(gp)</span></code> returns a base for the group <em>gp</em>.</p>
 </dd>
 </dl>
-<span class="target" id="l5065726d75746174696f6e47726f75702e636f65726365"></span><dl class="simple" id="index-4">
+<span class="target" id="l5065726d75746174696f6e47726f7570-636f65726365"></span><dl class="simple" id="index-4">
 <dt><span class="spadfun">coerce</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Permutation.html#l5065726d75746174696f6e"><span class="std std-ref">Permutation</span></a> S</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(gp)</span></code> returns the generators of the group <em>gp</em>.</p>
 </dd>
-<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f2e636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f-636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
 </dd>
 </dl>
 <dl class="simple" id="index-5">
 <dt><span class="spadfun">coerce</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Permutation.html#l5065726d75746174696f6e"><span class="std std-ref">Permutation</span></a> S -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(ls)</span></code> coerces a list of permutations <em>ls</em> to the group generated by this list.</p>
 </dd>
 </dl>
-<span class="target" id="l5065726d75746174696f6e47726f75702e646567726565"></span><dl class="simple" id="index-6">
+<span class="target" id="l5065726d75746174696f6e47726f7570-646567726565"></span><dl class="simple" id="index-6">
 <dt><span class="spadfun">degree</span>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">degree(gp)</span></code> returns the number of points moved by all permutations of the group <em>gp</em>.</p>
 </dd>
 </dl>
-<span class="target" id="l5065726d75746174696f6e47726f75702e656c74"></span><dl class="simple" id="index-7">
+<span class="target" id="l5065726d75746174696f6e47726f7570-656c74"></span><dl class="simple" id="index-7">
 <dt><span class="spadfun">elt</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Permutation.html#l5065726d75746174696f6e"><span class="std std-ref">Permutation</span></a> S</dt><dd><p><code class="docutils literal notranslate"><span class="pre">elt(gp,</span> <span class="pre">i)</span></code> returns the <code class="docutils literal notranslate"><span class="pre">i</span></code>-th generator of the group <em>gp</em>.</p>
 </dd>
 </dl>
-<span class="target" id="l5065726d75746174696f6e47726f75702e67656e657261746f7273"></span><dl class="simple" id="index-8">
+<span class="target" id="l5065726d75746174696f6e47726f7570-67656e657261746f7273"></span><dl class="simple" id="index-8">
 <dt><span class="spadfun">generators</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Permutation.html#l5065726d75746174696f6e"><span class="std std-ref">Permutation</span></a> S</dt><dd><p><code class="docutils literal notranslate"><span class="pre">generators(gp)</span></code> returns the generators of the group <em>gp</em>.</p>
 </dd>
 </dl>
-<dl class="simple" id="l5065726d75746174696f6e47726f75702e68617368">
-<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e68617368"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l53696e676c65496e7465676572"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+<dl class="simple" id="l5065726d75746174696f6e47726f7570-68617368">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f7279-68617368"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l53696e676c65496e7465676572"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l5065726d75746174696f6e47726f75702e6861736855706461746521">
-<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6861736855706461746521"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+<dl class="simple" id="l5065726d75746174696f6e47726f7570-6861736855706461746521">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f7279-6861736855706461746521"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l5065726d75746174696f6e47726f75702e696e697469616c697a6547726f7570466f72576f726450726f626c656d"></span><dl class="simple" id="index-9">
+<span class="target" id="l5065726d75746174696f6e47726f7570-696e697469616c697a6547726f7570466f72576f726450726f626c656d"></span><dl class="simple" id="index-9">
 <dt><span class="spadfun">initializeGroupForWordProblem</span>: % -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">initializeGroupForWordProblem(gp)</span></code> initializes the group <em>gp</em> for the word problem. Notes: it calls the other function of this name with parameters 0 and 1: <em>initializeGroupForWordProblem(gp, 0, 1)</em>. Notes: (1) be careful: invoking this routine will destroy the possibly information about your group (but will recompute it again) (2) users need not call this function normally for the soultion of the word problem.</p>
 </dd>
 </dl>
@@ -110,19 +110,19 @@
 <dt><span class="spadfun">initializeGroupForWordProblem</span>: (%, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">initializeGroupForWordProblem(gp,</span> <span class="pre">m,</span> <span class="pre">n)</span></code> initializes the group <em>gp</em> for the word problem. Notes: (1) with a small integer you get shorter words, but the routine takes longer than the standard routine for longer words. (2) be careful: invoking this routine will destroy the possibly stored information about your group (but will recompute it again). (3) users need not call this function normally for the soultion of the word problem.</p>
 </dd>
 </dl>
-<dl class="simple" id="l5065726d75746174696f6e47726f75702e6c61746578">
-<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6c61746578"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+<dl class="simple" id="l5065726d75746174696f6e47726f7570-6c61746578">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f7279-6c61746578"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l5065726d75746174696f6e47726f75702e6d656d6265723f"></span><dl class="simple" id="index-11">
+<span class="target" id="l5065726d75746174696f6e47726f7570-6d656d6265723f"></span><dl class="simple" id="index-11">
 <dt><span class="spadfun">member?</span>: (<a class="reference internal" href="Permutation.html#l5065726d75746174696f6e"><span class="std std-ref">Permutation</span></a> S, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">member?(pp,</span> <span class="pre">gp)</span></code> answers the question, whether the permutation <em>pp</em> is in the group <em>gp</em> or not.</p>
 </dd>
 </dl>
-<span class="target" id="l5065726d75746174696f6e47726f75702e6d6f766564506f696e7473"></span><dl class="simple" id="index-12">
+<span class="target" id="l5065726d75746174696f6e47726f7570-6d6f766564506f696e7473"></span><dl class="simple" id="index-12">
 <dt><span class="spadfun">movedPoints</span>: % -&gt; <a class="reference internal" href="Set.html#l536574"><span class="std std-ref">Set</span></a> S</dt><dd><p><code class="docutils literal notranslate"><span class="pre">movedPoints(gp)</span></code> returns the points moved by the group <em>gp</em>.</p>
 </dd>
 </dl>
-<span class="target" id="l5065726d75746174696f6e47726f75702e6f72626974"></span><dl class="simple" id="index-13">
+<span class="target" id="l5065726d75746174696f6e47726f7570-6f72626974"></span><dl class="simple" id="index-13">
 <dt><span class="spadfun">orbit</span>: (%, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> S) -&gt; <a class="reference internal" href="Set.html#l536574"><span class="std std-ref">Set</span></a> <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> S</dt><dd><p><code class="docutils literal notranslate"><span class="pre">orbit(gp,</span> <span class="pre">ls)</span></code> returns the orbit of the ordered list <em>ls</em> under the group <em>gp</em>. Note: return type is <code class="docutils literal notranslate"><span class="pre">L</span></code> <code class="docutils literal notranslate"><span class="pre">L</span></code> <code class="docutils literal notranslate"><span class="pre">S</span></code> temporarily because FSET <code class="docutils literal notranslate"><span class="pre">L</span></code> <code class="docutils literal notranslate"><span class="pre">S</span></code> has an error.</p>
 </dd>
 </dl>
@@ -134,27 +134,27 @@
 <dt><span class="spadfun">orbit</span>: (%, <a class="reference internal" href="Set.html#l536574"><span class="std std-ref">Set</span></a> S) -&gt; <a class="reference internal" href="Set.html#l536574"><span class="std std-ref">Set</span></a> <a class="reference internal" href="Set.html#l536574"><span class="std std-ref">Set</span></a> S</dt><dd><p><code class="docutils literal notranslate"><span class="pre">orbit(gp,</span> <span class="pre">els)</span></code> returns the orbit of the unordered set <em>els</em> under the group <em>gp</em>.</p>
 </dd>
 </dl>
-<span class="target" id="l5065726d75746174696f6e47726f75702e6f7262697473"></span><dl class="simple" id="index-16">
+<span class="target" id="l5065726d75746174696f6e47726f7570-6f7262697473"></span><dl class="simple" id="index-16">
 <dt><span class="spadfun">orbits</span>: % -&gt; <a class="reference internal" href="Set.html#l536574"><span class="std std-ref">Set</span></a> <a class="reference internal" href="Set.html#l536574"><span class="std std-ref">Set</span></a> S</dt><dd><p><code class="docutils literal notranslate"><span class="pre">orbits(gp)</span></code> returns the orbits of the group <em>gp</em>, i.e. it partitions the (finite) of all moved points.</p>
 </dd>
 </dl>
-<span class="target" id="l5065726d75746174696f6e47726f75702e6f72646572"></span><dl class="simple" id="index-17">
+<span class="target" id="l5065726d75746174696f6e47726f7570-6f72646572"></span><dl class="simple" id="index-17">
 <dt><span class="spadfun">order</span>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">order(gp)</span></code> returns the order of the group <em>gp</em>.</p>
 </dd>
 </dl>
-<span class="target" id="l5065726d75746174696f6e47726f75702e7065726d5f746f5f766563"></span><dl class="simple" id="index-18">
+<span class="target" id="l5065726d75746174696f6e47726f7570-7065726d5f746f5f766563"></span><dl class="simple" id="index-18">
 <dt><span class="spadfun">perm_to_vec</span>: (<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> S, <a class="reference internal" href="Permutation.html#l5065726d75746174696f6e"><span class="std std-ref">Permutation</span></a> S, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Vector.html#l566563746f72"><span class="std std-ref">Vector</span></a> <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">perm_to_vec(supp,</span> <span class="pre">p,</span> <span class="pre">degree)</span></code> should be local but conditional</p>
 </dd>
 </dl>
-<span class="target" id="l5065726d75746174696f6e47726f75702e7065726d75746174696f6e47726f7570"></span><dl class="simple" id="index-19">
+<span class="target" id="l5065726d75746174696f6e47726f7570-7065726d75746174696f6e47726f7570"></span><dl class="simple" id="index-19">
 <dt><span class="spadfun">permutationGroup</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Permutation.html#l5065726d75746174696f6e"><span class="std std-ref">Permutation</span></a> S -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">permutationGroup(ls)</span></code> coerces a list of permutations <em>ls</em> to the group generated by this list.</p>
 </dd>
 </dl>
-<span class="target" id="l5065726d75746174696f6e47726f75702e706f696e744c697374"></span><dl class="simple" id="index-20">
+<span class="target" id="l5065726d75746174696f6e47726f7570-706f696e744c697374"></span><dl class="simple" id="index-20">
 <dt><span class="spadfun">pointList</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> S</dt><dd><p><code class="docutils literal notranslate"><span class="pre">pointList(gp)</span></code> should be local but conditional</p>
 </dd>
 </dl>
-<span class="target" id="l5065726d75746174696f6e47726f75702e72616e646f6d"></span><dl class="simple" id="index-21">
+<span class="target" id="l5065726d75746174696f6e47726f7570-72616e646f6d"></span><dl class="simple" id="index-21">
 <dt><span class="spadfun">random</span>: % -&gt; <a class="reference internal" href="Permutation.html#l5065726d75746174696f6e"><span class="std std-ref">Permutation</span></a> S</dt><dd><p><code class="docutils literal notranslate"><span class="pre">random(gp)</span></code> returns a random product of maximal 20 generators of the group <em>gp</em>. Note: <em>random(gp)=random(gp, 20)</em>.</p>
 </dd>
 </dl>
@@ -162,27 +162,27 @@
 <dt><span class="spadfun">random</span>: (%, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="Permutation.html#l5065726d75746174696f6e"><span class="std std-ref">Permutation</span></a> S</dt><dd><p><code class="docutils literal notranslate"><span class="pre">random(gp,</span> <span class="pre">i)</span></code> returns a random product of maximal <code class="docutils literal notranslate"><span class="pre">i</span></code> generators of the group <em>gp</em>.</p>
 </dd>
 </dl>
-<span class="target" id="l5065726d75746174696f6e47726f75702e72656c6174696f6e73496e47656e657261746f7273"></span><dl class="simple" id="index-23">
+<span class="target" id="l5065726d75746174696f6e47726f7570-72656c6174696f6e73496e47656e657261746f7273"></span><dl class="simple" id="index-23">
 <dt><span class="spadfun">relationsInGenerators</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">relationsInGenerators(gp)</span></code> computes relations between generators.</p>
 </dd>
 </dl>
-<span class="target" id="l5065726d75746174696f6e47726f75702e72656c6174696f6e73496e5374726f6e6747656e657261746f7273"></span><dl class="simple" id="index-24">
+<span class="target" id="l5065726d75746174696f6e47726f7570-72656c6174696f6e73496e5374726f6e6747656e657261746f7273"></span><dl class="simple" id="index-24">
 <dt><span class="spadfun">relationsInStrongGenerators</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">relationsInStrongGenerators(gp)</span></code> computes relations between strong generators.</p>
 </dd>
 </dl>
-<span class="target" id="l5065726d75746174696f6e47726f75702e7374726f6e6747656e657261746f7273"></span><dl class="simple" id="index-25">
+<span class="target" id="l5065726d75746174696f6e47726f7570-7374726f6e6747656e657261746f7273"></span><dl class="simple" id="index-25">
 <dt><span class="spadfun">strongGenerators</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Permutation.html#l5065726d75746174696f6e"><span class="std std-ref">Permutation</span></a> S</dt><dd><p><code class="docutils literal notranslate"><span class="pre">strongGenerators(gp)</span></code> returns strong generators for the group <em>gp</em>.</p>
 </dd>
 </dl>
-<span class="target" id="l5065726d75746174696f6e47726f75702e776f7264496e47656e657261746f7273"></span><dl class="simple" id="index-26">
+<span class="target" id="l5065726d75746174696f6e47726f7570-776f7264496e47656e657261746f7273"></span><dl class="simple" id="index-26">
 <dt><span class="spadfun">wordInGenerators</span>: (<a class="reference internal" href="Permutation.html#l5065726d75746174696f6e"><span class="std std-ref">Permutation</span></a> S, %) -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">wordInGenerators(p,</span> <span class="pre">gp)</span></code> returns the word for the permutation <code class="docutils literal notranslate"><span class="pre">p</span></code> in the original generators of the group <em>gp</em>, represented by the indices of the list, given by <em>generators</em>.</p>
 </dd>
 </dl>
-<span class="target" id="l5065726d75746174696f6e47726f75702e776f7264496e5374726f6e6747656e657261746f7273"></span><dl class="simple" id="index-27">
+<span class="target" id="l5065726d75746174696f6e47726f7570-776f7264496e5374726f6e6747656e657261746f7273"></span><dl class="simple" id="index-27">
 <dt><span class="spadfun">wordInStrongGenerators</span>: (<a class="reference internal" href="Permutation.html#l5065726d75746174696f6e"><span class="std std-ref">Permutation</span></a> S, %) -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">wordInStrongGenerators(p,</span> <span class="pre">gp)</span></code> returns the word for the permutation <code class="docutils literal notranslate"><span class="pre">p</span></code> in the strong generators of the group <em>gp</em>, represented by the indices of the list, given by <em>strongGenerators</em>.</p>
 </dd>
 </dl>
-<span class="target" id="l5065726d75746174696f6e47726f75702e776f726473466f725374726f6e6747656e657261746f7273"></span><dl class="simple" id="index-28">
+<span class="target" id="l5065726d75746174696f6e47726f7570-776f726473466f725374726f6e6747656e657261746f7273"></span><dl class="simple" id="index-28">
 <dt><span class="spadfun">wordsForStrongGenerators</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">wordsForStrongGenerators(gp)</span></code> returns the words for the strong generators of the group <em>gp</em> in the original generators of <em>gp</em>, represented by their indices in the list, given by <em>generators</em>.</p>
 </dd>
 </dl>

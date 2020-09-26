@@ -47,21 +47,21 @@
             
   <div class="section" id="matrixcommondenominator-r-q">
 <span id="l4d6174726978436f6d6d6f6e44656e6f6d696e61746f72"></span><span id="index-0"></span><h1>MatrixCommonDenominator(R, Q)<a class="headerlink" href="#matrixcommondenominator-r-q" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/cden.spad#L134">cden.spad line 134</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/cden.spad#L134">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/cden.spad#L134">cden.spad line 134</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/cden.spad#L134">[edit on github]</a></p>
 <ul class="simple">
 <li><p>R: <a class="reference internal" href="IntegralDomain.html#l496e74656772616c446f6d61696e"><span class="std std-ref">IntegralDomain</span></a></p></li>
 <li><p>Q: <a class="reference internal" href="QuotientFieldCategory.html#l51756f7469656e744669656c6443617465676f7279"><span class="std std-ref">QuotientFieldCategory</span></a> R</p></li>
 </ul>
 <p>MatrixCommonDenominator provides functions to compute the common denominator of a matrix of elements of the quotient field of an integral domain.</p>
-<span class="target" id="l4d6174726978436f6d6d6f6e44656e6f6d696e61746f722e636c65617244656e6f6d696e61746f72"></span><dl class="simple" id="index-1">
+<span class="target" id="l4d6174726978436f6d6d6f6e44656e6f6d696e61746f72-636c65617244656e6f6d696e61746f72"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">clearDenominator</span>: <a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> Q -&gt; <a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">clearDenominator(q)</span></code> returns <code class="docutils literal notranslate"><span class="pre">p</span></code> such that <code class="docutils literal notranslate"><span class="pre">q</span> <span class="pre">=</span> <span class="pre">p/d</span></code> where <code class="docutils literal notranslate"><span class="pre">d</span></code> is a common denominator for the elements of <code class="docutils literal notranslate"><span class="pre">q</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l4d6174726978436f6d6d6f6e44656e6f6d696e61746f722e636f6d6d6f6e44656e6f6d696e61746f72"></span><dl class="simple" id="index-2">
+<span class="target" id="l4d6174726978436f6d6d6f6e44656e6f6d696e61746f72-636f6d6d6f6e44656e6f6d696e61746f72"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">commonDenominator</span>: <a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> Q -&gt; R</dt><dd><p><code class="docutils literal notranslate"><span class="pre">commonDenominator(q)</span></code> returns a common denominator <code class="docutils literal notranslate"><span class="pre">d</span></code> for the elements of <code class="docutils literal notranslate"><span class="pre">q</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l4d6174726978436f6d6d6f6e44656e6f6d696e61746f722e73706c697444656e6f6d696e61746f72"></span><dl class="simple" id="index-3">
+<span class="target" id="l4d6174726978436f6d6d6f6e44656e6f6d696e61746f72-73706c697444656e6f6d696e61746f72"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">splitDenominator</span>: <a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> Q -&gt; Record(num: <a class="reference internal" href="Matrix.html#l4d6174726978"><span class="std std-ref">Matrix</span></a> R, den: R)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">splitDenominator(q)</span></code> returns <code class="docutils literal notranslate"><span class="pre">[p,</span> <span class="pre">d]</span></code> such that <code class="docutils literal notranslate"><span class="pre">q</span> <span class="pre">=</span> <span class="pre">p/d</span></code> and <code class="docutils literal notranslate"><span class="pre">d</span></code> is a common denominator for the elements of <code class="docutils literal notranslate"><span class="pre">q</span></code>.</p>
 </dd>
 </dl>

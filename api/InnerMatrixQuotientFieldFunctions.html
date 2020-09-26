@@ -47,7 +47,7 @@
             
   <div class="section" id="innermatrixquotientfieldfunctions-r-row-col-m-qf-row2-col2-m2">
 <span id="l496e6e65724d617472697851756f7469656e744669656c6446756e6374696f6e73"></span><span id="index-0"></span><h1>InnerMatrixQuotientFieldFunctions(R, Row, Col, M, QF, Row2, Col2, M2)<a class="headerlink" href="#innermatrixquotientfieldfunctions-r-row-col-m-qf-row2-col2-m2" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/matfuns.spad#L401">matfuns.spad line 401</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/matfuns.spad#L401">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/matfuns.spad#L401">matfuns.spad line 401</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/matfuns.spad#L401">[edit on github]</a></p>
 <ul class="simple">
 <li><p>R: <a class="reference internal" href="IntegralDomain.html#l496e74656772616c446f6d61696e"><span class="std std-ref">IntegralDomain</span></a></p></li>
 <li><p>Row: <a class="reference internal" href="FiniteLinearAggregate.html#l46696e6974654c696e656172416767726567617465"><span class="std std-ref">FiniteLinearAggregate</span></a> R</p></li>
@@ -59,15 +59,15 @@
 <li><p>M2: <a class="reference internal" href="MatrixCategory.html#l4d617472697843617465676f7279"><span class="std std-ref">MatrixCategory</span></a>(QF, Row2, Col2)</p></li>
 </ul>
 <p><a class="reference internal" href="#l496e6e65724d617472697851756f7469656e744669656c6446756e6374696f6e73"><span class="std std-ref">InnerMatrixQuotientFieldFunctions</span></a> provides functions on matrices over an integral domain which involve the quotient field of that integral domain. The functions rowEchelon and inverse return matrices with entries in the quotient field.</p>
-<span class="target" id="l496e6e65724d617472697851756f7469656e744669656c6446756e6374696f6e732e696e7665727365"></span><dl class="simple" id="index-1">
+<span class="target" id="l496e6e65724d617472697851756f7469656e744669656c6446756e6374696f6e73-696e7665727365"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">inverse</span>: M -&gt; Union(M2, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">inverse(m)</span></code> returns the inverse of the matrix <code class="docutils literal notranslate"><span class="pre">m</span></code>. If the matrix is not invertible, “failed” is returned. Error: if the matrix is not square. Note: the result will have entries in the quotient field.</p>
 </dd>
 </dl>
-<span class="target" id="l496e6e65724d617472697851756f7469656e744669656c6446756e6374696f6e732e6e756c6c5370616365"></span><dl class="simple" id="index-2">
+<span class="target" id="l496e6e65724d617472697851756f7469656e744669656c6446756e6374696f6e73-6e756c6c5370616365"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">nullSpace</span>: M -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> Col if Col2 has <a class="reference internal" href="shallowlyMutable.html#l7368616c6c6f776c794d757461626c65"><span class="std std-ref">shallowlyMutable</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">nullSpace(m)</span></code> returns a basis for the null space of the matrix <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l496e6e65724d617472697851756f7469656e744669656c6446756e6374696f6e732e726f77456368656c6f6e"></span><dl class="simple" id="index-3">
+<span class="target" id="l496e6e65724d617472697851756f7469656e744669656c6446756e6374696f6e73-726f77456368656c6f6e"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">rowEchelon</span>: M -&gt; M2</dt><dd><p><code class="docutils literal notranslate"><span class="pre">rowEchelon(m)</span></code> returns the row echelon form of the matrix <code class="docutils literal notranslate"><span class="pre">m</span></code>. the result will have entries in the quotient field.</p>
 </dd>
 </dl>

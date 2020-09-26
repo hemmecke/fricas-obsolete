@@ -47,29 +47,29 @@
             
   <div class="section" id="realpolynomialutilitiespackage-thefield-thepols">
 <span id="l5265616c506f6c796e6f6d69616c5574696c69746965735061636b616765"></span><span id="index-0"></span><h1>RealPolynomialUtilitiesPackage(TheField, ThePols)<a class="headerlink" href="#realpolynomialutilitiespackage-thefield-thepols" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/reclos.spad#L60">reclos.spad line 60</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/reclos.spad#L60">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/reclos.spad#L60">reclos.spad line 60</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/reclos.spad#L60">[edit on github]</a></p>
 <ul class="simple">
 <li><p>TheField: <a class="reference internal" href="Field.html#l4669656c64"><span class="std std-ref">Field</span></a></p></li>
 <li><p>ThePols: <a class="reference internal" href="UnivariatePolynomialCategory.html#l556e6976617269617465506f6c796e6f6d69616c43617465676f7279"><span class="std std-ref">UnivariatePolynomialCategory</span></a> TheField</p></li>
 </ul>
 <p><a class="reference internal" href="#l5265616c506f6c796e6f6d69616c5574696c69746965735061636b616765"><span class="std std-ref">RealPolynomialUtilitiesPackage</span></a> provides common functions used by interval coding.</p>
-<span class="target" id="l5265616c506f6c796e6f6d69616c5574696c69746965735061636b6167652e626f756e644f66436175636879"></span><dl class="simple" id="index-1">
+<span class="target" id="l5265616c506f6c796e6f6d69616c5574696c69746965735061636b616765-626f756e644f66436175636879"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">boundOfCauchy</span>: ThePols -&gt; TheField if TheField has <a class="reference internal" href="OrderedRing.html#l4f72646572656452696e67"><span class="std std-ref">OrderedRing</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">boundOfCauchy(p)</span></code> bounds the roots of <code class="docutils literal notranslate"><span class="pre">p</span></code></p>
 </dd>
 </dl>
-<span class="target" id="l5265616c506f6c796e6f6d69616c5574696c69746965735061636b6167652e6c617a79566172696174696f6e73"></span><dl class="simple" id="index-2">
+<span class="target" id="l5265616c506f6c796e6f6d69616c5574696c69746965735061636b616765-6c617a79566172696174696f6e73"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">lazyVariations</span>: (<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> TheField, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a> if TheField has <a class="reference internal" href="OrderedRing.html#l4f72646572656452696e67"><span class="std std-ref">OrderedRing</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">lazyVariations(l,</span> <span class="pre">s1,</span> <span class="pre">sn)</span></code> is the number of sign variations in the list of non null numbers [s1::l]<code class="docutils literal notranslate"><span class="pre">&#64;sn</span></code>,</p>
 </dd>
 </dl>
-<span class="target" id="l5265616c506f6c796e6f6d69616c5574696c69746965735061636b6167652e737475726d53657175656e6365"></span><dl class="simple" id="index-3">
+<span class="target" id="l5265616c506f6c796e6f6d69616c5574696c69746965735061636b616765-737475726d53657175656e6365"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">sturmSequence</span>: ThePols -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> ThePols</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sturmSequence(p)</span> <span class="pre">=</span> <span class="pre">sylvesterSequence(p,</span> <span class="pre">p')</span></code></p>
 </dd>
 </dl>
-<span class="target" id="l5265616c506f6c796e6f6d69616c5574696c69746965735061636b6167652e737475726d566172696174696f6e734f66"></span><dl class="simple" id="index-4">
+<span class="target" id="l5265616c506f6c796e6f6d69616c5574696c69746965735061636b616765-737475726d566172696174696f6e734f66"></span><dl class="simple" id="index-4">
 <dt><span class="spadfun">sturmVariationsOf</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> TheField -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a> if TheField has <a class="reference internal" href="OrderedRing.html#l4f72646572656452696e67"><span class="std std-ref">OrderedRing</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">sturmVariationsOf(l)</span></code> is the number of sign variations in the list of numbers <code class="docutils literal notranslate"><span class="pre">l</span></code>, note that the first term counts as a sign</p>
 </dd>
 </dl>
-<span class="target" id="l5265616c506f6c796e6f6d69616c5574696c69746965735061636b6167652e73796c76657374657253657175656e6365"></span><dl class="simple" id="index-5">
+<span class="target" id="l5265616c506f6c796e6f6d69616c5574696c69746965735061636b616765-73796c76657374657253657175656e6365"></span><dl class="simple" id="index-5">
 <dt><span class="spadfun">sylvesterSequence</span>: (ThePols, ThePols) -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> ThePols</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sylvesterSequence(p,</span> <span class="pre">q)</span></code> is the negated remainder sequence of <code class="docutils literal notranslate"><span class="pre">p</span></code> and <code class="docutils literal notranslate"><span class="pre">q</span></code> divided by the last computed term</p>
 </dd>
 </dl>

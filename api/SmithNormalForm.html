@@ -47,7 +47,7 @@
             
   <div class="section" id="smithnormalform-r-row-col-m">
 <span id="l536d6974684e6f726d616c466f726d"></span><span id="index-0"></span><h1>SmithNormalForm(R, Row, Col, M)<a class="headerlink" href="#smithnormalform-r-row-col-m" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/smith.spad#L1">smith.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/smith.spad#L1">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/smith.spad#L1">smith.spad line 1</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/smith.spad#L1">[edit on github]</a></p>
 <ul class="simple">
 <li><p>R: <a class="reference internal" href="EuclideanDomain.html#l4575636c696465616e446f6d61696e"><span class="std std-ref">EuclideanDomain</span></a></p></li>
 <li><p>Row: <a class="reference internal" href="FiniteLinearAggregate.html#l46696e6974654c696e656172416767726567617465"><span class="std std-ref">FiniteLinearAggregate</span></a> R</p></li>
@@ -55,23 +55,23 @@
 <li><p>M: <a class="reference internal" href="MatrixCategory.html#l4d617472697843617465676f7279"><span class="std std-ref">MatrixCategory</span></a>(R, Row, Col)</p></li>
 </ul>
 <p><a class="reference internal" href="#l536d6974684e6f726d616c466f726d"><span class="std std-ref">SmithNormalForm</span></a> is a package which provides some standard canonical forms for matrices.</p>
-<span class="target" id="l536d6974684e6f726d616c466f726d2e636f6d706c6574654865726d697465"></span><dl class="simple" id="index-1">
+<span class="target" id="l536d6974684e6f726d616c466f726d-636f6d706c6574654865726d697465"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">completeHermite</span>: M -&gt; Record(Hermite: M, eqMat: M)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">completeHermite</span></code> returns a record that contains the Hermite normal form <code class="docutils literal notranslate"><span class="pre">H</span></code> of the matrix and the equivalence matrix <code class="docutils literal notranslate"><span class="pre">U</span></code> such that U*m = <code class="docutils literal notranslate"><span class="pre">H</span></code></p>
 </dd>
 </dl>
-<span class="target" id="l536d6974684e6f726d616c466f726d2e636f6d706c657465536d697468"></span><dl class="simple" id="index-2">
+<span class="target" id="l536d6974684e6f726d616c466f726d-636f6d706c657465536d697468"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">completeSmith</span>: M -&gt; Record(Smith: M, leftEqMat: M, rightEqMat: M)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">completeSmith</span></code> returns a record that contains the Smith normal form <code class="docutils literal notranslate"><span class="pre">H</span></code> of the matrix and the left and right equivalence matrices <code class="docutils literal notranslate"><span class="pre">U</span></code> and <code class="docutils literal notranslate"><span class="pre">V</span></code> such that U*m*v = <code class="docutils literal notranslate"><span class="pre">H</span></code></p>
 </dd>
 </dl>
-<span class="target" id="l536d6974684e6f726d616c466f726d2e64696f7068616e74696e6553797374656d"></span><dl class="simple" id="index-3">
+<span class="target" id="l536d6974684e6f726d616c466f726d-64696f7068616e74696e6553797374656d"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">diophantineSystem</span>: (M, Col) -&gt; Record(particular: Union(Col, failed), basis: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> Col)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">diophantineSystem(A,</span> <span class="pre">B)</span></code> returns a particular integer solution and an integer basis of the equation <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">X</span> <span class="pre">=</span> <span class="pre">B</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l536d6974684e6f726d616c466f726d2e6865726d697465"></span><dl class="simple" id="index-4">
+<span class="target" id="l536d6974684e6f726d616c466f726d-6865726d697465"></span><dl class="simple" id="index-4">
 <dt><span class="spadfun">hermite</span>: M -&gt; M</dt><dd><p><code class="docutils literal notranslate"><span class="pre">hermite(m)</span></code> returns the Hermite normal form of the matrix <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l536d6974684e6f726d616c466f726d2e736d697468"></span><dl class="simple" id="index-5">
+<span class="target" id="l536d6974684e6f726d616c466f726d-736d697468"></span><dl class="simple" id="index-5">
 <dt><span class="spadfun">smith</span>: M -&gt; M</dt><dd><p><code class="docutils literal notranslate"><span class="pre">smith(m)</span></code> returns the Smith Normal form of the matrix <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
 </dd>
 </dl>

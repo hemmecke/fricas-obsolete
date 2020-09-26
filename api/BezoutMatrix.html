@@ -47,7 +47,7 @@
             
   <div class="section" id="bezoutmatrix-r-up-m-row-col">
 <span id="l42657a6f75744d6174726978"></span><span id="index-0"></span><h1>BezoutMatrix(R, UP, M, Row, Col)<a class="headerlink" href="#bezoutmatrix-r-up-m-row-col" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/bezout.spad#L1">bezout.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/bezout.spad#L1">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/bezout.spad#L1">bezout.spad line 1</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/bezout.spad#L1">[edit on github]</a></p>
 <ul class="simple">
 <li><p>R: <a class="reference internal" href="Ring.html#l52696e67"><span class="std std-ref">Ring</span></a></p></li>
 <li><p>UP: <a class="reference internal" href="UnivariatePolynomialCategory.html#l556e6976617269617465506f6c796e6f6d69616c43617465676f7279"><span class="std std-ref">UnivariatePolynomialCategory</span></a> R</p></li>
@@ -56,23 +56,23 @@
 <li><p>Col: <a class="reference internal" href="FiniteLinearAggregate.html#l46696e6974654c696e656172416767726567617465"><span class="std std-ref">FiniteLinearAggregate</span></a> R</p></li>
 </ul>
 <p><a class="reference internal" href="#l42657a6f75744d6174726978"><span class="std std-ref">BezoutMatrix</span></a> contains functions for computing resultants and discriminants using Bezout matrices, and functions related with Sylvester matrix and subresultant.</p>
-<span class="target" id="l42657a6f75744d61747269782e62657a6f75744469736372696d696e616e74"></span><dl class="simple" id="index-1">
+<span class="target" id="l42657a6f75744d6174726978-62657a6f75744469736372696d696e616e74"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">bezoutDiscriminant</span>: UP -&gt; R if R has <a class="reference internal" href="CommutativeRing.html#l436f6d6d7574617469766552696e67"><span class="std std-ref">CommutativeRing</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">bezoutDiscriminant(p)</span></code> computes the discriminant of a polynomial <code class="docutils literal notranslate"><span class="pre">p</span></code> by computing the determinant of a Bezout matrix.</p>
 </dd>
 </dl>
-<span class="target" id="l42657a6f75744d61747269782e62657a6f75744d6174726978"></span><dl class="simple" id="index-2">
+<span class="target" id="l42657a6f75744d6174726978-62657a6f75744d6174726978"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">bezoutMatrix</span>: (UP, UP) -&gt; M</dt><dd><p><code class="docutils literal notranslate"><span class="pre">bezoutMatrix(p,</span> <span class="pre">q)</span></code> returns the Bezout matrix for the two polynomials <code class="docutils literal notranslate"><span class="pre">p</span></code> and <code class="docutils literal notranslate"><span class="pre">q</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l42657a6f75744d61747269782e62657a6f7574526573756c74616e74"></span><dl class="simple" id="index-3">
+<span class="target" id="l42657a6f75744d6174726978-62657a6f7574526573756c74616e74"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">bezoutResultant</span>: (UP, UP) -&gt; R if R has <a class="reference internal" href="CommutativeRing.html#l436f6d6d7574617469766552696e67"><span class="std std-ref">CommutativeRing</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">bezoutResultant(p,</span> <span class="pre">q)</span></code> computes the resultant of the two polynomials <code class="docutils literal notranslate"><span class="pre">p</span></code> and <code class="docutils literal notranslate"><span class="pre">q</span></code> by computing the determinant of a Bezout matrix.</p>
 </dd>
 </dl>
-<span class="target" id="l42657a6f75744d61747269782e737562726573756c74616e7473"></span><dl class="simple" id="index-4">
+<span class="target" id="l42657a6f75744d6174726978-737562726573756c74616e7473"></span><dl class="simple" id="index-4">
 <dt><span class="spadfun">subresultants</span>: (UP, UP) -&gt; <a class="reference internal" href="IndexedVector.html#l496e6465786564566563746f72"><span class="std std-ref">IndexedVector</span></a>(UP, Zero) if R has <a class="reference internal" href="CommutativeRing.html#l436f6d6d7574617469766552696e67"><span class="std std-ref">CommutativeRing</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">subresultants(p,</span> <span class="pre">q)</span></code> returns a vector of subresultants of <code class="docutils literal notranslate"><span class="pre">p</span></code> and <code class="docutils literal notranslate"><span class="pre">q</span></code>, in ascending order, starting with index 0.</p>
 </dd>
 </dl>
-<span class="target" id="l42657a6f75744d61747269782e73756253796c7665737465724d6174726978"></span><dl class="simple" id="index-5">
+<span class="target" id="l42657a6f75744d6174726978-73756253796c7665737465724d6174726978"></span><dl class="simple" id="index-5">
 <dt><span class="spadfun">subSylvesterMatrix</span>: (M, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; M</dt><dd><p><code class="docutils literal notranslate"><span class="pre">subSylvesterMatrix(S,</span> <span class="pre">j)</span></code> returns the <code class="docutils literal notranslate"><span class="pre">j</span></code>th sub-Sylvester matrix <code class="docutils literal notranslate"><span class="pre">jS</span></code>.</p>
 </dd>
 </dl>
@@ -80,7 +80,7 @@
 <dt><span class="spadfun">subSylvesterMatrix</span>: (M, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; M</dt><dd><p><code class="docutils literal notranslate"><span class="pre">subSylvesterMatrix(S,</span> <span class="pre">j,</span> <span class="pre">i)</span></code> returns sub-Sylvester matrix jSi.</p>
 </dd>
 </dl>
-<span class="target" id="l42657a6f75744d61747269782e73796c7665737465724d6174726978"></span><dl class="simple" id="index-7">
+<span class="target" id="l42657a6f75744d6174726978-73796c7665737465724d6174726978"></span><dl class="simple" id="index-7">
 <dt><span class="spadfun">sylvesterMatrix</span>: (UP, UP) -&gt; M</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sylvesterMatrix(p,</span> <span class="pre">q)</span></code> returns the Sylvester matrix for the two nonzero polynomials <code class="docutils literal notranslate"><span class="pre">p</span></code> and <code class="docutils literal notranslate"><span class="pre">q</span></code>.</p>
 </dd>
 </dl>

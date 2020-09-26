@@ -47,17 +47,17 @@
             
   <div class="section" id="openmathserverpackage">
 <span id="l4f70656e4d6174685365727665725061636b616765"></span><span id="index-0"></span><h1>OpenMathServerPackage<a class="headerlink" href="#openmathserverpackage" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/omserver.spad#L1">omserver.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/omserver.spad#L1">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/omserver.spad#L1">omserver.spad line 1</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/omserver.spad#L1">[edit on github]</a></p>
 <p><a class="reference internal" href="#l4f70656e4d6174685365727665725061636b616765"><span class="std std-ref">OpenMathServerPackage</span></a> provides the necessary operations to run FriCAS as an OpenMath server, reading/writing objects to/from a port. Please note the facilities available here are very basic. The idea is that a user calls e.g. <code class="docutils literal notranslate"><span class="pre">Omserve(4000,</span> <span class="pre">60)</span></code> and then another process sends OpenMath objects to port 4000 and reads the result.</p>
-<span class="target" id="l4f70656e4d6174685365727665725061636b6167652e4f4d72656365697665"></span><dl class="simple" id="index-1">
+<span class="target" id="l4f70656e4d6174685365727665725061636b616765-4f4d72656365697665"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">OMreceive</span>: <a class="reference internal" href="OpenMathConnection.html#l4f70656e4d617468436f6e6e656374696f6e"><span class="std std-ref">OpenMathConnection</span></a> -&gt; <a class="reference internal" href="Any.html#l416e79"><span class="std std-ref">Any</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMreceive(c)</span></code> reads an OpenMath object from connection <code class="docutils literal notranslate"><span class="pre">c</span></code> and returns the appropriate FriCAS object.</p>
 </dd>
 </dl>
-<span class="target" id="l4f70656e4d6174685365727665725061636b6167652e4f4d73656e64"></span><dl class="simple" id="index-2">
+<span class="target" id="l4f70656e4d6174685365727665725061636b616765-4f4d73656e64"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">OMsend</span>: (<a class="reference internal" href="OpenMathConnection.html#l4f70656e4d617468436f6e6e656374696f6e"><span class="std std-ref">OpenMathConnection</span></a>, <a class="reference internal" href="Any.html#l416e79"><span class="std std-ref">Any</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMsend(c,</span> <span class="pre">u)</span></code> attempts to output <code class="docutils literal notranslate"><span class="pre">u</span></code> on aciom{<code class="docutils literal notranslate"><span class="pre">c</span></code>} in OpenMath.</p>
 </dd>
 </dl>
-<span class="target" id="l4f70656e4d6174685365727665725061636b6167652e4f4d7365727665"></span><dl class="simple" id="index-3">
+<span class="target" id="l4f70656e4d6174685365727665725061636b616765-4f4d7365727665"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">OMserve</span>: (<a class="reference internal" href="SingleInteger.html#l53696e676c65496e7465676572"><span class="std std-ref">SingleInteger</span></a>, <a class="reference internal" href="SingleInteger.html#l53696e676c65496e7465676572"><span class="std std-ref">SingleInteger</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMserve(portnum,</span> <span class="pre">timeout)</span></code> puts FriCAS into server mode on port number <code class="docutils literal notranslate"><span class="pre">portnum</span></code>. The parameter <code class="docutils literal notranslate"><span class="pre">timeout</span></code> specifies the timeout period for the connection.</p>
 </dd>
 </dl>

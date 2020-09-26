@@ -47,49 +47,49 @@
             
   <div class="section" id="tabulatedcomputationpackage-key-entry">
 <span id="l546162756c61746564436f6d7075746174696f6e5061636b616765"></span><span id="index-0"></span><h1>TabulatedComputationPackage(Key, Entry)<a class="headerlink" href="#tabulatedcomputationpackage-key-entry" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/newdata.spad#L25">newdata.spad line 25</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/newdata.spad#L25">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/newdata.spad#L25">newdata.spad line 25</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/newdata.spad#L25">[edit on github]</a></p>
 <ul class="simple">
 <li><p>Key: <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p></li>
 <li><p>Entry: <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p></li>
 </ul>
 <p><code class="docutils literal notranslate"><span class="pre">TabulatedComputationPackage(Key</span> <span class="pre">,</span> <span class="pre">Entry)</span></code> provides some modest support for dealing with operations with type <code class="docutils literal notranslate"><span class="pre">Key</span> <span class="pre">-&gt;</span> <span class="pre">Entry</span></code>. The result of such operations can be stored and retrieved with this package by using a hash-table. The user does not need to worry about the management of this hash-table. However, only one hash-table is built by calling <code class="docutils literal notranslate"><span class="pre">TabulatedComputationPackage(Key</span> <span class="pre">,</span> <span class="pre">Entry)</span></code>.</p>
-<span class="target" id="l546162756c61746564436f6d7075746174696f6e5061636b6167652e636c6561725461626c6521"></span><dl class="simple" id="index-1">
+<span class="target" id="l546162756c61746564436f6d7075746174696f6e5061636b616765-636c6561725461626c6521"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">clearTable!</span>: () -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">clearTable!()</span></code> clears the hash-table and assumes that it will no longer be used.</p>
 </dd>
 </dl>
-<span class="target" id="l546162756c61746564436f6d7075746174696f6e5061636b6167652e65787472616374496643616e"></span><dl class="simple" id="index-2">
+<span class="target" id="l546162756c61746564436f6d7075746174696f6e5061636b616765-65787472616374496643616e"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">extractIfCan</span>: Key -&gt; Union(Entry, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">extractIfCan(x)</span></code> searches the item whose key is <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l546162756c61746564436f6d7075746174696f6e5061636b6167652e696e69745461626c6521"></span><dl class="simple" id="index-3">
+<span class="target" id="l546162756c61746564436f6d7075746174696f6e5061636b616765-696e69745461626c6521"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">initTable!</span>: () -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">initTable!()</span></code> initializes the hash-table.</p>
 </dd>
 </dl>
-<span class="target" id="l546162756c61746564436f6d7075746174696f6e5061636b6167652e696e7365727421"></span><dl class="simple" id="index-4">
+<span class="target" id="l546162756c61746564436f6d7075746174696f6e5061636b616765-696e7365727421"></span><dl class="simple" id="index-4">
 <dt><span class="spadfun">insert!</span>: (Key, Entry) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">insert!(x,</span> <span class="pre">y)</span></code> stores the item whose key is <code class="docutils literal notranslate"><span class="pre">x</span></code> and whose entry is <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l546162756c61746564436f6d7075746174696f6e5061636b6167652e6d616b696e6753746174733f"></span><dl class="simple" id="index-5">
+<span class="target" id="l546162756c61746564436f6d7075746174696f6e5061636b616765-6d616b696e6753746174733f"></span><dl class="simple" id="index-5">
 <dt><span class="spadfun">makingStats?</span>: () -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">makingStats?()</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> iff the statistics process is running.</p>
 </dd>
 </dl>
-<span class="target" id="l546162756c61746564436f6d7075746174696f6e5061636b6167652e7072696e74496e666f21"></span><dl class="simple" id="index-6">
+<span class="target" id="l546162756c61746564436f6d7075746174696f6e5061636b616765-7072696e74496e666f21"></span><dl class="simple" id="index-6">
 <dt><span class="spadfun">printInfo!</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">printInfo!(x,</span> <span class="pre">y)</span></code> initializes the messages to be printed when manipulating items from the hash-table. If a key is retrieved then <code class="docutils literal notranslate"><span class="pre">x</span></code> is displayed. If an item is stored then <code class="docutils literal notranslate"><span class="pre">y</span></code> is displayed.</p>
 </dd>
 </dl>
-<span class="target" id="l546162756c61746564436f6d7075746174696f6e5061636b6167652e7072696e74696e67496e666f3f"></span><dl class="simple" id="index-7">
+<span class="target" id="l546162756c61746564436f6d7075746174696f6e5061636b616765-7072696e74696e67496e666f3f"></span><dl class="simple" id="index-7">
 <dt><span class="spadfun">printingInfo?</span>: () -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">printingInfo?()</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> iff messages are printed when manipulating items from the hash-table.</p>
 </dd>
 </dl>
-<span class="target" id="l546162756c61746564436f6d7075746174696f6e5061636b6167652e7072696e74537461747321"></span><dl class="simple" id="index-8">
+<span class="target" id="l546162756c61746564436f6d7075746174696f6e5061636b616765-7072696e74537461747321"></span><dl class="simple" id="index-8">
 <dt><span class="spadfun">printStats!</span>: () -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">printStats!()</span></code> prints the statistics.</p>
 </dd>
 </dl>
-<span class="target" id="l546162756c61746564436f6d7075746174696f6e5061636b6167652e7374617274537461747321"></span><dl class="simple" id="index-9">
+<span class="target" id="l546162756c61746564436f6d7075746174696f6e5061636b616765-7374617274537461747321"></span><dl class="simple" id="index-9">
 <dt><span class="spadfun">startStats!</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">startStats!(x)</span></code> initializes the statistics process and sets the comments to display when statistics are printed</p>
 </dd>
 </dl>
-<span class="target" id="l546162756c61746564436f6d7075746174696f6e5061636b6167652e7573696e675461626c653f"></span><dl class="simple" id="index-10">
+<span class="target" id="l546162756c61746564436f6d7075746174696f6e5061636b616765-7573696e675461626c653f"></span><dl class="simple" id="index-10">
 <dt><span class="spadfun">usingTable?</span>: () -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">usingTable?()</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> iff the hash-table is used</p>
 </dd>
 </dl>

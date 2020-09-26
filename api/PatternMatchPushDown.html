@@ -47,18 +47,18 @@
             
   <div class="section" id="patternmatchpushdown-s-a-b">
 <span id="l5061747465726e4d6174636850757368446f776e"></span><span id="index-0"></span><h1>PatternMatchPushDown(S, A, B)<a class="headerlink" href="#patternmatchpushdown-s-a-b" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/patmatch1.spad#L311">patmatch1.spad line 311</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/patmatch1.spad#L311">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/patmatch1.spad#L311">patmatch1.spad line 311</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/patmatch1.spad#L311">[edit on github]</a></p>
 <ul class="simple">
 <li><p>S: <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p></li>
 <li><p>A: <a class="reference internal" href="PatternMatchable.html#l5061747465726e4d6174636861626c65"><span class="std std-ref">PatternMatchable</span></a> S</p></li>
 <li><p>B: Join(<a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a>, <a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f"><span class="std std-ref">RetractableTo</span></a> A)</p></li>
 </ul>
 <p>This packages provides tools for matching recursively in type towers.</p>
-<span class="target" id="l5061747465726e4d6174636850757368446f776e2e666978507265646963617465"></span><dl class="simple" id="index-1">
+<span class="target" id="l5061747465726e4d6174636850757368446f776e-666978507265646963617465"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">fixPredicate</span>: (B -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a>) -&gt; A -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">fixPredicate(f)</span></code> returns <code class="docutils literal notranslate"><span class="pre">g</span></code> defined by <code class="docutils literal notranslate"><span class="pre">g</span></code>(a) = <code class="docutils literal notranslate"><span class="pre">f</span></code>(a::B).</p>
 </dd>
 </dl>
-<span class="target" id="l5061747465726e4d6174636850757368446f776e2e7061747465726e4d61746368"></span><dl class="simple" id="index-2">
+<span class="target" id="l5061747465726e4d6174636850757368446f776e-7061747465726e4d61746368"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">patternMatch</span>: (A, <a class="reference internal" href="Pattern.html#l5061747465726e"><span class="std std-ref">Pattern</span></a> S, <a class="reference internal" href="PatternMatchResult.html#l5061747465726e4d61746368526573756c74"><span class="std std-ref">PatternMatchResult</span></a>(S, B)) -&gt; <a class="reference internal" href="PatternMatchResult.html#l5061747465726e4d61746368526573756c74"><span class="std std-ref">PatternMatchResult</span></a>(S, B)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">patternMatch(expr,</span> <span class="pre">pat,</span> <span class="pre">res)</span></code> matches the pattern <code class="docutils literal notranslate"><span class="pre">pat</span></code> to the expression <code class="docutils literal notranslate"><span class="pre">expr</span></code>; res contains the variables of <code class="docutils literal notranslate"><span class="pre">pat</span></code> which are already matched and their matches. Note: this function handles type towers by changing the predicates and calling the matching function provided by <code class="docutils literal notranslate"><span class="pre">A</span></code>.</p>
 </dd>
 </dl>

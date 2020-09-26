@@ -47,14 +47,14 @@
             
   <div class="section" id="listfunctions3-a-b-c">
 <span id="l4c69737446756e6374696f6e7333"></span><span id="index-0"></span><h1>ListFunctions3(A, B, C)<a class="headerlink" href="#listfunctions3-a-b-c" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/list.spad#L341">list.spad line 341</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/list.spad#L341">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/list.spad#L341">list.spad line 341</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/list.spad#L341">[edit on github]</a></p>
 <ul class="simple">
 <li><p>A: <a class="reference internal" href="Type.html#l54797065"><span class="std std-ref">Type</span></a></p></li>
 <li><p>B: <a class="reference internal" href="Type.html#l54797065"><span class="std std-ref">Type</span></a></p></li>
 <li><p>C: <a class="reference internal" href="Type.html#l54797065"><span class="std std-ref">Type</span></a></p></li>
 </ul>
 <p><a class="reference internal" href="#l4c69737446756e6374696f6e7333"><span class="std std-ref">ListFunctions3</span></a> implements utility functions that operate on three kinds of lists, each with a possibly different type of element.</p>
-<span class="target" id="l4c69737446756e6374696f6e73332e6d6170"></span><dl class="simple" id="index-1">
+<span class="target" id="l4c69737446756e6374696f6e7333-6d6170"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">map</span>: ((A, B) -&gt; C, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> A, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> B) -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> C</dt><dd><p><code class="docutils literal notranslate"><span class="pre">map(fn,</span> <span class="pre">u1,</span> <span class="pre">u2)</span></code> applies the binary function <code class="docutils literal notranslate"><span class="pre">fn</span></code> to corresponding elements of lists <code class="docutils literal notranslate"><span class="pre">u1</span></code> and <code class="docutils literal notranslate"><span class="pre">u2</span></code> and returns a list of the results (in the same order). Thus <code class="docutils literal notranslate"><span class="pre">map(/,</span> <span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3],</span> <span class="pre">[4,</span> <span class="pre">5,</span> <span class="pre">6])</span> <span class="pre">=</span> <span class="pre">[1/4,</span> <span class="pre">2/5,</span> <span class="pre">1/2]</span></code>. The computation terminates when the end of either list is reached. That is, the length of the result list is equal to the minimum of the lengths of <code class="docutils literal notranslate"><span class="pre">u1</span></code> and <code class="docutils literal notranslate"><span class="pre">u2</span></code>.</p>
 </dd>
 </dl>

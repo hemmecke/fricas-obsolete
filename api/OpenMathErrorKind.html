@@ -47,49 +47,49 @@
             
   <div class="section" id="openmatherrorkind">
 <span id="l4f70656e4d6174684572726f724b696e64"></span><span id="index-0"></span><h1>OpenMathErrorKind<a class="headerlink" href="#openmatherrorkind" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/omerror.spad#L1">omerror.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/omerror.spad#L1">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/omerror.spad#L1">omerror.spad line 1</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/omerror.spad#L1">[edit on github]</a></p>
 <p><a class="reference internal" href="#l4f70656e4d6174684572726f724b696e64"><span class="std std-ref">OpenMathErrorKind</span></a> represents different kinds of OpenMath errors: specifically parse errors, unknown <code class="docutils literal notranslate"><span class="pre">CD</span></code> or symbol errors, and read errors.</p>
-<dl class="simple" id="l4f70656e4d6174684572726f724b696e642e3d">
-<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+<dl class="simple" id="l4f70656e4d6174684572726f724b696e64-3d">
+<dt><a class="reference internal" href="BasicType.html#l426173696354797065-3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4f70656e4d6174684572726f724b696e642e7e3d">
-<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e7e3d"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+<dl class="simple" id="l4f70656e4d6174684572726f724b696e64-7e3d">
+<dt><a class="reference internal" href="BasicType.html#l426173696354797065-7e3d"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4f70656e4d6174684572726f724b696e642e636f65726365">
-<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f2e636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+<dl class="simple" id="l4f70656e4d6174684572726f724b696e64-636f65726365">
+<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f-636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
 </dd>
 </dl>
 <dl class="simple" id="index-1">
 <dt><span class="spadfun">coerce</span>: <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a> -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce(u)</span></code> creates an OpenMath error object of an appropriate type if <code class="docutils literal notranslate"><span class="pre">u</span></code> is one of <code class="docutils literal notranslate"><span class="pre">OMParseError</span></code>, <code class="docutils literal notranslate"><span class="pre">OMReadError</span></code>, <code class="docutils literal notranslate"><span class="pre">OMUnknownCD</span></code> or <code class="docutils literal notranslate"><span class="pre">OMUnknownSymbol</span></code>, otherwise it raises a runtime error.</p>
 </dd>
 </dl>
-<dl class="simple" id="l4f70656e4d6174684572726f724b696e642e68617368">
-<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e68617368"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l53696e676c65496e7465676572"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+<dl class="simple" id="l4f70656e4d6174684572726f724b696e64-68617368">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f7279-68617368"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l53696e676c65496e7465676572"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4f70656e4d6174684572726f724b696e642e6861736855706461746521">
-<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6861736855706461746521"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+<dl class="simple" id="l4f70656e4d6174684572726f724b696e64-6861736855706461746521">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f7279-6861736855706461746521"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4f70656e4d6174684572726f724b696e642e6c61746578">
-<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6c61746578"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+<dl class="simple" id="l4f70656e4d6174684572726f724b696e64-6c61746578">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f7279-6c61746578"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l4f70656e4d6174684572726f724b696e642e4f4d50617273654572726f723f"></span><dl class="simple" id="index-2">
+<span class="target" id="l4f70656e4d6174684572726f724b696e64-4f4d50617273654572726f723f"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">OMParseError?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMParseError?(u)</span></code> tests whether <code class="docutils literal notranslate"><span class="pre">u</span></code> is an OpenMath parsing error.</p>
 </dd>
 </dl>
-<span class="target" id="l4f70656e4d6174684572726f724b696e642e4f4d526561644572726f723f"></span><dl class="simple" id="index-3">
+<span class="target" id="l4f70656e4d6174684572726f724b696e64-4f4d526561644572726f723f"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">OMReadError?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMReadError?(u)</span></code> tests whether <code class="docutils literal notranslate"><span class="pre">u</span></code> is an OpenMath read error.</p>
 </dd>
 </dl>
-<span class="target" id="l4f70656e4d6174684572726f724b696e642e4f4d556e6b6e6f776e43443f"></span><dl class="simple" id="index-4">
+<span class="target" id="l4f70656e4d6174684572726f724b696e64-4f4d556e6b6e6f776e43443f"></span><dl class="simple" id="index-4">
 <dt><span class="spadfun">OMUnknownCD?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMUnknownCD?(u)</span></code> tests whether <code class="docutils literal notranslate"><span class="pre">u</span></code> is an OpenMath unknown <code class="docutils literal notranslate"><span class="pre">CD</span></code> error.</p>
 </dd>
 </dl>
-<span class="target" id="l4f70656e4d6174684572726f724b696e642e4f4d556e6b6e6f776e53796d626f6c3f"></span><dl class="simple" id="index-5">
+<span class="target" id="l4f70656e4d6174684572726f724b696e64-4f4d556e6b6e6f776e53796d626f6c3f"></span><dl class="simple" id="index-5">
 <dt><span class="spadfun">OMUnknownSymbol?</span>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">OMUnknownSymbol?(u)</span></code> tests whether <code class="docutils literal notranslate"><span class="pre">u</span></code> is an OpenMath unknown symbol error.</p>
 </dd>
 </dl>

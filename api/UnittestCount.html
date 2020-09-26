@@ -47,77 +47,77 @@
             
   <div class="section" id="unittestcount">
 <span id="l556e697474657374436f756e74"></span><span id="index-0"></span><h1>UnittestCount<a class="headerlink" href="#unittestcount" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/unittest.spad#L66">unittest.spad line 66</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/unittest.spad#L66">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/unittest.spad#L66">unittest.spad line 66</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/unittest.spad#L66">[edit on github]</a></p>
 <p>UnittestCount is a package that keeps track of statistics collected during testing. It is separate from <a class="reference internal" href="UnittestAux.html#l556e697474657374417578"><span class="std std-ref">UnittestAux</span></a> because the latter takes an argument, and we want the state to be common for all arguments.</p>
-<span class="target" id="l556e697474657374436f756e742e6164645761726e696e67"></span><dl class="simple" id="index-1">
+<span class="target" id="l556e697474657374436f756e74-6164645761726e696e67"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">addWarning</span>: <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a> -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">addWarning</span> <span class="pre">s</span></code> is an internal function that adds <code class="docutils literal notranslate"><span class="pre">s</span></code>, together with an indication of the current testcase and the current testsuite to the list of warnings.</p>
 </dd>
 </dl>
-<span class="target" id="l556e697474657374436f756e742e63686b4c6962726172794572726f72"></span><dl class="simple" id="index-2">
+<span class="target" id="l556e697474657374436f756e74-63686b4c6962726172794572726f72"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">chkLibraryError</span>: () -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>chkLibraryError is an internal function that steps the number of tests.</p>
 </dd>
 </dl>
-<span class="target" id="l556e697474657374436f756e742e646563466174616c"></span><dl class="simple" id="index-3">
+<span class="target" id="l556e697474657374436f756e74-646563466174616c"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">decFatal</span>: () -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>decFatal is an internal function that declares that the preceding test did not fail with a fatal error.</p>
 </dd>
 </dl>
-<span class="target" id="l556e697474657374436f756e742e6465635866466174616c"></span><dl class="simple" id="index-4">
+<span class="target" id="l556e697474657374436f756e74-6465635866466174616c"></span><dl class="simple" id="index-4">
 <dt><span class="spadfun">decXfFatal</span>: () -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>like decFatal, but for expected failures.</p>
 </dd>
 </dl>
-<span class="target" id="l556e697474657374436f756e742e646563586650617373"></span><dl class="simple" id="index-5">
+<span class="target" id="l556e697474657374436f756e74-646563586650617373"></span><dl class="simple" id="index-5">
 <dt><span class="spadfun">decXfPass</span>: () -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">decXfPass()</span></code> is an internal function that declares that the preceding test did not pass unexpectedly. This function should only be used for testing library errors</p>
 </dd>
 </dl>
-<span class="target" id="l556e697474657374436f756e742e696e634661696c"></span><dl class="simple" id="index-6">
+<span class="target" id="l556e697474657374436f756e74-696e634661696c"></span><dl class="simple" id="index-6">
 <dt><span class="spadfun">incFail</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">incFail(s,</span> <span class="pre">o)</span></code> is an internal function that steps the number of failed tests and records in- and output.</p>
 </dd>
 </dl>
-<span class="target" id="l556e697474657374436f756e742e696e63466174616c"></span><dl class="simple" id="index-7">
+<span class="target" id="l556e697474657374436f756e74-696e63466174616c"></span><dl class="simple" id="index-7">
 <dt><span class="spadfun">incFatal</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">incFatal</span> <span class="pre">s</span></code> is an internal function that steps the number of fatal tests and records input.</p>
 </dd>
 </dl>
-<span class="target" id="l556e697474657374436f756e742e696e634c6962726172794572726f72"></span><dl class="simple" id="index-8">
+<span class="target" id="l556e697474657374436f756e74-696e634c6962726172794572726f72"></span><dl class="simple" id="index-8">
 <dt><span class="spadfun">incLibraryError</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>incLibraryError is an internal function that steps the number of failed tests, but not the number of tests.</p>
 </dd>
 </dl>
-<span class="target" id="l556e697474657374436f756e742e696e6350617373"></span><dl class="simple" id="index-9">
+<span class="target" id="l556e697474657374436f756e74-696e6350617373"></span><dl class="simple" id="index-9">
 <dt><span class="spadfun">incPass</span>: () -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>incPass is an internal function that steps the number of passed tests.</p>
 </dd>
 </dl>
-<span class="target" id="l556e697474657374436f756e742e696e6358664661696c"></span><dl class="simple" id="index-10">
+<span class="target" id="l556e697474657374436f756e74-696e6358664661696c"></span><dl class="simple" id="index-10">
 <dt><span class="spadfun">incXfFail</span>: () -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">incXfFail()</span></code> is an internal function that steps the number expected failures.</p>
 </dd>
 </dl>
-<span class="target" id="l556e697474657374436f756e742e696e635866466174616c"></span><dl class="simple" id="index-11">
+<span class="target" id="l556e697474657374436f756e74-696e635866466174616c"></span><dl class="simple" id="index-11">
 <dt><span class="spadfun">incXfFatal</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>like incFatal, but for expected failures.</p>
 </dd>
 </dl>
-<span class="target" id="l556e697474657374436f756e742e696e6358664c6962726172794572726f72"></span><dl class="simple" id="index-12">
+<span class="target" id="l556e697474657374436f756e74-696e6358664c6962726172794572726f72"></span><dl class="simple" id="index-12">
 <dt><span class="spadfun">incXfLibraryError</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p>like incLibraryError, but using expected failures.</p>
 </dd>
 </dl>
-<span class="target" id="l556e697474657374436f756e742e696e63586650617373"></span><dl class="simple" id="index-13">
+<span class="target" id="l556e697474657374436f756e74-696e63586650617373"></span><dl class="simple" id="index-13">
 <dt><span class="spadfun">incXfPass</span>: (<a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">incXfPass(s,</span> <span class="pre">o)</span></code> is an internal function that steps the number of tests that passed but were expected to fail and records in- and output.</p>
 </dd>
 </dl>
-<span class="target" id="l556e697474657374436f756e742e73746174697374696373"></span><dl class="simple" id="index-14">
+<span class="target" id="l556e697474657374436f756e74-73746174697374696373"></span><dl class="simple" id="index-14">
 <dt><span class="spadfun">statistics</span>: () -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">statistics()</span></code> prints out a summary of the outcome of the testcases so far. Use <code class="docutils literal notranslate"><span class="pre">clear</span> <span class="pre">completely</span></code> to reset the statistics.</p>
 </dd>
 </dl>
-<span class="target" id="l556e697474657374436f756e742e7465737463617365"></span><dl class="simple" id="index-15">
+<span class="target" id="l556e697474657374436f756e74-7465737463617365"></span><dl class="simple" id="index-15">
 <dt><span class="spadfun">testcase</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">testcase</span> <span class="pre">s</span></code> starts a new testcase with <code class="docutils literal notranslate"><span class="pre">s</span></code> as title. It also calls <code class="docutils literal notranslate"><span class="pre">clear</span> <span class="pre">all</span></code>. A testcase is composed of several tests.</p>
 </dd>
 </dl>
-<span class="target" id="l556e697474657374436f756e742e74657374636173654e6f436c656172"></span><dl class="simple" id="index-16">
+<span class="target" id="l556e697474657374436f756e74-74657374636173654e6f436c656172"></span><dl class="simple" id="index-16">
 <dt><span class="spadfun">testcaseNoClear</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">testcaseNoClear</span> <span class="pre">s</span></code>, starts a new testcase with <code class="docutils literal notranslate"><span class="pre">s</span></code> as title, without calling <code class="docutils literal notranslate"><span class="pre">clear</span> <span class="pre">all</span></code>. A testcase is composed of several tests.</p>
 </dd>
 </dl>
-<span class="target" id="l556e697474657374436f756e742e746573747375697465"></span><dl class="simple" id="index-17">
+<span class="target" id="l556e697474657374436f756e74-746573747375697465"></span><dl class="simple" id="index-17">
 <dt><span class="spadfun">testsuite</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">testsuite</span> <span class="pre">s</span></code> starts a new testsuite with <code class="docutils literal notranslate"><span class="pre">s</span></code> as title. It also calls <code class="docutils literal notranslate"><span class="pre">clear</span> <span class="pre">all</span></code>. A testsuite is composed of several testcases.</p>
 </dd>
 </dl>
-<span class="target" id="l556e697474657374436f756e742e7465737473756974654e6f436c656172"></span><dl class="simple" id="index-18">
+<span class="target" id="l556e697474657374436f756e74-7465737473756974654e6f436c656172"></span><dl class="simple" id="index-18">
 <dt><span class="spadfun">testsuiteNoClear</span>: <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a> -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">testsuiteNoClear</span> <span class="pre">s</span></code> starts a new testsuite with <code class="docutils literal notranslate"><span class="pre">s</span></code> as title, without calling <code class="docutils literal notranslate"><span class="pre">clear</span> <span class="pre">all</span></code>. A testsuite is composed of several testcases.</p>
 </dd>
 </dl>

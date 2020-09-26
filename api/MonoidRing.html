@@ -47,262 +47,262 @@
             
   <div class="section" id="monoidring-r-m">
 <span id="l4d6f6e6f696452696e67"></span><span id="index-0"></span><h1>MonoidRing(R, M)<a class="headerlink" href="#monoidring-r-m" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/mring.spad#L33">mring.spad line 33</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/mring.spad#L33">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/mring.spad#L33">mring.spad line 33</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/mring.spad#L33">[edit on github]</a></p>
 <ul class="simple">
 <li><p>R: <a class="reference internal" href="Ring.html#l52696e67"><span class="std std-ref">Ring</span></a></p></li>
 <li><p>M: <a class="reference internal" href="Monoid.html#l4d6f6e6f6964"><span class="std std-ref">Monoid</span></a></p></li>
 </ul>
 <p><a class="reference internal" href="#l4d6f6e6f696452696e67"><span class="std std-ref">MonoidRing</span></a>(<code class="docutils literal notranslate"><span class="pre">R</span></code>, <code class="docutils literal notranslate"><span class="pre">M</span></code>), implements the algebra of all maps from the monoid <code class="docutils literal notranslate"><span class="pre">M</span></code> to the commutative ring <code class="docutils literal notranslate"><span class="pre">R</span></code> with finite support. Multiplication of two maps <code class="docutils literal notranslate"><span class="pre">f</span></code> and <code class="docutils literal notranslate"><span class="pre">g</span></code> is defined to map an element <code class="docutils literal notranslate"><span class="pre">c</span></code> of <code class="docutils literal notranslate"><span class="pre">M</span></code> to the (convolution) sum over <em>f(a)g(b)</em> such that <em>ab = c</em>. Thus <code class="docutils literal notranslate"><span class="pre">M</span></code> can be identified with a canonical basis and the maps can also be considered as formal linear combinations of the elements in <code class="docutils literal notranslate"><span class="pre">M</span></code>. Scalar multiples of a basis element are called monomials. A prominent example is the class of polynomials where the monoid is a direct product of the natural numbers with pointwise addition. When <code class="docutils literal notranslate"><span class="pre">M</span></code> is FreeMonoid Symbol, one gets polynomials in infinitely many non-commuting variables. Another application area is representation theory of finite groups <code class="docutils literal notranslate"><span class="pre">G</span></code>, where modules over <a class="reference internal" href="#l4d6f6e6f696452696e67"><span class="std std-ref">MonoidRing</span></a>(<code class="docutils literal notranslate"><span class="pre">R</span></code>, <code class="docutils literal notranslate"><span class="pre">G</span></code>) are studied.</p>
-<dl class="simple" id="l4d6f6e6f696452696e672e30">
-<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f69642e30"><span class="std std-ref">0</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+<dl class="simple" id="l4d6f6e6f696452696e67-30">
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964-30"><span class="std std-ref">0</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e31">
-<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e69742e31"><span class="std std-ref">1</span></a>: %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+<dl class="simple" id="l4d6f6e6f696452696e67-31">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974-31"><span class="std std-ref">1</span></a>: %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e2a">
-<dt><a class="reference internal" href="Magma.html#l4d61676d612e2a"><span class="std std-ref">*</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l4d61676d61"><span class="std std-ref">Magma</span></a></p>
+<dl class="simple" id="l4d6f6e6f696452696e67-2a">
+<dt><a class="reference internal" href="Magma.html#l4d61676d61-2a"><span class="std std-ref">*</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l4d61676d61"><span class="std std-ref">Magma</span></a></p>
 </dd>
-<dt><a class="reference internal" href="RightModule.html#l52696768744d6f64756c652e2a"><span class="std std-ref">*</span></a>: (%, R) -&gt; %</dt><dd><p>from <a class="reference internal" href="RightModule.html#l52696768744d6f64756c65"><span class="std std-ref">RightModule</span></a> R</p>
+<dt><a class="reference internal" href="RightModule.html#l52696768744d6f64756c65-2a"><span class="std std-ref">*</span></a>: (%, R) -&gt; %</dt><dd><p>from <a class="reference internal" href="RightModule.html#l52696768744d6f64756c65"><span class="std std-ref">RightModule</span></a> R</p>
 </dd>
-<dt><a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f75702e2a"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p>
+<dt><a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570-2a"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p>
 </dd>
-<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f69642e2a"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964-2a"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
 </dd>
-<dt><a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f75702e2a"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f7570"><span class="std std-ref">AbelianSemiGroup</span></a></p>
+<dt><a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f7570-2a"><span class="std std-ref">*</span></a>: (<a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f7570"><span class="std std-ref">AbelianSemiGroup</span></a></p>
 </dd>
-<dt><a class="reference internal" href="LeftModule.html#l4c6566744d6f64756c652e2a"><span class="std std-ref">*</span></a>: (R, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="LeftModule.html#l4c6566744d6f64756c65"><span class="std std-ref">LeftModule</span></a> R</p>
-</dd>
-</dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e2b">
-<dt><a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f75702e2b"><span class="std std-ref">+</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f7570"><span class="std std-ref">AbelianSemiGroup</span></a></p>
+<dt><a class="reference internal" href="LeftModule.html#l4c6566744d6f64756c65-2a"><span class="std std-ref">*</span></a>: (R, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="LeftModule.html#l4c6566744d6f64756c65"><span class="std std-ref">LeftModule</span></a> R</p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e2d">
-<dt><a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f75702e2d"><span class="std std-ref">-</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p>
-</dd>
-<dt><a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f75702e2d"><span class="std std-ref">-</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p>
+<dl class="simple" id="l4d6f6e6f696452696e67-2b">
+<dt><a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f7570-2b"><span class="std std-ref">+</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianSemiGroup.html#l4162656c69616e53656d6947726f7570"><span class="std std-ref">AbelianSemiGroup</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e3d">
-<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+<dl class="simple" id="l4d6f6e6f696452696e67-2d">
+<dt><a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570-2d"><span class="std std-ref">-</span></a>: % -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p>
+</dd>
+<dt><a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570-2d"><span class="std std-ref">-</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e5e">
-<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e69742e5e"><span class="std std-ref">^</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
-</dd>
-<dt><a class="reference internal" href="Magma.html#l4d61676d612e5e"><span class="std std-ref">^</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l4d61676d61"><span class="std std-ref">Magma</span></a></p>
+<dl class="simple" id="l4d6f6e6f696452696e67-3d">
+<dt><a class="reference internal" href="BasicType.html#l426173696354797065-3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e7e3d">
-<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e7e3d"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+<dl class="simple" id="l4d6f6e6f696452696e67-5e">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974-5e"><span class="std std-ref">^</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Magma.html#l4d61676d61-5e"><span class="std std-ref">^</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l4d61676d61"><span class="std std-ref">Magma</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e616e6e6968696c6174653f">
-<dt><a class="reference internal" href="Rng.html#l526e672e616e6e6968696c6174653f"><span class="std std-ref">annihilate?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Rng.html#l526e67"><span class="std std-ref">Rng</span></a></p>
+<dl class="simple" id="l4d6f6e6f696452696e67-7e3d">
+<dt><a class="reference internal" href="BasicType.html#l426173696354797065-7e3d"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e616e7469436f6d6d757461746f72">
-<dt><a class="reference internal" href="NonAssociativeSemiRng.html#l4e6f6e4173736f6369617469766553656d69526e672e616e7469436f6d6d757461746f72"><span class="std std-ref">antiCommutator</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeSemiRng.html#l4e6f6e4173736f6369617469766553656d69526e67"><span class="std std-ref">NonAssociativeSemiRng</span></a></p>
+<dl class="simple" id="l4d6f6e6f696452696e67-616e6e6968696c6174653f">
+<dt><a class="reference internal" href="Rng.html#l526e67-616e6e6968696c6174653f"><span class="std std-ref">annihilate?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="Rng.html#l526e67"><span class="std std-ref">Rng</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e6173736f636961746f72">
-<dt><a class="reference internal" href="NonAssociativeRng.html#l4e6f6e4173736f63696174697665526e672e6173736f636961746f72"><span class="std std-ref">associator</span></a>: (%, %, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRng.html#l4e6f6e4173736f63696174697665526e67"><span class="std std-ref">NonAssociativeRng</span></a></p>
+<dl class="simple" id="l4d6f6e6f696452696e67-616e7469436f6d6d757461746f72">
+<dt><a class="reference internal" href="NonAssociativeSemiRng.html#l4e6f6e4173736f6369617469766553656d69526e67-616e7469436f6d6d757461746f72"><span class="std std-ref">antiCommutator</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeSemiRng.html#l4e6f6e4173736f6369617469766553656d69526e67"><span class="std std-ref">NonAssociativeSemiRng</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e6368617261637465726973746963">
-<dt><a class="reference internal" href="NonAssociativeRing.html#l4e6f6e4173736f6369617469766552696e672e6368617261637465726973746963"><span class="std std-ref">characteristic</span></a>: () -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="NonAssociativeRing.html#l4e6f6e4173736f6369617469766552696e67"><span class="std std-ref">NonAssociativeRing</span></a></p>
+<dl class="simple" id="l4d6f6e6f696452696e67-6173736f636961746f72">
+<dt><a class="reference internal" href="NonAssociativeRng.html#l4e6f6e4173736f63696174697665526e67-6173736f636961746f72"><span class="std std-ref">associator</span></a>: (%, %, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRng.html#l4e6f6e4173736f63696174697665526e67"><span class="std std-ref">NonAssociativeRng</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e636861727468526f6f74">
-<dt><a class="reference internal" href="CharacteristicNonZero.html#l43686172616374657269737469634e6f6e5a65726f2e636861727468526f6f74"><span class="std std-ref">charthRoot</span></a>: % -&gt; Union(%, failed) if R has <a class="reference internal" href="CharacteristicNonZero.html#l43686172616374657269737469634e6f6e5a65726f"><span class="std std-ref">CharacteristicNonZero</span></a></dt><dd><p>from <a class="reference internal" href="CharacteristicNonZero.html#l43686172616374657269737469634e6f6e5a65726f"><span class="std std-ref">CharacteristicNonZero</span></a></p>
+<dl class="simple" id="l4d6f6e6f696452696e67-6368617261637465726973746963">
+<dt><a class="reference internal" href="NonAssociativeRing.html#l4e6f6e4173736f6369617469766552696e67-6368617261637465726973746963"><span class="std std-ref">characteristic</span></a>: () -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="NonAssociativeRing.html#l4e6f6e4173736f6369617469766552696e67"><span class="std std-ref">NonAssociativeRing</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e636f656666696369656e74">
-<dt><a class="reference internal" href="FreeModuleCategory.html#l467265654d6f64756c6543617465676f72792e636f656666696369656e74"><span class="std std-ref">coefficient</span></a>: (%, M) -&gt; R</dt><dd><p>from <a class="reference internal" href="FreeModuleCategory.html#l467265654d6f64756c6543617465676f7279"><span class="std std-ref">FreeModuleCategory</span></a>(R, M)</p>
+<dl class="simple" id="l4d6f6e6f696452696e67-636861727468526f6f74">
+<dt><a class="reference internal" href="CharacteristicNonZero.html#l43686172616374657269737469634e6f6e5a65726f-636861727468526f6f74"><span class="std std-ref">charthRoot</span></a>: % -&gt; Union(%, failed) if R has <a class="reference internal" href="CharacteristicNonZero.html#l43686172616374657269737469634e6f6e5a65726f"><span class="std std-ref">CharacteristicNonZero</span></a></dt><dd><p>from <a class="reference internal" href="CharacteristicNonZero.html#l43686172616374657269737469634e6f6e5a65726f"><span class="std std-ref">CharacteristicNonZero</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e636f656666696369656e7473">
-<dt><a class="reference internal" href="FreeModuleCategory.html#l467265654d6f64756c6543617465676f72792e636f656666696369656e7473"><span class="std std-ref">coefficients</span></a>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> R</dt><dd><p>from <a class="reference internal" href="FreeModuleCategory.html#l467265654d6f64756c6543617465676f7279"><span class="std std-ref">FreeModuleCategory</span></a>(R, M)</p>
+<dl class="simple" id="l4d6f6e6f696452696e67-636f656666696369656e74">
+<dt><a class="reference internal" href="FreeModuleCategory.html#l467265654d6f64756c6543617465676f7279-636f656666696369656e74"><span class="std std-ref">coefficient</span></a>: (%, M) -&gt; R</dt><dd><p>from <a class="reference internal" href="FreeModuleCategory.html#l467265654d6f64756c6543617465676f7279"><span class="std std-ref">FreeModuleCategory</span></a>(R, M)</p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e636f65726365">
-<dt><a class="reference internal" href="Algebra.html#l416c67656272612e636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; % if M has <a class="reference internal" href="CommutativeStar.html#l436f6d6d7574617469766553746172"><span class="std std-ref">CommutativeStar</span></a> and R has <a class="reference internal" href="CommutativeRing.html#l436f6d6d7574617469766552696e67"><span class="std std-ref">CommutativeRing</span></a></dt><dd><p>from <a class="reference internal" href="Algebra.html#l416c6765627261"><span class="std std-ref">Algebra</span></a> %</p>
-</dd>
-<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f2e636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
-</dd>
-<dt><a class="reference internal" href="NonAssociativeRing.html#l4e6f6e4173736f6369617469766552696e672e636f65726365"><span class="std std-ref">coerce</span></a>: <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a> -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRing.html#l4e6f6e4173736f6369617469766552696e67"><span class="std std-ref">NonAssociativeRing</span></a></p>
-</dd>
-<dt><a class="reference internal" href="MonoidRingCategory.html#l4d6f6e6f696452696e6743617465676f72792e636f65726365"><span class="std std-ref">coerce</span></a>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> Record(k: M, c: R) -&gt; %</dt><dd><p>from <a class="reference internal" href="MonoidRingCategory.html#l4d6f6e6f696452696e6743617465676f7279"><span class="std std-ref">MonoidRingCategory</span></a>(R, M)</p>
-</dd>
-<dt><a class="reference internal" href="CoercibleFrom.html#l436f65726369626c6546726f6d2e636f65726365"><span class="std std-ref">coerce</span></a>: M -&gt; %</dt><dd><p>from <a class="reference internal" href="CoercibleFrom.html#l436f65726369626c6546726f6d"><span class="std std-ref">CoercibleFrom</span></a> M</p>
-</dd>
-<dt><a class="reference internal" href="Algebra.html#l416c67656272612e636f65726365"><span class="std std-ref">coerce</span></a>: R -&gt; %</dt><dd><p>from <a class="reference internal" href="Algebra.html#l416c6765627261"><span class="std std-ref">Algebra</span></a> R</p>
+<dl class="simple" id="l4d6f6e6f696452696e67-636f656666696369656e7473">
+<dt><a class="reference internal" href="FreeModuleCategory.html#l467265654d6f64756c6543617465676f7279-636f656666696369656e7473"><span class="std std-ref">coefficients</span></a>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> R</dt><dd><p>from <a class="reference internal" href="FreeModuleCategory.html#l467265654d6f64756c6543617465676f7279"><span class="std std-ref">FreeModuleCategory</span></a>(R, M)</p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e636f6d6d757461746f72">
-<dt><a class="reference internal" href="NonAssociativeRng.html#l4e6f6e4173736f63696174697665526e672e636f6d6d757461746f72"><span class="std std-ref">commutator</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRng.html#l4e6f6e4173736f63696174697665526e67"><span class="std std-ref">NonAssociativeRng</span></a></p>
+<dl class="simple" id="l4d6f6e6f696452696e67-636f65726365">
+<dt><a class="reference internal" href="Algebra.html#l416c6765627261-636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; % if M has <a class="reference internal" href="CommutativeStar.html#l436f6d6d7574617469766553746172"><span class="std std-ref">CommutativeStar</span></a> and R has <a class="reference internal" href="CommutativeRing.html#l436f6d6d7574617469766552696e67"><span class="std std-ref">CommutativeRing</span></a></dt><dd><p>from <a class="reference internal" href="Algebra.html#l416c6765627261"><span class="std std-ref">Algebra</span></a> %</p>
+</dd>
+<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f-636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+</dd>
+<dt><a class="reference internal" href="NonAssociativeRing.html#l4e6f6e4173736f6369617469766552696e67-636f65726365"><span class="std std-ref">coerce</span></a>: <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a> -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRing.html#l4e6f6e4173736f6369617469766552696e67"><span class="std std-ref">NonAssociativeRing</span></a></p>
+</dd>
+<dt><a class="reference internal" href="MonoidRingCategory.html#l4d6f6e6f696452696e6743617465676f7279-636f65726365"><span class="std std-ref">coerce</span></a>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> Record(k: M, c: R) -&gt; %</dt><dd><p>from <a class="reference internal" href="MonoidRingCategory.html#l4d6f6e6f696452696e6743617465676f7279"><span class="std std-ref">MonoidRingCategory</span></a>(R, M)</p>
+</dd>
+<dt><a class="reference internal" href="CoercibleFrom.html#l436f65726369626c6546726f6d-636f65726365"><span class="std std-ref">coerce</span></a>: M -&gt; %</dt><dd><p>from <a class="reference internal" href="CoercibleFrom.html#l436f65726369626c6546726f6d"><span class="std std-ref">CoercibleFrom</span></a> M</p>
+</dd>
+<dt><a class="reference internal" href="Algebra.html#l416c6765627261-636f65726365"><span class="std std-ref">coerce</span></a>: R -&gt; %</dt><dd><p>from <a class="reference internal" href="Algebra.html#l416c6765627261"><span class="std std-ref">Algebra</span></a> R</p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e636f6e737472756374">
-<dt><a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f72792e636f6e737472756374"><span class="std std-ref">construct</span></a>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> Record(k: M, c: R) -&gt; %</dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279"><span class="std std-ref">IndexedProductCategory</span></a>(R, M)</p>
+<dl class="simple" id="l4d6f6e6f696452696e67-636f6d6d757461746f72">
+<dt><a class="reference internal" href="NonAssociativeRng.html#l4e6f6e4173736f63696174697665526e67-636f6d6d757461746f72"><span class="std std-ref">commutator</span></a>: (%, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="NonAssociativeRng.html#l4e6f6e4173736f63696174697665526e67"><span class="std std-ref">NonAssociativeRng</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e636f6e7374727563744f726465726564">
-<dt><a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f72792e636f6e7374727563744f726465726564"><span class="std std-ref">constructOrdered</span></a>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> Record(k: M, c: R) -&gt; % if M has <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a></dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279"><span class="std std-ref">IndexedProductCategory</span></a>(R, M)</p>
+<dl class="simple" id="l4d6f6e6f696452696e67-636f6e737472756374">
+<dt><a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279-636f6e737472756374"><span class="std std-ref">construct</span></a>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> Record(k: M, c: R) -&gt; %</dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279"><span class="std std-ref">IndexedProductCategory</span></a>(R, M)</p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e636f6e76657274">
-<dt><a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f2e636f6e76657274"><span class="std std-ref">convert</span></a>: % -&gt; <a class="reference internal" href="InputForm.html#l496e707574466f726d"><span class="std std-ref">InputForm</span></a> if M has <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a> and R has <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="InputForm.html#l496e707574466f726d"><span class="std std-ref">InputForm</span></a></p>
+<dl class="simple" id="l4d6f6e6f696452696e67-636f6e7374727563744f726465726564">
+<dt><a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279-636f6e7374727563744f726465726564"><span class="std std-ref">constructOrdered</span></a>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> Record(k: M, c: R) -&gt; % if M has <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a></dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279"><span class="std std-ref">IndexedProductCategory</span></a>(R, M)</p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e656e756d6572617465">
-<dt><a class="reference internal" href="Finite.html#l46696e6974652e656e756d6572617465"><span class="std std-ref">enumerate</span></a>: () -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> % if M has <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a> and R has <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></p>
+<dl class="simple" id="l4d6f6e6f696452696e67-636f6e76657274">
+<dt><a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f-636f6e76657274"><span class="std std-ref">convert</span></a>: % -&gt; <a class="reference internal" href="InputForm.html#l496e707574466f726d"><span class="std std-ref">InputForm</span></a> if M has <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a> and R has <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="ConvertibleTo.html#l436f6e7665727469626c65546f"><span class="std std-ref">ConvertibleTo</span></a> <a class="reference internal" href="InputForm.html#l496e707574466f726d"><span class="std std-ref">InputForm</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e68617368">
-<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e68617368"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l53696e676c65496e7465676572"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+<dl class="simple" id="l4d6f6e6f696452696e67-656e756d6572617465">
+<dt><a class="reference internal" href="Finite.html#l46696e697465-656e756d6572617465"><span class="std std-ref">enumerate</span></a>: () -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> % if M has <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a> and R has <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e6861736855706461746521">
-<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6861736855706461746521"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+<dl class="simple" id="l4d6f6e6f696452696e67-68617368">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f7279-68617368"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l53696e676c65496e7465676572"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e696e646578">
-<dt><a class="reference internal" href="Finite.html#l46696e6974652e696e646578"><span class="std std-ref">index</span></a>: <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a> -&gt; % if M has <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a> and R has <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></p>
+<dl class="simple" id="l4d6f6e6f696452696e67-6861736855706461746521">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f7279-6861736855706461746521"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e6c61746578">
-<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6c61746578"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+<dl class="simple" id="l4d6f6e6f696452696e67-696e646578">
+<dt><a class="reference internal" href="Finite.html#l46696e697465-696e646578"><span class="std std-ref">index</span></a>: <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a> -&gt; % if M has <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a> and R has <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e6c656164696e67436f656666696369656e74">
-<dt><a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f72792e6c656164696e67436f656666696369656e74"><span class="std std-ref">leadingCoefficient</span></a>: % -&gt; R if M has <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a></dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279"><span class="std std-ref">IndexedProductCategory</span></a>(R, M)</p>
+<dl class="simple" id="l4d6f6e6f696452696e67-6c61746578">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f7279-6c61746578"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e6c656164696e674d6f6e6f6d69616c">
-<dt><a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f72792e6c656164696e674d6f6e6f6d69616c"><span class="std std-ref">leadingMonomial</span></a>: % -&gt; % if M has <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a></dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279"><span class="std std-ref">IndexedProductCategory</span></a>(R, M)</p>
+<dl class="simple" id="l4d6f6e6f696452696e67-6c656164696e67436f656666696369656e74">
+<dt><a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279-6c656164696e67436f656666696369656e74"><span class="std std-ref">leadingCoefficient</span></a>: % -&gt; R if M has <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a></dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279"><span class="std std-ref">IndexedProductCategory</span></a>(R, M)</p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e6c656164696e67537570706f7274">
-<dt><a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f72792e6c656164696e67537570706f7274"><span class="std std-ref">leadingSupport</span></a>: % -&gt; M if M has <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a></dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279"><span class="std std-ref">IndexedProductCategory</span></a>(R, M)</p>
+<dl class="simple" id="l4d6f6e6f696452696e67-6c656164696e674d6f6e6f6d69616c">
+<dt><a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279-6c656164696e674d6f6e6f6d69616c"><span class="std std-ref">leadingMonomial</span></a>: % -&gt; % if M has <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a></dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279"><span class="std std-ref">IndexedProductCategory</span></a>(R, M)</p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e6c656164696e675465726d">
-<dt><a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f72792e6c656164696e675465726d"><span class="std std-ref">leadingTerm</span></a>: % -&gt; Record(k: M, c: R) if M has <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a></dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279"><span class="std std-ref">IndexedProductCategory</span></a>(R, M)</p>
+<dl class="simple" id="l4d6f6e6f696452696e67-6c656164696e67537570706f7274">
+<dt><a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279-6c656164696e67537570706f7274"><span class="std std-ref">leadingSupport</span></a>: % -&gt; M if M has <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a></dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279"><span class="std std-ref">IndexedProductCategory</span></a>(R, M)</p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e6c656674506f776572">
-<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e69742e6c656674506f776572"><span class="std std-ref">leftPower</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
-</dd>
-<dt><a class="reference internal" href="Magma.html#l4d61676d612e6c656674506f776572"><span class="std std-ref">leftPower</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l4d61676d61"><span class="std std-ref">Magma</span></a></p>
+<dl class="simple" id="l4d6f6e6f696452696e67-6c656164696e675465726d">
+<dt><a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279-6c656164696e675465726d"><span class="std std-ref">leadingTerm</span></a>: % -&gt; Record(k: M, c: R) if M has <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a></dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279"><span class="std std-ref">IndexedProductCategory</span></a>(R, M)</p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e6c6566745265636970">
-<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e69742e6c6566745265636970"><span class="std std-ref">leftRecip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+<dl class="simple" id="l4d6f6e6f696452696e67-6c656674506f776572">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974-6c656674506f776572"><span class="std std-ref">leftPower</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Magma.html#l4d61676d61-6c656674506f776572"><span class="std std-ref">leftPower</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l4d61676d61"><span class="std std-ref">Magma</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e6c696e656172457874656e64">
-<dt><a class="reference internal" href="FreeModuleCategory.html#l467265654d6f64756c6543617465676f72792e6c696e656172457874656e64"><span class="std std-ref">linearExtend</span></a>: (M -&gt; R, %) -&gt; R if R has <a class="reference internal" href="CommutativeRing.html#l436f6d6d7574617469766552696e67"><span class="std std-ref">CommutativeRing</span></a></dt><dd><p>from <a class="reference internal" href="FreeModuleCategory.html#l467265654d6f64756c6543617465676f7279"><span class="std std-ref">FreeModuleCategory</span></a>(R, M)</p>
+<dl class="simple" id="l4d6f6e6f696452696e67-6c6566745265636970">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974-6c6566745265636970"><span class="std std-ref">leftRecip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e6c6973744f665465726d73">
-<dt><a class="reference internal" href="IndexedDirectProductCategory.html#l496e646578656444697265637450726f6475637443617465676f72792e6c6973744f665465726d73"><span class="std std-ref">listOfTerms</span></a>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> Record(k: M, c: R)</dt><dd><p>from <a class="reference internal" href="IndexedDirectProductCategory.html#l496e646578656444697265637450726f6475637443617465676f7279"><span class="std std-ref">IndexedDirectProductCategory</span></a>(R, M)</p>
+<dl class="simple" id="l4d6f6e6f696452696e67-6c696e656172457874656e64">
+<dt><a class="reference internal" href="FreeModuleCategory.html#l467265654d6f64756c6543617465676f7279-6c696e656172457874656e64"><span class="std std-ref">linearExtend</span></a>: (M -&gt; R, %) -&gt; R if R has <a class="reference internal" href="CommutativeRing.html#l436f6d6d7574617469766552696e67"><span class="std std-ref">CommutativeRing</span></a></dt><dd><p>from <a class="reference internal" href="FreeModuleCategory.html#l467265654d6f64756c6543617465676f7279"><span class="std std-ref">FreeModuleCategory</span></a>(R, M)</p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e6c6f6f6b7570">
-<dt><a class="reference internal" href="Finite.html#l46696e6974652e6c6f6f6b7570"><span class="std std-ref">lookup</span></a>: % -&gt; <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a> if M has <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a> and R has <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></p>
+<dl class="simple" id="l4d6f6e6f696452696e67-6c6973744f665465726d73">
+<dt><a class="reference internal" href="IndexedDirectProductCategory.html#l496e646578656444697265637450726f6475637443617465676f7279-6c6973744f665465726d73"><span class="std std-ref">listOfTerms</span></a>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> Record(k: M, c: R)</dt><dd><p>from <a class="reference internal" href="IndexedDirectProductCategory.html#l496e646578656444697265637450726f6475637443617465676f7279"><span class="std std-ref">IndexedDirectProductCategory</span></a>(R, M)</p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e6d6170">
-<dt><a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f72792e6d6170"><span class="std std-ref">map</span></a>: (R -&gt; R, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279"><span class="std std-ref">IndexedProductCategory</span></a>(R, M)</p>
+<dl class="simple" id="l4d6f6e6f696452696e67-6c6f6f6b7570">
+<dt><a class="reference internal" href="Finite.html#l46696e697465-6c6f6f6b7570"><span class="std std-ref">lookup</span></a>: % -&gt; <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a> if M has <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a> and R has <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e6d6f6e6f6d69616c3f">
-<dt><a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f72792e6d6f6e6f6d69616c3f"><span class="std std-ref">monomial?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279"><span class="std std-ref">IndexedProductCategory</span></a>(R, M)</p>
+<dl class="simple" id="l4d6f6e6f696452696e67-6d6170">
+<dt><a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279-6d6170"><span class="std std-ref">map</span></a>: (R -&gt; R, %) -&gt; %</dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279"><span class="std std-ref">IndexedProductCategory</span></a>(R, M)</p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e6d6f6e6f6d69616c">
-<dt><a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f72792e6d6f6e6f6d69616c"><span class="std std-ref">monomial</span></a>: (R, M) -&gt; %</dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279"><span class="std std-ref">IndexedProductCategory</span></a>(R, M)</p>
+<dl class="simple" id="l4d6f6e6f696452696e67-6d6f6e6f6d69616c3f">
+<dt><a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279-6d6f6e6f6d69616c3f"><span class="std std-ref">monomial?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279"><span class="std std-ref">IndexedProductCategory</span></a>(R, M)</p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e6d6f6e6f6d69616c73">
-<dt><a class="reference internal" href="FreeModuleCategory.html#l467265654d6f64756c6543617465676f72792e6d6f6e6f6d69616c73"><span class="std std-ref">monomials</span></a>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %</dt><dd><p>from <a class="reference internal" href="FreeModuleCategory.html#l467265654d6f64756c6543617465676f7279"><span class="std std-ref">FreeModuleCategory</span></a>(R, M)</p>
+<dl class="simple" id="l4d6f6e6f696452696e67-6d6f6e6f6d69616c">
+<dt><a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279-6d6f6e6f6d69616c"><span class="std std-ref">monomial</span></a>: (R, M) -&gt; %</dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279"><span class="std std-ref">IndexedProductCategory</span></a>(R, M)</p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e6e756d6265724f664d6f6e6f6d69616c73">
-<dt><a class="reference internal" href="IndexedDirectProductCategory.html#l496e646578656444697265637450726f6475637443617465676f72792e6e756d6265724f664d6f6e6f6d69616c73"><span class="std std-ref">numberOfMonomials</span></a>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="IndexedDirectProductCategory.html#l496e646578656444697265637450726f6475637443617465676f7279"><span class="std std-ref">IndexedDirectProductCategory</span></a>(R, M)</p>
+<dl class="simple" id="l4d6f6e6f696452696e67-6d6f6e6f6d69616c73">
+<dt><a class="reference internal" href="FreeModuleCategory.html#l467265654d6f64756c6543617465676f7279-6d6f6e6f6d69616c73"><span class="std std-ref">monomials</span></a>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> %</dt><dd><p>from <a class="reference internal" href="FreeModuleCategory.html#l467265654d6f64756c6543617465676f7279"><span class="std std-ref">FreeModuleCategory</span></a>(R, M)</p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e6f6e653f">
-<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e69742e6f6e653f"><span class="std std-ref">one?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+<dl class="simple" id="l4d6f6e6f696452696e67-6e756d6265724f664d6f6e6f6d69616c73">
+<dt><a class="reference internal" href="IndexedDirectProductCategory.html#l496e646578656444697265637450726f6475637443617465676f7279-6e756d6265724f664d6f6e6f6d69616c73"><span class="std std-ref">numberOfMonomials</span></a>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>from <a class="reference internal" href="IndexedDirectProductCategory.html#l496e646578656444697265637450726f6475637443617465676f7279"><span class="std std-ref">IndexedDirectProductCategory</span></a>(R, M)</p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e6f70706f736974653f">
-<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f69642e6f70706f736974653f"><span class="std std-ref">opposite?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+<dl class="simple" id="l4d6f6e6f696452696e67-6f6e653f">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974-6f6e653f"><span class="std std-ref">one?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e72616e646f6d">
-<dt><a class="reference internal" href="Finite.html#l46696e6974652e72616e646f6d"><span class="std std-ref">random</span></a>: () -&gt; % if M has <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a> and R has <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></p>
+<dl class="simple" id="l4d6f6e6f696452696e67-6f70706f736974653f">
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964-6f70706f736974653f"><span class="std std-ref">opposite?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e7265636970">
-<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e69742e7265636970"><span class="std std-ref">recip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+<dl class="simple" id="l4d6f6e6f696452696e67-72616e646f6d">
+<dt><a class="reference internal" href="Finite.html#l46696e697465-72616e646f6d"><span class="std std-ref">random</span></a>: () -&gt; % if M has <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a> and R has <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e726564756374756d">
-<dt><a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f72792e726564756374756d"><span class="std std-ref">reductum</span></a>: % -&gt; % if M has <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a></dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279"><span class="std std-ref">IndexedProductCategory</span></a>(R, M)</p>
+<dl class="simple" id="l4d6f6e6f696452696e67-7265636970">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974-7265636970"><span class="std std-ref">recip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e72657472616374">
-<dt><a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f2e72657472616374"><span class="std std-ref">retract</span></a>: % -&gt; M</dt><dd><p>from <a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f"><span class="std std-ref">RetractableTo</span></a> M</p>
-</dd>
-<dt><a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f2e72657472616374"><span class="std std-ref">retract</span></a>: % -&gt; R</dt><dd><p>from <a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f"><span class="std std-ref">RetractableTo</span></a> R</p>
+<dl class="simple" id="l4d6f6e6f696452696e67-726564756374756d">
+<dt><a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279-726564756374756d"><span class="std std-ref">reductum</span></a>: % -&gt; % if M has <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a></dt><dd><p>from <a class="reference internal" href="IndexedProductCategory.html#l496e646578656450726f6475637443617465676f7279"><span class="std std-ref">IndexedProductCategory</span></a>(R, M)</p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e72657472616374496643616e">
-<dt><a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f2e72657472616374496643616e"><span class="std std-ref">retractIfCan</span></a>: % -&gt; Union(M, failed)</dt><dd><p>from <a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f"><span class="std std-ref">RetractableTo</span></a> M</p>
+<dl class="simple" id="l4d6f6e6f696452696e67-72657472616374">
+<dt><a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f-72657472616374"><span class="std std-ref">retract</span></a>: % -&gt; M</dt><dd><p>from <a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f"><span class="std std-ref">RetractableTo</span></a> M</p>
 </dd>
-<dt><a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f2e72657472616374496643616e"><span class="std std-ref">retractIfCan</span></a>: % -&gt; Union(R, failed)</dt><dd><p>from <a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f"><span class="std std-ref">RetractableTo</span></a> R</p>
-</dd>
-</dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e7269676874506f776572">
-<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e69742e7269676874506f776572"><span class="std std-ref">rightPower</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
-</dd>
-<dt><a class="reference internal" href="Magma.html#l4d61676d612e7269676874506f776572"><span class="std std-ref">rightPower</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l4d61676d61"><span class="std std-ref">Magma</span></a></p>
+<dt><a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f-72657472616374"><span class="std std-ref">retract</span></a>: % -&gt; R</dt><dd><p>from <a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f"><span class="std std-ref">RetractableTo</span></a> R</p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e72696768745265636970">
-<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e69742e72696768745265636970"><span class="std std-ref">rightRecip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+<dl class="simple" id="l4d6f6e6f696452696e67-72657472616374496643616e">
+<dt><a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f-72657472616374496643616e"><span class="std std-ref">retractIfCan</span></a>: % -&gt; Union(M, failed)</dt><dd><p>from <a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f"><span class="std std-ref">RetractableTo</span></a> M</p>
+</dd>
+<dt><a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f-72657472616374496643616e"><span class="std std-ref">retractIfCan</span></a>: % -&gt; Union(R, failed)</dt><dd><p>from <a class="reference internal" href="RetractableTo.html#l5265747261637461626c65546f"><span class="std std-ref">RetractableTo</span></a> R</p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e73616d706c65">
-<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f69642e73616d706c65"><span class="std std-ref">sample</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+<dl class="simple" id="l4d6f6e6f696452696e67-7269676874506f776572">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974-7269676874506f776572"><span class="std std-ref">rightPower</span></a>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
+</dd>
+<dt><a class="reference internal" href="Magma.html#l4d61676d61-7269676874506f776572"><span class="std std-ref">rightPower</span></a>: (%, <a class="reference internal" href="PositiveInteger.html#l506f736974697665496e7465676572"><span class="std std-ref">PositiveInteger</span></a>) -&gt; %</dt><dd><p>from <a class="reference internal" href="Magma.html#l4d61676d61"><span class="std std-ref">Magma</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e73697a65">
-<dt><a class="reference internal" href="Finite.html#l46696e6974652e73697a65"><span class="std std-ref">size</span></a>: () -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a> if M has <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a> and R has <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></p>
+<dl class="simple" id="l4d6f6e6f696452696e67-72696768745265636970">
+<dt><a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974-72696768745265636970"><span class="std std-ref">rightRecip</span></a>: % -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="MagmaWithUnit.html#l4d61676d6157697468556e6974"><span class="std std-ref">MagmaWithUnit</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e736d616c6c65723f">
-<dt><a class="reference internal" href="Comparable.html#l436f6d70617261626c652e736d616c6c65723f"><span class="std std-ref">smaller?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a> if M has <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a> and R has <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a> or R has <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a> and M has <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a></dt><dd><p>from <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a></p>
+<dl class="simple" id="l4d6f6e6f696452696e67-73616d706c65">
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964-73616d706c65"><span class="std std-ref">sample</span></a>: %</dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e7375627472616374496643616e">
-<dt><a class="reference internal" href="CancellationAbelianMonoid.html#l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f69642e7375627472616374496643616e"><span class="std std-ref">subtractIfCan</span></a>: (%, %) -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="CancellationAbelianMonoid.html#l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
+<dl class="simple" id="l4d6f6e6f696452696e67-73697a65">
+<dt><a class="reference internal" href="Finite.html#l46696e697465-73697a65"><span class="std std-ref">size</span></a>: () -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a> if M has <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a> and R has <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></dt><dd><p>from <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e737570706f7274">
-<dt><a class="reference internal" href="FreeModuleCategory.html#l467265654d6f64756c6543617465676f72792e737570706f7274"><span class="std std-ref">support</span></a>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> M</dt><dd><p>from <a class="reference internal" href="FreeModuleCategory.html#l467265654d6f64756c6543617465676f7279"><span class="std std-ref">FreeModuleCategory</span></a>(R, M)</p>
+<dl class="simple" id="l4d6f6e6f696452696e67-736d616c6c65723f">
+<dt><a class="reference internal" href="Comparable.html#l436f6d70617261626c65-736d616c6c65723f"><span class="std std-ref">smaller?</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a> if M has <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a> and R has <a class="reference internal" href="Finite.html#l46696e697465"><span class="std std-ref">Finite</span></a> or R has <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a> and M has <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a></dt><dd><p>from <a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e7465726d73">
-<dt><a class="reference internal" href="MonoidRingCategory.html#l4d6f6e6f696452696e6743617465676f72792e7465726d73"><span class="std std-ref">terms</span></a>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> Record(k: M, c: R)</dt><dd><p>from <a class="reference internal" href="MonoidRingCategory.html#l4d6f6e6f696452696e6743617465676f7279"><span class="std std-ref">MonoidRingCategory</span></a>(R, M)</p>
+<dl class="simple" id="l4d6f6e6f696452696e67-7375627472616374496643616e">
+<dt><a class="reference internal" href="CancellationAbelianMonoid.html#l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964-7375627472616374496643616e"><span class="std std-ref">subtractIfCan</span></a>: (%, %) -&gt; Union(%, failed)</dt><dd><p>from <a class="reference internal" href="CancellationAbelianMonoid.html#l43616e63656c6c6174696f6e4162656c69616e4d6f6e6f6964"><span class="std std-ref">CancellationAbelianMonoid</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l4d6f6e6f696452696e672e7a65726f3f">
-<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f69642e7a65726f3f"><span class="std std-ref">zero?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
+<dl class="simple" id="l4d6f6e6f696452696e67-737570706f7274">
+<dt><a class="reference internal" href="FreeModuleCategory.html#l467265654d6f64756c6543617465676f7279-737570706f7274"><span class="std std-ref">support</span></a>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> M</dt><dd><p>from <a class="reference internal" href="FreeModuleCategory.html#l467265654d6f64756c6543617465676f7279"><span class="std std-ref">FreeModuleCategory</span></a>(R, M)</p>
+</dd>
+</dl>
+<dl class="simple" id="l4d6f6e6f696452696e67-7465726d73">
+<dt><a class="reference internal" href="MonoidRingCategory.html#l4d6f6e6f696452696e6743617465676f7279-7465726d73"><span class="std std-ref">terms</span></a>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> Record(k: M, c: R)</dt><dd><p>from <a class="reference internal" href="MonoidRingCategory.html#l4d6f6e6f696452696e6743617465676f7279"><span class="std std-ref">MonoidRingCategory</span></a>(R, M)</p>
+</dd>
+</dl>
+<dl class="simple" id="l4d6f6e6f696452696e67-7a65726f3f">
+<dt><a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964-7a65726f3f"><span class="std std-ref">zero?</span></a>: % -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="AbelianMonoid.html#l4162656c69616e4d6f6e6f6964"><span class="std std-ref">AbelianMonoid</span></a></p>
 </dd>
 </dl>
 <p><a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p>

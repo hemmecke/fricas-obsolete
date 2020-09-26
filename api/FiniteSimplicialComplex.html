@@ -47,54 +47,54 @@
             
   <div class="section" id="finitesimplicialcomplex-vs">
 <span id="l46696e69746553696d706c696369616c436f6d706c6578"></span><span id="index-0"></span><h1>FiniteSimplicialComplex VS<a class="headerlink" href="#finitesimplicialcomplex-vs" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/alg_top.spad#L1710">alg_top.spad line 1710</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/alg_top.spad#L1710">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/alg_top.spad#L1710">alg_top.spad line 1710</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/alg_top.spad#L1710">[edit on github]</a></p>
 <ul class="simple">
 <li><p>VS: <a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p></li>
 </ul>
 <p>A Finite Simplicial Complex for more documentation see: <a class="reference external" href="http://www.euclideanspace.com/prog/scratchpad/mycode/topology/simplex/">http://www.euclideanspace.com/prog/scratchpad/mycode/topology/simplex/</a> Date Created: Dec 2015 Basic Operations: star, link, cone, product Related packages: Related categories: Related Domains: DeltaComplex is an alternative representation which is less compact but allows edges, triangles, etc to be indexed. Also See: AMS Classifications:</p>
-<dl class="simple" id="l46696e69746553696d706c696369616c436f6d706c65782e3d">
-<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+<dl class="simple" id="l46696e69746553696d706c696369616c436f6d706c6578-3d">
+<dt><a class="reference internal" href="BasicType.html#l426173696354797065-3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l46696e69746553696d706c696369616c436f6d706c65782e7e3d">
-<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e7e3d"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+<dl class="simple" id="l46696e69746553696d706c696369616c436f6d706c6578-7e3d">
+<dt><a class="reference internal" href="BasicType.html#l426173696354797065-7e3d"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l46696e69746553696d706c696369616c436f6d706c65782e616464496d706c6965644661636573"></span><dl class="simple" id="index-1">
+<span class="target" id="l46696e69746553696d706c696369616c436f6d706c6578-616464496d706c6965644661636573"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">addImpliedFaces</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="OrientedFacet.html#l4f7269656e7465644661636574"><span class="std std-ref">OrientedFacet</span></a></dt><dd><p>a function to take a set of faces and add those that are implied by the simplecicalComplex conventions (if they don<code class="docutils literal notranslate"><span class="pre">'t</span></code> already exist). For example, if the input is a triangle ((1, 2, 3)) then we would add: its points ((1), (2), (3)). and its edges ((1, 2), (1, 3), (2, 3)).</p>
 </dd>
 </dl>
-<span class="target" id="l46696e69746553696d706c696369616c436f6d706c65782e61646453696d706c6578"></span><dl class="simple" id="index-2">
+<span class="target" id="l46696e69746553696d706c696369616c436f6d706c6578-61646453696d706c6578"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">addSimplex</span>: (%, <a class="reference internal" href="OrientedFacet.html#l4f7269656e7465644661636574"><span class="std std-ref">OrientedFacet</span></a>) -&gt; %</dt><dd><p>Add a facet to this simplex If the facet is also in the list then, dont append, instead change the multiplier. Used by boundary function</p>
 </dd>
 </dl>
-<span class="target" id="l46696e69746553696d706c696369616c436f6d706c65782e626f756e64617279"></span><dl class="simple" id="index-3">
+<span class="target" id="l46696e69746553696d706c696369616c436f6d706c6578-626f756e64617279"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">boundary</span>: % -&gt; %</dt><dd><p>Step down to the next lower dimension, this is like hollowing out the complex. It takes the highest dimension entries and replaces them with their boundaries, cancelling out where it can.</p>
 </dd>
 </dl>
-<span class="target" id="l46696e69746553696d706c696369616c436f6d706c65782e636861696e"></span><dl class="simple" id="index-4">
+<span class="target" id="l46696e69746553696d706c696369616c436f6d706c6578-636861696e"></span><dl class="simple" id="index-4">
 <dt><span class="spadfun">chain</span>: % -&gt; <a class="reference internal" href="ChainComplex.html#l436861696e436f6d706c6578"><span class="std std-ref">ChainComplex</span></a></dt><dd><p>returns a matrix sequence representing the face maps in linear algebra form For more information: url{<a class="reference external" href="http://www.euclideanspace.com/prog/scratchpad/mycode/topology/chain/index">http://www.euclideanspace.com/prog/scratchpad/mycode/topology/chain/index</a>.<code class="docutils literal notranslate"><span class="pre">htm</span></code>}</p>
 </dd>
 </dl>
-<span class="target" id="l46696e69746553696d706c696369616c436f6d706c65782e636f436861696e"></span><dl class="simple" id="index-5">
+<span class="target" id="l46696e69746553696d706c696369616c436f6d706c6578-636f436861696e"></span><dl class="simple" id="index-5">
 <dt><span class="spadfun">coChain</span>: % -&gt; <a class="reference internal" href="CoChainComplex.html#l436f436861696e436f6d706c6578"><span class="std std-ref">CoChainComplex</span></a> VS</dt><dd><p>returns a matrix sequence representing the face maps in linear algebra form For more information: url{<a class="reference external" href="http://www.euclideanspace.com/prog/scratchpad/mycode/topology/chain/cochain/index">http://www.euclideanspace.com/prog/scratchpad/mycode/topology/chain/cochain/index</a>.<code class="docutils literal notranslate"><span class="pre">htm</span></code>}</p>
 </dd>
 </dl>
-<span class="target" id="l46696e69746553696d706c696369616c436f6d706c65782e636f65726365"></span><dl class="simple" id="index-6">
+<span class="target" id="l46696e69746553696d706c696369616c436f6d706c6578-636f65726365"></span><dl class="simple" id="index-6">
 <dt><span class="spadfun">coerce</span>: % -&gt; <a class="reference internal" href="DeltaComplex.html#l44656c7461436f6d706c6578"><span class="std std-ref">DeltaComplex</span></a> VS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce</span> <span class="pre">SimplicialComplex</span></code> to DeltaComplex</p>
 </dd>
-<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f2e636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f-636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l46696e69746553696d706c696369616c436f6d706c65782e636f486f6d6f6c6f6779"></span><dl class="simple" id="index-7">
+<span class="target" id="l46696e69746553696d706c696369616c436f6d706c6578-636f486f6d6f6c6f6779"></span><dl class="simple" id="index-7">
 <dt><span class="spadfun">coHomology</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Homology.html#l486f6d6f6c6f6779"><span class="std std-ref">Homology</span></a></dt><dd><p>calculate cohomology using SmithNormalForm url{<a class="reference external" href="http://www.euclideanspace.com/prog/scratchpad/mycode/topology/homology/cohomol/index">http://www.euclideanspace.com/prog/scratchpad/mycode/topology/homology/cohomol/index</a>.<code class="docutils literal notranslate"><span class="pre">htm</span></code>}</p>
 </dd>
 </dl>
-<span class="target" id="l46696e69746553696d706c696369616c436f6d706c65782e636f6e65"></span><dl class="simple" id="index-8">
+<span class="target" id="l46696e69746553696d706c696369616c436f6d706c6578-636f6e65"></span><dl class="simple" id="index-8">
 <dt><span class="spadfun">cone</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>The ‘cone’ of a simplicial complex is formed by adding the vertex to every facet. ‘vertex’ should not already be included in existing faces, this is not checked and so will lead to simplexes with duplicate vertices.</p>
 </dd>
 </dl>
-<span class="target" id="l46696e69746553696d706c696369616c436f6d706c65782e66756e64616d656e74616c47726f7570"></span><dl class="simple" id="index-9">
+<span class="target" id="l46696e69746553696d706c696369616c436f6d706c6578-66756e64616d656e74616c47726f7570"></span><dl class="simple" id="index-9">
 <dt><span class="spadfun">fundamentalGroup</span>: % -&gt; <a class="reference internal" href="GroupPresentation.html#l47726f757050726573656e746174696f6e"><span class="std std-ref">GroupPresentation</span></a></dt><dd><p>Generates fundamental group from this simplicial complex. This works by converting to a DeltaComplex and then generating the fundamentalGroup from that. This is not the most efficient method because the conversion generates lots of higher order faceMaps which are not used. This will attempt to simplify the group presentation, if you don<code class="docutils literal notranslate"><span class="pre">'t</span></code> want this use alternative function of same name. For more information: url{<a class="reference external" href="http://www.euclideanspace.com/prog/scratchpad/mycode/topology/homotopy/index">http://www.euclideanspace.com/prog/scratchpad/mycode/topology/homotopy/index</a>.<code class="docutils literal notranslate"><span class="pre">htm</span></code>}</p>
 </dd>
 </dl>
@@ -102,59 +102,59 @@
 <dt><span class="spadfun">fundamentalGroup</span>: (%, <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a>, <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a>) -&gt; <a class="reference internal" href="GroupPresentation.html#l47726f757050726573656e746174696f6e"><span class="std std-ref">GroupPresentation</span></a></dt><dd><p>Generates fundamental group from this simplicial complex. This works by converting to a DeltaComplex and then generating the fundamentalGroup from that. This is not the most efficient method because the conversion generates lots of higher order faceMaps which are not used. This version has options to: simplify - if <code class="docutils literal notranslate"><span class="pre">true</span></code> attempts to simplify the group presentation trace - if <code class="docutils literal notranslate"><span class="pre">true</span></code> outputs trace of simplification rules used. For more information: url{<a class="reference external" href="http://www.euclideanspace.com/prog/scratchpad/mycode/topology/homotopy/index">http://www.euclideanspace.com/prog/scratchpad/mycode/topology/homotopy/index</a>.<code class="docutils literal notranslate"><span class="pre">htm</span></code>}</p>
 </dd>
 </dl>
-<span class="target" id="l46696e69746553696d706c696369616c436f6d706c65782e6772616465"></span><dl class="simple" id="index-11">
+<span class="target" id="l46696e69746553696d706c696369616c436f6d706c6578-6772616465"></span><dl class="simple" id="index-11">
 <dt><span class="spadfun">grade</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="OrientedFacet.html#l4f7269656e7465644661636574"><span class="std std-ref">OrientedFacet</span></a></dt><dd><p>a function to grade simplexes according to their lengths. This nests the lists according to their length. Verticies, edges, trianges and so on. The list is returned in reverse order, that is, it starts at highest grade and works down.</p>
 </dd>
 </dl>
-<dl class="simple" id="l46696e69746553696d706c696369616c436f6d706c65782e68617368">
-<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e68617368"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l53696e676c65496e7465676572"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+<dl class="simple" id="l46696e69746553696d706c696369616c436f6d706c6578-68617368">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f7279-68617368"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l53696e676c65496e7465676572"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l46696e69746553696d706c696369616c436f6d706c65782e6861736855706461746521">
-<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6861736855706461746521"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+<dl class="simple" id="l46696e69746553696d706c696369616c436f6d706c6578-6861736855706461746521">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f7279-6861736855706461746521"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l46696e69746553696d706c696369616c436f6d706c65782e686f6d6f6c6f6779"></span><dl class="simple" id="index-12">
+<span class="target" id="l46696e69746553696d706c696369616c436f6d706c6578-686f6d6f6c6f6779"></span><dl class="simple" id="index-12">
 <dt><span class="spadfun">homology</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Homology.html#l486f6d6f6c6f6779"><span class="std std-ref">Homology</span></a></dt><dd><p>calculate homology using SmithNormalForm For more information: url{<a class="reference external" href="http://www.euclideanspace.com/prog/scratchpad/mycode/topology/homology/index">http://www.euclideanspace.com/prog/scratchpad/mycode/topology/homology/index</a>.<code class="docutils literal notranslate"><span class="pre">htm</span></code>}</p>
 </dd>
 </dl>
-<dl class="simple" id="l46696e69746553696d706c696369616c436f6d706c65782e6c61746578">
-<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6c61746578"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+<dl class="simple" id="l46696e69746553696d706c696369616c436f6d706c6578-6c61746578">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f7279-6c61746578"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l46696e69746553696d706c696369616c436f6d706c65782e6c696e6b"></span><dl class="simple" id="index-13">
+<span class="target" id="l46696e69746553696d706c696369616c436f6d706c6578-6c696e6b"></span><dl class="simple" id="index-13">
 <dt><span class="spadfun">link</span>: (%, <a class="reference internal" href="OrientedFacet.html#l4f7269656e7465644661636574"><span class="std std-ref">OrientedFacet</span></a>) -&gt; %</dt><dd><p>The ‘link’ of a simplicial complex and a vertex contains the boundary of the simplexes of <code class="docutils literal notranslate"><span class="pre">s</span></code> which include simplex.</p>
 </dd>
 </dl>
-<span class="target" id="l46696e69746553696d706c696369616c436f6d706c65782e6d616b654469736a6f696e74"></span><dl class="simple" id="index-14">
+<span class="target" id="l46696e69746553696d706c696369616c436f6d706c6578-6d616b654469736a6f696e74"></span><dl class="simple" id="index-14">
 <dt><span class="spadfun">makeDisjoint</span>: (%, %) -&gt; %</dt><dd><p>If index numbers of <code class="docutils literal notranslate"><span class="pre">'b'</span></code> overlap with index numbers of ‘a’ then refactor <code class="docutils literal notranslate"><span class="pre">'b'</span></code> so that it does not overlap.</p>
 </dd>
 </dl>
-<span class="target" id="l46696e69746553696d706c696369616c436f6d706c65782e6d6178496e646578"></span><dl class="simple" id="index-15">
+<span class="target" id="l46696e69746553696d706c696369616c436f6d706c6578-6d6178496e646578"></span><dl class="simple" id="index-15">
 <dt><span class="spadfun">maxIndex</span>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>find the maximum index.</p>
 </dd>
 </dl>
-<span class="target" id="l46696e69746553696d706c696369616c436f6d706c65782e6d65726765"></span><dl class="simple" id="index-16">
+<span class="target" id="l46696e69746553696d706c696369616c436f6d706c6578-6d65726765"></span><dl class="simple" id="index-16">
 <dt><span class="spadfun">merge</span>: (%, %) -&gt; %</dt><dd><p>Forms union of two simplicial complexes.</p>
 </dd>
 </dl>
-<span class="target" id="l46696e69746553696d706c696369616c436f6d706c65782e6d696e496e646578"></span><dl class="simple" id="index-17">
+<span class="target" id="l46696e69746553696d706c696369616c436f6d706c6578-6d696e496e646578"></span><dl class="simple" id="index-17">
 <dt><span class="spadfun">minIndex</span>: % -&gt; <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>find the minimum index.</p>
 </dd>
 </dl>
-<span class="target" id="l46696e69746553696d706c696369616c436f6d706c65782e6f6e65536b656c65746f6e"></span><dl class="simple" id="index-18">
+<span class="target" id="l46696e69746553696d706c696369616c436f6d706c6578-6f6e65536b656c65746f6e"></span><dl class="simple" id="index-18">
 <dt><span class="spadfun">oneSkeleton</span>: % -&gt; <a class="reference internal" href="DirectedGraph.html#l44697265637465644772617068"><span class="std std-ref">DirectedGraph</span></a> <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>generates graph AKA 1-skeleton</p>
 </dd>
 </dl>
-<span class="target" id="l46696e69746553696d706c696369616c436f6d706c65782e70726f64756374"></span><dl class="simple" id="index-19">
+<span class="target" id="l46696e69746553696d706c696369616c436f6d706c6578-70726f64756374"></span><dl class="simple" id="index-19">
 <dt><span class="spadfun">product</span>: (%, %) -&gt; %</dt><dd><p>Forms product of two simplicial complexes. For more detailed explanation of simplex product code see: url{<a class="reference external" href="http://www.euclideanspace.com/prog/scratchpad/mycode/topology/simplex/product/">http://www.euclideanspace.com/prog/scratchpad/mycode/topology/simplex/product/</a>} Also see Hatcher [9]. page 277 - The simplical cross product. page 278 - The cohomology cross product. Returns list, each entry is a ‘lattice path’ from (0, 0) to (<code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code>) where <code class="docutils literal notranslate"><span class="pre">x</span></code> is number of entries in sa and <code class="docutils literal notranslate"><span class="pre">y</span></code> is number of entries in <code class="docutils literal notranslate"><span class="pre">sb</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l46696e69746553696d706c696369616c436f6d706c65782e7265666163746f72496e6465786573"></span><dl class="simple" id="index-20">
+<span class="target" id="l46696e69746553696d706c696369616c436f6d706c6578-7265666163746f72496e6465786573"></span><dl class="simple" id="index-20">
 <dt><span class="spadfun">refactorIndexes</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>add <code class="docutils literal notranslate"><span class="pre">'n'</span></code> to all indexes without changing the structure of this simplicial complex.</p>
 </dd>
 </dl>
-<span class="target" id="l46696e69746553696d706c696369616c436f6d706c65782e73696d706c696369616c436f6d706c6578"></span><dl class="simple" id="index-21">
+<span class="target" id="l46696e69746553696d706c696369616c436f6d706c6578-73696d706c696369616c436f6d706c6578"></span><dl class="simple" id="index-21">
 <dt><span class="spadfun">simplicialComplex</span>: (<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> VS, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>constructor where the simplices are supplied</p>
 </dd>
 </dl>
@@ -166,7 +166,7 @@
 <dt><span class="spadfun">simplicialComplex</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> VS -&gt; %</dt><dd><p>construct empty simplex</p>
 </dd>
 </dl>
-<span class="target" id="l46696e69746553696d706c696369616c436f6d706c65782e73696d706c696369616c436f6d706c6578496643616e"></span><dl class="simple" id="index-24">
+<span class="target" id="l46696e69746553696d706c696369616c436f6d706c6578-73696d706c696369616c436f6d706c6578496643616e"></span><dl class="simple" id="index-24">
 <dt><span class="spadfun">simplicialComplexIfCan</span>: (<a class="reference internal" href="DeltaComplex.html#l44656c7461436f6d706c6578"><span class="std std-ref">DeltaComplex</span></a> VS, <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a>) -&gt; Union(%, failed)</dt><dd><p>construct FiniteSimplicialComplex from DeltaComplex with trace. If there are ‘implied’ loops, such as facets with multiple entries with the same index, then this function may fail.</p>
 </dd>
 </dl>
@@ -174,15 +174,15 @@
 <dt><span class="spadfun">simplicialComplexIfCan</span>: <a class="reference internal" href="DeltaComplex.html#l44656c7461436f6d706c6578"><span class="std std-ref">DeltaComplex</span></a> VS -&gt; Union(%, failed)</dt><dd><p>construct FiniteSimplicialComplex from DeltaComplex. If there are ‘implied’ loops, such as facets with multiple entries with the same index, then this function may fail.</p>
 </dd>
 </dl>
-<span class="target" id="l46696e69746553696d706c696369616c436f6d706c65782e73696d706c696369616c4a6f696e"></span><dl class="simple" id="index-26">
+<span class="target" id="l46696e69746553696d706c696369616c436f6d706c6578-73696d706c696369616c4a6f696e"></span><dl class="simple" id="index-26">
 <dt><span class="spadfun">simplicialJoin</span>: (%, %, <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a>) -&gt; %</dt><dd><p>Forms join of two simplicial complexes. The join <code class="docutils literal notranslate"><span class="pre">S*T</span></code> of two simplicial sets <code class="docutils literal notranslate"><span class="pre">S</span></code> and <code class="docutils literal notranslate"><span class="pre">T</span></code> is a new simplicial set that may geometrically be thought of as a cone over <code class="docutils literal notranslate"><span class="pre">T</span></code> with tip of shape <code class="docutils literal notranslate"><span class="pre">S</span></code>. simplicialJoin is commutative and associative. For more information: url{<a class="reference external" href="http://www.euclideanspace.com/prog/scratchpad/mycode/topology/simplex/join/index">http://www.euclideanspace.com/prog/scratchpad/mycode/topology/simplex/join/index</a>.<code class="docutils literal notranslate"><span class="pre">htm</span></code>}</p>
 </dd>
 </dl>
-<span class="target" id="l46696e69746553696d706c696369616c436f6d706c65782e736f7274"></span><dl class="simple" id="index-27">
+<span class="target" id="l46696e69746553696d706c696369616c436f6d706c6578-736f7274"></span><dl class="simple" id="index-27">
 <dt><span class="spadfun">sort</span>: % -&gt; %</dt><dd><p>sort</p>
 </dd>
 </dl>
-<span class="target" id="l46696e69746553696d706c696369616c436f6d706c65782e73746172"></span><dl class="simple" id="index-28">
+<span class="target" id="l46696e69746553696d706c696369616c436f6d706c6578-73746172"></span><dl class="simple" id="index-28">
 <dt><span class="spadfun">star</span>: (%, <a class="reference internal" href="OrientedFacet.html#l4f7269656e7465644661636574"><span class="std std-ref">OrientedFacet</span></a>) -&gt; %</dt><dd><p>The ‘star’ of a simplicial complex and a facet contains only the faces of <code class="docutils literal notranslate"><span class="pre">s</span></code> which include simplex.</p>
 </dd>
 </dl>

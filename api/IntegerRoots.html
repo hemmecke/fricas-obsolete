@@ -47,24 +47,24 @@
             
   <div class="section" id="integerroots-i">
 <span id="l496e7465676572526f6f7473"></span><span id="index-0"></span><h1>IntegerRoots I<a class="headerlink" href="#integerroots-i" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/intfact.spad#L202">intfact.spad line 202</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/intfact.spad#L202">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/intfact.spad#L202">intfact.spad line 202</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/intfact.spad#L202">[edit on github]</a></p>
 <ul class="simple">
 <li><p>I: <a class="reference internal" href="IntegerNumberSystem.html#l496e74656765724e756d62657253797374656d"><span class="std std-ref">IntegerNumberSystem</span></a></p></li>
 </ul>
 <p>The <a class="reference internal" href="#l496e7465676572526f6f7473"><span class="std std-ref">IntegerRoots</span></a> package computes square roots and <code class="docutils literal notranslate"><span class="pre">n</span></code>th roots of integers efficiently.</p>
-<span class="target" id="l496e7465676572526f6f74732e617070726f784e7468526f6f74"></span><dl class="simple" id="index-1">
+<span class="target" id="l496e7465676572526f6f7473-617070726f784e7468526f6f74"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">approxNthRoot</span>: (I, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; I</dt><dd><p><code class="docutils literal notranslate"><span class="pre">approxRoot(n,</span> <span class="pre">r)</span></code> returns an approximation <code class="docutils literal notranslate"><span class="pre">x</span></code> to <code class="docutils literal notranslate"><span class="pre">n^(1/r)</span></code> such that <code class="docutils literal notranslate"><span class="pre">-1</span> <span class="pre">&lt;</span> <span class="pre">x</span> <span class="pre">-</span> <span class="pre">n^(1/r)</span> <span class="pre">&lt;</span> <span class="pre">1</span></code></p>
 </dd>
 </dl>
-<span class="target" id="l496e7465676572526f6f74732e617070726f7853717274"></span><dl class="simple" id="index-2">
+<span class="target" id="l496e7465676572526f6f7473-617070726f7853717274"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">approxSqrt</span>: I -&gt; I</dt><dd><p><code class="docutils literal notranslate"><span class="pre">approxSqrt(n)</span></code> returns an approximation <code class="docutils literal notranslate"><span class="pre">x</span></code> to <code class="docutils literal notranslate"><span class="pre">sqrt(n)</span></code> such that <code class="docutils literal notranslate"><span class="pre">-1</span> <span class="pre">&lt;</span> <span class="pre">x</span> <span class="pre">-</span> <span class="pre">sqrt(n)</span> <span class="pre">&lt;</span> <span class="pre">1</span></code>. Returns 0 if <code class="docutils literal notranslate"><span class="pre">n</span></code> is negative. A variable precision Newton iteration is used. The running time is <code class="docutils literal notranslate"><span class="pre">O(</span> <span class="pre">log(n)^2</span> <span class="pre">)</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l496e7465676572526f6f74732e706572666563744e7468506f7765723f"></span><dl class="simple" id="index-3">
+<span class="target" id="l496e7465676572526f6f7473-706572666563744e7468506f7765723f"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">perfectNthPower?</span>: (I, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">perfectNthPower?(n,</span> <span class="pre">r)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if <code class="docutils literal notranslate"><span class="pre">n</span></code> is an <code class="docutils literal notranslate"><span class="pre">r</span></code>th power and <code class="docutils literal notranslate"><span class="pre">false</span></code> otherwise</p>
 </dd>
 </dl>
-<span class="target" id="l496e7465676572526f6f74732e706572666563744e7468526f6f74"></span><dl class="simple" id="index-4">
+<span class="target" id="l496e7465676572526f6f7473-706572666563744e7468526f6f74"></span><dl class="simple" id="index-4">
 <dt><span class="spadfun">perfectNthRoot</span>: (I, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; Union(I, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">perfectNthRoot(n,</span> <span class="pre">r)</span></code> returns the <code class="docutils literal notranslate"><span class="pre">r</span></code>th root of <code class="docutils literal notranslate"><span class="pre">n</span></code> if <code class="docutils literal notranslate"><span class="pre">n</span></code> is an <code class="docutils literal notranslate"><span class="pre">r</span></code>th power and returns “failed” otherwise</p>
 </dd>
 </dl>
@@ -72,11 +72,11 @@
 <dt><span class="spadfun">perfectNthRoot</span>: I -&gt; Record(base: I, exponent: <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">perfectNthRoot(n)</span></code> returns <code class="docutils literal notranslate"><span class="pre">[x,</span> <span class="pre">r]</span></code>, where <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">x\^r</span></code> and <code class="docutils literal notranslate"><span class="pre">r</span></code> is the largest integer such that <code class="docutils literal notranslate"><span class="pre">n</span></code> is a perfect <code class="docutils literal notranslate"><span class="pre">r</span></code>th power</p>
 </dd>
 </dl>
-<span class="target" id="l496e7465676572526f6f74732e7065726665637453717274"></span><dl class="simple" id="index-6">
+<span class="target" id="l496e7465676572526f6f7473-7065726665637453717274"></span><dl class="simple" id="index-6">
 <dt><span class="spadfun">perfectSqrt</span>: I -&gt; Union(I, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">perfectSqrt(n)</span></code> returns the square root of <code class="docutils literal notranslate"><span class="pre">n</span></code> if <code class="docutils literal notranslate"><span class="pre">n</span></code> is a perfect square and returns “failed” otherwise</p>
 </dd>
 </dl>
-<span class="target" id="l496e7465676572526f6f74732e706572666563745371756172653f"></span><dl class="simple" id="index-7">
+<span class="target" id="l496e7465676572526f6f7473-706572666563745371756172653f"></span><dl class="simple" id="index-7">
 <dt><span class="spadfun">perfectSquare?</span>: I -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">perfectSquare?(n)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if <code class="docutils literal notranslate"><span class="pre">n</span></code> is a perfect square and <code class="docutils literal notranslate"><span class="pre">false</span></code> otherwise</p>
 </dd>
 </dl>

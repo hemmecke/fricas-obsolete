@@ -47,44 +47,44 @@
             
   <div class="section" id="integercombinatoricfunctions-i">
 <span id="l496e7465676572436f6d62696e61746f72696346756e6374696f6e73"></span><span id="index-0"></span><h1>IntegerCombinatoricFunctions I<a class="headerlink" href="#integercombinatoricfunctions-i" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/combinat.spad#L1">combinat.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/combinat.spad#L1">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/combinat.spad#L1">combinat.spad line 1</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/combinat.spad#L1">[edit on github]</a></p>
 <ul class="simple">
 <li><p>I: <a class="reference internal" href="IntegerNumberSystem.html#l496e74656765724e756d62657253797374656d"><span class="std std-ref">IntegerNumberSystem</span></a></p></li>
 </ul>
 <p>The <a class="reference internal" href="#l496e7465676572436f6d62696e61746f72696346756e6374696f6e73"><span class="std std-ref">IntegerCombinatoricFunctions</span></a> package provides some standard functions in combinatorics.</p>
-<span class="target" id="l496e7465676572436f6d62696e61746f72696346756e6374696f6e732e62696e6f6d69616c"></span><dl class="simple" id="index-1">
+<span class="target" id="l496e7465676572436f6d62696e61746f72696346756e6374696f6e73-62696e6f6d69616c"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">binomial</span>: (I, I) -&gt; I</dt><dd><p><code class="docutils literal notranslate"><span class="pre">binomial(n,</span> <span class="pre">r)</span></code> returns the binomial coefficient <code class="docutils literal notranslate"><span class="pre">C(n,</span> <span class="pre">r)</span> <span class="pre">=</span> <span class="pre">n!/(r!</span> <span class="pre">(n-r)!)</span></code>, where <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;=</span> <span class="pre">r</span> <span class="pre">&gt;=</span> <span class="pre">0</span></code>. This is the number of combinations of <code class="docutils literal notranslate"><span class="pre">n</span></code> objects taken <code class="docutils literal notranslate"><span class="pre">r</span></code> at a time.</p>
 </dd>
 </dl>
-<span class="target" id="l496e7465676572436f6d62696e61746f72696346756e6374696f6e732e636174616c616e"></span><dl class="simple" id="index-2">
+<span class="target" id="l496e7465676572436f6d62696e61746f72696346756e6374696f6e73-636174616c616e"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">catalan</span>: I -&gt; I</dt><dd><p><code class="docutils literal notranslate"><span class="pre">catalan(n)</span></code> returns the <code class="docutils literal notranslate"><span class="pre">n</span></code>-th Catalan number</p>
 </dd>
 </dl>
-<span class="target" id="l496e7465676572436f6d62696e61746f72696346756e6374696f6e732e64697374696e63745f706172746974696f6e"></span><dl class="simple" id="index-3">
+<span class="target" id="l496e7465676572436f6d62696e61746f72696346756e6374696f6e73-64697374696e63745f706172746974696f6e"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">distinct_partition</span>: I -&gt; I</dt><dd><p><code class="docutils literal notranslate"><span class="pre">distinct_partition(n)</span></code> returns the number of partitions of the integer <code class="docutils literal notranslate"><span class="pre">n</span></code> with distinct members. This is the number of ways that <code class="docutils literal notranslate"><span class="pre">n</span></code> can be written as a sum of distinct positive integers. For <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;</span> <span class="pre">0</span></code> this is the same as number of ways that <code class="docutils literal notranslate"><span class="pre">n</span></code> can be written as a sum of odd positive integers.</p>
 </dd>
 </dl>
-<span class="target" id="l496e7465676572436f6d62696e61746f72696346756e6374696f6e732e666163746f7269616c"></span><dl class="simple" id="index-4">
+<span class="target" id="l496e7465676572436f6d62696e61746f72696346756e6374696f6e73-666163746f7269616c"></span><dl class="simple" id="index-4">
 <dt><span class="spadfun">factorial</span>: I -&gt; I</dt><dd><p><code class="docutils literal notranslate"><span class="pre">factorial(n)</span></code> returns <code class="docutils literal notranslate"><span class="pre">n!</span></code>. this is the product of all integers between 1 and <code class="docutils literal notranslate"><span class="pre">n</span></code> (inclusive). Note: <code class="docutils literal notranslate"><span class="pre">0!</span></code> is defined to be 1.</p>
 </dd>
 </dl>
-<span class="target" id="l496e7465676572436f6d62696e61746f72696346756e6374696f6e732e6d756c74696e6f6d69616c"></span><dl class="simple" id="index-5">
+<span class="target" id="l496e7465676572436f6d62696e61746f72696346756e6374696f6e73-6d756c74696e6f6d69616c"></span><dl class="simple" id="index-5">
 <dt><span class="spadfun">multinomial</span>: (I, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> I) -&gt; I</dt><dd><p><code class="docutils literal notranslate"><span class="pre">multinomial(n,</span> <span class="pre">[m1,</span> <span class="pre">m2,</span> <span class="pre">...,</span> <span class="pre">mk])</span></code> returns the multinomial coefficient <code class="docutils literal notranslate"><span class="pre">n!/(m1!</span> <span class="pre">m2!</span> <span class="pre">...</span> <span class="pre">mk!)</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l496e7465676572436f6d62696e61746f72696346756e6374696f6e732e706172746974696f6e"></span><dl class="simple" id="index-6">
+<span class="target" id="l496e7465676572436f6d62696e61746f72696346756e6374696f6e73-706172746974696f6e"></span><dl class="simple" id="index-6">
 <dt><span class="spadfun">partition</span>: I -&gt; I</dt><dd><p><code class="docutils literal notranslate"><span class="pre">partition(n)</span></code> returns the number of partitions of the integer <code class="docutils literal notranslate"><span class="pre">n</span></code>. This is the number of distinct ways that <code class="docutils literal notranslate"><span class="pre">n</span></code> can be written as a sum of positive integers.</p>
 </dd>
 </dl>
-<span class="target" id="l496e7465676572436f6d62696e61746f72696346756e6374696f6e732e7065726d75746174696f6e"></span><dl class="simple" id="index-7">
+<span class="target" id="l496e7465676572436f6d62696e61746f72696346756e6374696f6e73-7065726d75746174696f6e"></span><dl class="simple" id="index-7">
 <dt><span class="spadfun">permutation</span>: (I, I) -&gt; I</dt><dd><p><code class="docutils literal notranslate"><span class="pre">permutation(n)</span></code> returns <code class="docutils literal notranslate"><span class="pre">!P(n,</span> <span class="pre">r)</span> <span class="pre">=</span> <span class="pre">n!/(n-r)!</span></code>. This is the number of permutations of <code class="docutils literal notranslate"><span class="pre">n</span></code> objects taken <code class="docutils literal notranslate"><span class="pre">r</span></code> at a time.</p>
 </dd>
 </dl>
-<span class="target" id="l496e7465676572436f6d62696e61746f72696346756e6374696f6e732e737469726c696e6731"></span><dl class="simple" id="index-8">
+<span class="target" id="l496e7465676572436f6d62696e61746f72696346756e6374696f6e73-737469726c696e6731"></span><dl class="simple" id="index-8">
 <dt><span class="spadfun">stirling1</span>: (I, I) -&gt; I</dt><dd><p><code class="docutils literal notranslate"><span class="pre">stirling1(n,</span> <span class="pre">m)</span></code> returns the Stirling number of the first kind denoted <code class="docutils literal notranslate"><span class="pre">S[n,</span> <span class="pre">m]</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l496e7465676572436f6d62696e61746f72696346756e6374696f6e732e737469726c696e6732"></span><dl class="simple" id="index-9">
+<span class="target" id="l496e7465676572436f6d62696e61746f72696346756e6374696f6e73-737469726c696e6732"></span><dl class="simple" id="index-9">
 <dt><span class="spadfun">stirling2</span>: (I, I) -&gt; I</dt><dd><p><code class="docutils literal notranslate"><span class="pre">stirling2(n,</span> <span class="pre">m)</span></code> returns the Stirling number of the second kind denoted <code class="docutils literal notranslate"><span class="pre">SS[n,</span> <span class="pre">m]</span></code>.</p>
 </dd>
 </dl>

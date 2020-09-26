@@ -54,7 +54,7 @@ Try to avoid lines longer than 78 characters.</p>
 </div>
 <div class="section" id="file-splitting-during-compilation">
 <h2>File splitting during compilation<a class="headerlink" href="#file-splitting-during-compilation" title="Permalink to this headline">¶</a></h2>
-<p>There is a script <a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/scripts/unpack_file">src/scripts/unpack_file</a> that splits
+<p>There is a script <a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/scripts/unpack_file">src/scripts/unpack_file</a> that splits
 <code class="docutils literal notranslate"><span class="pre">.spad</span></code> source files at <code class="docutils literal notranslate"><span class="pre">)abbrev</span></code> boundaries. As a result,
 everything before the first <code class="docutils literal notranslate"><span class="pre">)abbrev</span></code> will be discarded.</p>
 <p>In particular, it means that there cannot be a global macro definition
@@ -74,11 +74,11 @@ included and typeset via the
 <a class="reference external" href="https://www.ctan.org/pkg/listings/">listings package</a>.</p>
 <p>To support a weak form of literate programming, the two files</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/doc/literatedoc.sty">src/doc/literatedoc.sty</a></p></li>
-<li><p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/doc/literatedoc.awk">src/doc/literatedoc.awk</a></p></li>
+<li><p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/doc/literatedoc.sty">src/doc/literatedoc.sty</a></p></li>
+<li><p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/doc/literatedoc.awk">src/doc/literatedoc.awk</a></p></li>
 </ul>
 <p>are provided.</p>
-<p>The file <a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/fmt.spad">fmt.spad</a> can be taken as an example.</p>
+<p>The file <a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/fmt.spad">fmt.spad</a> can be taken as an example.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cd fricas
 awk -f src/doc/literatedoc.awk src/algebra/fmt.spad &gt; fmt.tex
 TEXINPUTS=:src/doc pdflatex fmt.tex
@@ -232,9 +232,9 @@ but not for end-users.</p>
   <ul class="this-page-menu">
     <li><a href="_sources/spadstyleguide.rst.txt"
            rel="nofollow">Show Source</a></li>
-    <li><a href="https://github.com/hemmecke/fricas/blob/formatted/src/doc/sphinx/source/spadstyleguide.rst"
+    <li><a href="https://github.com/fricas/fricas/blob/master/src/doc/sphinx/source/spadstyleguide.rst"
            rel="nofollow">Show on GitHub</a></li>
-    <li><a href="https://github.com/hemmecke/fricas/edit/formatted/src/doc/sphinx/source/spadstyleguide.rst"
+    <li><a href="https://github.com/fricas/fricas/edit/master/src/doc/sphinx/source/spadstyleguide.rst"
            rel="nofollow">Edit on GitHub</a></li>
   </ul>
 <div id="searchbox" style="display: none" role="search">

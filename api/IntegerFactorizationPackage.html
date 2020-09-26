@@ -47,24 +47,24 @@
             
   <div class="section" id="integerfactorizationpackage-i">
 <span id="l496e7465676572466163746f72697a6174696f6e5061636b616765"></span><span id="index-0"></span><h1>IntegerFactorizationPackage I<a class="headerlink" href="#integerfactorizationpackage-i" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/intfact.spad#L311">intfact.spad line 311</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/intfact.spad#L311">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/intfact.spad#L311">intfact.spad line 311</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/intfact.spad#L311">[edit on github]</a></p>
 <ul class="simple">
 <li><p>I: <a class="reference internal" href="IntegerNumberSystem.html#l496e74656765724e756d62657253797374656d"><span class="std std-ref">IntegerNumberSystem</span></a></p></li>
 </ul>
 <p>This Package contains basic methods for integer factorization. The factor operation employs trial division up to 10, 000. It then tests to see if <code class="docutils literal notranslate"><span class="pre">n</span></code> is a perfect power before using Pollards rho method. Because Pollards method may fail, the result of factor may contain composite factors. We should also employ Lenstra<code class="docutils literal notranslate"><span class="pre">'s</span></code> eliptic curve method.</p>
-<span class="target" id="l496e7465676572466163746f72697a6174696f6e5061636b6167652e42617369634d6574686f64"></span><dl class="simple" id="index-1">
+<span class="target" id="l496e7465676572466163746f72697a6174696f6e5061636b616765-42617369634d6574686f64"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">BasicMethod</span>: I -&gt; <a class="reference internal" href="Factored.html#l466163746f726564"><span class="std std-ref">Factored</span></a> I</dt><dd><p><code class="docutils literal notranslate"><span class="pre">BasicMethod(n)</span></code> returns the factorization of integer <code class="docutils literal notranslate"><span class="pre">n</span></code> by trial division</p>
 </dd>
 </dl>
-<span class="target" id="l496e7465676572466163746f72697a6174696f6e5061636b6167652e666163746f72"></span><dl class="simple" id="index-2">
+<span class="target" id="l496e7465676572466163746f72697a6174696f6e5061636b616765-666163746f72"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">factor</span>: I -&gt; <a class="reference internal" href="Factored.html#l466163746f726564"><span class="std std-ref">Factored</span></a> I</dt><dd><p><code class="docutils literal notranslate"><span class="pre">factor(n)</span></code> returns the full factorization of integer <code class="docutils literal notranslate"><span class="pre">n</span></code></p>
 </dd>
 </dl>
-<span class="target" id="l496e7465676572466163746f72697a6174696f6e5061636b6167652e506f6c6c617264536d616c6c466163746f72"></span><dl class="simple" id="index-3">
+<span class="target" id="l496e7465676572466163746f72697a6174696f6e5061636b616765-506f6c6c617264536d616c6c466163746f72"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">PollardSmallFactor</span>: I -&gt; Union(I, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">PollardSmallFactor(n)</span></code> returns a factor of <code class="docutils literal notranslate"><span class="pre">n</span></code> or “failed” if no one is found</p>
 </dd>
 </dl>
-<span class="target" id="l496e7465676572466163746f72697a6174696f6e5061636b6167652e73717561726546726565"></span><dl class="simple" id="index-4">
+<span class="target" id="l496e7465676572466163746f72697a6174696f6e5061636b616765-73717561726546726565"></span><dl class="simple" id="index-4">
 <dt><span class="spadfun">squareFree</span>: I -&gt; <a class="reference internal" href="Factored.html#l466163746f726564"><span class="std std-ref">Factored</span></a> I</dt><dd><p><code class="docutils literal notranslate"><span class="pre">squareFree(n)</span></code> returns the square free factorization of integer <code class="docutils literal notranslate"><span class="pre">n</span></code></p>
 </dd>
 </dl>

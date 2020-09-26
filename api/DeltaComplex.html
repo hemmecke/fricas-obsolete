@@ -47,38 +47,38 @@
             
   <div class="section" id="deltacomplex-vs">
 <span id="l44656c7461436f6d706c6578"></span><span id="index-0"></span><h1>DeltaComplex VS<a class="headerlink" href="#deltacomplex-vs" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/alg_top.spad#L2907">alg_top.spad line 2907</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/alg_top.spad#L2907">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/alg_top.spad#L2907">alg_top.spad line 2907</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/alg_top.spad#L2907">[edit on github]</a></p>
 <ul class="simple">
 <li><p>VS: <a class="reference internal" href="AbelianGroup.html#l4162656c69616e47726f7570"><span class="std std-ref">AbelianGroup</span></a></p></li>
 </ul>
 <p>Similar to Simplicial Complex but faces (edges, triangles, etc.) are indexed by ‘face maps’ into the next lower face map until we get down to the vertices. for more documentation see: <a class="reference external" href="http://www.euclideanspace.com/prog/scratchpad/mycode/topology/delta/">http://www.euclideanspace.com/prog/scratchpad/mycode/topology/delta/</a> Date Created: Feb 2016 Basic Operations: Related packages: Related categories: Related Domains: FiniteSimplicialComplex is a simpler and more compact representation which can be used if edges, triangles, etc. don<code class="docutils literal notranslate"><span class="pre">'t</span></code> need to be indexed. Also See: AMS Classifications:</p>
-<dl class="simple" id="l44656c7461436f6d706c65782e3d">
-<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+<dl class="simple" id="l44656c7461436f6d706c6578-3d">
+<dt><a class="reference internal" href="BasicType.html#l426173696354797065-3d"><span class="std std-ref">=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l44656c7461436f6d706c65782e7e3d">
-<dt><a class="reference internal" href="BasicType.html#l4261736963547970652e7e3d"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
+<dl class="simple" id="l44656c7461436f6d706c6578-7e3d">
+<dt><a class="reference internal" href="BasicType.html#l426173696354797065-7e3d"><span class="std std-ref">~=</span></a>: (%, %) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p>from <a class="reference internal" href="BasicType.html#l426173696354797065"><span class="std std-ref">BasicType</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l44656c7461436f6d706c65782e636861696e"></span><dl class="simple" id="index-1">
+<span class="target" id="l44656c7461436f6d706c6578-636861696e"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">chain</span>: % -&gt; <a class="reference internal" href="ChainComplex.html#l436861696e436f6d706c6578"><span class="std std-ref">ChainComplex</span></a></dt><dd><p>returns a matrix sequence representing the face maps in linear algebra form</p>
 </dd>
 </dl>
-<span class="target" id="l44656c7461436f6d706c65782e636f436861696e"></span><dl class="simple" id="index-2">
+<span class="target" id="l44656c7461436f6d706c6578-636f436861696e"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">coChain</span>: % -&gt; <a class="reference internal" href="CoChainComplex.html#l436f436861696e436f6d706c6578"><span class="std std-ref">CoChainComplex</span></a> VS</dt><dd><p>returns a matrix sequence representing the face maps in linear algebra form</p>
 </dd>
 </dl>
-<span class="target" id="l44656c7461436f6d706c65782e636f65726365"></span><dl class="simple" id="index-3">
+<span class="target" id="l44656c7461436f6d706c6578-636f65726365"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">coerce</span>: % -&gt; <a class="reference internal" href="FiniteSimplicialComplex.html#l46696e69746553696d706c696369616c436f6d706c6578"><span class="std std-ref">FiniteSimplicialComplex</span></a> VS</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce</span> <span class="pre">DeltaComplex</span></code> to FiniteSimplicialComplex</p>
 </dd>
-<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f2e636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
+<dt><a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f-636f65726365"><span class="std std-ref">coerce</span></a>: % -&gt; <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></dt><dd><p>from <a class="reference internal" href="CoercibleTo.html#l436f65726369626c65546f"><span class="std std-ref">CoercibleTo</span></a> <a class="reference internal" href="OutputForm.html#l4f7574707574466f726d"><span class="std std-ref">OutputForm</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l44656c7461436f6d706c65782e636f486f6d6f6c6f6779"></span><dl class="simple" id="index-4">
+<span class="target" id="l44656c7461436f6d706c6578-636f486f6d6f6c6f6779"></span><dl class="simple" id="index-4">
 <dt><span class="spadfun">coHomology</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Homology.html#l486f6d6f6c6f6779"><span class="std std-ref">Homology</span></a></dt><dd><p>calculate cohomology using SmithNormalForm</p>
 </dd>
 </dl>
-<span class="target" id="l44656c7461436f6d706c65782e64656c7461436f6d706c6578"></span><p id="index-5"><span class="spadfun">deltaComplex</span>: (<a class="reference internal" href="FiniteSimplicialComplex.html#l46696e69746553696d706c696369616c436f6d706c6578"><span class="std std-ref">FiniteSimplicialComplex</span></a> VS, <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a>) -&gt; %</p>
+<span class="target" id="l44656c7461436f6d706c6578-64656c7461436f6d706c6578"></span><p id="index-5"><span class="spadfun">deltaComplex</span>: (<a class="reference internal" href="FiniteSimplicialComplex.html#l46696e69746553696d706c696369616c436f6d706c6578"><span class="std std-ref">FiniteSimplicialComplex</span></a> VS, <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a>) -&gt; %</p>
 <dl class="simple" id="index-6">
 <dt><span class="spadfun">deltaComplex</span>: (<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> VS, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>) -&gt; %</dt><dd><p>constructor where the simplices are supplied</p>
 </dd>
@@ -91,11 +91,11 @@
 <dt><span class="spadfun">deltaComplex</span>: <a class="reference internal" href="FiniteSimplicialComplex.html#l46696e69746553696d706c696369616c436f6d706c6578"><span class="std std-ref">FiniteSimplicialComplex</span></a> VS -&gt; %</dt><dd><p>construct from FiniteSimplicialComplex. This builds indexes of edges, triangles and so on.</p>
 </dd>
 </dl>
-<span class="target" id="l44656c7461436f6d706c65782e666163654d6170"></span><dl class="simple" id="index-9">
+<span class="target" id="l44656c7461436f6d706c6578-666163654d6170"></span><dl class="simple" id="index-9">
 <dt><span class="spadfun">faceMap</span>: (%, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a></dt><dd><p>returns an individual face map specified by <code class="docutils literal notranslate"><span class="pre">n</span></code>. Where <code class="docutils literal notranslate"><span class="pre">'n'</span></code> is the dimension required, so <code class="docutils literal notranslate"><span class="pre">n=1</span></code> returns one dimentional faces (edges), <code class="docutils literal notranslate"><span class="pre">n=2</span></code> returns two dimentional faces (triamgles), and so on. used by fundamentalGroup.</p>
 </dd>
 </dl>
-<span class="target" id="l44656c7461436f6d706c65782e66756e64616d656e74616c47726f7570"></span><dl class="simple" id="index-10">
+<span class="target" id="l44656c7461436f6d706c6578-66756e64616d656e74616c47726f7570"></span><dl class="simple" id="index-10">
 <dt><span class="spadfun">fundamentalGroup</span>: % -&gt; <a class="reference internal" href="GroupPresentation.html#l47726f757050726573656e746174696f6e"><span class="std std-ref">GroupPresentation</span></a></dt><dd><p>Generates fundamental group from this simplicial complex.</p>
 </dd>
 </dl>
@@ -103,31 +103,31 @@
 <dt><span class="spadfun">fundamentalGroup</span>: (%, <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a>, <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a>) -&gt; <a class="reference internal" href="GroupPresentation.html#l47726f757050726573656e746174696f6e"><span class="std std-ref">GroupPresentation</span></a></dt><dd><p>Generates fundamental group from this simplicial complex.</p>
 </dd>
 </dl>
-<dl class="simple" id="l44656c7461436f6d706c65782e68617368">
-<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e68617368"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l53696e676c65496e7465676572"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+<dl class="simple" id="l44656c7461436f6d706c6578-68617368">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f7279-68617368"><span class="std std-ref">hash</span></a>: % -&gt; <a class="reference internal" href="SingleInteger.html#l53696e676c65496e7465676572"><span class="std std-ref">SingleInteger</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </dd>
 </dl>
-<dl class="simple" id="l44656c7461436f6d706c65782e6861736855706461746521">
-<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6861736855706461746521"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+<dl class="simple" id="l44656c7461436f6d706c6578-6861736855706461746521">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f7279-6861736855706461746521"><span class="std std-ref">hashUpdate!</span></a>: (<a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a>, %) -&gt; <a class="reference internal" href="HashState.html#l486173685374617465"><span class="std std-ref">HashState</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l44656c7461436f6d706c65782e686f6d6f6c6f6779"></span><dl class="simple" id="index-12">
+<span class="target" id="l44656c7461436f6d706c6578-686f6d6f6c6f6779"></span><dl class="simple" id="index-12">
 <dt><span class="spadfun">homology</span>: % -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> <a class="reference internal" href="Homology.html#l486f6d6f6c6f6779"><span class="std std-ref">Homology</span></a></dt><dd><p>calculate homology using SmithNormalForm</p>
 </dd>
 </dl>
-<dl class="simple" id="l44656c7461436f6d706c65782e6c61746578">
-<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f72792e6c61746578"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
+<dl class="simple" id="l44656c7461436f6d706c6578-6c61746578">
+<dt><a class="reference internal" href="SetCategory.html#l53657443617465676f7279-6c61746578"><span class="std std-ref">latex</span></a>: % -&gt; <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a></dt><dd><p>from <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p>
 </dd>
 </dl>
-<span class="target" id="l44656c7461436f6d706c65782e6c696e6b"></span><dl class="simple" id="index-13">
+<span class="target" id="l44656c7461436f6d706c6578-6c696e6b"></span><dl class="simple" id="index-13">
 <dt><span class="spadfun">link</span>: (<a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>a simplical complex with one link</p>
 </dd>
 </dl>
-<span class="target" id="l44656c7461436f6d706c65782e6f6e65536b656c65746f6e"></span><dl class="simple" id="index-14">
+<span class="target" id="l44656c7461436f6d706c6578-6f6e65536b656c65746f6e"></span><dl class="simple" id="index-14">
 <dt><span class="spadfun">oneSkeleton</span>: % -&gt; <a class="reference internal" href="UndirectedGraph.html#l556e64697265637465644772617068"><span class="std std-ref">UndirectedGraph</span></a> <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a></dt><dd><p>generates graph AKA 1-skeleton</p>
 </dd>
 </dl>
-<span class="target" id="l44656c7461436f6d706c65782e747269616e676c65"></span><dl class="simple" id="index-15">
+<span class="target" id="l44656c7461436f6d706c6578-747269616e676c65"></span><dl class="simple" id="index-15">
 <dt><span class="spadfun">triangle</span>: (<a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; %</dt><dd><p>a simplical complex with one triangle</p>
 </dd>
 </dl>

@@ -47,29 +47,29 @@
             
   <div class="section" id="combinatorialfunction-r-f">
 <span id="l436f6d62696e61746f7269616c46756e6374696f6e"></span><span id="index-0"></span><h1>CombinatorialFunction(R, F)<a class="headerlink" href="#combinatorialfunction-r-f" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/combfunc.spad#L29">combfunc.spad line 29</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/combfunc.spad#L29">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/combfunc.spad#L29">combfunc.spad line 29</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/combfunc.spad#L29">[edit on github]</a></p>
 <ul class="simple">
 <li><p>R: Join(<a class="reference internal" href="Comparable.html#l436f6d70617261626c65"><span class="std std-ref">Comparable</span></a>, <a class="reference internal" href="IntegralDomain.html#l496e74656772616c446f6d61696e"><span class="std std-ref">IntegralDomain</span></a>)</p></li>
 <li><p>F: <a class="reference internal" href="FunctionSpace.html#l46756e6374696f6e5370616365"><span class="std std-ref">FunctionSpace</span></a> R</p></li>
 </ul>
 <p>Provides combinatorial functions over an integral domain.</p>
-<span class="target" id="l436f6d62696e61746f7269616c46756e6374696f6e2e5e"></span><dl class="simple" id="index-1">
+<span class="target" id="l436f6d62696e61746f7269616c46756e6374696f6e-5e"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">^</span>: (F, F) -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">^</span> <span class="pre">b</span></code> returns the formal exponential a^b.</p>
 </dd>
 </dl>
-<span class="target" id="l436f6d62696e61746f7269616c46756e6374696f6e2e62656c6f6e673f"></span><dl class="simple" id="index-2">
+<span class="target" id="l436f6d62696e61746f7269616c46756e6374696f6e-62656c6f6e673f"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">belong?</span>: <a class="reference internal" href="BasicOperator.html#l42617369634f70657261746f72"><span class="std std-ref">BasicOperator</span></a> -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">belong?(op)</span></code> returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if <code class="docutils literal notranslate"><span class="pre">op</span></code> is a combinatorial operator.</p>
 </dd>
 </dl>
-<span class="target" id="l436f6d62696e61746f7269616c46756e6374696f6e2e62696e6f6d69616c"></span><dl class="simple" id="index-3">
+<span class="target" id="l436f6d62696e61746f7269616c46756e6374696f6e-62696e6f6d69616c"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">binomial</span>: (F, F) -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">binomial(n,</span> <span class="pre">r)</span></code> returns the number of subsets of <code class="docutils literal notranslate"><span class="pre">r</span></code> objects taken among <code class="docutils literal notranslate"><span class="pre">n</span></code> objects, i.e. <code class="docutils literal notranslate"><span class="pre">n!/</span></code>(<code class="docutils literal notranslate"><span class="pre">r!</span></code> * (<code class="docutils literal notranslate"><span class="pre">n</span></code>-<code class="docutils literal notranslate"><span class="pre">r</span></code>)!).</p>
 </dd>
 </dl>
-<span class="target" id="l436f6d62696e61746f7269616c46756e6374696f6e2e666163746f7269616c"></span><dl class="simple" id="index-4">
+<span class="target" id="l436f6d62696e61746f7269616c46756e6374696f6e-666163746f7269616c"></span><dl class="simple" id="index-4">
 <dt><span class="spadfun">factorial</span>: F -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">factorial(n)</span></code> returns the factorial of <code class="docutils literal notranslate"><span class="pre">n</span></code>, i.e. <code class="docutils literal notranslate"><span class="pre">n!</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l436f6d62696e61746f7269616c46756e6374696f6e2e666163746f7269616c73"></span><dl class="simple" id="index-5">
+<span class="target" id="l436f6d62696e61746f7269616c46756e6374696f6e-666163746f7269616c73"></span><dl class="simple" id="index-5">
 <dt><span class="spadfun">factorials</span>: (F, <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>) -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">factorials(f,</span> <span class="pre">x)</span></code> rewrites the permutations and binomials in <code class="docutils literal notranslate"><span class="pre">f</span></code> involving <code class="docutils literal notranslate"><span class="pre">x</span></code> in terms of factorials.</p>
 </dd>
 </dl>
@@ -77,43 +77,43 @@
 <dt><span class="spadfun">factorials</span>: F -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">factorials(f)</span></code> rewrites the permutations and binomials in <code class="docutils literal notranslate"><span class="pre">f</span></code> in terms of factorials.</p>
 </dd>
 </dl>
-<span class="target" id="l436f6d62696e61746f7269616c46756e6374696f6e2e696962696e6f6d"></span><dl class="simple" id="index-7">
+<span class="target" id="l436f6d62696e61746f7269616c46756e6374696f6e-696962696e6f6d"></span><dl class="simple" id="index-7">
 <dt><span class="spadfun">iibinom</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> F -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">iibinom(l)</span></code> should be local but conditional.</p>
 </dd>
 </dl>
-<span class="target" id="l436f6d62696e61746f7269616c46756e6374696f6e2e69696470726f64"></span><dl class="simple" id="index-8">
+<span class="target" id="l436f6d62696e61746f7269616c46756e6374696f6e-69696470726f64"></span><dl class="simple" id="index-8">
 <dt><span class="spadfun">iidprod</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> F -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">iidprod(l)</span></code> should be local but conditional.</p>
 </dd>
 </dl>
-<span class="target" id="l436f6d62696e61746f7269616c46756e6374696f6e2e69696473756d"></span><dl class="simple" id="index-9">
+<span class="target" id="l436f6d62696e61746f7269616c46756e6374696f6e-69696473756d"></span><dl class="simple" id="index-9">
 <dt><span class="spadfun">iidsum</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> F -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">iidsum(l)</span></code> should be local but conditional.</p>
 </dd>
 </dl>
-<span class="target" id="l436f6d62696e61746f7269616c46756e6374696f6e2e696966616374"></span><dl class="simple" id="index-10">
+<span class="target" id="l436f6d62696e61746f7269616c46756e6374696f6e-696966616374"></span><dl class="simple" id="index-10">
 <dt><span class="spadfun">iifact</span>: F -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">iifact(x)</span></code> should be local but conditional.</p>
 </dd>
 </dl>
-<span class="target" id="l436f6d62696e61746f7269616c46756e6374696f6e2e69697065726d"></span><dl class="simple" id="index-11">
+<span class="target" id="l436f6d62696e61746f7269616c46756e6374696f6e-69697065726d"></span><dl class="simple" id="index-11">
 <dt><span class="spadfun">iiperm</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> F -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">iiperm(l)</span></code> should be local but conditional.</p>
 </dd>
 </dl>
-<span class="target" id="l436f6d62696e61746f7269616c46756e6374696f6e2e6969706f77"></span><dl class="simple" id="index-12">
+<span class="target" id="l436f6d62696e61746f7269616c46756e6374696f6e-6969706f77"></span><dl class="simple" id="index-12">
 <dt><span class="spadfun">iipow</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> F -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">iipow(l)</span></code> should be local but conditional.</p>
 </dd>
 </dl>
-<span class="target" id="l436f6d62696e61746f7269616c46756e6374696f6e2e69706f77"></span><dl class="simple" id="index-13">
+<span class="target" id="l436f6d62696e61746f7269616c46756e6374696f6e-69706f77"></span><dl class="simple" id="index-13">
 <dt><span class="spadfun">ipow</span>: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> F -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">ipow(l)</span></code> should be local but conditional.</p>
 </dd>
 </dl>
-<span class="target" id="l436f6d62696e61746f7269616c46756e6374696f6e2e6f70657261746f72"></span><dl class="simple" id="index-14">
+<span class="target" id="l436f6d62696e61746f7269616c46756e6374696f6e-6f70657261746f72"></span><dl class="simple" id="index-14">
 <dt><span class="spadfun">operator</span>: <a class="reference internal" href="BasicOperator.html#l42617369634f70657261746f72"><span class="std std-ref">BasicOperator</span></a> -&gt; <a class="reference internal" href="BasicOperator.html#l42617369634f70657261746f72"><span class="std std-ref">BasicOperator</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">operator(op)</span></code> returns a copy of <code class="docutils literal notranslate"><span class="pre">op</span></code> with the domain-dependent properties appropriate for <code class="docutils literal notranslate"><span class="pre">F</span></code>; error if <code class="docutils literal notranslate"><span class="pre">op</span></code> is not a combinatorial operator.</p>
 </dd>
 </dl>
-<span class="target" id="l436f6d62696e61746f7269616c46756e6374696f6e2e7065726d75746174696f6e"></span><dl class="simple" id="index-15">
+<span class="target" id="l436f6d62696e61746f7269616c46756e6374696f6e-7065726d75746174696f6e"></span><dl class="simple" id="index-15">
 <dt><span class="spadfun">permutation</span>: (F, F) -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">permutation(n,</span> <span class="pre">r)</span></code> returns the number of permutations of <code class="docutils literal notranslate"><span class="pre">n</span></code> objects taken <code class="docutils literal notranslate"><span class="pre">r</span></code> at a time, i.e. <code class="docutils literal notranslate"><span class="pre">n!/</span></code>(<code class="docutils literal notranslate"><span class="pre">n</span></code>-<code class="docutils literal notranslate"><span class="pre">r</span></code>)!.</p>
 </dd>
 </dl>
-<span class="target" id="l436f6d62696e61746f7269616c46756e6374696f6e2e70726f64756374"></span><dl class="simple" id="index-16">
+<span class="target" id="l436f6d62696e61746f7269616c46756e6374696f6e-70726f64756374"></span><dl class="simple" id="index-16">
 <dt><span class="spadfun">product</span>: (F, <a class="reference internal" href="SegmentBinding.html#l5365676d656e7442696e64696e67"><span class="std std-ref">SegmentBinding</span></a> F) -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">product(f(n),</span> <span class="pre">n</span> <span class="pre">=</span> <span class="pre">a..b)</span></code> returns <code class="docutils literal notranslate"><span class="pre">f</span></code>(a) * … * <code class="docutils literal notranslate"><span class="pre">f</span></code>(<code class="docutils literal notranslate"><span class="pre">b</span></code>) as a formal product.</p>
 </dd>
 </dl>
@@ -121,7 +121,7 @@
 <dt><span class="spadfun">product</span>: (F, <a class="reference internal" href="Symbol.html#l53796d626f6c"><span class="std std-ref">Symbol</span></a>) -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">product(f(n),</span> <span class="pre">n)</span></code> returns the formal product <code class="docutils literal notranslate"><span class="pre">P</span></code>(<code class="docutils literal notranslate"><span class="pre">n</span></code>) which verifies <code class="docutils literal notranslate"><span class="pre">P</span></code>(<code class="docutils literal notranslate"><span class="pre">n+1</span></code>)<code class="docutils literal notranslate"><span class="pre">/P</span></code>(<code class="docutils literal notranslate"><span class="pre">n</span></code>) = <code class="docutils literal notranslate"><span class="pre">f</span></code>(<code class="docutils literal notranslate"><span class="pre">n</span></code>).</p>
 </dd>
 </dl>
-<span class="target" id="l436f6d62696e61746f7269616c46756e6374696f6e2e73756d6d6174696f6e"></span><dl class="simple" id="index-18">
+<span class="target" id="l436f6d62696e61746f7269616c46756e6374696f6e-73756d6d6174696f6e"></span><dl class="simple" id="index-18">
 <dt><span class="spadfun">summation</span>: (F, <a class="reference internal" href="SegmentBinding.html#l5365676d656e7442696e64696e67"><span class="std std-ref">SegmentBinding</span></a> F) -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">summation(f(n),</span> <span class="pre">n</span> <span class="pre">=</span> <span class="pre">a..b)</span></code> returns <code class="docutils literal notranslate"><span class="pre">f</span></code>(a) + … + <code class="docutils literal notranslate"><span class="pre">f</span></code>(<code class="docutils literal notranslate"><span class="pre">b</span></code>) as a formal sum.</p>
 </dd>
 </dl>

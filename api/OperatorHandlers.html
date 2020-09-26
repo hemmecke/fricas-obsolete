@@ -47,28 +47,28 @@
             
   <div class="section" id="operatorhandlers-handler">
 <span id="l4f70657261746f7248616e646c657273"></span><span id="index-0"></span><h1>OperatorHandlers HANDLER<a class="headerlink" href="#operatorhandlers-handler" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/fmt.spad#L322">fmt.spad line 322</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/fmt.spad#L322">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/fmt.spad#L322">fmt.spad line 322</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/fmt.spad#L322">[edit on github]</a></p>
 <ul class="simple">
 <li><p>HANDLER: <a class="reference internal" href="Type.html#l54797065"><span class="std std-ref">Type</span></a></p></li>
 </ul>
 <p>OperatorHandlers is an auxiliary domain. It is used holds functions for each operator of <code class="docutils literal notranslate"><span class="pre">OutputForm</span></code>, classified by the arity and the name of that operator.</p>
-<span class="target" id="l4f70657261746f7248616e646c6572732e68616e646c6572"></span><dl class="simple" id="index-1">
+<span class="target" id="l4f70657261746f7248616e646c657273-68616e646c6572"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">handler</span>: (%, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>) -&gt; HANDLER</dt><dd><p><code class="docutils literal notranslate"><span class="pre">handler(x,</span> <span class="pre">n,</span> <span class="pre">op)</span></code> is only valid if <code class="docutils literal notranslate"><span class="pre">knownHandler?(n,</span> <span class="pre">op)</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>. It returns the respective handler stored in <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l4f70657261746f7248616e646c6572732e6b6e6f776e48616e646c65723f"></span><dl class="simple" id="index-2">
+<span class="target" id="l4f70657261746f7248616e646c657273-6b6e6f776e48616e646c65723f"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">knownHandler?</span>: (%, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>) -&gt; <a class="reference internal" href="Boolean.html#l426f6f6c65616e"><span class="std std-ref">Boolean</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">knownHandler?(x,</span> <span class="pre">n,</span> <span class="pre">op)</span></code> checks whether a handler for operator <code class="docutils literal notranslate"><span class="pre">op</span></code> is known. The number <code class="docutils literal notranslate"><span class="pre">n</span></code> denotes the number of arguments that the operator can take. It is OK if both <code class="docutils literal notranslate"><span class="pre">knownOperator?(m,</span> <span class="pre">op)</span></code> and <code class="docutils literal notranslate"><span class="pre">knownOperator?(n,</span> <span class="pre">op)</span></code> return <code class="docutils literal notranslate"><span class="pre">true</span></code> for different <code class="docutils literal notranslate"><span class="pre">m</span></code> and <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l4f70657261746f7248616e646c6572732e6e6577"></span><dl class="simple" id="index-3">
+<span class="target" id="l4f70657261746f7248616e646c657273-6e6577"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">new</span>: () -&gt; %</dt><dd><p><code class="docutils literal notranslate"><span class="pre">new()</span></code> creates an empty structure of handlers.</p>
 </dd>
 </dl>
-<span class="target" id="l4f70657261746f7248616e646c6572732e72656d6f766548616e646c657221"></span><dl class="simple" id="index-4">
+<span class="target" id="l4f70657261746f7248616e646c657273-72656d6f766548616e646c657221"></span><dl class="simple" id="index-4">
 <dt><span class="spadfun">removeHandler!</span>: (%, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>) -&gt; <a class="reference internal" href="Void.html#l566f6964"><span class="std std-ref">Void</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">removeHandler!(n,</span> <span class="pre">op)</span></code> removes any handler from an internal data structure (for the pair <code class="docutils literal notranslate"><span class="pre">(n,</span> <span class="pre">op)</span></code> such that afterwards <code class="docutils literal notranslate"><span class="pre">knownHandler?(x,</span> <span class="pre">n,</span> <span class="pre">op)</span></code> returns <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l4f70657261746f7248616e646c6572732e73657448616e646c657221"></span><dl class="simple" id="index-5">
+<span class="target" id="l4f70657261746f7248616e646c657273-73657448616e646c657221"></span><dl class="simple" id="index-5">
 <dt><span class="spadfun">setHandler!</span>: (%, <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="String.html#l537472696e67"><span class="std std-ref">String</span></a>, HANDLER) -&gt; HANDLER</dt><dd><p><code class="docutils literal notranslate"><span class="pre">setHandler!(x,</span> <span class="pre">n,</span> <span class="pre">op,</span> <span class="pre">hdl)</span></code> puts <code class="docutils literal notranslate"><span class="pre">hdl</span></code> into the data structure <code class="docutils literal notranslate"><span class="pre">x</span></code> such that it can be queried afterwards.</p>
 </dd>
 </dl>

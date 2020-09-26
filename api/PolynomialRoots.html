@@ -47,7 +47,7 @@
             
   <div class="section" id="polynomialroots-e-v-r-p-f">
 <span id="l506f6c796e6f6d69616c526f6f7473"></span><span id="index-0"></span><h1>PolynomialRoots(E, V, R, P, F)<a class="headerlink" href="#polynomialroots-e-v-r-p-f" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/manip.spad#L40">manip.spad line 40</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/manip.spad#L40">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/manip.spad#L40">manip.spad line 40</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/manip.spad#L40">[edit on github]</a></p>
 <ul>
 <li><p>E: <a class="reference internal" href="OrderedAbelianMonoidSup.html#l4f7264657265644162656c69616e4d6f6e6f6964537570"><span class="std std-ref">OrderedAbelianMonoidSup</span></a></p></li>
 <li><p>V: <a class="reference internal" href="OrderedSet.html#l4f726465726564536574"><span class="std std-ref">OrderedSet</span></a></p></li>
@@ -62,19 +62,19 @@
 </li>
 </ul>
 <p>computes <code class="docutils literal notranslate"><span class="pre">n</span></code>-th roots of quotients of multivariate polynomials</p>
-<span class="target" id="l506f6c796e6f6d69616c526f6f74732e66726f6f74"></span><dl class="simple" id="index-1">
+<span class="target" id="l506f6c796e6f6d69616c526f6f7473-66726f6f74"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">froot</span>: (F, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; Record(exponent: <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, coef: F, radicand: F) if R has <a class="reference internal" href="GcdDomain.html#l476364446f6d61696e"><span class="std std-ref">GcdDomain</span></a></dt><dd><p><code class="docutils literal notranslate"><span class="pre">froot(f,</span> <span class="pre">n)</span></code> returns <code class="docutils literal notranslate"><span class="pre">[m,</span> <span class="pre">c,</span> <span class="pre">r]</span></code> such that <code class="docutils literal notranslate"><span class="pre">f^(1/n)</span> <span class="pre">=</span> <span class="pre">c</span> <span class="pre">*</span> <span class="pre">r^(1/m)</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l506f6c796e6f6d69616c526f6f74732e6e746872"></span><dl class="simple" id="index-2">
+<span class="target" id="l506f6c796e6f6d69616c526f6f7473-6e746872"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">nthr</span>: (P, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; Record(exponent: <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, coef: P, radicand: <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> P)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">nthr(p,</span> <span class="pre">n)</span></code> should be local but conditional</p>
 </dd>
 </dl>
-<span class="target" id="l506f6c796e6f6d69616c526f6f74732e71726f6f74"></span><dl class="simple" id="index-3">
+<span class="target" id="l506f6c796e6f6d69616c526f6f7473-71726f6f74"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">qroot</span>: (<a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; Record(exponent: <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, coef: F, radicand: F)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">qroot(f,</span> <span class="pre">n)</span></code> returns <code class="docutils literal notranslate"><span class="pre">[m,</span> <span class="pre">c,</span> <span class="pre">r]</span></code> such that <code class="docutils literal notranslate"><span class="pre">f^(1/n)</span> <span class="pre">=</span> <span class="pre">c</span> <span class="pre">*</span> <span class="pre">r^(1/m)</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l506f6c796e6f6d69616c526f6f74732e72726f6f74"></span><dl class="simple" id="index-4">
+<span class="target" id="l506f6c796e6f6d69616c526f6f7473-72726f6f74"></span><dl class="simple" id="index-4">
 <dt><span class="spadfun">rroot</span>: (R, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; Record(exponent: <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, coef: F, radicand: F)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">rroot(f,</span> <span class="pre">n)</span></code> returns <code class="docutils literal notranslate"><span class="pre">[m,</span> <span class="pre">c,</span> <span class="pre">r]</span></code> such that <code class="docutils literal notranslate"><span class="pre">f^(1/n)</span> <span class="pre">=</span> <span class="pre">c</span> <span class="pre">*</span> <span class="pre">r^(1/m)</span></code>.</p>
 </dd>
 </dl>

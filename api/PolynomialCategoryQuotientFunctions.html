@@ -47,7 +47,7 @@
             
   <div class="section" id="polynomialcategoryquotientfunctions-e-v-r-p-f">
 <span id="l506f6c796e6f6d69616c43617465676f727951756f7469656e7446756e6374696f6e73"></span><span id="index-0"></span><h1>PolynomialCategoryQuotientFunctions(E, V, R, P, F)<a class="headerlink" href="#polynomialcategoryquotientfunctions-e-v-r-p-f" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/rf.spad#L1">rf.spad line 1</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/rf.spad#L1">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/rf.spad#L1">rf.spad line 1</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/rf.spad#L1">[edit on github]</a></p>
 <ul>
 <li><p>E: <a class="reference internal" href="OrderedAbelianMonoidSup.html#l4f7264657265644162656c69616e4d6f6e6f6964537570"><span class="std std-ref">OrderedAbelianMonoidSup</span></a></p></li>
 <li><p>V: <a class="reference internal" href="OrderedSet.html#l4f726465726564536574"><span class="std std-ref">OrderedSet</span></a></p></li>
@@ -62,31 +62,31 @@
 </li>
 </ul>
 <p>This package transforms multivariate polynomials or fractions into univariate polynomials or fractions, and back.</p>
-<span class="target" id="l506f6c796e6f6d69616c43617465676f727951756f7469656e7446756e6374696f6e732e697345787074"></span><dl class="simple" id="index-1">
+<span class="target" id="l506f6c796e6f6d69616c43617465676f727951756f7469656e7446756e6374696f6e73-697345787074"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">isExpt</span>: F -&gt; Union(Record(var: V, exponent: <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>), failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">isExpt(p)</span></code> returns <code class="docutils literal notranslate"><span class="pre">[x,</span> <span class="pre">n]</span></code> if <code class="docutils literal notranslate"><span class="pre">p</span> <span class="pre">=</span> <span class="pre">x^n</span></code> and <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">~=</span> <span class="pre">0</span></code>, “failed” otherwise.</p>
 </dd>
 </dl>
-<span class="target" id="l506f6c796e6f6d69616c43617465676f727951756f7469656e7446756e6374696f6e732e6973506c7573"></span><dl class="simple" id="index-2">
+<span class="target" id="l506f6c796e6f6d69616c43617465676f727951756f7469656e7446756e6374696f6e73-6973506c7573"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">isPlus</span>: F -&gt; Union(<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> F, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">isPlus(p)</span></code> returns [<code class="docutils literal notranslate"><span class="pre">m1</span></code>, …, <code class="docutils literal notranslate"><span class="pre">mn</span></code>] if <code class="docutils literal notranslate"><span class="pre">p</span> <span class="pre">=</span> <span class="pre">m1</span> <span class="pre">+</span> <span class="pre">...</span> <span class="pre">+</span> <span class="pre">mn</span></code> and <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;</span> <span class="pre">1</span></code>, “failed” otherwise.</p>
 </dd>
 </dl>
-<span class="target" id="l506f6c796e6f6d69616c43617465676f727951756f7469656e7446756e6374696f6e732e6973506f776572"></span><dl class="simple" id="index-3">
+<span class="target" id="l506f6c796e6f6d69616c43617465676f727951756f7469656e7446756e6374696f6e73-6973506f776572"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">isPower</span>: F -&gt; Union(Record(val: F, exponent: <a class="reference internal" href="Integer.html#l496e7465676572"><span class="std std-ref">Integer</span></a>), failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">isPower(p)</span></code> returns <code class="docutils literal notranslate"><span class="pre">[x,</span> <span class="pre">n]</span></code> if <code class="docutils literal notranslate"><span class="pre">p</span> <span class="pre">=</span> <span class="pre">x^n</span></code> and <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">~=</span> <span class="pre">0</span></code>, “failed” otherwise.</p>
 </dd>
 </dl>
-<span class="target" id="l506f6c796e6f6d69616c43617465676f727951756f7469656e7446756e6374696f6e732e697354696d6573"></span><dl class="simple" id="index-4">
+<span class="target" id="l506f6c796e6f6d69616c43617465676f727951756f7469656e7446756e6374696f6e73-697354696d6573"></span><dl class="simple" id="index-4">
 <dt><span class="spadfun">isTimes</span>: F -&gt; Union(<a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> F, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">isTimes(p)</span></code> returns <code class="docutils literal notranslate"><span class="pre">[a1,</span> <span class="pre">...,</span> <span class="pre">an]</span></code> if <code class="docutils literal notranslate"><span class="pre">p</span> <span class="pre">=</span> <span class="pre">a1</span> <span class="pre">...</span> <span class="pre">an</span></code> and <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;</span> <span class="pre">1</span></code>, “failed” otherwise.</p>
 </dd>
 </dl>
-<span class="target" id="l506f6c796e6f6d69616c43617465676f727951756f7469656e7446756e6374696f6e732e6d61696e5661726961626c65"></span><dl class="simple" id="index-5">
+<span class="target" id="l506f6c796e6f6d69616c43617465676f727951756f7469656e7446756e6374696f6e73-6d61696e5661726961626c65"></span><dl class="simple" id="index-5">
 <dt><span class="spadfun">mainVariable</span>: F -&gt; Union(V, failed)</dt><dd><p><code class="docutils literal notranslate"><span class="pre">mainVariable(f)</span></code> returns the highest variable appearing in the numerator or the denominator of <code class="docutils literal notranslate"><span class="pre">f</span></code>, “failed” if <code class="docutils literal notranslate"><span class="pre">f</span></code> has no variables.</p>
 </dd>
 </dl>
-<span class="target" id="l506f6c796e6f6d69616c43617465676f727951756f7469656e7446756e6374696f6e732e6d756c746976617269617465"></span><dl class="simple" id="index-6">
+<span class="target" id="l506f6c796e6f6d69616c43617465676f727951756f7469656e7446756e6374696f6e73-6d756c746976617269617465"></span><dl class="simple" id="index-6">
 <dt><span class="spadfun">multivariate</span>: (<a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> F, V) -&gt; F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">multivariate(f,</span> <span class="pre">v)</span></code> applies both the numerator and denominator of <code class="docutils literal notranslate"><span class="pre">f</span></code> to <code class="docutils literal notranslate"><span class="pre">v</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l506f6c796e6f6d69616c43617465676f727951756f7469656e7446756e6374696f6e732e756e6976617269617465"></span><dl class="simple" id="index-7">
+<span class="target" id="l506f6c796e6f6d69616c43617465676f727951756f7469656e7446756e6374696f6e73-756e6976617269617465"></span><dl class="simple" id="index-7">
 <dt><span class="spadfun">univariate</span>: (F, V) -&gt; <a class="reference internal" href="Fraction.html#l4672616374696f6e"><span class="std std-ref">Fraction</span></a> <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">univariate(f,</span> <span class="pre">v)</span></code> returns <code class="docutils literal notranslate"><span class="pre">f</span></code> viewed as a univariate rational function in <code class="docutils literal notranslate"><span class="pre">v</span></code>.</p>
 </dd>
 </dl>
@@ -94,7 +94,7 @@
 <dt><span class="spadfun">univariate</span>: (F, V, <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> F) -&gt; <a class="reference internal" href="SparseUnivariatePolynomial.html#l537061727365556e6976617269617465506f6c796e6f6d69616c"><span class="std std-ref">SparseUnivariatePolynomial</span></a> F</dt><dd><p><code class="docutils literal notranslate"><span class="pre">univariate(f,</span> <span class="pre">x,</span> <span class="pre">p)</span></code> returns <code class="docutils literal notranslate"><span class="pre">f</span></code> viewed as a univariate polynomial in <code class="docutils literal notranslate"><span class="pre">x</span></code>, using the side-condition <code class="docutils literal notranslate"><span class="pre">p(x)</span> <span class="pre">=</span> <span class="pre">0</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l506f6c796e6f6d69616c43617465676f727951756f7469656e7446756e6374696f6e732e7661726961626c6573"></span><dl class="simple" id="index-9">
+<span class="target" id="l506f6c796e6f6d69616c43617465676f727951756f7469656e7446756e6374696f6e73-7661726961626c6573"></span><dl class="simple" id="index-9">
 <dt><span class="spadfun">variables</span>: F -&gt; <a class="reference internal" href="List.html#l4c697374"><span class="std std-ref">List</span></a> V</dt><dd><p><code class="docutils literal notranslate"><span class="pre">variables(f)</span></code> returns the list of variables appearing in the numerator or the denominator of <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
 </dd>
 </dl>

@@ -47,28 +47,28 @@
             
   <div class="section" id="mappingpackage1-a">
 <span id="l4d617070696e675061636b61676531"></span><span id="index-0"></span><h1>MappingPackage1 A<a class="headerlink" href="#mappingpackage1-a" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/hemmecke/fricas/blob/formatted/src/algebra/mappkg.spad#L58">mappkg.spad line 58</a> <a class="reference external" href="https://github.com/hemmecke/fricas/edit/formatted/src/algebra/mappkg.spad#L58">[edit on github]</a></p>
+<p><a class="reference external" href="https://github.com/fricas/fricas/blob/master/src/algebra/mappkg.spad#L58">mappkg.spad line 58</a> <a class="reference external" href="https://github.com/fricas/fricas/edit/master/src/algebra/mappkg.spad#L58">[edit on github]</a></p>
 <ul class="simple">
 <li><p>A: <a class="reference internal" href="SetCategory.html#l53657443617465676f7279"><span class="std std-ref">SetCategory</span></a></p></li>
 </ul>
 <p>various Currying operations.</p>
-<span class="target" id="l4d617070696e675061636b616765312e5e"></span><dl class="simple" id="index-1">
+<span class="target" id="l4d617070696e675061636b61676531-5e"></span><dl class="simple" id="index-1">
 <dt><span class="spadfun">^</span>: (A -&gt; A, <a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>) -&gt; A -&gt; A</dt><dd><p><code class="docutils literal notranslate"><span class="pre">f^n</span></code> is the function which is the <code class="docutils literal notranslate"><span class="pre">n</span></code>-fold application of <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l4d617070696e675061636b616765312e636f65726365"></span><dl class="simple" id="index-2">
+<span class="target" id="l4d617070696e675061636b61676531-636f65726365"></span><dl class="simple" id="index-2">
 <dt><span class="spadfun">coerce</span>: A -&gt; () -&gt; A</dt><dd><p><code class="docutils literal notranslate"><span class="pre">coerce</span> <span class="pre">A</span></code> changes its argument into a nullary function.</p>
 </dd>
 </dl>
-<span class="target" id="l4d617070696e675061636b616765312e6964"></span><dl class="simple" id="index-3">
+<span class="target" id="l4d617070696e675061636b61676531-6964"></span><dl class="simple" id="index-3">
 <dt><span class="spadfun">id</span>: A -&gt; A</dt><dd><p><code class="docutils literal notranslate"><span class="pre">id</span> <span class="pre">x</span></code> is <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
 </dd>
 </dl>
-<span class="target" id="l4d617070696e675061636b616765312e6e756c6c617279"></span><dl class="simple" id="index-4">
+<span class="target" id="l4d617070696e675061636b61676531-6e756c6c617279"></span><dl class="simple" id="index-4">
 <dt><span class="spadfun">nullary</span>: A -&gt; () -&gt; A</dt><dd><p><code class="docutils literal notranslate"><span class="pre">nullary</span> <span class="pre">A</span></code> changes its argument into a nullary function.</p>
 </dd>
 </dl>
-<span class="target" id="l4d617070696e675061636b616765312e7265637572"></span><dl class="simple" id="index-5">
+<span class="target" id="l4d617070696e675061636b61676531-7265637572"></span><dl class="simple" id="index-5">
 <dt><span class="spadfun">recur</span>: ((<a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, A) -&gt; A) -&gt; (<a class="reference internal" href="NonNegativeInteger.html#l4e6f6e4e65676174697665496e7465676572"><span class="std std-ref">NonNegativeInteger</span></a>, A) -&gt; A</dt><dd><p><code class="docutils literal notranslate"><span class="pre">recur(g)</span></code> is the function <code class="docutils literal notranslate"><span class="pre">h</span></code> such that <code class="docutils literal notranslate"><span class="pre">h(n,</span> <span class="pre">x)=</span> <span class="pre">g(n,</span> <span class="pre">g(n-1,</span> <span class="pre">..g(1,</span> <span class="pre">x)..))</span></code>.</p>
 </dd>
 </dl>
