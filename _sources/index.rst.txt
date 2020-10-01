@@ -22,7 +22,9 @@ computer algebra system.
    api/index
    features
    download
+   install
    help
+   faq
    examples
    contribute
    citation
