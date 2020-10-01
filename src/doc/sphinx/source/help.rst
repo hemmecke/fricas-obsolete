@@ -26,7 +26,7 @@ is also help available locally. You can generate a local copy of the
    ./configure
    make
    cd src/doc
-   make localhtml
+   make localdoc
    firefox html/index.html
 
 ..
