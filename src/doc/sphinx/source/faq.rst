@@ -137,7 +137,21 @@ you may have to manually run
    xrdb ~/.Xresources
 
 
+Why does FriCAS behave differently after loading new code?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+When FriCAS loads new code, current variables become invalid.
+This happens when you use
+::
+
+   )lib SOMELIB
+
+or automatically when you compile a file via
+::
+
+   )compile foo.spad
+
+You have to load and compile code before you start your computation.
 
 
 
