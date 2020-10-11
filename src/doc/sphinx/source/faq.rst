@@ -134,7 +134,32 @@ They should take effect the next time you log in. If not
 you may have to manually run
 ::
 
-   xrdb ~/.Xresources
+   xrdb -m ~/.Xresources
+
+If you work with a 4K-display and want to make the font bigger, you
+can add the following to your ``.Xresources`` file.
+::
+
+   FriCAS.hyperdoc.Geometry: =1500x800+0+0
+   FriCAS.hyperdoc.RmFont: -adobe-courier-bold-r-*-*-34-*-*-*-*-*-*-*
+   FriCAS.hyperdoc.RmColor: black
+   FriCAS.hyperdoc.ActiveFont: -adobe-courier-bold-r-*-*-34-*-*-*-*-*-*-*
+   FriCAS.hyperdoc.ActiveColor: blue
+   FriCAS.hyperdoc.FriCASFont: -adobe-courier-bold-r-*-*-34-*-*-*-*-*-*-*
+   FriCAS.hyperdoc.FriCASColor: #008000
+   FriCAS.hyperdoc.BoldFont: -adobe-courier-bold-r-*-*-34-*-*-*-*-*-*-*
+   FriCAS.hyperdoc.BoldColor: red
+   FriCAS.hyperdoc.TtFont: -adobe-courier-bold-r-*-*-34-*-*-*-*-*-*-*
+   FriCAS.hyperdoc.TtColor: black
+   FriCAS.hyperdoc.EmphasizeFont: -adobe-courier-bold-r-*-*-34-*-*-*-*-*-*-*
+   FriCAS.hyperdoc.EmphasizeColor: #800080
+   FriCAS.hyperdoc.InputBackground: #FFFF80
+   FriCAS.hyperdoc.InputForeground: black
+   FriCAS.hyperdoc.BorderColor: black
+   FriCAS.hyperdoc.Background: white
+
+Of course, you might want to choose other fonts that are available on
+your computer. Use ``xfontsel`` to find out.
 
 
 Why does FriCAS behave differently after loading new code?
