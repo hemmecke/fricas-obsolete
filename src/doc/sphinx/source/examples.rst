@@ -11,6 +11,9 @@ Examples
   * `Type
     <https:github.com/fricas/fricas-notebooks/FriCAS-demos/FriCAS-Types.ipynb`_
 
+* `Status of Implementation of Risch's Integration algorithm
+  <http://fricas-wiki.math.uni.wroc.pl/RischImplementationStatus>`_
+
 * `Integration
   <http://axiom-wiki.newsynthesis.org/FriCASIntegration>`_
 
