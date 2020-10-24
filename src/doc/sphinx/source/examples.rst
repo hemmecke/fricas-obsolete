@@ -49,3 +49,5 @@ Examples
 
 * `Tensor Products
   <http://fricas-wiki.math.uni.wroc.pl/SandBoxTensorAlgebra2>`_
+
+* Laurent polynomials (see jfricas-notebooks/FriCAS-LaurentPolynomial)
