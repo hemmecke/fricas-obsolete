@@ -7,9 +7,6 @@ Installation Guide
 TODO
 ----
 
-* Assume all prerequisites are installed
-* Describe normal buld
-* Documentation (book.pdf) and sphinx
 * Aldor lib compilation
 
 
@@ -281,6 +278,72 @@ namely sbcl, clisp, ecl, gcl and Clozure CL (openmcl). Note: the
 argument is just a command to invoke the respective Lisp variant.
 Build machinery will automatically detect which Lisp is in use and
 adjust as needed.
+
+
+
+Documentation
+-------------
+
+After a build of FriCAS, (suppose your build directory is under
+``$BUILD``), the |home page| can be built via
+::
+
+   cd $BUILD/src/doc
+   make doc
+
+This builds the full content of the |home_page| including the
+|PACKAGE_BOOK| (also know as the FriCAS User Guide) into the directory
+``src/doc/html`` from which it can be committed to the ``gh-pages``
+branch of the official |git repository|.
+
+Most links also work fine if you start
+::
+
+   firefox src/doc/html/index.html
+
+but some links point to the web. If you want the links referring only
+to the data on your computer, you call the compilation like this
+::
+
+   cd src/doc
+   make localdoc
+
+For even more control, you can set various variables (see
+``src/doc/Makefile.in``) in the |git repository|. For example, if you
+like to push to your forked FriCAS repository and refer to branch
+``foo`` instead of ``master`` then do as follows.
+::
+
+   make PACKAGE_SOURCE=https://github.com/hemmecke/fricas \
+        BRANCH=foo \
+        PACKAGE_URL=https://hemmecke.github.io/fricas \
+        PACKAGE_VERSION=$(git log -1 --pretty=%H) \
+        doc
+
+or use a version identifier like
+::
+
+   PACKAGE_VERSION="1.3.6+ `date +'%Y-%m-%d %H:%M'`"
+
+Then, if you do not yet have it, create a ``gh-pages`` branch like and
+put the data from ``$BUILD?src/doc/html`` into your ``gh-pages``
+branch.
+::
+
+   git clone git@github.com:hemmecke/fricas.git
+   git checkout --orphan gh-pages
+   git rm -rf .
+   rm '.gitignore'
+   echo 'https://help.github.com/articles/using-jekyll-with-pages' > .nojekyll
+   cp -a $BUILD/src/doc/html/* .
+   rm -r _sources/api/
+   git add .
+   git commit -m "$PACKAGE_VERSION"
+   git push origin gh-pages
+
+Of course, leave out the ``--orphan`` switch, if you already have an
+appropriate ``gh-pages`` branch.
+
 
 
 Known problems
