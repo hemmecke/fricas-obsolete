@@ -30,7 +30,7 @@ should work. The above will install FriCAS files in
 to change those locations.
 
 *NOTE!!* If you run the above command from a ``git`` checkout of the
-FriCAS_ repository (minimal version) and ``configure`` has not
+|git repository| (minimal version) and ``configure`` has not
 detected ``xvfb-run``, the above will install broken HyperDoc pages --
 all graphic examples will be missing (and trying to access them will
 crash hypertex).
@@ -164,7 +164,8 @@ above).
 
       ./configure --with-lisp=/path/to/your/lisp --prefix=/tmp/usr
 
-   where /path/to/your/lisp is name of your Lisp. For example, type
+   where ``/path/to/your/lisp`` is name of your Lisp. For example,
+   type
    ::
 
      ./configure --with-lisp="sbcl --dynamic-space-size 4096" --prefix=/tmp/usr --enable-gmp
@@ -177,7 +178,8 @@ above).
       make
       make install
 
-If you want graphic examples read the note above.
+If you want graphic examples read the note above under `Quick
+Installation`_.
 
 
 
@@ -270,24 +272,25 @@ sbcl the following should just work::
   $HOME/fricas/configure --with-lisp=sbcl && make && make install
 
 Alternatively, if you use gcl you can just put gcl sources as a
-subdirectory (called gcl) of fricas directory -- in this case the
+subdirectory (called gcl) of the fricas directory -- in this case the
 build process should automatically build gcl and later use the freshly
 build gcl.
 
 Currently ``--with-lisp`` option accepts all supported lisp variants,
 namely sbcl, clisp, ecl, gcl and Clozure CL (openmcl). Note: the
-argument is just a command to invoke chosen the respective Lisp
-variant. Build machinery will automatically detect which Lisp is in
-use and adjust as needed.
+argument is just a command to invoke the respective Lisp variant.
+Build machinery will automatically detect which Lisp is in use and
+adjust as needed.
 
 
 Known problems
 --------------
 
 - currently on when using case insensitive filesystem (typically on
-  Mac OSX and Windows) svn version can be only build in separate
-  directory (in-tree build will fail). This does not affect release
-  tarball.
+  Mac OSX and Windows), the git version can be only build in a
+  separate directory (in-tree build will fail). This does not affect
+  release tarball.
+
 - by default sbcl 1.0.54 and newer limits memory use to 1GB, which is
   too small for heavy use. To work around this one can pass
   ``--dynamic-space-size`` argument during sbcl build to increase
@@ -298,7 +301,7 @@ Known problems
 
 - on some systems (notably MAC OSX) when using sbcl default limit of
   open files may be too low. To workaround increase limit (experiments
-  suggest that 512 open files is enough). This should be not needed in
+  suggest that 512 open files is enough). This should not be needed in
   FriCAS 1.1.7.
 
 - sbcl from 1.3.1 to 1.3.4 runs out of memory when compiling FriCAS.
@@ -316,7 +319,7 @@ Known problems
 - in sbcl 1.0.35 and up Control-C handling did not work. This should
   be fixed in current FriCAS.
 
-- Some Linux versions, notably SuSe, by default seem to have very
+- Some Linux versions, notably SuSE, by default seem to have very
   small limit on virtual memory. This causes build failure when using
   sbcl or Clozure CL. Also if limit on virtual memory is too small
   sbcl-based or Clozure CL-based FriCAS binary will silently fail at
@@ -326,7 +329,7 @@ Known problems
 
     ulimit -v unlimited
 
-  Alternatively for sbcl one can use `--dynamic-space-size` argument
+  Alternatively for sbcl one can use ``--dynamic-space-size`` argument
   to decrease use of virtual memory.
 
 - older gcl had serious problems on Macs and Windows.
@@ -407,5 +410,3 @@ Known problems
 - On new Linux kernel build using Clisp may take very long time. This
   is caused by frequent calls to 'fsync' performed without need by
   Clisp.
-
-.. _FriCAS: https://fricas.github.io
