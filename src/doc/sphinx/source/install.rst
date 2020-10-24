@@ -291,7 +291,7 @@ After a build of FriCAS, (suppose your build directory is under
    cd $BUILD/src/doc
    make doc
 
-This builds the full content of the |home_page| including the
+This builds the full content of the |home page| including the
 |PACKAGE_BOOK| (also know as the FriCAS User Guide) into the directory
 ``src/doc/html`` from which it can be committed to the ``gh-pages``
 branch of the official |git repository|.
