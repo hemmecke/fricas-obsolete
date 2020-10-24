@@ -311,18 +311,21 @@ to the data on your computer, you call the compilation like this
 For even more control, you can set various variables (see
 ``src/doc/Makefile.in``) in the |git repository|. For example, if you
 like to push to your forked FriCAS repository and refer to branch
-``foo`` instead of ``master`` then do as follows.
+``foo`` instead of ``master`` then do as follows (replace ``hemmecke``
+by your account name).
 ::
 
    make PACKAGE_SOURCE=https://github.com/hemmecke/fricas \
         BRANCH=foo \
         PACKAGE_URL=https://hemmecke.github.io/fricas \
-        PACKAGE_VERSION=$(git log -1 --pretty=%H) \
         doc
 
-or use a version identifier like
+If you want to change the version information provided by default
+through ``configure.ac``, you can add a line like this to the above
+command.
 ::
 
+   PACKAGE_VERSION=$(git log -1 --pretty=%H) \
    PACKAGE_VERSION="1.3.6+ `date +'%Y-%m-%d %H:%M'`"
 
 Then, if you do not yet have it, create a ``gh-pages`` branch like and
