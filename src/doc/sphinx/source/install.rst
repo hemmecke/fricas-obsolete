@@ -19,6 +19,159 @@ should work. The above will install FriCAS files in
 ``/usr/local/bin`` directory, you can give arguments to ``configure``
 to change those locations.
 
+
+
+Detailed Installations Instructions
+-----------------------------------
+
+We assume that you have installed all necessary prerequisittes (see
+below).
+
+0) Change to a directory with enough (0.8 GB) free space
+
+1) Fetch sources
+   ::
+
+      git clone https://github.com/fricas/fricas
+      cd fricas
+
+2) Configure.  Assuming that you want fricas files to be installed in
+   ``//tmp/usr``.
+   ::
+
+      ./configure --with-lisp=/path/to/your/lisp --prefix=/tmp/usr
+
+   where ``/path/to/your/lisp`` is name of your Lisp. For example,
+   type
+   ::
+
+     ./configure --with-lisp="sbcl --dynamic-space-size 4096" --prefix=/tmp/usr --enable-gmp --enable-aldor
+
+   to build with SBCL and 4 GiB dynamic space, use GMP, and enable the
+   build of the Aldor library ``libfricas.al``.
+
+4) Build and install
+   ::
+
+      make
+      make install
+
+If you want graphic examples read the note above under `Quick
+Installation`_.
+
+
+
+Prerequisites
+-------------
+
+Lisp
+^^^^
+
+To *build* FriCAS you need *one* of the following Lisp variants:
+
+* SBCL_ 1.0.7 or later (preferred)
+* `Clozure CL`_ (former openmcl), starting from openmcl 1.1 prerelease
+  070512
+* ECL_ 0.9l or later
+* CLISP_ 2.41 or later
+* CMUCL_
+* GCL_ version 2.6.8 works OK.
+
+  If you want to try development version of GCL from git note that
+  main branch currently is very unstable and can not build FriCAS.
+
+  In the past in case of build problems the following configure line
+  was helpful
+  ::
+
+     ./configure --disable-xgcl --disable-dynsysbfd --disable-statsysbfd --enable-locbfd
+
+
+All Lisp implementations should give essentially the same
+functionality, however performance (speed) may differ quite a lot. ATM
+CMU CL port should be considered experimental, it received only little
+testing. Also CMU CL seem to have problems on some machines. By
+default FriCAS tries to use SBCL, since it is fast and reliable. On
+64-bit AMD64 on average SBCL is the fastest one (9 times faster than
+CLISP), Clozure CL the second (about 1.5 times slower than SBCL), than
+GCL and ECL (about 3 times slower than SBCL) and CLISP is the slowest
+one. Note: older versions of ECL were much (about 4 times) slower, you
+should use newest version if you care about speed.
+
+Some computation work much faster on 64-bit machines, especially
+when using SBCL.
+
+
+X libraries and headers
+^^^^^^^^^^^^^^^^^^^^^^^
+
+On Debian (or Ubuntu) install the following packages.
+::
+
+   sudo apt install libx11-dev libxt-dev libice-dev \
+                    libsm-dev libxau-dev libxdmcp-dev libxpm-dev
+
+
+GMP (optional)
+^^^^^^^^^^^^^^
+
+You you use SBCL or Clozure CL the ``--enable-gmp`` configure option
+is available only if the development version of GMP is installed.
+Note: using GMP should work on all SBCL and Clozure CL platforms
+except for Clozure CL on Power PC.
+::
+
+   sudo apt install libgmp3-dev
+
+
+LaTeX (optional)
+^^^^^^^^^^^^^^^^
+
+If you run FriCAS in Emacs_ (efricas) you can enable
+::
+
+   )set output tex on
+
+to show rendered TeX output. For that to work, you need the following.
+::
+
+     sudo apt install texlive auctex dvipng
+
+In order to build the FriCAS User Guide (book.pdf), you also need the
+following LaTeX packages (which are all available from CTAN_
+::
+
+   amsmath
+   breqn
+   tensor
+   mleftright
+   epsf
+   verbatim
+   hyperref
+   color
+   listings
+   makeidx
+   xparse
+   tikz
+
+
+* Extra libraries needed by gcl.  If you use Debian gcl you probably
+  install the following packages.
+  ::
+
+     sudo apt install libreadline5-dev libncurses5-dev libgmp3-dev \
+                      libxmu-dev and libxaw7-dev
+
+* For ECL you probably need libffi-dev.
+  ::
+
+     sudo apt install libffi-dev
+
+
+
+HyperDoc and Graphics
+---------------------
+
 *NOTE!!* If you run the above command from a ``git`` checkout of the
 |git repository| (minimal version) and ``configure`` has not
 detected ``xvfb-run``, the above will install broken HyperDoc pages --
@@ -46,131 +199,6 @@ viewports`` above by
 ::
 
    xvfb-run -a -n 0 -s '-screen 0 1024x768x24' make viewports
-
-
-Prerequisites
--------------
-
-* To build FriCAS you need to install Lisp first. You need *one* of
-  the following:
-
-  * sbcl, 1.0.7 or later (preferred)
-
-    http://sbcl.sourceforge.net/platform-table.html
-
-  * Clozure CL (former openmcl), starting from openmcl 1.1 prerelease
-    070512
-
-    http://ccl.clozure.com/manual/chapter2.2.html#id357702
-    ftp://ftp.clozure.com/pub/release/
-
-  * ECL, 0.9l or later (we recommend latest version)
-
-    http://ecls.sourceforge.net
-
-  * gcl, version 2.6.8 works OK. If you want to try development version
-    from git note that main branch currently is very unstable and can
-    not build FriCAS.
-
-    In the past in case of build problems the following configure line
-    was helpful::
-
-        ./configure --disable-xgcl --disable-dynsysbfd --disable-statsysbfd --enable-locbfd
-
-  * clisp, 2.41 or later
-
-    http://clisp.cons.org
-
-  * cmucl
-
-  All Lisp implementations should give essentially the same
-  functionality, however performance (speed) may differ quite a lot.
-  ATM CMU CL port should be considered experimental, it received only
-  little testing. Also CMU CL seem to have problems on some machines.
-  By default FriCAS tries to use sbcl, since it is fast and reliable.
-  On 64-bit AMD64 on average sbcl is the fastest one (9 times faster
-  than clisp), Clozure CL the second (about 1.5 times slower than
-  sbcl), than gcl and ECL (about 3 times slower than sbcl) and clisp
-  is the slowest one. Note: older versions of ECL were much (about 4
-  times) slower, you should use newest version if you care about
-  speed.
-
-  Some computation work much faster on 64-bit machines, especially
-  when using sbcl.
-
-* X libraries and headers (including Xpm library).
-
-  On Debian (or Ubuntu) install the following packages.
-  ::
-
-     sudo apt install libx11-dev libxt-dev libice-dev \
-                      libsm-dev libxau-dev libxdmcp-dev libxpm-dev
-
-* If using sbcl or Clozure CL the ``--enable-gmp`` option is available
-  only if the development version of GMP is installed. Note: using GMP
-  should work on all sbcl and Clozure CL platforms except for Clozure
-  CL on Power PC.
-  ::
-
-     sudo apt install libgmp3-dev
-
-* Extra libraries needed to have LaTeXed output (ASCII output works
-  fine without) in efricas.
-  ::
-
-     sudo apt install dvipng auctex
-
-* Extra libraries needed by gcl.  If you use Debian gcl you probably
-  install the following packages.
-  ::
-
-     sudo apt install libreadline5-dev libncurses5-dev libgmp3-dev \
-                      libxmu-dev and libxaw7-dev
-
-* For ECL you probably need libffi-dev.
-  ::
-
-     sudo apt install libffi-dev
-
-
-
-Step by step instructions for first time users
-----------------------------------------------
-
-We assume that you have installed all necessary prerequisittes (see
-above).
-
-0) Change to a directory with enough (0.8 GB) free space
-
-1) Fetch sources
-   ::
-
-      git clone https://github.com/fricas/fricas
-      cd fricas
-
-2) Configure.  Assuming that you want fricas files to be installed in
-   ``//tmp/usr``.
-   ::
-
-      ./configure --with-lisp=/path/to/your/lisp --prefix=/tmp/usr
-
-   where ``/path/to/your/lisp`` is name of your Lisp. For example,
-   type
-   ::
-
-     ./configure --with-lisp="sbcl --dynamic-space-size 4096" --prefix=/tmp/usr --enable-gmp
-
-   to build with sbcl and 4 GiB dynamic space and use of gmp enabled.
-
-4) Build and install
-   ::
-
-      make
-      make install
-
-If you want graphic examples read the note above under `Quick
-Installation`_.
-
 
 
 Algebra optimization
@@ -252,11 +280,12 @@ These options also implicitly set ``--enable-gmp``. However, if
 Extra information about installation
 ------------------------------------
 
-The preferred way to build FriCAS is to use already installed Lisp.
+The preferred way to build FriCAS is to use an already installed Lisp.
 Also, it is preferable to use a separate build directory. Assuming
 that source tree is in ``$HOME/fricas``, you build in
 ``$HOME/fricas-build`` subdirectory and your Lisp is called
-sbcl the following should just work::
+sbcl the following should just work.
+::
 
   cd $HOME/fricas-build
   $HOME/fricas/configure --with-lisp=sbcl && make && make install
@@ -518,3 +547,10 @@ Known problems
 
 
 .. _Aldor: https://github.com/pippijn/aldor
+.. _CTAN: https://www.ctan.org/
+.. _SBCL: http://sbcl.sourceforge.net/platform-table.html
+.. _ECL: http://ecls.sourceforge.net
+.. _CLISP: http://clisp.cons.org
+.. _CMUCL: https://www.cons.org/cmucl/
+.. _GCL: https://www.gnu.org/software/gcl
+.. _Clozure CL: http://ccl.clozure.com/manual/chapter2.2.html
