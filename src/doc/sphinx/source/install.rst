@@ -4,13 +4,6 @@ Installation Guide
 .. contents:: Table of Contents
    :local:
 
-TODO
-----
-
-* Aldor lib compilation
-
-
-
 
 
 Quick installation
@@ -321,11 +314,11 @@ by your account name).
         doc
 
 If you want to change the version information provided by default
-through ``configure.ac``, you can add a line like this to the above
-command.
+through ``configure.ac``, you can add a variable assignment like this
+to the above command.
 ::
 
-   PACKAGE_VERSION=$(git log -1 --pretty=%H) \
+   PACKAGE_VERSION=$(git log -1 --pretty=%H)
    PACKAGE_VERSION="1.3.6+ `date +'%Y-%m-%d %H:%M'`"
 
 Then, if you do not yet have it, create a ``gh-pages`` branch like and
@@ -346,6 +339,52 @@ branch.
 
 Of course, leave out the ``--orphan`` switch, if you already have an
 appropriate ``gh-pages`` branch.
+
+
+
+Aldor library libfricas.al
+--------------------------
+
+You cannot only extend the FriCAS library by ``.spad`` files (SPAD
+programs), but also by ``.as`` files (Aldor_ programs). For the latter
+to work FriCAS needs a library ``libfricas.al``.
+
+This library can be build as follows.
+(An Aldor compiler is of course a prerequisite.)
+::
+
+   configure --enable-aldor
+   ( cd src/aldor &&  make )
+   make install
+
+After that you should be able to compile and use the program below in
+a FriCAS session via ::
+
+   )compile sieve.as
+   sieve 10
+
+The program ``sieve.as`` is::
+
+  --
+  -- sieve.as: A prime number sieve to count primes <= n.
+  --
+  #include "fricas"
+
+  N ==> NonNegativeInteger;
+  import from Boolean, N, Integer;
+
+  sieve(n: N): N  == {
+      isprime: PrimitiveArray Boolean := new(n+1, true);
+      np: N := 0;
+      two: N := 2;
+      for p in two..n | isprime(p::Integer) repeat {
+          np := np + 1;
+          for i in two*p..n by p::Integer repeat {
+              isprime(i::Integer) := false;
+          }
+      }
+      np
+  }
 
 
 
@@ -476,3 +515,6 @@ Known problems
 - On new Linux kernel build using Clisp may take very long time. This
   is caused by frequent calls to 'fsync' performed without need by
   Clisp.
+
+
+.. _Aldor: https://github.com/pippijn/aldor
