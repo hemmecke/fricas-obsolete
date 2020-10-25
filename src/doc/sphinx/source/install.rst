@@ -21,48 +21,9 @@ to change those locations.
 
 
 
-Detailed Installations Instructions
------------------------------------
-
-We assume that you have installed all necessary prerequisittes (see
-below).
-
-0) Change to a directory with enough (0.8 GB) free space
-
-1) Fetch sources
-   ::
-
-      git clone https://github.com/fricas/fricas
-      cd fricas
-
-2) Configure.  Assuming that you want fricas files to be installed in
-   ``//tmp/usr``.
-   ::
-
-      ./configure --with-lisp=/path/to/your/lisp --prefix=/tmp/usr
-
-   where ``/path/to/your/lisp`` is name of your Lisp. For example,
-   type
-   ::
-
-     ./configure --with-lisp="sbcl --dynamic-space-size 4096" --prefix=/tmp/usr --enable-gmp --enable-aldor
-
-   to build with SBCL and 4 GiB dynamic space, use GMP, and enable the
-   build of the Aldor library ``libfricas.al``.
-
-4) Build and install
-   ::
-
-      make
-      make install
-
-If you want graphic examples read the note above under `Quick
-Installation`_.
-
-
-
 Prerequisites
 -------------
+
 
 Lisp
 ^^^^
@@ -102,8 +63,8 @@ Some computation work much faster on 64-bit machines, especially
 when using SBCL.
 
 
-X libraries and headers
-^^^^^^^^^^^^^^^^^^^^^^^
+X libraries (optional, but needed for graphics and HyperDoc)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 On Debian (or Ubuntu) install the following packages.
 ::
@@ -138,7 +99,7 @@ to show rendered TeX output. For that to work, you need the following.
      sudo apt install texlive auctex dvipng
 
 In order to build the FriCAS User Guide (book.pdf), you also need the
-following LaTeX packages (which are all available from CTAN_
+following LaTeX packages (which are all available from CTAN_).
 ::
 
    amsmath
@@ -155,22 +116,74 @@ following LaTeX packages (which are all available from CTAN_
    tikz
 
 
-* Extra libraries needed by gcl.  If you use Debian gcl you probably
-  install the following packages.
-  ::
+Aldor (optional)
+^^^^^^^^^^^^^^^^
 
-     sudo apt install libreadline5-dev libncurses5-dev libgmp3-dev \
-                      libxmu-dev and libxaw7-dev
+If you want to use Aldor_ to extend the FriCAS library, you must, of
+course, hava Aldor_ installed, and add ``--enable-aldor`` to your
+configure options when you compile FriCAS.
 
-* For ECL you probably need libffi-dev.
-  ::
+
+Extra libraries needed by GCL
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This only applies if you use Debian GCL.
+::
+
+   sudo apt install libreadline5-dev libncurses5-dev libgmp3-dev \
+                    libxmu-dev and libxaw7-dev
+
+Extra libraries needed by ECL
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Is you want to use ECL, install ``libffi-dev``.
+::
 
      sudo apt install libffi-dev
 
 
+Detailed installations instructions
+-----------------------------------
+
+We assume that you have installed all necessary prerequisittes (see
+below).
+
+0) Change to a directory with enough (0.8 GB) free space
+
+1) Fetch sources
+   ::
+
+      git clone https://github.com/fricas/fricas
+      cd fricas
+
+2) Configure.  Assuming that you want fricas files to be installed in
+   ``//tmp/usr``.
+   ::
+
+      ./configure --with-lisp=/path/to/your/lisp --prefix=/tmp/usr
+
+   where ``/path/to/your/lisp`` is name of your Lisp. For example,
+   type
+   ::
+
+     ./configure --with-lisp="sbcl --dynamic-space-size 4096" --prefix=/tmp/usr --enable-gmp --enable-aldor
+
+   to build with SBCL and 4 GiB dynamic space, use GMP, and enable the
+   build of the Aldor library ``libfricas.al``.
+
+4) Build and install
+   ::
+
+      make
+      make install
+
+If you want graphic examples read the note above under `Quick
+Installation`_.
+
+
 
 HyperDoc and Graphics
----------------------
+^^^^^^^^^^^^^^^^^^^^^
 
 *NOTE!!* If you run the above command from a ``git`` checkout of the
 |git repository| (minimal version) and ``configure`` has not
@@ -202,7 +215,7 @@ viewports`` above by
 
 
 Algebra optimization
---------------------
+^^^^^^^^^^^^^^^^^^^^
 
 When writing/compiling programs there is always tradeoff between speed
 and safety. Program may include many checks to detect errors early
@@ -242,7 +255,7 @@ the whole system.
 
 
 Using GMP with sbcl or Clozure CL
----------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Currently on average FriCAS is fastest when compiled using sbcl.
 However, sbcl normally uses its own routines for computations with
@@ -277,8 +290,8 @@ These options also implicitly set ``--enable-gmp``. However, if
 
 
 
-Extra information about installation
-------------------------------------
+Extra information
+^^^^^^^^^^^^^^^^^
 
 The preferred way to build FriCAS is to use an already installed Lisp.
 Also, it is preferable to use a separate build directory. Assuming
@@ -303,8 +316,8 @@ adjust as needed.
 
 
 
-Documentation
--------------
+Building documentation
+^^^^^^^^^^^^^^^^^^^^^^
 
 After a build of FriCAS, (suppose your build directory is under
 ``$BUILD``), the |home page| can be built via
