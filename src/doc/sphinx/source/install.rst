@@ -73,6 +73,17 @@ On Debian (or Ubuntu) install the following packages.
                     libsm-dev libxau-dev libxdmcp-dev libxpm-dev
 
 
+xvfb (optional, but highly recommended)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If you compile FriCAS from the |git repository|, and ``configure``
+does not detect the ``xvfb-run`` program, then graphic examples will
+not be built.
+::
+
+   sudo apt install xvfb
+
+
 GMP (optional)
 ^^^^^^^^^^^^^^
 
@@ -116,6 +127,16 @@ following LaTeX packages (which are all available from CTAN_).
    tikz
 
 
+SphinxDoc (optional)
+^^^^^^^^^^^^^^^^^^^^
+
+The documentation is built via Sphinx_.
+::
+
+   sudo apt install python3 python3-pip
+   pip3 install -U Sphinx
+
+
 Aldor (optional)
 ^^^^^^^^^^^^^^^^
 
@@ -136,27 +157,27 @@ This only applies if you use Debian GCL.
 Extra libraries needed by ECL
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Is you want to use ECL, install ``libffi-dev``.
+This only applies if you use Debian ECL.
 ::
 
      sudo apt install libffi-dev
 
 
+
 Detailed installations instructions
 -----------------------------------
 
-We assume that you have installed all necessary prerequisittes (see
-below).
+We assume that you have installed all necessary prerequisittes.
 
-0) Change to a directory with enough (0.8 GB) free space
+1. Change to a directory with enough (0.8 GB) free space
 
-1) Fetch sources
+2. Fetch sources
    ::
 
       git clone https://github.com/fricas/fricas
       cd fricas
 
-2) Configure.  Assuming that you want fricas files to be installed in
+3. Configure.  Assuming that you want fricas files to be installed in
    ``//tmp/usr``.
    ::
 
@@ -171,25 +192,28 @@ below).
    to build with SBCL and 4 GiB dynamic space, use GMP, and enable the
    build of the Aldor library ``libfricas.al``.
 
-4) Build and install
+4. Build and install
    ::
 
       make
       make install
 
-If you want graphic examples read the note above under `Quick
-Installation`_.
+Type
+::
 
+   configure --help
+
+to see all possible options.
 
 
 HyperDoc and Graphics
 ^^^^^^^^^^^^^^^^^^^^^
 
-*NOTE!!* If you run the above command from a ``git`` checkout of the
-|git repository| (minimal version) and ``configure`` has not
-detected ``xvfb-run``, the above will install broken HyperDoc pages --
-all graphic examples will be missing (and trying to access them will
-crash hypertex).
+If you compile FriCAS from the |git repository|, and ``configure``
+does not detect the ``xvfb-run`` program, then graphic examples will
+not be built. This results in broken HyperDoc pages -- all graphic
+examples will be missing (and trying to access them will crash
+hypertex).
 
 The get working graphic examples login into X and replace ``make``
 above by the following
@@ -207,7 +231,7 @@ will not work on text console. During build drawings will temporarily
 appear on the screen. Redirecting X via ``ssh`` should work fine, but
 may be slow.
 
-It is also preferrable to use ``xvfb-run`` program, replacing ``make
+It is preferrable to use ``xvfb-run`` program, replacing ``make
 viewports`` above by
 ::
 
@@ -254,30 +278,33 @@ the whole system.
 
 
 
-Using GMP with sbcl or Clozure CL
+Using GMP with SBCL or Clozure CL
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Currently on average FriCAS is fastest when compiled using sbcl.
-However, sbcl normally uses its own routines for computations with
-large numbers and those routines are slower than GMP. FriCAS now has
+Currently on average FriCAS is fastest when compiled using SBCL_.
+However, SBCL normally uses its own routines for computations with
+large numbers and those routines are slower than GMP_. FriCAS now has
 special support to replace sbcl arithmetic routines by GMP. To use
 this support install GMP including header files (development package
 if you install via a package manager). Currently there are two
-available GMP versions, version 5 is much faster than version 4. Then
+available GMP_ versions, version 5 is much faster than version 4. Then
 configure FriCAS adding ``--enable-gmp`` option to the ``configure``
 arguments.
 
-FriCAS also has support for using GMP with Clozure CL. Currently
+FriCAS also has support for using GMP_ with `Clozure CL`_. Currently
 Clozure CL with GMP works on 32/64 bit Intel/AMD processors and ARM
 (using Clozure CL with GMP is not supported on Power PC processors).
 
 When you have GMP installed in a non-standard location (this usually
 means anything other than ``/usr`` or ``/usr/local``) then you can
-specify the location with the `configure` argument
-``--with-gmp=PATH``. This supposes that the include file is in
-``PATH/include`` and libgmp is in ``PATH/lib``. If you have a
-different setup, then you can specify
+specify the location with
 ::
+
+   configure`--with-gmp=PATH
+
+This supposes that the include file is in ``PATH/include`` and libgmp
+is in ``PATH/lib``. If you have a different setup, then you can
+specify ::
 
    --with-gmp-include=INCLUDEPATH --with-gmp-lib=LIBPATH
 
@@ -303,13 +330,13 @@ sbcl the following should just work.
   cd $HOME/fricas-build
   $HOME/fricas/configure --with-lisp=sbcl && make && make install
 
-Alternatively, if you use gcl you can just put gcl sources as a
-subdirectory (called gcl) of the fricas directory -- in this case the
-build process should automatically build gcl and later use the freshly
-build gcl.
+Alternatively, if you use GCL you can just put GCL sources as a
+subdirectory (called ``gcl``) of the ``fricas`` directory -- in this
+case the build process should automatically build GCL and later use
+the freshly build GCL.
 
 Currently ``--with-lisp`` option accepts all supported lisp variants,
-namely sbcl, clisp, ecl, gcl and Clozure CL (openmcl). Note: the
+namely SBCL, CLISP, ECL, GCL and Clozure CL (openmcl). Note: the
 argument is just a command to invoke the respective Lisp variant.
 Build machinery will automatically detect which Lisp is in use and
 adjust as needed.
@@ -546,8 +573,8 @@ Known problems
   Also, Clozure CL earlier than release 1.2 has bug in complex cosine
   function. Those bugs are fixed in release 1.2. If you want to use
   earlier version you can work around the bugs applying the
-  'contib/omcl.diff' patch and recompiling the compiler (see the patch
-  or Clozure CL documentation for instructions).
+  ``contib/omcl.diff`` patch and recompiling the compiler (see the
+  patch or Clozure CL documentation for instructions).
 
 - Older versions of Clisp may fail to build FriCAS complaining about
   opening already opened file -- this is error is spurious, the file
@@ -555,15 +582,17 @@ Known problems
   confused.
 
 - On new Linux kernel build using Clisp may take very long time. This
-  is caused by frequent calls to 'fsync' performed without need by
+  is caused by frequent calls to ``fsync`` performed without need by
   Clisp.
 
 
 .. _Aldor: https://github.com/pippijn/aldor
-.. _CTAN: https://www.ctan.org/
-.. _SBCL: http://sbcl.sourceforge.net/platform-table.html
-.. _ECL: http://ecls.sourceforge.net
 .. _CLISP: http://clisp.cons.org
-.. _CMUCL: https://www.cons.org/cmucl/
-.. _GCL: https://www.gnu.org/software/gcl
 .. _Clozure CL: http://ccl.clozure.com/manual/chapter2.2.html
+.. _CMUCL: https://www.cons.org/cmucl/
+.. _CTAN: https://www.ctan.org/
+.. _ECL: http://ecls.sourceforge.net
+.. _GCL: https://www.gnu.org/software/gcl
+.. _GMP: https://gmplib.org
+.. _SBCL: http://sbcl.sourceforge.net/platform-table.html
+.. _Sphinx: https://www.sphinx-doc.org
