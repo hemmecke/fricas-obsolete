@@ -62,3 +62,8 @@ about them by typing
 
 In particular, for the `)set` command you can find the output
 `here <http://axiom-wiki.newsynthesis.org/FriCASHelpSet>`_.
+
+.. toctree::
+   :maxdepth: 1
+
+   faq

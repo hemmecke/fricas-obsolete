@@ -23,8 +23,7 @@ computer algebra system.
    features
    install
    help
-   faq
    examples
-   contribute
+   development
    citation
    history

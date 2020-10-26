@@ -53,6 +53,8 @@ Development resources
    :maxdepth: 1
 
    spadstyleguide
+   contributors
+   debian
 
 * `Conventions <http://axiom-wiki.newsynthesis.org/SpadFileConvention>`_
 
