@@ -25,7 +25,7 @@ You can give arguments to ``configure`` to change those locations.
 Download FriCAS
 ---------------
 
-* Official sources via GIT (read-only access), fork it on github if
+* Official |git repository| (read-only access). Fork it on github if
   you like.
   ::
 
@@ -34,9 +34,10 @@ Download FriCAS
 * Release tarballs (up to version  1.3.6):
   https://sourceforge.net/projects/fricas/files/fricas/.
 
-  The release tarballs are identical to the |git repository|, but
-  additionally contain pregenerated (machine independent) files, i.e.,
-  compilation from release tarballs takes less time.
+  The release tarballs are identical to the respective version in the
+  |git repository|, but additionally contain pregenerated (machine
+  independent) files, i.e., compilation from release tarballs takes
+  less time.
 
 * `FriCAS Docker Image <https://hub.docker.com/r/nilqed/fricas/>`_
   (`Announcement <https://groups.google.com/d/msgid/fricas-devel/1d9d4a04-1489-f879-f2ca-8798359540d0%40gmail.com>`_)
@@ -113,7 +114,7 @@ xvfb (optional, but highly recommended)
 
 If you compile FriCAS from the |git repository|, and ``configure``
 does not detect the ``xvfb-run`` program, then graphic examples will
-not be built.
+not be built. See Section `HyperDoc and graphics`_ for more detail.
 ::
 
    sudo apt install xvfb
@@ -144,8 +145,8 @@ to show rendered TeX output. For that to work, you need the following.
 
      sudo apt install texlive auctex dvipng
 
-In order to build the FriCAS User Guide (book.pdf), you also need the
-following LaTeX packages (which are all available from CTAN_).
+In order to build the |PACKAGE_BOOK|, you also need the following
+LaTeX packages (available from CTAN_).
 ::
 
    amsmath
