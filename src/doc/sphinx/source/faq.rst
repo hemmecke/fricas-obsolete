@@ -127,6 +127,7 @@ Default HyperDoc window is too small.  How to enlarge it?
 
 Put the lines like below in file called ``~/.Xresources``.
 ::
+
     FriCAS.hyperdoc.FormGeometry: =1200x700+40+40
     FriCAS.hyperdoc.Geometry: =1200x700+40+40
 

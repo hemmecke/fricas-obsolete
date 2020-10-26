@@ -4,12 +4,12 @@ Examples
 * FriCAS Tutorials
 
   * `First steps
-    <https:github.com/fricas/fricas-notebooks/FriCAS-demos/FriCAS-FirstSteps.ipynb`_
+    <https:github.com/fricas/fricas-notebooks/FriCAS-demos/FriCAS-FirstSteps.ipynb>`_
   * `Data structures
-    <https:github.com/fricas/fricas-notebooks/FriCAS-demos/FriCAS-FirstDataStructures.ipynb`_
+    <https:github.com/fricas/fricas-notebooks/FriCAS-demos/FriCAS-FirstDataStructures.ipynb>`_
 
   * `Type
-    <https:github.com/fricas/fricas-notebooks/FriCAS-demos/FriCAS-Types.ipynb`_
+    <https:github.com/fricas/fricas-notebooks/FriCAS-demos/FriCAS-Types.ipynb>`_
 
 * `Status of Implementation of Risch's Integration algorithm
   <http://fricas-wiki.math.uni.wroc.pl/RischImplementationStatus>`_
