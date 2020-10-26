@@ -6,3 +6,4 @@ Contribute
 
    development
    contributors
+   debian
