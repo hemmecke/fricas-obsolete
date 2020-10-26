@@ -593,6 +593,7 @@ Known problems
 .. _CMUCL: https://www.cons.org/cmucl/
 .. _CTAN: https://www.ctan.org/
 .. _ECL: http://ecls.sourceforge.net
+.. _Emacs: https://www.gnu.org/software/emacs/
 .. _GCL: https://www.gnu.org/software/gcl
 .. _GMP: https://gmplib.org
 .. _SBCL: http://sbcl.sourceforge.net/platform-table.html
