@@ -242,6 +242,32 @@ Type
 to see all possible options.
 
 
+Extra information
+^^^^^^^^^^^^^^^^^
+
+The preferred way to build FriCAS is to use an already installed Lisp.
+Also, it is preferable to use a separate build directory. Assuming
+that source tree is in ``$HOME/fricas``, you build in
+``$HOME/fricas-build`` subdirectory and your Lisp is called
+sbcl the following should just work.
+::
+
+  cd $HOME/fricas-build
+  $HOME/fricas/configure --with-lisp=sbcl && make && sudo make install
+
+Alternatively, if you use GCL you can just put GCL sources as a
+subdirectory (called ``gcl``) of the ``fricas`` directory -- in this
+case the build process should automatically build GCL and later use
+the freshly build GCL.
+
+Currently ``--with-lisp`` option accepts all supported lisp variants,
+namely SBCL, CLISP, ECL, GCL and Clozure CL (openmcl). Note: the
+argument is just a command to invoke the respective Lisp variant.
+Build machinery will automatically detect which Lisp is in use and
+adjust as needed.
+
+
+
 HyperDoc and Graphics
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -350,32 +376,6 @@ respectively).
 These options also implicitly set ``--enable-gmp``. However, if
 ``--enable-gmp=no`` is given, then ``--with-gmp=...``,
 ``--with-gmp-include=...`` and ``--with-gmp-lib=...`` is ignored.
-
-
-
-Extra information
-^^^^^^^^^^^^^^^^^
-
-The preferred way to build FriCAS is to use an already installed Lisp.
-Also, it is preferable to use a separate build directory. Assuming
-that source tree is in ``$HOME/fricas``, you build in
-``$HOME/fricas-build`` subdirectory and your Lisp is called
-sbcl the following should just work.
-::
-
-  cd $HOME/fricas-build
-  $HOME/fricas/configure --with-lisp=sbcl && make && make install
-
-Alternatively, if you use GCL you can just put GCL sources as a
-subdirectory (called ``gcl``) of the ``fricas`` directory -- in this
-case the build process should automatically build GCL and later use
-the freshly build GCL.
-
-Currently ``--with-lisp`` option accepts all supported lisp variants,
-namely SBCL, CLISP, ECL, GCL and Clozure CL (openmcl). Note: the
-argument is just a command to invoke the respective Lisp variant.
-Build machinery will automatically detect which Lisp is in use and
-adjust as needed.
 
 
 
