@@ -1,9 +1,10 @@
 Help
 ====
 
-If you  run into any  problems with |FriCAS|  do not hesitate  to send
-your  problem to  |PACKAGE_BUGREPORT|,  i.e., the  |mailing list|.
-To prevent spam, you have to subscribe to the |mailing list|.
+If you run into any problems with |FriCAS| do not hesitate to send
+your problem to |PACKAGE_BUGREPORT|, i.e., the |mailing list|. Since
+we do not want spam, you have to subscribe to the |mailing list| in
+order to post something there.
 
 There is also a
 `read-only mirror
@@ -18,7 +19,7 @@ us know of what a user finds hard to accomplish with the system.
 
 Apart from the |home page| (in particular the |PACKAGE_BOOK|) there
 is also help available locally. You can generate a local copy of the
-|home page| by doing the following.
+|home page|, see `Building documentation`_ for instructions.
 ::
 
    git clone https://github.com/fricas/fricas
@@ -43,6 +44,16 @@ is also help available locally. You can generate a local copy of the
        text/x-spad       spad
     to ``/etc/mime.types``
    * in firefox add associate text/x-spad with your editor
+
+If you add
+::
+
+   text/x-spad       spad
+
+to ``/etc/mime.types`` and in firefox add associate ``text/x-spad`` with
+your editor, then clicking on a ``.spad`` file
+
+
 
 If you are working with |FriCAS| in an operating system that has
 the `X Window System <https://en.wikipedia.org/wiki/X_Window_System>`_
