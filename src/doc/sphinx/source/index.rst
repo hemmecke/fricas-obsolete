@@ -3,6 +3,10 @@
 
 |FriCAS| is an advanced computer algebra system.
 
+See
+
+* `FriCAS advantages <http://fricas-wiki.math.uni.wroc.pl/FriCASAdvantages>`_
+
 It is freely available under a
 `modified BSD license
 <https://github.com/fricas/fricas/blob/master/license/LICENSE.AXIOM>`_.
